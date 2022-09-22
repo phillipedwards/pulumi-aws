@@ -19,99 +19,92 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appsync"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dynamodb"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appsync"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleTable, err := dynamodb.NewTable(ctx, "exampleTable", &dynamodb.TableArgs{
-//				ReadCapacity:  pulumi.Int(1),
-//				WriteCapacity: pulumi.Int(1),
-//				HashKey:       pulumi.String("UserId"),
-//				Attributes: dynamodb.TableAttributeArray{
-//					&dynamodb.TableAttributeArgs{
-//						Name: pulumi.String("UserId"),
-//						Type: pulumi.String("S"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
-//	  "Version": "2012-10-17",
-//	  "Statement": [
-//	    {
-//	      "Action": "sts:AssumeRole",
-//	      "Principal": {
-//	        "Service": "appsync.amazonaws.com"
-//	      },
-//	      "Effect": "Allow"
-//	    }
-//	  ]
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleTable, err := dynamodb.NewTable(ctx, "exampleTable", &dynamodb.TableArgs{
+// 			ReadCapacity:  pulumi.Int(1),
+// 			WriteCapacity: pulumi.Int(1),
+// 			HashKey:       pulumi.String("UserId"),
+// 			Attributes: dynamodb.TableAttributeArray{
+// 				&dynamodb.TableAttributeArgs{
+// 					Name: pulumi.String("UserId"),
+// 					Type: pulumi.String("S"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
+//   "Version": "2012-10-17",
+//   "Statement": [
+//     {
+//       "Action": "sts:AssumeRole",
+//       "Principal": {
+//         "Service": "appsync.amazonaws.com"
+//       },
+//       "Effect": "Allow"
+//     }
+//   ]
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewRolePolicy(ctx, "exampleRolePolicy", &iam.RolePolicyArgs{
-//				Role: exampleRole.ID(),
-//				Policy: exampleTable.Arn.ApplyT(func(arn string) (string, error) {
-//					return fmt.Sprintf(`{
-//	  "Version": "2012-10-17",
-//	  "Statement": [
-//	    {
-//	      "Action": [
-//	        "dynamodb:*"
-//	      ],
-//	      "Effect": "Allow",
-//	      "Resource": [
-//	        "%v"
-//	      ]
-//	    }
-//	  ]
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewRolePolicy(ctx, "exampleRolePolicy", &iam.RolePolicyArgs{
+// 			Role: exampleRole.ID(),
+// 			Policy: exampleTable.Arn.ApplyT(func(arn string) (string, error) {
+// 				return fmt.Sprintf(`{
+//   "Version": "2012-10-17",
+//   "Statement": [
+//     {
+//       "Action": [
+//         "dynamodb:*"
+//       ],
+//       "Effect": "Allow",
+//       "Resource": [
+//         "%v"
+//       ]
+//     }
+//   ]
+// }
 // `, arn), nil
-//
-//				}).(pulumi.StringOutput),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleGraphQLApi, err := appsync.NewGraphQLApi(ctx, "exampleGraphQLApi", &appsync.GraphQLApiArgs{
-//				AuthenticationType: pulumi.String("API_KEY"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = appsync.NewDataSource(ctx, "exampleDataSource", &appsync.DataSourceArgs{
-//				ApiId:          exampleGraphQLApi.ID(),
-//				Name:           pulumi.String("tf_appsync_example"),
-//				ServiceRoleArn: exampleRole.Arn,
-//				Type:           pulumi.String("AMAZON_DYNAMODB"),
-//				DynamodbConfig: &appsync.DataSourceDynamodbConfigArgs{
-//					TableName: exampleTable.Name,
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 			}).(pulumi.StringOutput),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleGraphQLApi, err := appsync.NewGraphQLApi(ctx, "exampleGraphQLApi", &appsync.GraphQLApiArgs{
+// 			AuthenticationType: pulumi.String("API_KEY"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = appsync.NewDataSource(ctx, "exampleDataSource", &appsync.DataSourceArgs{
+// 			ApiId:          exampleGraphQLApi.ID(),
+// 			Name:           pulumi.String("tf_appsync_example"),
+// 			ServiceRoleArn: exampleRole.Arn,
+// 			Type:           pulumi.String("AMAZON_DYNAMODB"),
+// 			DynamodbConfig: &appsync.DataSourceDynamodbConfigArgs{
+// 				TableName: exampleTable.Name,
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -119,9 +112,7 @@ import (
 // `aws_appsync_datasource` can be imported with their `api_id`, a hyphen, and `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:appsync/dataSource:DataSource example abcdef123456-example
-//
+//  $ pulumi import aws:appsync/dataSource:DataSource example abcdef123456-example
 // ```
 type DataSource struct {
 	pulumi.CustomResourceState
@@ -311,7 +302,7 @@ func (i *DataSource) ToDataSourceOutputWithContext(ctx context.Context) DataSour
 // DataSourceArrayInput is an input type that accepts DataSourceArray and DataSourceArrayOutput values.
 // You can construct a concrete instance of `DataSourceArrayInput` via:
 //
-//	DataSourceArray{ DataSourceArgs{...} }
+//          DataSourceArray{ DataSourceArgs{...} }
 type DataSourceArrayInput interface {
 	pulumi.Input
 
@@ -336,7 +327,7 @@ func (i DataSourceArray) ToDataSourceArrayOutputWithContext(ctx context.Context)
 // DataSourceMapInput is an input type that accepts DataSourceMap and DataSourceMapOutput values.
 // You can construct a concrete instance of `DataSourceMapInput` via:
 //
-//	DataSourceMap{ "key": DataSourceArgs{...} }
+//          DataSourceMap{ "key": DataSourceArgs{...} }
 type DataSourceMapInput interface {
 	pulumi.Input
 

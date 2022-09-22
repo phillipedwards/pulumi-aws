@@ -19,37 +19,32 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.NewResolverQueryLogConfig(ctx, "example", &route53.ResolverQueryLogConfigArgs{
-//				DestinationArn: pulumi.Any(aws_s3_bucket.Example.Arn),
-//				Tags: pulumi.StringMap{
-//					"Environment": pulumi.String("Prod"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.NewResolverQueryLogConfig(ctx, "example", &route53.ResolverQueryLogConfigArgs{
+// 			DestinationArn: pulumi.Any(aws_s3_bucket.Example.Arn),
+// 			Tags: pulumi.StringMap{
+// 				"Environment": pulumi.String("Prod"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-//	Route 53 Resolver query logging configurations can be imported using the Route 53 Resolver query logging configuration ID, e.g.,
+//  Route 53 Resolver query logging configurations can be imported using the Route 53 Resolver query logging configuration ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:route53/resolverQueryLogConfig:ResolverQueryLogConfig example rqlc-92edc3b1838248bf
-//
+//  $ pulumi import aws:route53/resolverQueryLogConfig:ResolverQueryLogConfig example rqlc-92edc3b1838248bf
 // ```
 type ResolverQueryLogConfig struct {
 	pulumi.CustomResourceState
@@ -195,7 +190,7 @@ func (i *ResolverQueryLogConfig) ToResolverQueryLogConfigOutputWithContext(ctx c
 // ResolverQueryLogConfigArrayInput is an input type that accepts ResolverQueryLogConfigArray and ResolverQueryLogConfigArrayOutput values.
 // You can construct a concrete instance of `ResolverQueryLogConfigArrayInput` via:
 //
-//	ResolverQueryLogConfigArray{ ResolverQueryLogConfigArgs{...} }
+//          ResolverQueryLogConfigArray{ ResolverQueryLogConfigArgs{...} }
 type ResolverQueryLogConfigArrayInput interface {
 	pulumi.Input
 
@@ -220,7 +215,7 @@ func (i ResolverQueryLogConfigArray) ToResolverQueryLogConfigArrayOutputWithCont
 // ResolverQueryLogConfigMapInput is an input type that accepts ResolverQueryLogConfigMap and ResolverQueryLogConfigMapOutput values.
 // You can construct a concrete instance of `ResolverQueryLogConfigMapInput` via:
 //
-//	ResolverQueryLogConfigMap{ "key": ResolverQueryLogConfigArgs{...} }
+//          ResolverQueryLogConfigMap{ "key": ResolverQueryLogConfigArgs{...} }
 type ResolverQueryLogConfigMapInput interface {
 	pulumi.Input
 

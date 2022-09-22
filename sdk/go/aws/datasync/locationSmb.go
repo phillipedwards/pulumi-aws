@@ -21,30 +21,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/datasync"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/datasync"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := datasync.NewLocationSmb(ctx, "example", &datasync.LocationSmbArgs{
-//				ServerHostname: pulumi.String("smb.example.com"),
-//				Subdirectory:   pulumi.String("/exported/path"),
-//				User:           pulumi.String("Guest"),
-//				Password:       pulumi.String("ANotGreatPassword"),
-//				AgentArns: pulumi.StringArray{
-//					pulumi.Any(aws_datasync_agent.Example.Arn),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := datasync.NewLocationSmb(ctx, "example", &datasync.LocationSmbArgs{
+// 			ServerHostname: pulumi.String("smb.example.com"),
+// 			Subdirectory:   pulumi.String("/exported/path"),
+// 			User:           pulumi.String("Guest"),
+// 			Password:       pulumi.String("ANotGreatPassword"),
+// 			AgentArns: pulumi.StringArray{
+// 				pulumi.Any(aws_datasync_agent.Example.Arn),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // `aws_datasync_location_smb` can be imported by using the Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:datasync/locationSmb:LocationSmb example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
-//
+//  $ pulumi import aws:datasync/locationSmb:LocationSmb example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
 // ```
 type LocationSmb struct {
 	pulumi.CustomResourceState
@@ -242,7 +237,7 @@ func (i *LocationSmb) ToLocationSmbOutputWithContext(ctx context.Context) Locati
 // LocationSmbArrayInput is an input type that accepts LocationSmbArray and LocationSmbArrayOutput values.
 // You can construct a concrete instance of `LocationSmbArrayInput` via:
 //
-//	LocationSmbArray{ LocationSmbArgs{...} }
+//          LocationSmbArray{ LocationSmbArgs{...} }
 type LocationSmbArrayInput interface {
 	pulumi.Input
 
@@ -267,7 +262,7 @@ func (i LocationSmbArray) ToLocationSmbArrayOutputWithContext(ctx context.Contex
 // LocationSmbMapInput is an input type that accepts LocationSmbMap and LocationSmbMapOutput values.
 // You can construct a concrete instance of `LocationSmbMapInput` via:
 //
-//	LocationSmbMap{ "key": LocationSmbArgs{...} }
+//          LocationSmbMap{ "key": LocationSmbArgs{...} }
 type LocationSmbMapInput interface {
 	pulumi.Input
 

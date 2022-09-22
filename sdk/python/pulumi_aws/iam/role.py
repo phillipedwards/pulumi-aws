@@ -498,9 +498,9 @@ class Role(pulumi.CustomResource):
         import pulumi
         import pulumi_aws as aws
 
-        instance_assume_role_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+        instance_assume_role_policy = aws.x.iam.get_policy_document(statements=[aws.x.GetPolicyDocumentStatementArgs(
             actions=["sts:AssumeRole"],
-            principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+            principals=[aws.x.GetPolicyDocumentStatementPrincipalArgs(
                 type="Service",
                 identifiers=["ec2.amazonaws.com"],
             )],
@@ -518,7 +518,7 @@ class Role(pulumi.CustomResource):
         import json
         import pulumi_aws as aws
 
-        inline_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+        inline_policy = aws.x.iam.get_policy_document(statements=[aws.x.GetPolicyDocumentStatementArgs(
             actions=["ec2:DescribeAccountAttributes"],
             resources=["*"],
         )])
@@ -668,9 +668,9 @@ class Role(pulumi.CustomResource):
         import pulumi
         import pulumi_aws as aws
 
-        instance_assume_role_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+        instance_assume_role_policy = aws.x.iam.get_policy_document(statements=[aws.x.GetPolicyDocumentStatementArgs(
             actions=["sts:AssumeRole"],
-            principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+            principals=[aws.x.GetPolicyDocumentStatementPrincipalArgs(
                 type="Service",
                 identifiers=["ec2.amazonaws.com"],
             )],
@@ -688,7 +688,7 @@ class Role(pulumi.CustomResource):
         import json
         import pulumi_aws as aws
 
-        inline_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+        inline_policy = aws.x.iam.get_policy_document(statements=[aws.x.GetPolicyDocumentStatementArgs(
             actions=["ec2:DescribeAccountAttributes"],
             resources=["*"],
         )])

@@ -19,30 +19,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/neptune"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/neptune"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := neptune.NewParameterGroup(ctx, "example", &neptune.ParameterGroupArgs{
-//				Family: pulumi.String("neptune1"),
-//				Parameters: neptune.ParameterGroupParameterArray{
-//					&neptune.ParameterGroupParameterArgs{
-//						Name:  pulumi.String("neptune_query_timeout"),
-//						Value: pulumi.String("25"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := neptune.NewParameterGroup(ctx, "example", &neptune.ParameterGroupArgs{
+// 			Family: pulumi.String("neptune1"),
+// 			Parameters: neptune.ParameterGroupParameterArray{
+// 				&neptune.ParameterGroupParameterArgs{
+// 					Name:  pulumi.String("neptune_query_timeout"),
+// 					Value: pulumi.String("25"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -50,9 +47,7 @@ import (
 // Neptune Parameter Groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:neptune/parameterGroup:ParameterGroup some_pg some-pg
-//
+//  $ pulumi import aws:neptune/parameterGroup:ParameterGroup some_pg some-pg
 // ```
 type ParameterGroup struct {
 	pulumi.CustomResourceState
@@ -195,7 +190,7 @@ func (i *ParameterGroup) ToParameterGroupOutputWithContext(ctx context.Context) 
 // ParameterGroupArrayInput is an input type that accepts ParameterGroupArray and ParameterGroupArrayOutput values.
 // You can construct a concrete instance of `ParameterGroupArrayInput` via:
 //
-//	ParameterGroupArray{ ParameterGroupArgs{...} }
+//          ParameterGroupArray{ ParameterGroupArgs{...} }
 type ParameterGroupArrayInput interface {
 	pulumi.Input
 
@@ -220,7 +215,7 @@ func (i ParameterGroupArray) ToParameterGroupArrayOutputWithContext(ctx context.
 // ParameterGroupMapInput is an input type that accepts ParameterGroupMap and ParameterGroupMapOutput values.
 // You can construct a concrete instance of `ParameterGroupMapInput` via:
 //
-//	ParameterGroupMap{ "key": ParameterGroupArgs{...} }
+//          ParameterGroupMap{ "key": ParameterGroupArgs{...} }
 type ParameterGroupMapInput interface {
 	pulumi.Input
 

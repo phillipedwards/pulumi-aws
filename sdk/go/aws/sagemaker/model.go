@@ -21,60 +21,57 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			assumeRole, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
-//				Statements: []iam.GetPolicyDocumentStatement{
-//					iam.GetPolicyDocumentStatement{
-//						Actions: []string{
-//							"sts:AssumeRole",
-//						},
-//						Principals: []iam.GetPolicyDocumentStatementPrincipal{
-//							iam.GetPolicyDocumentStatementPrincipal{
-//								Type: "Service",
-//								Identifiers: []string{
-//									"sagemaker.amazonaws.com",
-//								},
-//							},
-//						},
-//					},
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.String(assumeRole.Json),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			test, err := sagemaker.GetPrebuiltEcrImage(ctx, &sagemaker.GetPrebuiltEcrImageArgs{
-//				RepositoryName: "kmeans",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = sagemaker.NewModel(ctx, "exampleModel", &sagemaker.ModelArgs{
-//				ExecutionRoleArn: exampleRole.Arn,
-//				PrimaryContainer: &sagemaker.ModelPrimaryContainerArgs{
-//					Image: pulumi.String(test.RegistryPath),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		assumeRole, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+// 			Statements: []iam.GetPolicyDocumentStatement{
+// 				iam.GetPolicyDocumentStatement{
+// 					Actions: []string{
+// 						"sts:AssumeRole",
+// 					},
+// 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+// 						iam.GetPolicyDocumentStatementPrincipal{
+// 							Type: "Service",
+// 							Identifiers: []string{
+// 								"sagemaker.amazonaws.com",
+// 							},
+// 						},
+// 					},
+// 				},
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.String(assumeRole.Json),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		test, err := sagemaker.GetPrebuiltEcrImage(ctx, &sagemaker.GetPrebuiltEcrImageArgs{
+// 			RepositoryName: "kmeans",
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = sagemaker.NewModel(ctx, "exampleModel", &sagemaker.ModelArgs{
+// 			ExecutionRoleArn: exampleRole.Arn,
+// 			PrimaryContainer: &sagemaker.ModelPrimaryContainerArgs{
+// 				Image: pulumi.String(test.RegistryPath),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ## Inference Execution Config
 //
@@ -85,9 +82,7 @@ import (
 // Models can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/model:Model test_model model-foo
-//
+//  $ pulumi import aws:sagemaker/model:Model test_model model-foo
 // ```
 type Model struct {
 	pulumi.CustomResourceState
@@ -260,7 +255,7 @@ func (i *Model) ToModelOutputWithContext(ctx context.Context) ModelOutput {
 // ModelArrayInput is an input type that accepts ModelArray and ModelArrayOutput values.
 // You can construct a concrete instance of `ModelArrayInput` via:
 //
-//	ModelArray{ ModelArgs{...} }
+//          ModelArray{ ModelArgs{...} }
 type ModelArrayInput interface {
 	pulumi.Input
 
@@ -285,7 +280,7 @@ func (i ModelArray) ToModelArrayOutputWithContext(ctx context.Context) ModelArra
 // ModelMapInput is an input type that accepts ModelMap and ModelMapOutput values.
 // You can construct a concrete instance of `ModelMapInput` via:
 //
-//	ModelMap{ "key": ModelArgs{...} }
+//          ModelMap{ "key": ModelArgs{...} }
 type ModelMapInput interface {
 	pulumi.Input
 

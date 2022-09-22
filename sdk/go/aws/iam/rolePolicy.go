@@ -21,66 +21,63 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": "sts:AssumeRole",
-//						"Effect": "Allow",
-//						"Sid":    "",
-//						"Principal": map[string]interface{}{
-//							"Service": "ec2.amazonaws.com",
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			tmpJSON1, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": []string{
-//							"ec2:Describe*",
-//						},
-//						"Effect":   "Allow",
-//						"Resource": "*",
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json1 := string(tmpJSON1)
-//			_, err = iam.NewRolePolicy(ctx, "testPolicy", &iam.RolePolicyArgs{
-//				Role:   testRole.ID(),
-//				Policy: pulumi.String(json1),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": "sts:AssumeRole",
+// 					"Effect": "Allow",
+// 					"Sid":    "",
+// 					"Principal": map[string]interface{}{
+// 						"Service": "ec2.amazonaws.com",
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		tmpJSON1, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": []string{
+// 						"ec2:Describe*",
+// 					},
+// 					"Effect":   "Allow",
+// 					"Resource": "*",
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json1 := string(tmpJSON1)
+// 		_, err = iam.NewRolePolicy(ctx, "testPolicy", &iam.RolePolicyArgs{
+// 			Role:   testRole.ID(),
+// 			Policy: pulumi.String(json1),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -88,9 +85,7 @@ import (
 // IAM Role Policies can be imported using the `role_name:role_policy_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:iam/rolePolicy:RolePolicy mypolicy role_of_mypolicy_name:mypolicy_name
-//
+//  $ pulumi import aws:iam/rolePolicy:RolePolicy mypolicy role_of_mypolicy_name:mypolicy_name
 // ```
 type RolePolicy struct {
 	pulumi.CustomResourceState
@@ -224,7 +219,7 @@ func (i *RolePolicy) ToRolePolicyOutputWithContext(ctx context.Context) RolePoli
 // RolePolicyArrayInput is an input type that accepts RolePolicyArray and RolePolicyArrayOutput values.
 // You can construct a concrete instance of `RolePolicyArrayInput` via:
 //
-//	RolePolicyArray{ RolePolicyArgs{...} }
+//          RolePolicyArray{ RolePolicyArgs{...} }
 type RolePolicyArrayInput interface {
 	pulumi.Input
 
@@ -249,7 +244,7 @@ func (i RolePolicyArray) ToRolePolicyArrayOutputWithContext(ctx context.Context)
 // RolePolicyMapInput is an input type that accepts RolePolicyMap and RolePolicyMapOutput values.
 // You can construct a concrete instance of `RolePolicyMapInput` via:
 //
-//	RolePolicyMap{ "key": RolePolicyArgs{...} }
+//          RolePolicyMap{ "key": RolePolicyArgs{...} }
 type RolePolicyMapInput interface {
 	pulumi.Input
 

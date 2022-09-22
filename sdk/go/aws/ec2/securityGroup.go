@@ -30,55 +30,52 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewSecurityGroup(ctx, "allowTls", &ec2.SecurityGroupArgs{
-//				Description: pulumi.String("Allow TLS inbound traffic"),
-//				VpcId:       pulumi.Any(aws_vpc.Main.Id),
-//				Ingress: ec2.SecurityGroupIngressArray{
-//					&ec2.SecurityGroupIngressArgs{
-//						Description: pulumi.String("TLS from VPC"),
-//						FromPort:    pulumi.Int(443),
-//						ToPort:      pulumi.Int(443),
-//						Protocol:    pulumi.String("tcp"),
-//						CidrBlocks: pulumi.StringArray{
-//							pulumi.Any(aws_vpc.Main.Cidr_block),
-//						},
-//						Ipv6CidrBlocks: pulumi.StringArray{
-//							pulumi.Any(aws_vpc.Main.Ipv6_cidr_block),
-//						},
-//					},
-//				},
-//				Egress: ec2.SecurityGroupEgressArray{
-//					&ec2.SecurityGroupEgressArgs{
-//						FromPort: pulumi.Int(0),
-//						ToPort:   pulumi.Int(0),
-//						Protocol: pulumi.String("-1"),
-//						CidrBlocks: pulumi.StringArray{
-//							pulumi.String("0.0.0.0/0"),
-//						},
-//						Ipv6CidrBlocks: pulumi.StringArray{
-//							pulumi.String("::/0"),
-//						},
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("allow_tls"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewSecurityGroup(ctx, "allowTls", &ec2.SecurityGroupArgs{
+// 			Description: pulumi.String("Allow TLS inbound traffic"),
+// 			VpcId:       pulumi.Any(aws_vpc.Main.Id),
+// 			Ingress: ec2.SecurityGroupIngressArray{
+// 				&ec2.SecurityGroupIngressArgs{
+// 					Description: pulumi.String("TLS from VPC"),
+// 					FromPort:    pulumi.Int(443),
+// 					ToPort:      pulumi.Int(443),
+// 					Protocol:    pulumi.String("tcp"),
+// 					CidrBlocks: pulumi.StringArray{
+// 						pulumi.Any(aws_vpc.Main.Cidr_block),
+// 					},
+// 					Ipv6CidrBlocks: pulumi.StringArray{
+// 						pulumi.Any(aws_vpc.Main.Ipv6_cidr_block),
+// 					},
+// 				},
+// 			},
+// 			Egress: ec2.SecurityGroupEgressArray{
+// 				&ec2.SecurityGroupEgressArgs{
+// 					FromPort: pulumi.Int(0),
+// 					ToPort:   pulumi.Int(0),
+// 					Protocol: pulumi.String("-1"),
+// 					CidrBlocks: pulumi.StringArray{
+// 						pulumi.String("0.0.0.0/0"),
+// 					},
+// 					Ipv6CidrBlocks: pulumi.StringArray{
+// 						pulumi.String("::/0"),
+// 					},
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("allow_tls"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // > **NOTE on Egress rules:** By default, AWS creates an `ALLOW ALL` egress rule when creating a new Security Group inside of a VPC. When creating a new Security Group inside a VPC, **this provider will remove this default rule**, and require you specifically re-create it if you desire that rule. We feel this leads to fewer surprises in terms of controlling your egress rules. If you desire this rule to be in place, you can use this `egress` block:
@@ -87,36 +84,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewSecurityGroup(ctx, "example", &ec2.SecurityGroupArgs{
-//				Egress: ec2.SecurityGroupEgressArray{
-//					&ec2.SecurityGroupEgressArgs{
-//						CidrBlocks: pulumi.StringArray{
-//							pulumi.String("0.0.0.0/0"),
-//						},
-//						FromPort: pulumi.Int(0),
-//						Ipv6CidrBlocks: pulumi.StringArray{
-//							pulumi.String("::/0"),
-//						},
-//						Protocol: pulumi.String("-1"),
-//						ToPort:   pulumi.Int(0),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewSecurityGroup(ctx, "example", &ec2.SecurityGroupArgs{
+// 			Egress: ec2.SecurityGroupEgressArray{
+// 				&ec2.SecurityGroupEgressArgs{
+// 					CidrBlocks: pulumi.StringArray{
+// 						pulumi.String("0.0.0.0/0"),
+// 					},
+// 					FromPort: pulumi.Int(0),
+// 					Ipv6CidrBlocks: pulumi.StringArray{
+// 						pulumi.String("::/0"),
+// 					},
+// 					Protocol: pulumi.String("-1"),
+// 					ToPort:   pulumi.Int(0),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Usage With Prefix List IDs
 //
@@ -129,37 +123,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			myEndpoint, err := ec2.NewVpcEndpoint(ctx, "myEndpoint", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ec2.NewSecurityGroup(ctx, "example", &ec2.SecurityGroupArgs{
-//				Egress: ec2.SecurityGroupEgressArray{
-//					&ec2.SecurityGroupEgressArgs{
-//						FromPort: pulumi.Int(0),
-//						ToPort:   pulumi.Int(0),
-//						Protocol: pulumi.String("-1"),
-//						PrefixListIds: pulumi.StringArray{
-//							myEndpoint.PrefixListId,
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		myEndpoint, err := ec2.NewVpcEndpoint(ctx, "myEndpoint", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ec2.NewSecurityGroup(ctx, "example", &ec2.SecurityGroupArgs{
+// 			Egress: ec2.SecurityGroupEgressArray{
+// 				&ec2.SecurityGroupEgressArgs{
+// 					FromPort: pulumi.Int(0),
+// 					ToPort:   pulumi.Int(0),
+// 					Protocol: pulumi.String("-1"),
+// 					PrefixListIds: pulumi.StringArray{
+// 						myEndpoint.PrefixListId,
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // You can also find a specific Prefix List using the `ec2.getPrefixList` data source.
@@ -171,22 +162,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewSecurityGroup(ctx, "sgWithChangeableName", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewSecurityGroup(ctx, "sgWithChangeableName", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -194,9 +182,7 @@ import (
 // Security Groups can be imported using the `security group id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/securityGroup:SecurityGroup elb_sg sg-903004f8
-//
+//  $ pulumi import aws:ec2/securityGroup:SecurityGroup elb_sg sg-903004f8
 // ```
 type SecurityGroup struct {
 	pulumi.CustomResourceState
@@ -380,7 +366,7 @@ func (i *SecurityGroup) ToSecurityGroupOutputWithContext(ctx context.Context) Se
 // SecurityGroupArrayInput is an input type that accepts SecurityGroupArray and SecurityGroupArrayOutput values.
 // You can construct a concrete instance of `SecurityGroupArrayInput` via:
 //
-//	SecurityGroupArray{ SecurityGroupArgs{...} }
+//          SecurityGroupArray{ SecurityGroupArgs{...} }
 type SecurityGroupArrayInput interface {
 	pulumi.Input
 
@@ -405,7 +391,7 @@ func (i SecurityGroupArray) ToSecurityGroupArrayOutputWithContext(ctx context.Co
 // SecurityGroupMapInput is an input type that accepts SecurityGroupMap and SecurityGroupMapOutput values.
 // You can construct a concrete instance of `SecurityGroupMapInput` via:
 //
-//	SecurityGroupMap{ "key": SecurityGroupArgs{...} }
+//          SecurityGroupMap{ "key": SecurityGroupArgs{...} }
 type SecurityGroupMapInput interface {
 	pulumi.Input
 

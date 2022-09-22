@@ -18,38 +18,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/workspaces"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := workspaces.NewIpGroup(ctx, "contractors", &workspaces.IpGroupArgs{
-//				Description: pulumi.String("Contractors IP access control group"),
-//				Rules: workspaces.IpGroupRuleArray{
-//					&workspaces.IpGroupRuleArgs{
-//						Description: pulumi.String("NY"),
-//						Source:      pulumi.String("150.24.14.0/24"),
-//					},
-//					&workspaces.IpGroupRuleArgs{
-//						Description: pulumi.String("LA"),
-//						Source:      pulumi.String("125.191.14.85/32"),
-//					},
-//					&workspaces.IpGroupRuleArgs{
-//						Description: pulumi.String("STL"),
-//						Source:      pulumi.String("44.98.100.0/24"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := workspaces.NewIpGroup(ctx, "contractors", &workspaces.IpGroupArgs{
+// 			Description: pulumi.String("Contractors IP access control group"),
+// 			Rules: workspaces.IpGroupRuleArray{
+// 				&workspaces.IpGroupRuleArgs{
+// 					Description: pulumi.String("NY"),
+// 					Source:      pulumi.String("150.24.14.0/24"),
+// 				},
+// 				&workspaces.IpGroupRuleArgs{
+// 					Description: pulumi.String("LA"),
+// 					Source:      pulumi.String("125.191.14.85/32"),
+// 				},
+// 				&workspaces.IpGroupRuleArgs{
+// 					Description: pulumi.String("STL"),
+// 					Source:      pulumi.String("44.98.100.0/24"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -57,9 +54,7 @@ import (
 // WorkSpaces IP groups can be imported using their GroupID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:workspaces/ipGroup:IpGroup example wsipg-488lrtl3k
-//
+//  $ pulumi import aws:workspaces/ipGroup:IpGroup example wsipg-488lrtl3k
 // ```
 type IpGroup struct {
 	pulumi.CustomResourceState
@@ -183,7 +178,7 @@ func (i *IpGroup) ToIpGroupOutputWithContext(ctx context.Context) IpGroupOutput 
 // IpGroupArrayInput is an input type that accepts IpGroupArray and IpGroupArrayOutput values.
 // You can construct a concrete instance of `IpGroupArrayInput` via:
 //
-//	IpGroupArray{ IpGroupArgs{...} }
+//          IpGroupArray{ IpGroupArgs{...} }
 type IpGroupArrayInput interface {
 	pulumi.Input
 
@@ -208,7 +203,7 @@ func (i IpGroupArray) ToIpGroupArrayOutputWithContext(ctx context.Context) IpGro
 // IpGroupMapInput is an input type that accepts IpGroupMap and IpGroupMapOutput values.
 // You can construct a concrete instance of `IpGroupMapInput` via:
 //
-//	IpGroupMap{ "key": IpGroupArgs{...} }
+//          IpGroupMap{ "key": IpGroupArgs{...} }
 type IpGroupMapInput interface {
 	pulumi.Input
 

@@ -20,35 +20,32 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewVirtualGateway(ctx, "example", &appmesh.VirtualGatewayArgs{
-//				MeshName: pulumi.String("example-service-mesh"),
-//				Spec: &appmesh.VirtualGatewaySpecArgs{
-//					Listener: &appmesh.VirtualGatewaySpecListenerArgs{
-//						PortMapping: &appmesh.VirtualGatewaySpecListenerPortMappingArgs{
-//							Port:     pulumi.Int(8080),
-//							Protocol: pulumi.String("http"),
-//						},
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Environment": pulumi.String("test"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewVirtualGateway(ctx, "example", &appmesh.VirtualGatewayArgs{
+// 			MeshName: pulumi.String("example-service-mesh"),
+// 			Spec: &appmesh.VirtualGatewaySpecArgs{
+// 				Listener: &appmesh.VirtualGatewaySpecListenerArgs{
+// 					PortMapping: &appmesh.VirtualGatewaySpecListenerPortMappingArgs{
+// 						Port:     pulumi.Int(8080),
+// 						Protocol: pulumi.String("http"),
+// 					},
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Environment": pulumi.String("test"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Access Logs and TLS
 //
@@ -56,47 +53,44 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewVirtualGateway(ctx, "example", &appmesh.VirtualGatewayArgs{
-//				MeshName: pulumi.String("example-service-mesh"),
-//				Spec: &appmesh.VirtualGatewaySpecArgs{
-//					Listener: &appmesh.VirtualGatewaySpecListenerArgs{
-//						PortMapping: &appmesh.VirtualGatewaySpecListenerPortMappingArgs{
-//							Port:     pulumi.Int(8080),
-//							Protocol: pulumi.String("http"),
-//						},
-//						Tls: &appmesh.VirtualGatewaySpecListenerTlsArgs{
-//							Certificate: &appmesh.VirtualGatewaySpecListenerTlsCertificateArgs{
-//								Acm: &appmesh.VirtualGatewaySpecListenerTlsCertificateAcmArgs{
-//									CertificateArn: pulumi.Any(aws_acm_certificate.Example.Arn),
-//								},
-//							},
-//							Mode: pulumi.String("STRICT"),
-//						},
-//					},
-//					Logging: &appmesh.VirtualGatewaySpecLoggingArgs{
-//						AccessLog: &appmesh.VirtualGatewaySpecLoggingAccessLogArgs{
-//							File: &appmesh.VirtualGatewaySpecLoggingAccessLogFileArgs{
-//								Path: pulumi.String("/var/log/access.log"),
-//							},
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewVirtualGateway(ctx, "example", &appmesh.VirtualGatewayArgs{
+// 			MeshName: pulumi.String("example-service-mesh"),
+// 			Spec: &appmesh.VirtualGatewaySpecArgs{
+// 				Listener: &appmesh.VirtualGatewaySpecListenerArgs{
+// 					PortMapping: &appmesh.VirtualGatewaySpecListenerPortMappingArgs{
+// 						Port:     pulumi.Int(8080),
+// 						Protocol: pulumi.String("http"),
+// 					},
+// 					Tls: &appmesh.VirtualGatewaySpecListenerTlsArgs{
+// 						Certificate: &appmesh.VirtualGatewaySpecListenerTlsCertificateArgs{
+// 							Acm: &appmesh.VirtualGatewaySpecListenerTlsCertificateAcmArgs{
+// 								CertificateArn: pulumi.Any(aws_acm_certificate.Example.Arn),
+// 							},
+// 						},
+// 						Mode: pulumi.String("STRICT"),
+// 					},
+// 				},
+// 				Logging: &appmesh.VirtualGatewaySpecLoggingArgs{
+// 					AccessLog: &appmesh.VirtualGatewaySpecLoggingAccessLogArgs{
+// 						File: &appmesh.VirtualGatewaySpecLoggingAccessLogFileArgs{
+// 							Path: pulumi.String("/var/log/access.log"),
+// 						},
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -104,12 +98,10 @@ import (
 // App Mesh virtual gateway can be imported using `mesh_name` together with the virtual gateway's `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:appmesh/virtualGateway:VirtualGateway example mesh/gw1
-//
+//  $ pulumi import aws:appmesh/virtualGateway:VirtualGateway example mesh/gw1
 // ```
 //
-//	[1]/docs/providers/aws/index.html
+//  [1]/docs/providers/aws/index.html
 type VirtualGateway struct {
 	pulumi.CustomResourceState
 
@@ -272,7 +264,7 @@ func (i *VirtualGateway) ToVirtualGatewayOutputWithContext(ctx context.Context) 
 // VirtualGatewayArrayInput is an input type that accepts VirtualGatewayArray and VirtualGatewayArrayOutput values.
 // You can construct a concrete instance of `VirtualGatewayArrayInput` via:
 //
-//	VirtualGatewayArray{ VirtualGatewayArgs{...} }
+//          VirtualGatewayArray{ VirtualGatewayArgs{...} }
 type VirtualGatewayArrayInput interface {
 	pulumi.Input
 
@@ -297,7 +289,7 @@ func (i VirtualGatewayArray) ToVirtualGatewayArrayOutputWithContext(ctx context.
 // VirtualGatewayMapInput is an input type that accepts VirtualGatewayMap and VirtualGatewayMapOutput values.
 // You can construct a concrete instance of `VirtualGatewayMapInput` via:
 //
-//	VirtualGatewayMap{ "key": VirtualGatewayArgs{...} }
+//          VirtualGatewayMap{ "key": VirtualGatewayArgs{...} }
 type VirtualGatewayMapInput interface {
 	pulumi.Input
 

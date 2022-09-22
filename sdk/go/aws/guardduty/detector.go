@@ -20,41 +20,38 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/guardduty"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/guardduty"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := guardduty.NewDetector(ctx, "myDetector", &guardduty.DetectorArgs{
-//				Datasources: &guardduty.DetectorDatasourcesArgs{
-//					Kubernetes: &guardduty.DetectorDatasourcesKubernetesArgs{
-//						AuditLogs: &guardduty.DetectorDatasourcesKubernetesAuditLogsArgs{
-//							Enable: pulumi.Bool(false),
-//						},
-//					},
-//					MalwareProtection: &guardduty.DetectorDatasourcesMalwareProtectionArgs{
-//						ScanEc2InstanceWithFindings: &guardduty.DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs{
-//							EbsVolumes: &guardduty.DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs{
-//								Enable: pulumi.Bool(true),
-//							},
-//						},
-//					},
-//					S3Logs: &guardduty.DetectorDatasourcesS3LogsArgs{
-//						Enable: pulumi.Bool(true),
-//					},
-//				},
-//				Enable: pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := guardduty.NewDetector(ctx, "myDetector", &guardduty.DetectorArgs{
+// 			Datasources: &guardduty.DetectorDatasourcesArgs{
+// 				Kubernetes: &guardduty.DetectorDatasourcesKubernetesArgs{
+// 					AuditLogs: &guardduty.DetectorDatasourcesKubernetesAuditLogsArgs{
+// 						Enable: pulumi.Bool(false),
+// 					},
+// 				},
+// 				MalwareProtection: &guardduty.DetectorDatasourcesMalwareProtectionArgs{
+// 					ScanEc2InstanceWithFindings: &guardduty.DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs{
+// 						EbsVolumes: &guardduty.DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs{
+// 							Enable: pulumi.Bool(true),
+// 						},
+// 					},
+// 				},
+// 				S3Logs: &guardduty.DetectorDatasourcesS3LogsArgs{
+// 					Enable: pulumi.Bool(true),
+// 				},
+// 			},
+// 			Enable: pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -62,9 +59,7 @@ import (
 // GuardDuty detectors can be imported using the detector ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:guardduty/detector:Detector MyDetector 00b00fd5aecc0ab60a708659477e9617
-//
+//  $ pulumi import aws:guardduty/detector:Detector MyDetector 00b00fd5aecc0ab60a708659477e9617
 // ```
 type Detector struct {
 	pulumi.CustomResourceState
@@ -205,7 +200,7 @@ func (i *Detector) ToDetectorOutputWithContext(ctx context.Context) DetectorOutp
 // DetectorArrayInput is an input type that accepts DetectorArray and DetectorArrayOutput values.
 // You can construct a concrete instance of `DetectorArrayInput` via:
 //
-//	DetectorArray{ DetectorArgs{...} }
+//          DetectorArray{ DetectorArgs{...} }
 type DetectorArrayInput interface {
 	pulumi.Input
 
@@ -230,7 +225,7 @@ func (i DetectorArray) ToDetectorArrayOutputWithContext(ctx context.Context) Det
 // DetectorMapInput is an input type that accepts DetectorMap and DetectorMapOutput values.
 // You can construct a concrete instance of `DetectorMapInput` via:
 //
-//	DetectorMap{ "key": DetectorArgs{...} }
+//          DetectorMap{ "key": DetectorArgs{...} }
 type DetectorMapInput interface {
 	pulumi.Input
 

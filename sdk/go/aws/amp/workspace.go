@@ -20,28 +20,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/amp"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/amp"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := amp.NewWorkspace(ctx, "demo", &amp.WorkspaceArgs{
-//				Alias: pulumi.String("prometheus-test"),
-//				Tags: pulumi.StringMap{
-//					"Environment": pulumi.String("production"),
-//					"Owner":       pulumi.String("abhi"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := amp.NewWorkspace(ctx, "demo", &amp.WorkspaceArgs{
+// 			Alias: pulumi.String("prometheus-test"),
+// 			Tags: pulumi.StringMap{
+// 				"Environment": pulumi.String("production"),
+// 				"Owner":       pulumi.String("abhi"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -49,9 +46,7 @@ import (
 // AMP Workspaces can be imported using the identifier, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:amp/workspace:Workspace demo ws-C6DCB907-F2D7-4D96-957B-66691F865D8B
-//
+//  $ pulumi import aws:amp/workspace:Workspace demo ws-C6DCB907-F2D7-4D96-957B-66691F865D8B
 // ```
 type Workspace struct {
 	pulumi.CustomResourceState
@@ -167,7 +162,7 @@ func (i *Workspace) ToWorkspaceOutputWithContext(ctx context.Context) WorkspaceO
 // WorkspaceArrayInput is an input type that accepts WorkspaceArray and WorkspaceArrayOutput values.
 // You can construct a concrete instance of `WorkspaceArrayInput` via:
 //
-//	WorkspaceArray{ WorkspaceArgs{...} }
+//          WorkspaceArray{ WorkspaceArgs{...} }
 type WorkspaceArrayInput interface {
 	pulumi.Input
 
@@ -192,7 +187,7 @@ func (i WorkspaceArray) ToWorkspaceArrayOutputWithContext(ctx context.Context) W
 // WorkspaceMapInput is an input type that accepts WorkspaceMap and WorkspaceMapOutput values.
 // You can construct a concrete instance of `WorkspaceMapInput` via:
 //
-//	WorkspaceMap{ "key": WorkspaceArgs{...} }
+//          WorkspaceMap{ "key": WorkspaceArgs{...} }
 type WorkspaceMapInput interface {
 	pulumi.Input
 

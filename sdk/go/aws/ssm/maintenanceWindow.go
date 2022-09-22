@@ -19,38 +19,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ssm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ssm"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ssm.NewMaintenanceWindow(ctx, "production", &ssm.MaintenanceWindowArgs{
-//				Cutoff:   pulumi.Int(1),
-//				Duration: pulumi.Int(3),
-//				Schedule: pulumi.String("cron(0 16 ? * TUE *)"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ssm.NewMaintenanceWindow(ctx, "production", &ssm.MaintenanceWindowArgs{
+// 			Cutoff:   pulumi.Int(1),
+// 			Duration: pulumi.Int(3),
+// 			Schedule: pulumi.String("cron(0 16 ? * TUE *)"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # SSM
+// SSM
 //
 // Maintenance Windows can be imported using the `maintenance window id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ssm/maintenanceWindow:MaintenanceWindow imported-window mw-0123456789
-//
+//  $ pulumi import aws:ssm/maintenanceWindow:MaintenanceWindow imported-window mw-0123456789
 // ```
 type MaintenanceWindow struct {
 	pulumi.CustomResourceState
@@ -263,7 +258,7 @@ func (i *MaintenanceWindow) ToMaintenanceWindowOutputWithContext(ctx context.Con
 // MaintenanceWindowArrayInput is an input type that accepts MaintenanceWindowArray and MaintenanceWindowArrayOutput values.
 // You can construct a concrete instance of `MaintenanceWindowArrayInput` via:
 //
-//	MaintenanceWindowArray{ MaintenanceWindowArgs{...} }
+//          MaintenanceWindowArray{ MaintenanceWindowArgs{...} }
 type MaintenanceWindowArrayInput interface {
 	pulumi.Input
 
@@ -288,7 +283,7 @@ func (i MaintenanceWindowArray) ToMaintenanceWindowArrayOutputWithContext(ctx co
 // MaintenanceWindowMapInput is an input type that accepts MaintenanceWindowMap and MaintenanceWindowMapOutput values.
 // You can construct a concrete instance of `MaintenanceWindowMapInput` via:
 //
-//	MaintenanceWindowMap{ "key": MaintenanceWindowArgs{...} }
+//          MaintenanceWindowMap{ "key": MaintenanceWindowArgs{...} }
 type MaintenanceWindowMapInput interface {
 	pulumi.Input
 

@@ -16,9 +16,7 @@ import (
 // IAM Signing Certificates can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:iam/signingCertificate:SigningCertificate certificate IDIDIDIDID:user-name
-//
+//  $ pulumi import aws:iam/signingCertificate:SigningCertificate certificate IDIDIDIDID:user-name
 // ```
 type SigningCertificate struct {
 	pulumi.CustomResourceState
@@ -138,7 +136,7 @@ func (i *SigningCertificate) ToSigningCertificateOutputWithContext(ctx context.C
 // SigningCertificateArrayInput is an input type that accepts SigningCertificateArray and SigningCertificateArrayOutput values.
 // You can construct a concrete instance of `SigningCertificateArrayInput` via:
 //
-//	SigningCertificateArray{ SigningCertificateArgs{...} }
+//          SigningCertificateArray{ SigningCertificateArgs{...} }
 type SigningCertificateArrayInput interface {
 	pulumi.Input
 
@@ -163,7 +161,7 @@ func (i SigningCertificateArray) ToSigningCertificateArrayOutputWithContext(ctx 
 // SigningCertificateMapInput is an input type that accepts SigningCertificateMap and SigningCertificateMapOutput values.
 // You can construct a concrete instance of `SigningCertificateMapInput` via:
 //
-//	SigningCertificateMap{ "key": SigningCertificateArgs{...} }
+//          SigningCertificateMap{ "key": SigningCertificateArgs{...} }
 type SigningCertificateMapInput interface {
 	pulumi.Input
 

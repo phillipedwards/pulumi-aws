@@ -19,53 +19,50 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/guardduty"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/guardduty"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := aws.NewProvider(ctx, "primary", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = aws.NewProvider(ctx, "member", nil)
-//			if err != nil {
-//				return err
-//			}
-//			primaryDetector, err := guardduty.NewDetector(ctx, "primaryDetector", nil, pulumi.Provider(aws.Primary))
-//			if err != nil {
-//				return err
-//			}
-//			memberDetector, err := guardduty.NewDetector(ctx, "memberDetector", nil, pulumi.Provider(aws.Member))
-//			if err != nil {
-//				return err
-//			}
-//			memberMember, err := guardduty.NewMember(ctx, "memberMember", &guardduty.MemberArgs{
-//				AccountId:  memberDetector.AccountId,
-//				DetectorId: primaryDetector.ID(),
-//				Email:      pulumi.String("required@example.com"),
-//				Invite:     pulumi.Bool(true),
-//			}, pulumi.Provider(aws.Primary))
-//			if err != nil {
-//				return err
-//			}
-//			_, err = guardduty.NewInviteAccepter(ctx, "memberInviteAccepter", &guardduty.InviteAccepterArgs{
-//				DetectorId:      memberDetector.ID(),
-//				MasterAccountId: primaryDetector.AccountId,
-//			}, pulumi.Provider(aws.Member), pulumi.DependsOn([]pulumi.Resource{
-//				memberMember,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := aws.NewProvider(ctx, "primary", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = aws.NewProvider(ctx, "member", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		primaryDetector, err := guardduty.NewDetector(ctx, "primaryDetector", nil, pulumi.Provider(aws.Primary))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		memberDetector, err := guardduty.NewDetector(ctx, "memberDetector", nil, pulumi.Provider(aws.Member))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		memberMember, err := guardduty.NewMember(ctx, "memberMember", &guardduty.MemberArgs{
+// 			AccountId:  memberDetector.AccountId,
+// 			DetectorId: primaryDetector.ID(),
+// 			Email:      pulumi.String("required@example.com"),
+// 			Invite:     pulumi.Bool(true),
+// 		}, pulumi.Provider(aws.Primary))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = guardduty.NewInviteAccepter(ctx, "memberInviteAccepter", &guardduty.InviteAccepterArgs{
+// 			DetectorId:      memberDetector.ID(),
+// 			MasterAccountId: primaryDetector.AccountId,
+// 		}, pulumi.Provider(aws.Member), pulumi.DependsOn([]pulumi.Resource{
+// 			memberMember,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -73,9 +70,7 @@ import (
 // `aws_guardduty_invite_accepter` can be imported using the the member GuardDuty detector ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:guardduty/inviteAccepter:InviteAccepter member 00b00fd5aecc0ab60a708659477e9617
-//
+//  $ pulumi import aws:guardduty/inviteAccepter:InviteAccepter member 00b00fd5aecc0ab60a708659477e9617
 // ```
 type InviteAccepter struct {
 	pulumi.CustomResourceState
@@ -179,7 +174,7 @@ func (i *InviteAccepter) ToInviteAccepterOutputWithContext(ctx context.Context) 
 // InviteAccepterArrayInput is an input type that accepts InviteAccepterArray and InviteAccepterArrayOutput values.
 // You can construct a concrete instance of `InviteAccepterArrayInput` via:
 //
-//	InviteAccepterArray{ InviteAccepterArgs{...} }
+//          InviteAccepterArray{ InviteAccepterArgs{...} }
 type InviteAccepterArrayInput interface {
 	pulumi.Input
 
@@ -204,7 +199,7 @@ func (i InviteAccepterArray) ToInviteAccepterArrayOutputWithContext(ctx context.
 // InviteAccepterMapInput is an input type that accepts InviteAccepterMap and InviteAccepterMapOutput values.
 // You can construct a concrete instance of `InviteAccepterMapInput` via:
 //
-//	InviteAccepterMap{ "key": InviteAccepterArgs{...} }
+//          InviteAccepterMap{ "key": InviteAccepterArgs{...} }
 type InviteAccepterMapInput interface {
 	pulumi.Input
 

@@ -21,30 +21,27 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudwatch"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudwatch.NewCompositeAlarm(ctx, "example", &cloudwatch.CompositeAlarmArgs{
-//				AlarmDescription: pulumi.String("This is a composite alarm!"),
-//				AlarmName:        pulumi.String("example-composite-alarm"),
-//				AlarmActions:     pulumi.Any(aws_sns_topic.Example.Arn),
-//				OkActions:        pulumi.Any(aws_sns_topic.Example.Arn),
-//				AlarmRule:        pulumi.String(fmt.Sprintf("ALARM(%v) OR\nALARM(%v)\n", aws_cloudwatch_metric_alarm.Alpha.Alarm_name, aws_cloudwatch_metric_alarm.Bravo.Alarm_name)),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudwatch.NewCompositeAlarm(ctx, "example", &cloudwatch.CompositeAlarmArgs{
+// 			AlarmDescription: pulumi.String("This is a composite alarm!"),
+// 			AlarmName:        pulumi.String("example-composite-alarm"),
+// 			AlarmActions:     pulumi.Any(aws_sns_topic.Example.Arn),
+// 			OkActions:        pulumi.Any(aws_sns_topic.Example.Arn),
+// 			AlarmRule:        pulumi.String(fmt.Sprintf("ALARM(%v) OR\nALARM(%v)\n", aws_cloudwatch_metric_alarm.Alpha.Alarm_name, aws_cloudwatch_metric_alarm.Bravo.Alarm_name)),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // Use the `alarm_name` to import a CloudWatch Composite Alarm. For example
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudwatch/compositeAlarm:CompositeAlarm test my-alarm
-//
+//  $ pulumi import aws:cloudwatch/compositeAlarm:CompositeAlarm test my-alarm
 // ```
 type CompositeAlarm struct {
 	pulumi.CustomResourceState
@@ -230,7 +225,7 @@ func (i *CompositeAlarm) ToCompositeAlarmOutputWithContext(ctx context.Context) 
 // CompositeAlarmArrayInput is an input type that accepts CompositeAlarmArray and CompositeAlarmArrayOutput values.
 // You can construct a concrete instance of `CompositeAlarmArrayInput` via:
 //
-//	CompositeAlarmArray{ CompositeAlarmArgs{...} }
+//          CompositeAlarmArray{ CompositeAlarmArgs{...} }
 type CompositeAlarmArrayInput interface {
 	pulumi.Input
 
@@ -255,7 +250,7 @@ func (i CompositeAlarmArray) ToCompositeAlarmArrayOutputWithContext(ctx context.
 // CompositeAlarmMapInput is an input type that accepts CompositeAlarmMap and CompositeAlarmMapOutput values.
 // You can construct a concrete instance of `CompositeAlarmMapInput` via:
 //
-//	CompositeAlarmMap{ "key": CompositeAlarmArgs{...} }
+//          CompositeAlarmMap{ "key": CompositeAlarmArgs{...} }
 type CompositeAlarmMapInput interface {
 	pulumi.Input
 

@@ -20,25 +20,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/organizations"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/organizations"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := organizations.NewPolicyAttachment(ctx, "account", &organizations.PolicyAttachmentArgs{
-//				PolicyId: pulumi.Any(aws_organizations_policy.Example.Id),
-//				TargetId: pulumi.String("123456789012"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := organizations.NewPolicyAttachment(ctx, "account", &organizations.PolicyAttachmentArgs{
+// 			PolicyId: pulumi.Any(aws_organizations_policy.Example.Id),
+// 			TargetId: pulumi.String("123456789012"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Organization Root
 //
@@ -46,25 +43,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/organizations"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/organizations"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := organizations.NewPolicyAttachment(ctx, "root", &organizations.PolicyAttachmentArgs{
-//				PolicyId: pulumi.Any(aws_organizations_policy.Example.Id),
-//				TargetId: pulumi.Any(aws_organizations_organization.Example.Roots[0].Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := organizations.NewPolicyAttachment(ctx, "root", &organizations.PolicyAttachmentArgs{
+// 			PolicyId: pulumi.Any(aws_organizations_policy.Example.Id),
+// 			TargetId: pulumi.Any(aws_organizations_organization.Example.Roots[0].Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Organization Unit
 //
@@ -72,25 +66,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/organizations"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/organizations"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := organizations.NewPolicyAttachment(ctx, "unit", &organizations.PolicyAttachmentArgs{
-//				PolicyId: pulumi.Any(aws_organizations_policy.Example.Id),
-//				TargetId: pulumi.Any(aws_organizations_organizational_unit.Example.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := organizations.NewPolicyAttachment(ctx, "unit", &organizations.PolicyAttachmentArgs{
+// 			PolicyId: pulumi.Any(aws_organizations_policy.Example.Id),
+// 			TargetId: pulumi.Any(aws_organizations_organizational_unit.Example.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -98,9 +89,7 @@ import (
 // `aws_organizations_policy_attachment` can be imported by using the target ID and policy ID, e.g., with an account target
 //
 // ```sh
-//
-//	$ pulumi import aws:organizations/policyAttachment:PolicyAttachment account 123456789012:p-12345678
-//
+//  $ pulumi import aws:organizations/policyAttachment:PolicyAttachment account 123456789012:p-12345678
 // ```
 type PolicyAttachment struct {
 	pulumi.CustomResourceState
@@ -204,7 +193,7 @@ func (i *PolicyAttachment) ToPolicyAttachmentOutputWithContext(ctx context.Conte
 // PolicyAttachmentArrayInput is an input type that accepts PolicyAttachmentArray and PolicyAttachmentArrayOutput values.
 // You can construct a concrete instance of `PolicyAttachmentArrayInput` via:
 //
-//	PolicyAttachmentArray{ PolicyAttachmentArgs{...} }
+//          PolicyAttachmentArray{ PolicyAttachmentArgs{...} }
 type PolicyAttachmentArrayInput interface {
 	pulumi.Input
 
@@ -229,7 +218,7 @@ func (i PolicyAttachmentArray) ToPolicyAttachmentArrayOutputWithContext(ctx cont
 // PolicyAttachmentMapInput is an input type that accepts PolicyAttachmentMap and PolicyAttachmentMapOutput values.
 // You can construct a concrete instance of `PolicyAttachmentMapInput` via:
 //
-//	PolicyAttachmentMap{ "key": PolicyAttachmentArgs{...} }
+//          PolicyAttachmentMap{ "key": PolicyAttachmentArgs{...} }
 type PolicyAttachmentMapInput interface {
 	pulumi.Input
 

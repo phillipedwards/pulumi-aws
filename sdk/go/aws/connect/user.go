@@ -21,37 +21,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewUser(ctx, "example", &connect.UserArgs{
-//				InstanceId:       pulumi.Any(aws_connect_instance.Example.Id),
-//				Password:         pulumi.String("Password123"),
-//				RoutingProfileId: pulumi.Any(aws_connect_routing_profile.Example.Routing_profile_id),
-//				SecurityProfileIds: pulumi.StringArray{
-//					pulumi.Any(aws_connect_security_profile.Example.Security_profile_id),
-//				},
-//				IdentityInfo: &connect.UserIdentityInfoArgs{
-//					FirstName: pulumi.String("example"),
-//					LastName:  pulumi.String("example2"),
-//				},
-//				PhoneConfig: &connect.UserPhoneConfigArgs{
-//					AfterContactWorkTimeLimit: pulumi.Int(0),
-//					PhoneType:                 pulumi.String("SOFT_PHONE"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewUser(ctx, "example", &connect.UserArgs{
+// 			InstanceId:       pulumi.Any(aws_connect_instance.Example.Id),
+// 			Password:         pulumi.String("Password123"),
+// 			RoutingProfileId: pulumi.Any(aws_connect_routing_profile.Example.Routing_profile_id),
+// 			SecurityProfileIds: pulumi.StringArray{
+// 				pulumi.Any(aws_connect_security_profile.Example.Security_profile_id),
+// 			},
+// 			IdentityInfo: &connect.UserIdentityInfoArgs{
+// 				FirstName: pulumi.String("example"),
+// 				LastName:  pulumi.String("example2"),
+// 			},
+// 			PhoneConfig: &connect.UserPhoneConfigArgs{
+// 				AfterContactWorkTimeLimit: pulumi.Int(0),
+// 				PhoneType:                 pulumi.String("SOFT_PHONE"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### With hierarchyGroupId
 //
@@ -59,38 +56,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewUser(ctx, "example", &connect.UserArgs{
-//				InstanceId:       pulumi.Any(aws_connect_instance.Example.Id),
-//				Password:         pulumi.String("Password123"),
-//				RoutingProfileId: pulumi.Any(aws_connect_routing_profile.Example.Routing_profile_id),
-//				HierarchyGroupId: pulumi.Any(aws_connect_user_hierarchy_group.Example.Hierarchy_group_id),
-//				SecurityProfileIds: pulumi.StringArray{
-//					pulumi.Any(aws_connect_security_profile.Example.Security_profile_id),
-//				},
-//				IdentityInfo: &connect.UserIdentityInfoArgs{
-//					FirstName: pulumi.String("example"),
-//					LastName:  pulumi.String("example2"),
-//				},
-//				PhoneConfig: &connect.UserPhoneConfigArgs{
-//					AfterContactWorkTimeLimit: pulumi.Int(0),
-//					PhoneType:                 pulumi.String("SOFT_PHONE"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewUser(ctx, "example", &connect.UserArgs{
+// 			InstanceId:       pulumi.Any(aws_connect_instance.Example.Id),
+// 			Password:         pulumi.String("Password123"),
+// 			RoutingProfileId: pulumi.Any(aws_connect_routing_profile.Example.Routing_profile_id),
+// 			HierarchyGroupId: pulumi.Any(aws_connect_user_hierarchy_group.Example.Hierarchy_group_id),
+// 			SecurityProfileIds: pulumi.StringArray{
+// 				pulumi.Any(aws_connect_security_profile.Example.Security_profile_id),
+// 			},
+// 			IdentityInfo: &connect.UserIdentityInfoArgs{
+// 				FirstName: pulumi.String("example"),
+// 				LastName:  pulumi.String("example2"),
+// 			},
+// 			PhoneConfig: &connect.UserPhoneConfigArgs{
+// 				AfterContactWorkTimeLimit: pulumi.Int(0),
+// 				PhoneType:                 pulumi.String("SOFT_PHONE"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### With identityInfo filled
 //
@@ -98,38 +92,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewUser(ctx, "example", &connect.UserArgs{
-//				InstanceId:       pulumi.Any(aws_connect_instance.Example.Id),
-//				Password:         pulumi.String("Password123"),
-//				RoutingProfileId: pulumi.Any(aws_connect_routing_profile.Example.Routing_profile_id),
-//				SecurityProfileIds: pulumi.StringArray{
-//					pulumi.Any(aws_connect_security_profile.Example.Security_profile_id),
-//				},
-//				IdentityInfo: &connect.UserIdentityInfoArgs{
-//					Email:     pulumi.String("example@example.com"),
-//					FirstName: pulumi.String("example"),
-//					LastName:  pulumi.String("example2"),
-//				},
-//				PhoneConfig: &connect.UserPhoneConfigArgs{
-//					AfterContactWorkTimeLimit: pulumi.Int(0),
-//					PhoneType:                 pulumi.String("SOFT_PHONE"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewUser(ctx, "example", &connect.UserArgs{
+// 			InstanceId:       pulumi.Any(aws_connect_instance.Example.Id),
+// 			Password:         pulumi.String("Password123"),
+// 			RoutingProfileId: pulumi.Any(aws_connect_routing_profile.Example.Routing_profile_id),
+// 			SecurityProfileIds: pulumi.StringArray{
+// 				pulumi.Any(aws_connect_security_profile.Example.Security_profile_id),
+// 			},
+// 			IdentityInfo: &connect.UserIdentityInfoArgs{
+// 				Email:     pulumi.String("example@example.com"),
+// 				FirstName: pulumi.String("example"),
+// 				LastName:  pulumi.String("example2"),
+// 			},
+// 			PhoneConfig: &connect.UserPhoneConfigArgs{
+// 				AfterContactWorkTimeLimit: pulumi.Int(0),
+// 				PhoneType:                 pulumi.String("SOFT_PHONE"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### With phoneConfig phone type as desk phone
 //
@@ -137,33 +128,30 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewUser(ctx, "example", &connect.UserArgs{
-//				InstanceId:       pulumi.Any(aws_connect_instance.Example.Id),
-//				Password:         pulumi.String("Password123"),
-//				RoutingProfileId: pulumi.Any(aws_connect_routing_profile.Example.Routing_profile_id),
-//				SecurityProfileIds: pulumi.StringArray{
-//					pulumi.Any(aws_connect_security_profile.Example.Security_profile_id),
-//				},
-//				PhoneConfig: &connect.UserPhoneConfigArgs{
-//					AfterContactWorkTimeLimit: pulumi.Int(0),
-//					PhoneType:                 pulumi.String("SOFT_PHONE"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewUser(ctx, "example", &connect.UserArgs{
+// 			InstanceId:       pulumi.Any(aws_connect_instance.Example.Id),
+// 			Password:         pulumi.String("Password123"),
+// 			RoutingProfileId: pulumi.Any(aws_connect_routing_profile.Example.Routing_profile_id),
+// 			SecurityProfileIds: pulumi.StringArray{
+// 				pulumi.Any(aws_connect_security_profile.Example.Security_profile_id),
+// 			},
+// 			PhoneConfig: &connect.UserPhoneConfigArgs{
+// 				AfterContactWorkTimeLimit: pulumi.Int(0),
+// 				PhoneType:                 pulumi.String("SOFT_PHONE"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### With multiple Security profile ids specified in securityProfileIds
 //
@@ -171,36 +159,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewUser(ctx, "example", &connect.UserArgs{
-//				InstanceId:       pulumi.Any(aws_connect_instance.Example.Id),
-//				Password:         pulumi.String("Password123"),
-//				RoutingProfileId: pulumi.Any(aws_connect_routing_profile.Example.Routing_profile_id),
-//				SecurityProfileIds: pulumi.StringArray{
-//					pulumi.Any(aws_connect_security_profile.Example.Security_profile_id),
-//					pulumi.Any(aws_connect_security_profile.Example2.Security_profile_id),
-//				},
-//				PhoneConfig: &connect.UserPhoneConfigArgs{
-//					AfterContactWorkTimeLimit: pulumi.Int(0),
-//					AutoAccept:                pulumi.Bool(false),
-//					DeskPhoneNumber:           pulumi.String("+112345678912"),
-//					PhoneType:                 pulumi.String("DESK_PHONE"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewUser(ctx, "example", &connect.UserArgs{
+// 			InstanceId:       pulumi.Any(aws_connect_instance.Example.Id),
+// 			Password:         pulumi.String("Password123"),
+// 			RoutingProfileId: pulumi.Any(aws_connect_routing_profile.Example.Routing_profile_id),
+// 			SecurityProfileIds: pulumi.StringArray{
+// 				pulumi.Any(aws_connect_security_profile.Example.Security_profile_id),
+// 				pulumi.Any(aws_connect_security_profile.Example2.Security_profile_id),
+// 			},
+// 			PhoneConfig: &connect.UserPhoneConfigArgs{
+// 				AfterContactWorkTimeLimit: pulumi.Int(0),
+// 				AutoAccept:                pulumi.Bool(false),
+// 				DeskPhoneNumber:           pulumi.String("+112345678912"),
+// 				PhoneType:                 pulumi.String("DESK_PHONE"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -208,9 +193,7 @@ import (
 // Amazon Connect Users can be imported using the `instance_id` and `user_id` separated by a colon (`:`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:connect/user:User example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
-//
+//  $ pulumi import aws:connect/user:User example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
 // ```
 type User struct {
 	pulumi.CustomResourceState
@@ -413,7 +396,7 @@ func (i *User) ToUserOutputWithContext(ctx context.Context) UserOutput {
 // UserArrayInput is an input type that accepts UserArray and UserArrayOutput values.
 // You can construct a concrete instance of `UserArrayInput` via:
 //
-//	UserArray{ UserArgs{...} }
+//          UserArray{ UserArgs{...} }
 type UserArrayInput interface {
 	pulumi.Input
 
@@ -438,7 +421,7 @@ func (i UserArray) ToUserArrayOutputWithContext(ctx context.Context) UserArrayOu
 // UserMapInput is an input type that accepts UserMap and UserMapOutput values.
 // You can construct a concrete instance of `UserMapInput` via:
 //
-//	UserMap{ "key": UserArgs{...} }
+//          UserMap{ "key": UserArgs{...} }
 type UserMapInput interface {
 	pulumi.Input
 

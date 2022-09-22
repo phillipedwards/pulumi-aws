@@ -22,7 +22,7 @@ type EndpointAccessVpcEndpoint struct {
 // EndpointAccessVpcEndpointInput is an input type that accepts EndpointAccessVpcEndpointArgs and EndpointAccessVpcEndpointOutput values.
 // You can construct a concrete instance of `EndpointAccessVpcEndpointInput` via:
 //
-//	EndpointAccessVpcEndpointArgs{...}
+//          EndpointAccessVpcEndpointArgs{...}
 type EndpointAccessVpcEndpointInput interface {
 	pulumi.Input
 
@@ -54,7 +54,7 @@ func (i EndpointAccessVpcEndpointArgs) ToEndpointAccessVpcEndpointOutputWithCont
 // EndpointAccessVpcEndpointArrayInput is an input type that accepts EndpointAccessVpcEndpointArray and EndpointAccessVpcEndpointArrayOutput values.
 // You can construct a concrete instance of `EndpointAccessVpcEndpointArrayInput` via:
 //
-//	EndpointAccessVpcEndpointArray{ EndpointAccessVpcEndpointArgs{...} }
+//          EndpointAccessVpcEndpointArray{ EndpointAccessVpcEndpointArgs{...} }
 type EndpointAccessVpcEndpointArrayInput interface {
 	pulumi.Input
 
@@ -141,7 +141,7 @@ type EndpointAccessVpcEndpointNetworkInterface struct {
 // EndpointAccessVpcEndpointNetworkInterfaceInput is an input type that accepts EndpointAccessVpcEndpointNetworkInterfaceArgs and EndpointAccessVpcEndpointNetworkInterfaceOutput values.
 // You can construct a concrete instance of `EndpointAccessVpcEndpointNetworkInterfaceInput` via:
 //
-//	EndpointAccessVpcEndpointNetworkInterfaceArgs{...}
+//          EndpointAccessVpcEndpointNetworkInterfaceArgs{...}
 type EndpointAccessVpcEndpointNetworkInterfaceInput interface {
 	pulumi.Input
 
@@ -175,7 +175,7 @@ func (i EndpointAccessVpcEndpointNetworkInterfaceArgs) ToEndpointAccessVpcEndpoi
 // EndpointAccessVpcEndpointNetworkInterfaceArrayInput is an input type that accepts EndpointAccessVpcEndpointNetworkInterfaceArray and EndpointAccessVpcEndpointNetworkInterfaceArrayOutput values.
 // You can construct a concrete instance of `EndpointAccessVpcEndpointNetworkInterfaceArrayInput` via:
 //
-//	EndpointAccessVpcEndpointNetworkInterfaceArray{ EndpointAccessVpcEndpointNetworkInterfaceArgs{...} }
+//          EndpointAccessVpcEndpointNetworkInterfaceArray{ EndpointAccessVpcEndpointNetworkInterfaceArgs{...} }
 type EndpointAccessVpcEndpointNetworkInterfaceArrayInput interface {
 	pulumi.Input
 
@@ -261,7 +261,7 @@ type WorkgroupConfigParameter struct {
 // WorkgroupConfigParameterInput is an input type that accepts WorkgroupConfigParameterArgs and WorkgroupConfigParameterOutput values.
 // You can construct a concrete instance of `WorkgroupConfigParameterInput` via:
 //
-//	WorkgroupConfigParameterArgs{...}
+//          WorkgroupConfigParameterArgs{...}
 type WorkgroupConfigParameterInput interface {
 	pulumi.Input
 
@@ -291,7 +291,7 @@ func (i WorkgroupConfigParameterArgs) ToWorkgroupConfigParameterOutputWithContex
 // WorkgroupConfigParameterArrayInput is an input type that accepts WorkgroupConfigParameterArray and WorkgroupConfigParameterArrayOutput values.
 // You can construct a concrete instance of `WorkgroupConfigParameterArrayInput` via:
 //
-//	WorkgroupConfigParameterArray{ WorkgroupConfigParameterArgs{...} }
+//          WorkgroupConfigParameterArray{ WorkgroupConfigParameterArgs{...} }
 type WorkgroupConfigParameterArrayInput interface {
 	pulumi.Input
 
@@ -369,7 +369,7 @@ type WorkgroupEndpoint struct {
 // WorkgroupEndpointInput is an input type that accepts WorkgroupEndpointArgs and WorkgroupEndpointOutput values.
 // You can construct a concrete instance of `WorkgroupEndpointInput` via:
 //
-//	WorkgroupEndpointArgs{...}
+//          WorkgroupEndpointArgs{...}
 type WorkgroupEndpointInput interface {
 	pulumi.Input
 
@@ -401,7 +401,7 @@ func (i WorkgroupEndpointArgs) ToWorkgroupEndpointOutputWithContext(ctx context.
 // WorkgroupEndpointArrayInput is an input type that accepts WorkgroupEndpointArray and WorkgroupEndpointArrayOutput values.
 // You can construct a concrete instance of `WorkgroupEndpointArrayInput` via:
 //
-//	WorkgroupEndpointArray{ WorkgroupEndpointArgs{...} }
+//          WorkgroupEndpointArray{ WorkgroupEndpointArgs{...} }
 type WorkgroupEndpointArrayInput interface {
 	pulumi.Input
 
@@ -484,7 +484,7 @@ type WorkgroupEndpointVpcEndpoint struct {
 // WorkgroupEndpointVpcEndpointInput is an input type that accepts WorkgroupEndpointVpcEndpointArgs and WorkgroupEndpointVpcEndpointOutput values.
 // You can construct a concrete instance of `WorkgroupEndpointVpcEndpointInput` via:
 //
-//	WorkgroupEndpointVpcEndpointArgs{...}
+//          WorkgroupEndpointVpcEndpointArgs{...}
 type WorkgroupEndpointVpcEndpointInput interface {
 	pulumi.Input
 
@@ -516,7 +516,7 @@ func (i WorkgroupEndpointVpcEndpointArgs) ToWorkgroupEndpointVpcEndpointOutputWi
 // WorkgroupEndpointVpcEndpointArrayInput is an input type that accepts WorkgroupEndpointVpcEndpointArray and WorkgroupEndpointVpcEndpointArrayOutput values.
 // You can construct a concrete instance of `WorkgroupEndpointVpcEndpointArrayInput` via:
 //
-//	WorkgroupEndpointVpcEndpointArray{ WorkgroupEndpointVpcEndpointArgs{...} }
+//          WorkgroupEndpointVpcEndpointArray{ WorkgroupEndpointVpcEndpointArgs{...} }
 type WorkgroupEndpointVpcEndpointArrayInput interface {
 	pulumi.Input
 
@@ -603,7 +603,7 @@ type WorkgroupEndpointVpcEndpointNetworkInterface struct {
 // WorkgroupEndpointVpcEndpointNetworkInterfaceInput is an input type that accepts WorkgroupEndpointVpcEndpointNetworkInterfaceArgs and WorkgroupEndpointVpcEndpointNetworkInterfaceOutput values.
 // You can construct a concrete instance of `WorkgroupEndpointVpcEndpointNetworkInterfaceInput` via:
 //
-//	WorkgroupEndpointVpcEndpointNetworkInterfaceArgs{...}
+//          WorkgroupEndpointVpcEndpointNetworkInterfaceArgs{...}
 type WorkgroupEndpointVpcEndpointNetworkInterfaceInput interface {
 	pulumi.Input
 
@@ -637,7 +637,7 @@ func (i WorkgroupEndpointVpcEndpointNetworkInterfaceArgs) ToWorkgroupEndpointVpc
 // WorkgroupEndpointVpcEndpointNetworkInterfaceArrayInput is an input type that accepts WorkgroupEndpointVpcEndpointNetworkInterfaceArray and WorkgroupEndpointVpcEndpointNetworkInterfaceArrayOutput values.
 // You can construct a concrete instance of `WorkgroupEndpointVpcEndpointNetworkInterfaceArrayInput` via:
 //
-//	WorkgroupEndpointVpcEndpointNetworkInterfaceArray{ WorkgroupEndpointVpcEndpointNetworkInterfaceArgs{...} }
+//          WorkgroupEndpointVpcEndpointNetworkInterfaceArray{ WorkgroupEndpointVpcEndpointNetworkInterfaceArgs{...} }
 type WorkgroupEndpointVpcEndpointNetworkInterfaceArrayInput interface {
 	pulumi.Input
 

@@ -18,24 +18,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/apigateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := apigateway.NewClientCertificate(ctx, "demo", &apigateway.ClientCertificateArgs{
-//				Description: pulumi.String("My client certificate"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := apigateway.NewClientCertificate(ctx, "demo", &apigateway.ClientCertificateArgs{
+// 			Description: pulumi.String("My client certificate"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -43,9 +40,7 @@ import (
 // API Gateway Client Certificates can be imported using the id, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:apigateway/clientCertificate:ClientCertificate demo ab1cqe
-//
+//  $ pulumi import aws:apigateway/clientCertificate:ClientCertificate demo ab1cqe
 // ```
 type ClientCertificate struct {
 	pulumi.CustomResourceState
@@ -173,7 +168,7 @@ func (i *ClientCertificate) ToClientCertificateOutputWithContext(ctx context.Con
 // ClientCertificateArrayInput is an input type that accepts ClientCertificateArray and ClientCertificateArrayOutput values.
 // You can construct a concrete instance of `ClientCertificateArrayInput` via:
 //
-//	ClientCertificateArray{ ClientCertificateArgs{...} }
+//          ClientCertificateArray{ ClientCertificateArgs{...} }
 type ClientCertificateArrayInput interface {
 	pulumi.Input
 
@@ -198,7 +193,7 @@ func (i ClientCertificateArray) ToClientCertificateArrayOutputWithContext(ctx co
 // ClientCertificateMapInput is an input type that accepts ClientCertificateMap and ClientCertificateMapOutput values.
 // You can construct a concrete instance of `ClientCertificateMapInput` via:
 //
-//	ClientCertificateMap{ "key": ClientCertificateArgs{...} }
+//          ClientCertificateMap{ "key": ClientCertificateArgs{...} }
 type ClientCertificateMapInput interface {
 	pulumi.Input
 

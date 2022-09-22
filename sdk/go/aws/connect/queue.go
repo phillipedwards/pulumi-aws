@@ -23,29 +23,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewQueue(ctx, "test", &connect.QueueArgs{
-//				Description:        pulumi.String("Example Description"),
-//				HoursOfOperationId: pulumi.String("12345678-1234-1234-1234-123456789012"),
-//				InstanceId:         pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example Queue"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewQueue(ctx, "test", &connect.QueueArgs{
+// 			Description:        pulumi.String("Example Description"),
+// 			HoursOfOperationId: pulumi.String("12345678-1234-1234-1234-123456789012"),
+// 			InstanceId:         pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example Queue"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### With Quick Connect IDs
 //
@@ -53,32 +50,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewQueue(ctx, "test", &connect.QueueArgs{
-//				Description:        pulumi.String("Example Description"),
-//				HoursOfOperationId: pulumi.String("12345678-1234-1234-1234-123456789012"),
-//				InstanceId:         pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
-//				QuickConnectIds: pulumi.StringArray{
-//					pulumi.String("12345678-abcd-1234-abcd-123456789012"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example Queue with Quick Connect IDs"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewQueue(ctx, "test", &connect.QueueArgs{
+// 			Description:        pulumi.String("Example Description"),
+// 			HoursOfOperationId: pulumi.String("12345678-1234-1234-1234-123456789012"),
+// 			InstanceId:         pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+// 			QuickConnectIds: pulumi.StringArray{
+// 				pulumi.String("12345678-abcd-1234-abcd-123456789012"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example Queue with Quick Connect IDs"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### With Outbound Caller Config
 //
@@ -86,34 +80,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewQueue(ctx, "test", &connect.QueueArgs{
-//				Description:        pulumi.String("Example Description"),
-//				HoursOfOperationId: pulumi.String("12345678-1234-1234-1234-123456789012"),
-//				InstanceId:         pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
-//				OutboundCallerConfig: &connect.QueueOutboundCallerConfigArgs{
-//					OutboundCallerIdName:     pulumi.String("example"),
-//					OutboundCallerIdNumberId: pulumi.String("12345678-abcd-1234-abcd-123456789012"),
-//					OutboundFlowId:           pulumi.String("87654321-defg-1234-defg-987654321234"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example Queue with Outbound Caller Config"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewQueue(ctx, "test", &connect.QueueArgs{
+// 			Description:        pulumi.String("Example Description"),
+// 			HoursOfOperationId: pulumi.String("12345678-1234-1234-1234-123456789012"),
+// 			InstanceId:         pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+// 			OutboundCallerConfig: &connect.QueueOutboundCallerConfigArgs{
+// 				OutboundCallerIdName:     pulumi.String("example"),
+// 				OutboundCallerIdNumberId: pulumi.String("12345678-abcd-1234-abcd-123456789012"),
+// 				OutboundFlowId:           pulumi.String("87654321-defg-1234-defg-987654321234"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example Queue with Outbound Caller Config"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -121,9 +112,7 @@ import (
 // Amazon Connect Queues can be imported using the `instance_id` and `queue_id` separated by a colon (`:`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:connect/queue:Queue example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
-//
+//  $ pulumi import aws:connect/queue:Queue example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
 // ```
 type Queue struct {
 	pulumi.CustomResourceState
@@ -318,7 +307,7 @@ func (i *Queue) ToQueueOutputWithContext(ctx context.Context) QueueOutput {
 // QueueArrayInput is an input type that accepts QueueArray and QueueArrayOutput values.
 // You can construct a concrete instance of `QueueArrayInput` via:
 //
-//	QueueArray{ QueueArgs{...} }
+//          QueueArray{ QueueArgs{...} }
 type QueueArrayInput interface {
 	pulumi.Input
 
@@ -343,7 +332,7 @@ func (i QueueArray) ToQueueArrayOutputWithContext(ctx context.Context) QueueArra
 // QueueMapInput is an input type that accepts QueueMap and QueueMapOutput values.
 // You can construct a concrete instance of `QueueMapInput` via:
 //
-//	QueueMap{ "key": QueueArgs{...} }
+//          QueueMap{ "key": QueueArgs{...} }
 type QueueMapInput interface {
 	pulumi.Input
 

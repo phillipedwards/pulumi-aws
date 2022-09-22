@@ -24,44 +24,41 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/directconnect"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleGateway, err := directconnect.NewGateway(ctx, "exampleGateway", &directconnect.GatewayArgs{
-//				AmazonSideAsn: pulumi.String("64512"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("10.255.255.0/28"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleVpnGateway, err := ec2.NewVpnGateway(ctx, "exampleVpnGateway", &ec2.VpnGatewayArgs{
-//				VpcId: exampleVpc.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
-//				DxGatewayId:         exampleGateway.ID(),
-//				AssociatedGatewayId: exampleVpnGateway.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleGateway, err := directconnect.NewGateway(ctx, "exampleGateway", &directconnect.GatewayArgs{
+// 			AmazonSideAsn: pulumi.String("64512"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("10.255.255.0/28"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleVpnGateway, err := ec2.NewVpnGateway(ctx, "exampleVpnGateway", &ec2.VpnGatewayArgs{
+// 			VpcId: exampleVpc.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
+// 			DxGatewayId:         exampleGateway.ID(),
+// 			AssociatedGatewayId: exampleVpnGateway.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Transit Gateway Association
 //
@@ -69,40 +66,37 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/directconnect"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2transitgateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleGateway, err := directconnect.NewGateway(ctx, "exampleGateway", &directconnect.GatewayArgs{
-//				AmazonSideAsn: pulumi.String("64512"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleTransitGateway, err := ec2transitgateway.NewTransitGateway(ctx, "exampleTransitGateway", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
-//				DxGatewayId:         exampleGateway.ID(),
-//				AssociatedGatewayId: exampleTransitGateway.ID(),
-//				AllowedPrefixes: pulumi.StringArray{
-//					pulumi.String("10.255.255.0/30"),
-//					pulumi.String("10.255.255.8/30"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleGateway, err := directconnect.NewGateway(ctx, "exampleGateway", &directconnect.GatewayArgs{
+// 			AmazonSideAsn: pulumi.String("64512"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleTransitGateway, err := ec2transitgateway.NewTransitGateway(ctx, "exampleTransitGateway", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
+// 			DxGatewayId:         exampleGateway.ID(),
+// 			AssociatedGatewayId: exampleTransitGateway.ID(),
+// 			AllowedPrefixes: pulumi.StringArray{
+// 				pulumi.String("10.255.255.0/30"),
+// 				pulumi.String("10.255.255.8/30"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Allowed Prefixes
 //
@@ -110,48 +104,45 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/directconnect"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleGateway, err := directconnect.NewGateway(ctx, "exampleGateway", &directconnect.GatewayArgs{
-//				AmazonSideAsn: pulumi.String("64512"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("10.255.255.0/28"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleVpnGateway, err := ec2.NewVpnGateway(ctx, "exampleVpnGateway", &ec2.VpnGatewayArgs{
-//				VpcId: exampleVpc.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
-//				DxGatewayId:         exampleGateway.ID(),
-//				AssociatedGatewayId: exampleVpnGateway.ID(),
-//				AllowedPrefixes: pulumi.StringArray{
-//					pulumi.String("210.52.109.0/24"),
-//					pulumi.String("175.45.176.0/22"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleGateway, err := directconnect.NewGateway(ctx, "exampleGateway", &directconnect.GatewayArgs{
+// 			AmazonSideAsn: pulumi.String("64512"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("10.255.255.0/28"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleVpnGateway, err := ec2.NewVpnGateway(ctx, "exampleVpnGateway", &ec2.VpnGatewayArgs{
+// 			VpcId: exampleVpc.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = directconnect.NewGatewayAssociation(ctx, "exampleGatewayAssociation", &directconnect.GatewayAssociationArgs{
+// 			DxGatewayId:         exampleGateway.ID(),
+// 			AssociatedGatewayId: exampleVpnGateway.ID(),
+// 			AllowedPrefixes: pulumi.StringArray{
+// 				pulumi.String("210.52.109.0/24"),
+// 				pulumi.String("175.45.176.0/22"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -159,9 +150,7 @@ import (
 // Direct Connect gateway associations can be imported using `dx_gateway_id` together with `associated_gateway_id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:directconnect/gatewayAssociation:GatewayAssociation example 345508c3-7215-4aef-9832-07c125d5bd0f/vgw-98765432
-//
+//  $ pulumi import aws:directconnect/gatewayAssociation:GatewayAssociation example 345508c3-7215-4aef-9832-07c125d5bd0f/vgw-98765432
 // ```
 type GatewayAssociation struct {
 	pulumi.CustomResourceState
@@ -335,7 +324,7 @@ func (i *GatewayAssociation) ToGatewayAssociationOutputWithContext(ctx context.C
 // GatewayAssociationArrayInput is an input type that accepts GatewayAssociationArray and GatewayAssociationArrayOutput values.
 // You can construct a concrete instance of `GatewayAssociationArrayInput` via:
 //
-//	GatewayAssociationArray{ GatewayAssociationArgs{...} }
+//          GatewayAssociationArray{ GatewayAssociationArgs{...} }
 type GatewayAssociationArrayInput interface {
 	pulumi.Input
 
@@ -360,7 +349,7 @@ func (i GatewayAssociationArray) ToGatewayAssociationArrayOutputWithContext(ctx 
 // GatewayAssociationMapInput is an input type that accepts GatewayAssociationMap and GatewayAssociationMapOutput values.
 // You can construct a concrete instance of `GatewayAssociationMapInput` via:
 //
-//	GatewayAssociationMap{ "key": GatewayAssociationArgs{...} }
+//          GatewayAssociationMap{ "key": GatewayAssociationArgs{...} }
 type GatewayAssociationMapInput interface {
 	pulumi.Input
 

@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iot"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iot"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := iot.NewLoggingOptions(ctx, "example", &iot.LoggingOptionsArgs{
-//				DefaultLogLevel: pulumi.String("WARN"),
-//				RoleArn:         pulumi.Any(aws_iam_role.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := iot.NewLoggingOptions(ctx, "example", &iot.LoggingOptionsArgs{
+// 			DefaultLogLevel: pulumi.String("WARN"),
+// 			RoleArn:         pulumi.Any(aws_iam_role.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type LoggingOptions struct {
 	pulumi.CustomResourceState
@@ -151,7 +148,7 @@ func (i *LoggingOptions) ToLoggingOptionsOutputWithContext(ctx context.Context) 
 // LoggingOptionsArrayInput is an input type that accepts LoggingOptionsArray and LoggingOptionsArrayOutput values.
 // You can construct a concrete instance of `LoggingOptionsArrayInput` via:
 //
-//	LoggingOptionsArray{ LoggingOptionsArgs{...} }
+//          LoggingOptionsArray{ LoggingOptionsArgs{...} }
 type LoggingOptionsArrayInput interface {
 	pulumi.Input
 
@@ -176,7 +173,7 @@ func (i LoggingOptionsArray) ToLoggingOptionsArrayOutputWithContext(ctx context.
 // LoggingOptionsMapInput is an input type that accepts LoggingOptionsMap and LoggingOptionsMapOutput values.
 // You can construct a concrete instance of `LoggingOptionsMapInput` via:
 //
-//	LoggingOptionsMap{ "key": LoggingOptionsArgs{...} }
+//          LoggingOptionsMap{ "key": LoggingOptionsArgs{...} }
 type LoggingOptionsMapInput interface {
 	pulumi.Input
 

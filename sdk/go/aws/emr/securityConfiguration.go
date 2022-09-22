@@ -19,43 +19,39 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/emr"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/emr"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := emr.NewSecurityConfiguration(ctx, "foo", &emr.SecurityConfigurationArgs{
-//				Configuration: pulumi.String(fmt.Sprintf(`{
-//	  "EncryptionConfiguration": {
-//	    "AtRestEncryptionConfiguration": {
-//	      "S3EncryptionConfiguration": {
-//	        "EncryptionMode": "SSE-S3"
-//	      },
-//	      "LocalDiskEncryptionConfiguration": {
-//	        "EncryptionKeyProviderType": "AwsKms",
-//	        "AwsKmsKey": "arn:aws:kms:us-west-2:187416307283:alias/tf_emr_test_key"
-//	      }
-//	    },
-//	    "EnableInTransitEncryption": false,
-//	    "EnableAtRestEncryption": true
-//	  }
-//	}
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := emr.NewSecurityConfiguration(ctx, "foo", &emr.SecurityConfigurationArgs{
+// 			Configuration: pulumi.String(fmt.Sprintf(`{
+//   "EncryptionConfiguration": {
+//     "AtRestEncryptionConfiguration": {
+//       "S3EncryptionConfiguration": {
+//         "EncryptionMode": "SSE-S3"
+//       },
+//       "LocalDiskEncryptionConfiguration": {
+//         "EncryptionKeyProviderType": "AwsKms",
+//         "AwsKmsKey": "arn:aws:kms:us-west-2:187416307283:alias/tf_emr_test_key"
+//       }
+//     },
+//     "EnableInTransitEncryption": false,
+//     "EnableAtRestEncryption": true
+//   }
+// }
 //
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -63,9 +59,7 @@ import (
 // EMR Security Configurations can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:emr/securityConfiguration:SecurityConfiguration sc example-sc-name
-//
+//  $ pulumi import aws:emr/securityConfiguration:SecurityConfiguration sc example-sc-name
 // ```
 type SecurityConfiguration struct {
 	pulumi.CustomResourceState
@@ -187,7 +181,7 @@ func (i *SecurityConfiguration) ToSecurityConfigurationOutputWithContext(ctx con
 // SecurityConfigurationArrayInput is an input type that accepts SecurityConfigurationArray and SecurityConfigurationArrayOutput values.
 // You can construct a concrete instance of `SecurityConfigurationArrayInput` via:
 //
-//	SecurityConfigurationArray{ SecurityConfigurationArgs{...} }
+//          SecurityConfigurationArray{ SecurityConfigurationArgs{...} }
 type SecurityConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -212,7 +206,7 @@ func (i SecurityConfigurationArray) ToSecurityConfigurationArrayOutputWithContex
 // SecurityConfigurationMapInput is an input type that accepts SecurityConfigurationMap and SecurityConfigurationMapOutput values.
 // You can construct a concrete instance of `SecurityConfigurationMapInput` via:
 //
-//	SecurityConfigurationMap{ "key": SecurityConfigurationArgs{...} }
+//          SecurityConfigurationMap{ "key": SecurityConfigurationArgs{...} }
 type SecurityConfigurationMapInput interface {
 	pulumi.Input
 

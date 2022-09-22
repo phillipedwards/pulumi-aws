@@ -32,28 +32,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/acm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/acm"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
-//				DomainName: pulumi.String("example.com"),
-//				Tags: pulumi.StringMap{
-//					"Environment": pulumi.String("test"),
-//				},
-//				ValidationMethod: pulumi.String("DNS"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+// 			DomainName: pulumi.String("example.com"),
+// 			Tags: pulumi.StringMap{
+// 				"Environment": pulumi.String("test"),
+// 			},
+// 			ValidationMethod: pulumi.String("DNS"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Custom Domain Validation Options
 //
@@ -61,31 +58,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/acm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/acm"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
-//				DomainName:       pulumi.String("testing.example.com"),
-//				ValidationMethod: pulumi.String("EMAIL"),
-//				ValidationOptions: acm.CertificateValidationOptionArray{
-//					&acm.CertificateValidationOptionArgs{
-//						DomainName:       pulumi.String("testing.example.com"),
-//						ValidationDomain: pulumi.String("example.com"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+// 			DomainName:       pulumi.String("testing.example.com"),
+// 			ValidationMethod: pulumi.String("EMAIL"),
+// 			ValidationOptions: acm.CertificateValidationOptionArray{
+// 				&acm.CertificateValidationOptionArgs{
+// 					DomainName:       pulumi.String("testing.example.com"),
+// 					ValidationDomain: pulumi.String("example.com"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Existing Certificate Body Import
 //
@@ -93,51 +87,48 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/acm"
-//	"github.com/pulumi/pulumi-tls/sdk/v4/go/tls"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/acm"
+// 	"github.com/pulumi/pulumi-tls/sdk/v4/go/tls"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			examplePrivateKey, err := tls.NewPrivateKey(ctx, "examplePrivateKey", &tls.PrivateKeyArgs{
-//				Algorithm: pulumi.String("RSA"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleSelfSignedCert, err := tls.NewSelfSignedCert(ctx, "exampleSelfSignedCert", &tls.SelfSignedCertArgs{
-//				KeyAlgorithm:  pulumi.String("RSA"),
-//				PrivateKeyPem: examplePrivateKey.PrivateKeyPem,
-//				Subjects: SelfSignedCertSubjectArray{
-//					&SelfSignedCertSubjectArgs{
-//						CommonName:   pulumi.String("example.com"),
-//						Organization: pulumi.String("ACME Examples, Inc"),
-//					},
-//				},
-//				ValidityPeriodHours: pulumi.Int(12),
-//				AllowedUses: pulumi.StringArray{
-//					pulumi.String("key_encipherment"),
-//					pulumi.String("digital_signature"),
-//					pulumi.String("server_auth"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
-//				PrivateKey:      examplePrivateKey.PrivateKeyPem,
-//				CertificateBody: exampleSelfSignedCert.CertPem,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		examplePrivateKey, err := tls.NewPrivateKey(ctx, "examplePrivateKey", &tls.PrivateKeyArgs{
+// 			Algorithm: pulumi.String("RSA"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleSelfSignedCert, err := tls.NewSelfSignedCert(ctx, "exampleSelfSignedCert", &tls.SelfSignedCertArgs{
+// 			KeyAlgorithm:  pulumi.String("RSA"),
+// 			PrivateKeyPem: examplePrivateKey.PrivateKeyPem,
+// 			Subjects: SelfSignedCertSubjectArray{
+// 				&SelfSignedCertSubjectArgs{
+// 					CommonName:   pulumi.String("example.com"),
+// 					Organization: pulumi.String("ACME Examples, Inc"),
+// 				},
+// 			},
+// 			ValidityPeriodHours: pulumi.Int(12),
+// 			AllowedUses: pulumi.StringArray{
+// 				pulumi.String("key_encipherment"),
+// 				pulumi.String("digital_signature"),
+// 				pulumi.String("server_auth"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = acm.NewCertificate(ctx, "cert", &acm.CertificateArgs{
+// 			PrivateKey:      examplePrivateKey.PrivateKeyPem,
+// 			CertificateBody: exampleSelfSignedCert.CertPem,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -145,9 +136,7 @@ import (
 // Certificates can be imported using their ARN, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:acm/certificate:Certificate cert arn:aws:acm:eu-central-1:123456789012:certificate/7e7a28d2-163f-4b8f-b9cd-822f96c08d6a
-//
+//  $ pulumi import aws:acm/certificate:Certificate cert arn:aws:acm:eu-central-1:123456789012:certificate/7e7a28d2-163f-4b8f-b9cd-822f96c08d6a
 // ```
 type Certificate struct {
 	pulumi.CustomResourceState
@@ -372,7 +361,7 @@ func (i *Certificate) ToCertificateOutputWithContext(ctx context.Context) Certif
 // CertificateArrayInput is an input type that accepts CertificateArray and CertificateArrayOutput values.
 // You can construct a concrete instance of `CertificateArrayInput` via:
 //
-//	CertificateArray{ CertificateArgs{...} }
+//          CertificateArray{ CertificateArgs{...} }
 type CertificateArrayInput interface {
 	pulumi.Input
 
@@ -397,7 +386,7 @@ func (i CertificateArray) ToCertificateArrayOutputWithContext(ctx context.Contex
 // CertificateMapInput is an input type that accepts CertificateMap and CertificateMapOutput values.
 // You can construct a concrete instance of `CertificateMapInput` via:
 //
-//	CertificateMap{ "key": CertificateArgs{...} }
+//          CertificateMap{ "key": CertificateArgs{...} }
 type CertificateMapInput interface {
 	pulumi.Input
 

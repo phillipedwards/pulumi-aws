@@ -21,36 +21,33 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dms"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/dms"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := dms.NewReplicationTask(ctx, "test", &dms.ReplicationTaskArgs{
-//				CdcStartTime:            pulumi.String("1484346880"),
-//				MigrationType:           pulumi.String("full-load"),
-//				ReplicationInstanceArn:  pulumi.Any(aws_dms_replication_instance.Test - dms - replication - instance - tf.Replication_instance_arn),
-//				ReplicationTaskId:       pulumi.String("test-dms-replication-task-tf"),
-//				ReplicationTaskSettings: pulumi.String("..."),
-//				SourceEndpointArn:       pulumi.Any(aws_dms_endpoint.Test - dms - source - endpoint - tf.Endpoint_arn),
-//				TableMappings:           pulumi.String(fmt.Sprintf("{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"%v\",\"table-name\":\"%v\"},\"rule-action\":\"include\"}]}", "%", "%")),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("test"),
-//				},
-//				TargetEndpointArn: pulumi.Any(aws_dms_endpoint.Test - dms - target - endpoint - tf.Endpoint_arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := dms.NewReplicationTask(ctx, "test", &dms.ReplicationTaskArgs{
+// 			CdcStartTime:            pulumi.String("1484346880"),
+// 			MigrationType:           pulumi.String("full-load"),
+// 			ReplicationInstanceArn:  pulumi.Any(aws_dms_replication_instance.Test - dms - replication - instance - tf.Replication_instance_arn),
+// 			ReplicationTaskId:       pulumi.String("test-dms-replication-task-tf"),
+// 			ReplicationTaskSettings: pulumi.String("..."),
+// 			SourceEndpointArn:       pulumi.Any(aws_dms_endpoint.Test - dms - source - endpoint - tf.Endpoint_arn),
+// 			TableMappings:           pulumi.String(fmt.Sprintf("{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"%v\",\"table-name\":\"%v\"},\"rule-action\":\"include\"}]}", "%", "%")),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("test"),
+// 			},
+// 			TargetEndpointArn: pulumi.Any(aws_dms_endpoint.Test - dms - target - endpoint - tf.Endpoint_arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -58,9 +55,7 @@ import (
 // Replication tasks can be imported using the `replication_task_id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:dms/replicationTask:ReplicationTask test test-dms-replication-task-tf
-//
+//  $ pulumi import aws:dms/replicationTask:ReplicationTask test test-dms-replication-task-tf
 // ```
 type ReplicationTask struct {
 	pulumi.CustomResourceState
@@ -284,7 +279,7 @@ func (i *ReplicationTask) ToReplicationTaskOutputWithContext(ctx context.Context
 // ReplicationTaskArrayInput is an input type that accepts ReplicationTaskArray and ReplicationTaskArrayOutput values.
 // You can construct a concrete instance of `ReplicationTaskArrayInput` via:
 //
-//	ReplicationTaskArray{ ReplicationTaskArgs{...} }
+//          ReplicationTaskArray{ ReplicationTaskArgs{...} }
 type ReplicationTaskArrayInput interface {
 	pulumi.Input
 
@@ -309,7 +304,7 @@ func (i ReplicationTaskArray) ToReplicationTaskArrayOutputWithContext(ctx contex
 // ReplicationTaskMapInput is an input type that accepts ReplicationTaskMap and ReplicationTaskMapOutput values.
 // You can construct a concrete instance of `ReplicationTaskMapInput` via:
 //
-//	ReplicationTaskMap{ "key": ReplicationTaskArgs{...} }
+//          ReplicationTaskMap{ "key": ReplicationTaskArgs{...} }
 type ReplicationTaskMapInput interface {
 	pulumi.Input
 

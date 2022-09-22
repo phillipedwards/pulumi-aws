@@ -22,27 +22,24 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/apigatewayv2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/apigatewayv2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := apigatewayv2.NewApi(ctx, "example", &apigatewayv2.ApiArgs{
-//				ProtocolType:             pulumi.String("WEBSOCKET"),
-//				RouteSelectionExpression: pulumi.String(fmt.Sprintf("$request.body.action")),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := apigatewayv2.NewApi(ctx, "example", &apigatewayv2.ApiArgs{
+// 			ProtocolType:             pulumi.String("WEBSOCKET"),
+// 			RouteSelectionExpression: pulumi.String(fmt.Sprintf("$request.body.action")),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Basic HTTP API
 //
@@ -50,24 +47,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/apigatewayv2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/apigatewayv2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := apigatewayv2.NewApi(ctx, "example", &apigatewayv2.ApiArgs{
-//				ProtocolType: pulumi.String("HTTP"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := apigatewayv2.NewApi(ctx, "example", &apigatewayv2.ApiArgs{
+// 			ProtocolType: pulumi.String("HTTP"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -75,9 +69,7 @@ import (
 // `aws_apigatewayv2_api` can be imported by using the API identifier, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:apigatewayv2/api:Api example aabbccddee
-//
+//  $ pulumi import aws:apigatewayv2/api:Api example aabbccddee
 // ```
 type Api struct {
 	pulumi.CustomResourceState
@@ -363,7 +355,7 @@ func (i *Api) ToApiOutputWithContext(ctx context.Context) ApiOutput {
 // ApiArrayInput is an input type that accepts ApiArray and ApiArrayOutput values.
 // You can construct a concrete instance of `ApiArrayInput` via:
 //
-//	ApiArray{ ApiArgs{...} }
+//          ApiArray{ ApiArgs{...} }
 type ApiArrayInput interface {
 	pulumi.Input
 
@@ -388,7 +380,7 @@ func (i ApiArray) ToApiArrayOutputWithContext(ctx context.Context) ApiArrayOutpu
 // ApiMapInput is an input type that accepts ApiMap and ApiMapOutput values.
 // You can construct a concrete instance of `ApiMapInput` via:
 //
-//	ApiMap{ "key": ApiArgs{...} }
+//          ApiMap{ "key": ApiArgs{...} }
 type ApiMapInput interface {
 	pulumi.Input
 

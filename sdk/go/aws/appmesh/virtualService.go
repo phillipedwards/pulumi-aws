@@ -20,31 +20,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewVirtualService(ctx, "servicea", &appmesh.VirtualServiceArgs{
-//				MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
-//				Spec: &appmesh.VirtualServiceSpecArgs{
-//					Provider: &appmesh.VirtualServiceSpecProviderArgs{
-//						VirtualNode: &appmesh.VirtualServiceSpecProviderVirtualNodeArgs{
-//							VirtualNodeName: pulumi.Any(aws_appmesh_virtual_node.Serviceb1.Name),
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewVirtualService(ctx, "servicea", &appmesh.VirtualServiceArgs{
+// 			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
+// 			Spec: &appmesh.VirtualServiceSpecArgs{
+// 				Provider: &appmesh.VirtualServiceSpecProviderArgs{
+// 					VirtualNode: &appmesh.VirtualServiceSpecProviderVirtualNodeArgs{
+// 						VirtualNodeName: pulumi.Any(aws_appmesh_virtual_node.Serviceb1.Name),
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Virtual Router Provider
 //
@@ -52,31 +49,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewVirtualService(ctx, "servicea", &appmesh.VirtualServiceArgs{
-//				MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
-//				Spec: &appmesh.VirtualServiceSpecArgs{
-//					Provider: &appmesh.VirtualServiceSpecProviderArgs{
-//						VirtualRouter: &appmesh.VirtualServiceSpecProviderVirtualRouterArgs{
-//							VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewVirtualService(ctx, "servicea", &appmesh.VirtualServiceArgs{
+// 			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
+// 			Spec: &appmesh.VirtualServiceSpecArgs{
+// 				Provider: &appmesh.VirtualServiceSpecProviderArgs{
+// 					VirtualRouter: &appmesh.VirtualServiceSpecProviderVirtualRouterArgs{
+// 						VirtualRouterName: pulumi.Any(aws_appmesh_virtual_router.Serviceb.Name),
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -84,12 +78,10 @@ import (
 // App Mesh virtual services can be imported using `mesh_name` together with the virtual service's `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:appmesh/virtualService:VirtualService servicea simpleapp/servicea.simpleapp.local
-//
+//  $ pulumi import aws:appmesh/virtualService:VirtualService servicea simpleapp/servicea.simpleapp.local
 // ```
 //
-//	[1]/docs/providers/aws/index.html
+//  [1]/docs/providers/aws/index.html
 type VirtualService struct {
 	pulumi.CustomResourceState
 
@@ -252,7 +244,7 @@ func (i *VirtualService) ToVirtualServiceOutputWithContext(ctx context.Context) 
 // VirtualServiceArrayInput is an input type that accepts VirtualServiceArray and VirtualServiceArrayOutput values.
 // You can construct a concrete instance of `VirtualServiceArrayInput` via:
 //
-//	VirtualServiceArray{ VirtualServiceArgs{...} }
+//          VirtualServiceArray{ VirtualServiceArgs{...} }
 type VirtualServiceArrayInput interface {
 	pulumi.Input
 
@@ -277,7 +269,7 @@ func (i VirtualServiceArray) ToVirtualServiceArrayOutputWithContext(ctx context.
 // VirtualServiceMapInput is an input type that accepts VirtualServiceMap and VirtualServiceMapOutput values.
 // You can construct a concrete instance of `VirtualServiceMapInput` via:
 //
-//	VirtualServiceMap{ "key": VirtualServiceArgs{...} }
+//          VirtualServiceMap{ "key": VirtualServiceArgs{...} }
 type VirtualServiceMapInput interface {
 	pulumi.Input
 

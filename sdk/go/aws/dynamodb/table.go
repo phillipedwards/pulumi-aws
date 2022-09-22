@@ -19,63 +19,60 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dynamodb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := dynamodb.NewTable(ctx, "basic-dynamodb-table", &dynamodb.TableArgs{
-//				Attributes: dynamodb.TableAttributeArray{
-//					&dynamodb.TableAttributeArgs{
-//						Name: pulumi.String("UserId"),
-//						Type: pulumi.String("S"),
-//					},
-//					&dynamodb.TableAttributeArgs{
-//						Name: pulumi.String("GameTitle"),
-//						Type: pulumi.String("S"),
-//					},
-//					&dynamodb.TableAttributeArgs{
-//						Name: pulumi.String("TopScore"),
-//						Type: pulumi.String("N"),
-//					},
-//				},
-//				BillingMode: pulumi.String("PROVISIONED"),
-//				GlobalSecondaryIndexes: dynamodb.TableGlobalSecondaryIndexArray{
-//					&dynamodb.TableGlobalSecondaryIndexArgs{
-//						HashKey: pulumi.String("GameTitle"),
-//						Name:    pulumi.String("GameTitleIndex"),
-//						NonKeyAttributes: pulumi.StringArray{
-//							pulumi.String("UserId"),
-//						},
-//						ProjectionType: pulumi.String("INCLUDE"),
-//						RangeKey:       pulumi.String("TopScore"),
-//						ReadCapacity:   pulumi.Int(10),
-//						WriteCapacity:  pulumi.Int(10),
-//					},
-//				},
-//				HashKey:      pulumi.String("UserId"),
-//				RangeKey:     pulumi.String("GameTitle"),
-//				ReadCapacity: pulumi.Int(20),
-//				Tags: pulumi.StringMap{
-//					"Environment": pulumi.String("production"),
-//					"Name":        pulumi.String("dynamodb-table-1"),
-//				},
-//				Ttl: &dynamodb.TableTtlArgs{
-//					AttributeName: pulumi.String("TimeToExist"),
-//					Enabled:       pulumi.Bool(false),
-//				},
-//				WriteCapacity: pulumi.Int(20),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := dynamodb.NewTable(ctx, "basic-dynamodb-table", &dynamodb.TableArgs{
+// 			Attributes: dynamodb.TableAttributeArray{
+// 				&dynamodb.TableAttributeArgs{
+// 					Name: pulumi.String("UserId"),
+// 					Type: pulumi.String("S"),
+// 				},
+// 				&dynamodb.TableAttributeArgs{
+// 					Name: pulumi.String("GameTitle"),
+// 					Type: pulumi.String("S"),
+// 				},
+// 				&dynamodb.TableAttributeArgs{
+// 					Name: pulumi.String("TopScore"),
+// 					Type: pulumi.String("N"),
+// 				},
+// 			},
+// 			BillingMode: pulumi.String("PROVISIONED"),
+// 			GlobalSecondaryIndexes: dynamodb.TableGlobalSecondaryIndexArray{
+// 				&dynamodb.TableGlobalSecondaryIndexArgs{
+// 					HashKey: pulumi.String("GameTitle"),
+// 					Name:    pulumi.String("GameTitleIndex"),
+// 					NonKeyAttributes: pulumi.StringArray{
+// 						pulumi.String("UserId"),
+// 					},
+// 					ProjectionType: pulumi.String("INCLUDE"),
+// 					RangeKey:       pulumi.String("TopScore"),
+// 					ReadCapacity:   pulumi.Int(10),
+// 					WriteCapacity:  pulumi.Int(10),
+// 				},
+// 			},
+// 			HashKey:      pulumi.String("UserId"),
+// 			RangeKey:     pulumi.String("GameTitle"),
+// 			ReadCapacity: pulumi.Int(20),
+// 			Tags: pulumi.StringMap{
+// 				"Environment": pulumi.String("production"),
+// 				"Name":        pulumi.String("dynamodb-table-1"),
+// 			},
+// 			Ttl: &dynamodb.TableTtlArgs{
+// 				AttributeName: pulumi.String("TimeToExist"),
+// 				Enabled:       pulumi.Bool(false),
+// 			},
+// 			WriteCapacity: pulumi.Int(20),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Global Tables
 //
@@ -87,41 +84,38 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dynamodb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := dynamodb.NewTable(ctx, "example", &dynamodb.TableArgs{
-//				Attributes: dynamodb.TableAttributeArray{
-//					&dynamodb.TableAttributeArgs{
-//						Name: pulumi.String("TestTableHashKey"),
-//						Type: pulumi.String("S"),
-//					},
-//				},
-//				BillingMode: pulumi.String("PAY_PER_REQUEST"),
-//				HashKey:     pulumi.String("TestTableHashKey"),
-//				Replicas: dynamodb.TableReplicaTypeArray{
-//					&dynamodb.TableReplicaTypeArgs{
-//						RegionName: pulumi.String("us-east-2"),
-//					},
-//					&dynamodb.TableReplicaTypeArgs{
-//						RegionName: pulumi.String("us-west-2"),
-//					},
-//				},
-//				StreamEnabled:  pulumi.Bool(true),
-//				StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := dynamodb.NewTable(ctx, "example", &dynamodb.TableArgs{
+// 			Attributes: dynamodb.TableAttributeArray{
+// 				&dynamodb.TableAttributeArgs{
+// 					Name: pulumi.String("TestTableHashKey"),
+// 					Type: pulumi.String("S"),
+// 				},
+// 			},
+// 			BillingMode: pulumi.String("PAY_PER_REQUEST"),
+// 			HashKey:     pulumi.String("TestTableHashKey"),
+// 			Replicas: dynamodb.TableReplicaTypeArray{
+// 				&dynamodb.TableReplicaTypeArgs{
+// 					RegionName: pulumi.String("us-east-2"),
+// 				},
+// 				&dynamodb.TableReplicaTypeArgs{
+// 					RegionName: pulumi.String("us-west-2"),
+// 				},
+// 			},
+// 			StreamEnabled:  pulumi.Bool(true),
+// 			StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -129,9 +123,7 @@ import (
 // DynamoDB tables can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:dynamodb/table:Table basic-dynamodb-table GameScores
-//
+//  $ pulumi import aws:dynamodb/table:Table basic-dynamodb-table GameScores
 // ```
 type Table struct {
 	pulumi.CustomResourceState
@@ -433,7 +425,7 @@ func (i *Table) ToTableOutputWithContext(ctx context.Context) TableOutput {
 // TableArrayInput is an input type that accepts TableArray and TableArrayOutput values.
 // You can construct a concrete instance of `TableArrayInput` via:
 //
-//	TableArray{ TableArgs{...} }
+//          TableArray{ TableArgs{...} }
 type TableArrayInput interface {
 	pulumi.Input
 
@@ -458,7 +450,7 @@ func (i TableArray) ToTableArrayOutputWithContext(ctx context.Context) TableArra
 // TableMapInput is an input type that accepts TableMap and TableMapOutput values.
 // You can construct a concrete instance of `TableMapInput` via:
 //
-//	TableMap{ "key": TableArgs{...} }
+//          TableMap{ "key": TableArgs{...} }
 type TableMapInput interface {
 	pulumi.Input
 

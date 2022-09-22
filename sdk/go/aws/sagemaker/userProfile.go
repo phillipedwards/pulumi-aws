@@ -20,25 +20,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sagemaker.NewUserProfile(ctx, "example", &sagemaker.UserProfileArgs{
-//				DomainId:        pulumi.Any(aws_sagemaker_domain.Test.Id),
-//				UserProfileName: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sagemaker.NewUserProfile(ctx, "example", &sagemaker.UserProfileArgs{
+// 			DomainId:        pulumi.Any(aws_sagemaker_domain.Test.Id),
+// 			UserProfileName: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // SageMaker Code User Profiles can be imported using the `arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/userProfile:UserProfile test_user_profile arn:aws:sagemaker:us-west-2:123456789012:user-profile/domain-id/profile-name
-//
+//  $ pulumi import aws:sagemaker/userProfile:UserProfile test_user_profile arn:aws:sagemaker:us-west-2:123456789012:user-profile/domain-id/profile-name
 // ```
 type UserProfile struct {
 	pulumi.CustomResourceState
@@ -210,7 +205,7 @@ func (i *UserProfile) ToUserProfileOutputWithContext(ctx context.Context) UserPr
 // UserProfileArrayInput is an input type that accepts UserProfileArray and UserProfileArrayOutput values.
 // You can construct a concrete instance of `UserProfileArrayInput` via:
 //
-//	UserProfileArray{ UserProfileArgs{...} }
+//          UserProfileArray{ UserProfileArgs{...} }
 type UserProfileArrayInput interface {
 	pulumi.Input
 
@@ -235,7 +230,7 @@ func (i UserProfileArray) ToUserProfileArrayOutputWithContext(ctx context.Contex
 // UserProfileMapInput is an input type that accepts UserProfileMap and UserProfileMapOutput values.
 // You can construct a concrete instance of `UserProfileMapInput` via:
 //
-//	UserProfileMap{ "key": UserProfileArgs{...} }
+//          UserProfileMap{ "key": UserProfileArgs{...} }
 type UserProfileMapInput interface {
 	pulumi.Input
 

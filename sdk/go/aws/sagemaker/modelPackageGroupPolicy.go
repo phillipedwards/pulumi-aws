@@ -20,9 +20,7 @@ import (
 // SageMaker Code Model Package Groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/modelPackageGroupPolicy:ModelPackageGroupPolicy example example
-//
+//  $ pulumi import aws:sagemaker/modelPackageGroupPolicy:ModelPackageGroupPolicy example example
 // ```
 type ModelPackageGroupPolicy struct {
 	pulumi.CustomResourceState
@@ -121,7 +119,7 @@ func (i *ModelPackageGroupPolicy) ToModelPackageGroupPolicyOutputWithContext(ctx
 // ModelPackageGroupPolicyArrayInput is an input type that accepts ModelPackageGroupPolicyArray and ModelPackageGroupPolicyArrayOutput values.
 // You can construct a concrete instance of `ModelPackageGroupPolicyArrayInput` via:
 //
-//	ModelPackageGroupPolicyArray{ ModelPackageGroupPolicyArgs{...} }
+//          ModelPackageGroupPolicyArray{ ModelPackageGroupPolicyArgs{...} }
 type ModelPackageGroupPolicyArrayInput interface {
 	pulumi.Input
 
@@ -146,7 +144,7 @@ func (i ModelPackageGroupPolicyArray) ToModelPackageGroupPolicyArrayOutputWithCo
 // ModelPackageGroupPolicyMapInput is an input type that accepts ModelPackageGroupPolicyMap and ModelPackageGroupPolicyMapOutput values.
 // You can construct a concrete instance of `ModelPackageGroupPolicyMapInput` via:
 //
-//	ModelPackageGroupPolicyMap{ "key": ModelPackageGroupPolicyArgs{...} }
+//          ModelPackageGroupPolicyMap{ "key": ModelPackageGroupPolicyArgs{...} }
 type ModelPackageGroupPolicyMapInput interface {
 	pulumi.Input
 

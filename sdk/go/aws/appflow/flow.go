@@ -19,147 +19,139 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appflow"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appflow"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleSourceBucketV2, err := s3.NewBucketV2(ctx, "exampleSourceBucketV2", nil)
-//			if err != nil {
-//				return err
-//			}
-//			exampleSourceBucketPolicy, err := s3.NewBucketPolicy(ctx, "exampleSourceBucketPolicy", &s3.BucketPolicyArgs{
-//				Bucket: exampleSourceBucketV2.ID(),
-//				Policy: pulumi.Any(fmt.Sprintf(`{
-//	    "Statement": [
-//	        {
-//	            "Effect": "Allow",
-//	            "Sid": "AllowAppFlowSourceActions",
-//	            "Principal": {
-//	                "Service": "appflow.amazonaws.com"
-//	            },
-//	            "Action": [
-//	                "s3:ListBucket",
-//	                "s3:GetObject"
-//	            ],
-//	            "Resource": [
-//	                "arn:aws:s3:::example_source",
-//	                "arn:aws:s3:::example_source/*"
-//	            ]
-//	        }
-//	    ],
-//		"Version": "2012-10-17"
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleSourceBucketV2, err := s3.NewBucketV2(ctx, "exampleSourceBucketV2", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleSourceBucketPolicy, err := s3.NewBucketPolicy(ctx, "exampleSourceBucketPolicy", &s3.BucketPolicyArgs{
+// 			Bucket: exampleSourceBucketV2.ID(),
+// 			Policy: pulumi.Any(fmt.Sprintf(`{
+//     "Statement": [
+//         {
+//             "Effect": "Allow",
+//             "Sid": "AllowAppFlowSourceActions",
+//             "Principal": {
+//                 "Service": "appflow.amazonaws.com"
+//             },
+//             "Action": [
+//                 "s3:ListBucket",
+//                 "s3:GetObject"
+//             ],
+//             "Resource": [
+//                 "arn:aws:s3:::example_source",
+//                 "arn:aws:s3:::example_source/*"
+//             ]
+//         }
+//     ],
+// 	"Version": "2012-10-17"
+// }
 // `)),
-//
-//	})
-//	if err != nil {
-//		return err
-//	}
-//	_, err = s3.NewBucketObjectv2(ctx, "exampleBucketObjectv2", &s3.BucketObjectv2Args{
-//		Bucket: exampleSourceBucketV2.ID(),
-//		Key:    pulumi.String("example_source.csv"),
-//		Source: pulumi.NewFileAsset("example_source.csv"),
-//	})
-//	if err != nil {
-//		return err
-//	}
-//	exampleDestinationBucketV2, err := s3.NewBucketV2(ctx, "exampleDestinationBucketV2", nil)
-//	if err != nil {
-//		return err
-//	}
-//	exampleDestinationBucketPolicy, err := s3.NewBucketPolicy(ctx, "exampleDestinationBucketPolicy", &s3.BucketPolicyArgs{
-//		Bucket: exampleDestinationBucketV2.ID(),
-//		Policy: pulumi.Any(fmt.Sprintf(`
-//
-//	{
-//	    "Statement": [
-//	        {
-//	            "Effect": "Allow",
-//	            "Sid": "AllowAppFlowDestinationActions",
-//	            "Principal": {
-//	                "Service": "appflow.amazonaws.com"
-//	            },
-//	            "Action": [
-//	                "s3:PutObject",
-//	                "s3:AbortMultipartUpload",
-//	                "s3:ListMultipartUploadParts",
-//	                "s3:ListBucketMultipartUploads",
-//	                "s3:GetBucketAcl",
-//	                "s3:PutObjectAcl"
-//	            ],
-//	            "Resource": [
-//	                "arn:aws:s3:::example_destination",
-//	                "arn:aws:s3:::example_destination/*"
-//	            ]
-//	        }
-//	    ],
-//		"Version": "2012-10-17"
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = s3.NewBucketObjectv2(ctx, "exampleBucketObjectv2", &s3.BucketObjectv2Args{
+// 			Bucket: exampleSourceBucketV2.ID(),
+// 			Key:    pulumi.String("example_source.csv"),
+// 			Source: pulumi.NewFileAsset("example_source.csv"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleDestinationBucketV2, err := s3.NewBucketV2(ctx, "exampleDestinationBucketV2", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleDestinationBucketPolicy, err := s3.NewBucketPolicy(ctx, "exampleDestinationBucketPolicy", &s3.BucketPolicyArgs{
+// 			Bucket: exampleDestinationBucketV2.ID(),
+// 			Policy: pulumi.Any(fmt.Sprintf(`
+// {
+//     "Statement": [
+//         {
+//             "Effect": "Allow",
+//             "Sid": "AllowAppFlowDestinationActions",
+//             "Principal": {
+//                 "Service": "appflow.amazonaws.com"
+//             },
+//             "Action": [
+//                 "s3:PutObject",
+//                 "s3:AbortMultipartUpload",
+//                 "s3:ListMultipartUploadParts",
+//                 "s3:ListBucketMultipartUploads",
+//                 "s3:GetBucketAcl",
+//                 "s3:PutObjectAcl"
+//             ],
+//             "Resource": [
+//                 "arn:aws:s3:::example_destination",
+//                 "arn:aws:s3:::example_destination/*"
+//             ]
+//         }
+//     ],
+// 	"Version": "2012-10-17"
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = appflow.NewFlow(ctx, "exampleFlow", &appflow.FlowArgs{
-//				SourceFlowConfig: &appflow.FlowSourceFlowConfigArgs{
-//					ConnectorType: pulumi.String("S3"),
-//					SourceConnectorProperties: &appflow.FlowSourceFlowConfigSourceConnectorPropertiesArgs{
-//						S3: &appflow.FlowSourceFlowConfigSourceConnectorPropertiesS3Args{
-//							BucketName:   exampleSourceBucketPolicy.Bucket,
-//							BucketPrefix: pulumi.String("example"),
-//						},
-//					},
-//				},
-//				DestinationFlowConfigs: appflow.FlowDestinationFlowConfigArray{
-//					&appflow.FlowDestinationFlowConfigArgs{
-//						ConnectorType: pulumi.String("S3"),
-//						DestinationConnectorProperties: &appflow.FlowDestinationFlowConfigDestinationConnectorPropertiesArgs{
-//							S3: &appflow.FlowDestinationFlowConfigDestinationConnectorPropertiesS3Args{
-//								BucketName: exampleDestinationBucketPolicy.Bucket,
-//								S3OutputFormatConfig: &appflow.FlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigArgs{
-//									PrefixConfig: &appflow.FlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigArgs{
-//										PrefixType: pulumi.String("PATH"),
-//									},
-//								},
-//							},
-//						},
-//					},
-//				},
-//				Tasks: appflow.FlowTaskArray{
-//					&appflow.FlowTaskArgs{
-//						SourceFields: pulumi.StringArray{
-//							pulumi.String("exampleField"),
-//						},
-//						DestinationField: pulumi.String("exampleField"),
-//						TaskType:         pulumi.String("Map"),
-//						ConnectorOperators: appflow.FlowTaskConnectorOperatorArray{
-//							&appflow.FlowTaskConnectorOperatorArgs{
-//								S3: pulumi.String("NO_OP"),
-//							},
-//						},
-//					},
-//				},
-//				TriggerConfig: &appflow.FlowTriggerConfigArgs{
-//					TriggerType: pulumi.String("OnDemand"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = appflow.NewFlow(ctx, "exampleFlow", &appflow.FlowArgs{
+// 			SourceFlowConfig: &appflow.FlowSourceFlowConfigArgs{
+// 				ConnectorType: pulumi.String("S3"),
+// 				SourceConnectorProperties: &appflow.FlowSourceFlowConfigSourceConnectorPropertiesArgs{
+// 					S3: &appflow.FlowSourceFlowConfigSourceConnectorPropertiesS3Args{
+// 						BucketName:   exampleSourceBucketPolicy.Bucket,
+// 						BucketPrefix: pulumi.String("example"),
+// 					},
+// 				},
+// 			},
+// 			DestinationFlowConfigs: appflow.FlowDestinationFlowConfigArray{
+// 				&appflow.FlowDestinationFlowConfigArgs{
+// 					ConnectorType: pulumi.String("S3"),
+// 					DestinationConnectorProperties: &appflow.FlowDestinationFlowConfigDestinationConnectorPropertiesArgs{
+// 						S3: &appflow.FlowDestinationFlowConfigDestinationConnectorPropertiesS3Args{
+// 							BucketName: exampleDestinationBucketPolicy.Bucket,
+// 							S3OutputFormatConfig: &appflow.FlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigArgs{
+// 								PrefixConfig: &appflow.FlowDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfigArgs{
+// 									PrefixType: pulumi.String("PATH"),
+// 								},
+// 							},
+// 						},
+// 					},
+// 				},
+// 			},
+// 			Tasks: appflow.FlowTaskArray{
+// 				&appflow.FlowTaskArgs{
+// 					SourceFields: pulumi.StringArray{
+// 						pulumi.String("exampleField"),
+// 					},
+// 					DestinationField: pulumi.String("exampleField"),
+// 					TaskType:         pulumi.String("Map"),
+// 					ConnectorOperators: appflow.FlowTaskConnectorOperatorArray{
+// 						&appflow.FlowTaskConnectorOperatorArgs{
+// 							S3: pulumi.String("NO_OP"),
+// 						},
+// 					},
+// 				},
+// 			},
+// 			TriggerConfig: &appflow.FlowTriggerConfigArgs{
+// 				TriggerType: pulumi.String("OnDemand"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -167,9 +159,7 @@ import (
 // AppFlow flows can be imported using the `arn`, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:appflow/flow:Flow example arn:aws:appflow:us-west-2:123456789012:flow/example-flow
-//
+//  $ pulumi import aws:appflow/flow:Flow example arn:aws:appflow:us-west-2:123456789012:flow/example-flow
 // ```
 type Flow struct {
 	pulumi.CustomResourceState
@@ -351,7 +341,7 @@ func (i *Flow) ToFlowOutputWithContext(ctx context.Context) FlowOutput {
 // FlowArrayInput is an input type that accepts FlowArray and FlowArrayOutput values.
 // You can construct a concrete instance of `FlowArrayInput` via:
 //
-//	FlowArray{ FlowArgs{...} }
+//          FlowArray{ FlowArgs{...} }
 type FlowArrayInput interface {
 	pulumi.Input
 
@@ -376,7 +366,7 @@ func (i FlowArray) ToFlowArrayOutputWithContext(ctx context.Context) FlowArrayOu
 // FlowMapInput is an input type that accepts FlowMap and FlowMapOutput values.
 // You can construct a concrete instance of `FlowMapInput` via:
 //
-//	FlowMap{ "key": FlowArgs{...} }
+//          FlowMap{ "key": FlowArgs{...} }
 type FlowMapInput interface {
 	pulumi.Input
 

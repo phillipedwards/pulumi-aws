@@ -17,32 +17,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/kendra"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/kendra"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := kendra.NewThesaurus(ctx, "example", &kendra.ThesaurusArgs{
-//				IndexId: pulumi.Any(aws_kendra_index.Example.Id),
-//				RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
-//				SourceS3Path: &kendra.ThesaurusSourceS3PathArgs{
-//					Bucket: pulumi.Any(aws_s3_bucket.Example.Id),
-//					Key:    pulumi.Any(aws_s3_object.Example.Key),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example Kendra Thesaurus"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := kendra.NewThesaurus(ctx, "example", &kendra.ThesaurusArgs{
+// 			IndexId: pulumi.Any(aws_kendra_index.Example.Id),
+// 			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+// 			SourceS3Path: &kendra.ThesaurusSourceS3PathArgs{
+// 				Bucket: pulumi.Any(aws_s3_bucket.Example.Id),
+// 				Key:    pulumi.Any(aws_s3_object.Example.Key),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example Kendra Thesaurus"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -50,9 +47,7 @@ import (
 // `aws_kendra_thesaurus` can be imported using the unique identifiers of the thesaurus and index separated by a slash (`/`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:kendra/thesaurus:Thesaurus example thesaurus-123456780/idx-8012925589
-//
+//  $ pulumi import aws:kendra/thesaurus:Thesaurus example thesaurus-123456780/idx-8012925589
 // ```
 type Thesaurus struct {
 	pulumi.CustomResourceState
@@ -215,7 +210,7 @@ func (i *Thesaurus) ToThesaurusOutputWithContext(ctx context.Context) ThesaurusO
 // ThesaurusArrayInput is an input type that accepts ThesaurusArray and ThesaurusArrayOutput values.
 // You can construct a concrete instance of `ThesaurusArrayInput` via:
 //
-//	ThesaurusArray{ ThesaurusArgs{...} }
+//          ThesaurusArray{ ThesaurusArgs{...} }
 type ThesaurusArrayInput interface {
 	pulumi.Input
 
@@ -240,7 +235,7 @@ func (i ThesaurusArray) ToThesaurusArrayOutputWithContext(ctx context.Context) T
 // ThesaurusMapInput is an input type that accepts ThesaurusMap and ThesaurusMapOutput values.
 // You can construct a concrete instance of `ThesaurusMapInput` via:
 //
-//	ThesaurusMap{ "key": ThesaurusArgs{...} }
+//          ThesaurusMap{ "key": ThesaurusArgs{...} }
 type ThesaurusMapInput interface {
 	pulumi.Input
 

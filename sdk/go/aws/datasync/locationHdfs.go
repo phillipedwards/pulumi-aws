@@ -21,34 +21,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/datasync"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/datasync"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := datasync.NewLocationHdfs(ctx, "example", &datasync.LocationHdfsArgs{
-//				AgentArns: pulumi.StringArray{
-//					pulumi.Any(aws_datasync_agent.Example.Arn),
-//				},
-//				AuthenticationType: pulumi.String("SIMPLE"),
-//				SimpleUser:         pulumi.String("example"),
-//				NameNodes: datasync.LocationHdfsNameNodeArray{
-//					&datasync.LocationHdfsNameNodeArgs{
-//						Hostname: pulumi.Any(aws_instance.Example.Private_dns),
-//						Port:     pulumi.Int(80),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := datasync.NewLocationHdfs(ctx, "example", &datasync.LocationHdfsArgs{
+// 			AgentArns: pulumi.StringArray{
+// 				pulumi.Any(aws_datasync_agent.Example.Arn),
+// 			},
+// 			AuthenticationType: pulumi.String("SIMPLE"),
+// 			SimpleUser:         pulumi.String("example"),
+// 			NameNodes: datasync.LocationHdfsNameNodeArray{
+// 				&datasync.LocationHdfsNameNodeArgs{
+// 					Hostname: pulumi.Any(aws_instance.Example.Private_dns),
+// 					Port:     pulumi.Int(80),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -56,9 +53,7 @@ import (
 // `aws_datasync_location_hdfs` can be imported by using the Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:datasync/locationHdfs:LocationHdfs example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
-//
+//  $ pulumi import aws:datasync/locationHdfs:LocationHdfs example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
 // ```
 type LocationHdfs struct {
 	pulumi.CustomResourceState
@@ -287,7 +282,7 @@ func (i *LocationHdfs) ToLocationHdfsOutputWithContext(ctx context.Context) Loca
 // LocationHdfsArrayInput is an input type that accepts LocationHdfsArray and LocationHdfsArrayOutput values.
 // You can construct a concrete instance of `LocationHdfsArrayInput` via:
 //
-//	LocationHdfsArray{ LocationHdfsArgs{...} }
+//          LocationHdfsArray{ LocationHdfsArgs{...} }
 type LocationHdfsArrayInput interface {
 	pulumi.Input
 
@@ -312,7 +307,7 @@ func (i LocationHdfsArray) ToLocationHdfsArrayOutputWithContext(ctx context.Cont
 // LocationHdfsMapInput is an input type that accepts LocationHdfsMap and LocationHdfsMapOutput values.
 // You can construct a concrete instance of `LocationHdfsMapInput` via:
 //
-//	LocationHdfsMap{ "key": LocationHdfsArgs{...} }
+//          LocationHdfsMap{ "key": LocationHdfsArgs{...} }
 type LocationHdfsMapInput interface {
 	pulumi.Input
 

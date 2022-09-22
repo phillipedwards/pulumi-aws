@@ -19,83 +19,76 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/kinesis"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/pinpoint"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			app, err := pinpoint.NewApp(ctx, "app", nil)
-//			if err != nil {
-//				return err
-//			}
-//			testStream, err := kinesis.NewStream(ctx, "testStream", &kinesis.StreamArgs{
-//				ShardCount: pulumi.Int(1),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
-//	  "Version": "2012-10-17",
-//	  "Statement": [
-//	    {
-//	      "Action": "sts:AssumeRole",
-//	      "Principal": {
-//	        "Service": "pinpoint.us-east-1.amazonaws.com"
-//	      },
-//	      "Effect": "Allow",
-//	      "Sid": ""
-//	    }
-//	  ]
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		app, err := pinpoint.NewApp(ctx, "app", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		testStream, err := kinesis.NewStream(ctx, "testStream", &kinesis.StreamArgs{
+// 			ShardCount: pulumi.Int(1),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
+//   "Version": "2012-10-17",
+//   "Statement": [
+//     {
+//       "Action": "sts:AssumeRole",
+//       "Principal": {
+//         "Service": "pinpoint.us-east-1.amazonaws.com"
+//       },
+//       "Effect": "Allow",
+//       "Sid": ""
+//     }
+//   ]
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = pinpoint.NewEventStream(ctx, "stream", &pinpoint.EventStreamArgs{
-//				ApplicationId:        app.ApplicationId,
-//				DestinationStreamArn: testStream.Arn,
-//				RoleArn:              testRole.Arn,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewRolePolicy(ctx, "testRolePolicy", &iam.RolePolicyArgs{
-//				Role: testRole.ID(),
-//				Policy: pulumi.Any(fmt.Sprintf(`{
-//	  "Version": "2012-10-17",
-//	  "Statement": {
-//	    "Action": [
-//	      "kinesis:PutRecords",
-//	      "kinesis:DescribeStream"
-//	    ],
-//	    "Effect": "Allow",
-//	    "Resource": [
-//	      "arn:aws:kinesis:us-east-1:*:*/*"
-//	    ]
-//	  }
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = pinpoint.NewEventStream(ctx, "stream", &pinpoint.EventStreamArgs{
+// 			ApplicationId:        app.ApplicationId,
+// 			DestinationStreamArn: testStream.Arn,
+// 			RoleArn:              testRole.Arn,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewRolePolicy(ctx, "testRolePolicy", &iam.RolePolicyArgs{
+// 			Role: testRole.ID(),
+// 			Policy: pulumi.Any(fmt.Sprintf(`{
+//   "Version": "2012-10-17",
+//   "Statement": {
+//     "Action": [
+//       "kinesis:PutRecords",
+//       "kinesis:DescribeStream"
+//     ],
+//     "Effect": "Allow",
+//     "Resource": [
+//       "arn:aws:kinesis:us-east-1:*:*/*"
+//     ]
+//   }
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -103,9 +96,7 @@ import (
 // Pinpoint Event Stream can be imported using the `application-id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:pinpoint/eventStream:EventStream stream application-id
-//
+//  $ pulumi import aws:pinpoint/eventStream:EventStream stream application-id
 // ```
 type EventStream struct {
 	pulumi.CustomResourceState
@@ -222,7 +213,7 @@ func (i *EventStream) ToEventStreamOutputWithContext(ctx context.Context) EventS
 // EventStreamArrayInput is an input type that accepts EventStreamArray and EventStreamArrayOutput values.
 // You can construct a concrete instance of `EventStreamArrayInput` via:
 //
-//	EventStreamArray{ EventStreamArgs{...} }
+//          EventStreamArray{ EventStreamArgs{...} }
 type EventStreamArrayInput interface {
 	pulumi.Input
 
@@ -247,7 +238,7 @@ func (i EventStreamArray) ToEventStreamArrayOutputWithContext(ctx context.Contex
 // EventStreamMapInput is an input type that accepts EventStreamMap and EventStreamMapOutput values.
 // You can construct a concrete instance of `EventStreamMapInput` via:
 //
-//	EventStreamMap{ "key": EventStreamArgs{...} }
+//          EventStreamMap{ "key": EventStreamArgs{...} }
 type EventStreamMapInput interface {
 	pulumi.Input
 

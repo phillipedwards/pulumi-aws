@@ -19,40 +19,37 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/guardduty"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/organizations"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/guardduty"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/organizations"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
-//				AwsServiceAccessPrincipals: pulumi.StringArray{
-//					pulumi.String("guardduty.amazonaws.com"),
-//				},
-//				FeatureSet: pulumi.String("ALL"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = guardduty.NewDetector(ctx, "exampleDetector", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = guardduty.NewOrganizationAdminAccount(ctx, "exampleOrganizationAdminAccount", &guardduty.OrganizationAdminAccountArgs{
-//				AdminAccountId: pulumi.String("123456789012"),
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				exampleOrganization,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+// 			AwsServiceAccessPrincipals: pulumi.StringArray{
+// 				pulumi.String("guardduty.amazonaws.com"),
+// 			},
+// 			FeatureSet: pulumi.String("ALL"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = guardduty.NewDetector(ctx, "exampleDetector", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = guardduty.NewOrganizationAdminAccount(ctx, "exampleOrganizationAdminAccount", &guardduty.OrganizationAdminAccountArgs{
+// 			AdminAccountId: pulumi.String("123456789012"),
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			exampleOrganization,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -60,9 +57,7 @@ import (
 // GuardDuty Organization Admin Account can be imported using the AWS account ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:guardduty/organizationAdminAccount:OrganizationAdminAccount example 123456789012
-//
+//  $ pulumi import aws:guardduty/organizationAdminAccount:OrganizationAdminAccount example 123456789012
 // ```
 type OrganizationAdminAccount struct {
 	pulumi.CustomResourceState
@@ -153,7 +148,7 @@ func (i *OrganizationAdminAccount) ToOrganizationAdminAccountOutputWithContext(c
 // OrganizationAdminAccountArrayInput is an input type that accepts OrganizationAdminAccountArray and OrganizationAdminAccountArrayOutput values.
 // You can construct a concrete instance of `OrganizationAdminAccountArrayInput` via:
 //
-//	OrganizationAdminAccountArray{ OrganizationAdminAccountArgs{...} }
+//          OrganizationAdminAccountArray{ OrganizationAdminAccountArgs{...} }
 type OrganizationAdminAccountArrayInput interface {
 	pulumi.Input
 
@@ -178,7 +173,7 @@ func (i OrganizationAdminAccountArray) ToOrganizationAdminAccountArrayOutputWith
 // OrganizationAdminAccountMapInput is an input type that accepts OrganizationAdminAccountMap and OrganizationAdminAccountMapOutput values.
 // You can construct a concrete instance of `OrganizationAdminAccountMapInput` via:
 //
-//	OrganizationAdminAccountMap{ "key": OrganizationAdminAccountArgs{...} }
+//          OrganizationAdminAccountMap{ "key": OrganizationAdminAccountArgs{...} }
 type OrganizationAdminAccountMapInput interface {
 	pulumi.Input
 

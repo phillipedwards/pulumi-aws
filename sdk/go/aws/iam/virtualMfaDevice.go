@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := iam.NewVirtualMfaDevice(ctx, "example", &iam.VirtualMfaDeviceArgs{
-//				VirtualMfaDeviceName: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := iam.NewVirtualMfaDevice(ctx, "example", &iam.VirtualMfaDeviceArgs{
+// 			VirtualMfaDeviceName: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // IAM Virtual MFA Devices can be imported using the `arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:iam/virtualMfaDevice:VirtualMfaDevice example arn:aws:iam::123456789012:mfa/example
-//
+//  $ pulumi import aws:iam/virtualMfaDevice:VirtualMfaDevice example arn:aws:iam::123456789012:mfa/example
 // ```
 type VirtualMfaDevice struct {
 	pulumi.CustomResourceState
@@ -181,7 +176,7 @@ func (i *VirtualMfaDevice) ToVirtualMfaDeviceOutputWithContext(ctx context.Conte
 // VirtualMfaDeviceArrayInput is an input type that accepts VirtualMfaDeviceArray and VirtualMfaDeviceArrayOutput values.
 // You can construct a concrete instance of `VirtualMfaDeviceArrayInput` via:
 //
-//	VirtualMfaDeviceArray{ VirtualMfaDeviceArgs{...} }
+//          VirtualMfaDeviceArray{ VirtualMfaDeviceArgs{...} }
 type VirtualMfaDeviceArrayInput interface {
 	pulumi.Input
 
@@ -206,7 +201,7 @@ func (i VirtualMfaDeviceArray) ToVirtualMfaDeviceArrayOutputWithContext(ctx cont
 // VirtualMfaDeviceMapInput is an input type that accepts VirtualMfaDeviceMap and VirtualMfaDeviceMapOutput values.
 // You can construct a concrete instance of `VirtualMfaDeviceMapInput` via:
 //
-//	VirtualMfaDeviceMap{ "key": VirtualMfaDeviceArgs{...} }
+//          VirtualMfaDeviceMap{ "key": VirtualMfaDeviceArgs{...} }
 type VirtualMfaDeviceMapInput interface {
 	pulumi.Input
 

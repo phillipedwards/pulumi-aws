@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appsync"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appsync"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appsync.NewDomainName(ctx, "example", &appsync.DomainNameArgs{
-//				DomainName:     pulumi.String("api.example.com"),
-//				CertificateArn: pulumi.Any(aws_acm_certificate.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appsync.NewDomainName(ctx, "example", &appsync.DomainNameArgs{
+// 			DomainName:     pulumi.String("api.example.com"),
+// 			CertificateArn: pulumi.Any(aws_acm_certificate.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // `aws_appsync_domain_name` can be imported using the AppSync domain name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:appsync/domainName:DomainName example example.com
-//
+//  $ pulumi import aws:appsync/domainName:DomainName example example.com
 // ```
 type DomainName struct {
 	pulumi.CustomResourceState
@@ -173,7 +168,7 @@ func (i *DomainName) ToDomainNameOutputWithContext(ctx context.Context) DomainNa
 // DomainNameArrayInput is an input type that accepts DomainNameArray and DomainNameArrayOutput values.
 // You can construct a concrete instance of `DomainNameArrayInput` via:
 //
-//	DomainNameArray{ DomainNameArgs{...} }
+//          DomainNameArray{ DomainNameArgs{...} }
 type DomainNameArrayInput interface {
 	pulumi.Input
 
@@ -198,7 +193,7 @@ func (i DomainNameArray) ToDomainNameArrayOutputWithContext(ctx context.Context)
 // DomainNameMapInput is an input type that accepts DomainNameMap and DomainNameMapOutput values.
 // You can construct a concrete instance of `DomainNameMapInput` via:
 //
-//	DomainNameMap{ "key": DomainNameArgs{...} }
+//          DomainNameMap{ "key": DomainNameArgs{...} }
 type DomainNameMapInput interface {
 	pulumi.Input
 

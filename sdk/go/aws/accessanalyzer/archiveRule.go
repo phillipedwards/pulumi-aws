@@ -18,43 +18,40 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/accessanalyzer"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/accessanalyzer"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := accessanalyzer.NewArchiveRule(ctx, "example", &accessanalyzer.ArchiveRuleArgs{
-//				AnalyzerName: pulumi.String("example-analyzer"),
-//				Filters: accessanalyzer.ArchiveRuleFilterArray{
-//					&accessanalyzer.ArchiveRuleFilterArgs{
-//						Criteria: pulumi.String("condition.aws:UserId"),
-//						Eqs: pulumi.StringArray{
-//							pulumi.String("userid"),
-//						},
-//					},
-//					&accessanalyzer.ArchiveRuleFilterArgs{
-//						Criteria: pulumi.String("error"),
-//						Exists:   pulumi.String("true"),
-//					},
-//					&accessanalyzer.ArchiveRuleFilterArgs{
-//						Criteria: pulumi.String("isPublic"),
-//						Eqs: pulumi.StringArray{
-//							pulumi.String("false"),
-//						},
-//					},
-//				},
-//				RuleName: pulumi.String("example-rule"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := accessanalyzer.NewArchiveRule(ctx, "example", &accessanalyzer.ArchiveRuleArgs{
+// 			AnalyzerName: pulumi.String("example-analyzer"),
+// 			Filters: accessanalyzer.ArchiveRuleFilterArray{
+// 				&accessanalyzer.ArchiveRuleFilterArgs{
+// 					Criteria: pulumi.String("condition.aws:UserId"),
+// 					Eqs: pulumi.StringArray{
+// 						pulumi.String("userid"),
+// 					},
+// 				},
+// 				&accessanalyzer.ArchiveRuleFilterArgs{
+// 					Criteria: pulumi.String("error"),
+// 					Exists:   pulumi.String("true"),
+// 				},
+// 				&accessanalyzer.ArchiveRuleFilterArgs{
+// 					Criteria: pulumi.String("isPublic"),
+// 					Eqs: pulumi.StringArray{
+// 						pulumi.String("false"),
+// 					},
+// 				},
+// 			},
+// 			RuleName: pulumi.String("example-rule"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -62,9 +59,7 @@ import (
 // AccessAnalyzer ArchiveRule can be imported using the `analyzer_name/rule_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:accessanalyzer/archiveRule:ArchiveRule example example-analyzer/example-rule
-//
+//  $ pulumi import aws:accessanalyzer/archiveRule:ArchiveRule example example-analyzer/example-rule
 // ```
 type ArchiveRule struct {
 	pulumi.CustomResourceState
@@ -181,7 +176,7 @@ func (i *ArchiveRule) ToArchiveRuleOutputWithContext(ctx context.Context) Archiv
 // ArchiveRuleArrayInput is an input type that accepts ArchiveRuleArray and ArchiveRuleArrayOutput values.
 // You can construct a concrete instance of `ArchiveRuleArrayInput` via:
 //
-//	ArchiveRuleArray{ ArchiveRuleArgs{...} }
+//          ArchiveRuleArray{ ArchiveRuleArgs{...} }
 type ArchiveRuleArrayInput interface {
 	pulumi.Input
 
@@ -206,7 +201,7 @@ func (i ArchiveRuleArray) ToArchiveRuleArrayOutputWithContext(ctx context.Contex
 // ArchiveRuleMapInput is an input type that accepts ArchiveRuleMap and ArchiveRuleMapOutput values.
 // You can construct a concrete instance of `ArchiveRuleMapInput` via:
 //
-//	ArchiveRuleMap{ "key": ArchiveRuleArgs{...} }
+//          ArchiveRuleMap{ "key": ArchiveRuleArgs{...} }
 type ArchiveRuleMapInput interface {
 	pulumi.Input
 

@@ -23,91 +23,88 @@ import (
 // package main
 //
 // import (
+// 	"crypto/sha1"
+// 	"encoding/json"
+// 	"fmt"
 //
-//	"crypto/sha1"
-//	"encoding/json"
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/apigateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func sha1Hash(input string) string {
-//		hash := sha1.Sum([]byte(input))
-//		return hex.EncodeToString(hash[:])
-//	}
+// func sha1Hash(input string) string {
+// 	hash := sha1.Sum([]byte(input))
+// 	return hex.EncodeToString(hash[:])
+// }
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleRestApi, err := apigateway.NewRestApi(ctx, "exampleRestApi", nil)
-//			if err != nil {
-//				return err
-//			}
-//			exampleResource, err := apigateway.NewResource(ctx, "exampleResource", &apigateway.ResourceArgs{
-//				ParentId: exampleRestApi.RootResourceId,
-//				PathPart: pulumi.String("example"),
-//				RestApi:  exampleRestApi.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleMethod, err := apigateway.NewMethod(ctx, "exampleMethod", &apigateway.MethodArgs{
-//				Authorization: pulumi.String("NONE"),
-//				HttpMethod:    pulumi.String("GET"),
-//				ResourceId:    exampleResource.ID(),
-//				RestApi:       exampleRestApi.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleIntegration, err := apigateway.NewIntegration(ctx, "exampleIntegration", &apigateway.IntegrationArgs{
-//				HttpMethod: exampleMethod.HttpMethod,
-//				ResourceId: exampleResource.ID(),
-//				RestApi:    exampleRestApi.ID(),
-//				Type:       pulumi.String("MOCK"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleDeployment, err := apigateway.NewDeployment(ctx, "exampleDeployment", &apigateway.DeploymentArgs{
-//				RestApi: exampleRestApi.ID(),
-//				Triggers: pulumi.StringMap{
-//					"redeployment": pulumi.All(exampleResource.ID(), exampleMethod.ID(), exampleIntegration.ID()).ApplyT(func(_args []interface{}) (string, error) {
-//						exampleResourceId := _args[0].(string)
-//						exampleMethodId := _args[1].(string)
-//						exampleIntegrationId := _args[2].(string)
-//						var _zero string
-//						tmpJSON0, err := json.Marshal([]string{
-//							exampleResourceId,
-//							exampleMethodId,
-//							exampleIntegrationId,
-//						})
-//						if err != nil {
-//							return _zero, err
-//						}
-//						json0 := string(tmpJSON0)
-//						return json0, nil
-//					}).(pulumi.StringOutput).ApplyT(func(toJSON string) (pulumi.String, error) {
-//						return sha1Hash(toJSON), nil
-//					}).(pulumi.StringOutput),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = apigateway.NewStage(ctx, "exampleStage", &apigateway.StageArgs{
-//				Deployment: exampleDeployment.ID(),
-//				RestApi:    exampleRestApi.ID(),
-//				StageName:  pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleRestApi, err := apigateway.NewRestApi(ctx, "exampleRestApi", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleResource, err := apigateway.NewResource(ctx, "exampleResource", &apigateway.ResourceArgs{
+// 			ParentId: exampleRestApi.RootResourceId,
+// 			PathPart: pulumi.String("example"),
+// 			RestApi:  exampleRestApi.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleMethod, err := apigateway.NewMethod(ctx, "exampleMethod", &apigateway.MethodArgs{
+// 			Authorization: pulumi.String("NONE"),
+// 			HttpMethod:    pulumi.String("GET"),
+// 			ResourceId:    exampleResource.ID(),
+// 			RestApi:       exampleRestApi.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleIntegration, err := apigateway.NewIntegration(ctx, "exampleIntegration", &apigateway.IntegrationArgs{
+// 			HttpMethod: exampleMethod.HttpMethod,
+// 			ResourceId: exampleResource.ID(),
+// 			RestApi:    exampleRestApi.ID(),
+// 			Type:       pulumi.String("MOCK"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleDeployment, err := apigateway.NewDeployment(ctx, "exampleDeployment", &apigateway.DeploymentArgs{
+// 			RestApi: exampleRestApi.ID(),
+// 			Triggers: pulumi.StringMap{
+// 				"redeployment": pulumi.All(exampleResource.ID(), exampleMethod.ID(), exampleIntegration.ID()).ApplyT(func(_args []interface{}) (string, error) {
+// 					exampleResourceId := _args[0].(string)
+// 					exampleMethodId := _args[1].(string)
+// 					exampleIntegrationId := _args[2].(string)
+// 					var _zero string
+// 					tmpJSON0, err := json.Marshal([]string{
+// 						exampleResourceId,
+// 						exampleMethodId,
+// 						exampleIntegrationId,
+// 					})
+// 					if err != nil {
+// 						return _zero, err
+// 					}
+// 					json0 := string(tmpJSON0)
+// 					return json0, nil
+// 				}).(pulumi.StringOutput).ApplyT(func(toJSON string) (pulumi.String, error) {
+// 					return sha1Hash(toJSON), nil
+// 				}).(pulumi.StringOutput),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = apigateway.NewStage(ctx, "exampleStage", &apigateway.StageArgs{
+// 			Deployment: exampleDeployment.ID(),
+// 			RestApi:    exampleRestApi.ID(),
+// 			StageName:  pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -115,9 +112,7 @@ import (
 // `aws_api_gateway_rest_api` can be imported by using the REST API ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:apigateway/restApi:RestApi example 12345abcde
-//
+//  $ pulumi import aws:apigateway/restApi:RestApi example 12345abcde
 // ```
 type RestApi struct {
 	pulumi.CustomResourceState
@@ -351,7 +346,7 @@ func (i *RestApi) ToRestApiOutputWithContext(ctx context.Context) RestApiOutput 
 // RestApiArrayInput is an input type that accepts RestApiArray and RestApiArrayOutput values.
 // You can construct a concrete instance of `RestApiArrayInput` via:
 //
-//	RestApiArray{ RestApiArgs{...} }
+//          RestApiArray{ RestApiArgs{...} }
 type RestApiArrayInput interface {
 	pulumi.Input
 
@@ -376,7 +371,7 @@ func (i RestApiArray) ToRestApiArrayOutputWithContext(ctx context.Context) RestA
 // RestApiMapInput is an input type that accepts RestApiMap and RestApiMapOutput values.
 // You can construct a concrete instance of `RestApiMapInput` via:
 //
-//	RestApiMap{ "key": RestApiArgs{...} }
+//          RestApiMap{ "key": RestApiArgs{...} }
 type RestApiMapInput interface {
 	pulumi.Input
 

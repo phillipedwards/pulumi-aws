@@ -19,59 +19,56 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			fooVpc, err := ec2.NewVpc(ctx, "fooVpc", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("10.1.0.0/16"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			fooSubnet, err := ec2.NewSubnet(ctx, "fooSubnet", &ec2.SubnetArgs{
-//				CidrBlock:        pulumi.String("10.1.1.0/24"),
-//				AvailabilityZone: pulumi.String("us-west-2a"),
-//				VpcId:            fooVpc.ID(),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("tf-dbsubnet-test-1"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			bar, err := ec2.NewSubnet(ctx, "bar", &ec2.SubnetArgs{
-//				CidrBlock:        pulumi.String("10.1.2.0/24"),
-//				AvailabilityZone: pulumi.String("us-west-2b"),
-//				VpcId:            fooVpc.ID(),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("tf-dbsubnet-test-2"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = redshift.NewSubnetGroup(ctx, "fooSubnetGroup", &redshift.SubnetGroupArgs{
-//				SubnetIds: pulumi.StringArray{
-//					fooSubnet.ID(),
-//					bar.ID(),
-//				},
-//				Tags: pulumi.StringMap{
-//					"environment": pulumi.String("Production"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		fooVpc, err := ec2.NewVpc(ctx, "fooVpc", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("10.1.0.0/16"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		fooSubnet, err := ec2.NewSubnet(ctx, "fooSubnet", &ec2.SubnetArgs{
+// 			CidrBlock:        pulumi.String("10.1.1.0/24"),
+// 			AvailabilityZone: pulumi.String("us-west-2a"),
+// 			VpcId:            fooVpc.ID(),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("tf-dbsubnet-test-1"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		bar, err := ec2.NewSubnet(ctx, "bar", &ec2.SubnetArgs{
+// 			CidrBlock:        pulumi.String("10.1.2.0/24"),
+// 			AvailabilityZone: pulumi.String("us-west-2b"),
+// 			VpcId:            fooVpc.ID(),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("tf-dbsubnet-test-2"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = redshift.NewSubnetGroup(ctx, "fooSubnetGroup", &redshift.SubnetGroupArgs{
+// 			SubnetIds: pulumi.StringArray{
+// 				fooSubnet.ID(),
+// 				bar.ID(),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"environment": pulumi.String("Production"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -79,9 +76,7 @@ import (
 // Redshift subnet groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:redshift/subnetGroup:SubnetGroup testgroup1 test-cluster-subnet-group
-//
+//  $ pulumi import aws:redshift/subnetGroup:SubnetGroup testgroup1 test-cluster-subnet-group
 // ```
 type SubnetGroup struct {
 	pulumi.CustomResourceState
@@ -217,7 +212,7 @@ func (i *SubnetGroup) ToSubnetGroupOutputWithContext(ctx context.Context) Subnet
 // SubnetGroupArrayInput is an input type that accepts SubnetGroupArray and SubnetGroupArrayOutput values.
 // You can construct a concrete instance of `SubnetGroupArrayInput` via:
 //
-//	SubnetGroupArray{ SubnetGroupArgs{...} }
+//          SubnetGroupArray{ SubnetGroupArgs{...} }
 type SubnetGroupArrayInput interface {
 	pulumi.Input
 
@@ -242,7 +237,7 @@ func (i SubnetGroupArray) ToSubnetGroupArrayOutputWithContext(ctx context.Contex
 // SubnetGroupMapInput is an input type that accepts SubnetGroupMap and SubnetGroupMapOutput values.
 // You can construct a concrete instance of `SubnetGroupMapInput` via:
 //
-//	SubnetGroupMap{ "key": SubnetGroupArgs{...} }
+//          SubnetGroupMap{ "key": SubnetGroupArgs{...} }
 type SubnetGroupMapInput interface {
 	pulumi.Input
 

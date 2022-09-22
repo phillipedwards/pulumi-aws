@@ -19,39 +19,36 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/wafregional"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleRule, err := wafregional.NewRule(ctx, "exampleRule", &wafregional.RuleArgs{
-//				MetricName: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = wafregional.NewRuleGroup(ctx, "exampleRuleGroup", &wafregional.RuleGroupArgs{
-//				MetricName: pulumi.String("example"),
-//				ActivatedRules: wafregional.RuleGroupActivatedRuleArray{
-//					&wafregional.RuleGroupActivatedRuleArgs{
-//						Action: &wafregional.RuleGroupActivatedRuleActionArgs{
-//							Type: pulumi.String("COUNT"),
-//						},
-//						Priority: pulumi.Int(50),
-//						RuleId:   exampleRule.ID(),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleRule, err := wafregional.NewRule(ctx, "exampleRule", &wafregional.RuleArgs{
+// 			MetricName: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = wafregional.NewRuleGroup(ctx, "exampleRuleGroup", &wafregional.RuleGroupArgs{
+// 			MetricName: pulumi.String("example"),
+// 			ActivatedRules: wafregional.RuleGroupActivatedRuleArray{
+// 				&wafregional.RuleGroupActivatedRuleArgs{
+// 					Action: &wafregional.RuleGroupActivatedRuleActionArgs{
+// 						Type: pulumi.String("COUNT"),
+// 					},
+// 					Priority: pulumi.Int(50),
+// 					RuleId:   exampleRule.ID(),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -59,9 +56,7 @@ import (
 // WAF Regional Rule Group can be imported using the id, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:wafregional/ruleGroup:RuleGroup example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
-//
+//  $ pulumi import aws:wafregional/ruleGroup:RuleGroup example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
 // ```
 type RuleGroup struct {
 	pulumi.CustomResourceState
@@ -194,7 +189,7 @@ func (i *RuleGroup) ToRuleGroupOutputWithContext(ctx context.Context) RuleGroupO
 // RuleGroupArrayInput is an input type that accepts RuleGroupArray and RuleGroupArrayOutput values.
 // You can construct a concrete instance of `RuleGroupArrayInput` via:
 //
-//	RuleGroupArray{ RuleGroupArgs{...} }
+//          RuleGroupArray{ RuleGroupArgs{...} }
 type RuleGroupArrayInput interface {
 	pulumi.Input
 
@@ -219,7 +214,7 @@ func (i RuleGroupArray) ToRuleGroupArrayOutputWithContext(ctx context.Context) R
 // RuleGroupMapInput is an input type that accepts RuleGroupMap and RuleGroupMapOutput values.
 // You can construct a concrete instance of `RuleGroupMapInput` via:
 //
-//	RuleGroupMap{ "key": RuleGroupArgs{...} }
+//          RuleGroupMap{ "key": RuleGroupArgs{...} }
 type RuleGroupMapInput interface {
 	pulumi.Input
 

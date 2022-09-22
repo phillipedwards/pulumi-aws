@@ -20,30 +20,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewNatGateway(ctx, "example", &ec2.NatGatewayArgs{
-//				AllocationId: pulumi.Any(aws_eip.Example.Id),
-//				SubnetId:     pulumi.Any(aws_subnet.Example.Id),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("gw NAT"),
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				aws_internet_gateway.Example,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewNatGateway(ctx, "example", &ec2.NatGatewayArgs{
+// 			AllocationId: pulumi.Any(aws_eip.Example.Id),
+// 			SubnetId:     pulumi.Any(aws_subnet.Example.Id),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("gw NAT"),
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			aws_internet_gateway.Example,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Private NAT
 //
@@ -51,25 +48,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewNatGateway(ctx, "example", &ec2.NatGatewayArgs{
-//				ConnectivityType: pulumi.String("private"),
-//				SubnetId:         pulumi.Any(aws_subnet.Example.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewNatGateway(ctx, "example", &ec2.NatGatewayArgs{
+// 			ConnectivityType: pulumi.String("private"),
+// 			SubnetId:         pulumi.Any(aws_subnet.Example.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -77,9 +71,7 @@ import (
 // NAT Gateways can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/natGateway:NatGateway private_gw nat-05dba92075d71c408
-//
+//  $ pulumi import aws:ec2/natGateway:NatGateway private_gw nat-05dba92075d71c408
 // ```
 type NatGateway struct {
 	pulumi.CustomResourceState
@@ -224,7 +216,7 @@ func (i *NatGateway) ToNatGatewayOutputWithContext(ctx context.Context) NatGatew
 // NatGatewayArrayInput is an input type that accepts NatGatewayArray and NatGatewayArrayOutput values.
 // You can construct a concrete instance of `NatGatewayArrayInput` via:
 //
-//	NatGatewayArray{ NatGatewayArgs{...} }
+//          NatGatewayArray{ NatGatewayArgs{...} }
 type NatGatewayArrayInput interface {
 	pulumi.Input
 
@@ -249,7 +241,7 @@ func (i NatGatewayArray) ToNatGatewayArrayOutputWithContext(ctx context.Context)
 // NatGatewayMapInput is an input type that accepts NatGatewayMap and NatGatewayMapOutput values.
 // You can construct a concrete instance of `NatGatewayMapInput` via:
 //
-//	NatGatewayMap{ "key": NatGatewayArgs{...} }
+//          NatGatewayMap{ "key": NatGatewayArgs{...} }
 type NatGatewayMapInput interface {
 	pulumi.Input
 

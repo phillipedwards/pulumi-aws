@@ -19,39 +19,36 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codeartifact"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/kms"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codeartifact"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/kms"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleKey, err := kms.NewKey(ctx, "exampleKey", &kms.KeyArgs{
-//				Description: pulumi.String("domain key"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleDomain, err := codeartifact.NewDomain(ctx, "exampleDomain", &codeartifact.DomainArgs{
-//				Domain:        pulumi.String("example"),
-//				EncryptionKey: exampleKey.Arn,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = codeartifact.NewRepository(ctx, "test", &codeartifact.RepositoryArgs{
-//				Repository: pulumi.String("example"),
-//				Domain:     exampleDomain.Domain,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleKey, err := kms.NewKey(ctx, "exampleKey", &kms.KeyArgs{
+// 			Description: pulumi.String("domain key"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleDomain, err := codeartifact.NewDomain(ctx, "exampleDomain", &codeartifact.DomainArgs{
+// 			Domain:        pulumi.String("example"),
+// 			EncryptionKey: exampleKey.Arn,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = codeartifact.NewRepository(ctx, "test", &codeartifact.RepositoryArgs{
+// 			Repository: pulumi.String("example"),
+// 			Domain:     exampleDomain.Domain,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### With Upstream Repository
 //
@@ -59,37 +56,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codeartifact"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codeartifact"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			upstream, err := codeartifact.NewRepository(ctx, "upstream", &codeartifact.RepositoryArgs{
-//				Repository: pulumi.String("upstream"),
-//				Domain:     pulumi.Any(aws_codeartifact_domain.Test.Domain),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = codeartifact.NewRepository(ctx, "test", &codeartifact.RepositoryArgs{
-//				Repository: pulumi.String("example"),
-//				Domain:     pulumi.Any(aws_codeartifact_domain.Example.Domain),
-//				Upstreams: codeartifact.RepositoryUpstreamArray{
-//					&codeartifact.RepositoryUpstreamArgs{
-//						RepositoryName: upstream.Repository,
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		upstream, err := codeartifact.NewRepository(ctx, "upstream", &codeartifact.RepositoryArgs{
+// 			Repository: pulumi.String("upstream"),
+// 			Domain:     pulumi.Any(aws_codeartifact_domain.Test.Domain),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = codeartifact.NewRepository(ctx, "test", &codeartifact.RepositoryArgs{
+// 			Repository: pulumi.String("example"),
+// 			Domain:     pulumi.Any(aws_codeartifact_domain.Example.Domain),
+// 			Upstreams: codeartifact.RepositoryUpstreamArray{
+// 				&codeartifact.RepositoryUpstreamArgs{
+// 					RepositoryName: upstream.Repository,
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### With External Connection
 //
@@ -97,35 +91,32 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codeartifact"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codeartifact"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := codeartifact.NewRepository(ctx, "upstream", &codeartifact.RepositoryArgs{
-//				Repository: pulumi.String("upstream"),
-//				Domain:     pulumi.Any(aws_codeartifact_domain.Test.Domain),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = codeartifact.NewRepository(ctx, "test", &codeartifact.RepositoryArgs{
-//				Repository: pulumi.String("example"),
-//				Domain:     pulumi.Any(aws_codeartifact_domain.Example.Domain),
-//				ExternalConnections: &codeartifact.RepositoryExternalConnectionsArgs{
-//					ExternalConnectionName: pulumi.String("public:npmjs"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := codeartifact.NewRepository(ctx, "upstream", &codeartifact.RepositoryArgs{
+// 			Repository: pulumi.String("upstream"),
+// 			Domain:     pulumi.Any(aws_codeartifact_domain.Test.Domain),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = codeartifact.NewRepository(ctx, "test", &codeartifact.RepositoryArgs{
+// 			Repository: pulumi.String("example"),
+// 			Domain:     pulumi.Any(aws_codeartifact_domain.Example.Domain),
+// 			ExternalConnections: &codeartifact.RepositoryExternalConnectionsArgs{
+// 				ExternalConnectionName: pulumi.String("public:npmjs"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -133,9 +124,7 @@ import (
 // CodeArtifact Repository can be imported using the CodeArtifact Repository ARN, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:codeartifact/repository:Repository example arn:aws:codeartifact:us-west-2:012345678912:repository/tf-acc-test-6968272603913957763/tf-acc-test-6968272603913957763
-//
+//  $ pulumi import aws:codeartifact/repository:Repository example arn:aws:codeartifact:us-west-2:012345678912:repository/tf-acc-test-6968272603913957763/tf-acc-test-6968272603913957763
 // ```
 type Repository struct {
 	pulumi.CustomResourceState
@@ -307,7 +296,7 @@ func (i *Repository) ToRepositoryOutputWithContext(ctx context.Context) Reposito
 // RepositoryArrayInput is an input type that accepts RepositoryArray and RepositoryArrayOutput values.
 // You can construct a concrete instance of `RepositoryArrayInput` via:
 //
-//	RepositoryArray{ RepositoryArgs{...} }
+//          RepositoryArray{ RepositoryArgs{...} }
 type RepositoryArrayInput interface {
 	pulumi.Input
 
@@ -332,7 +321,7 @@ func (i RepositoryArray) ToRepositoryArrayOutputWithContext(ctx context.Context)
 // RepositoryMapInput is an input type that accepts RepositoryMap and RepositoryMapOutput values.
 // You can construct a concrete instance of `RepositoryMapInput` via:
 //
-//	RepositoryMap{ "key": RepositoryArgs{...} }
+//          RepositoryMap{ "key": RepositoryArgs{...} }
 type RepositoryMapInput interface {
 	pulumi.Input
 

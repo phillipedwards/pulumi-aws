@@ -19,27 +19,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dax"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/dax"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := dax.NewCluster(ctx, "bar", &dax.ClusterArgs{
-//				ClusterName:       pulumi.String("cluster-example"),
-//				IamRoleArn:        pulumi.Any(data.Aws_iam_role.Example.Arn),
-//				NodeType:          pulumi.String("dax.r4.large"),
-//				ReplicationFactor: pulumi.Int(1),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := dax.NewCluster(ctx, "bar", &dax.ClusterArgs{
+// 			ClusterName:       pulumi.String("cluster-example"),
+// 			IamRoleArn:        pulumi.Any(data.Aws_iam_role.Example.Arn),
+// 			NodeType:          pulumi.String("dax.r4.large"),
+// 			ReplicationFactor: pulumi.Int(1),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -47,12 +44,10 @@ import (
 // DAX Clusters can be imported using the `cluster_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:dax/cluster:Cluster my_cluster my_cluster
-//
+//  $ pulumi import aws:dax/cluster:Cluster my_cluster my_cluster
 // ```
 //
-//	[1]http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes
+//  [1]http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.concepts.cluster.html#DAX.concepts.nodes
 type Cluster struct {
 	pulumi.CustomResourceState
 
@@ -411,7 +406,7 @@ func (i *Cluster) ToClusterOutputWithContext(ctx context.Context) ClusterOutput 
 // ClusterArrayInput is an input type that accepts ClusterArray and ClusterArrayOutput values.
 // You can construct a concrete instance of `ClusterArrayInput` via:
 //
-//	ClusterArray{ ClusterArgs{...} }
+//          ClusterArray{ ClusterArgs{...} }
 type ClusterArrayInput interface {
 	pulumi.Input
 
@@ -436,7 +431,7 @@ func (i ClusterArray) ToClusterArrayOutputWithContext(ctx context.Context) Clust
 // ClusterMapInput is an input type that accepts ClusterMap and ClusterMapOutput values.
 // You can construct a concrete instance of `ClusterMapInput` via:
 //
-//	ClusterMap{ "key": ClusterArgs{...} }
+//          ClusterMap{ "key": ClusterArgs{...} }
 type ClusterMapInput interface {
 	pulumi.Input
 

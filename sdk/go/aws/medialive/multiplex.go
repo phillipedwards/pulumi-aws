@@ -18,44 +18,41 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/medialive"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/medialive"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			available, err := aws.GetAvailabilityZones(ctx, &GetAvailabilityZonesArgs{
-//				State: pulumi.StringRef("available"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = medialive.NewMultiplex(ctx, "example", &medialive.MultiplexArgs{
-//				AvailabilityZones: pulumi.StringArray{
-//					pulumi.String(available.Names[0]),
-//					pulumi.String(available.Names[1]),
-//				},
-//				MultiplexSettings: &medialive.MultiplexMultiplexSettingsArgs{
-//					TransportStreamBitrate:              pulumi.Int(1000000),
-//					TransportStreamId:                   pulumi.Int(1),
-//					TransportStreamReservedBitrate:      pulumi.Int(1),
-//					MaximumVideoBufferDelayMilliseconds: pulumi.Int(1000),
-//				},
-//				StartMultiplex: pulumi.Bool(true),
-//				Tags: pulumi.StringMap{
-//					"tag1": pulumi.String("value1"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		available, err := aws.GetAvailabilityZones(ctx, &GetAvailabilityZonesArgs{
+// 			State: pulumi.StringRef("available"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = medialive.NewMultiplex(ctx, "example", &medialive.MultiplexArgs{
+// 			AvailabilityZones: pulumi.StringArray{
+// 				pulumi.String(available.Names[0]),
+// 				pulumi.String(available.Names[1]),
+// 			},
+// 			MultiplexSettings: &medialive.MultiplexMultiplexSettingsArgs{
+// 				TransportStreamBitrate:              pulumi.Int(1000000),
+// 				TransportStreamId:                   pulumi.Int(1),
+// 				TransportStreamReservedBitrate:      pulumi.Int(1),
+// 				MaximumVideoBufferDelayMilliseconds: pulumi.Int(1000),
+// 			},
+// 			StartMultiplex: pulumi.Bool(true),
+// 			Tags: pulumi.StringMap{
+// 				"tag1": pulumi.String("value1"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -63,9 +60,7 @@ import (
 // MediaLive Multiplex can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:medialive/multiplex:Multiplex example 12345678
-//
+//  $ pulumi import aws:medialive/multiplex:Multiplex example 12345678
 // ```
 type Multiplex struct {
 	pulumi.CustomResourceState
@@ -207,7 +202,7 @@ func (i *Multiplex) ToMultiplexOutputWithContext(ctx context.Context) MultiplexO
 // MultiplexArrayInput is an input type that accepts MultiplexArray and MultiplexArrayOutput values.
 // You can construct a concrete instance of `MultiplexArrayInput` via:
 //
-//	MultiplexArray{ MultiplexArgs{...} }
+//          MultiplexArray{ MultiplexArgs{...} }
 type MultiplexArrayInput interface {
 	pulumi.Input
 
@@ -232,7 +227,7 @@ func (i MultiplexArray) ToMultiplexArrayOutputWithContext(ctx context.Context) M
 // MultiplexMapInput is an input type that accepts MultiplexMap and MultiplexMapOutput values.
 // You can construct a concrete instance of `MultiplexMapInput` via:
 //
-//	MultiplexMap{ "key": MultiplexArgs{...} }
+//          MultiplexMap{ "key": MultiplexArgs{...} }
 type MultiplexMapInput interface {
 	pulumi.Input
 

@@ -19,27 +19,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/directconnect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := directconnect.NewPrivateVirtualInterface(ctx, "foo", &directconnect.PrivateVirtualInterfaceArgs{
-//				AddressFamily: pulumi.String("ipv4"),
-//				BgpAsn:        pulumi.Int(65352),
-//				ConnectionId:  pulumi.String("dxcon-zzzzzzzz"),
-//				Vlan:          pulumi.Int(4094),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := directconnect.NewPrivateVirtualInterface(ctx, "foo", &directconnect.PrivateVirtualInterfaceArgs{
+// 			AddressFamily: pulumi.String("ipv4"),
+// 			BgpAsn:        pulumi.Int(65352),
+// 			ConnectionId:  pulumi.String("dxcon-zzzzzzzz"),
+// 			Vlan:          pulumi.Int(4094),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -47,9 +44,7 @@ import (
 // Direct Connect private virtual interfaces can be imported using the `vif id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:directconnect/privateVirtualInterface:PrivateVirtualInterface test dxvif-33cc44dd
-//
+//  $ pulumi import aws:directconnect/privateVirtualInterface:PrivateVirtualInterface test dxvif-33cc44dd
 // ```
 type PrivateVirtualInterface struct {
 	pulumi.CustomResourceState
@@ -296,7 +291,7 @@ func (i *PrivateVirtualInterface) ToPrivateVirtualInterfaceOutputWithContext(ctx
 // PrivateVirtualInterfaceArrayInput is an input type that accepts PrivateVirtualInterfaceArray and PrivateVirtualInterfaceArrayOutput values.
 // You can construct a concrete instance of `PrivateVirtualInterfaceArrayInput` via:
 //
-//	PrivateVirtualInterfaceArray{ PrivateVirtualInterfaceArgs{...} }
+//          PrivateVirtualInterfaceArray{ PrivateVirtualInterfaceArgs{...} }
 type PrivateVirtualInterfaceArrayInput interface {
 	pulumi.Input
 
@@ -321,7 +316,7 @@ func (i PrivateVirtualInterfaceArray) ToPrivateVirtualInterfaceArrayOutputWithCo
 // PrivateVirtualInterfaceMapInput is an input type that accepts PrivateVirtualInterfaceMap and PrivateVirtualInterfaceMapOutput values.
 // You can construct a concrete instance of `PrivateVirtualInterfaceMapInput` via:
 //
-//	PrivateVirtualInterfaceMap{ "key": PrivateVirtualInterfaceArgs{...} }
+//          PrivateVirtualInterfaceMap{ "key": PrivateVirtualInterfaceArgs{...} }
 type PrivateVirtualInterfaceMapInput interface {
 	pulumi.Input
 

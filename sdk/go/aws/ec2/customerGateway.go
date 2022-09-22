@@ -19,29 +19,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewCustomerGateway(ctx, "main", &ec2.CustomerGatewayArgs{
-//				BgpAsn:    pulumi.String("65000"),
-//				IpAddress: pulumi.String("172.83.124.10"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("main-customer-gateway"),
-//				},
-//				Type: pulumi.String("ipsec.1"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewCustomerGateway(ctx, "main", &ec2.CustomerGatewayArgs{
+// 			BgpAsn:    pulumi.String("65000"),
+// 			IpAddress: pulumi.String("172.83.124.10"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("main-customer-gateway"),
+// 			},
+// 			Type: pulumi.String("ipsec.1"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -49,9 +46,7 @@ import (
 // Customer Gateways can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/customerGateway:CustomerGateway main cgw-b4dc3961
-//
+//  $ pulumi import aws:ec2/customerGateway:CustomerGateway main cgw-b4dc3961
 // ```
 type CustomerGateway struct {
 	pulumi.CustomResourceState
@@ -215,7 +210,7 @@ func (i *CustomerGateway) ToCustomerGatewayOutputWithContext(ctx context.Context
 // CustomerGatewayArrayInput is an input type that accepts CustomerGatewayArray and CustomerGatewayArrayOutput values.
 // You can construct a concrete instance of `CustomerGatewayArrayInput` via:
 //
-//	CustomerGatewayArray{ CustomerGatewayArgs{...} }
+//          CustomerGatewayArray{ CustomerGatewayArgs{...} }
 type CustomerGatewayArrayInput interface {
 	pulumi.Input
 
@@ -240,7 +235,7 @@ func (i CustomerGatewayArray) ToCustomerGatewayArrayOutputWithContext(ctx contex
 // CustomerGatewayMapInput is an input type that accepts CustomerGatewayMap and CustomerGatewayMapOutput values.
 // You can construct a concrete instance of `CustomerGatewayMapInput` via:
 //
-//	CustomerGatewayMap{ "key": CustomerGatewayArgs{...} }
+//          CustomerGatewayMap{ "key": CustomerGatewayArgs{...} }
 type CustomerGatewayMapInput interface {
 	pulumi.Input
 

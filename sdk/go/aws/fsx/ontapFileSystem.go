@@ -20,31 +20,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/fsx"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/fsx"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := fsx.NewOntapFileSystem(ctx, "test", &fsx.OntapFileSystemArgs{
-//				StorageCapacity: pulumi.Int(1024),
-//				SubnetIds: pulumi.StringArray{
-//					pulumi.Any(aws_subnet.Test1.Id),
-//					pulumi.Any(aws_subnet.Test2.Id),
-//				},
-//				DeploymentType:     pulumi.String("MULTI_AZ_1"),
-//				ThroughputCapacity: pulumi.Int(512),
-//				PreferredSubnetId:  pulumi.Any(aws_subnet.Test1.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := fsx.NewOntapFileSystem(ctx, "test", &fsx.OntapFileSystemArgs{
+// 			StorageCapacity: pulumi.Int(1024),
+// 			SubnetIds: pulumi.StringArray{
+// 				pulumi.Any(aws_subnet.Test1.Id),
+// 				pulumi.Any(aws_subnet.Test2.Id),
+// 			},
+// 			DeploymentType:     pulumi.String("MULTI_AZ_1"),
+// 			ThroughputCapacity: pulumi.Int(512),
+// 			PreferredSubnetId:  pulumi.Any(aws_subnet.Test1.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,24 +49,22 @@ import (
 // FSx File Systems can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:fsx/ontapFileSystem:OntapFileSystem example fs-543ab12b1ca672f33
-//
+//  $ pulumi import aws:fsx/ontapFileSystem:OntapFileSystem example fs-543ab12b1ca672f33
 // ```
 //
-//	Certain resource arguments, like `security_group_ids`, do not have a FSx API method for reading the information after creation. If the argument is set in the Terraform configuration on an imported resource, Terraform will always show a difference. To workaround this behavior, either omit the argument from the Terraform configuration or use [`ignore_changes`](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html#ignore_changes) to hide the difference, e.g., terraform resource "aws_fsx_ontap_file_system" "example" {
+//  Certain resource arguments, like `security_group_ids`, do not have a FSx API method for reading the information after creation. If the argument is set in the Terraform configuration on an imported resource, Terraform will always show a difference. To workaround this behavior, either omit the argument from the Terraform configuration or use [`ignore_changes`](https://www.terraform.io/docs/configuration/meta-arguments/lifecycle.html#ignore_changes) to hide the difference, e.g., terraform resource "aws_fsx_ontap_file_system" "example" {
 //
 // # ... other configuration ...
 //
-//	security_group_ids = [aws_security_group.example.id]
+//  security_group_ids = [aws_security_group.example.id]
 //
 // # There is no FSx API for reading security_group_ids
 //
-//	lifecycle {
+//  lifecycle {
 //
-//	ignore_changes = [security_group_ids]
+//  ignore_changes = [security_group_ids]
 //
-//	} }
+//  } }
 type OntapFileSystem struct {
 	pulumi.CustomResourceState
 
@@ -360,7 +355,7 @@ func (i *OntapFileSystem) ToOntapFileSystemOutputWithContext(ctx context.Context
 // OntapFileSystemArrayInput is an input type that accepts OntapFileSystemArray and OntapFileSystemArrayOutput values.
 // You can construct a concrete instance of `OntapFileSystemArrayInput` via:
 //
-//	OntapFileSystemArray{ OntapFileSystemArgs{...} }
+//          OntapFileSystemArray{ OntapFileSystemArgs{...} }
 type OntapFileSystemArrayInput interface {
 	pulumi.Input
 
@@ -385,7 +380,7 @@ func (i OntapFileSystemArray) ToOntapFileSystemArrayOutputWithContext(ctx contex
 // OntapFileSystemMapInput is an input type that accepts OntapFileSystemMap and OntapFileSystemMapOutput values.
 // You can construct a concrete instance of `OntapFileSystemMapInput` via:
 //
-//	OntapFileSystemMap{ "key": OntapFileSystemArgs{...} }
+//          OntapFileSystemMap{ "key": OntapFileSystemArgs{...} }
 type OntapFileSystemMapInput interface {
 	pulumi.Input
 

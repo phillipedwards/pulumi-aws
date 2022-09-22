@@ -22,7 +22,7 @@ type ClassificationExportConfigurationS3Destination struct {
 // ClassificationExportConfigurationS3DestinationInput is an input type that accepts ClassificationExportConfigurationS3DestinationArgs and ClassificationExportConfigurationS3DestinationOutput values.
 // You can construct a concrete instance of `ClassificationExportConfigurationS3DestinationInput` via:
 //
-//	ClassificationExportConfigurationS3DestinationArgs{...}
+//          ClassificationExportConfigurationS3DestinationArgs{...}
 type ClassificationExportConfigurationS3DestinationInput interface {
 	pulumi.Input
 
@@ -62,11 +62,11 @@ func (i ClassificationExportConfigurationS3DestinationArgs) ToClassificationExpo
 // ClassificationExportConfigurationS3DestinationPtrInput is an input type that accepts ClassificationExportConfigurationS3DestinationArgs, ClassificationExportConfigurationS3DestinationPtr and ClassificationExportConfigurationS3DestinationPtrOutput values.
 // You can construct a concrete instance of `ClassificationExportConfigurationS3DestinationPtrInput` via:
 //
-//	        ClassificationExportConfigurationS3DestinationArgs{...}
+//          ClassificationExportConfigurationS3DestinationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationExportConfigurationS3DestinationPtrInput interface {
 	pulumi.Input
 
@@ -197,7 +197,7 @@ type ClassificationJobS3JobDefinition struct {
 // ClassificationJobS3JobDefinitionInput is an input type that accepts ClassificationJobS3JobDefinitionArgs and ClassificationJobS3JobDefinitionOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionInput` via:
 //
-//	ClassificationJobS3JobDefinitionArgs{...}
+//          ClassificationJobS3JobDefinitionArgs{...}
 type ClassificationJobS3JobDefinitionInput interface {
 	pulumi.Input
 
@@ -237,11 +237,11 @@ func (i ClassificationJobS3JobDefinitionArgs) ToClassificationJobS3JobDefinition
 // ClassificationJobS3JobDefinitionPtrInput is an input type that accepts ClassificationJobS3JobDefinitionArgs, ClassificationJobS3JobDefinitionPtr and ClassificationJobS3JobDefinitionPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionArgs{...}
+//          ClassificationJobS3JobDefinitionArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionPtrInput interface {
 	pulumi.Input
 
@@ -374,7 +374,7 @@ type ClassificationJobS3JobDefinitionBucketCriteria struct {
 // ClassificationJobS3JobDefinitionBucketCriteriaInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaArgs and ClassificationJobS3JobDefinitionBucketCriteriaOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaInput interface {
 	pulumi.Input
 
@@ -412,11 +412,11 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaArgs) ToClassificationJobS
 // ClassificationJobS3JobDefinitionBucketCriteriaPtrInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaArgs, ClassificationJobS3JobDefinitionBucketCriteriaPtr and ClassificationJobS3JobDefinitionBucketCriteriaPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionBucketCriteriaArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionBucketCriteriaPtrInput interface {
 	pulumi.Input
 
@@ -532,7 +532,7 @@ type ClassificationJobS3JobDefinitionBucketCriteriaExcludes struct {
 // ClassificationJobS3JobDefinitionBucketCriteriaExcludesInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaExcludesArgs and ClassificationJobS3JobDefinitionBucketCriteriaExcludesOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaExcludesInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaExcludesArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaExcludesArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaExcludesInput interface {
 	pulumi.Input
 
@@ -568,11 +568,11 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaExcludesArgs) ToClassifica
 // ClassificationJobS3JobDefinitionBucketCriteriaExcludesPtrInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaExcludesArgs, ClassificationJobS3JobDefinitionBucketCriteriaExcludesPtr and ClassificationJobS3JobDefinitionBucketCriteriaExcludesPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaExcludesPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionBucketCriteriaExcludesArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaExcludesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionBucketCriteriaExcludesPtrInput interface {
 	pulumi.Input
 
@@ -673,7 +673,7 @@ type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAnd struct {
 // ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArgs and ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndInput interface {
 	pulumi.Input
 
@@ -703,7 +703,7 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArgs) ToClassif
 // ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArrayInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArray and ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArrayInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArray{ ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArgs{...} }
+//          ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArray{ ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArgs{...} }
 type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndArrayInput interface {
 	pulumi.Input
 
@@ -785,7 +785,7 @@ type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterion st
 // ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionArgs and ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionInput interface {
 	pulumi.Input
 
@@ -825,11 +825,11 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterion
 // ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPtrInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionArgs, ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPtr and ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterionPtrInput interface {
 	pulumi.Input
 
@@ -962,7 +962,7 @@ type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterion struc
 // ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionArgs and ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionInput interface {
 	pulumi.Input
 
@@ -1000,11 +1000,11 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionArg
 // ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPtrInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionArgs, ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPtr and ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionPtrInput interface {
 	pulumi.Input
 
@@ -1122,7 +1122,7 @@ type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagVal
 // ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArgs and ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueInput interface {
 	pulumi.Input
 
@@ -1152,7 +1152,7 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTag
 // ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArrayInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArray and ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArrayInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArray{ ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArgs{...} }
+//          ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArray{ ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArgs{...} }
 type ClassificationJobS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValueArrayInput interface {
 	pulumi.Input
 
@@ -1230,7 +1230,7 @@ type ClassificationJobS3JobDefinitionBucketCriteriaIncludes struct {
 // ClassificationJobS3JobDefinitionBucketCriteriaIncludesInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaIncludesArgs and ClassificationJobS3JobDefinitionBucketCriteriaIncludesOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaIncludesInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaIncludesArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaIncludesArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaIncludesInput interface {
 	pulumi.Input
 
@@ -1266,11 +1266,11 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaIncludesArgs) ToClassifica
 // ClassificationJobS3JobDefinitionBucketCriteriaIncludesPtrInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaIncludesArgs, ClassificationJobS3JobDefinitionBucketCriteriaIncludesPtr and ClassificationJobS3JobDefinitionBucketCriteriaIncludesPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaIncludesPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionBucketCriteriaIncludesArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaIncludesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionBucketCriteriaIncludesPtrInput interface {
 	pulumi.Input
 
@@ -1371,7 +1371,7 @@ type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAnd struct {
 // ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArgs and ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndInput interface {
 	pulumi.Input
 
@@ -1401,7 +1401,7 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArgs) ToClassif
 // ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArrayInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArray and ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArrayInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArray{ ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArgs{...} }
+//          ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArray{ ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArgs{...} }
 type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndArrayInput interface {
 	pulumi.Input
 
@@ -1483,7 +1483,7 @@ type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterion st
 // ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionArgs and ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionInput interface {
 	pulumi.Input
 
@@ -1523,11 +1523,11 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterion
 // ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPtrInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionArgs, ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPtr and ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndSimpleCriterionPtrInput interface {
 	pulumi.Input
 
@@ -1660,7 +1660,7 @@ type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterion struc
 // ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionArgs and ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionInput interface {
 	pulumi.Input
 
@@ -1698,11 +1698,11 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionArg
 // ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPtrInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionArgs, ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPtr and ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionPtrInput interface {
 	pulumi.Input
 
@@ -1820,7 +1820,7 @@ type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagVal
 // ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArgs and ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArgs{...}
+//          ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArgs{...}
 type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueInput interface {
 	pulumi.Input
 
@@ -1850,7 +1850,7 @@ func (i ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTag
 // ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArrayInput is an input type that accepts ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArray and ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArrayInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArray{ ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArgs{...} }
+//          ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArray{ ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArgs{...} }
 type ClassificationJobS3JobDefinitionBucketCriteriaIncludesAndTagCriterionTagValueArrayInput interface {
 	pulumi.Input
 
@@ -1930,7 +1930,7 @@ type ClassificationJobS3JobDefinitionBucketDefinition struct {
 // ClassificationJobS3JobDefinitionBucketDefinitionInput is an input type that accepts ClassificationJobS3JobDefinitionBucketDefinitionArgs and ClassificationJobS3JobDefinitionBucketDefinitionOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketDefinitionInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketDefinitionArgs{...}
+//          ClassificationJobS3JobDefinitionBucketDefinitionArgs{...}
 type ClassificationJobS3JobDefinitionBucketDefinitionInput interface {
 	pulumi.Input
 
@@ -1960,7 +1960,7 @@ func (i ClassificationJobS3JobDefinitionBucketDefinitionArgs) ToClassificationJo
 // ClassificationJobS3JobDefinitionBucketDefinitionArrayInput is an input type that accepts ClassificationJobS3JobDefinitionBucketDefinitionArray and ClassificationJobS3JobDefinitionBucketDefinitionArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionBucketDefinitionArrayInput` via:
 //
-//	ClassificationJobS3JobDefinitionBucketDefinitionArray{ ClassificationJobS3JobDefinitionBucketDefinitionArgs{...} }
+//          ClassificationJobS3JobDefinitionBucketDefinitionArray{ ClassificationJobS3JobDefinitionBucketDefinitionArgs{...} }
 type ClassificationJobS3JobDefinitionBucketDefinitionArrayInput interface {
 	pulumi.Input
 
@@ -2036,7 +2036,7 @@ type ClassificationJobS3JobDefinitionScoping struct {
 // ClassificationJobS3JobDefinitionScopingInput is an input type that accepts ClassificationJobS3JobDefinitionScopingArgs and ClassificationJobS3JobDefinitionScopingOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingArgs{...}
+//          ClassificationJobS3JobDefinitionScopingArgs{...}
 type ClassificationJobS3JobDefinitionScopingInput interface {
 	pulumi.Input
 
@@ -2074,11 +2074,11 @@ func (i ClassificationJobS3JobDefinitionScopingArgs) ToClassificationJobS3JobDef
 // ClassificationJobS3JobDefinitionScopingPtrInput is an input type that accepts ClassificationJobS3JobDefinitionScopingArgs, ClassificationJobS3JobDefinitionScopingPtr and ClassificationJobS3JobDefinitionScopingPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionScopingArgs{...}
+//          ClassificationJobS3JobDefinitionScopingArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionScopingPtrInput interface {
 	pulumi.Input
 
@@ -2194,7 +2194,7 @@ type ClassificationJobS3JobDefinitionScopingExcludes struct {
 // ClassificationJobS3JobDefinitionScopingExcludesInput is an input type that accepts ClassificationJobS3JobDefinitionScopingExcludesArgs and ClassificationJobS3JobDefinitionScopingExcludesOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingExcludesInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingExcludesArgs{...}
+//          ClassificationJobS3JobDefinitionScopingExcludesArgs{...}
 type ClassificationJobS3JobDefinitionScopingExcludesInput interface {
 	pulumi.Input
 
@@ -2230,11 +2230,11 @@ func (i ClassificationJobS3JobDefinitionScopingExcludesArgs) ToClassificationJob
 // ClassificationJobS3JobDefinitionScopingExcludesPtrInput is an input type that accepts ClassificationJobS3JobDefinitionScopingExcludesArgs, ClassificationJobS3JobDefinitionScopingExcludesPtr and ClassificationJobS3JobDefinitionScopingExcludesPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingExcludesPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionScopingExcludesArgs{...}
+//          ClassificationJobS3JobDefinitionScopingExcludesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionScopingExcludesPtrInput interface {
 	pulumi.Input
 
@@ -2335,7 +2335,7 @@ type ClassificationJobS3JobDefinitionScopingExcludesAnd struct {
 // ClassificationJobS3JobDefinitionScopingExcludesAndInput is an input type that accepts ClassificationJobS3JobDefinitionScopingExcludesAndArgs and ClassificationJobS3JobDefinitionScopingExcludesAndOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingExcludesAndInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingExcludesAndArgs{...}
+//          ClassificationJobS3JobDefinitionScopingExcludesAndArgs{...}
 type ClassificationJobS3JobDefinitionScopingExcludesAndInput interface {
 	pulumi.Input
 
@@ -2365,7 +2365,7 @@ func (i ClassificationJobS3JobDefinitionScopingExcludesAndArgs) ToClassification
 // ClassificationJobS3JobDefinitionScopingExcludesAndArrayInput is an input type that accepts ClassificationJobS3JobDefinitionScopingExcludesAndArray and ClassificationJobS3JobDefinitionScopingExcludesAndArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingExcludesAndArrayInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingExcludesAndArray{ ClassificationJobS3JobDefinitionScopingExcludesAndArgs{...} }
+//          ClassificationJobS3JobDefinitionScopingExcludesAndArray{ ClassificationJobS3JobDefinitionScopingExcludesAndArgs{...} }
 type ClassificationJobS3JobDefinitionScopingExcludesAndArrayInput interface {
 	pulumi.Input
 
@@ -2447,7 +2447,7 @@ type ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTerm struct {
 // ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermInput is an input type that accepts ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs and ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs{...}
+//          ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs{...}
 type ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermInput interface {
 	pulumi.Input
 
@@ -2487,11 +2487,11 @@ func (i ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs) T
 // ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPtrInput is an input type that accepts ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs, ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPtr and ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs{...}
+//          ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTermPtrInput interface {
 	pulumi.Input
 
@@ -2624,7 +2624,7 @@ type ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm struct {
 // ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermInput is an input type that accepts ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs and ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs{...}
+//          ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs{...}
 type ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermInput interface {
 	pulumi.Input
 
@@ -2666,11 +2666,11 @@ func (i ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs) ToCl
 // ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPtrInput is an input type that accepts ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs, ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPtr and ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs{...}
+//          ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermPtrInput interface {
 	pulumi.Input
 
@@ -2816,7 +2816,7 @@ type ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue stru
 // ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueInput is an input type that accepts ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArgs and ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArgs{...}
+//          ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArgs{...}
 type ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueInput interface {
 	pulumi.Input
 
@@ -2846,7 +2846,7 @@ func (i ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueAr
 // ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArrayInput is an input type that accepts ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArray and ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArrayInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArray{ ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArgs{...} }
+//          ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArray{ ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArgs{...} }
 type ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValueArrayInput interface {
 	pulumi.Input
 
@@ -2920,7 +2920,7 @@ type ClassificationJobS3JobDefinitionScopingIncludes struct {
 // ClassificationJobS3JobDefinitionScopingIncludesInput is an input type that accepts ClassificationJobS3JobDefinitionScopingIncludesArgs and ClassificationJobS3JobDefinitionScopingIncludesOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingIncludesInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingIncludesArgs{...}
+//          ClassificationJobS3JobDefinitionScopingIncludesArgs{...}
 type ClassificationJobS3JobDefinitionScopingIncludesInput interface {
 	pulumi.Input
 
@@ -2956,11 +2956,11 @@ func (i ClassificationJobS3JobDefinitionScopingIncludesArgs) ToClassificationJob
 // ClassificationJobS3JobDefinitionScopingIncludesPtrInput is an input type that accepts ClassificationJobS3JobDefinitionScopingIncludesArgs, ClassificationJobS3JobDefinitionScopingIncludesPtr and ClassificationJobS3JobDefinitionScopingIncludesPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingIncludesPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionScopingIncludesArgs{...}
+//          ClassificationJobS3JobDefinitionScopingIncludesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionScopingIncludesPtrInput interface {
 	pulumi.Input
 
@@ -3061,7 +3061,7 @@ type ClassificationJobS3JobDefinitionScopingIncludesAnd struct {
 // ClassificationJobS3JobDefinitionScopingIncludesAndInput is an input type that accepts ClassificationJobS3JobDefinitionScopingIncludesAndArgs and ClassificationJobS3JobDefinitionScopingIncludesAndOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingIncludesAndInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingIncludesAndArgs{...}
+//          ClassificationJobS3JobDefinitionScopingIncludesAndArgs{...}
 type ClassificationJobS3JobDefinitionScopingIncludesAndInput interface {
 	pulumi.Input
 
@@ -3091,7 +3091,7 @@ func (i ClassificationJobS3JobDefinitionScopingIncludesAndArgs) ToClassification
 // ClassificationJobS3JobDefinitionScopingIncludesAndArrayInput is an input type that accepts ClassificationJobS3JobDefinitionScopingIncludesAndArray and ClassificationJobS3JobDefinitionScopingIncludesAndArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingIncludesAndArrayInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingIncludesAndArray{ ClassificationJobS3JobDefinitionScopingIncludesAndArgs{...} }
+//          ClassificationJobS3JobDefinitionScopingIncludesAndArray{ ClassificationJobS3JobDefinitionScopingIncludesAndArgs{...} }
 type ClassificationJobS3JobDefinitionScopingIncludesAndArrayInput interface {
 	pulumi.Input
 
@@ -3173,7 +3173,7 @@ type ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTerm struct {
 // ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermInput is an input type that accepts ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs and ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs{...}
+//          ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs{...}
 type ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermInput interface {
 	pulumi.Input
 
@@ -3213,11 +3213,11 @@ func (i ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs) T
 // ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPtrInput is an input type that accepts ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs, ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPtr and ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs{...}
+//          ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermPtrInput interface {
 	pulumi.Input
 
@@ -3350,7 +3350,7 @@ type ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm struct {
 // ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermInput is an input type that accepts ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs and ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs{...}
+//          ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs{...}
 type ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermInput interface {
 	pulumi.Input
 
@@ -3392,11 +3392,11 @@ func (i ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs) ToCl
 // ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPtrInput is an input type that accepts ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs, ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPtr and ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPtrInput` via:
 //
-//	        ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs{...}
+//          ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermPtrInput interface {
 	pulumi.Input
 
@@ -3542,7 +3542,7 @@ type ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValue stru
 // ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueInput is an input type that accepts ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs and ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs{...}
+//          ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs{...}
 type ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueInput interface {
 	pulumi.Input
 
@@ -3572,7 +3572,7 @@ func (i ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueAr
 // ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArrayInput is an input type that accepts ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArray and ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArrayInput` via:
 //
-//	ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArray{ ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs{...} }
+//          ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArray{ ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs{...} }
 type ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArrayInput interface {
 	pulumi.Input
 
@@ -3650,7 +3650,7 @@ type ClassificationJobScheduleFrequency struct {
 // ClassificationJobScheduleFrequencyInput is an input type that accepts ClassificationJobScheduleFrequencyArgs and ClassificationJobScheduleFrequencyOutput values.
 // You can construct a concrete instance of `ClassificationJobScheduleFrequencyInput` via:
 //
-//	ClassificationJobScheduleFrequencyArgs{...}
+//          ClassificationJobScheduleFrequencyArgs{...}
 type ClassificationJobScheduleFrequencyInput interface {
 	pulumi.Input
 
@@ -3690,11 +3690,11 @@ func (i ClassificationJobScheduleFrequencyArgs) ToClassificationJobScheduleFrequ
 // ClassificationJobScheduleFrequencyPtrInput is an input type that accepts ClassificationJobScheduleFrequencyArgs, ClassificationJobScheduleFrequencyPtr and ClassificationJobScheduleFrequencyPtrOutput values.
 // You can construct a concrete instance of `ClassificationJobScheduleFrequencyPtrInput` via:
 //
-//	        ClassificationJobScheduleFrequencyArgs{...}
+//          ClassificationJobScheduleFrequencyArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ClassificationJobScheduleFrequencyPtrInput interface {
 	pulumi.Input
 
@@ -3822,7 +3822,7 @@ type ClassificationJobUserPausedDetail struct {
 // ClassificationJobUserPausedDetailInput is an input type that accepts ClassificationJobUserPausedDetailArgs and ClassificationJobUserPausedDetailOutput values.
 // You can construct a concrete instance of `ClassificationJobUserPausedDetailInput` via:
 //
-//	ClassificationJobUserPausedDetailArgs{...}
+//          ClassificationJobUserPausedDetailArgs{...}
 type ClassificationJobUserPausedDetailInput interface {
 	pulumi.Input
 
@@ -3851,7 +3851,7 @@ func (i ClassificationJobUserPausedDetailArgs) ToClassificationJobUserPausedDeta
 // ClassificationJobUserPausedDetailArrayInput is an input type that accepts ClassificationJobUserPausedDetailArray and ClassificationJobUserPausedDetailArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobUserPausedDetailArrayInput` via:
 //
-//	ClassificationJobUserPausedDetailArray{ ClassificationJobUserPausedDetailArgs{...} }
+//          ClassificationJobUserPausedDetailArray{ ClassificationJobUserPausedDetailArgs{...} }
 type ClassificationJobUserPausedDetailArrayInput interface {
 	pulumi.Input
 

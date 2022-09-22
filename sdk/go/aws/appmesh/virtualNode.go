@@ -31,44 +31,41 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
-//				MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
-//				Spec: &appmesh.VirtualNodeSpecArgs{
-//					Backends: appmesh.VirtualNodeSpecBackendArray{
-//						&appmesh.VirtualNodeSpecBackendArgs{
-//							VirtualService: &appmesh.VirtualNodeSpecBackendVirtualServiceArgs{
-//								VirtualServiceName: pulumi.String("servicea.simpleapp.local"),
-//							},
-//						},
-//					},
-//					Listener: &appmesh.VirtualNodeSpecListenerArgs{
-//						PortMapping: &appmesh.VirtualNodeSpecListenerPortMappingArgs{
-//							Port:     pulumi.Int(8080),
-//							Protocol: pulumi.String("http"),
-//						},
-//					},
-//					ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
-//						Dns: &appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs{
-//							Hostname: pulumi.String("serviceb.simpleapp.local"),
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
+// 			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
+// 			Spec: &appmesh.VirtualNodeSpecArgs{
+// 				Backends: appmesh.VirtualNodeSpecBackendArray{
+// 					&appmesh.VirtualNodeSpecBackendArgs{
+// 						VirtualService: &appmesh.VirtualNodeSpecBackendVirtualServiceArgs{
+// 							VirtualServiceName: pulumi.String("servicea.simpleapp.local"),
+// 						},
+// 					},
+// 				},
+// 				Listener: &appmesh.VirtualNodeSpecListenerArgs{
+// 					PortMapping: &appmesh.VirtualNodeSpecListenerPortMappingArgs{
+// 						Port:     pulumi.Int(8080),
+// 						Protocol: pulumi.String("http"),
+// 					},
+// 				},
+// 				ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
+// 					Dns: &appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs{
+// 						Hostname: pulumi.String("serviceb.simpleapp.local"),
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### AWS Cloud Map Service Discovery
 //
@@ -76,53 +73,50 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/servicediscovery"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/servicediscovery"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			example, err := servicediscovery.NewHttpNamespace(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
-//				MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
-//				Spec: &appmesh.VirtualNodeSpecArgs{
-//					Backends: appmesh.VirtualNodeSpecBackendArray{
-//						&appmesh.VirtualNodeSpecBackendArgs{
-//							VirtualService: &appmesh.VirtualNodeSpecBackendVirtualServiceArgs{
-//								VirtualServiceName: pulumi.String("servicea.simpleapp.local"),
-//							},
-//						},
-//					},
-//					Listener: &appmesh.VirtualNodeSpecListenerArgs{
-//						PortMapping: &appmesh.VirtualNodeSpecListenerPortMappingArgs{
-//							Port:     pulumi.Int(8080),
-//							Protocol: pulumi.String("http"),
-//						},
-//					},
-//					ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
-//						AwsCloudMap: &appmesh.VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs{
-//							Attributes: pulumi.StringMap{
-//								"stack": pulumi.String("blue"),
-//							},
-//							ServiceName:   pulumi.String("serviceb1"),
-//							NamespaceName: example.Name,
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		example, err := servicediscovery.NewHttpNamespace(ctx, "example", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
+// 			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
+// 			Spec: &appmesh.VirtualNodeSpecArgs{
+// 				Backends: appmesh.VirtualNodeSpecBackendArray{
+// 					&appmesh.VirtualNodeSpecBackendArgs{
+// 						VirtualService: &appmesh.VirtualNodeSpecBackendVirtualServiceArgs{
+// 							VirtualServiceName: pulumi.String("servicea.simpleapp.local"),
+// 						},
+// 					},
+// 				},
+// 				Listener: &appmesh.VirtualNodeSpecListenerArgs{
+// 					PortMapping: &appmesh.VirtualNodeSpecListenerPortMappingArgs{
+// 						Port:     pulumi.Int(8080),
+// 						Protocol: pulumi.String("http"),
+// 					},
+// 				},
+// 				ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
+// 					AwsCloudMap: &appmesh.VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs{
+// 						Attributes: pulumi.StringMap{
+// 							"stack": pulumi.String("blue"),
+// 						},
+// 						ServiceName:   pulumi.String("serviceb1"),
+// 						NamespaceName: example.Name,
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Listener Health Check
 //
@@ -130,52 +124,49 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
-//				MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
-//				Spec: &appmesh.VirtualNodeSpecArgs{
-//					Backends: appmesh.VirtualNodeSpecBackendArray{
-//						&appmesh.VirtualNodeSpecBackendArgs{
-//							VirtualService: &appmesh.VirtualNodeSpecBackendVirtualServiceArgs{
-//								VirtualServiceName: pulumi.String("servicea.simpleapp.local"),
-//							},
-//						},
-//					},
-//					Listener: &appmesh.VirtualNodeSpecListenerArgs{
-//						PortMapping: &appmesh.VirtualNodeSpecListenerPortMappingArgs{
-//							Port:     pulumi.Int(8080),
-//							Protocol: pulumi.String("http"),
-//						},
-//						HealthCheck: &appmesh.VirtualNodeSpecListenerHealthCheckArgs{
-//							Protocol:           pulumi.String("http"),
-//							Path:               pulumi.String("/ping"),
-//							HealthyThreshold:   pulumi.Int(2),
-//							UnhealthyThreshold: pulumi.Int(2),
-//							TimeoutMillis:      pulumi.Int(2000),
-//							IntervalMillis:     pulumi.Int(5000),
-//						},
-//					},
-//					ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
-//						Dns: &appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs{
-//							Hostname: pulumi.String("serviceb.simpleapp.local"),
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
+// 			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
+// 			Spec: &appmesh.VirtualNodeSpecArgs{
+// 				Backends: appmesh.VirtualNodeSpecBackendArray{
+// 					&appmesh.VirtualNodeSpecBackendArgs{
+// 						VirtualService: &appmesh.VirtualNodeSpecBackendVirtualServiceArgs{
+// 							VirtualServiceName: pulumi.String("servicea.simpleapp.local"),
+// 						},
+// 					},
+// 				},
+// 				Listener: &appmesh.VirtualNodeSpecListenerArgs{
+// 					PortMapping: &appmesh.VirtualNodeSpecListenerPortMappingArgs{
+// 						Port:     pulumi.Int(8080),
+// 						Protocol: pulumi.String("http"),
+// 					},
+// 					HealthCheck: &appmesh.VirtualNodeSpecListenerHealthCheckArgs{
+// 						Protocol:           pulumi.String("http"),
+// 						Path:               pulumi.String("/ping"),
+// 						HealthyThreshold:   pulumi.Int(2),
+// 						UnhealthyThreshold: pulumi.Int(2),
+// 						TimeoutMillis:      pulumi.Int(2000),
+// 						IntervalMillis:     pulumi.Int(5000),
+// 					},
+// 				},
+// 				ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
+// 					Dns: &appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs{
+// 						Hostname: pulumi.String("serviceb.simpleapp.local"),
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Logging
 //
@@ -183,51 +174,48 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
-//				MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
-//				Spec: &appmesh.VirtualNodeSpecArgs{
-//					Backends: appmesh.VirtualNodeSpecBackendArray{
-//						&appmesh.VirtualNodeSpecBackendArgs{
-//							VirtualService: &appmesh.VirtualNodeSpecBackendVirtualServiceArgs{
-//								VirtualServiceName: pulumi.String("servicea.simpleapp.local"),
-//							},
-//						},
-//					},
-//					Listener: &appmesh.VirtualNodeSpecListenerArgs{
-//						PortMapping: &appmesh.VirtualNodeSpecListenerPortMappingArgs{
-//							Port:     pulumi.Int(8080),
-//							Protocol: pulumi.String("http"),
-//						},
-//					},
-//					ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
-//						Dns: &appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs{
-//							Hostname: pulumi.String("serviceb.simpleapp.local"),
-//						},
-//					},
-//					Logging: &appmesh.VirtualNodeSpecLoggingArgs{
-//						AccessLog: &appmesh.VirtualNodeSpecLoggingAccessLogArgs{
-//							File: &appmesh.VirtualNodeSpecLoggingAccessLogFileArgs{
-//								Path: pulumi.String("/dev/stdout"),
-//							},
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewVirtualNode(ctx, "serviceb1", &appmesh.VirtualNodeArgs{
+// 			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
+// 			Spec: &appmesh.VirtualNodeSpecArgs{
+// 				Backends: appmesh.VirtualNodeSpecBackendArray{
+// 					&appmesh.VirtualNodeSpecBackendArgs{
+// 						VirtualService: &appmesh.VirtualNodeSpecBackendVirtualServiceArgs{
+// 							VirtualServiceName: pulumi.String("servicea.simpleapp.local"),
+// 						},
+// 					},
+// 				},
+// 				Listener: &appmesh.VirtualNodeSpecListenerArgs{
+// 					PortMapping: &appmesh.VirtualNodeSpecListenerPortMappingArgs{
+// 						Port:     pulumi.Int(8080),
+// 						Protocol: pulumi.String("http"),
+// 					},
+// 				},
+// 				ServiceDiscovery: &appmesh.VirtualNodeSpecServiceDiscoveryArgs{
+// 					Dns: &appmesh.VirtualNodeSpecServiceDiscoveryDnsArgs{
+// 						Hostname: pulumi.String("serviceb.simpleapp.local"),
+// 					},
+// 				},
+// 				Logging: &appmesh.VirtualNodeSpecLoggingArgs{
+// 					AccessLog: &appmesh.VirtualNodeSpecLoggingAccessLogArgs{
+// 						File: &appmesh.VirtualNodeSpecLoggingAccessLogFileArgs{
+// 							Path: pulumi.String("/dev/stdout"),
+// 						},
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -235,12 +223,10 @@ import (
 // App Mesh virtual nodes can be imported using `mesh_name` together with the virtual node's `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:appmesh/virtualNode:VirtualNode serviceb1 simpleapp/serviceBv1
-//
+//  $ pulumi import aws:appmesh/virtualNode:VirtualNode serviceb1 simpleapp/serviceBv1
 // ```
 //
-//	[1]/docs/providers/aws/index.html
+//  [1]/docs/providers/aws/index.html
 type VirtualNode struct {
 	pulumi.CustomResourceState
 
@@ -403,7 +389,7 @@ func (i *VirtualNode) ToVirtualNodeOutputWithContext(ctx context.Context) Virtua
 // VirtualNodeArrayInput is an input type that accepts VirtualNodeArray and VirtualNodeArrayOutput values.
 // You can construct a concrete instance of `VirtualNodeArrayInput` via:
 //
-//	VirtualNodeArray{ VirtualNodeArgs{...} }
+//          VirtualNodeArray{ VirtualNodeArgs{...} }
 type VirtualNodeArrayInput interface {
 	pulumi.Input
 
@@ -428,7 +414,7 @@ func (i VirtualNodeArray) ToVirtualNodeArrayOutputWithContext(ctx context.Contex
 // VirtualNodeMapInput is an input type that accepts VirtualNodeMap and VirtualNodeMapOutput values.
 // You can construct a concrete instance of `VirtualNodeMapInput` via:
 //
-//	VirtualNodeMap{ "key": VirtualNodeArgs{...} }
+//          VirtualNodeMap{ "key": VirtualNodeArgs{...} }
 type VirtualNodeMapInput interface {
 	pulumi.Input
 

@@ -19,36 +19,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dms"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/dms"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := dms.NewEventSubscription(ctx, "example", &dms.EventSubscriptionArgs{
-//				Enabled: pulumi.Bool(true),
-//				EventCategories: pulumi.StringArray{
-//					pulumi.String("creation"),
-//					pulumi.String("failure"),
-//				},
-//				SnsTopicArn: pulumi.Any(aws_sns_topic.Example.Arn),
-//				SourceIds: pulumi.StringArray{
-//					pulumi.Any(aws_dms_replication_task.Example.Replication_task_id),
-//				},
-//				SourceType: pulumi.String("replication-task"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("example"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := dms.NewEventSubscription(ctx, "example", &dms.EventSubscriptionArgs{
+// 			Enabled: pulumi.Bool(true),
+// 			EventCategories: pulumi.StringArray{
+// 				pulumi.String("creation"),
+// 				pulumi.String("failure"),
+// 			},
+// 			SnsTopicArn: pulumi.Any(aws_sns_topic.Example.Arn),
+// 			SourceIds: pulumi.StringArray{
+// 				pulumi.Any(aws_dms_replication_task.Example.Replication_task_id),
+// 			},
+// 			SourceType: pulumi.String("replication-task"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("example"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -56,9 +53,7 @@ import (
 // Event subscriptions can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:dms/eventSubscription:EventSubscription test my-awesome-event-subscription
-//
+//  $ pulumi import aws:dms/eventSubscription:EventSubscription test my-awesome-event-subscription
 // ```
 type EventSubscription struct {
 	pulumi.CustomResourceState
@@ -224,7 +219,7 @@ func (i *EventSubscription) ToEventSubscriptionOutputWithContext(ctx context.Con
 // EventSubscriptionArrayInput is an input type that accepts EventSubscriptionArray and EventSubscriptionArrayOutput values.
 // You can construct a concrete instance of `EventSubscriptionArrayInput` via:
 //
-//	EventSubscriptionArray{ EventSubscriptionArgs{...} }
+//          EventSubscriptionArray{ EventSubscriptionArgs{...} }
 type EventSubscriptionArrayInput interface {
 	pulumi.Input
 
@@ -249,7 +244,7 @@ func (i EventSubscriptionArray) ToEventSubscriptionArrayOutputWithContext(ctx co
 // EventSubscriptionMapInput is an input type that accepts EventSubscriptionMap and EventSubscriptionMapOutput values.
 // You can construct a concrete instance of `EventSubscriptionMapInput` via:
 //
-//	EventSubscriptionMap{ "key": EventSubscriptionArgs{...} }
+//          EventSubscriptionMap{ "key": EventSubscriptionArgs{...} }
 type EventSubscriptionMapInput interface {
 	pulumi.Input
 

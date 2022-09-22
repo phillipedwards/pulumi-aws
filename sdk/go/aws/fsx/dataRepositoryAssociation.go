@@ -20,9 +20,7 @@ import (
 // FSx Data Repository Associations can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:fsx/dataRepositoryAssociation:DataRepositoryAssociation example dra-0b1cfaeca11088b10
-//
+//  $ pulumi import aws:fsx/dataRepositoryAssociation:DataRepositoryAssociation example dra-0b1cfaeca11088b10
 // ```
 type DataRepositoryAssociation struct {
 	pulumi.CustomResourceState
@@ -209,7 +207,7 @@ func (i *DataRepositoryAssociation) ToDataRepositoryAssociationOutputWithContext
 // DataRepositoryAssociationArrayInput is an input type that accepts DataRepositoryAssociationArray and DataRepositoryAssociationArrayOutput values.
 // You can construct a concrete instance of `DataRepositoryAssociationArrayInput` via:
 //
-//	DataRepositoryAssociationArray{ DataRepositoryAssociationArgs{...} }
+//          DataRepositoryAssociationArray{ DataRepositoryAssociationArgs{...} }
 type DataRepositoryAssociationArrayInput interface {
 	pulumi.Input
 
@@ -234,7 +232,7 @@ func (i DataRepositoryAssociationArray) ToDataRepositoryAssociationArrayOutputWi
 // DataRepositoryAssociationMapInput is an input type that accepts DataRepositoryAssociationMap and DataRepositoryAssociationMapOutput values.
 // You can construct a concrete instance of `DataRepositoryAssociationMapInput` via:
 //
-//	DataRepositoryAssociationMap{ "key": DataRepositoryAssociationArgs{...} }
+//          DataRepositoryAssociationMap{ "key": DataRepositoryAssociationArgs{...} }
 type DataRepositoryAssociationMapInput interface {
 	pulumi.Input
 

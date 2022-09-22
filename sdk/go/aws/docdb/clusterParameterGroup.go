@@ -19,31 +19,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/docdb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/docdb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := docdb.NewClusterParameterGroup(ctx, "example", &docdb.ClusterParameterGroupArgs{
-//				Description: pulumi.String("docdb cluster parameter group"),
-//				Family:      pulumi.String("docdb3.6"),
-//				Parameters: docdb.ClusterParameterGroupParameterArray{
-//					&docdb.ClusterParameterGroupParameterArgs{
-//						Name:  pulumi.String("tls"),
-//						Value: pulumi.String("enabled"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := docdb.NewClusterParameterGroup(ctx, "example", &docdb.ClusterParameterGroupArgs{
+// 			Description: pulumi.String("docdb cluster parameter group"),
+// 			Family:      pulumi.String("docdb3.6"),
+// 			Parameters: docdb.ClusterParameterGroupParameterArray{
+// 				&docdb.ClusterParameterGroupParameterArgs{
+// 					Name:  pulumi.String("tls"),
+// 					Value: pulumi.String("enabled"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -51,9 +48,7 @@ import (
 // DocumentDB Cluster Parameter Groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:docdb/clusterParameterGroup:ClusterParameterGroup cluster_pg production-pg-1
-//
+//  $ pulumi import aws:docdb/clusterParameterGroup:ClusterParameterGroup cluster_pg production-pg-1
 // ```
 type ClusterParameterGroup struct {
 	pulumi.CustomResourceState
@@ -206,7 +201,7 @@ func (i *ClusterParameterGroup) ToClusterParameterGroupOutputWithContext(ctx con
 // ClusterParameterGroupArrayInput is an input type that accepts ClusterParameterGroupArray and ClusterParameterGroupArrayOutput values.
 // You can construct a concrete instance of `ClusterParameterGroupArrayInput` via:
 //
-//	ClusterParameterGroupArray{ ClusterParameterGroupArgs{...} }
+//          ClusterParameterGroupArray{ ClusterParameterGroupArgs{...} }
 type ClusterParameterGroupArrayInput interface {
 	pulumi.Input
 
@@ -231,7 +226,7 @@ func (i ClusterParameterGroupArray) ToClusterParameterGroupArrayOutputWithContex
 // ClusterParameterGroupMapInput is an input type that accepts ClusterParameterGroupMap and ClusterParameterGroupMapOutput values.
 // You can construct a concrete instance of `ClusterParameterGroupMapInput` via:
 //
-//	ClusterParameterGroupMap{ "key": ClusterParameterGroupArgs{...} }
+//          ClusterParameterGroupMap{ "key": ClusterParameterGroupArgs{...} }
 type ClusterParameterGroupMapInput interface {
 	pulumi.Input
 

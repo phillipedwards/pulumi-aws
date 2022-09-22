@@ -18,32 +18,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.NewResolverFirewallRuleGroup(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.NewResolverFirewallRuleGroup(ctx, "example", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-//	Route 53 Resolver DNS Firewall rule groups can be imported using the Route 53 Resolver DNS Firewall rule group ID, e.g.,
+//  Route 53 Resolver DNS Firewall rule groups can be imported using the Route 53 Resolver DNS Firewall rule group ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:route53/resolverFirewallRuleGroup:ResolverFirewallRuleGroup example rslvr-frg-0123456789abcdef
-//
+//  $ pulumi import aws:route53/resolverFirewallRuleGroup:ResolverFirewallRuleGroup example rslvr-frg-0123456789abcdef
 // ```
 type ResolverFirewallRuleGroup struct {
 	pulumi.CustomResourceState
@@ -165,7 +160,7 @@ func (i *ResolverFirewallRuleGroup) ToResolverFirewallRuleGroupOutputWithContext
 // ResolverFirewallRuleGroupArrayInput is an input type that accepts ResolverFirewallRuleGroupArray and ResolverFirewallRuleGroupArrayOutput values.
 // You can construct a concrete instance of `ResolverFirewallRuleGroupArrayInput` via:
 //
-//	ResolverFirewallRuleGroupArray{ ResolverFirewallRuleGroupArgs{...} }
+//          ResolverFirewallRuleGroupArray{ ResolverFirewallRuleGroupArgs{...} }
 type ResolverFirewallRuleGroupArrayInput interface {
 	pulumi.Input
 
@@ -190,7 +185,7 @@ func (i ResolverFirewallRuleGroupArray) ToResolverFirewallRuleGroupArrayOutputWi
 // ResolverFirewallRuleGroupMapInput is an input type that accepts ResolverFirewallRuleGroupMap and ResolverFirewallRuleGroupMapOutput values.
 // You can construct a concrete instance of `ResolverFirewallRuleGroupMapInput` via:
 //
-//	ResolverFirewallRuleGroupMap{ "key": ResolverFirewallRuleGroupArgs{...} }
+//          ResolverFirewallRuleGroupMap{ "key": ResolverFirewallRuleGroupArgs{...} }
 type ResolverFirewallRuleGroupMapInput interface {
 	pulumi.Input
 

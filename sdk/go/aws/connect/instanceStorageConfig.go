@@ -21,31 +21,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewInstanceStorageConfig(ctx, "example", &connect.InstanceStorageConfigArgs{
-//				InstanceId:   pulumi.Any(aws_connect_instance.Example.Id),
-//				ResourceType: pulumi.String("CONTACT_TRACE_RECORDS"),
-//				StorageConfig: &connect.InstanceStorageConfigStorageConfigArgs{
-//					KinesisFirehoseConfig: &connect.InstanceStorageConfigStorageConfigKinesisFirehoseConfigArgs{
-//						FirehoseArn: pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
-//					},
-//					StorageType: pulumi.String("KINESIS_FIREHOSE"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewInstanceStorageConfig(ctx, "example", &connect.InstanceStorageConfigArgs{
+// 			InstanceId:   pulumi.Any(aws_connect_instance.Example.Id),
+// 			ResourceType: pulumi.String("CONTACT_TRACE_RECORDS"),
+// 			StorageConfig: &connect.InstanceStorageConfigStorageConfigArgs{
+// 				KinesisFirehoseConfig: &connect.InstanceStorageConfigStorageConfigKinesisFirehoseConfigArgs{
+// 					FirehoseArn: pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
+// 				},
+// 				StorageType: pulumi.String("KINESIS_FIREHOSE"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Storage Config Kinesis Stream Config
 //
@@ -53,31 +50,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewInstanceStorageConfig(ctx, "example", &connect.InstanceStorageConfigArgs{
-//				InstanceId:   pulumi.Any(aws_connect_instance.Example.Id),
-//				ResourceType: pulumi.String("CONTACT_TRACE_RECORDS"),
-//				StorageConfig: &connect.InstanceStorageConfigStorageConfigArgs{
-//					KinesisStreamConfig: &connect.InstanceStorageConfigStorageConfigKinesisStreamConfigArgs{
-//						StreamArn: pulumi.Any(aws_kinesis_stream.Example.Arn),
-//					},
-//					StorageType: pulumi.String("KINESIS_STREAM"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewInstanceStorageConfig(ctx, "example", &connect.InstanceStorageConfigArgs{
+// 			InstanceId:   pulumi.Any(aws_connect_instance.Example.Id),
+// 			ResourceType: pulumi.String("CONTACT_TRACE_RECORDS"),
+// 			StorageConfig: &connect.InstanceStorageConfigStorageConfigArgs{
+// 				KinesisStreamConfig: &connect.InstanceStorageConfigStorageConfigKinesisStreamConfigArgs{
+// 					StreamArn: pulumi.Any(aws_kinesis_stream.Example.Arn),
+// 				},
+// 				StorageType: pulumi.String("KINESIS_STREAM"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Storage Config Kinesis Video Stream Config
 //
@@ -85,36 +79,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewInstanceStorageConfig(ctx, "example", &connect.InstanceStorageConfigArgs{
-//				InstanceId:   pulumi.Any(aws_connect_instance.Example.Id),
-//				ResourceType: pulumi.String("MEDIA_STREAMS"),
-//				StorageConfig: &connect.InstanceStorageConfigStorageConfigArgs{
-//					KinesisVideoStreamConfig: &connect.InstanceStorageConfigStorageConfigKinesisVideoStreamConfigArgs{
-//						Prefix:               pulumi.String("example"),
-//						RetentionPeriodHours: pulumi.Int(3),
-//						EncryptionConfig: &connect.InstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigArgs{
-//							EncryptionType: pulumi.String("KMS"),
-//							KeyId:          pulumi.Any(aws_kms_key.Example.Arn),
-//						},
-//					},
-//					StorageType: pulumi.String("KINESIS_VIDEO_STREAM"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewInstanceStorageConfig(ctx, "example", &connect.InstanceStorageConfigArgs{
+// 			InstanceId:   pulumi.Any(aws_connect_instance.Example.Id),
+// 			ResourceType: pulumi.String("MEDIA_STREAMS"),
+// 			StorageConfig: &connect.InstanceStorageConfigStorageConfigArgs{
+// 				KinesisVideoStreamConfig: &connect.InstanceStorageConfigStorageConfigKinesisVideoStreamConfigArgs{
+// 					Prefix:               pulumi.String("example"),
+// 					RetentionPeriodHours: pulumi.Int(3),
+// 					EncryptionConfig: &connect.InstanceStorageConfigStorageConfigKinesisVideoStreamConfigEncryptionConfigArgs{
+// 						EncryptionType: pulumi.String("KMS"),
+// 						KeyId:          pulumi.Any(aws_kms_key.Example.Arn),
+// 					},
+// 				},
+// 				StorageType: pulumi.String("KINESIS_VIDEO_STREAM"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Storage Config S3 Config
 //
@@ -122,32 +113,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewInstanceStorageConfig(ctx, "example", &connect.InstanceStorageConfigArgs{
-//				InstanceId:   pulumi.Any(aws_connect_instance.Example.Id),
-//				ResourceType: pulumi.String("CHAT_TRANSCRIPTS"),
-//				StorageConfig: &connect.InstanceStorageConfigStorageConfigArgs{
-//					S3Config: &connect.InstanceStorageConfigStorageConfigS3ConfigArgs{
-//						BucketName:   pulumi.Any(aws_s3_bucket.Example.Id),
-//						BucketPrefix: pulumi.String("example"),
-//					},
-//					StorageType: pulumi.String("S3"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewInstanceStorageConfig(ctx, "example", &connect.InstanceStorageConfigArgs{
+// 			InstanceId:   pulumi.Any(aws_connect_instance.Example.Id),
+// 			ResourceType: pulumi.String("CHAT_TRANSCRIPTS"),
+// 			StorageConfig: &connect.InstanceStorageConfigStorageConfigArgs{
+// 				S3Config: &connect.InstanceStorageConfigStorageConfigS3ConfigArgs{
+// 					BucketName:   pulumi.Any(aws_s3_bucket.Example.Id),
+// 					BucketPrefix: pulumi.String("example"),
+// 				},
+// 				StorageType: pulumi.String("S3"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Storage Config S3 Config with Encryption Config
 //
@@ -155,36 +143,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewInstanceStorageConfig(ctx, "example", &connect.InstanceStorageConfigArgs{
-//				InstanceId:   pulumi.Any(aws_connect_instance.Example.Id),
-//				ResourceType: pulumi.String("CHAT_TRANSCRIPTS"),
-//				StorageConfig: &connect.InstanceStorageConfigStorageConfigArgs{
-//					S3Config: &connect.InstanceStorageConfigStorageConfigS3ConfigArgs{
-//						BucketName:   pulumi.Any(aws_s3_bucket.Example.Id),
-//						BucketPrefix: pulumi.String("example"),
-//						EncryptionConfig: &connect.InstanceStorageConfigStorageConfigS3ConfigEncryptionConfigArgs{
-//							EncryptionType: pulumi.String("KMS"),
-//							KeyId:          pulumi.Any(aws_kms_key.Example.Arn),
-//						},
-//					},
-//					StorageType: pulumi.String("S3"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewInstanceStorageConfig(ctx, "example", &connect.InstanceStorageConfigArgs{
+// 			InstanceId:   pulumi.Any(aws_connect_instance.Example.Id),
+// 			ResourceType: pulumi.String("CHAT_TRANSCRIPTS"),
+// 			StorageConfig: &connect.InstanceStorageConfigStorageConfigArgs{
+// 				S3Config: &connect.InstanceStorageConfigStorageConfigS3ConfigArgs{
+// 					BucketName:   pulumi.Any(aws_s3_bucket.Example.Id),
+// 					BucketPrefix: pulumi.String("example"),
+// 					EncryptionConfig: &connect.InstanceStorageConfigStorageConfigS3ConfigEncryptionConfigArgs{
+// 						EncryptionType: pulumi.String("KMS"),
+// 						KeyId:          pulumi.Any(aws_kms_key.Example.Arn),
+// 					},
+// 				},
+// 				StorageType: pulumi.String("S3"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -192,9 +177,7 @@ import (
 // Amazon Connect Instance Storage Configs can be imported using the `instance_id`, `association_id`, and `resource_type` separated by a colon (`:`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:connect/instanceStorageConfig:InstanceStorageConfig example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5:CHAT_TRANSCRIPTS
-//
+//  $ pulumi import aws:connect/instanceStorageConfig:InstanceStorageConfig example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5:CHAT_TRANSCRIPTS
 // ```
 type InstanceStorageConfig struct {
 	pulumi.CustomResourceState
@@ -317,7 +300,7 @@ func (i *InstanceStorageConfig) ToInstanceStorageConfigOutputWithContext(ctx con
 // InstanceStorageConfigArrayInput is an input type that accepts InstanceStorageConfigArray and InstanceStorageConfigArrayOutput values.
 // You can construct a concrete instance of `InstanceStorageConfigArrayInput` via:
 //
-//	InstanceStorageConfigArray{ InstanceStorageConfigArgs{...} }
+//          InstanceStorageConfigArray{ InstanceStorageConfigArgs{...} }
 type InstanceStorageConfigArrayInput interface {
 	pulumi.Input
 
@@ -342,7 +325,7 @@ func (i InstanceStorageConfigArray) ToInstanceStorageConfigArrayOutputWithContex
 // InstanceStorageConfigMapInput is an input type that accepts InstanceStorageConfigMap and InstanceStorageConfigMapOutput values.
 // You can construct a concrete instance of `InstanceStorageConfigMapInput` via:
 //
-//	InstanceStorageConfigMap{ "key": InstanceStorageConfigArgs{...} }
+//          InstanceStorageConfigMap{ "key": InstanceStorageConfigArgs{...} }
 type InstanceStorageConfigMapInput interface {
 	pulumi.Input
 

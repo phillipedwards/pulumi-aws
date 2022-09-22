@@ -70,9 +70,7 @@ import (
 // Lightsail Databases can be imported using their name, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:lightsail/database:Database foo 'bar'
-//
+//  $ pulumi import aws:lightsail/database:Database foo 'bar'
 // ```
 type Database struct {
 	pulumi.CustomResourceState
@@ -394,7 +392,7 @@ func (i *Database) ToDatabaseOutputWithContext(ctx context.Context) DatabaseOutp
 // DatabaseArrayInput is an input type that accepts DatabaseArray and DatabaseArrayOutput values.
 // You can construct a concrete instance of `DatabaseArrayInput` via:
 //
-//	DatabaseArray{ DatabaseArgs{...} }
+//          DatabaseArray{ DatabaseArgs{...} }
 type DatabaseArrayInput interface {
 	pulumi.Input
 
@@ -419,7 +417,7 @@ func (i DatabaseArray) ToDatabaseArrayOutputWithContext(ctx context.Context) Dat
 // DatabaseMapInput is an input type that accepts DatabaseMap and DatabaseMapOutput values.
 // You can construct a concrete instance of `DatabaseMapInput` via:
 //
-//	DatabaseMap{ "key": DatabaseArgs{...} }
+//          DatabaseMap{ "key": DatabaseArgs{...} }
 type DatabaseMapInput interface {
 	pulumi.Input
 

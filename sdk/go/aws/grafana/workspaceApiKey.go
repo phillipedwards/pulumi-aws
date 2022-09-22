@@ -20,27 +20,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/grafana"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/grafana"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := grafana.NewWorkspaceApiKey(ctx, "key", &grafana.WorkspaceApiKeyArgs{
-//				KeyName:       pulumi.String("test-key"),
-//				KeyRole:       pulumi.String("VIEWER"),
-//				SecondsToLive: pulumi.Int(3600),
-//				WorkspaceId:   pulumi.Any(aws_grafana_workspace.Test.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := grafana.NewWorkspaceApiKey(ctx, "key", &grafana.WorkspaceApiKeyArgs{
+// 			KeyName:       pulumi.String("test-key"),
+// 			KeyRole:       pulumi.String("VIEWER"),
+// 			SecondsToLive: pulumi.Int(3600),
+// 			WorkspaceId:   pulumi.Any(aws_grafana_workspace.Test.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type WorkspaceApiKey struct {
 	pulumi.CustomResourceState
@@ -176,7 +173,7 @@ func (i *WorkspaceApiKey) ToWorkspaceApiKeyOutputWithContext(ctx context.Context
 // WorkspaceApiKeyArrayInput is an input type that accepts WorkspaceApiKeyArray and WorkspaceApiKeyArrayOutput values.
 // You can construct a concrete instance of `WorkspaceApiKeyArrayInput` via:
 //
-//	WorkspaceApiKeyArray{ WorkspaceApiKeyArgs{...} }
+//          WorkspaceApiKeyArray{ WorkspaceApiKeyArgs{...} }
 type WorkspaceApiKeyArrayInput interface {
 	pulumi.Input
 
@@ -201,7 +198,7 @@ func (i WorkspaceApiKeyArray) ToWorkspaceApiKeyArrayOutputWithContext(ctx contex
 // WorkspaceApiKeyMapInput is an input type that accepts WorkspaceApiKeyMap and WorkspaceApiKeyMapOutput values.
 // You can construct a concrete instance of `WorkspaceApiKeyMapInput` via:
 //
-//	WorkspaceApiKeyMap{ "key": WorkspaceApiKeyArgs{...} }
+//          WorkspaceApiKeyMap{ "key": WorkspaceApiKeyArgs{...} }
 type WorkspaceApiKeyMapInput interface {
 	pulumi.Input
 

@@ -20,62 +20,54 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudwatch"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudwatch.NewEventBus(ctx, "messenger", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudwatch.NewEventBus(ctx, "messenger", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ```go
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudwatch"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			examplepartnerEventSource, err := cloudwatch.GetEventSource(ctx, &cloudwatch.GetEventSourceArgs{
-//				NamePrefix: pulumi.StringRef("aws.partner/examplepartner.com"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = cloudwatch.NewEventBus(ctx, "examplepartnerEventBus", &cloudwatch.EventBusArgs{
-//				EventSourceName: pulumi.String(examplepartnerEventSource.Name),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		examplepartnerEventSource, err := cloudwatch.GetEventSource(ctx, &cloudwatch.GetEventSourceArgs{
+// 			NamePrefix: pulumi.StringRef("aws.partner/examplepartner.com"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = cloudwatch.NewEventBus(ctx, "examplepartnerEventBus", &cloudwatch.EventBusArgs{
+// 			EventSourceName: pulumi.String(examplepartnerEventSource.Name),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # EventBridge event buses can be imported using the `name` (which can also be a partner event source name), e.g., console
+// EventBridge event buses can be imported using the `name` (which can also be a partner event source name), e.g., console
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudwatch/eventBus:EventBus messenger chat-messages
-//
+//  $ pulumi import aws:cloudwatch/eventBus:EventBus messenger chat-messages
 // ```
 type EventBus struct {
 	pulumi.CustomResourceState
@@ -195,7 +187,7 @@ func (i *EventBus) ToEventBusOutputWithContext(ctx context.Context) EventBusOutp
 // EventBusArrayInput is an input type that accepts EventBusArray and EventBusArrayOutput values.
 // You can construct a concrete instance of `EventBusArrayInput` via:
 //
-//	EventBusArray{ EventBusArgs{...} }
+//          EventBusArray{ EventBusArgs{...} }
 type EventBusArrayInput interface {
 	pulumi.Input
 
@@ -220,7 +212,7 @@ func (i EventBusArray) ToEventBusArrayOutputWithContext(ctx context.Context) Eve
 // EventBusMapInput is an input type that accepts EventBusMap and EventBusMapOutput values.
 // You can construct a concrete instance of `EventBusMapInput` via:
 //
-//	EventBusMap{ "key": EventBusArgs{...} }
+//          EventBusMap{ "key": EventBusArgs{...} }
 type EventBusMapInput interface {
 	pulumi.Input
 

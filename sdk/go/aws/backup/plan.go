@@ -19,41 +19,38 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/backup"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/backup"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := backup.NewPlan(ctx, "example", &backup.PlanArgs{
-//				Rules: backup.PlanRuleArray{
-//					&backup.PlanRuleArgs{
-//						RuleName:        pulumi.String("tf_example_backup_rule"),
-//						TargetVaultName: pulumi.Any(aws_backup_vault.Test.Name),
-//						Schedule:        pulumi.String("cron(0 12 * * ? *)"),
-//						Lifecycle: &backup.PlanRuleLifecycleArgs{
-//							DeleteAfter: pulumi.Int(14),
-//						},
-//					},
-//				},
-//				AdvancedBackupSettings: backup.PlanAdvancedBackupSettingArray{
-//					&backup.PlanAdvancedBackupSettingArgs{
-//						BackupOptions: pulumi.StringMap{
-//							"WindowsVSS": pulumi.String("enabled"),
-//						},
-//						ResourceType: pulumi.String("EC2"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := backup.NewPlan(ctx, "example", &backup.PlanArgs{
+// 			Rules: backup.PlanRuleArray{
+// 				&backup.PlanRuleArgs{
+// 					RuleName:        pulumi.String("tf_example_backup_rule"),
+// 					TargetVaultName: pulumi.Any(aws_backup_vault.Test.Name),
+// 					Schedule:        pulumi.String("cron(0 12 * * ? *)"),
+// 					Lifecycle: &backup.PlanRuleLifecycleArgs{
+// 						DeleteAfter: pulumi.Int(14),
+// 					},
+// 				},
+// 			},
+// 			AdvancedBackupSettings: backup.PlanAdvancedBackupSettingArray{
+// 				&backup.PlanAdvancedBackupSettingArgs{
+// 					BackupOptions: pulumi.StringMap{
+// 						"WindowsVSS": pulumi.String("enabled"),
+// 					},
+// 					ResourceType: pulumi.String("EC2"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -61,9 +58,7 @@ import (
 // Backup Plan can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:backup/plan:Plan test <id>
-//
+//  $ pulumi import aws:backup/plan:Plan test <id>
 // ```
 type Plan struct {
 	pulumi.CustomResourceState
@@ -202,7 +197,7 @@ func (i *Plan) ToPlanOutputWithContext(ctx context.Context) PlanOutput {
 // PlanArrayInput is an input type that accepts PlanArray and PlanArrayOutput values.
 // You can construct a concrete instance of `PlanArrayInput` via:
 //
-//	PlanArray{ PlanArgs{...} }
+//          PlanArray{ PlanArgs{...} }
 type PlanArrayInput interface {
 	pulumi.Input
 
@@ -227,7 +222,7 @@ func (i PlanArray) ToPlanArrayOutputWithContext(ctx context.Context) PlanArrayOu
 // PlanMapInput is an input type that accepts PlanMap and PlanMapOutput values.
 // You can construct a concrete instance of `PlanMapInput` via:
 //
-//	PlanMap{ "key": PlanArgs{...} }
+//          PlanMap{ "key": PlanArgs{...} }
 type PlanMapInput interface {
 	pulumi.Input
 

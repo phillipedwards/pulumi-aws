@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/opsworks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := opsworks.NewGangliaLayer(ctx, "monitor", &opsworks.GangliaLayerArgs{
-//				StackId:  pulumi.Any(aws_opsworks_stack.Main.Id),
-//				Password: pulumi.String("foobarbaz"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := opsworks.NewGangliaLayer(ctx, "monitor", &opsworks.GangliaLayerArgs{
+// 			StackId:  pulumi.Any(aws_opsworks_stack.Main.Id),
+// 			Password: pulumi.String("foobarbaz"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type GangliaLayer struct {
 	pulumi.CustomResourceState
@@ -353,7 +350,7 @@ func (i *GangliaLayer) ToGangliaLayerOutputWithContext(ctx context.Context) Gang
 // GangliaLayerArrayInput is an input type that accepts GangliaLayerArray and GangliaLayerArrayOutput values.
 // You can construct a concrete instance of `GangliaLayerArrayInput` via:
 //
-//	GangliaLayerArray{ GangliaLayerArgs{...} }
+//          GangliaLayerArray{ GangliaLayerArgs{...} }
 type GangliaLayerArrayInput interface {
 	pulumi.Input
 
@@ -378,7 +375,7 @@ func (i GangliaLayerArray) ToGangliaLayerArrayOutputWithContext(ctx context.Cont
 // GangliaLayerMapInput is an input type that accepts GangliaLayerMap and GangliaLayerMapOutput values.
 // You can construct a concrete instance of `GangliaLayerMapInput` via:
 //
-//	GangliaLayerMap{ "key": GangliaLayerArgs{...} }
+//          GangliaLayerMap{ "key": GangliaLayerArgs{...} }
 type GangliaLayerMapInput interface {
 	pulumi.Input
 

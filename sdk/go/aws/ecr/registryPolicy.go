@@ -19,62 +19,59 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
+// 	"fmt"
 //
-//	"encoding/json"
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ecr"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ecr"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
-//			if err != nil {
-//				return err
-//			}
-//			currentRegion, err := aws.GetRegion(ctx, nil, nil)
-//			if err != nil {
-//				return err
-//			}
-//			currentPartition, err := aws.GetPartition(ctx, nil, nil)
-//			if err != nil {
-//				return err
-//			}
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Sid":    "testpolicy",
-//						"Effect": "Allow",
-//						"Principal": map[string]interface{}{
-//							"AWS": fmt.Sprintf("arn:%v:iam::%v:root", currentPartition.Partition, currentCallerIdentity.AccountId),
-//						},
-//						"Action": []string{
-//							"ecr:ReplicateImage",
-//						},
-//						"Resource": []string{
-//							fmt.Sprintf("arn:%v:ecr:%v:%v:repository/*", currentPartition.Partition, currentRegion.Name, currentCallerIdentity.AccountId),
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			_, err = ecr.NewRegistryPolicy(ctx, "example", &ecr.RegistryPolicyArgs{
-//				Policy: pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		currentCallerIdentity, err := aws.GetCallerIdentity(ctx, nil, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		currentPartition, err := aws.GetPartition(ctx, nil, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Sid":    "testpolicy",
+// 					"Effect": "Allow",
+// 					"Principal": map[string]interface{}{
+// 						"AWS": fmt.Sprintf("arn:%v:iam::%v:root", currentPartition.Partition, currentCallerIdentity.AccountId),
+// 					},
+// 					"Action": []string{
+// 						"ecr:ReplicateImage",
+// 					},
+// 					"Resource": []string{
+// 						fmt.Sprintf("arn:%v:ecr:%v:%v:repository/*", currentPartition.Partition, currentRegion.Name, currentCallerIdentity.AccountId),
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		_, err = ecr.NewRegistryPolicy(ctx, "example", &ecr.RegistryPolicyArgs{
+// 			Policy: pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -82,9 +79,7 @@ import (
 // ECR Registry Policy can be imported using the registry id, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ecr/registryPolicy:RegistryPolicy example 123456789012
-//
+//  $ pulumi import aws:ecr/registryPolicy:RegistryPolicy example 123456789012
 // ```
 type RegistryPolicy struct {
 	pulumi.CustomResourceState
@@ -176,7 +171,7 @@ func (i *RegistryPolicy) ToRegistryPolicyOutputWithContext(ctx context.Context) 
 // RegistryPolicyArrayInput is an input type that accepts RegistryPolicyArray and RegistryPolicyArrayOutput values.
 // You can construct a concrete instance of `RegistryPolicyArrayInput` via:
 //
-//	RegistryPolicyArray{ RegistryPolicyArgs{...} }
+//          RegistryPolicyArray{ RegistryPolicyArgs{...} }
 type RegistryPolicyArrayInput interface {
 	pulumi.Input
 
@@ -201,7 +196,7 @@ func (i RegistryPolicyArray) ToRegistryPolicyArrayOutputWithContext(ctx context.
 // RegistryPolicyMapInput is an input type that accepts RegistryPolicyMap and RegistryPolicyMapOutput values.
 // You can construct a concrete instance of `RegistryPolicyMapInput` via:
 //
-//	RegistryPolicyMap{ "key": RegistryPolicyArgs{...} }
+//          RegistryPolicyMap{ "key": RegistryPolicyArgs{...} }
 type RegistryPolicyMapInput interface {
 	pulumi.Input
 

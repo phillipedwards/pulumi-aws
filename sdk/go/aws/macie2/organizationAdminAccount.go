@@ -19,30 +19,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/macie2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/macie2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleAccount, err := macie2.NewAccount(ctx, "exampleAccount", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = macie2.NewOrganizationAdminAccount(ctx, "exampleOrganizationAdminAccount", &macie2.OrganizationAdminAccountArgs{
-//				AdminAccountId: pulumi.String("ID OF THE ADMIN ACCOUNT"),
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				exampleAccount,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleAccount, err := macie2.NewAccount(ctx, "exampleAccount", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = macie2.NewOrganizationAdminAccount(ctx, "exampleOrganizationAdminAccount", &macie2.OrganizationAdminAccountArgs{
+// 			AdminAccountId: pulumi.String("ID OF THE ADMIN ACCOUNT"),
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			exampleAccount,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -50,9 +47,7 @@ import (
 // `aws_macie2_organization_admin_account` can be imported using the id, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:macie2/organizationAdminAccount:OrganizationAdminAccount example abcd1
-//
+//  $ pulumi import aws:macie2/organizationAdminAccount:OrganizationAdminAccount example abcd1
 // ```
 type OrganizationAdminAccount struct {
 	pulumi.CustomResourceState
@@ -143,7 +138,7 @@ func (i *OrganizationAdminAccount) ToOrganizationAdminAccountOutputWithContext(c
 // OrganizationAdminAccountArrayInput is an input type that accepts OrganizationAdminAccountArray and OrganizationAdminAccountArrayOutput values.
 // You can construct a concrete instance of `OrganizationAdminAccountArrayInput` via:
 //
-//	OrganizationAdminAccountArray{ OrganizationAdminAccountArgs{...} }
+//          OrganizationAdminAccountArray{ OrganizationAdminAccountArgs{...} }
 type OrganizationAdminAccountArrayInput interface {
 	pulumi.Input
 
@@ -168,7 +163,7 @@ func (i OrganizationAdminAccountArray) ToOrganizationAdminAccountArrayOutputWith
 // OrganizationAdminAccountMapInput is an input type that accepts OrganizationAdminAccountMap and OrganizationAdminAccountMapOutput values.
 // You can construct a concrete instance of `OrganizationAdminAccountMapInput` via:
 //
-//	OrganizationAdminAccountMap{ "key": OrganizationAdminAccountArgs{...} }
+//          OrganizationAdminAccountMap{ "key": OrganizationAdminAccountArgs{...} }
 type OrganizationAdminAccountMapInput interface {
 	pulumi.Input
 

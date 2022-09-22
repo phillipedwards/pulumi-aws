@@ -20,29 +20,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/datasync"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/datasync"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := datasync.NewTask(ctx, "example", &datasync.TaskArgs{
-//				DestinationLocationArn: pulumi.Any(aws_datasync_location_s3.Destination.Arn),
-//				SourceLocationArn:      pulumi.Any(aws_datasync_location_nfs.Source.Arn),
-//				Schedule: &datasync.TaskScheduleArgs{
-//					ScheduleExpression: pulumi.String("cron(0 12 ? * SUN,WED *)"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := datasync.NewTask(ctx, "example", &datasync.TaskArgs{
+// 			DestinationLocationArn: pulumi.Any(aws_datasync_location_s3.Destination.Arn),
+// 			SourceLocationArn:      pulumi.Any(aws_datasync_location_nfs.Source.Arn),
+// 			Schedule: &datasync.TaskScheduleArgs{
+// 				ScheduleExpression: pulumi.String("cron(0 12 ? * SUN,WED *)"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### With Filtering
 //
@@ -50,34 +47,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/datasync"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/datasync"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := datasync.NewTask(ctx, "example", &datasync.TaskArgs{
-//				DestinationLocationArn: pulumi.Any(aws_datasync_location_s3.Destination.Arn),
-//				SourceLocationArn:      pulumi.Any(aws_datasync_location_nfs.Source.Arn),
-//				Excludes: &datasync.TaskExcludesArgs{
-//					FilterType: pulumi.String("SIMPLE_PATTERN"),
-//					Value:      pulumi.String("/folder1|/folder2"),
-//				},
-//				Includes: &datasync.TaskIncludesArgs{
-//					FilterType: pulumi.String("SIMPLE_PATTERN"),
-//					Value:      pulumi.String("/folder1|/folder2"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := datasync.NewTask(ctx, "example", &datasync.TaskArgs{
+// 			DestinationLocationArn: pulumi.Any(aws_datasync_location_s3.Destination.Arn),
+// 			SourceLocationArn:      pulumi.Any(aws_datasync_location_nfs.Source.Arn),
+// 			Excludes: &datasync.TaskExcludesArgs{
+// 				FilterType: pulumi.String("SIMPLE_PATTERN"),
+// 				Value:      pulumi.String("/folder1|/folder2"),
+// 			},
+// 			Includes: &datasync.TaskIncludesArgs{
+// 				FilterType: pulumi.String("SIMPLE_PATTERN"),
+// 				Value:      pulumi.String("/folder1|/folder2"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -85,9 +79,7 @@ import (
 // `aws_datasync_task` can be imported by using the DataSync Task Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:datasync/task:Task example arn:aws:datasync:us-east-1:123456789012:task/task-12345678901234567
-//
+//  $ pulumi import aws:datasync/task:Task example arn:aws:datasync:us-east-1:123456789012:task/task-12345678901234567
 // ```
 type Task struct {
 	pulumi.CustomResourceState
@@ -273,7 +265,7 @@ func (i *Task) ToTaskOutputWithContext(ctx context.Context) TaskOutput {
 // TaskArrayInput is an input type that accepts TaskArray and TaskArrayOutput values.
 // You can construct a concrete instance of `TaskArrayInput` via:
 //
-//	TaskArray{ TaskArgs{...} }
+//          TaskArray{ TaskArgs{...} }
 type TaskArrayInput interface {
 	pulumi.Input
 
@@ -298,7 +290,7 @@ func (i TaskArray) ToTaskArrayOutputWithContext(ctx context.Context) TaskArrayOu
 // TaskMapInput is an input type that accepts TaskMap and TaskMapOutput values.
 // You can construct a concrete instance of `TaskMapInput` via:
 //
-//	TaskMap{ "key": TaskArgs{...} }
+//          TaskMap{ "key": TaskArgs{...} }
 type TaskMapInput interface {
 	pulumi.Input
 

@@ -18,7 +18,7 @@ type AliasRoutingConfig struct {
 // AliasRoutingConfigInput is an input type that accepts AliasRoutingConfigArgs and AliasRoutingConfigOutput values.
 // You can construct a concrete instance of `AliasRoutingConfigInput` via:
 //
-//	AliasRoutingConfigArgs{...}
+//          AliasRoutingConfigArgs{...}
 type AliasRoutingConfigInput interface {
 	pulumi.Input
 
@@ -54,11 +54,11 @@ func (i AliasRoutingConfigArgs) ToAliasRoutingConfigPtrOutputWithContext(ctx con
 // AliasRoutingConfigPtrInput is an input type that accepts AliasRoutingConfigArgs, AliasRoutingConfigPtr and AliasRoutingConfigPtrOutput values.
 // You can construct a concrete instance of `AliasRoutingConfigPtrInput` via:
 //
-//	        AliasRoutingConfigArgs{...}
+//          AliasRoutingConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type AliasRoutingConfigPtrInput interface {
 	pulumi.Input
 
@@ -155,7 +155,7 @@ type CodeSigningConfigAllowedPublishers struct {
 // CodeSigningConfigAllowedPublishersInput is an input type that accepts CodeSigningConfigAllowedPublishersArgs and CodeSigningConfigAllowedPublishersOutput values.
 // You can construct a concrete instance of `CodeSigningConfigAllowedPublishersInput` via:
 //
-//	CodeSigningConfigAllowedPublishersArgs{...}
+//          CodeSigningConfigAllowedPublishersArgs{...}
 type CodeSigningConfigAllowedPublishersInput interface {
 	pulumi.Input
 
@@ -191,11 +191,11 @@ func (i CodeSigningConfigAllowedPublishersArgs) ToCodeSigningConfigAllowedPublis
 // CodeSigningConfigAllowedPublishersPtrInput is an input type that accepts CodeSigningConfigAllowedPublishersArgs, CodeSigningConfigAllowedPublishersPtr and CodeSigningConfigAllowedPublishersPtrOutput values.
 // You can construct a concrete instance of `CodeSigningConfigAllowedPublishersPtrInput` via:
 //
-//	        CodeSigningConfigAllowedPublishersArgs{...}
+//          CodeSigningConfigAllowedPublishersArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type CodeSigningConfigAllowedPublishersPtrInput interface {
 	pulumi.Input
 
@@ -292,7 +292,7 @@ type CodeSigningConfigPolicies struct {
 // CodeSigningConfigPoliciesInput is an input type that accepts CodeSigningConfigPoliciesArgs and CodeSigningConfigPoliciesOutput values.
 // You can construct a concrete instance of `CodeSigningConfigPoliciesInput` via:
 //
-//	CodeSigningConfigPoliciesArgs{...}
+//          CodeSigningConfigPoliciesArgs{...}
 type CodeSigningConfigPoliciesInput interface {
 	pulumi.Input
 
@@ -328,11 +328,11 @@ func (i CodeSigningConfigPoliciesArgs) ToCodeSigningConfigPoliciesPtrOutputWithC
 // CodeSigningConfigPoliciesPtrInput is an input type that accepts CodeSigningConfigPoliciesArgs, CodeSigningConfigPoliciesPtr and CodeSigningConfigPoliciesPtrOutput values.
 // You can construct a concrete instance of `CodeSigningConfigPoliciesPtrInput` via:
 //
-//	        CodeSigningConfigPoliciesArgs{...}
+//          CodeSigningConfigPoliciesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type CodeSigningConfigPoliciesPtrInput interface {
 	pulumi.Input
 
@@ -429,7 +429,7 @@ type EventSourceMappingAmazonManagedKafkaEventSourceConfig struct {
 // EventSourceMappingAmazonManagedKafkaEventSourceConfigInput is an input type that accepts EventSourceMappingAmazonManagedKafkaEventSourceConfigArgs and EventSourceMappingAmazonManagedKafkaEventSourceConfigOutput values.
 // You can construct a concrete instance of `EventSourceMappingAmazonManagedKafkaEventSourceConfigInput` via:
 //
-//	EventSourceMappingAmazonManagedKafkaEventSourceConfigArgs{...}
+//          EventSourceMappingAmazonManagedKafkaEventSourceConfigArgs{...}
 type EventSourceMappingAmazonManagedKafkaEventSourceConfigInput interface {
 	pulumi.Input
 
@@ -465,11 +465,11 @@ func (i EventSourceMappingAmazonManagedKafkaEventSourceConfigArgs) ToEventSource
 // EventSourceMappingAmazonManagedKafkaEventSourceConfigPtrInput is an input type that accepts EventSourceMappingAmazonManagedKafkaEventSourceConfigArgs, EventSourceMappingAmazonManagedKafkaEventSourceConfigPtr and EventSourceMappingAmazonManagedKafkaEventSourceConfigPtrOutput values.
 // You can construct a concrete instance of `EventSourceMappingAmazonManagedKafkaEventSourceConfigPtrInput` via:
 //
-//	        EventSourceMappingAmazonManagedKafkaEventSourceConfigArgs{...}
+//          EventSourceMappingAmazonManagedKafkaEventSourceConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EventSourceMappingAmazonManagedKafkaEventSourceConfigPtrInput interface {
 	pulumi.Input
 
@@ -566,7 +566,7 @@ type EventSourceMappingDestinationConfig struct {
 // EventSourceMappingDestinationConfigInput is an input type that accepts EventSourceMappingDestinationConfigArgs and EventSourceMappingDestinationConfigOutput values.
 // You can construct a concrete instance of `EventSourceMappingDestinationConfigInput` via:
 //
-//	EventSourceMappingDestinationConfigArgs{...}
+//          EventSourceMappingDestinationConfigArgs{...}
 type EventSourceMappingDestinationConfigInput interface {
 	pulumi.Input
 
@@ -602,11 +602,11 @@ func (i EventSourceMappingDestinationConfigArgs) ToEventSourceMappingDestination
 // EventSourceMappingDestinationConfigPtrInput is an input type that accepts EventSourceMappingDestinationConfigArgs, EventSourceMappingDestinationConfigPtr and EventSourceMappingDestinationConfigPtrOutput values.
 // You can construct a concrete instance of `EventSourceMappingDestinationConfigPtrInput` via:
 //
-//	        EventSourceMappingDestinationConfigArgs{...}
+//          EventSourceMappingDestinationConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EventSourceMappingDestinationConfigPtrInput interface {
 	pulumi.Input
 
@@ -705,7 +705,7 @@ type EventSourceMappingDestinationConfigOnFailure struct {
 // EventSourceMappingDestinationConfigOnFailureInput is an input type that accepts EventSourceMappingDestinationConfigOnFailureArgs and EventSourceMappingDestinationConfigOnFailureOutput values.
 // You can construct a concrete instance of `EventSourceMappingDestinationConfigOnFailureInput` via:
 //
-//	EventSourceMappingDestinationConfigOnFailureArgs{...}
+//          EventSourceMappingDestinationConfigOnFailureArgs{...}
 type EventSourceMappingDestinationConfigOnFailureInput interface {
 	pulumi.Input
 
@@ -741,11 +741,11 @@ func (i EventSourceMappingDestinationConfigOnFailureArgs) ToEventSourceMappingDe
 // EventSourceMappingDestinationConfigOnFailurePtrInput is an input type that accepts EventSourceMappingDestinationConfigOnFailureArgs, EventSourceMappingDestinationConfigOnFailurePtr and EventSourceMappingDestinationConfigOnFailurePtrOutput values.
 // You can construct a concrete instance of `EventSourceMappingDestinationConfigOnFailurePtrInput` via:
 //
-//	        EventSourceMappingDestinationConfigOnFailureArgs{...}
+//          EventSourceMappingDestinationConfigOnFailureArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EventSourceMappingDestinationConfigOnFailurePtrInput interface {
 	pulumi.Input
 
@@ -842,7 +842,7 @@ type EventSourceMappingFilterCriteria struct {
 // EventSourceMappingFilterCriteriaInput is an input type that accepts EventSourceMappingFilterCriteriaArgs and EventSourceMappingFilterCriteriaOutput values.
 // You can construct a concrete instance of `EventSourceMappingFilterCriteriaInput` via:
 //
-//	EventSourceMappingFilterCriteriaArgs{...}
+//          EventSourceMappingFilterCriteriaArgs{...}
 type EventSourceMappingFilterCriteriaInput interface {
 	pulumi.Input
 
@@ -878,11 +878,11 @@ func (i EventSourceMappingFilterCriteriaArgs) ToEventSourceMappingFilterCriteria
 // EventSourceMappingFilterCriteriaPtrInput is an input type that accepts EventSourceMappingFilterCriteriaArgs, EventSourceMappingFilterCriteriaPtr and EventSourceMappingFilterCriteriaPtrOutput values.
 // You can construct a concrete instance of `EventSourceMappingFilterCriteriaPtrInput` via:
 //
-//	        EventSourceMappingFilterCriteriaArgs{...}
+//          EventSourceMappingFilterCriteriaArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EventSourceMappingFilterCriteriaPtrInput interface {
 	pulumi.Input
 
@@ -979,7 +979,7 @@ type EventSourceMappingFilterCriteriaFilter struct {
 // EventSourceMappingFilterCriteriaFilterInput is an input type that accepts EventSourceMappingFilterCriteriaFilterArgs and EventSourceMappingFilterCriteriaFilterOutput values.
 // You can construct a concrete instance of `EventSourceMappingFilterCriteriaFilterInput` via:
 //
-//	EventSourceMappingFilterCriteriaFilterArgs{...}
+//          EventSourceMappingFilterCriteriaFilterArgs{...}
 type EventSourceMappingFilterCriteriaFilterInput interface {
 	pulumi.Input
 
@@ -1007,7 +1007,7 @@ func (i EventSourceMappingFilterCriteriaFilterArgs) ToEventSourceMappingFilterCr
 // EventSourceMappingFilterCriteriaFilterArrayInput is an input type that accepts EventSourceMappingFilterCriteriaFilterArray and EventSourceMappingFilterCriteriaFilterArrayOutput values.
 // You can construct a concrete instance of `EventSourceMappingFilterCriteriaFilterArrayInput` via:
 //
-//	EventSourceMappingFilterCriteriaFilterArray{ EventSourceMappingFilterCriteriaFilterArgs{...} }
+//          EventSourceMappingFilterCriteriaFilterArray{ EventSourceMappingFilterCriteriaFilterArgs{...} }
 type EventSourceMappingFilterCriteriaFilterArrayInput interface {
 	pulumi.Input
 
@@ -1076,7 +1076,7 @@ type EventSourceMappingSelfManagedEventSource struct {
 // EventSourceMappingSelfManagedEventSourceInput is an input type that accepts EventSourceMappingSelfManagedEventSourceArgs and EventSourceMappingSelfManagedEventSourceOutput values.
 // You can construct a concrete instance of `EventSourceMappingSelfManagedEventSourceInput` via:
 //
-//	EventSourceMappingSelfManagedEventSourceArgs{...}
+//          EventSourceMappingSelfManagedEventSourceArgs{...}
 type EventSourceMappingSelfManagedEventSourceInput interface {
 	pulumi.Input
 
@@ -1112,11 +1112,11 @@ func (i EventSourceMappingSelfManagedEventSourceArgs) ToEventSourceMappingSelfMa
 // EventSourceMappingSelfManagedEventSourcePtrInput is an input type that accepts EventSourceMappingSelfManagedEventSourceArgs, EventSourceMappingSelfManagedEventSourcePtr and EventSourceMappingSelfManagedEventSourcePtrOutput values.
 // You can construct a concrete instance of `EventSourceMappingSelfManagedEventSourcePtrInput` via:
 //
-//	        EventSourceMappingSelfManagedEventSourceArgs{...}
+//          EventSourceMappingSelfManagedEventSourceArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EventSourceMappingSelfManagedEventSourcePtrInput interface {
 	pulumi.Input
 
@@ -1213,7 +1213,7 @@ type EventSourceMappingSelfManagedKafkaEventSourceConfig struct {
 // EventSourceMappingSelfManagedKafkaEventSourceConfigInput is an input type that accepts EventSourceMappingSelfManagedKafkaEventSourceConfigArgs and EventSourceMappingSelfManagedKafkaEventSourceConfigOutput values.
 // You can construct a concrete instance of `EventSourceMappingSelfManagedKafkaEventSourceConfigInput` via:
 //
-//	EventSourceMappingSelfManagedKafkaEventSourceConfigArgs{...}
+//          EventSourceMappingSelfManagedKafkaEventSourceConfigArgs{...}
 type EventSourceMappingSelfManagedKafkaEventSourceConfigInput interface {
 	pulumi.Input
 
@@ -1249,11 +1249,11 @@ func (i EventSourceMappingSelfManagedKafkaEventSourceConfigArgs) ToEventSourceMa
 // EventSourceMappingSelfManagedKafkaEventSourceConfigPtrInput is an input type that accepts EventSourceMappingSelfManagedKafkaEventSourceConfigArgs, EventSourceMappingSelfManagedKafkaEventSourceConfigPtr and EventSourceMappingSelfManagedKafkaEventSourceConfigPtrOutput values.
 // You can construct a concrete instance of `EventSourceMappingSelfManagedKafkaEventSourceConfigPtrInput` via:
 //
-//	        EventSourceMappingSelfManagedKafkaEventSourceConfigArgs{...}
+//          EventSourceMappingSelfManagedKafkaEventSourceConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EventSourceMappingSelfManagedKafkaEventSourceConfigPtrInput interface {
 	pulumi.Input
 
@@ -1352,7 +1352,7 @@ type EventSourceMappingSourceAccessConfiguration struct {
 // EventSourceMappingSourceAccessConfigurationInput is an input type that accepts EventSourceMappingSourceAccessConfigurationArgs and EventSourceMappingSourceAccessConfigurationOutput values.
 // You can construct a concrete instance of `EventSourceMappingSourceAccessConfigurationInput` via:
 //
-//	EventSourceMappingSourceAccessConfigurationArgs{...}
+//          EventSourceMappingSourceAccessConfigurationArgs{...}
 type EventSourceMappingSourceAccessConfigurationInput interface {
 	pulumi.Input
 
@@ -1382,7 +1382,7 @@ func (i EventSourceMappingSourceAccessConfigurationArgs) ToEventSourceMappingSou
 // EventSourceMappingSourceAccessConfigurationArrayInput is an input type that accepts EventSourceMappingSourceAccessConfigurationArray and EventSourceMappingSourceAccessConfigurationArrayOutput values.
 // You can construct a concrete instance of `EventSourceMappingSourceAccessConfigurationArrayInput` via:
 //
-//	EventSourceMappingSourceAccessConfigurationArray{ EventSourceMappingSourceAccessConfigurationArgs{...} }
+//          EventSourceMappingSourceAccessConfigurationArray{ EventSourceMappingSourceAccessConfigurationArgs{...} }
 type EventSourceMappingSourceAccessConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -1456,7 +1456,7 @@ type FunctionDeadLetterConfig struct {
 // FunctionDeadLetterConfigInput is an input type that accepts FunctionDeadLetterConfigArgs and FunctionDeadLetterConfigOutput values.
 // You can construct a concrete instance of `FunctionDeadLetterConfigInput` via:
 //
-//	FunctionDeadLetterConfigArgs{...}
+//          FunctionDeadLetterConfigArgs{...}
 type FunctionDeadLetterConfigInput interface {
 	pulumi.Input
 
@@ -1492,11 +1492,11 @@ func (i FunctionDeadLetterConfigArgs) ToFunctionDeadLetterConfigPtrOutputWithCon
 // FunctionDeadLetterConfigPtrInput is an input type that accepts FunctionDeadLetterConfigArgs, FunctionDeadLetterConfigPtr and FunctionDeadLetterConfigPtrOutput values.
 // You can construct a concrete instance of `FunctionDeadLetterConfigPtrInput` via:
 //
-//	        FunctionDeadLetterConfigArgs{...}
+//          FunctionDeadLetterConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionDeadLetterConfigPtrInput interface {
 	pulumi.Input
 
@@ -1593,7 +1593,7 @@ type FunctionEnvironment struct {
 // FunctionEnvironmentInput is an input type that accepts FunctionEnvironmentArgs and FunctionEnvironmentOutput values.
 // You can construct a concrete instance of `FunctionEnvironmentInput` via:
 //
-//	FunctionEnvironmentArgs{...}
+//          FunctionEnvironmentArgs{...}
 type FunctionEnvironmentInput interface {
 	pulumi.Input
 
@@ -1629,11 +1629,11 @@ func (i FunctionEnvironmentArgs) ToFunctionEnvironmentPtrOutputWithContext(ctx c
 // FunctionEnvironmentPtrInput is an input type that accepts FunctionEnvironmentArgs, FunctionEnvironmentPtr and FunctionEnvironmentPtrOutput values.
 // You can construct a concrete instance of `FunctionEnvironmentPtrInput` via:
 //
-//	        FunctionEnvironmentArgs{...}
+//          FunctionEnvironmentArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionEnvironmentPtrInput interface {
 	pulumi.Input
 
@@ -1730,7 +1730,7 @@ type FunctionEphemeralStorage struct {
 // FunctionEphemeralStorageInput is an input type that accepts FunctionEphemeralStorageArgs and FunctionEphemeralStorageOutput values.
 // You can construct a concrete instance of `FunctionEphemeralStorageInput` via:
 //
-//	FunctionEphemeralStorageArgs{...}
+//          FunctionEphemeralStorageArgs{...}
 type FunctionEphemeralStorageInput interface {
 	pulumi.Input
 
@@ -1766,11 +1766,11 @@ func (i FunctionEphemeralStorageArgs) ToFunctionEphemeralStoragePtrOutputWithCon
 // FunctionEphemeralStoragePtrInput is an input type that accepts FunctionEphemeralStorageArgs, FunctionEphemeralStoragePtr and FunctionEphemeralStoragePtrOutput values.
 // You can construct a concrete instance of `FunctionEphemeralStoragePtrInput` via:
 //
-//	        FunctionEphemeralStorageArgs{...}
+//          FunctionEphemeralStorageArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionEphemeralStoragePtrInput interface {
 	pulumi.Input
 
@@ -1869,7 +1869,7 @@ type FunctionEventInvokeConfigDestinationConfig struct {
 // FunctionEventInvokeConfigDestinationConfigInput is an input type that accepts FunctionEventInvokeConfigDestinationConfigArgs and FunctionEventInvokeConfigDestinationConfigOutput values.
 // You can construct a concrete instance of `FunctionEventInvokeConfigDestinationConfigInput` via:
 //
-//	FunctionEventInvokeConfigDestinationConfigArgs{...}
+//          FunctionEventInvokeConfigDestinationConfigArgs{...}
 type FunctionEventInvokeConfigDestinationConfigInput interface {
 	pulumi.Input
 
@@ -1907,11 +1907,11 @@ func (i FunctionEventInvokeConfigDestinationConfigArgs) ToFunctionEventInvokeCon
 // FunctionEventInvokeConfigDestinationConfigPtrInput is an input type that accepts FunctionEventInvokeConfigDestinationConfigArgs, FunctionEventInvokeConfigDestinationConfigPtr and FunctionEventInvokeConfigDestinationConfigPtrOutput values.
 // You can construct a concrete instance of `FunctionEventInvokeConfigDestinationConfigPtrInput` via:
 //
-//	        FunctionEventInvokeConfigDestinationConfigArgs{...}
+//          FunctionEventInvokeConfigDestinationConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionEventInvokeConfigDestinationConfigPtrInput interface {
 	pulumi.Input
 
@@ -2027,7 +2027,7 @@ type FunctionEventInvokeConfigDestinationConfigOnFailure struct {
 // FunctionEventInvokeConfigDestinationConfigOnFailureInput is an input type that accepts FunctionEventInvokeConfigDestinationConfigOnFailureArgs and FunctionEventInvokeConfigDestinationConfigOnFailureOutput values.
 // You can construct a concrete instance of `FunctionEventInvokeConfigDestinationConfigOnFailureInput` via:
 //
-//	FunctionEventInvokeConfigDestinationConfigOnFailureArgs{...}
+//          FunctionEventInvokeConfigDestinationConfigOnFailureArgs{...}
 type FunctionEventInvokeConfigDestinationConfigOnFailureInput interface {
 	pulumi.Input
 
@@ -2063,11 +2063,11 @@ func (i FunctionEventInvokeConfigDestinationConfigOnFailureArgs) ToFunctionEvent
 // FunctionEventInvokeConfigDestinationConfigOnFailurePtrInput is an input type that accepts FunctionEventInvokeConfigDestinationConfigOnFailureArgs, FunctionEventInvokeConfigDestinationConfigOnFailurePtr and FunctionEventInvokeConfigDestinationConfigOnFailurePtrOutput values.
 // You can construct a concrete instance of `FunctionEventInvokeConfigDestinationConfigOnFailurePtrInput` via:
 //
-//	        FunctionEventInvokeConfigDestinationConfigOnFailureArgs{...}
+//          FunctionEventInvokeConfigDestinationConfigOnFailureArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionEventInvokeConfigDestinationConfigOnFailurePtrInput interface {
 	pulumi.Input
 
@@ -2164,7 +2164,7 @@ type FunctionEventInvokeConfigDestinationConfigOnSuccess struct {
 // FunctionEventInvokeConfigDestinationConfigOnSuccessInput is an input type that accepts FunctionEventInvokeConfigDestinationConfigOnSuccessArgs and FunctionEventInvokeConfigDestinationConfigOnSuccessOutput values.
 // You can construct a concrete instance of `FunctionEventInvokeConfigDestinationConfigOnSuccessInput` via:
 //
-//	FunctionEventInvokeConfigDestinationConfigOnSuccessArgs{...}
+//          FunctionEventInvokeConfigDestinationConfigOnSuccessArgs{...}
 type FunctionEventInvokeConfigDestinationConfigOnSuccessInput interface {
 	pulumi.Input
 
@@ -2200,11 +2200,11 @@ func (i FunctionEventInvokeConfigDestinationConfigOnSuccessArgs) ToFunctionEvent
 // FunctionEventInvokeConfigDestinationConfigOnSuccessPtrInput is an input type that accepts FunctionEventInvokeConfigDestinationConfigOnSuccessArgs, FunctionEventInvokeConfigDestinationConfigOnSuccessPtr and FunctionEventInvokeConfigDestinationConfigOnSuccessPtrOutput values.
 // You can construct a concrete instance of `FunctionEventInvokeConfigDestinationConfigOnSuccessPtrInput` via:
 //
-//	        FunctionEventInvokeConfigDestinationConfigOnSuccessArgs{...}
+//          FunctionEventInvokeConfigDestinationConfigOnSuccessArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionEventInvokeConfigDestinationConfigOnSuccessPtrInput interface {
 	pulumi.Input
 
@@ -2303,7 +2303,7 @@ type FunctionFileSystemConfig struct {
 // FunctionFileSystemConfigInput is an input type that accepts FunctionFileSystemConfigArgs and FunctionFileSystemConfigOutput values.
 // You can construct a concrete instance of `FunctionFileSystemConfigInput` via:
 //
-//	FunctionFileSystemConfigArgs{...}
+//          FunctionFileSystemConfigArgs{...}
 type FunctionFileSystemConfigInput interface {
 	pulumi.Input
 
@@ -2341,11 +2341,11 @@ func (i FunctionFileSystemConfigArgs) ToFunctionFileSystemConfigPtrOutputWithCon
 // FunctionFileSystemConfigPtrInput is an input type that accepts FunctionFileSystemConfigArgs, FunctionFileSystemConfigPtr and FunctionFileSystemConfigPtrOutput values.
 // You can construct a concrete instance of `FunctionFileSystemConfigPtrInput` via:
 //
-//	        FunctionFileSystemConfigArgs{...}
+//          FunctionFileSystemConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionFileSystemConfigPtrInput interface {
 	pulumi.Input
 
@@ -2461,7 +2461,7 @@ type FunctionImageConfig struct {
 // FunctionImageConfigInput is an input type that accepts FunctionImageConfigArgs and FunctionImageConfigOutput values.
 // You can construct a concrete instance of `FunctionImageConfigInput` via:
 //
-//	FunctionImageConfigArgs{...}
+//          FunctionImageConfigArgs{...}
 type FunctionImageConfigInput interface {
 	pulumi.Input
 
@@ -2501,11 +2501,11 @@ func (i FunctionImageConfigArgs) ToFunctionImageConfigPtrOutputWithContext(ctx c
 // FunctionImageConfigPtrInput is an input type that accepts FunctionImageConfigArgs, FunctionImageConfigPtr and FunctionImageConfigPtrOutput values.
 // You can construct a concrete instance of `FunctionImageConfigPtrInput` via:
 //
-//	        FunctionImageConfigArgs{...}
+//          FunctionImageConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionImageConfigPtrInput interface {
 	pulumi.Input
 
@@ -2632,7 +2632,7 @@ type FunctionTracingConfig struct {
 // FunctionTracingConfigInput is an input type that accepts FunctionTracingConfigArgs and FunctionTracingConfigOutput values.
 // You can construct a concrete instance of `FunctionTracingConfigInput` via:
 //
-//	FunctionTracingConfigArgs{...}
+//          FunctionTracingConfigArgs{...}
 type FunctionTracingConfigInput interface {
 	pulumi.Input
 
@@ -2668,11 +2668,11 @@ func (i FunctionTracingConfigArgs) ToFunctionTracingConfigPtrOutputWithContext(c
 // FunctionTracingConfigPtrInput is an input type that accepts FunctionTracingConfigArgs, FunctionTracingConfigPtr and FunctionTracingConfigPtrOutput values.
 // You can construct a concrete instance of `FunctionTracingConfigPtrInput` via:
 //
-//	        FunctionTracingConfigArgs{...}
+//          FunctionTracingConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionTracingConfigPtrInput interface {
 	pulumi.Input
 
@@ -2779,7 +2779,7 @@ type FunctionUrlCors struct {
 // FunctionUrlCorsInput is an input type that accepts FunctionUrlCorsArgs and FunctionUrlCorsOutput values.
 // You can construct a concrete instance of `FunctionUrlCorsInput` via:
 //
-//	FunctionUrlCorsArgs{...}
+//          FunctionUrlCorsArgs{...}
 type FunctionUrlCorsInput interface {
 	pulumi.Input
 
@@ -2825,11 +2825,11 @@ func (i FunctionUrlCorsArgs) ToFunctionUrlCorsPtrOutputWithContext(ctx context.C
 // FunctionUrlCorsPtrInput is an input type that accepts FunctionUrlCorsArgs, FunctionUrlCorsPtr and FunctionUrlCorsPtrOutput values.
 // You can construct a concrete instance of `FunctionUrlCorsPtrInput` via:
 //
-//	        FunctionUrlCorsArgs{...}
+//          FunctionUrlCorsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionUrlCorsPtrInput interface {
 	pulumi.Input
 
@@ -3004,7 +3004,7 @@ type FunctionVpcConfig struct {
 // FunctionVpcConfigInput is an input type that accepts FunctionVpcConfigArgs and FunctionVpcConfigOutput values.
 // You can construct a concrete instance of `FunctionVpcConfigInput` via:
 //
-//	FunctionVpcConfigArgs{...}
+//          FunctionVpcConfigArgs{...}
 type FunctionVpcConfigInput interface {
 	pulumi.Input
 
@@ -3043,11 +3043,11 @@ func (i FunctionVpcConfigArgs) ToFunctionVpcConfigPtrOutputWithContext(ctx conte
 // FunctionVpcConfigPtrInput is an input type that accepts FunctionVpcConfigArgs, FunctionVpcConfigPtr and FunctionVpcConfigPtrOutput values.
 // You can construct a concrete instance of `FunctionVpcConfigPtrInput` via:
 //
-//	        FunctionVpcConfigArgs{...}
+//          FunctionVpcConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FunctionVpcConfigPtrInput interface {
 	pulumi.Input
 
@@ -3172,7 +3172,7 @@ type GetCodeSigningConfigAllowedPublisher struct {
 // GetCodeSigningConfigAllowedPublisherInput is an input type that accepts GetCodeSigningConfigAllowedPublisherArgs and GetCodeSigningConfigAllowedPublisherOutput values.
 // You can construct a concrete instance of `GetCodeSigningConfigAllowedPublisherInput` via:
 //
-//	GetCodeSigningConfigAllowedPublisherArgs{...}
+//          GetCodeSigningConfigAllowedPublisherArgs{...}
 type GetCodeSigningConfigAllowedPublisherInput interface {
 	pulumi.Input
 
@@ -3200,7 +3200,7 @@ func (i GetCodeSigningConfigAllowedPublisherArgs) ToGetCodeSigningConfigAllowedP
 // GetCodeSigningConfigAllowedPublisherArrayInput is an input type that accepts GetCodeSigningConfigAllowedPublisherArray and GetCodeSigningConfigAllowedPublisherArrayOutput values.
 // You can construct a concrete instance of `GetCodeSigningConfigAllowedPublisherArrayInput` via:
 //
-//	GetCodeSigningConfigAllowedPublisherArray{ GetCodeSigningConfigAllowedPublisherArgs{...} }
+//          GetCodeSigningConfigAllowedPublisherArray{ GetCodeSigningConfigAllowedPublisherArgs{...} }
 type GetCodeSigningConfigAllowedPublisherArrayInput interface {
 	pulumi.Input
 
@@ -3269,7 +3269,7 @@ type GetCodeSigningConfigPolicy struct {
 // GetCodeSigningConfigPolicyInput is an input type that accepts GetCodeSigningConfigPolicyArgs and GetCodeSigningConfigPolicyOutput values.
 // You can construct a concrete instance of `GetCodeSigningConfigPolicyInput` via:
 //
-//	GetCodeSigningConfigPolicyArgs{...}
+//          GetCodeSigningConfigPolicyArgs{...}
 type GetCodeSigningConfigPolicyInput interface {
 	pulumi.Input
 
@@ -3297,7 +3297,7 @@ func (i GetCodeSigningConfigPolicyArgs) ToGetCodeSigningConfigPolicyOutputWithCo
 // GetCodeSigningConfigPolicyArrayInput is an input type that accepts GetCodeSigningConfigPolicyArray and GetCodeSigningConfigPolicyArrayOutput values.
 // You can construct a concrete instance of `GetCodeSigningConfigPolicyArrayInput` via:
 //
-//	GetCodeSigningConfigPolicyArray{ GetCodeSigningConfigPolicyArgs{...} }
+//          GetCodeSigningConfigPolicyArray{ GetCodeSigningConfigPolicyArgs{...} }
 type GetCodeSigningConfigPolicyArrayInput interface {
 	pulumi.Input
 
@@ -3365,7 +3365,7 @@ type GetFunctionDeadLetterConfig struct {
 // GetFunctionDeadLetterConfigInput is an input type that accepts GetFunctionDeadLetterConfigArgs and GetFunctionDeadLetterConfigOutput values.
 // You can construct a concrete instance of `GetFunctionDeadLetterConfigInput` via:
 //
-//	GetFunctionDeadLetterConfigArgs{...}
+//          GetFunctionDeadLetterConfigArgs{...}
 type GetFunctionDeadLetterConfigInput interface {
 	pulumi.Input
 
@@ -3414,7 +3414,7 @@ type GetFunctionEnvironment struct {
 // GetFunctionEnvironmentInput is an input type that accepts GetFunctionEnvironmentArgs and GetFunctionEnvironmentOutput values.
 // You can construct a concrete instance of `GetFunctionEnvironmentInput` via:
 //
-//	GetFunctionEnvironmentArgs{...}
+//          GetFunctionEnvironmentArgs{...}
 type GetFunctionEnvironmentInput interface {
 	pulumi.Input
 
@@ -3463,7 +3463,7 @@ type GetFunctionEphemeralStorage struct {
 // GetFunctionEphemeralStorageInput is an input type that accepts GetFunctionEphemeralStorageArgs and GetFunctionEphemeralStorageOutput values.
 // You can construct a concrete instance of `GetFunctionEphemeralStorageInput` via:
 //
-//	GetFunctionEphemeralStorageArgs{...}
+//          GetFunctionEphemeralStorageArgs{...}
 type GetFunctionEphemeralStorageInput interface {
 	pulumi.Input
 
@@ -3490,7 +3490,7 @@ func (i GetFunctionEphemeralStorageArgs) ToGetFunctionEphemeralStorageOutputWith
 // GetFunctionEphemeralStorageArrayInput is an input type that accepts GetFunctionEphemeralStorageArray and GetFunctionEphemeralStorageArrayOutput values.
 // You can construct a concrete instance of `GetFunctionEphemeralStorageArrayInput` via:
 //
-//	GetFunctionEphemeralStorageArray{ GetFunctionEphemeralStorageArgs{...} }
+//          GetFunctionEphemeralStorageArray{ GetFunctionEphemeralStorageArgs{...} }
 type GetFunctionEphemeralStorageArrayInput interface {
 	pulumi.Input
 
@@ -3559,7 +3559,7 @@ type GetFunctionFileSystemConfig struct {
 // GetFunctionFileSystemConfigInput is an input type that accepts GetFunctionFileSystemConfigArgs and GetFunctionFileSystemConfigOutput values.
 // You can construct a concrete instance of `GetFunctionFileSystemConfigInput` via:
 //
-//	GetFunctionFileSystemConfigArgs{...}
+//          GetFunctionFileSystemConfigArgs{...}
 type GetFunctionFileSystemConfigInput interface {
 	pulumi.Input
 
@@ -3588,7 +3588,7 @@ func (i GetFunctionFileSystemConfigArgs) ToGetFunctionFileSystemConfigOutputWith
 // GetFunctionFileSystemConfigArrayInput is an input type that accepts GetFunctionFileSystemConfigArray and GetFunctionFileSystemConfigArrayOutput values.
 // You can construct a concrete instance of `GetFunctionFileSystemConfigArrayInput` via:
 //
-//	GetFunctionFileSystemConfigArray{ GetFunctionFileSystemConfigArgs{...} }
+//          GetFunctionFileSystemConfigArray{ GetFunctionFileSystemConfigArgs{...} }
 type GetFunctionFileSystemConfigArrayInput interface {
 	pulumi.Input
 
@@ -3660,7 +3660,7 @@ type GetFunctionTracingConfig struct {
 // GetFunctionTracingConfigInput is an input type that accepts GetFunctionTracingConfigArgs and GetFunctionTracingConfigOutput values.
 // You can construct a concrete instance of `GetFunctionTracingConfigInput` via:
 //
-//	GetFunctionTracingConfigArgs{...}
+//          GetFunctionTracingConfigArgs{...}
 type GetFunctionTracingConfigInput interface {
 	pulumi.Input
 
@@ -3714,7 +3714,7 @@ type GetFunctionUrlCor struct {
 // GetFunctionUrlCorInput is an input type that accepts GetFunctionUrlCorArgs and GetFunctionUrlCorOutput values.
 // You can construct a concrete instance of `GetFunctionUrlCorInput` via:
 //
-//	GetFunctionUrlCorArgs{...}
+//          GetFunctionUrlCorArgs{...}
 type GetFunctionUrlCorInput interface {
 	pulumi.Input
 
@@ -3746,7 +3746,7 @@ func (i GetFunctionUrlCorArgs) ToGetFunctionUrlCorOutputWithContext(ctx context.
 // GetFunctionUrlCorArrayInput is an input type that accepts GetFunctionUrlCorArray and GetFunctionUrlCorArrayOutput values.
 // You can construct a concrete instance of `GetFunctionUrlCorArrayInput` via:
 //
-//	GetFunctionUrlCorArray{ GetFunctionUrlCorArgs{...} }
+//          GetFunctionUrlCorArray{ GetFunctionUrlCorArgs{...} }
 type GetFunctionUrlCorArrayInput interface {
 	pulumi.Input
 
@@ -3835,7 +3835,7 @@ type GetFunctionVpcConfig struct {
 // GetFunctionVpcConfigInput is an input type that accepts GetFunctionVpcConfigArgs and GetFunctionVpcConfigOutput values.
 // You can construct a concrete instance of `GetFunctionVpcConfigInput` via:
 //
-//	GetFunctionVpcConfigArgs{...}
+//          GetFunctionVpcConfigArgs{...}
 type GetFunctionVpcConfigInput interface {
 	pulumi.Input
 

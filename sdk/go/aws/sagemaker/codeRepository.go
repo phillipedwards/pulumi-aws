@@ -20,27 +20,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sagemaker.NewCodeRepository(ctx, "example", &sagemaker.CodeRepositoryArgs{
-//				CodeRepositoryName: pulumi.String("example"),
-//				GitConfig: &sagemaker.CodeRepositoryGitConfigArgs{
-//					RepositoryUrl: pulumi.String("https://github.com/hashicorp/terraform-provider-aws.git"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sagemaker.NewCodeRepository(ctx, "example", &sagemaker.CodeRepositoryArgs{
+// 			CodeRepositoryName: pulumi.String("example"),
+// 			GitConfig: &sagemaker.CodeRepositoryGitConfigArgs{
+// 				RepositoryUrl: pulumi.String("https://github.com/hashicorp/terraform-provider-aws.git"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example with Secret
 //
@@ -48,52 +45,49 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/secretsmanager"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/secretsmanager"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleSecret, err := secretsmanager.NewSecret(ctx, "exampleSecret", nil)
-//			if err != nil {
-//				return err
-//			}
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"username": "example",
-//				"password": "example",
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			exampleSecretVersion, err := secretsmanager.NewSecretVersion(ctx, "exampleSecretVersion", &secretsmanager.SecretVersionArgs{
-//				SecretId:     exampleSecret.ID(),
-//				SecretString: pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = sagemaker.NewCodeRepository(ctx, "exampleCodeRepository", &sagemaker.CodeRepositoryArgs{
-//				CodeRepositoryName: pulumi.String("example"),
-//				GitConfig: &sagemaker.CodeRepositoryGitConfigArgs{
-//					RepositoryUrl: pulumi.String("https://github.com/hashicorp/terraform-provider-aws.git"),
-//					SecretArn:     exampleSecret.Arn,
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				exampleSecretVersion,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleSecret, err := secretsmanager.NewSecret(ctx, "exampleSecret", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"username": "example",
+// 			"password": "example",
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		exampleSecretVersion, err := secretsmanager.NewSecretVersion(ctx, "exampleSecretVersion", &secretsmanager.SecretVersionArgs{
+// 			SecretId:     exampleSecret.ID(),
+// 			SecretString: pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = sagemaker.NewCodeRepository(ctx, "exampleCodeRepository", &sagemaker.CodeRepositoryArgs{
+// 			CodeRepositoryName: pulumi.String("example"),
+// 			GitConfig: &sagemaker.CodeRepositoryGitConfigArgs{
+// 				RepositoryUrl: pulumi.String("https://github.com/hashicorp/terraform-provider-aws.git"),
+// 				SecretArn:     exampleSecret.Arn,
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			exampleSecretVersion,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -101,9 +95,7 @@ import (
 // SageMaker Code Repositories can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/codeRepository:CodeRepository test_code_repository my-code-repo
-//
+//  $ pulumi import aws:sagemaker/codeRepository:CodeRepository test_code_repository my-code-repo
 // ```
 type CodeRepository struct {
 	pulumi.CustomResourceState
@@ -229,7 +221,7 @@ func (i *CodeRepository) ToCodeRepositoryOutputWithContext(ctx context.Context) 
 // CodeRepositoryArrayInput is an input type that accepts CodeRepositoryArray and CodeRepositoryArrayOutput values.
 // You can construct a concrete instance of `CodeRepositoryArrayInput` via:
 //
-//	CodeRepositoryArray{ CodeRepositoryArgs{...} }
+//          CodeRepositoryArray{ CodeRepositoryArgs{...} }
 type CodeRepositoryArrayInput interface {
 	pulumi.Input
 
@@ -254,7 +246,7 @@ func (i CodeRepositoryArray) ToCodeRepositoryArrayOutputWithContext(ctx context.
 // CodeRepositoryMapInput is an input type that accepts CodeRepositoryMap and CodeRepositoryMapOutput values.
 // You can construct a concrete instance of `CodeRepositoryMapInput` via:
 //
-//	CodeRepositoryMap{ "key": CodeRepositoryArgs{...} }
+//          CodeRepositoryMap{ "key": CodeRepositoryArgs{...} }
 type CodeRepositoryMapInput interface {
 	pulumi.Input
 

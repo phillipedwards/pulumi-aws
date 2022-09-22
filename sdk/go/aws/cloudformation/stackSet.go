@@ -22,104 +22,99 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudformation"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudformation"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
-//				Statements: []iam.GetPolicyDocumentStatement{
-//					iam.GetPolicyDocumentStatement{
-//						Actions: []string{
-//							"sts:AssumeRole",
-//						},
-//						Effect: pulumi.StringRef("Allow"),
-//						Principals: []iam.GetPolicyDocumentStatementPrincipal{
-//							iam.GetPolicyDocumentStatementPrincipal{
-//								Identifiers: []string{
-//									"cloudformation.amazonaws.com",
-//								},
-//								Type: "Service",
-//							},
-//						},
-//					},
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			aWSCloudFormationStackSetAdministrationRole, err := iam.NewRole(ctx, "aWSCloudFormationStackSetAdministrationRole", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.String(aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy.Json),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			example, err := cloudformation.NewStackSet(ctx, "example", &cloudformation.StackSetArgs{
-//				AdministrationRoleArn: aWSCloudFormationStackSetAdministrationRole.Arn,
-//				Parameters: pulumi.StringMap{
-//					"VPCCidr": pulumi.String("10.0.0.0/16"),
-//				},
-//				TemplateBody: pulumi.String(fmt.Sprintf(`{
-//	  "Parameters" : {
-//	    "VPCCidr" : {
-//	      "Type" : "String",
-//	      "Default" : "10.0.0.0/16",
-//	      "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
-//	    }
-//	  },
-//	  "Resources" : {
-//	    "myVpc": {
-//	      "Type" : "AWS::EC2::VPC",
-//	      "Properties" : {
-//	        "CidrBlock" : { "Ref" : "VPCCidr" },
-//	        "Tags" : [
-//	          {"Key": "Name", "Value": "Primary_CF_VPC"}
-//	        ]
-//	      }
-//	    }
-//	  }
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+// 			Statements: []iam.GetPolicyDocumentStatement{
+// 				iam.GetPolicyDocumentStatement{
+// 					Actions: []string{
+// 						"sts:AssumeRole",
+// 					},
+// 					Effect: pulumi.StringRef("Allow"),
+// 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+// 						iam.GetPolicyDocumentStatementPrincipal{
+// 							Identifiers: []string{
+// 								"cloudformation.amazonaws.com",
+// 							},
+// 							Type: "Service",
+// 						},
+// 					},
+// 				},
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		aWSCloudFormationStackSetAdministrationRole, err := iam.NewRole(ctx, "aWSCloudFormationStackSetAdministrationRole", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.String(aWSCloudFormationStackSetAdministrationRoleAssumeRolePolicy.Json),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		example, err := cloudformation.NewStackSet(ctx, "example", &cloudformation.StackSetArgs{
+// 			AdministrationRoleArn: aWSCloudFormationStackSetAdministrationRole.Arn,
+// 			Parameters: pulumi.StringMap{
+// 				"VPCCidr": pulumi.String("10.0.0.0/16"),
+// 			},
+// 			TemplateBody: pulumi.String(fmt.Sprintf(`{
+//   "Parameters" : {
+//     "VPCCidr" : {
+//       "Type" : "String",
+//       "Default" : "10.0.0.0/16",
+//       "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
+//     }
+//   },
+//   "Resources" : {
+//     "myVpc": {
+//       "Type" : "AWS::EC2::VPC",
+//       "Properties" : {
+//         "CidrBlock" : { "Ref" : "VPCCidr" },
+//         "Tags" : [
+//           {"Key": "Name", "Value": "Primary_CF_VPC"}
+//         ]
+//       }
+//     }
+//   }
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument := iam.GetPolicyDocumentOutput(ctx, iam.GetPolicyDocumentOutputArgs{
-//				Statements: iam.GetPolicyDocumentStatementArray{
-//					&iam.GetPolicyDocumentStatementArgs{
-//						Actions: pulumi.StringArray{
-//							pulumi.String("sts:AssumeRole"),
-//						},
-//						Effect: pulumi.String("Allow"),
-//						Resources: pulumi.StringArray{
-//							example.ExecutionRoleName.ApplyT(func(executionRoleName string) (string, error) {
-//								return fmt.Sprintf("arn:aws:iam::*:role/%v", executionRoleName), nil
-//							}).(pulumi.StringOutput),
-//						},
-//					},
-//				},
-//			}, nil)
-//			_, err = iam.NewRolePolicy(ctx, "aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy", &iam.RolePolicyArgs{
-//				Policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.ApplyT(func(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument iam.GetPolicyDocumentResult) (string, error) {
-//					return aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.Json, nil
-//				}).(pulumi.StringOutput),
-//				Role: aWSCloudFormationStackSetAdministrationRole.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument := iam.GetPolicyDocumentOutput(ctx, iam.GetPolicyDocumentOutputArgs{
+// 			Statements: iam.GetPolicyDocumentStatementArray{
+// 				&iam.GetPolicyDocumentStatementArgs{
+// 					Actions: pulumi.StringArray{
+// 						pulumi.String("sts:AssumeRole"),
+// 					},
+// 					Effect: pulumi.String("Allow"),
+// 					Resources: pulumi.StringArray{
+// 						example.ExecutionRoleName.ApplyT(func(executionRoleName string) (string, error) {
+// 							return fmt.Sprintf("arn:aws:iam::*:role/%v", executionRoleName), nil
+// 						}).(pulumi.StringOutput),
+// 					},
+// 				},
+// 			},
+// 		}, nil)
+// 		_, err = iam.NewRolePolicy(ctx, "aWSCloudFormationStackSetAdministrationRoleExecutionPolicyRolePolicy", &iam.RolePolicyArgs{
+// 			Policy: aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.ApplyT(func(aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument iam.GetPolicyDocumentResult) (string, error) {
+// 				return aWSCloudFormationStackSetAdministrationRoleExecutionPolicyPolicyDocument.Json, nil
+// 			}).(pulumi.StringOutput),
+// 			Role: aWSCloudFormationStackSetAdministrationRole.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -127,9 +122,7 @@ import (
 // CloudFormation StackSets can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudformation/stackSet:StackSet example example
-//
+//  $ pulumi import aws:cloudformation/stackSet:StackSet example example
 // ```
 type StackSet struct {
 	pulumi.CustomResourceState
@@ -355,7 +348,7 @@ func (i *StackSet) ToStackSetOutputWithContext(ctx context.Context) StackSetOutp
 // StackSetArrayInput is an input type that accepts StackSetArray and StackSetArrayOutput values.
 // You can construct a concrete instance of `StackSetArrayInput` via:
 //
-//	StackSetArray{ StackSetArgs{...} }
+//          StackSetArray{ StackSetArgs{...} }
 type StackSetArrayInput interface {
 	pulumi.Input
 
@@ -380,7 +373,7 @@ func (i StackSetArray) ToStackSetArrayOutputWithContext(ctx context.Context) Sta
 // StackSetMapInput is an input type that accepts StackSetMap and StackSetMapOutput values.
 // You can construct a concrete instance of `StackSetMapInput` via:
 //
-//	StackSetMap{ "key": StackSetArgs{...} }
+//          StackSetMap{ "key": StackSetArgs{...} }
 type StackSetMapInput interface {
 	pulumi.Input
 

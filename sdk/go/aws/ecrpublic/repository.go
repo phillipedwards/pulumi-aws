@@ -21,57 +21,54 @@ import (
 // package main
 //
 // import (
+// 	"encoding/base64"
+// 	"io/ioutil"
 //
-//	"encoding/base64"
-//	"io/ioutil"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ecrpublic"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ecrpublic"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func filebase64OrPanic(path string) pulumi.StringPtrInput {
-//		if fileData, err := ioutil.ReadFile(path); err == nil {
-//			return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
-//		} else {
-//			panic(err.Error())
-//		}
-//	}
+// func filebase64OrPanic(path string) pulumi.StringPtrInput {
+// 	if fileData, err := ioutil.ReadFile(path); err == nil {
+// 		return pulumi.String(base64.StdEncoding.EncodeToString(fileData[:]))
+// 	} else {
+// 		panic(err.Error())
+// 	}
+// }
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := aws.NewProvider(ctx, "usEast1", &aws.ProviderArgs{
-//				Region: pulumi.String("us-east-1"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ecrpublic.NewRepository(ctx, "foo", &ecrpublic.RepositoryArgs{
-//				RepositoryName: pulumi.String("bar"),
-//				CatalogData: &ecrpublic.RepositoryCatalogDataArgs{
-//					AboutText: pulumi.String("About Text"),
-//					Architectures: pulumi.StringArray{
-//						pulumi.String("ARM"),
-//					},
-//					Description:   pulumi.String("Description"),
-//					LogoImageBlob: filebase64OrPanic(image.Png),
-//					OperatingSystems: pulumi.StringArray{
-//						pulumi.String("Linux"),
-//					},
-//					UsageText: pulumi.String("Usage Text"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"env": pulumi.String("production"),
-//				},
-//			}, pulumi.Provider(aws.Us_east_1))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := aws.NewProvider(ctx, "usEast1", &aws.ProviderArgs{
+// 			Region: pulumi.String("us-east-1"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ecrpublic.NewRepository(ctx, "foo", &ecrpublic.RepositoryArgs{
+// 			RepositoryName: pulumi.String("bar"),
+// 			CatalogData: &ecrpublic.RepositoryCatalogDataArgs{
+// 				AboutText: pulumi.String("About Text"),
+// 				Architectures: pulumi.StringArray{
+// 					pulumi.String("ARM"),
+// 				},
+// 				Description:   pulumi.String("Description"),
+// 				LogoImageBlob: filebase64OrPanic(image.Png),
+// 				OperatingSystems: pulumi.StringArray{
+// 					pulumi.String("Linux"),
+// 				},
+// 				UsageText: pulumi.String("Usage Text"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"env": pulumi.String("production"),
+// 			},
+// 		}, pulumi.Provider(aws.Us_east_1))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -79,9 +76,7 @@ import (
 // ECR Public Repositories can be imported using the `repository_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ecrpublic/repository:Repository example example
-//
+//  $ pulumi import aws:ecrpublic/repository:Repository example example
 // ```
 type Repository struct {
 	pulumi.CustomResourceState
@@ -213,7 +208,7 @@ func (i *Repository) ToRepositoryOutputWithContext(ctx context.Context) Reposito
 // RepositoryArrayInput is an input type that accepts RepositoryArray and RepositoryArrayOutput values.
 // You can construct a concrete instance of `RepositoryArrayInput` via:
 //
-//	RepositoryArray{ RepositoryArgs{...} }
+//          RepositoryArray{ RepositoryArgs{...} }
 type RepositoryArrayInput interface {
 	pulumi.Input
 
@@ -238,7 +233,7 @@ func (i RepositoryArray) ToRepositoryArrayOutputWithContext(ctx context.Context)
 // RepositoryMapInput is an input type that accepts RepositoryMap and RepositoryMapOutput values.
 // You can construct a concrete instance of `RepositoryMapInput` via:
 //
-//	RepositoryMap{ "key": RepositoryArgs{...} }
+//          RepositoryMap{ "key": RepositoryArgs{...} }
 type RepositoryMapInput interface {
 	pulumi.Input
 

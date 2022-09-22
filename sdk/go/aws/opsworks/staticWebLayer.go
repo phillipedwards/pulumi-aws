@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/opsworks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := opsworks.NewStaticWebLayer(ctx, "web", &opsworks.StaticWebLayerArgs{
-//				StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := opsworks.NewStaticWebLayer(ctx, "web", &opsworks.StaticWebLayerArgs{
+// 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // OpsWorks static web server Layers can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:opsworks/staticWebLayer:StaticWebLayer bar 00000000-0000-0000-0000-000000000000
-//
+//  $ pulumi import aws:opsworks/staticWebLayer:StaticWebLayer bar 00000000-0000-0000-0000-000000000000
 // ```
 type StaticWebLayer struct {
 	pulumi.CustomResourceState
@@ -324,7 +319,7 @@ func (i *StaticWebLayer) ToStaticWebLayerOutputWithContext(ctx context.Context) 
 // StaticWebLayerArrayInput is an input type that accepts StaticWebLayerArray and StaticWebLayerArrayOutput values.
 // You can construct a concrete instance of `StaticWebLayerArrayInput` via:
 //
-//	StaticWebLayerArray{ StaticWebLayerArgs{...} }
+//          StaticWebLayerArray{ StaticWebLayerArgs{...} }
 type StaticWebLayerArrayInput interface {
 	pulumi.Input
 
@@ -349,7 +344,7 @@ func (i StaticWebLayerArray) ToStaticWebLayerArrayOutputWithContext(ctx context.
 // StaticWebLayerMapInput is an input type that accepts StaticWebLayerMap and StaticWebLayerMapOutput values.
 // You can construct a concrete instance of `StaticWebLayerMapInput` via:
 //
-//	StaticWebLayerMap{ "key": StaticWebLayerArgs{...} }
+//          StaticWebLayerMap{ "key": StaticWebLayerArgs{...} }
 type StaticWebLayerMapInput interface {
 	pulumi.Input
 

@@ -19,32 +19,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/servicediscovery"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/servicediscovery"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("10.0.0.0/16"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = servicediscovery.NewPrivateDnsNamespace(ctx, "examplePrivateDnsNamespace", &servicediscovery.PrivateDnsNamespaceArgs{
-//				Description: pulumi.String("example"),
-//				Vpc:         exampleVpc.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("10.0.0.0/16"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = servicediscovery.NewPrivateDnsNamespace(ctx, "examplePrivateDnsNamespace", &servicediscovery.PrivateDnsNamespaceArgs{
+// 			Description: pulumi.String("example"),
+// 			Vpc:         exampleVpc.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // Service Discovery Private DNS Namespace can be imported using the namespace ID and VPC ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:servicediscovery/privateDnsNamespace:PrivateDnsNamespace example 0123456789:vpc-123345
-//
+//  $ pulumi import aws:servicediscovery/privateDnsNamespace:PrivateDnsNamespace example 0123456789:vpc-123345
 // ```
 type PrivateDnsNamespace struct {
 	pulumi.CustomResourceState
@@ -193,7 +188,7 @@ func (i *PrivateDnsNamespace) ToPrivateDnsNamespaceOutputWithContext(ctx context
 // PrivateDnsNamespaceArrayInput is an input type that accepts PrivateDnsNamespaceArray and PrivateDnsNamespaceArrayOutput values.
 // You can construct a concrete instance of `PrivateDnsNamespaceArrayInput` via:
 //
-//	PrivateDnsNamespaceArray{ PrivateDnsNamespaceArgs{...} }
+//          PrivateDnsNamespaceArray{ PrivateDnsNamespaceArgs{...} }
 type PrivateDnsNamespaceArrayInput interface {
 	pulumi.Input
 
@@ -218,7 +213,7 @@ func (i PrivateDnsNamespaceArray) ToPrivateDnsNamespaceArrayOutputWithContext(ct
 // PrivateDnsNamespaceMapInput is an input type that accepts PrivateDnsNamespaceMap and PrivateDnsNamespaceMapOutput values.
 // You can construct a concrete instance of `PrivateDnsNamespaceMapInput` via:
 //
-//	PrivateDnsNamespaceMap{ "key": PrivateDnsNamespaceArgs{...} }
+//          PrivateDnsNamespaceMap{ "key": PrivateDnsNamespaceArgs{...} }
 type PrivateDnsNamespaceMapInput interface {
 	pulumi.Input
 

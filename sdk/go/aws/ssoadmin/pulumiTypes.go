@@ -20,7 +20,7 @@ type CustomerManagedPolicyAttachmentCustomerManagedPolicyReference struct {
 // CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceInput is an input type that accepts CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceArgs and CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceOutput values.
 // You can construct a concrete instance of `CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceInput` via:
 //
-//	CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceArgs{...}
+//          CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceArgs{...}
 type CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceInput interface {
 	pulumi.Input
 
@@ -58,11 +58,11 @@ func (i CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceArgs) ToCus
 // CustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePtrInput is an input type that accepts CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceArgs, CustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePtr and CustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePtrOutput values.
 // You can construct a concrete instance of `CustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePtrInput` via:
 //
-//	        CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceArgs{...}
+//          CustomerManagedPolicyAttachmentCustomerManagedPolicyReferenceArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type CustomerManagedPolicyAttachmentCustomerManagedPolicyReferencePtrInput interface {
 	pulumi.Input
 

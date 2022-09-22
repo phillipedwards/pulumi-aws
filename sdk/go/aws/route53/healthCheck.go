@@ -20,32 +20,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.NewHealthCheck(ctx, "example", &route53.HealthCheckArgs{
-//				FailureThreshold: pulumi.Int(5),
-//				Fqdn:             pulumi.String("example.com"),
-//				Port:             pulumi.Int(80),
-//				RequestInterval:  pulumi.Int(30),
-//				ResourcePath:     pulumi.String("/"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("tf-test-health-check"),
-//				},
-//				Type: pulumi.String("HTTP"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.NewHealthCheck(ctx, "example", &route53.HealthCheckArgs{
+// 			FailureThreshold: pulumi.Int(5),
+// 			Fqdn:             pulumi.String("example.com"),
+// 			Port:             pulumi.Int(80),
+// 			RequestInterval:  pulumi.Int(30),
+// 			ResourcePath:     pulumi.String("/"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("tf-test-health-check"),
+// 			},
+// 			Type: pulumi.String("HTTP"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Connectivity and String Matching Check
 //
@@ -53,30 +50,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.NewHealthCheck(ctx, "example", &route53.HealthCheckArgs{
-//				FailureThreshold: pulumi.Int(5),
-//				Fqdn:             pulumi.String("example.com"),
-//				Port:             pulumi.Int(443),
-//				RequestInterval:  pulumi.Int(30),
-//				ResourcePath:     pulumi.String("/"),
-//				SearchString:     pulumi.String("example"),
-//				Type:             pulumi.String("HTTPS_STR_MATCH"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.NewHealthCheck(ctx, "example", &route53.HealthCheckArgs{
+// 			FailureThreshold: pulumi.Int(5),
+// 			Fqdn:             pulumi.String("example.com"),
+// 			Port:             pulumi.Int(443),
+// 			RequestInterval:  pulumi.Int(30),
+// 			ResourcePath:     pulumi.String("/"),
+// 			SearchString:     pulumi.String("example"),
+// 			Type:             pulumi.String("HTTPS_STR_MATCH"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Aggregate Check
 //
@@ -84,31 +78,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.NewHealthCheck(ctx, "parent", &route53.HealthCheckArgs{
-//				Type:                 pulumi.String("CALCULATED"),
-//				ChildHealthThreshold: pulumi.Int(1),
-//				ChildHealthchecks: pulumi.StringArray{
-//					pulumi.Any(aws_route53_health_check.Child.Id),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("tf-test-calculated-health-check"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.NewHealthCheck(ctx, "parent", &route53.HealthCheckArgs{
+// 			Type:                 pulumi.String("CALCULATED"),
+// 			ChildHealthThreshold: pulumi.Int(1),
+// 			ChildHealthchecks: pulumi.StringArray{
+// 				pulumi.Any(aws_route53_health_check.Child.Id),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("tf-test-calculated-health-check"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### CloudWatch Alarm Check
 //
@@ -116,41 +107,38 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudwatch"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			foobar, err := cloudwatch.NewMetricAlarm(ctx, "foobar", &cloudwatch.MetricAlarmArgs{
-//				ComparisonOperator: pulumi.String("GreaterThanOrEqualToThreshold"),
-//				EvaluationPeriods:  pulumi.Int(2),
-//				MetricName:         pulumi.String("CPUUtilization"),
-//				Namespace:          pulumi.String("AWS/EC2"),
-//				Period:             pulumi.Int(120),
-//				Statistic:          pulumi.String("Average"),
-//				Threshold:          pulumi.Float64(80),
-//				AlarmDescription:   pulumi.String("This metric monitors ec2 cpu utilization"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = route53.NewHealthCheck(ctx, "foo", &route53.HealthCheckArgs{
-//				Type:                         pulumi.String("CLOUDWATCH_METRIC"),
-//				CloudwatchAlarmName:          foobar.Name,
-//				CloudwatchAlarmRegion:        pulumi.String("us-west-2"),
-//				InsufficientDataHealthStatus: pulumi.String("Healthy"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		foobar, err := cloudwatch.NewMetricAlarm(ctx, "foobar", &cloudwatch.MetricAlarmArgs{
+// 			ComparisonOperator: pulumi.String("GreaterThanOrEqualToThreshold"),
+// 			EvaluationPeriods:  pulumi.Int(2),
+// 			MetricName:         pulumi.String("CPUUtilization"),
+// 			Namespace:          pulumi.String("AWS/EC2"),
+// 			Period:             pulumi.Int(120),
+// 			Statistic:          pulumi.String("Average"),
+// 			Threshold:          pulumi.Float64(80),
+// 			AlarmDescription:   pulumi.String("This metric monitors ec2 cpu utilization"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = route53.NewHealthCheck(ctx, "foo", &route53.HealthCheckArgs{
+// 			Type:                         pulumi.String("CLOUDWATCH_METRIC"),
+// 			CloudwatchAlarmName:          foobar.Name,
+// 			CloudwatchAlarmRegion:        pulumi.String("us-west-2"),
+// 			InsufficientDataHealthStatus: pulumi.String("Healthy"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -158,9 +146,7 @@ import (
 // Route53 Health Checks can be imported using the `health check id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:route53/healthCheck:HealthCheck http_check abcdef11-2222-3333-4444-555555fedcba
-//
+//  $ pulumi import aws:route53/healthCheck:HealthCheck http_check abcdef11-2222-3333-4444-555555fedcba
 // ```
 type HealthCheck struct {
 	pulumi.CustomResourceState
@@ -483,7 +469,7 @@ func (i *HealthCheck) ToHealthCheckOutputWithContext(ctx context.Context) Health
 // HealthCheckArrayInput is an input type that accepts HealthCheckArray and HealthCheckArrayOutput values.
 // You can construct a concrete instance of `HealthCheckArrayInput` via:
 //
-//	HealthCheckArray{ HealthCheckArgs{...} }
+//          HealthCheckArray{ HealthCheckArgs{...} }
 type HealthCheckArrayInput interface {
 	pulumi.Input
 
@@ -508,7 +494,7 @@ func (i HealthCheckArray) ToHealthCheckArrayOutputWithContext(ctx context.Contex
 // HealthCheckMapInput is an input type that accepts HealthCheckMap and HealthCheckMapOutput values.
 // You can construct a concrete instance of `HealthCheckMapInput` via:
 //
-//	HealthCheckMap{ "key": HealthCheckArgs{...} }
+//          HealthCheckMap{ "key": HealthCheckArgs{...} }
 type HealthCheckMapInput interface {
 	pulumi.Input
 

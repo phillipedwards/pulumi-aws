@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/opsworks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := opsworks.NewJavaAppLayer(ctx, "app", &opsworks.JavaAppLayerArgs{
-//				StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := opsworks.NewJavaAppLayer(ctx, "app", &opsworks.JavaAppLayerArgs{
+// 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type JavaAppLayer struct {
 	pulumi.CustomResourceState
@@ -369,7 +366,7 @@ func (i *JavaAppLayer) ToJavaAppLayerOutputWithContext(ctx context.Context) Java
 // JavaAppLayerArrayInput is an input type that accepts JavaAppLayerArray and JavaAppLayerArrayOutput values.
 // You can construct a concrete instance of `JavaAppLayerArrayInput` via:
 //
-//	JavaAppLayerArray{ JavaAppLayerArgs{...} }
+//          JavaAppLayerArray{ JavaAppLayerArgs{...} }
 type JavaAppLayerArrayInput interface {
 	pulumi.Input
 
@@ -394,7 +391,7 @@ func (i JavaAppLayerArray) ToJavaAppLayerArrayOutputWithContext(ctx context.Cont
 // JavaAppLayerMapInput is an input type that accepts JavaAppLayerMap and JavaAppLayerMapOutput values.
 // You can construct a concrete instance of `JavaAppLayerMapInput` via:
 //
-//	JavaAppLayerMap{ "key": JavaAppLayerArgs{...} }
+//          JavaAppLayerMap{ "key": JavaAppLayerArgs{...} }
 type JavaAppLayerMapInput interface {
 	pulumi.Input
 

@@ -17,24 +17,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/location"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/location"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := location.NewGeofenceCollection(ctx, "example", &location.GeofenceCollectionArgs{
-//				CollectionName: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := location.NewGeofenceCollection(ctx, "example", &location.GeofenceCollectionArgs{
+// 			CollectionName: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -42,9 +39,7 @@ import (
 // Location Geofence Collection can be imported using the `collection_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:location/geofenceCollection:GeofenceCollection example example
-//
+//  $ pulumi import aws:location/geofenceCollection:GeofenceCollection example example
 // ```
 type GeofenceCollection struct {
 	pulumi.CustomResourceState
@@ -181,7 +176,7 @@ func (i *GeofenceCollection) ToGeofenceCollectionOutputWithContext(ctx context.C
 // GeofenceCollectionArrayInput is an input type that accepts GeofenceCollectionArray and GeofenceCollectionArrayOutput values.
 // You can construct a concrete instance of `GeofenceCollectionArrayInput` via:
 //
-//	GeofenceCollectionArray{ GeofenceCollectionArgs{...} }
+//          GeofenceCollectionArray{ GeofenceCollectionArgs{...} }
 type GeofenceCollectionArrayInput interface {
 	pulumi.Input
 
@@ -206,7 +201,7 @@ func (i GeofenceCollectionArray) ToGeofenceCollectionArrayOutputWithContext(ctx 
 // GeofenceCollectionMapInput is an input type that accepts GeofenceCollectionMap and GeofenceCollectionMapOutput values.
 // You can construct a concrete instance of `GeofenceCollectionMapInput` via:
 //
-//	GeofenceCollectionMap{ "key": GeofenceCollectionArgs{...} }
+//          GeofenceCollectionMap{ "key": GeofenceCollectionArgs{...} }
 type GeofenceCollectionMapInput interface {
 	pulumi.Input
 

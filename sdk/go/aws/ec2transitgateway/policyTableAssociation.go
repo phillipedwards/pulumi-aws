@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2transitgateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2transitgateway.NewPolicyTableAssociation(ctx, "example", &ec2transitgateway.PolicyTableAssociationArgs{
-//				TransitGatewayAttachmentId:  pulumi.Any(aws_networkmanager_transit_gateway_peering.Example.Transit_gateway_peering_attachment_id),
-//				TransitGatewayPolicyTableId: pulumi.Any(aws_ec2_transit_gateway_policy_table.Example.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2transitgateway.NewPolicyTableAssociation(ctx, "example", &ec2transitgateway.PolicyTableAssociationArgs{
+// 			TransitGatewayAttachmentId:  pulumi.Any(aws_networkmanager_transit_gateway_peering.Example.Transit_gateway_peering_attachment_id),
+// 			TransitGatewayPolicyTableId: pulumi.Any(aws_ec2_transit_gateway_policy_table.Example.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // `aws_ec2_transit_gateway_policy_table_association` can be imported by using the EC2 Transit Gateway Policy Table identifier, an underscore, and the EC2 Transit Gateway Attachment identifier, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2transitgateway/policyTableAssociation:PolicyTableAssociation example tgw-rtb-12345678_tgw-attach-87654321
-//
+//  $ pulumi import aws:ec2transitgateway/policyTableAssociation:PolicyTableAssociation example tgw-rtb-12345678_tgw-attach-87654321
 // ```
 type PolicyTableAssociation struct {
 	pulumi.CustomResourceState
@@ -163,7 +158,7 @@ func (i *PolicyTableAssociation) ToPolicyTableAssociationOutputWithContext(ctx c
 // PolicyTableAssociationArrayInput is an input type that accepts PolicyTableAssociationArray and PolicyTableAssociationArrayOutput values.
 // You can construct a concrete instance of `PolicyTableAssociationArrayInput` via:
 //
-//	PolicyTableAssociationArray{ PolicyTableAssociationArgs{...} }
+//          PolicyTableAssociationArray{ PolicyTableAssociationArgs{...} }
 type PolicyTableAssociationArrayInput interface {
 	pulumi.Input
 
@@ -188,7 +183,7 @@ func (i PolicyTableAssociationArray) ToPolicyTableAssociationArrayOutputWithCont
 // PolicyTableAssociationMapInput is an input type that accepts PolicyTableAssociationMap and PolicyTableAssociationMapOutput values.
 // You can construct a concrete instance of `PolicyTableAssociationMapInput` via:
 //
-//	PolicyTableAssociationMap{ "key": PolicyTableAssociationArgs{...} }
+//          PolicyTableAssociationMap{ "key": PolicyTableAssociationArgs{...} }
 type PolicyTableAssociationMapInput interface {
 	pulumi.Input
 

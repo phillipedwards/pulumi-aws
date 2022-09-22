@@ -19,22 +19,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sns.NewTopic(ctx, "userUpdates", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sns.NewTopic(ctx, "userUpdates", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example with Delivery Policy
 //
@@ -42,45 +39,41 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
-//				DeliveryPolicy: pulumi.String(fmt.Sprintf(`{
-//	  "http": {
-//	    "defaultHealthyRetryPolicy": {
-//	      "minDelayTarget": 20,
-//	      "maxDelayTarget": 20,
-//	      "numRetries": 3,
-//	      "numMaxDelayRetries": 0,
-//	      "numNoDelayRetries": 0,
-//	      "numMinDelayRetries": 0,
-//	      "backoffFunction": "linear"
-//	    },
-//	    "disableSubscriptionOverrides": false,
-//	    "defaultThrottlePolicy": {
-//	      "maxReceivesPerSecond": 1
-//	    }
-//	  }
-//	}
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
+// 			DeliveryPolicy: pulumi.String(fmt.Sprintf(`{
+//   "http": {
+//     "defaultHealthyRetryPolicy": {
+//       "minDelayTarget": 20,
+//       "maxDelayTarget": 20,
+//       "numRetries": 3,
+//       "numMaxDelayRetries": 0,
+//       "numNoDelayRetries": 0,
+//       "numMinDelayRetries": 0,
+//       "backoffFunction": "linear"
+//     },
+//     "disableSubscriptionOverrides": false,
+//     "defaultThrottlePolicy": {
+//       "maxReceivesPerSecond": 1
+//     }
+//   }
+// }
 //
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example with Server-side encryption (SSE)
 //
@@ -88,24 +81,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
-//				KmsMasterKeyId: pulumi.String("alias/aws/sns"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
+// 			KmsMasterKeyId: pulumi.String("alias/aws/sns"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example with First-In-First-Out (FIFO)
 //
@@ -113,25 +103,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
-//				ContentBasedDeduplication: pulumi.Bool(true),
-//				FifoTopic:                 pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sns.NewTopic(ctx, "userUpdates", &sns.TopicArgs{
+// 			ContentBasedDeduplication: pulumi.Bool(true),
+// 			FifoTopic:                 pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ## Message Delivery Status Arguments
 //
@@ -142,9 +129,7 @@ import (
 // SNS Topics can be imported using the `topic arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sns/topic:Topic user_updates arn:aws:sns:us-west-2:0123456789012:my-topic
-//
+//  $ pulumi import aws:sns/topic:Topic user_updates arn:aws:sns:us-west-2:0123456789012:my-topic
 // ```
 type Topic struct {
 	pulumi.CustomResourceState
@@ -480,7 +465,7 @@ func (i *Topic) ToTopicOutputWithContext(ctx context.Context) TopicOutput {
 // TopicArrayInput is an input type that accepts TopicArray and TopicArrayOutput values.
 // You can construct a concrete instance of `TopicArrayInput` via:
 //
-//	TopicArray{ TopicArgs{...} }
+//          TopicArray{ TopicArgs{...} }
 type TopicArrayInput interface {
 	pulumi.Input
 
@@ -505,7 +490,7 @@ func (i TopicArray) ToTopicArrayOutputWithContext(ctx context.Context) TopicArra
 // TopicMapInput is an input type that accepts TopicMap and TopicMapOutput values.
 // You can construct a concrete instance of `TopicMapInput` via:
 //
-//	TopicMap{ "key": TopicArgs{...} }
+//          TopicMap{ "key": TopicArgs{...} }
 type TopicMapInput interface {
 	pulumi.Input
 

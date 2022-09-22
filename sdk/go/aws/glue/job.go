@@ -22,29 +22,26 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glue"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glue"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := glue.NewJob(ctx, "example", &glue.JobArgs{
-//				RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
-//				Command: &glue.JobCommandArgs{
-//					ScriptLocation: pulumi.String(fmt.Sprintf("s3://%v/example.py", aws_s3_bucket.Example.Bucket)),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := glue.NewJob(ctx, "example", &glue.JobArgs{
+// 			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+// 			Command: &glue.JobCommandArgs{
+// 				ScriptLocation: pulumi.String(fmt.Sprintf("s3://%v/example.py", aws_s3_bucket.Example.Bucket)),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Scala Job
 //
@@ -52,32 +49,29 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glue"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glue"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := glue.NewJob(ctx, "example", &glue.JobArgs{
-//				RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
-//				Command: &glue.JobCommandArgs{
-//					ScriptLocation: pulumi.String(fmt.Sprintf("s3://%v/example.scala", aws_s3_bucket.Example.Bucket)),
-//				},
-//				DefaultArguments: pulumi.StringMap{
-//					"--job-language": pulumi.String("scala"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := glue.NewJob(ctx, "example", &glue.JobArgs{
+// 			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+// 			Command: &glue.JobCommandArgs{
+// 				ScriptLocation: pulumi.String(fmt.Sprintf("s3://%v/example.scala", aws_s3_bucket.Example.Bucket)),
+// 			},
+// 			DefaultArguments: pulumi.StringMap{
+// 				"--job-language": pulumi.String("scala"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Streaming Job
 //
@@ -85,30 +79,27 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glue"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glue"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := glue.NewJob(ctx, "example", &glue.JobArgs{
-//				RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
-//				Command: &glue.JobCommandArgs{
-//					Name:           pulumi.String("gluestreaming"),
-//					ScriptLocation: pulumi.String(fmt.Sprintf("s3://%v/example.script", aws_s3_bucket.Example.Bucket)),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := glue.NewJob(ctx, "example", &glue.JobArgs{
+// 			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+// 			Command: &glue.JobCommandArgs{
+// 				Name:           pulumi.String("gluestreaming"),
+// 				ScriptLocation: pulumi.String(fmt.Sprintf("s3://%v/example.script", aws_s3_bucket.Example.Bucket)),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Enabling CloudWatch Logs and Metrics
 //
@@ -116,36 +107,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudwatch"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glue"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glue"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", &cloudwatch.LogGroupArgs{
-//				RetentionInDays: pulumi.Int(14),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = glue.NewJob(ctx, "exampleJob", &glue.JobArgs{
-//				DefaultArguments: pulumi.StringMap{
-//					"--continuous-log-logGroup":          exampleLogGroup.Name,
-//					"--enable-continuous-cloudwatch-log": pulumi.String("true"),
-//					"--enable-continuous-log-filter":     pulumi.String("true"),
-//					"--enable-metrics":                   pulumi.String(""),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", &cloudwatch.LogGroupArgs{
+// 			RetentionInDays: pulumi.Int(14),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = glue.NewJob(ctx, "exampleJob", &glue.JobArgs{
+// 			DefaultArguments: pulumi.StringMap{
+// 				"--continuous-log-logGroup":          exampleLogGroup.Name,
+// 				"--enable-continuous-cloudwatch-log": pulumi.String("true"),
+// 				"--enable-continuous-log-filter":     pulumi.String("true"),
+// 				"--enable-metrics":                   pulumi.String(""),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -153,9 +141,7 @@ import (
 // Glue Jobs can be imported using `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:glue/job:Job MyJob MyJob
-//
+//  $ pulumi import aws:glue/job:Job MyJob MyJob
 // ```
 type Job struct {
 	pulumi.CustomResourceState
@@ -431,7 +417,7 @@ func (i *Job) ToJobOutputWithContext(ctx context.Context) JobOutput {
 // JobArrayInput is an input type that accepts JobArray and JobArrayOutput values.
 // You can construct a concrete instance of `JobArrayInput` via:
 //
-//	JobArray{ JobArgs{...} }
+//          JobArray{ JobArgs{...} }
 type JobArrayInput interface {
 	pulumi.Input
 
@@ -456,7 +442,7 @@ func (i JobArray) ToJobArrayOutputWithContext(ctx context.Context) JobArrayOutpu
 // JobMapInput is an input type that accepts JobMap and JobMapOutput values.
 // You can construct a concrete instance of `JobMapInput` via:
 //
-//	JobMap{ "key": JobArgs{...} }
+//          JobMap{ "key": JobArgs{...} }
 type JobMapInput interface {
 	pulumi.Input
 

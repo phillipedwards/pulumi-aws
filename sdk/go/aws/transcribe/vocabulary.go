@@ -18,53 +18,50 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/transcribe"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/transcribe"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleBucketV2, err := s3.NewBucketV2(ctx, "exampleBucketV2", &s3.BucketV2Args{
-//				ForceDestroy: pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			object, err := s3.NewBucketObjectv2(ctx, "object", &s3.BucketObjectv2Args{
-//				Bucket: exampleBucketV2.ID(),
-//				Key:    pulumi.String("transcribe/test1.txt"),
-//				Source: pulumi.NewFileAsset("test.txt"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = transcribe.NewVocabulary(ctx, "exampleVocabulary", &transcribe.VocabularyArgs{
-//				VocabularyName: pulumi.String("example"),
-//				LanguageCode:   pulumi.String("en-US"),
-//				VocabularyFileUri: pulumi.All(exampleBucketV2.ID(), object.Key).ApplyT(func(_args []interface{}) (string, error) {
-//					id := _args[0].(string)
-//					key := _args[1].(string)
-//					return fmt.Sprintf("s3://%v/%v", id, key), nil
-//				}).(pulumi.StringOutput),
-//				Tags: pulumi.StringMap{
-//					"tag1": pulumi.String("value1"),
-//					"tag2": pulumi.String("value3"),
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				object,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleBucketV2, err := s3.NewBucketV2(ctx, "exampleBucketV2", &s3.BucketV2Args{
+// 			ForceDestroy: pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		object, err := s3.NewBucketObjectv2(ctx, "object", &s3.BucketObjectv2Args{
+// 			Bucket: exampleBucketV2.ID(),
+// 			Key:    pulumi.String("transcribe/test1.txt"),
+// 			Source: pulumi.NewFileAsset("test.txt"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = transcribe.NewVocabulary(ctx, "exampleVocabulary", &transcribe.VocabularyArgs{
+// 			VocabularyName: pulumi.String("example"),
+// 			LanguageCode:   pulumi.String("en-US"),
+// 			VocabularyFileUri: pulumi.All(exampleBucketV2.ID(), object.Key).ApplyT(func(_args []interface{}) (string, error) {
+// 				id := _args[0].(string)
+// 				key := _args[1].(string)
+// 				return fmt.Sprintf("s3://%v/%v", id, key), nil
+// 			}).(pulumi.StringOutput),
+// 			Tags: pulumi.StringMap{
+// 				"tag1": pulumi.String("value1"),
+// 				"tag2": pulumi.String("value3"),
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			object,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -72,9 +69,7 @@ import (
 // Transcribe Vocabulary can be imported using the `vocabulary_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:transcribe/vocabulary:Vocabulary example example-name
-//
+//  $ pulumi import aws:transcribe/vocabulary:Vocabulary example example-name
 // ```
 type Vocabulary struct {
 	pulumi.CustomResourceState
@@ -218,7 +213,7 @@ func (i *Vocabulary) ToVocabularyOutputWithContext(ctx context.Context) Vocabula
 // VocabularyArrayInput is an input type that accepts VocabularyArray and VocabularyArrayOutput values.
 // You can construct a concrete instance of `VocabularyArrayInput` via:
 //
-//	VocabularyArray{ VocabularyArgs{...} }
+//          VocabularyArray{ VocabularyArgs{...} }
 type VocabularyArrayInput interface {
 	pulumi.Input
 
@@ -243,7 +238,7 @@ func (i VocabularyArray) ToVocabularyArrayOutputWithContext(ctx context.Context)
 // VocabularyMapInput is an input type that accepts VocabularyMap and VocabularyMapOutput values.
 // You can construct a concrete instance of `VocabularyMapInput` via:
 //
-//	VocabularyMap{ "key": VocabularyArgs{...} }
+//          VocabularyMap{ "key": VocabularyArgs{...} }
 type VocabularyMapInput interface {
 	pulumi.Input
 

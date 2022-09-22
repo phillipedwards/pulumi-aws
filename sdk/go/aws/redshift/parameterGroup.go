@@ -19,38 +19,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := redshift.NewParameterGroup(ctx, "bar", &redshift.ParameterGroupArgs{
-//				Family: pulumi.String("redshift-1.0"),
-//				Parameters: redshift.ParameterGroupParameterArray{
-//					&redshift.ParameterGroupParameterArgs{
-//						Name:  pulumi.String("require_ssl"),
-//						Value: pulumi.String("true"),
-//					},
-//					&redshift.ParameterGroupParameterArgs{
-//						Name:  pulumi.String("query_group"),
-//						Value: pulumi.String("example"),
-//					},
-//					&redshift.ParameterGroupParameterArgs{
-//						Name:  pulumi.String("enable_user_activity_logging"),
-//						Value: pulumi.String("true"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := redshift.NewParameterGroup(ctx, "bar", &redshift.ParameterGroupArgs{
+// 			Family: pulumi.String("redshift-1.0"),
+// 			Parameters: redshift.ParameterGroupParameterArray{
+// 				&redshift.ParameterGroupParameterArgs{
+// 					Name:  pulumi.String("require_ssl"),
+// 					Value: pulumi.String("true"),
+// 				},
+// 				&redshift.ParameterGroupParameterArgs{
+// 					Name:  pulumi.String("query_group"),
+// 					Value: pulumi.String("example"),
+// 				},
+// 				&redshift.ParameterGroupParameterArgs{
+// 					Name:  pulumi.String("enable_user_activity_logging"),
+// 					Value: pulumi.String("true"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -58,9 +55,7 @@ import (
 // Redshift Parameter Groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:redshift/parameterGroup:ParameterGroup paramgroup1 parameter-group-test
-//
+//  $ pulumi import aws:redshift/parameterGroup:ParameterGroup paramgroup1 parameter-group-test
 // ```
 type ParameterGroup struct {
 	pulumi.CustomResourceState
@@ -206,7 +201,7 @@ func (i *ParameterGroup) ToParameterGroupOutputWithContext(ctx context.Context) 
 // ParameterGroupArrayInput is an input type that accepts ParameterGroupArray and ParameterGroupArrayOutput values.
 // You can construct a concrete instance of `ParameterGroupArrayInput` via:
 //
-//	ParameterGroupArray{ ParameterGroupArgs{...} }
+//          ParameterGroupArray{ ParameterGroupArgs{...} }
 type ParameterGroupArrayInput interface {
 	pulumi.Input
 
@@ -231,7 +226,7 @@ func (i ParameterGroupArray) ToParameterGroupArrayOutputWithContext(ctx context.
 // ParameterGroupMapInput is an input type that accepts ParameterGroupMap and ParameterGroupMapOutput values.
 // You can construct a concrete instance of `ParameterGroupMapInput` via:
 //
-//	ParameterGroupMap{ "key": ParameterGroupArgs{...} }
+//          ParameterGroupMap{ "key": ParameterGroupArgs{...} }
 type ParameterGroupMapInput interface {
 	pulumi.Input
 

@@ -16,24 +16,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/servicediscovery"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/servicediscovery"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := servicediscovery.NewHttpNamespace(ctx, "example", &servicediscovery.HttpNamespaceArgs{
-//				Description: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := servicediscovery.NewHttpNamespace(ctx, "example", &servicediscovery.HttpNamespaceArgs{
+// 			Description: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -41,9 +38,7 @@ import (
 // Service Discovery HTTP Namespace can be imported using the namespace ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:servicediscovery/httpNamespace:HttpNamespace example ns-1234567890
-//
+//  $ pulumi import aws:servicediscovery/httpNamespace:HttpNamespace example ns-1234567890
 // ```
 type HttpNamespace struct {
 	pulumi.CustomResourceState
@@ -169,7 +164,7 @@ func (i *HttpNamespace) ToHttpNamespaceOutputWithContext(ctx context.Context) Ht
 // HttpNamespaceArrayInput is an input type that accepts HttpNamespaceArray and HttpNamespaceArrayOutput values.
 // You can construct a concrete instance of `HttpNamespaceArrayInput` via:
 //
-//	HttpNamespaceArray{ HttpNamespaceArgs{...} }
+//          HttpNamespaceArray{ HttpNamespaceArgs{...} }
 type HttpNamespaceArrayInput interface {
 	pulumi.Input
 
@@ -194,7 +189,7 @@ func (i HttpNamespaceArray) ToHttpNamespaceArrayOutputWithContext(ctx context.Co
 // HttpNamespaceMapInput is an input type that accepts HttpNamespaceMap and HttpNamespaceMapOutput values.
 // You can construct a concrete instance of `HttpNamespaceMapInput` via:
 //
-//	HttpNamespaceMap{ "key": HttpNamespaceArgs{...} }
+//          HttpNamespaceMap{ "key": HttpNamespaceArgs{...} }
 type HttpNamespaceMapInput interface {
 	pulumi.Input
 

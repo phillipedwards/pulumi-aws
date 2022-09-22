@@ -20,9 +20,7 @@ import (
 // SSO Permission Sets can be imported using the `arn` and `instance_arn` separated by a comma (`,`) e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ssoadmin/permissionSet:PermissionSet example arn:aws:sso:::permissionSet/ssoins-2938j0x8920sbj72/ps-80383020jr9302rk,arn:aws:sso:::instance/ssoins-2938j0x8920sbj72
-//
+//  $ pulumi import aws:ssoadmin/permissionSet:PermissionSet example arn:aws:sso:::permissionSet/ssoins-2938j0x8920sbj72/ps-80383020jr9302rk,arn:aws:sso:::instance/ssoins-2938j0x8920sbj72
 // ```
 type PermissionSet struct {
 	pulumi.CustomResourceState
@@ -181,7 +179,7 @@ func (i *PermissionSet) ToPermissionSetOutputWithContext(ctx context.Context) Pe
 // PermissionSetArrayInput is an input type that accepts PermissionSetArray and PermissionSetArrayOutput values.
 // You can construct a concrete instance of `PermissionSetArrayInput` via:
 //
-//	PermissionSetArray{ PermissionSetArgs{...} }
+//          PermissionSetArray{ PermissionSetArgs{...} }
 type PermissionSetArrayInput interface {
 	pulumi.Input
 
@@ -206,7 +204,7 @@ func (i PermissionSetArray) ToPermissionSetArrayOutputWithContext(ctx context.Co
 // PermissionSetMapInput is an input type that accepts PermissionSetMap and PermissionSetMapOutput values.
 // You can construct a concrete instance of `PermissionSetMapInput` via:
 //
-//	PermissionSetMap{ "key": PermissionSetArgs{...} }
+//          PermissionSetMap{ "key": PermissionSetArgs{...} }
 type PermissionSetMapInput interface {
 	pulumi.Input
 

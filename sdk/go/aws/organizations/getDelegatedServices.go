@@ -18,24 +18,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/organizations"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/organizations"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := organizations.GetDelegatedServices(ctx, &organizations.GetDelegatedServicesArgs{
-//				AccountId: "AWS ACCOUNT ID",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := organizations.GetDelegatedServices(ctx, &organizations.GetDelegatedServicesArgs{
+// 			AccountId: "AWS ACCOUNT ID",
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func GetDelegatedServices(ctx *pulumi.Context, args *GetDelegatedServicesArgs, opts ...pulumi.InvokeOption) (*GetDelegatedServicesResult, error) {
 	var rv GetDelegatedServicesResult

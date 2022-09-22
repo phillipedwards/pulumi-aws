@@ -5,7 +5,6 @@
 from .. import _utilities
 import typing
 # Export this package's modules as members:
-from ._enums import *
 from .access_key import *
 from .account_alias import *
 from .account_password_policy import *
@@ -15,7 +14,6 @@ from .get_instance_profile import *
 from .get_instance_profiles import *
 from .get_openid_connect_provider import *
 from .get_policy import *
-from .get_policy_document import *
 from .get_role import *
 from .get_roles import *
 from .get_saml_provider import *

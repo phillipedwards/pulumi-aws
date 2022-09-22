@@ -19,35 +19,32 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := s3.NewObjectCopy(ctx, "test", &s3.ObjectCopyArgs{
-//				Bucket: pulumi.String("destination_bucket"),
-//				Grants: s3.ObjectCopyGrantArray{
-//					&s3.ObjectCopyGrantArgs{
-//						Permissions: pulumi.StringArray{
-//							pulumi.String("READ"),
-//						},
-//						Type: pulumi.String("Group"),
-//						Uri:  pulumi.String("http://acs.amazonaws.com/groups/global/AllUsers"),
-//					},
-//				},
-//				Key:    pulumi.String("destination_key"),
-//				Source: pulumi.String("source_bucket/source_key"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := s3.NewObjectCopy(ctx, "test", &s3.ObjectCopyArgs{
+// 			Bucket: pulumi.String("destination_bucket"),
+// 			Grants: s3.ObjectCopyGrantArray{
+// 				&s3.ObjectCopyGrantArgs{
+// 					Permissions: pulumi.StringArray{
+// 						pulumi.String("READ"),
+// 					},
+// 					Type: pulumi.String("Group"),
+// 					Uri:  pulumi.String("http://acs.amazonaws.com/groups/global/AllUsers"),
+// 				},
+// 			},
+// 			Key:    pulumi.String("destination_key"),
+// 			Source: pulumi.String("source_bucket/source_key"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type ObjectCopy struct {
 	pulumi.CustomResourceState
@@ -551,7 +548,7 @@ func (i *ObjectCopy) ToObjectCopyOutputWithContext(ctx context.Context) ObjectCo
 // ObjectCopyArrayInput is an input type that accepts ObjectCopyArray and ObjectCopyArrayOutput values.
 // You can construct a concrete instance of `ObjectCopyArrayInput` via:
 //
-//	ObjectCopyArray{ ObjectCopyArgs{...} }
+//          ObjectCopyArray{ ObjectCopyArgs{...} }
 type ObjectCopyArrayInput interface {
 	pulumi.Input
 
@@ -576,7 +573,7 @@ func (i ObjectCopyArray) ToObjectCopyArrayOutputWithContext(ctx context.Context)
 // ObjectCopyMapInput is an input type that accepts ObjectCopyMap and ObjectCopyMapOutput values.
 // You can construct a concrete instance of `ObjectCopyMapInput` via:
 //
-//	ObjectCopyMap{ "key": ObjectCopyArgs{...} }
+//          ObjectCopyMap{ "key": ObjectCopyArgs{...} }
 type ObjectCopyMapInput interface {
 	pulumi.Input
 

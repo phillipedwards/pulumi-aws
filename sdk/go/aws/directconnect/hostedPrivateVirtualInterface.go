@@ -20,27 +20,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/directconnect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := directconnect.NewHostedPrivateVirtualInterface(ctx, "foo", &directconnect.HostedPrivateVirtualInterfaceArgs{
-//				AddressFamily: pulumi.String("ipv4"),
-//				BgpAsn:        pulumi.Int(65352),
-//				ConnectionId:  pulumi.String("dxcon-zzzzzzzz"),
-//				Vlan:          pulumi.Int(4094),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := directconnect.NewHostedPrivateVirtualInterface(ctx, "foo", &directconnect.HostedPrivateVirtualInterfaceArgs{
+// 			AddressFamily: pulumi.String("ipv4"),
+// 			BgpAsn:        pulumi.Int(65352),
+// 			ConnectionId:  pulumi.String("dxcon-zzzzzzzz"),
+// 			Vlan:          pulumi.Int(4094),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -48,9 +45,7 @@ import (
 // Direct Connect hosted private virtual interfaces can be imported using the `vif id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:directconnect/hostedPrivateVirtualInterface:HostedPrivateVirtualInterface test dxvif-33cc44dd
-//
+//  $ pulumi import aws:directconnect/hostedPrivateVirtualInterface:HostedPrivateVirtualInterface test dxvif-33cc44dd
 // ```
 type HostedPrivateVirtualInterface struct {
 	pulumi.CustomResourceState
@@ -264,7 +259,7 @@ func (i *HostedPrivateVirtualInterface) ToHostedPrivateVirtualInterfaceOutputWit
 // HostedPrivateVirtualInterfaceArrayInput is an input type that accepts HostedPrivateVirtualInterfaceArray and HostedPrivateVirtualInterfaceArrayOutput values.
 // You can construct a concrete instance of `HostedPrivateVirtualInterfaceArrayInput` via:
 //
-//	HostedPrivateVirtualInterfaceArray{ HostedPrivateVirtualInterfaceArgs{...} }
+//          HostedPrivateVirtualInterfaceArray{ HostedPrivateVirtualInterfaceArgs{...} }
 type HostedPrivateVirtualInterfaceArrayInput interface {
 	pulumi.Input
 
@@ -289,7 +284,7 @@ func (i HostedPrivateVirtualInterfaceArray) ToHostedPrivateVirtualInterfaceArray
 // HostedPrivateVirtualInterfaceMapInput is an input type that accepts HostedPrivateVirtualInterfaceMap and HostedPrivateVirtualInterfaceMapOutput values.
 // You can construct a concrete instance of `HostedPrivateVirtualInterfaceMapInput` via:
 //
-//	HostedPrivateVirtualInterfaceMap{ "key": HostedPrivateVirtualInterfaceArgs{...} }
+//          HostedPrivateVirtualInterfaceMap{ "key": HostedPrivateVirtualInterfaceArgs{...} }
 type HostedPrivateVirtualInterfaceMapInput interface {
 	pulumi.Input
 

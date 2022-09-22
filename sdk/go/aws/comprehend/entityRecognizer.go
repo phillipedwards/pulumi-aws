@@ -18,58 +18,55 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/comprehend"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/comprehend"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			documents, err := s3.NewBucketObjectv2(ctx, "documents", nil)
-//			if err != nil {
-//				return err
-//			}
-//			entities, err := s3.NewBucketObjectv2(ctx, "entities", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = comprehend.NewEntityRecognizer(ctx, "example", &comprehend.EntityRecognizerArgs{
-//				DataAccessRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
-//				LanguageCode:      pulumi.String("en"),
-//				InputDataConfig: &comprehend.EntityRecognizerInputDataConfigArgs{
-//					EntityTypes: comprehend.EntityRecognizerInputDataConfigEntityTypeArray{
-//						&comprehend.EntityRecognizerInputDataConfigEntityTypeArgs{
-//							Type: pulumi.String("ENTITY_1"),
-//						},
-//						&comprehend.EntityRecognizerInputDataConfigEntityTypeArgs{
-//							Type: pulumi.String("ENTITY_2"),
-//						},
-//					},
-//					Documents: &comprehend.EntityRecognizerInputDataConfigDocumentsArgs{
-//						S3Uri: documents.ID().ApplyT(func(id string) (string, error) {
-//							return fmt.Sprintf("s3://%v/%v", aws_s3_bucket.Documents.Bucket, id), nil
-//						}).(pulumi.StringOutput),
-//					},
-//					EntityList: &comprehend.EntityRecognizerInputDataConfigEntityListArgs{
-//						S3Uri: entities.ID().ApplyT(func(id string) (string, error) {
-//							return fmt.Sprintf("s3://%v/%v", aws_s3_bucket.Entities.Bucket, id), nil
-//						}).(pulumi.StringOutput),
-//					},
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				aws_iam_role_policy.Example,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		documents, err := s3.NewBucketObjectv2(ctx, "documents", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		entities, err := s3.NewBucketObjectv2(ctx, "entities", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = comprehend.NewEntityRecognizer(ctx, "example", &comprehend.EntityRecognizerArgs{
+// 			DataAccessRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+// 			LanguageCode:      pulumi.String("en"),
+// 			InputDataConfig: &comprehend.EntityRecognizerInputDataConfigArgs{
+// 				EntityTypes: comprehend.EntityRecognizerInputDataConfigEntityTypeArray{
+// 					&comprehend.EntityRecognizerInputDataConfigEntityTypeArgs{
+// 						Type: pulumi.String("ENTITY_1"),
+// 					},
+// 					&comprehend.EntityRecognizerInputDataConfigEntityTypeArgs{
+// 						Type: pulumi.String("ENTITY_2"),
+// 					},
+// 				},
+// 				Documents: &comprehend.EntityRecognizerInputDataConfigDocumentsArgs{
+// 					S3Uri: documents.ID().ApplyT(func(id string) (string, error) {
+// 						return fmt.Sprintf("s3://%v/%v", aws_s3_bucket.Documents.Bucket, id), nil
+// 					}).(pulumi.StringOutput),
+// 				},
+// 				EntityList: &comprehend.EntityRecognizerInputDataConfigEntityListArgs{
+// 					S3Uri: entities.ID().ApplyT(func(id string) (string, error) {
+// 						return fmt.Sprintf("s3://%v/%v", aws_s3_bucket.Entities.Bucket, id), nil
+// 					}).(pulumi.StringOutput),
+// 				},
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			aws_iam_role_policy.Example,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -77,9 +74,7 @@ import (
 // Comprehend Entity Recognizer can be imported using the ARN, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:comprehend/entityRecognizer:EntityRecognizer example arn:aws:comprehend:us-west-2:123456789012:entity-recognizer/example
-//
+//  $ pulumi import aws:comprehend/entityRecognizer:EntityRecognizer example arn:aws:comprehend:us-west-2:123456789012:entity-recognizer/example
 // ```
 type EntityRecognizer struct {
 	pulumi.CustomResourceState
@@ -313,7 +308,7 @@ func (i *EntityRecognizer) ToEntityRecognizerOutputWithContext(ctx context.Conte
 // EntityRecognizerArrayInput is an input type that accepts EntityRecognizerArray and EntityRecognizerArrayOutput values.
 // You can construct a concrete instance of `EntityRecognizerArrayInput` via:
 //
-//	EntityRecognizerArray{ EntityRecognizerArgs{...} }
+//          EntityRecognizerArray{ EntityRecognizerArgs{...} }
 type EntityRecognizerArrayInput interface {
 	pulumi.Input
 
@@ -338,7 +333,7 @@ func (i EntityRecognizerArray) ToEntityRecognizerArrayOutputWithContext(ctx cont
 // EntityRecognizerMapInput is an input type that accepts EntityRecognizerMap and EntityRecognizerMapOutput values.
 // You can construct a concrete instance of `EntityRecognizerMapInput` via:
 //
-//	EntityRecognizerMap{ "key": EntityRecognizerArgs{...} }
+//          EntityRecognizerMap{ "key": EntityRecognizerArgs{...} }
 type EntityRecognizerMapInput interface {
 	pulumi.Input
 

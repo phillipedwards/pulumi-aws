@@ -19,37 +19,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/backup"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/backup"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := backup.NewReportPlan(ctx, "example", &backup.ReportPlanArgs{
-//				Description: pulumi.String("example description"),
-//				ReportDeliveryChannel: &backup.ReportPlanReportDeliveryChannelArgs{
-//					Formats: pulumi.StringArray{
-//						pulumi.String("CSV"),
-//						pulumi.String("JSON"),
-//					},
-//					S3BucketName: pulumi.String("example-bucket-name"),
-//				},
-//				ReportSetting: &backup.ReportPlanReportSettingArgs{
-//					ReportTemplate: pulumi.String("RESTORE_JOB_REPORT"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example Report Plan"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := backup.NewReportPlan(ctx, "example", &backup.ReportPlanArgs{
+// 			Description: pulumi.String("example description"),
+// 			ReportDeliveryChannel: &backup.ReportPlanReportDeliveryChannelArgs{
+// 				Formats: pulumi.StringArray{
+// 					pulumi.String("CSV"),
+// 					pulumi.String("JSON"),
+// 				},
+// 				S3BucketName: pulumi.String("example-bucket-name"),
+// 			},
+// 			ReportSetting: &backup.ReportPlanReportSettingArgs{
+// 				ReportTemplate: pulumi.String("RESTORE_JOB_REPORT"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example Report Plan"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -57,9 +54,7 @@ import (
 // Backup Report Plan can be imported using the `id` which corresponds to the name of the Backup Report Plan, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:backup/reportPlan:ReportPlan test <id>
-//
+//  $ pulumi import aws:backup/reportPlan:ReportPlan test <id>
 // ```
 type ReportPlan struct {
 	pulumi.CustomResourceState
@@ -217,7 +212,7 @@ func (i *ReportPlan) ToReportPlanOutputWithContext(ctx context.Context) ReportPl
 // ReportPlanArrayInput is an input type that accepts ReportPlanArray and ReportPlanArrayOutput values.
 // You can construct a concrete instance of `ReportPlanArrayInput` via:
 //
-//	ReportPlanArray{ ReportPlanArgs{...} }
+//          ReportPlanArray{ ReportPlanArgs{...} }
 type ReportPlanArrayInput interface {
 	pulumi.Input
 
@@ -242,7 +237,7 @@ func (i ReportPlanArray) ToReportPlanArrayOutputWithContext(ctx context.Context)
 // ReportPlanMapInput is an input type that accepts ReportPlanMap and ReportPlanMapOutput values.
 // You can construct a concrete instance of `ReportPlanMapInput` via:
 //
-//	ReportPlanMap{ "key": ReportPlanArgs{...} }
+//          ReportPlanMap{ "key": ReportPlanArgs{...} }
 type ReportPlanMapInput interface {
 	pulumi.Input
 

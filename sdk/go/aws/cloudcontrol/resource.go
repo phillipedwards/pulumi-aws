@@ -19,40 +19,37 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudcontrol"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudcontrol"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"ClusterName": "example",
-//				"Tags": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Key":   "CostCenter",
-//						"Value": "IT",
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			_, err = cloudcontrol.NewResource(ctx, "example", &cloudcontrol.ResourceArgs{
-//				TypeName:     pulumi.String("AWS::ECS::Cluster"),
-//				DesiredState: pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"ClusterName": "example",
+// 			"Tags": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Key":   "CostCenter",
+// 					"Value": "IT",
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		_, err = cloudcontrol.NewResource(ctx, "example", &cloudcontrol.ResourceArgs{
+// 			TypeName:     pulumi.String("AWS::ECS::Cluster"),
+// 			DesiredState: pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type Resource struct {
 	pulumi.CustomResourceState
@@ -184,7 +181,7 @@ func (i *Resource) ToResourceOutputWithContext(ctx context.Context) ResourceOutp
 // ResourceArrayInput is an input type that accepts ResourceArray and ResourceArrayOutput values.
 // You can construct a concrete instance of `ResourceArrayInput` via:
 //
-//	ResourceArray{ ResourceArgs{...} }
+//          ResourceArray{ ResourceArgs{...} }
 type ResourceArrayInput interface {
 	pulumi.Input
 
@@ -209,7 +206,7 @@ func (i ResourceArray) ToResourceArrayOutputWithContext(ctx context.Context) Res
 // ResourceMapInput is an input type that accepts ResourceMap and ResourceMapOutput values.
 // You can construct a concrete instance of `ResourceMapInput` via:
 //
-//	ResourceMap{ "key": ResourceArgs{...} }
+//          ResourceMap{ "key": ResourceArgs{...} }
 type ResourceMapInput interface {
 	pulumi.Input
 

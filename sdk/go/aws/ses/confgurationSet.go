@@ -18,22 +18,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ses"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ses"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ses.NewConfigurationSet(ctx, "test", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ses.NewConfigurationSet(ctx, "test", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Require TLS Connections
 //
@@ -41,26 +38,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ses"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ses"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ses.NewConfigurationSet(ctx, "test", &ses.ConfigurationSetArgs{
-//				DeliveryOptions: &ses.ConfigurationSetDeliveryOptionsArgs{
-//					TlsPolicy: pulumi.String("Require"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ses.NewConfigurationSet(ctx, "test", &ses.ConfigurationSetArgs{
+// 			DeliveryOptions: &ses.ConfigurationSetDeliveryOptionsArgs{
+// 				TlsPolicy: pulumi.String("Require"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -68,9 +62,7 @@ import (
 // SES Configuration Sets can be imported using their `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ses/confgurationSet:ConfgurationSet test some-configuration-set-test
-//
+//  $ pulumi import aws:ses/confgurationSet:ConfgurationSet test some-configuration-set-test
 // ```
 //
 // Deprecated: aws.ses.ConfgurationSet has been deprecated in favor of aws.ses.ConfigurationSet
@@ -212,7 +204,7 @@ func (i *ConfgurationSet) ToConfgurationSetOutputWithContext(ctx context.Context
 // ConfgurationSetArrayInput is an input type that accepts ConfgurationSetArray and ConfgurationSetArrayOutput values.
 // You can construct a concrete instance of `ConfgurationSetArrayInput` via:
 //
-//	ConfgurationSetArray{ ConfgurationSetArgs{...} }
+//          ConfgurationSetArray{ ConfgurationSetArgs{...} }
 type ConfgurationSetArrayInput interface {
 	pulumi.Input
 
@@ -237,7 +229,7 @@ func (i ConfgurationSetArray) ToConfgurationSetArrayOutputWithContext(ctx contex
 // ConfgurationSetMapInput is an input type that accepts ConfgurationSetMap and ConfgurationSetMapOutput values.
 // You can construct a concrete instance of `ConfgurationSetMapInput` via:
 //
-//	ConfgurationSetMap{ "key": ConfgurationSetArgs{...} }
+//          ConfgurationSetMap{ "key": ConfgurationSetArgs{...} }
 type ConfgurationSetMapInput interface {
 	pulumi.Input
 

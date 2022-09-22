@@ -19,32 +19,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleBucketV2, err := s3.NewBucketV2(ctx, "exampleBucketV2", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = s3.NewBucketPublicAccessBlock(ctx, "exampleBucketPublicAccessBlock", &s3.BucketPublicAccessBlockArgs{
-//				Bucket:                exampleBucketV2.ID(),
-//				BlockPublicAcls:       pulumi.Bool(true),
-//				BlockPublicPolicy:     pulumi.Bool(true),
-//				IgnorePublicAcls:      pulumi.Bool(true),
-//				RestrictPublicBuckets: pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleBucketV2, err := s3.NewBucketV2(ctx, "exampleBucketV2", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = s3.NewBucketPublicAccessBlock(ctx, "exampleBucketPublicAccessBlock", &s3.BucketPublicAccessBlockArgs{
+// 			Bucket:                exampleBucketV2.ID(),
+// 			BlockPublicAcls:       pulumi.Bool(true),
+// 			BlockPublicPolicy:     pulumi.Bool(true),
+// 			IgnorePublicAcls:      pulumi.Bool(true),
+// 			RestrictPublicBuckets: pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // `aws_s3_bucket_public_access_block` can be imported by using the bucket name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock example my-bucket
-//
+//  $ pulumi import aws:s3/bucketPublicAccessBlock:BucketPublicAccessBlock example my-bucket
 // ```
 type BucketPublicAccessBlock struct {
 	pulumi.CustomResourceState
@@ -210,7 +205,7 @@ func (i *BucketPublicAccessBlock) ToBucketPublicAccessBlockOutputWithContext(ctx
 // BucketPublicAccessBlockArrayInput is an input type that accepts BucketPublicAccessBlockArray and BucketPublicAccessBlockArrayOutput values.
 // You can construct a concrete instance of `BucketPublicAccessBlockArrayInput` via:
 //
-//	BucketPublicAccessBlockArray{ BucketPublicAccessBlockArgs{...} }
+//          BucketPublicAccessBlockArray{ BucketPublicAccessBlockArgs{...} }
 type BucketPublicAccessBlockArrayInput interface {
 	pulumi.Input
 
@@ -235,7 +230,7 @@ func (i BucketPublicAccessBlockArray) ToBucketPublicAccessBlockArrayOutputWithCo
 // BucketPublicAccessBlockMapInput is an input type that accepts BucketPublicAccessBlockMap and BucketPublicAccessBlockMapOutput values.
 // You can construct a concrete instance of `BucketPublicAccessBlockMapInput` via:
 //
-//	BucketPublicAccessBlockMap{ "key": BucketPublicAccessBlockArgs{...} }
+//          BucketPublicAccessBlockMap{ "key": BucketPublicAccessBlockArgs{...} }
 type BucketPublicAccessBlockMapInput interface {
 	pulumi.Input
 

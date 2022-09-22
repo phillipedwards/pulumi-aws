@@ -17,12 +17,10 @@ import (
 //
 // ## Import
 //
-// # DLM lifecycle policies can be imported by their policy ID
+// DLM lifecycle policies can be imported by their policy ID
 //
 // ```sh
-//
-//	$ pulumi import aws:dlm/lifecyclePolicy:LifecyclePolicy example policy-abcdef12345678901
-//
+//  $ pulumi import aws:dlm/lifecyclePolicy:LifecyclePolicy example policy-abcdef12345678901
 // ```
 type LifecyclePolicy struct {
 	pulumi.CustomResourceState
@@ -171,7 +169,7 @@ func (i *LifecyclePolicy) ToLifecyclePolicyOutputWithContext(ctx context.Context
 // LifecyclePolicyArrayInput is an input type that accepts LifecyclePolicyArray and LifecyclePolicyArrayOutput values.
 // You can construct a concrete instance of `LifecyclePolicyArrayInput` via:
 //
-//	LifecyclePolicyArray{ LifecyclePolicyArgs{...} }
+//          LifecyclePolicyArray{ LifecyclePolicyArgs{...} }
 type LifecyclePolicyArrayInput interface {
 	pulumi.Input
 
@@ -196,7 +194,7 @@ func (i LifecyclePolicyArray) ToLifecyclePolicyArrayOutputWithContext(ctx contex
 // LifecyclePolicyMapInput is an input type that accepts LifecyclePolicyMap and LifecyclePolicyMapOutput values.
 // You can construct a concrete instance of `LifecyclePolicyMapInput` via:
 //
-//	LifecyclePolicyMap{ "key": LifecyclePolicyArgs{...} }
+//          LifecyclePolicyMap{ "key": LifecyclePolicyArgs{...} }
 type LifecyclePolicyMapInput interface {
 	pulumi.Input
 

@@ -18,57 +18,54 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appstream"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appstream"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appstream.NewStack(ctx, "example", &appstream.StackArgs{
-//				ApplicationSettings: &appstream.StackApplicationSettingsArgs{
-//					Enabled:       pulumi.Bool(true),
-//					SettingsGroup: pulumi.String("SettingsGroup"),
-//				},
-//				Description: pulumi.String("stack description"),
-//				DisplayName: pulumi.String("stack display name"),
-//				FeedbackUrl: pulumi.String("http://your-domain/feedback"),
-//				RedirectUrl: pulumi.String("http://your-domain/redirect"),
-//				StorageConnectors: appstream.StackStorageConnectorArray{
-//					&appstream.StackStorageConnectorArgs{
-//						ConnectorType: pulumi.String("HOMEFOLDERS"),
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"TagName": pulumi.String("TagValue"),
-//				},
-//				UserSettings: appstream.StackUserSettingArray{
-//					&appstream.StackUserSettingArgs{
-//						Action:     pulumi.String("CLIPBOARD_COPY_FROM_LOCAL_DEVICE"),
-//						Permission: pulumi.String("ENABLED"),
-//					},
-//					&appstream.StackUserSettingArgs{
-//						Action:     pulumi.String("CLIPBOARD_COPY_TO_LOCAL_DEVICE"),
-//						Permission: pulumi.String("ENABLED"),
-//					},
-//					&appstream.StackUserSettingArgs{
-//						Action:     pulumi.String("FILE_UPLOAD"),
-//						Permission: pulumi.String("ENABLED"),
-//					},
-//					&appstream.StackUserSettingArgs{
-//						Action:     pulumi.String("FILE_DOWNLOAD"),
-//						Permission: pulumi.String("ENABLED"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appstream.NewStack(ctx, "example", &appstream.StackArgs{
+// 			ApplicationSettings: &appstream.StackApplicationSettingsArgs{
+// 				Enabled:       pulumi.Bool(true),
+// 				SettingsGroup: pulumi.String("SettingsGroup"),
+// 			},
+// 			Description: pulumi.String("stack description"),
+// 			DisplayName: pulumi.String("stack display name"),
+// 			FeedbackUrl: pulumi.String("http://your-domain/feedback"),
+// 			RedirectUrl: pulumi.String("http://your-domain/redirect"),
+// 			StorageConnectors: appstream.StackStorageConnectorArray{
+// 				&appstream.StackStorageConnectorArgs{
+// 					ConnectorType: pulumi.String("HOMEFOLDERS"),
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"TagName": pulumi.String("TagValue"),
+// 			},
+// 			UserSettings: appstream.StackUserSettingArray{
+// 				&appstream.StackUserSettingArgs{
+// 					Action:     pulumi.String("CLIPBOARD_COPY_FROM_LOCAL_DEVICE"),
+// 					Permission: pulumi.String("ENABLED"),
+// 				},
+// 				&appstream.StackUserSettingArgs{
+// 					Action:     pulumi.String("CLIPBOARD_COPY_TO_LOCAL_DEVICE"),
+// 					Permission: pulumi.String("ENABLED"),
+// 				},
+// 				&appstream.StackUserSettingArgs{
+// 					Action:     pulumi.String("FILE_UPLOAD"),
+// 					Permission: pulumi.String("ENABLED"),
+// 				},
+// 				&appstream.StackUserSettingArgs{
+// 					Action:     pulumi.String("FILE_DOWNLOAD"),
+// 					Permission: pulumi.String("ENABLED"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -76,9 +73,7 @@ import (
 // `aws_appstream_stack` can be imported using the id, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:appstream/stack:Stack example stackID
-//
+//  $ pulumi import aws:appstream/stack:Stack example stackID
 // ```
 type Stack struct {
 	pulumi.CustomResourceState
@@ -276,7 +271,7 @@ func (i *Stack) ToStackOutputWithContext(ctx context.Context) StackOutput {
 // StackArrayInput is an input type that accepts StackArray and StackArrayOutput values.
 // You can construct a concrete instance of `StackArrayInput` via:
 //
-//	StackArray{ StackArgs{...} }
+//          StackArray{ StackArgs{...} }
 type StackArrayInput interface {
 	pulumi.Input
 
@@ -301,7 +296,7 @@ func (i StackArray) ToStackArrayOutputWithContext(ctx context.Context) StackArra
 // StackMapInput is an input type that accepts StackMap and StackMapOutput values.
 // You can construct a concrete instance of `StackMapInput` via:
 //
-//	StackMap{ "key": StackArgs{...} }
+//          StackMap{ "key": StackArgs{...} }
 type StackMapInput interface {
 	pulumi.Input
 

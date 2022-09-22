@@ -19,65 +19,60 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/kms"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/kms"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			key, err := kms.NewKey(ctx, "key", nil)
-//			if err != nil {
-//				return err
-//			}
-//			role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
-//	  "Version": "2012-10-17",
-//	  "Statement": [
-//	    {
-//	      "Action": "sts:AssumeRole",
-//	      "Principal": {
-//	        "Service": "lambda.amazonaws.com"
-//	      },
-//	      "Effect": "Allow",
-//	      "Sid": ""
-//	    }
-//	  ]
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		key, err := kms.NewKey(ctx, "key", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
+//   "Version": "2012-10-17",
+//   "Statement": [
+//     {
+//       "Action": "sts:AssumeRole",
+//       "Principal": {
+//         "Service": "lambda.amazonaws.com"
+//       },
+//       "Effect": "Allow",
+//       "Sid": ""
+//     }
+//   ]
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = kms.NewGrant(ctx, "grant", &kms.GrantArgs{
-//				KeyId:            key.KeyId,
-//				GranteePrincipal: role.Arn,
-//				Operations: pulumi.StringArray{
-//					pulumi.String("Encrypt"),
-//					pulumi.String("Decrypt"),
-//					pulumi.String("GenerateDataKey"),
-//				},
-//				Constraints: kms.GrantConstraintArray{
-//					&kms.GrantConstraintArgs{
-//						EncryptionContextEquals: pulumi.StringMap{
-//							"Department": pulumi.String("Finance"),
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = kms.NewGrant(ctx, "grant", &kms.GrantArgs{
+// 			KeyId:            key.KeyId,
+// 			GranteePrincipal: role.Arn,
+// 			Operations: pulumi.StringArray{
+// 				pulumi.String("Encrypt"),
+// 				pulumi.String("Decrypt"),
+// 				pulumi.String("GenerateDataKey"),
+// 			},
+// 			Constraints: kms.GrantConstraintArray{
+// 				&kms.GrantConstraintArgs{
+// 					EncryptionContextEquals: pulumi.StringMap{
+// 						"Department": pulumi.String("Finance"),
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -85,9 +80,7 @@ import (
 // KMS Grants can be imported using the Key ID and Grant ID separated by a colon (`:`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:kms/grant:Grant test 1234abcd-12ab-34cd-56ef-1234567890ab:abcde1237f76e4ba7987489ac329fbfba6ad343d6f7075dbd1ef191f0120514
-//
+//  $ pulumi import aws:kms/grant:Grant test 1234abcd-12ab-34cd-56ef-1234567890ab:abcde1237f76e4ba7987489ac329fbfba6ad343d6f7075dbd1ef191f0120514
 // ```
 type Grant struct {
 	pulumi.CustomResourceState
@@ -271,7 +264,7 @@ func (i *Grant) ToGrantOutputWithContext(ctx context.Context) GrantOutput {
 // GrantArrayInput is an input type that accepts GrantArray and GrantArrayOutput values.
 // You can construct a concrete instance of `GrantArrayInput` via:
 //
-//	GrantArray{ GrantArgs{...} }
+//          GrantArray{ GrantArgs{...} }
 type GrantArrayInput interface {
 	pulumi.Input
 
@@ -296,7 +289,7 @@ func (i GrantArray) ToGrantArrayOutputWithContext(ctx context.Context) GrantArra
 // GrantMapInput is an input type that accepts GrantMap and GrantMapOutput values.
 // You can construct a concrete instance of `GrantMapInput` via:
 //
-//	GrantMap{ "key": GrantArgs{...} }
+//          GrantMap{ "key": GrantArgs{...} }
 type GrantMapInput interface {
 	pulumi.Input
 

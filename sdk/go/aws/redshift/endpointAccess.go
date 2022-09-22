@@ -19,26 +19,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := redshift.NewEndpointAccess(ctx, "example", &redshift.EndpointAccessArgs{
-//				EndpointName:      pulumi.String("example"),
-//				SubnetGroupName:   pulumi.Any(aws_redshift_subnet_group.Example.Id),
-//				ClusterIdentifier: pulumi.Any(aws_redshift_cluster.Example.Cluster_identifier),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := redshift.NewEndpointAccess(ctx, "example", &redshift.EndpointAccessArgs{
+// 			EndpointName:      pulumi.String("example"),
+// 			SubnetGroupName:   pulumi.Any(aws_redshift_subnet_group.Example.Id),
+// 			ClusterIdentifier: pulumi.Any(aws_redshift_cluster.Example.Cluster_identifier),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // Redshift endpoint access can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:redshift/endpointAccess:EndpointAccess example example
-//
+//  $ pulumi import aws:redshift/endpointAccess:EndpointAccess example example
 // ```
 type EndpointAccess struct {
 	pulumi.CustomResourceState
@@ -203,7 +198,7 @@ func (i *EndpointAccess) ToEndpointAccessOutputWithContext(ctx context.Context) 
 // EndpointAccessArrayInput is an input type that accepts EndpointAccessArray and EndpointAccessArrayOutput values.
 // You can construct a concrete instance of `EndpointAccessArrayInput` via:
 //
-//	EndpointAccessArray{ EndpointAccessArgs{...} }
+//          EndpointAccessArray{ EndpointAccessArgs{...} }
 type EndpointAccessArrayInput interface {
 	pulumi.Input
 
@@ -228,7 +223,7 @@ func (i EndpointAccessArray) ToEndpointAccessArrayOutputWithContext(ctx context.
 // EndpointAccessMapInput is an input type that accepts EndpointAccessMap and EndpointAccessMapOutput values.
 // You can construct a concrete instance of `EndpointAccessMapInput` via:
 //
-//	EndpointAccessMap{ "key": EndpointAccessArgs{...} }
+//          EndpointAccessMap{ "key": EndpointAccessArgs{...} }
 type EndpointAccessMapInput interface {
 	pulumi.Input
 

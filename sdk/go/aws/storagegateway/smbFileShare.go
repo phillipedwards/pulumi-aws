@@ -22,27 +22,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/storagegateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := storagegateway.NewSmbFileShare(ctx, "example", &storagegateway.SmbFileShareArgs{
-//				Authentication: pulumi.String("ActiveDirectory"),
-//				GatewayArn:     pulumi.Any(aws_storagegateway_gateway.Example.Arn),
-//				LocationArn:    pulumi.Any(aws_s3_bucket.Example.Arn),
-//				RoleArn:        pulumi.Any(aws_iam_role.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := storagegateway.NewSmbFileShare(ctx, "example", &storagegateway.SmbFileShareArgs{
+// 			Authentication: pulumi.String("ActiveDirectory"),
+// 			GatewayArn:     pulumi.Any(aws_storagegateway_gateway.Example.Arn),
+// 			LocationArn:    pulumi.Any(aws_s3_bucket.Example.Arn),
+// 			RoleArn:        pulumi.Any(aws_iam_role.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Guest Authentication
 //
@@ -52,27 +49,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/storagegateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := storagegateway.NewSmbFileShare(ctx, "example", &storagegateway.SmbFileShareArgs{
-//				Authentication: pulumi.String("GuestAccess"),
-//				GatewayArn:     pulumi.Any(aws_storagegateway_gateway.Example.Arn),
-//				LocationArn:    pulumi.Any(aws_s3_bucket.Example.Arn),
-//				RoleArn:        pulumi.Any(aws_iam_role.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := storagegateway.NewSmbFileShare(ctx, "example", &storagegateway.SmbFileShareArgs{
+// 			Authentication: pulumi.String("GuestAccess"),
+// 			GatewayArn:     pulumi.Any(aws_storagegateway_gateway.Example.Arn),
+// 			LocationArn:    pulumi.Any(aws_s3_bucket.Example.Arn),
+// 			RoleArn:        pulumi.Any(aws_iam_role.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -80,9 +74,7 @@ import (
 // `aws_storagegateway_smb_file_share` can be imported by using the SMB File Share Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:storagegateway/smbFileShare:SmbFileShare example arn:aws:storagegateway:us-east-1:123456789012:share/share-12345678
-//
+//  $ pulumi import aws:storagegateway/smbFileShare:SmbFileShare example arn:aws:storagegateway:us-east-1:123456789012:share/share-12345678
 // ```
 type SmbFileShare struct {
 	pulumi.CustomResourceState
@@ -443,7 +435,7 @@ func (i *SmbFileShare) ToSmbFileShareOutputWithContext(ctx context.Context) SmbF
 // SmbFileShareArrayInput is an input type that accepts SmbFileShareArray and SmbFileShareArrayOutput values.
 // You can construct a concrete instance of `SmbFileShareArrayInput` via:
 //
-//	SmbFileShareArray{ SmbFileShareArgs{...} }
+//          SmbFileShareArray{ SmbFileShareArgs{...} }
 type SmbFileShareArrayInput interface {
 	pulumi.Input
 
@@ -468,7 +460,7 @@ func (i SmbFileShareArray) ToSmbFileShareArrayOutputWithContext(ctx context.Cont
 // SmbFileShareMapInput is an input type that accepts SmbFileShareMap and SmbFileShareMapOutput values.
 // You can construct a concrete instance of `SmbFileShareMapInput` via:
 //
-//	SmbFileShareMap{ "key": SmbFileShareArgs{...} }
+//          SmbFileShareMap{ "key": SmbFileShareArgs{...} }
 type SmbFileShareMapInput interface {
 	pulumi.Input
 

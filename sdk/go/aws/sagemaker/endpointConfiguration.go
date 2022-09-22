@@ -21,34 +21,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sagemaker.NewEndpointConfiguration(ctx, "ec", &sagemaker.EndpointConfigurationArgs{
-//				ProductionVariants: sagemaker.EndpointConfigurationProductionVariantArray{
-//					&sagemaker.EndpointConfigurationProductionVariantArgs{
-//						VariantName:          pulumi.String("variant-1"),
-//						ModelName:            pulumi.Any(aws_sagemaker_model.M.Name),
-//						InitialInstanceCount: pulumi.Int(1),
-//						InstanceType:         pulumi.String("ml.t2.medium"),
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("foo"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sagemaker.NewEndpointConfiguration(ctx, "ec", &sagemaker.EndpointConfigurationArgs{
+// 			ProductionVariants: sagemaker.EndpointConfigurationProductionVariantArray{
+// 				&sagemaker.EndpointConfigurationProductionVariantArgs{
+// 					VariantName:          pulumi.String("variant-1"),
+// 					ModelName:            pulumi.Any(aws_sagemaker_model.M.Name),
+// 					InitialInstanceCount: pulumi.Int(1),
+// 					InstanceType:         pulumi.String("ml.t2.medium"),
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("foo"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -56,9 +53,7 @@ import (
 // Endpoint configurations can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/endpointConfiguration:EndpointConfiguration test_endpoint_config endpoint-config-foo
-//
+//  $ pulumi import aws:sagemaker/endpointConfiguration:EndpointConfiguration test_endpoint_config endpoint-config-foo
 // ```
 type EndpointConfiguration struct {
 	pulumi.CustomResourceState
@@ -211,7 +206,7 @@ func (i *EndpointConfiguration) ToEndpointConfigurationOutputWithContext(ctx con
 // EndpointConfigurationArrayInput is an input type that accepts EndpointConfigurationArray and EndpointConfigurationArrayOutput values.
 // You can construct a concrete instance of `EndpointConfigurationArrayInput` via:
 //
-//	EndpointConfigurationArray{ EndpointConfigurationArgs{...} }
+//          EndpointConfigurationArray{ EndpointConfigurationArgs{...} }
 type EndpointConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -236,7 +231,7 @@ func (i EndpointConfigurationArray) ToEndpointConfigurationArrayOutputWithContex
 // EndpointConfigurationMapInput is an input type that accepts EndpointConfigurationMap and EndpointConfigurationMapOutput values.
 // You can construct a concrete instance of `EndpointConfigurationMapInput` via:
 //
-//	EndpointConfigurationMap{ "key": EndpointConfigurationArgs{...} }
+//          EndpointConfigurationMap{ "key": EndpointConfigurationArgs{...} }
 type EndpointConfigurationMapInput interface {
 	pulumi.Input
 

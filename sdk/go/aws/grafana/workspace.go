@@ -20,55 +20,52 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/grafana"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/grafana"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": "sts:AssumeRole",
-//						"Effect": "Allow",
-//						"Sid":    "",
-//						"Principal": map[string]interface{}{
-//							"Service": "grafana.amazonaws.com",
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			assume, err := iam.NewRole(ctx, "assume", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = grafana.NewWorkspace(ctx, "example", &grafana.WorkspaceArgs{
-//				AccountAccessType: pulumi.String("CURRENT_ACCOUNT"),
-//				AuthenticationProviders: pulumi.StringArray{
-//					pulumi.String("SAML"),
-//				},
-//				PermissionType: pulumi.String("SERVICE_MANAGED"),
-//				RoleArn:        assume.Arn,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": "sts:AssumeRole",
+// 					"Effect": "Allow",
+// 					"Sid":    "",
+// 					"Principal": map[string]interface{}{
+// 						"Service": "grafana.amazonaws.com",
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		assume, err := iam.NewRole(ctx, "assume", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = grafana.NewWorkspace(ctx, "example", &grafana.WorkspaceArgs{
+// 			AccountAccessType: pulumi.String("CURRENT_ACCOUNT"),
+// 			AuthenticationProviders: pulumi.StringArray{
+// 				pulumi.String("SAML"),
+// 			},
+// 			PermissionType: pulumi.String("SERVICE_MANAGED"),
+// 			RoleArn:        assume.Arn,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -76,9 +73,7 @@ import (
 // Grafana Workspace can be imported using the workspace's `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:grafana/workspace:Workspace example g-2054c75a02
-//
+//  $ pulumi import aws:grafana/workspace:Workspace example g-2054c75a02
 // ```
 type Workspace struct {
 	pulumi.CustomResourceState
@@ -309,7 +304,7 @@ func (i *Workspace) ToWorkspaceOutputWithContext(ctx context.Context) WorkspaceO
 // WorkspaceArrayInput is an input type that accepts WorkspaceArray and WorkspaceArrayOutput values.
 // You can construct a concrete instance of `WorkspaceArrayInput` via:
 //
-//	WorkspaceArray{ WorkspaceArgs{...} }
+//          WorkspaceArray{ WorkspaceArgs{...} }
 type WorkspaceArrayInput interface {
 	pulumi.Input
 
@@ -334,7 +329,7 @@ func (i WorkspaceArray) ToWorkspaceArrayOutputWithContext(ctx context.Context) W
 // WorkspaceMapInput is an input type that accepts WorkspaceMap and WorkspaceMapOutput values.
 // You can construct a concrete instance of `WorkspaceMapInput` via:
 //
-//	WorkspaceMap{ "key": WorkspaceArgs{...} }
+//          WorkspaceMap{ "key": WorkspaceArgs{...} }
 type WorkspaceMapInput interface {
 	pulumi.Input
 

@@ -20,32 +20,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/devicefarm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/devicefarm"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := devicefarm.NewInstanceProfile(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := devicefarm.NewInstanceProfile(ctx, "example", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # DeviceFarm Instance Profiles can be imported by their arn
+// DeviceFarm Instance Profiles can be imported by their arn
 //
 // ```sh
-//
-//	$ pulumi import aws:devicefarm/instanceProfile:InstanceProfile example arn:aws:devicefarm:us-west-2:123456789012:instanceprofile:4fa784c7-ccb4-4dbf-ba4f-02198320daa1
-//
+//  $ pulumi import aws:devicefarm/instanceProfile:InstanceProfile example arn:aws:devicefarm:us-west-2:123456789012:instanceprofile:4fa784c7-ccb4-4dbf-ba4f-02198320daa1
 // ```
 type InstanceProfile struct {
 	pulumi.CustomResourceState
@@ -195,7 +190,7 @@ func (i *InstanceProfile) ToInstanceProfileOutputWithContext(ctx context.Context
 // InstanceProfileArrayInput is an input type that accepts InstanceProfileArray and InstanceProfileArrayOutput values.
 // You can construct a concrete instance of `InstanceProfileArrayInput` via:
 //
-//	InstanceProfileArray{ InstanceProfileArgs{...} }
+//          InstanceProfileArray{ InstanceProfileArgs{...} }
 type InstanceProfileArrayInput interface {
 	pulumi.Input
 
@@ -220,7 +215,7 @@ func (i InstanceProfileArray) ToInstanceProfileArrayOutputWithContext(ctx contex
 // InstanceProfileMapInput is an input type that accepts InstanceProfileMap and InstanceProfileMapOutput values.
 // You can construct a concrete instance of `InstanceProfileMapInput` via:
 //
-//	InstanceProfileMap{ "key": InstanceProfileArgs{...} }
+//          InstanceProfileMap{ "key": InstanceProfileArgs{...} }
 type InstanceProfileMapInput interface {
 	pulumi.Input
 

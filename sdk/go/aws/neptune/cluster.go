@@ -26,30 +26,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/neptune"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/neptune"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := neptune.NewCluster(ctx, "default", &neptune.ClusterArgs{
-//				ApplyImmediately:                 pulumi.Bool(true),
-//				BackupRetentionPeriod:            pulumi.Int(5),
-//				ClusterIdentifier:                pulumi.String("neptune-cluster-demo"),
-//				Engine:                           pulumi.String("neptune"),
-//				IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
-//				PreferredBackupWindow:            pulumi.String("07:00-09:00"),
-//				SkipFinalSnapshot:                pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := neptune.NewCluster(ctx, "default", &neptune.ClusterArgs{
+// 			ApplyImmediately:                 pulumi.Bool(true),
+// 			BackupRetentionPeriod:            pulumi.Int(5),
+// 			ClusterIdentifier:                pulumi.String("neptune-cluster-demo"),
+// 			Engine:                           pulumi.String("neptune"),
+// 			IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
+// 			PreferredBackupWindow:            pulumi.String("07:00-09:00"),
+// 			SkipFinalSnapshot:                pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // > **Note:** AWS Neptune does not support user name/password–based access control.
@@ -60,9 +57,7 @@ import (
 // `aws_neptune_cluster` can be imported by using the cluster identifier, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:neptune/cluster:Cluster example my-cluster
-//
+//  $ pulumi import aws:neptune/cluster:Cluster example my-cluster
 // ```
 type Cluster struct {
 	pulumi.CustomResourceState
@@ -442,7 +437,7 @@ func (i *Cluster) ToClusterOutputWithContext(ctx context.Context) ClusterOutput 
 // ClusterArrayInput is an input type that accepts ClusterArray and ClusterArrayOutput values.
 // You can construct a concrete instance of `ClusterArrayInput` via:
 //
-//	ClusterArray{ ClusterArgs{...} }
+//          ClusterArray{ ClusterArgs{...} }
 type ClusterArrayInput interface {
 	pulumi.Input
 
@@ -467,7 +462,7 @@ func (i ClusterArray) ToClusterArrayOutputWithContext(ctx context.Context) Clust
 // ClusterMapInput is an input type that accepts ClusterMap and ClusterMapOutput values.
 // You can construct a concrete instance of `ClusterMapInput` via:
 //
-//	ClusterMap{ "key": ClusterArgs{...} }
+//          ClusterMap{ "key": ClusterArgs{...} }
 type ClusterMapInput interface {
 	pulumi.Input
 

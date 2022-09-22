@@ -21,27 +21,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lakeformation"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/lakeformation"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := lakeformation.LookupPermissions(ctx, &lakeformation.LookupPermissionsArgs{
-//				Principal: aws_iam_role.Workflow_role.Arn,
-//				DataLocation: lakeformation.GetPermissionsDataLocation{
-//					Arn: aws_lakeformation_resource.Test.Arn,
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := lakeformation.LookupPermissions(ctx, &lakeformation.LookupPermissionsArgs{
+// 			Principal: aws_iam_role.Workflow_role.Arn,
+// 			DataLocation: lakeformation.GetPermissionsDataLocation{
+// 				Arn: aws_lakeformation_resource.Test.Arn,
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Permissions For A Glue Catalog Database
 //
@@ -49,28 +46,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lakeformation"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/lakeformation"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := lakeformation.LookupPermissions(ctx, &lakeformation.LookupPermissionsArgs{
-//				Principal: aws_iam_role.Workflow_role.Arn,
-//				Database: lakeformation.GetPermissionsDatabase{
-//					Name:      aws_glue_catalog_database.Test.Name,
-//					CatalogId: "110376042874",
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := lakeformation.LookupPermissions(ctx, &lakeformation.LookupPermissionsArgs{
+// 			Principal: aws_iam_role.Workflow_role.Arn,
+// 			Database: lakeformation.GetPermissionsDatabase{
+// 				Name:      aws_glue_catalog_database.Test.Name,
+// 				CatalogId: "110376042874",
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Permissions For Tag-Based Access Control
 //
@@ -78,42 +72,39 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lakeformation"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/lakeformation"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := lakeformation.LookupPermissions(ctx, &lakeformation.LookupPermissionsArgs{
-//				Principal: aws_iam_role.Workflow_role.Arn,
-//				LfTagPolicy: lakeformation.GetPermissionsLfTagPolicy{
-//					ResourceType: "DATABASE",
-//					Expressions: []lakeformation.GetPermissionsLfTagPolicyExpression{
-//						lakeformation.GetPermissionsLfTagPolicyExpression{
-//							Key: "Team",
-//							Values: []string{
-//								"Sales",
-//							},
-//						},
-//						lakeformation.GetPermissionsLfTagPolicyExpression{
-//							Key: "Environment",
-//							Values: []string{
-//								"Dev",
-//								"Production",
-//							},
-//						},
-//					},
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := lakeformation.LookupPermissions(ctx, &lakeformation.LookupPermissionsArgs{
+// 			Principal: aws_iam_role.Workflow_role.Arn,
+// 			LfTagPolicy: lakeformation.GetPermissionsLfTagPolicy{
+// 				ResourceType: "DATABASE",
+// 				Expressions: []lakeformation.GetPermissionsLfTagPolicyExpression{
+// 					lakeformation.GetPermissionsLfTagPolicyExpression{
+// 						Key: "Team",
+// 						Values: []string{
+// 							"Sales",
+// 						},
+// 					},
+// 					lakeformation.GetPermissionsLfTagPolicyExpression{
+// 						Key: "Environment",
+// 						Values: []string{
+// 							"Dev",
+// 							"Production",
+// 						},
+// 					},
+// 				},
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func LookupPermissions(ctx *pulumi.Context, args *LookupPermissionsArgs, opts ...pulumi.InvokeOption) (*LookupPermissionsResult, error) {
 	var rv LookupPermissionsResult

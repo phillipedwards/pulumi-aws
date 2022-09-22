@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dataexchange"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/dataexchange"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := dataexchange.NewRevision(ctx, "example", &dataexchange.RevisionArgs{
-//				DataSetId: pulumi.Any(aws_dataexchange_data_set.Example.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := dataexchange.NewRevision(ctx, "example", &dataexchange.RevisionArgs{
+// 			DataSetId: pulumi.Any(aws_dataexchange_data_set.Example.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // DataExchange Revisions can be imported by their `data-set-id:revision-id`
 //
 // ```sh
-//
-//	$ pulumi import aws:dataexchange/revision:Revision example 4fa784c7-ccb4-4dbf-ba4f-02198320daa1:4fa784c7-ccb4-4dbf-ba4f-02198320daa1
-//
+//  $ pulumi import aws:dataexchange/revision:Revision example 4fa784c7-ccb4-4dbf-ba4f-02198320daa1:4fa784c7-ccb4-4dbf-ba4f-02198320daa1
 // ```
 type Revision struct {
 	pulumi.CustomResourceState
@@ -175,7 +170,7 @@ func (i *Revision) ToRevisionOutputWithContext(ctx context.Context) RevisionOutp
 // RevisionArrayInput is an input type that accepts RevisionArray and RevisionArrayOutput values.
 // You can construct a concrete instance of `RevisionArrayInput` via:
 //
-//	RevisionArray{ RevisionArgs{...} }
+//          RevisionArray{ RevisionArgs{...} }
 type RevisionArrayInput interface {
 	pulumi.Input
 
@@ -200,7 +195,7 @@ func (i RevisionArray) ToRevisionArrayOutputWithContext(ctx context.Context) Rev
 // RevisionMapInput is an input type that accepts RevisionMap and RevisionMapOutput values.
 // You can construct a concrete instance of `RevisionMapInput` via:
 //
-//	RevisionMap{ "key": RevisionArgs{...} }
+//          RevisionMap{ "key": RevisionArgs{...} }
 type RevisionMapInput interface {
 	pulumi.Input
 

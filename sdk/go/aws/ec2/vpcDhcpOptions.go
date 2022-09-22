@@ -20,27 +20,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewVpcDhcpOptions(ctx, "dnsResolver", &ec2.VpcDhcpOptionsArgs{
-//				DomainNameServers: pulumi.StringArray{
-//					pulumi.String("8.8.8.8"),
-//					pulumi.String("8.8.4.4"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewVpcDhcpOptions(ctx, "dnsResolver", &ec2.VpcDhcpOptionsArgs{
+// 			DomainNameServers: pulumi.StringArray{
+// 				pulumi.String("8.8.8.8"),
+// 				pulumi.String("8.8.4.4"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // Full usage:
@@ -49,38 +46,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewVpcDhcpOptions(ctx, "foo", &ec2.VpcDhcpOptionsArgs{
-//				DomainName: pulumi.String("service.consul"),
-//				DomainNameServers: pulumi.StringArray{
-//					pulumi.String("127.0.0.1"),
-//					pulumi.String("10.0.0.2"),
-//				},
-//				NetbiosNameServers: pulumi.StringArray{
-//					pulumi.String("127.0.0.1"),
-//				},
-//				NetbiosNodeType: pulumi.String("2"),
-//				NtpServers: pulumi.StringArray{
-//					pulumi.String("127.0.0.1"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("foo-name"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewVpcDhcpOptions(ctx, "foo", &ec2.VpcDhcpOptionsArgs{
+// 			DomainName: pulumi.String("service.consul"),
+// 			DomainNameServers: pulumi.StringArray{
+// 				pulumi.String("127.0.0.1"),
+// 				pulumi.String("10.0.0.2"),
+// 			},
+// 			NetbiosNameServers: pulumi.StringArray{
+// 				pulumi.String("127.0.0.1"),
+// 			},
+// 			NetbiosNodeType: pulumi.String("2"),
+// 			NtpServers: pulumi.StringArray{
+// 				pulumi.String("127.0.0.1"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("foo-name"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ## Remarks
 //
@@ -95,9 +89,7 @@ import (
 // VPC DHCP Options can be imported using the `dhcp options id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/vpcDhcpOptions:VpcDhcpOptions my_options dopt-d9070ebb
-//
+//  $ pulumi import aws:ec2/vpcDhcpOptions:VpcDhcpOptions my_options dopt-d9070ebb
 // ```
 type VpcDhcpOptions struct {
 	pulumi.CustomResourceState
@@ -253,7 +245,7 @@ func (i *VpcDhcpOptions) ToVpcDhcpOptionsOutputWithContext(ctx context.Context) 
 // VpcDhcpOptionsArrayInput is an input type that accepts VpcDhcpOptionsArray and VpcDhcpOptionsArrayOutput values.
 // You can construct a concrete instance of `VpcDhcpOptionsArrayInput` via:
 //
-//	VpcDhcpOptionsArray{ VpcDhcpOptionsArgs{...} }
+//          VpcDhcpOptionsArray{ VpcDhcpOptionsArgs{...} }
 type VpcDhcpOptionsArrayInput interface {
 	pulumi.Input
 
@@ -278,7 +270,7 @@ func (i VpcDhcpOptionsArray) ToVpcDhcpOptionsArrayOutputWithContext(ctx context.
 // VpcDhcpOptionsMapInput is an input type that accepts VpcDhcpOptionsMap and VpcDhcpOptionsMapOutput values.
 // You can construct a concrete instance of `VpcDhcpOptionsMapInput` via:
 //
-//	VpcDhcpOptionsMap{ "key": VpcDhcpOptionsArgs{...} }
+//          VpcDhcpOptionsMap{ "key": VpcDhcpOptionsArgs{...} }
 type VpcDhcpOptionsMapInput interface {
 	pulumi.Input
 

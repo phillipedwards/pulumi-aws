@@ -18,56 +18,53 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dynamodb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := aws.NewProvider(ctx, "main", &aws.ProviderArgs{
-//				Region: pulumi.String("us-west-2"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = aws.NewProvider(ctx, "alt", &aws.ProviderArgs{
-//				Region: pulumi.String("us-east-2"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleTable, err := dynamodb.NewTable(ctx, "exampleTable", &dynamodb.TableArgs{
-//				HashKey:        pulumi.String("BrodoBaggins"),
-//				BillingMode:    pulumi.String("PAY_PER_REQUEST"),
-//				StreamEnabled:  pulumi.Bool(true),
-//				StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
-//				Attributes: dynamodb.TableAttributeArray{
-//					&dynamodb.TableAttributeArgs{
-//						Name: pulumi.String("BrodoBaggins"),
-//						Type: pulumi.String("S"),
-//					},
-//				},
-//			}, pulumi.Provider("aws.main"))
-//			if err != nil {
-//				return err
-//			}
-//			_, err = dynamodb.NewTableReplica(ctx, "exampleTableReplica", &dynamodb.TableReplicaArgs{
-//				GlobalTableArn: exampleTable.Arn,
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("IZPAWS"),
-//					"Pozo": pulumi.String("Amargo"),
-//				},
-//			}, pulumi.Provider("aws.alt"))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := aws.NewProvider(ctx, "main", &aws.ProviderArgs{
+// 			Region: pulumi.String("us-west-2"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = aws.NewProvider(ctx, "alt", &aws.ProviderArgs{
+// 			Region: pulumi.String("us-east-2"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleTable, err := dynamodb.NewTable(ctx, "exampleTable", &dynamodb.TableArgs{
+// 			HashKey:        pulumi.String("BrodoBaggins"),
+// 			BillingMode:    pulumi.String("PAY_PER_REQUEST"),
+// 			StreamEnabled:  pulumi.Bool(true),
+// 			StreamViewType: pulumi.String("NEW_AND_OLD_IMAGES"),
+// 			Attributes: dynamodb.TableAttributeArray{
+// 				&dynamodb.TableAttributeArgs{
+// 					Name: pulumi.String("BrodoBaggins"),
+// 					Type: pulumi.String("S"),
+// 				},
+// 			},
+// 		}, pulumi.Provider("aws.main"))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = dynamodb.NewTableReplica(ctx, "exampleTableReplica", &dynamodb.TableReplicaArgs{
+// 			GlobalTableArn: exampleTable.Arn,
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("IZPAWS"),
+// 				"Pozo": pulumi.String("Amargo"),
+// 			},
+// 		}, pulumi.Provider("aws.alt"))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -75,9 +72,7 @@ import (
 // DynamoDB table replicas can be imported using the `table-name:main-region`, _e.g._,
 //
 // ```sh
-//
-//	$ pulumi import aws:dynamodb/tableReplica:TableReplica example TestTable:us-west-2
-//
+//  $ pulumi import aws:dynamodb/tableReplica:TableReplica example TestTable:us-west-2
 // ```
 type TableReplica struct {
 	pulumi.CustomResourceState
@@ -212,7 +207,7 @@ func (i *TableReplica) ToTableReplicaOutputWithContext(ctx context.Context) Tabl
 // TableReplicaArrayInput is an input type that accepts TableReplicaArray and TableReplicaArrayOutput values.
 // You can construct a concrete instance of `TableReplicaArrayInput` via:
 //
-//	TableReplicaArray{ TableReplicaArgs{...} }
+//          TableReplicaArray{ TableReplicaArgs{...} }
 type TableReplicaArrayInput interface {
 	pulumi.Input
 
@@ -237,7 +232,7 @@ func (i TableReplicaArray) ToTableReplicaArrayOutputWithContext(ctx context.Cont
 // TableReplicaMapInput is an input type that accepts TableReplicaMap and TableReplicaMapOutput values.
 // You can construct a concrete instance of `TableReplicaMapInput` via:
 //
-//	TableReplicaMap{ "key": TableReplicaArgs{...} }
+//          TableReplicaMap{ "key": TableReplicaArgs{...} }
 type TableReplicaMapInput interface {
 	pulumi.Input
 

@@ -18,24 +18,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.LookupNetworkInsightsAnalysis(ctx, &ec2.LookupNetworkInsightsAnalysisArgs{
-//				NetworkInsightsAnalysisId: pulumi.StringRef(aws_ec2_network_insights_analysis.Example.Id),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.LookupNetworkInsightsAnalysis(ctx, &ec2.LookupNetworkInsightsAnalysisArgs{
+// 			NetworkInsightsAnalysisId: pulumi.StringRef(aws_ec2_network_insights_analysis.Example.Id),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func LookupNetworkInsightsAnalysis(ctx *pulumi.Context, args *LookupNetworkInsightsAnalysisArgs, opts ...pulumi.InvokeOption) (*LookupNetworkInsightsAnalysisResult, error) {
 	var rv LookupNetworkInsightsAnalysisResult

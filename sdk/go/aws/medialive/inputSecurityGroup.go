@@ -18,31 +18,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/medialive"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/medialive"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := medialive.NewInputSecurityGroup(ctx, "example", &medialive.InputSecurityGroupArgs{
-//				Tags: pulumi.StringMap{
-//					"ENVIRONMENT": pulumi.String("prod"),
-//				},
-//				WhitelistRules: medialive.InputSecurityGroupWhitelistRuleArray{
-//					&medialive.InputSecurityGroupWhitelistRuleArgs{
-//						Cidr: pulumi.String("10.0.0.8/32"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := medialive.NewInputSecurityGroup(ctx, "example", &medialive.InputSecurityGroupArgs{
+// 			Tags: pulumi.StringMap{
+// 				"ENVIRONMENT": pulumi.String("prod"),
+// 			},
+// 			WhitelistRules: medialive.InputSecurityGroupWhitelistRuleArray{
+// 				&medialive.InputSecurityGroupWhitelistRuleArgs{
+// 					Cidr: pulumi.String("10.0.0.8/32"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -50,9 +47,7 @@ import (
 // MediaLive InputSecurityGroup can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:medialive/inputSecurityGroup:InputSecurityGroup example 123456
-//
+//  $ pulumi import aws:medialive/inputSecurityGroup:InputSecurityGroup example 123456
 // ```
 type InputSecurityGroup struct {
 	pulumi.CustomResourceState
@@ -168,7 +163,7 @@ func (i *InputSecurityGroup) ToInputSecurityGroupOutputWithContext(ctx context.C
 // InputSecurityGroupArrayInput is an input type that accepts InputSecurityGroupArray and InputSecurityGroupArrayOutput values.
 // You can construct a concrete instance of `InputSecurityGroupArrayInput` via:
 //
-//	InputSecurityGroupArray{ InputSecurityGroupArgs{...} }
+//          InputSecurityGroupArray{ InputSecurityGroupArgs{...} }
 type InputSecurityGroupArrayInput interface {
 	pulumi.Input
 
@@ -193,7 +188,7 @@ func (i InputSecurityGroupArray) ToInputSecurityGroupArrayOutputWithContext(ctx 
 // InputSecurityGroupMapInput is an input type that accepts InputSecurityGroupMap and InputSecurityGroupMapOutput values.
 // You can construct a concrete instance of `InputSecurityGroupMapInput` via:
 //
-//	InputSecurityGroupMap{ "key": InputSecurityGroupArgs{...} }
+//          InputSecurityGroupMap{ "key": InputSecurityGroupArgs{...} }
 type InputSecurityGroupMapInput interface {
 	pulumi.Input
 

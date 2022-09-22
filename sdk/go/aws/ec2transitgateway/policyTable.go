@@ -19,27 +19,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2transitgateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2transitgateway.NewPolicyTable(ctx, "example", &ec2transitgateway.PolicyTableArgs{
-//				TransitGatewayId: pulumi.Any(aws_ec2_transit_gateway.Example.Id),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example Policy Table"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2transitgateway.NewPolicyTable(ctx, "example", &ec2transitgateway.PolicyTableArgs{
+// 			TransitGatewayId: pulumi.Any(aws_ec2_transit_gateway.Example.Id),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example Policy Table"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -47,9 +44,7 @@ import (
 // `aws_ec2_transit_gateway_policy_table` can be imported by using the EC2 Transit Gateway Policy Table identifier, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2transitgateway/policyTable:PolicyTable example tgw-rtb-12345678
-//
+//  $ pulumi import aws:ec2transitgateway/policyTable:PolicyTable example tgw-rtb-12345678
 // ```
 type PolicyTable struct {
 	pulumi.CustomResourceState
@@ -163,7 +158,7 @@ func (i *PolicyTable) ToPolicyTableOutputWithContext(ctx context.Context) Policy
 // PolicyTableArrayInput is an input type that accepts PolicyTableArray and PolicyTableArrayOutput values.
 // You can construct a concrete instance of `PolicyTableArrayInput` via:
 //
-//	PolicyTableArray{ PolicyTableArgs{...} }
+//          PolicyTableArray{ PolicyTableArgs{...} }
 type PolicyTableArrayInput interface {
 	pulumi.Input
 
@@ -188,7 +183,7 @@ func (i PolicyTableArray) ToPolicyTableArrayOutputWithContext(ctx context.Contex
 // PolicyTableMapInput is an input type that accepts PolicyTableMap and PolicyTableMapOutput values.
 // You can construct a concrete instance of `PolicyTableMapInput` via:
 //
-//	PolicyTableMap{ "key": PolicyTableArgs{...} }
+//          PolicyTableMap{ "key": PolicyTableArgs{...} }
 type PolicyTableMapInput interface {
 	pulumi.Input
 

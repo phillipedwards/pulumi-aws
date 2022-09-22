@@ -19,44 +19,41 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": []string{
-//							"ec2:Describe*",
-//						},
-//						"Effect":   "Allow",
-//						"Resource": "*",
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			_, err = iam.NewPolicy(ctx, "policy", &iam.PolicyArgs{
-//				Path:        pulumi.String("/"),
-//				Description: pulumi.String("My test policy"),
-//				Policy:      pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": []string{
+// 						"ec2:Describe*",
+// 					},
+// 					"Effect":   "Allow",
+// 					"Resource": "*",
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		_, err = iam.NewPolicy(ctx, "policy", &iam.PolicyArgs{
+// 			Path:        pulumi.String("/"),
+// 			Description: pulumi.String("My test policy"),
+// 			Policy:      pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -64,9 +61,7 @@ import (
 // IAM Policies can be imported using the `arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:iam/policy:Policy administrator arn:aws:iam::123456789012:policy/UsersManageOwnCredentials
-//
+//  $ pulumi import aws:iam/policy:Policy administrator arn:aws:iam::123456789012:policy/UsersManageOwnCredentials
 // ```
 type Policy struct {
 	pulumi.CustomResourceState
@@ -230,7 +225,7 @@ func (i *Policy) ToPolicyOutputWithContext(ctx context.Context) PolicyOutput {
 // PolicyArrayInput is an input type that accepts PolicyArray and PolicyArrayOutput values.
 // You can construct a concrete instance of `PolicyArrayInput` via:
 //
-//	PolicyArray{ PolicyArgs{...} }
+//          PolicyArray{ PolicyArgs{...} }
 type PolicyArrayInput interface {
 	pulumi.Input
 
@@ -255,7 +250,7 @@ func (i PolicyArray) ToPolicyArrayOutputWithContext(ctx context.Context) PolicyA
 // PolicyMapInput is an input type that accepts PolicyMap and PolicyMapOutput values.
 // You can construct a concrete instance of `PolicyMapInput` via:
 //
-//	PolicyMap{ "key": PolicyArgs{...} }
+//          PolicyMap{ "key": PolicyArgs{...} }
 type PolicyMapInput interface {
 	pulumi.Input
 

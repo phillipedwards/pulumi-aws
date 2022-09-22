@@ -1,4 +1,4 @@
-module github.com/pulumi/pulumi-aws/provider/v5
+module github.com/phillipedwards/pulumi-aws/provider
 
 go 1.18
 
@@ -154,7 +154,6 @@ require (
 	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51 // indirect
 	github.com/kevinburke/ssh_config v1.1.0 // indirect
 	github.com/klauspost/compress v1.13.5 // indirect
-	github.com/kr/pretty v0.3.0 // indirect
 	github.com/mattbaird/jsonpatch v0.0.0-20200820163806-098863c1fc24 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-ieproxy v0.0.1 // indirect

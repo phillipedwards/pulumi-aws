@@ -17,38 +17,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/memorydb"
-//	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/memorydb"
+// 	"github.com/pulumi/pulumi-random/sdk/v4/go/random"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleRandomPassword, err := random.NewRandomPassword(ctx, "exampleRandomPassword", &random.RandomPasswordArgs{
-//				Length: pulumi.Int(16),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = memorydb.NewUser(ctx, "exampleUser", &memorydb.UserArgs{
-//				UserName:     pulumi.String("my-user"),
-//				AccessString: pulumi.String("on ~* &* +@all"),
-//				AuthenticationMode: &memorydb.UserAuthenticationModeArgs{
-//					Type: pulumi.String("password"),
-//					Passwords: pulumi.StringArray{
-//						exampleRandomPassword.Result,
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleRandomPassword, err := random.NewRandomPassword(ctx, "exampleRandomPassword", &random.RandomPasswordArgs{
+// 			Length: pulumi.Int(16),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = memorydb.NewUser(ctx, "exampleUser", &memorydb.UserArgs{
+// 			UserName:     pulumi.String("my-user"),
+// 			AccessString: pulumi.String("on ~* &* +@all"),
+// 			AuthenticationMode: &memorydb.UserAuthenticationModeArgs{
+// 				Type: pulumi.String("password"),
+// 				Passwords: pulumi.StringArray{
+// 					exampleRandomPassword.Result,
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -56,12 +53,10 @@ import (
 // Use the `user_name` to import a user. For example
 //
 // ```sh
-//
-//	$ pulumi import aws:memorydb/user:User example my-user
-//
+//  $ pulumi import aws:memorydb/user:User example my-user
 // ```
 //
-//	The `passwords` are not available for imported resources, as this information cannot be read back from the MemoryDB API.
+//  The `passwords` are not available for imported resources, as this information cannot be read back from the MemoryDB API.
 type User struct {
 	pulumi.CustomResourceState
 
@@ -208,7 +203,7 @@ func (i *User) ToUserOutputWithContext(ctx context.Context) UserOutput {
 // UserArrayInput is an input type that accepts UserArray and UserArrayOutput values.
 // You can construct a concrete instance of `UserArrayInput` via:
 //
-//	UserArray{ UserArgs{...} }
+//          UserArray{ UserArgs{...} }
 type UserArrayInput interface {
 	pulumi.Input
 
@@ -233,7 +228,7 @@ func (i UserArray) ToUserArrayOutputWithContext(ctx context.Context) UserArrayOu
 // UserMapInput is an input type that accepts UserMap and UserMapOutput values.
 // You can construct a concrete instance of `UserMapInput` via:
 //
-//	UserMap{ "key": UserArgs{...} }
+//          UserMap{ "key": UserArgs{...} }
 type UserMapInput interface {
 	pulumi.Input
 

@@ -18,53 +18,50 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/transcribe"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/transcribe"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleBucketV2, err := s3.NewBucketV2(ctx, "exampleBucketV2", &s3.BucketV2Args{
-//				ForceDestroy: pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			object, err := s3.NewBucketObjectv2(ctx, "object", &s3.BucketObjectv2Args{
-//				Bucket: exampleBucketV2.ID(),
-//				Key:    pulumi.String("transcribe/test1.txt"),
-//				Source: pulumi.NewFileAsset("test.txt"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = transcribe.NewMedicalVocabulary(ctx, "exampleMedicalVocabulary", &transcribe.MedicalVocabularyArgs{
-//				VocabularyName: pulumi.String("example"),
-//				LanguageCode:   pulumi.String("en-US"),
-//				VocabularyFileUri: pulumi.All(exampleBucketV2.ID(), object.Key).ApplyT(func(_args []interface{}) (string, error) {
-//					id := _args[0].(string)
-//					key := _args[1].(string)
-//					return fmt.Sprintf("s3://%v/%v", id, key), nil
-//				}).(pulumi.StringOutput),
-//				Tags: pulumi.StringMap{
-//					"tag1": pulumi.String("value1"),
-//					"tag2": pulumi.String("value3"),
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				object,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleBucketV2, err := s3.NewBucketV2(ctx, "exampleBucketV2", &s3.BucketV2Args{
+// 			ForceDestroy: pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		object, err := s3.NewBucketObjectv2(ctx, "object", &s3.BucketObjectv2Args{
+// 			Bucket: exampleBucketV2.ID(),
+// 			Key:    pulumi.String("transcribe/test1.txt"),
+// 			Source: pulumi.NewFileAsset("test.txt"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = transcribe.NewMedicalVocabulary(ctx, "exampleMedicalVocabulary", &transcribe.MedicalVocabularyArgs{
+// 			VocabularyName: pulumi.String("example"),
+// 			LanguageCode:   pulumi.String("en-US"),
+// 			VocabularyFileUri: pulumi.All(exampleBucketV2.ID(), object.Key).ApplyT(func(_args []interface{}) (string, error) {
+// 				id := _args[0].(string)
+// 				key := _args[1].(string)
+// 				return fmt.Sprintf("s3://%v/%v", id, key), nil
+// 			}).(pulumi.StringOutput),
+// 			Tags: pulumi.StringMap{
+// 				"tag1": pulumi.String("value1"),
+// 				"tag2": pulumi.String("value3"),
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			object,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -72,9 +69,7 @@ import (
 // Transcribe MedicalVocabulary can be imported using the `vocabulary_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:transcribe/medicalVocabulary:MedicalVocabulary example example-name
-//
+//  $ pulumi import aws:transcribe/medicalVocabulary:MedicalVocabulary example example-name
 // ```
 type MedicalVocabulary struct {
 	pulumi.CustomResourceState
@@ -216,7 +211,7 @@ func (i *MedicalVocabulary) ToMedicalVocabularyOutputWithContext(ctx context.Con
 // MedicalVocabularyArrayInput is an input type that accepts MedicalVocabularyArray and MedicalVocabularyArrayOutput values.
 // You can construct a concrete instance of `MedicalVocabularyArrayInput` via:
 //
-//	MedicalVocabularyArray{ MedicalVocabularyArgs{...} }
+//          MedicalVocabularyArray{ MedicalVocabularyArgs{...} }
 type MedicalVocabularyArrayInput interface {
 	pulumi.Input
 
@@ -241,7 +236,7 @@ func (i MedicalVocabularyArray) ToMedicalVocabularyArrayOutputWithContext(ctx co
 // MedicalVocabularyMapInput is an input type that accepts MedicalVocabularyMap and MedicalVocabularyMapOutput values.
 // You can construct a concrete instance of `MedicalVocabularyMapInput` via:
 //
-//	MedicalVocabularyMap{ "key": MedicalVocabularyArgs{...} }
+//          MedicalVocabularyMap{ "key": MedicalVocabularyArgs{...} }
 type MedicalVocabularyMapInput interface {
 	pulumi.Input
 

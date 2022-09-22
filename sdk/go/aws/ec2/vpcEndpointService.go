@@ -27,27 +27,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewVpcEndpointService(ctx, "example", &ec2.VpcEndpointServiceArgs{
-//				AcceptanceRequired: pulumi.Bool(false),
-//				NetworkLoadBalancerArns: pulumi.StringArray{
-//					pulumi.Any(aws_lb.Example.Arn),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewVpcEndpointService(ctx, "example", &ec2.VpcEndpointServiceArgs{
+// 			AcceptanceRequired: pulumi.Bool(false),
+// 			NetworkLoadBalancerArns: pulumi.StringArray{
+// 				pulumi.Any(aws_lb.Example.Arn),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Gateway Load Balancers
 //
@@ -55,27 +52,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewVpcEndpointService(ctx, "example", &ec2.VpcEndpointServiceArgs{
-//				AcceptanceRequired: pulumi.Bool(false),
-//				GatewayLoadBalancerArns: pulumi.StringArray{
-//					pulumi.Any(aws_lb.Example.Arn),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewVpcEndpointService(ctx, "example", &ec2.VpcEndpointServiceArgs{
+// 			AcceptanceRequired: pulumi.Bool(false),
+// 			GatewayLoadBalancerArns: pulumi.StringArray{
+// 				pulumi.Any(aws_lb.Example.Arn),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -83,9 +77,7 @@ import (
 // VPC Endpoint Services can be imported using the `VPC endpoint service id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/vpcEndpointService:VpcEndpointService foo vpce-svc-0f97a19d3fa8220bc
-//
+//  $ pulumi import aws:ec2/vpcEndpointService:VpcEndpointService foo vpce-svc-0f97a19d3fa8220bc
 // ```
 type VpcEndpointService struct {
 	pulumi.CustomResourceState
@@ -290,7 +282,7 @@ func (i *VpcEndpointService) ToVpcEndpointServiceOutputWithContext(ctx context.C
 // VpcEndpointServiceArrayInput is an input type that accepts VpcEndpointServiceArray and VpcEndpointServiceArrayOutput values.
 // You can construct a concrete instance of `VpcEndpointServiceArrayInput` via:
 //
-//	VpcEndpointServiceArray{ VpcEndpointServiceArgs{...} }
+//          VpcEndpointServiceArray{ VpcEndpointServiceArgs{...} }
 type VpcEndpointServiceArrayInput interface {
 	pulumi.Input
 
@@ -315,7 +307,7 @@ func (i VpcEndpointServiceArray) ToVpcEndpointServiceArrayOutputWithContext(ctx 
 // VpcEndpointServiceMapInput is an input type that accepts VpcEndpointServiceMap and VpcEndpointServiceMapOutput values.
 // You can construct a concrete instance of `VpcEndpointServiceMapInput` via:
 //
-//	VpcEndpointServiceMap{ "key": VpcEndpointServiceArgs{...} }
+//          VpcEndpointServiceMap{ "key": VpcEndpointServiceArgs{...} }
 type VpcEndpointServiceMapInput interface {
 	pulumi.Input
 

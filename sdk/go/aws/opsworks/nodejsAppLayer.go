@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/opsworks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := opsworks.NewNodejsAppLayer(ctx, "app", &opsworks.NodejsAppLayerArgs{
-//				StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := opsworks.NewNodejsAppLayer(ctx, "app", &opsworks.NodejsAppLayerArgs{
+// 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type NodejsAppLayer struct {
 	pulumi.CustomResourceState
@@ -329,7 +326,7 @@ func (i *NodejsAppLayer) ToNodejsAppLayerOutputWithContext(ctx context.Context) 
 // NodejsAppLayerArrayInput is an input type that accepts NodejsAppLayerArray and NodejsAppLayerArrayOutput values.
 // You can construct a concrete instance of `NodejsAppLayerArrayInput` via:
 //
-//	NodejsAppLayerArray{ NodejsAppLayerArgs{...} }
+//          NodejsAppLayerArray{ NodejsAppLayerArgs{...} }
 type NodejsAppLayerArrayInput interface {
 	pulumi.Input
 
@@ -354,7 +351,7 @@ func (i NodejsAppLayerArray) ToNodejsAppLayerArrayOutputWithContext(ctx context.
 // NodejsAppLayerMapInput is an input type that accepts NodejsAppLayerMap and NodejsAppLayerMapOutput values.
 // You can construct a concrete instance of `NodejsAppLayerMapInput` via:
 //
-//	NodejsAppLayerMap{ "key": NodejsAppLayerArgs{...} }
+//          NodejsAppLayerMap{ "key": NodejsAppLayerArgs{...} }
 type NodejsAppLayerMapInput interface {
 	pulumi.Input
 

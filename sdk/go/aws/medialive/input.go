@@ -18,43 +18,40 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/medialive"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/medialive"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleInputSecurityGroup, err := medialive.NewInputSecurityGroup(ctx, "exampleInputSecurityGroup", &medialive.InputSecurityGroupArgs{
-//				WhitelistRules: medialive.InputSecurityGroupWhitelistRuleArray{
-//					&medialive.InputSecurityGroupWhitelistRuleArgs{
-//						Cidr: pulumi.String("10.0.0.8/32"),
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"ENVIRONMENT": pulumi.String("prod"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = medialive.NewInput(ctx, "exampleInput", &medialive.InputArgs{
-//				InputSecurityGroups: pulumi.StringArray{
-//					exampleInputSecurityGroup.ID(),
-//				},
-//				Type: pulumi.String("UDP_PUSH"),
-//				Tags: pulumi.StringMap{
-//					"ENVIRONMENT": pulumi.String("prod"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleInputSecurityGroup, err := medialive.NewInputSecurityGroup(ctx, "exampleInputSecurityGroup", &medialive.InputSecurityGroupArgs{
+// 			WhitelistRules: medialive.InputSecurityGroupWhitelistRuleArray{
+// 				&medialive.InputSecurityGroupWhitelistRuleArgs{
+// 					Cidr: pulumi.String("10.0.0.8/32"),
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"ENVIRONMENT": pulumi.String("prod"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = medialive.NewInput(ctx, "exampleInput", &medialive.InputArgs{
+// 			InputSecurityGroups: pulumi.StringArray{
+// 				exampleInputSecurityGroup.ID(),
+// 			},
+// 			Type: pulumi.String("UDP_PUSH"),
+// 			Tags: pulumi.StringMap{
+// 				"ENVIRONMENT": pulumi.String("prod"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -62,9 +59,7 @@ import (
 // MediaLive Input can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:medialive/input:Input example 12345678
-//
+//  $ pulumi import aws:medialive/input:Input example 12345678
 // ```
 type Input struct {
 	pulumi.CustomResourceState
@@ -278,7 +273,7 @@ func (i *Input) ToInputOutputWithContext(ctx context.Context) InputOutput {
 // InputArrayInput is an input type that accepts InputArray and InputArrayOutput values.
 // You can construct a concrete instance of `InputArrayInput` via:
 //
-//	InputArray{ InputArgs{...} }
+//          InputArray{ InputArgs{...} }
 type InputArrayInput interface {
 	pulumi.Input
 
@@ -303,7 +298,7 @@ func (i InputArray) ToInputArrayOutputWithContext(ctx context.Context) InputArra
 // InputMapInput is an input type that accepts InputMap and InputMapOutput values.
 // You can construct a concrete instance of `InputMapInput` via:
 //
-//	InputMap{ "key": InputArgs{...} }
+//          InputMap{ "key": InputArgs{...} }
 type InputMapInput interface {
 	pulumi.Input
 

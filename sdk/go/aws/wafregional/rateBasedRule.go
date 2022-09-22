@@ -19,46 +19,43 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/wafregional"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			ipset, err := wafregional.NewIpSet(ctx, "ipset", &wafregional.IpSetArgs{
-//				IpSetDescriptors: wafregional.IpSetIpSetDescriptorArray{
-//					&wafregional.IpSetIpSetDescriptorArgs{
-//						Type:  pulumi.String("IPV4"),
-//						Value: pulumi.String("192.0.7.0/24"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = wafregional.NewRateBasedRule(ctx, "wafrule", &wafregional.RateBasedRuleArgs{
-//				MetricName: pulumi.String("tfWAFRule"),
-//				RateKey:    pulumi.String("IP"),
-//				RateLimit:  pulumi.Int(100),
-//				Predicates: wafregional.RateBasedRulePredicateArray{
-//					&wafregional.RateBasedRulePredicateArgs{
-//						DataId:  ipset.ID(),
-//						Negated: pulumi.Bool(false),
-//						Type:    pulumi.String("IPMatch"),
-//					},
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				ipset,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		ipset, err := wafregional.NewIpSet(ctx, "ipset", &wafregional.IpSetArgs{
+// 			IpSetDescriptors: wafregional.IpSetIpSetDescriptorArray{
+// 				&wafregional.IpSetIpSetDescriptorArgs{
+// 					Type:  pulumi.String("IPV4"),
+// 					Value: pulumi.String("192.0.7.0/24"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = wafregional.NewRateBasedRule(ctx, "wafrule", &wafregional.RateBasedRuleArgs{
+// 			MetricName: pulumi.String("tfWAFRule"),
+// 			RateKey:    pulumi.String("IP"),
+// 			RateLimit:  pulumi.Int(100),
+// 			Predicates: wafregional.RateBasedRulePredicateArray{
+// 				&wafregional.RateBasedRulePredicateArgs{
+// 					DataId:  ipset.ID(),
+// 					Negated: pulumi.Bool(false),
+// 					Type:    pulumi.String("IPMatch"),
+// 				},
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			ipset,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -66,9 +63,7 @@ import (
 // WAF Regional Rate Based Rule can be imported using the id, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:wafregional/rateBasedRule:RateBasedRule wafrule a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
-//
+//  $ pulumi import aws:wafregional/rateBasedRule:RateBasedRule wafrule a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
 // ```
 type RateBasedRule struct {
 	pulumi.CustomResourceState
@@ -227,7 +222,7 @@ func (i *RateBasedRule) ToRateBasedRuleOutputWithContext(ctx context.Context) Ra
 // RateBasedRuleArrayInput is an input type that accepts RateBasedRuleArray and RateBasedRuleArrayOutput values.
 // You can construct a concrete instance of `RateBasedRuleArrayInput` via:
 //
-//	RateBasedRuleArray{ RateBasedRuleArgs{...} }
+//          RateBasedRuleArray{ RateBasedRuleArgs{...} }
 type RateBasedRuleArrayInput interface {
 	pulumi.Input
 
@@ -252,7 +247,7 @@ func (i RateBasedRuleArray) ToRateBasedRuleArrayOutputWithContext(ctx context.Co
 // RateBasedRuleMapInput is an input type that accepts RateBasedRuleMap and RateBasedRuleMapOutput values.
 // You can construct a concrete instance of `RateBasedRuleMapInput` via:
 //
-//	RateBasedRuleMap{ "key": RateBasedRuleArgs{...} }
+//          RateBasedRuleMap{ "key": RateBasedRuleArgs{...} }
 type RateBasedRuleMapInput interface {
 	pulumi.Input
 

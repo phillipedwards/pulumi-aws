@@ -19,32 +19,29 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/opsworks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := opsworks.NewStack(ctx, "main", &opsworks.StackArgs{
-//				Region:                    pulumi.String("us-west-1"),
-//				ServiceRoleArn:            pulumi.Any(aws_iam_role.Opsworks.Arn),
-//				DefaultInstanceProfileArn: pulumi.Any(aws_iam_instance_profile.Opsworks.Arn),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("foobar-stack"),
-//				},
-//				CustomJson: pulumi.String(fmt.Sprintf("{\n \"foobar\": {\n    \"version\": \"1.0.0\"\n  }\n}\n")),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := opsworks.NewStack(ctx, "main", &opsworks.StackArgs{
+// 			Region:                    pulumi.String("us-west-1"),
+// 			ServiceRoleArn:            pulumi.Any(aws_iam_role.Opsworks.Arn),
+// 			DefaultInstanceProfileArn: pulumi.Any(aws_iam_instance_profile.Opsworks.Arn),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("foobar-stack"),
+// 			},
+// 			CustomJson: pulumi.String(fmt.Sprintf("{\n \"foobar\": {\n    \"version\": \"1.0.0\"\n  }\n}\n")),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // OpsWorks stacks can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:opsworks/stack:Stack bar 00000000-0000-0000-0000-000000000000
-//
+//  $ pulumi import aws:opsworks/stack:Stack bar 00000000-0000-0000-0000-000000000000
 // ```
 type Stack struct {
 	pulumi.CustomResourceState
@@ -398,7 +393,7 @@ func (i *Stack) ToStackOutputWithContext(ctx context.Context) StackOutput {
 // StackArrayInput is an input type that accepts StackArray and StackArrayOutput values.
 // You can construct a concrete instance of `StackArrayInput` via:
 //
-//	StackArray{ StackArgs{...} }
+//          StackArray{ StackArgs{...} }
 type StackArrayInput interface {
 	pulumi.Input
 
@@ -423,7 +418,7 @@ func (i StackArray) ToStackArrayOutputWithContext(ctx context.Context) StackArra
 // StackMapInput is an input type that accepts StackMap and StackMapOutput values.
 // You can construct a concrete instance of `StackMapInput` via:
 //
-//	StackMap{ "key": StackArgs{...} }
+//          StackMap{ "key": StackArgs{...} }
 type StackMapInput interface {
 	pulumi.Input
 

@@ -21,43 +21,38 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			testSnapshotCopyGrant, err := redshift.NewSnapshotCopyGrant(ctx, "testSnapshotCopyGrant", &redshift.SnapshotCopyGrantArgs{
-//				SnapshotCopyGrantName: pulumi.String("my-grant"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = redshift.NewCluster(ctx, "testCluster", &redshift.ClusterArgs{
-//				SnapshotCopy: &redshift.ClusterSnapshotCopyArgs{
-//					DestinationRegion: pulumi.String("us-east-2"),
-//					GrantName:         testSnapshotCopyGrant.SnapshotCopyGrantName,
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		testSnapshotCopyGrant, err := redshift.NewSnapshotCopyGrant(ctx, "testSnapshotCopyGrant", &redshift.SnapshotCopyGrantArgs{
+// 			SnapshotCopyGrantName: pulumi.String("my-grant"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = redshift.NewCluster(ctx, "testCluster", &redshift.ClusterArgs{
+// 			SnapshotCopy: &redshift.ClusterSnapshotCopyArgs{
+// 				DestinationRegion: pulumi.String("us-east-2"),
+// 				GrantName:         testSnapshotCopyGrant.SnapshotCopyGrantName,
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # Redshift Snapshot Copy Grants support import by name, e.g., console
+// Redshift Snapshot Copy Grants support import by name, e.g., console
 //
 // ```sh
-//
-//	$ pulumi import aws:redshift/snapshotCopyGrant:SnapshotCopyGrant test my-grant
-//
+//  $ pulumi import aws:redshift/snapshotCopyGrant:SnapshotCopyGrant test my-grant
 // ```
 type SnapshotCopyGrant struct {
 	pulumi.CustomResourceState
@@ -180,7 +175,7 @@ func (i *SnapshotCopyGrant) ToSnapshotCopyGrantOutputWithContext(ctx context.Con
 // SnapshotCopyGrantArrayInput is an input type that accepts SnapshotCopyGrantArray and SnapshotCopyGrantArrayOutput values.
 // You can construct a concrete instance of `SnapshotCopyGrantArrayInput` via:
 //
-//	SnapshotCopyGrantArray{ SnapshotCopyGrantArgs{...} }
+//          SnapshotCopyGrantArray{ SnapshotCopyGrantArgs{...} }
 type SnapshotCopyGrantArrayInput interface {
 	pulumi.Input
 
@@ -205,7 +200,7 @@ func (i SnapshotCopyGrantArray) ToSnapshotCopyGrantArrayOutputWithContext(ctx co
 // SnapshotCopyGrantMapInput is an input type that accepts SnapshotCopyGrantMap and SnapshotCopyGrantMapOutput values.
 // You can construct a concrete instance of `SnapshotCopyGrantMapInput` via:
 //
-//	SnapshotCopyGrantMap{ "key": SnapshotCopyGrantArgs{...} }
+//          SnapshotCopyGrantMap{ "key": SnapshotCopyGrantArgs{...} }
 type SnapshotCopyGrantMapInput interface {
 	pulumi.Input
 

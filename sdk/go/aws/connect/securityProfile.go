@@ -20,32 +20,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewSecurityProfile(ctx, "example", &connect.SecurityProfileArgs{
-//				Description: pulumi.String("example description"),
-//				InstanceId:  pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
-//				Permissions: pulumi.StringArray{
-//					pulumi.String("BasicAgentAccess"),
-//					pulumi.String("OutboundCallAccess"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example Security Profile"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewSecurityProfile(ctx, "example", &connect.SecurityProfileArgs{
+// 			Description: pulumi.String("example description"),
+// 			InstanceId:  pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+// 			Permissions: pulumi.StringArray{
+// 				pulumi.String("BasicAgentAccess"),
+// 				pulumi.String("OutboundCallAccess"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example Security Profile"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -53,9 +50,7 @@ import (
 // Amazon Connect Security Profiles can be imported using the `instance_id` and `security_profile_id` separated by a colon (`:`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:connect/securityProfile:SecurityProfile example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
-//
+//  $ pulumi import aws:connect/securityProfile:SecurityProfile example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
 // ```
 type SecurityProfile struct {
 	pulumi.CustomResourceState
@@ -205,7 +200,7 @@ func (i *SecurityProfile) ToSecurityProfileOutputWithContext(ctx context.Context
 // SecurityProfileArrayInput is an input type that accepts SecurityProfileArray and SecurityProfileArrayOutput values.
 // You can construct a concrete instance of `SecurityProfileArrayInput` via:
 //
-//	SecurityProfileArray{ SecurityProfileArgs{...} }
+//          SecurityProfileArray{ SecurityProfileArgs{...} }
 type SecurityProfileArrayInput interface {
 	pulumi.Input
 
@@ -230,7 +225,7 @@ func (i SecurityProfileArray) ToSecurityProfileArrayOutputWithContext(ctx contex
 // SecurityProfileMapInput is an input type that accepts SecurityProfileMap and SecurityProfileMapOutput values.
 // You can construct a concrete instance of `SecurityProfileMapInput` via:
 //
-//	SecurityProfileMap{ "key": SecurityProfileArgs{...} }
+//          SecurityProfileMap{ "key": SecurityProfileArgs{...} }
 type SecurityProfileMapInput interface {
 	pulumi.Input
 

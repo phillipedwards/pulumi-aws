@@ -17,57 +17,54 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rolesanywhere"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rolesanywhere"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": []string{
-//							"sts:AssumeRole",
-//							"sts:TagSession",
-//							"sts:SetSourceIdentity",
-//						},
-//						"Principal": map[string]interface{}{
-//							"Service": "rolesanywhere.amazonaws.com",
-//						},
-//						"Effect": "Allow",
-//						"Sid":    "",
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
-//				Path:             pulumi.String("/"),
-//				AssumeRolePolicy: pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = rolesanywhere.NewProfile(ctx, "testProfile", &rolesanywhere.ProfileArgs{
-//				RoleArns: pulumi.StringArray{
-//					testRole.Arn,
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": []string{
+// 						"sts:AssumeRole",
+// 						"sts:TagSession",
+// 						"sts:SetSourceIdentity",
+// 					},
+// 					"Principal": map[string]interface{}{
+// 						"Service": "rolesanywhere.amazonaws.com",
+// 					},
+// 					"Effect": "Allow",
+// 					"Sid":    "",
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+// 			Path:             pulumi.String("/"),
+// 			AssumeRolePolicy: pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = rolesanywhere.NewProfile(ctx, "testProfile", &rolesanywhere.ProfileArgs{
+// 			RoleArns: pulumi.StringArray{
+// 				testRole.Arn,
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -75,9 +72,7 @@ import (
 // `aws_rolesanywhere_profile` can be imported using its `id`, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:rolesanywhere/profile:Profile example db138a85-8925-4f9f-a409-08231233cacf
-//
+//  $ pulumi import aws:rolesanywhere/profile:Profile example db138a85-8925-4f9f-a409-08231233cacf
 // ```
 type Profile struct {
 	pulumi.CustomResourceState
@@ -245,7 +240,7 @@ func (i *Profile) ToProfileOutputWithContext(ctx context.Context) ProfileOutput 
 // ProfileArrayInput is an input type that accepts ProfileArray and ProfileArrayOutput values.
 // You can construct a concrete instance of `ProfileArrayInput` via:
 //
-//	ProfileArray{ ProfileArgs{...} }
+//          ProfileArray{ ProfileArgs{...} }
 type ProfileArrayInput interface {
 	pulumi.Input
 
@@ -270,7 +265,7 @@ func (i ProfileArray) ToProfileArrayOutputWithContext(ctx context.Context) Profi
 // ProfileMapInput is an input type that accepts ProfileMap and ProfileMapOutput values.
 // You can construct a concrete instance of `ProfileMapInput` via:
 //
-//	ProfileMap{ "key": ProfileArgs{...} }
+//          ProfileMap{ "key": ProfileArgs{...} }
 type ProfileMapInput interface {
 	pulumi.Input
 

@@ -26,7 +26,7 @@ type BucketLifecycleConfigurationRule struct {
 // BucketLifecycleConfigurationRuleInput is an input type that accepts BucketLifecycleConfigurationRuleArgs and BucketLifecycleConfigurationRuleOutput values.
 // You can construct a concrete instance of `BucketLifecycleConfigurationRuleInput` via:
 //
-//	BucketLifecycleConfigurationRuleArgs{...}
+//          BucketLifecycleConfigurationRuleArgs{...}
 type BucketLifecycleConfigurationRuleInput interface {
 	pulumi.Input
 
@@ -62,7 +62,7 @@ func (i BucketLifecycleConfigurationRuleArgs) ToBucketLifecycleConfigurationRule
 // BucketLifecycleConfigurationRuleArrayInput is an input type that accepts BucketLifecycleConfigurationRuleArray and BucketLifecycleConfigurationRuleArrayOutput values.
 // You can construct a concrete instance of `BucketLifecycleConfigurationRuleArrayInput` via:
 //
-//	BucketLifecycleConfigurationRuleArray{ BucketLifecycleConfigurationRuleArgs{...} }
+//          BucketLifecycleConfigurationRuleArray{ BucketLifecycleConfigurationRuleArgs{...} }
 type BucketLifecycleConfigurationRuleArrayInput interface {
 	pulumi.Input
 
@@ -155,7 +155,7 @@ type BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload struct {
 // BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadInput is an input type that accepts BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs and BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadOutput values.
 // You can construct a concrete instance of `BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadInput` via:
 //
-//	BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs{...}
+//          BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs{...}
 type BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadInput interface {
 	pulumi.Input
 
@@ -191,11 +191,11 @@ func (i BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs) ToBu
 // BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadPtrInput is an input type that accepts BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs, BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadPtr and BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadPtrOutput values.
 // You can construct a concrete instance of `BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadPtrInput` via:
 //
-//	        BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs{...}
+//          BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadPtrInput interface {
 	pulumi.Input
 
@@ -298,7 +298,7 @@ type BucketLifecycleConfigurationRuleExpiration struct {
 // BucketLifecycleConfigurationRuleExpirationInput is an input type that accepts BucketLifecycleConfigurationRuleExpirationArgs and BucketLifecycleConfigurationRuleExpirationOutput values.
 // You can construct a concrete instance of `BucketLifecycleConfigurationRuleExpirationInput` via:
 //
-//	BucketLifecycleConfigurationRuleExpirationArgs{...}
+//          BucketLifecycleConfigurationRuleExpirationArgs{...}
 type BucketLifecycleConfigurationRuleExpirationInput interface {
 	pulumi.Input
 
@@ -338,11 +338,11 @@ func (i BucketLifecycleConfigurationRuleExpirationArgs) ToBucketLifecycleConfigu
 // BucketLifecycleConfigurationRuleExpirationPtrInput is an input type that accepts BucketLifecycleConfigurationRuleExpirationArgs, BucketLifecycleConfigurationRuleExpirationPtr and BucketLifecycleConfigurationRuleExpirationPtrOutput values.
 // You can construct a concrete instance of `BucketLifecycleConfigurationRuleExpirationPtrInput` via:
 //
-//	        BucketLifecycleConfigurationRuleExpirationArgs{...}
+//          BucketLifecycleConfigurationRuleExpirationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type BucketLifecycleConfigurationRuleExpirationPtrInput interface {
 	pulumi.Input
 
@@ -471,7 +471,7 @@ type BucketLifecycleConfigurationRuleFilter struct {
 // BucketLifecycleConfigurationRuleFilterInput is an input type that accepts BucketLifecycleConfigurationRuleFilterArgs and BucketLifecycleConfigurationRuleFilterOutput values.
 // You can construct a concrete instance of `BucketLifecycleConfigurationRuleFilterInput` via:
 //
-//	BucketLifecycleConfigurationRuleFilterArgs{...}
+//          BucketLifecycleConfigurationRuleFilterArgs{...}
 type BucketLifecycleConfigurationRuleFilterInput interface {
 	pulumi.Input
 
@@ -509,11 +509,11 @@ func (i BucketLifecycleConfigurationRuleFilterArgs) ToBucketLifecycleConfigurati
 // BucketLifecycleConfigurationRuleFilterPtrInput is an input type that accepts BucketLifecycleConfigurationRuleFilterArgs, BucketLifecycleConfigurationRuleFilterPtr and BucketLifecycleConfigurationRuleFilterPtrOutput values.
 // You can construct a concrete instance of `BucketLifecycleConfigurationRuleFilterPtrInput` via:
 //
-//	        BucketLifecycleConfigurationRuleFilterArgs{...}
+//          BucketLifecycleConfigurationRuleFilterArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type BucketLifecycleConfigurationRuleFilterPtrInput interface {
 	pulumi.Input
 
@@ -626,7 +626,7 @@ type MultiRegionAccessPointDetails struct {
 // MultiRegionAccessPointDetailsInput is an input type that accepts MultiRegionAccessPointDetailsArgs and MultiRegionAccessPointDetailsOutput values.
 // You can construct a concrete instance of `MultiRegionAccessPointDetailsInput` via:
 //
-//	MultiRegionAccessPointDetailsArgs{...}
+//          MultiRegionAccessPointDetailsArgs{...}
 type MultiRegionAccessPointDetailsInput interface {
 	pulumi.Input
 
@@ -663,11 +663,11 @@ func (i MultiRegionAccessPointDetailsArgs) ToMultiRegionAccessPointDetailsPtrOut
 // MultiRegionAccessPointDetailsPtrInput is an input type that accepts MultiRegionAccessPointDetailsArgs, MultiRegionAccessPointDetailsPtr and MultiRegionAccessPointDetailsPtrOutput values.
 // You can construct a concrete instance of `MultiRegionAccessPointDetailsPtrInput` via:
 //
-//	        MultiRegionAccessPointDetailsArgs{...}
+//          MultiRegionAccessPointDetailsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type MultiRegionAccessPointDetailsPtrInput interface {
 	pulumi.Input
 
@@ -792,7 +792,7 @@ type MultiRegionAccessPointDetailsPublicAccessBlock struct {
 // MultiRegionAccessPointDetailsPublicAccessBlockInput is an input type that accepts MultiRegionAccessPointDetailsPublicAccessBlockArgs and MultiRegionAccessPointDetailsPublicAccessBlockOutput values.
 // You can construct a concrete instance of `MultiRegionAccessPointDetailsPublicAccessBlockInput` via:
 //
-//	MultiRegionAccessPointDetailsPublicAccessBlockArgs{...}
+//          MultiRegionAccessPointDetailsPublicAccessBlockArgs{...}
 type MultiRegionAccessPointDetailsPublicAccessBlockInput interface {
 	pulumi.Input
 
@@ -830,11 +830,11 @@ func (i MultiRegionAccessPointDetailsPublicAccessBlockArgs) ToMultiRegionAccessP
 // MultiRegionAccessPointDetailsPublicAccessBlockPtrInput is an input type that accepts MultiRegionAccessPointDetailsPublicAccessBlockArgs, MultiRegionAccessPointDetailsPublicAccessBlockPtr and MultiRegionAccessPointDetailsPublicAccessBlockPtrOutput values.
 // You can construct a concrete instance of `MultiRegionAccessPointDetailsPublicAccessBlockPtrInput` via:
 //
-//	        MultiRegionAccessPointDetailsPublicAccessBlockArgs{...}
+//          MultiRegionAccessPointDetailsPublicAccessBlockArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type MultiRegionAccessPointDetailsPublicAccessBlockPtrInput interface {
 	pulumi.Input
 
@@ -967,7 +967,7 @@ type MultiRegionAccessPointDetailsRegion struct {
 // MultiRegionAccessPointDetailsRegionInput is an input type that accepts MultiRegionAccessPointDetailsRegionArgs and MultiRegionAccessPointDetailsRegionOutput values.
 // You can construct a concrete instance of `MultiRegionAccessPointDetailsRegionInput` via:
 //
-//	MultiRegionAccessPointDetailsRegionArgs{...}
+//          MultiRegionAccessPointDetailsRegionArgs{...}
 type MultiRegionAccessPointDetailsRegionInput interface {
 	pulumi.Input
 
@@ -994,7 +994,7 @@ func (i MultiRegionAccessPointDetailsRegionArgs) ToMultiRegionAccessPointDetails
 // MultiRegionAccessPointDetailsRegionArrayInput is an input type that accepts MultiRegionAccessPointDetailsRegionArray and MultiRegionAccessPointDetailsRegionArrayOutput values.
 // You can construct a concrete instance of `MultiRegionAccessPointDetailsRegionArrayInput` via:
 //
-//	MultiRegionAccessPointDetailsRegionArray{ MultiRegionAccessPointDetailsRegionArgs{...} }
+//          MultiRegionAccessPointDetailsRegionArray{ MultiRegionAccessPointDetailsRegionArgs{...} }
 type MultiRegionAccessPointDetailsRegionArrayInput interface {
 	pulumi.Input
 
@@ -1064,7 +1064,7 @@ type MultiRegionAccessPointPolicyDetails struct {
 // MultiRegionAccessPointPolicyDetailsInput is an input type that accepts MultiRegionAccessPointPolicyDetailsArgs and MultiRegionAccessPointPolicyDetailsOutput values.
 // You can construct a concrete instance of `MultiRegionAccessPointPolicyDetailsInput` via:
 //
-//	MultiRegionAccessPointPolicyDetailsArgs{...}
+//          MultiRegionAccessPointPolicyDetailsArgs{...}
 type MultiRegionAccessPointPolicyDetailsInput interface {
 	pulumi.Input
 
@@ -1102,11 +1102,11 @@ func (i MultiRegionAccessPointPolicyDetailsArgs) ToMultiRegionAccessPointPolicyD
 // MultiRegionAccessPointPolicyDetailsPtrInput is an input type that accepts MultiRegionAccessPointPolicyDetailsArgs, MultiRegionAccessPointPolicyDetailsPtr and MultiRegionAccessPointPolicyDetailsPtrOutput values.
 // You can construct a concrete instance of `MultiRegionAccessPointPolicyDetailsPtrInput` via:
 //
-//	        MultiRegionAccessPointPolicyDetailsArgs{...}
+//          MultiRegionAccessPointPolicyDetailsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type MultiRegionAccessPointPolicyDetailsPtrInput interface {
 	pulumi.Input
 
@@ -1224,7 +1224,7 @@ type ObjectLambdaAccessPointConfiguration struct {
 // ObjectLambdaAccessPointConfigurationInput is an input type that accepts ObjectLambdaAccessPointConfigurationArgs and ObjectLambdaAccessPointConfigurationOutput values.
 // You can construct a concrete instance of `ObjectLambdaAccessPointConfigurationInput` via:
 //
-//	ObjectLambdaAccessPointConfigurationArgs{...}
+//          ObjectLambdaAccessPointConfigurationArgs{...}
 type ObjectLambdaAccessPointConfigurationInput interface {
 	pulumi.Input
 
@@ -1266,11 +1266,11 @@ func (i ObjectLambdaAccessPointConfigurationArgs) ToObjectLambdaAccessPointConfi
 // ObjectLambdaAccessPointConfigurationPtrInput is an input type that accepts ObjectLambdaAccessPointConfigurationArgs, ObjectLambdaAccessPointConfigurationPtr and ObjectLambdaAccessPointConfigurationPtrOutput values.
 // You can construct a concrete instance of `ObjectLambdaAccessPointConfigurationPtrInput` via:
 //
-//	        ObjectLambdaAccessPointConfigurationArgs{...}
+//          ObjectLambdaAccessPointConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ObjectLambdaAccessPointConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -1416,7 +1416,7 @@ type ObjectLambdaAccessPointConfigurationTransformationConfiguration struct {
 // ObjectLambdaAccessPointConfigurationTransformationConfigurationInput is an input type that accepts ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs and ObjectLambdaAccessPointConfigurationTransformationConfigurationOutput values.
 // You can construct a concrete instance of `ObjectLambdaAccessPointConfigurationTransformationConfigurationInput` via:
 //
-//	ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs{...}
+//          ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs{...}
 type ObjectLambdaAccessPointConfigurationTransformationConfigurationInput interface {
 	pulumi.Input
 
@@ -1446,7 +1446,7 @@ func (i ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs) ToO
 // ObjectLambdaAccessPointConfigurationTransformationConfigurationArrayInput is an input type that accepts ObjectLambdaAccessPointConfigurationTransformationConfigurationArray and ObjectLambdaAccessPointConfigurationTransformationConfigurationArrayOutput values.
 // You can construct a concrete instance of `ObjectLambdaAccessPointConfigurationTransformationConfigurationArrayInput` via:
 //
-//	ObjectLambdaAccessPointConfigurationTransformationConfigurationArray{ ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs{...} }
+//          ObjectLambdaAccessPointConfigurationTransformationConfigurationArray{ ObjectLambdaAccessPointConfigurationTransformationConfigurationArgs{...} }
 type ObjectLambdaAccessPointConfigurationTransformationConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -1522,7 +1522,7 @@ type ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTrans
 // ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationInput is an input type that accepts ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs and ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationOutput values.
 // You can construct a concrete instance of `ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationInput` via:
 //
-//	ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs{...}
+//          ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationArgs{...}
 type ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationInput interface {
 	pulumi.Input
 
@@ -1578,7 +1578,7 @@ type ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTrans
 // ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaInput is an input type that accepts ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs and ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaOutput values.
 // You can construct a concrete instance of `ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaInput` via:
 //
-//	ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs{...}
+//          ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaArgs{...}
 type ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaInput interface {
 	pulumi.Input
 

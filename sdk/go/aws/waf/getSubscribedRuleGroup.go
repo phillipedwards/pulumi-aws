@@ -18,47 +18,44 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/waf"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/waf"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			byName, err := waf.GetSubscribedRuleGroup(ctx, &waf.GetSubscribedRuleGroupArgs{
-//				Name: pulumi.StringRef("F5 Bot Detection Signatures For AWS WAF"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			byMetricName, err := waf.GetSubscribedRuleGroup(ctx, &waf.GetSubscribedRuleGroupArgs{
-//				MetricName: pulumi.StringRef("F5BotDetectionSignatures"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = waf.NewWebAcl(ctx, "acl", &waf.WebAclArgs{
-//				Rules: waf.WebAclRuleArray{
-//					&waf.WebAclRuleArgs{
-//						Priority: pulumi.Int(1),
-//						RuleId:   pulumi.String(byName.Id),
-//						Type:     pulumi.String("GROUP"),
-//					},
-//					&waf.WebAclRuleArgs{
-//						Priority: pulumi.Int(2),
-//						RuleId:   pulumi.String(byMetricName.Id),
-//						Type:     pulumi.String("GROUP"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		byName, err := waf.GetSubscribedRuleGroup(ctx, &waf.GetSubscribedRuleGroupArgs{
+// 			Name: pulumi.StringRef("F5 Bot Detection Signatures For AWS WAF"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		byMetricName, err := waf.GetSubscribedRuleGroup(ctx, &waf.GetSubscribedRuleGroupArgs{
+// 			MetricName: pulumi.StringRef("F5BotDetectionSignatures"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = waf.NewWebAcl(ctx, "acl", &waf.WebAclArgs{
+// 			Rules: waf.WebAclRuleArray{
+// 				&waf.WebAclRuleArgs{
+// 					Priority: pulumi.Int(1),
+// 					RuleId:   pulumi.String(byName.Id),
+// 					Type:     pulumi.String("GROUP"),
+// 				},
+// 				&waf.WebAclRuleArgs{
+// 					Priority: pulumi.Int(2),
+// 					RuleId:   pulumi.String(byMetricName.Id),
+// 					Type:     pulumi.String("GROUP"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func GetSubscribedRuleGroup(ctx *pulumi.Context, args *GetSubscribedRuleGroupArgs, opts ...pulumi.InvokeOption) (*GetSubscribedRuleGroupResult, error) {
 	var rv GetSubscribedRuleGroupResult

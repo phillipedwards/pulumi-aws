@@ -19,29 +19,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/storagegateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := storagegateway.NewNfsFileShare(ctx, "example", &storagegateway.NfsFileShareArgs{
-//				ClientLists: pulumi.StringArray{
-//					pulumi.String("0.0.0.0/0"),
-//				},
-//				GatewayArn:  pulumi.Any(aws_storagegateway_gateway.Example.Arn),
-//				LocationArn: pulumi.Any(aws_s3_bucket.Example.Arn),
-//				RoleArn:     pulumi.Any(aws_iam_role.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := storagegateway.NewNfsFileShare(ctx, "example", &storagegateway.NfsFileShareArgs{
+// 			ClientLists: pulumi.StringArray{
+// 				pulumi.String("0.0.0.0/0"),
+// 			},
+// 			GatewayArn:  pulumi.Any(aws_storagegateway_gateway.Example.Arn),
+// 			LocationArn: pulumi.Any(aws_s3_bucket.Example.Arn),
+// 			RoleArn:     pulumi.Any(aws_iam_role.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -49,9 +46,7 @@ import (
 // `aws_storagegateway_nfs_file_share` can be imported by using the NFS File Share Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:storagegateway/nfsFileShare:NfsFileShare example arn:aws:storagegateway:us-east-1:123456789012:share/share-12345678
-//
+//  $ pulumi import aws:storagegateway/nfsFileShare:NfsFileShare example arn:aws:storagegateway:us-east-1:123456789012:share/share-12345678
 // ```
 type NfsFileShare struct {
 	pulumi.CustomResourceState
@@ -365,7 +360,7 @@ func (i *NfsFileShare) ToNfsFileShareOutputWithContext(ctx context.Context) NfsF
 // NfsFileShareArrayInput is an input type that accepts NfsFileShareArray and NfsFileShareArrayOutput values.
 // You can construct a concrete instance of `NfsFileShareArrayInput` via:
 //
-//	NfsFileShareArray{ NfsFileShareArgs{...} }
+//          NfsFileShareArray{ NfsFileShareArgs{...} }
 type NfsFileShareArrayInput interface {
 	pulumi.Input
 
@@ -390,7 +385,7 @@ func (i NfsFileShareArray) ToNfsFileShareArrayOutputWithContext(ctx context.Cont
 // NfsFileShareMapInput is an input type that accepts NfsFileShareMap and NfsFileShareMapOutput values.
 // You can construct a concrete instance of `NfsFileShareMapInput` via:
 //
-//	NfsFileShareMap{ "key": NfsFileShareArgs{...} }
+//          NfsFileShareMap{ "key": NfsFileShareArgs{...} }
 type NfsFileShareMapInput interface {
 	pulumi.Input
 

@@ -23,46 +23,42 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ssm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ssm"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ssm.NewDocument(ctx, "foo", &ssm.DocumentArgs{
-//				Content: pulumi.String(fmt.Sprintf(`  {
-//	    "schemaVersion": "1.2",
-//	    "description": "Check ip configuration of a Linux instance.",
-//	    "parameters": {
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ssm.NewDocument(ctx, "foo", &ssm.DocumentArgs{
+// 			Content: pulumi.String(fmt.Sprintf(`  {
+//     "schemaVersion": "1.2",
+//     "description": "Check ip configuration of a Linux instance.",
+//     "parameters": {
 //
-//	    },
-//	    "runtimeConfig": {
-//	      "aws:runShellScript": {
-//	        "properties": [
-//	          {
-//	            "id": "0.aws:runShellScript",
-//	            "runCommand": ["ifconfig"]
-//	          }
-//	        ]
-//	      }
-//	    }
-//	  }
+//     },
+//     "runtimeConfig": {
+//       "aws:runShellScript": {
+//         "properties": [
+//           {
+//             "id": "0.aws:runShellScript",
+//             "runCommand": ["ifconfig"]
+//           }
+//         ]
+//       }
+//     }
+//   }
 //
 // `)),
-//
-//				DocumentType: pulumi.String("Command"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 			DocumentType: pulumi.String("Command"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Create an ssm document in YAML format
 //
@@ -70,41 +66,35 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ssm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ssm"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ssm.NewDocument(ctx, "foo", &ssm.DocumentArgs{
-//				Content: pulumi.String(fmt.Sprintf(`schemaVersion: '1.2'
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ssm.NewDocument(ctx, "foo", &ssm.DocumentArgs{
+// 			Content: pulumi.String(fmt.Sprintf(`schemaVersion: '1.2'
 // description: Check ip configuration of a Linux instance.
 // parameters: {}
 // runtimeConfig:
-//
-//	'aws:runShellScript':
-//	  properties:
-//	    - id: '0.aws:runShellScript'
-//	      runCommand:
-//	        - ifconfig
+//   'aws:runShellScript':
+//     properties:
+//       - id: '0.aws:runShellScript'
+//         runCommand:
+//           - ifconfig
 //
 // `)),
-//
-//				DocumentFormat: pulumi.String("YAML"),
-//				DocumentType:   pulumi.String("Command"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 			DocumentFormat: pulumi.String("YAML"),
+// 			DocumentType:   pulumi.String("Command"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ## Permissions
 //
@@ -122,36 +112,34 @@ import (
 // SSM Documents can be imported using the name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ssm/document:Document example example
-//
+//  $ pulumi import aws:ssm/document:Document example example
 // ```
 //
-//	The `attachments_source` argument does not have an SSM API method for reading the attachment information detail after creation. If the argument is set in the provider configuration on an imported resource, this provider will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_ssm_document" "test" {
+//  The `attachments_source` argument does not have an SSM API method for reading the attachment information detail after creation. If the argument is set in the provider configuration on an imported resource, this provider will always show a difference. To workaround this behavior, either omit the argument from the configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_ssm_document" "test" {
 //
-//	name
+//  name
 //
 // = "test_document"
 //
-//	document_type = "Package"
+//  document_type = "Package"
 //
-//	attachments_source {
+//  attachments_source {
 //
-//	key
+//  key
 //
 // = "SourceUrl"
 //
-//	values = ["s3://${aws_s3_bucket.object_bucket.bucket}/test.zip"]
+//  values = ["s3://${aws_s3_bucket.object_bucket.bucket}/test.zip"]
 //
-//	}
+//  }
 //
 // # There is no AWS SSM API for reading attachments_source info directly
 //
-//	lifecycle {
+//  lifecycle {
 //
-//	ignore_changes = [attachments_source]
+//  ignore_changes = [attachments_source]
 //
-//	} }
+//  } }
 type Document struct {
 	pulumi.CustomResourceState
 
@@ -405,7 +393,7 @@ func (i *Document) ToDocumentOutputWithContext(ctx context.Context) DocumentOutp
 // DocumentArrayInput is an input type that accepts DocumentArray and DocumentArrayOutput values.
 // You can construct a concrete instance of `DocumentArrayInput` via:
 //
-//	DocumentArray{ DocumentArgs{...} }
+//          DocumentArray{ DocumentArgs{...} }
 type DocumentArrayInput interface {
 	pulumi.Input
 
@@ -430,7 +418,7 @@ func (i DocumentArray) ToDocumentArrayOutputWithContext(ctx context.Context) Doc
 // DocumentMapInput is an input type that accepts DocumentMap and DocumentMapOutput values.
 // You can construct a concrete instance of `DocumentMapInput` via:
 //
-//	DocumentMap{ "key": DocumentArgs{...} }
+//          DocumentMap{ "key": DocumentArgs{...} }
 type DocumentMapInput interface {
 	pulumi.Input
 

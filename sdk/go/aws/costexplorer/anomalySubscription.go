@@ -20,41 +20,38 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/costexplorer"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/costexplorer"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			testAnomalyMonitor, err := costexplorer.NewAnomalyMonitor(ctx, "testAnomalyMonitor", &costexplorer.AnomalyMonitorArgs{
-//				MonitorType:      pulumi.String("DIMENSIONAL"),
-//				MonitorDimension: pulumi.String("SERVICE"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = costexplorer.NewAnomalySubscription(ctx, "testAnomalySubscription", &costexplorer.AnomalySubscriptionArgs{
-//				Threshold: pulumi.Float64(100),
-//				Frequency: pulumi.String("DAILY"),
-//				MonitorArnLists: pulumi.StringArray{
-//					testAnomalyMonitor.Arn,
-//				},
-//				Subscribers: costexplorer.AnomalySubscriptionSubscriberArray{
-//					&costexplorer.AnomalySubscriptionSubscriberArgs{
-//						Type:    pulumi.String("EMAIL"),
-//						Address: pulumi.String("abc@example.com"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		testAnomalyMonitor, err := costexplorer.NewAnomalyMonitor(ctx, "testAnomalyMonitor", &costexplorer.AnomalyMonitorArgs{
+// 			MonitorType:      pulumi.String("DIMENSIONAL"),
+// 			MonitorDimension: pulumi.String("SERVICE"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = costexplorer.NewAnomalySubscription(ctx, "testAnomalySubscription", &costexplorer.AnomalySubscriptionArgs{
+// 			Threshold: pulumi.Float64(100),
+// 			Frequency: pulumi.String("DAILY"),
+// 			MonitorArnLists: pulumi.StringArray{
+// 				testAnomalyMonitor.Arn,
+// 			},
+// 			Subscribers: costexplorer.AnomalySubscriptionSubscriberArray{
+// 				&costexplorer.AnomalySubscriptionSubscriberArgs{
+// 					Type:    pulumi.String("EMAIL"),
+// 					Address: pulumi.String("abc@example.com"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### SNS Example
 //
@@ -62,58 +59,55 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/costexplorer"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/costexplorer"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			costAnomalyUpdates, err := sns.NewTopic(ctx, "costAnomalyUpdates", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = sns.NewTopicPolicy(ctx, "default", &sns.TopicPolicyArgs{
-//				Arn: costAnomalyUpdates.Arn,
-//				Policy: snsTopicPolicy.ApplyT(func(snsTopicPolicy iam.GetPolicyDocumentResult) (string, error) {
-//					return snsTopicPolicy.Json, nil
-//				}).(pulumi.StringOutput),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			anomalyMonitor, err := costexplorer.NewAnomalyMonitor(ctx, "anomalyMonitor", &costexplorer.AnomalyMonitorArgs{
-//				MonitorType:      pulumi.String("DIMENSIONAL"),
-//				MonitorDimension: pulumi.String("SERVICE"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = costexplorer.NewAnomalySubscription(ctx, "realtimeSubscription", &costexplorer.AnomalySubscriptionArgs{
-//				Threshold: pulumi.Float64(0),
-//				Frequency: pulumi.String("IMMEDIATE"),
-//				MonitorArnLists: pulumi.StringArray{
-//					anomalyMonitor.Arn,
-//				},
-//				Subscribers: costexplorer.AnomalySubscriptionSubscriberArray{
-//					&costexplorer.AnomalySubscriptionSubscriberArgs{
-//						Type:    pulumi.String("SNS"),
-//						Address: costAnomalyUpdates.Arn,
-//					},
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				_default,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		costAnomalyUpdates, err := sns.NewTopic(ctx, "costAnomalyUpdates", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = sns.NewTopicPolicy(ctx, "default", &sns.TopicPolicyArgs{
+// 			Arn: costAnomalyUpdates.Arn,
+// 			Policy: snsTopicPolicy.ApplyT(func(snsTopicPolicy iam.GetPolicyDocumentResult) (string, error) {
+// 				return snsTopicPolicy.Json, nil
+// 			}).(pulumi.StringOutput),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		anomalyMonitor, err := costexplorer.NewAnomalyMonitor(ctx, "anomalyMonitor", &costexplorer.AnomalyMonitorArgs{
+// 			MonitorType:      pulumi.String("DIMENSIONAL"),
+// 			MonitorDimension: pulumi.String("SERVICE"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = costexplorer.NewAnomalySubscription(ctx, "realtimeSubscription", &costexplorer.AnomalySubscriptionArgs{
+// 			Threshold: pulumi.Float64(0),
+// 			Frequency: pulumi.String("IMMEDIATE"),
+// 			MonitorArnLists: pulumi.StringArray{
+// 				anomalyMonitor.Arn,
+// 			},
+// 			Subscribers: costexplorer.AnomalySubscriptionSubscriberArray{
+// 				&costexplorer.AnomalySubscriptionSubscriberArgs{
+// 					Type:    pulumi.String("SNS"),
+// 					Address: costAnomalyUpdates.Arn,
+// 				},
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			_default,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -121,9 +115,7 @@ import (
 // `aws_ce_anomaly_subscription` can be imported using the `id`, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:costexplorer/anomalySubscription:AnomalySubscription example AnomalySubscriptionARN
-//
+//  $ pulumi import aws:costexplorer/anomalySubscription:AnomalySubscription example AnomalySubscriptionARN
 // ```
 type AnomalySubscription struct {
 	pulumi.CustomResourceState
@@ -295,7 +287,7 @@ func (i *AnomalySubscription) ToAnomalySubscriptionOutputWithContext(ctx context
 // AnomalySubscriptionArrayInput is an input type that accepts AnomalySubscriptionArray and AnomalySubscriptionArrayOutput values.
 // You can construct a concrete instance of `AnomalySubscriptionArrayInput` via:
 //
-//	AnomalySubscriptionArray{ AnomalySubscriptionArgs{...} }
+//          AnomalySubscriptionArray{ AnomalySubscriptionArgs{...} }
 type AnomalySubscriptionArrayInput interface {
 	pulumi.Input
 
@@ -320,7 +312,7 @@ func (i AnomalySubscriptionArray) ToAnomalySubscriptionArrayOutputWithContext(ct
 // AnomalySubscriptionMapInput is an input type that accepts AnomalySubscriptionMap and AnomalySubscriptionMapOutput values.
 // You can construct a concrete instance of `AnomalySubscriptionMapInput` via:
 //
-//	AnomalySubscriptionMap{ "key": AnomalySubscriptionArgs{...} }
+//          AnomalySubscriptionMap{ "key": AnomalySubscriptionArgs{...} }
 type AnomalySubscriptionMapInput interface {
 	pulumi.Input
 

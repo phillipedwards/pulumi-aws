@@ -25,7 +25,7 @@ type DetectorDatasources struct {
 // DetectorDatasourcesInput is an input type that accepts DetectorDatasourcesArgs and DetectorDatasourcesOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesInput` via:
 //
-//	DetectorDatasourcesArgs{...}
+//          DetectorDatasourcesArgs{...}
 type DetectorDatasourcesInput interface {
 	pulumi.Input
 
@@ -68,11 +68,11 @@ func (i DetectorDatasourcesArgs) ToDetectorDatasourcesPtrOutputWithContext(ctx c
 // DetectorDatasourcesPtrInput is an input type that accepts DetectorDatasourcesArgs, DetectorDatasourcesPtr and DetectorDatasourcesPtrOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesPtrInput` via:
 //
-//	        DetectorDatasourcesArgs{...}
+//          DetectorDatasourcesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DetectorDatasourcesPtrInput interface {
 	pulumi.Input
 
@@ -206,7 +206,7 @@ type DetectorDatasourcesKubernetes struct {
 // DetectorDatasourcesKubernetesInput is an input type that accepts DetectorDatasourcesKubernetesArgs and DetectorDatasourcesKubernetesOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesKubernetesInput` via:
 //
-//	DetectorDatasourcesKubernetesArgs{...}
+//          DetectorDatasourcesKubernetesArgs{...}
 type DetectorDatasourcesKubernetesInput interface {
 	pulumi.Input
 
@@ -243,11 +243,11 @@ func (i DetectorDatasourcesKubernetesArgs) ToDetectorDatasourcesKubernetesPtrOut
 // DetectorDatasourcesKubernetesPtrInput is an input type that accepts DetectorDatasourcesKubernetesArgs, DetectorDatasourcesKubernetesPtr and DetectorDatasourcesKubernetesPtrOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesKubernetesPtrInput` via:
 //
-//	        DetectorDatasourcesKubernetesArgs{...}
+//          DetectorDatasourcesKubernetesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DetectorDatasourcesKubernetesPtrInput interface {
 	pulumi.Input
 
@@ -347,7 +347,7 @@ type DetectorDatasourcesKubernetesAuditLogs struct {
 // DetectorDatasourcesKubernetesAuditLogsInput is an input type that accepts DetectorDatasourcesKubernetesAuditLogsArgs and DetectorDatasourcesKubernetesAuditLogsOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesKubernetesAuditLogsInput` via:
 //
-//	DetectorDatasourcesKubernetesAuditLogsArgs{...}
+//          DetectorDatasourcesKubernetesAuditLogsArgs{...}
 type DetectorDatasourcesKubernetesAuditLogsInput interface {
 	pulumi.Input
 
@@ -384,11 +384,11 @@ func (i DetectorDatasourcesKubernetesAuditLogsArgs) ToDetectorDatasourcesKuberne
 // DetectorDatasourcesKubernetesAuditLogsPtrInput is an input type that accepts DetectorDatasourcesKubernetesAuditLogsArgs, DetectorDatasourcesKubernetesAuditLogsPtr and DetectorDatasourcesKubernetesAuditLogsPtrOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesKubernetesAuditLogsPtrInput` via:
 //
-//	        DetectorDatasourcesKubernetesAuditLogsArgs{...}
+//          DetectorDatasourcesKubernetesAuditLogsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DetectorDatasourcesKubernetesAuditLogsPtrInput interface {
 	pulumi.Input
 
@@ -488,7 +488,7 @@ type DetectorDatasourcesMalwareProtection struct {
 // DetectorDatasourcesMalwareProtectionInput is an input type that accepts DetectorDatasourcesMalwareProtectionArgs and DetectorDatasourcesMalwareProtectionOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesMalwareProtectionInput` via:
 //
-//	DetectorDatasourcesMalwareProtectionArgs{...}
+//          DetectorDatasourcesMalwareProtectionArgs{...}
 type DetectorDatasourcesMalwareProtectionInput interface {
 	pulumi.Input
 
@@ -525,11 +525,11 @@ func (i DetectorDatasourcesMalwareProtectionArgs) ToDetectorDatasourcesMalwarePr
 // DetectorDatasourcesMalwareProtectionPtrInput is an input type that accepts DetectorDatasourcesMalwareProtectionArgs, DetectorDatasourcesMalwareProtectionPtr and DetectorDatasourcesMalwareProtectionPtrOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesMalwareProtectionPtrInput` via:
 //
-//	        DetectorDatasourcesMalwareProtectionArgs{...}
+//          DetectorDatasourcesMalwareProtectionArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DetectorDatasourcesMalwareProtectionPtrInput interface {
 	pulumi.Input
 
@@ -631,7 +631,7 @@ type DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindings struct {
 // DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsInput is an input type that accepts DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs and DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsInput` via:
 //
-//	DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs{...}
+//          DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs{...}
 type DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsInput interface {
 	pulumi.Input
 
@@ -668,11 +668,11 @@ func (i DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs) ToD
 // DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsPtrInput is an input type that accepts DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs, DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsPtr and DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsPtrOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsPtrInput` via:
 //
-//	        DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs{...}
+//          DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsPtrInput interface {
 	pulumi.Input
 
@@ -774,7 +774,7 @@ type DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes s
 // DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesInput is an input type that accepts DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs and DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesInput` via:
 //
-//	DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs{...}
+//          DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs{...}
 type DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesInput interface {
 	pulumi.Input
 
@@ -811,11 +811,11 @@ func (i DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolume
 // DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesPtrInput is an input type that accepts DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs, DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesPtr and DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesPtrOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesPtrInput` via:
 //
-//	        DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs{...}
+//          DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DetectorDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesPtrInput interface {
 	pulumi.Input
 
@@ -917,7 +917,7 @@ type DetectorDatasourcesS3Logs struct {
 // DetectorDatasourcesS3LogsInput is an input type that accepts DetectorDatasourcesS3LogsArgs and DetectorDatasourcesS3LogsOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesS3LogsInput` via:
 //
-//	DetectorDatasourcesS3LogsArgs{...}
+//          DetectorDatasourcesS3LogsArgs{...}
 type DetectorDatasourcesS3LogsInput interface {
 	pulumi.Input
 
@@ -954,11 +954,11 @@ func (i DetectorDatasourcesS3LogsArgs) ToDetectorDatasourcesS3LogsPtrOutputWithC
 // DetectorDatasourcesS3LogsPtrInput is an input type that accepts DetectorDatasourcesS3LogsArgs, DetectorDatasourcesS3LogsPtr and DetectorDatasourcesS3LogsPtrOutput values.
 // You can construct a concrete instance of `DetectorDatasourcesS3LogsPtrInput` via:
 //
-//	        DetectorDatasourcesS3LogsArgs{...}
+//          DetectorDatasourcesS3LogsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DetectorDatasourcesS3LogsPtrInput interface {
 	pulumi.Input
 
@@ -1056,7 +1056,7 @@ type FilterFindingCriteria struct {
 // FilterFindingCriteriaInput is an input type that accepts FilterFindingCriteriaArgs and FilterFindingCriteriaOutput values.
 // You can construct a concrete instance of `FilterFindingCriteriaInput` via:
 //
-//	FilterFindingCriteriaArgs{...}
+//          FilterFindingCriteriaArgs{...}
 type FilterFindingCriteriaInput interface {
 	pulumi.Input
 
@@ -1091,11 +1091,11 @@ func (i FilterFindingCriteriaArgs) ToFilterFindingCriteriaPtrOutputWithContext(c
 // FilterFindingCriteriaPtrInput is an input type that accepts FilterFindingCriteriaArgs, FilterFindingCriteriaPtr and FilterFindingCriteriaPtrOutput values.
 // You can construct a concrete instance of `FilterFindingCriteriaPtrInput` via:
 //
-//	        FilterFindingCriteriaArgs{...}
+//          FilterFindingCriteriaArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FilterFindingCriteriaPtrInput interface {
 	pulumi.Input
 
@@ -1202,7 +1202,7 @@ type FilterFindingCriteriaCriterion struct {
 // FilterFindingCriteriaCriterionInput is an input type that accepts FilterFindingCriteriaCriterionArgs and FilterFindingCriteriaCriterionOutput values.
 // You can construct a concrete instance of `FilterFindingCriteriaCriterionInput` via:
 //
-//	FilterFindingCriteriaCriterionArgs{...}
+//          FilterFindingCriteriaCriterionArgs{...}
 type FilterFindingCriteriaCriterionInput interface {
 	pulumi.Input
 
@@ -1242,7 +1242,7 @@ func (i FilterFindingCriteriaCriterionArgs) ToFilterFindingCriteriaCriterionOutp
 // FilterFindingCriteriaCriterionArrayInput is an input type that accepts FilterFindingCriteriaCriterionArray and FilterFindingCriteriaCriterionArrayOutput values.
 // You can construct a concrete instance of `FilterFindingCriteriaCriterionArrayInput` via:
 //
-//	FilterFindingCriteriaCriterionArray{ FilterFindingCriteriaCriterionArgs{...} }
+//          FilterFindingCriteriaCriterionArray{ FilterFindingCriteriaCriterionArgs{...} }
 type FilterFindingCriteriaCriterionArrayInput interface {
 	pulumi.Input
 
@@ -1345,7 +1345,7 @@ type OrganizationConfigurationDatasources struct {
 // OrganizationConfigurationDatasourcesInput is an input type that accepts OrganizationConfigurationDatasourcesArgs and OrganizationConfigurationDatasourcesOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesInput` via:
 //
-//	OrganizationConfigurationDatasourcesArgs{...}
+//          OrganizationConfigurationDatasourcesArgs{...}
 type OrganizationConfigurationDatasourcesInput interface {
 	pulumi.Input
 
@@ -1385,11 +1385,11 @@ func (i OrganizationConfigurationDatasourcesArgs) ToOrganizationConfigurationDat
 // OrganizationConfigurationDatasourcesPtrInput is an input type that accepts OrganizationConfigurationDatasourcesArgs, OrganizationConfigurationDatasourcesPtr and OrganizationConfigurationDatasourcesPtrOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesPtrInput` via:
 //
-//	        OrganizationConfigurationDatasourcesArgs{...}
+//          OrganizationConfigurationDatasourcesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type OrganizationConfigurationDatasourcesPtrInput interface {
 	pulumi.Input
 
@@ -1523,7 +1523,7 @@ type OrganizationConfigurationDatasourcesKubernetes struct {
 // OrganizationConfigurationDatasourcesKubernetesInput is an input type that accepts OrganizationConfigurationDatasourcesKubernetesArgs and OrganizationConfigurationDatasourcesKubernetesOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesKubernetesInput` via:
 //
-//	OrganizationConfigurationDatasourcesKubernetesArgs{...}
+//          OrganizationConfigurationDatasourcesKubernetesArgs{...}
 type OrganizationConfigurationDatasourcesKubernetesInput interface {
 	pulumi.Input
 
@@ -1560,11 +1560,11 @@ func (i OrganizationConfigurationDatasourcesKubernetesArgs) ToOrganizationConfig
 // OrganizationConfigurationDatasourcesKubernetesPtrInput is an input type that accepts OrganizationConfigurationDatasourcesKubernetesArgs, OrganizationConfigurationDatasourcesKubernetesPtr and OrganizationConfigurationDatasourcesKubernetesPtrOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesKubernetesPtrInput` via:
 //
-//	        OrganizationConfigurationDatasourcesKubernetesArgs{...}
+//          OrganizationConfigurationDatasourcesKubernetesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type OrganizationConfigurationDatasourcesKubernetesPtrInput interface {
 	pulumi.Input
 
@@ -1666,7 +1666,7 @@ type OrganizationConfigurationDatasourcesKubernetesAuditLogs struct {
 // OrganizationConfigurationDatasourcesKubernetesAuditLogsInput is an input type that accepts OrganizationConfigurationDatasourcesKubernetesAuditLogsArgs and OrganizationConfigurationDatasourcesKubernetesAuditLogsOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesKubernetesAuditLogsInput` via:
 //
-//	OrganizationConfigurationDatasourcesKubernetesAuditLogsArgs{...}
+//          OrganizationConfigurationDatasourcesKubernetesAuditLogsArgs{...}
 type OrganizationConfigurationDatasourcesKubernetesAuditLogsInput interface {
 	pulumi.Input
 
@@ -1703,11 +1703,11 @@ func (i OrganizationConfigurationDatasourcesKubernetesAuditLogsArgs) ToOrganizat
 // OrganizationConfigurationDatasourcesKubernetesAuditLogsPtrInput is an input type that accepts OrganizationConfigurationDatasourcesKubernetesAuditLogsArgs, OrganizationConfigurationDatasourcesKubernetesAuditLogsPtr and OrganizationConfigurationDatasourcesKubernetesAuditLogsPtrOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesKubernetesAuditLogsPtrInput` via:
 //
-//	        OrganizationConfigurationDatasourcesKubernetesAuditLogsArgs{...}
+//          OrganizationConfigurationDatasourcesKubernetesAuditLogsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type OrganizationConfigurationDatasourcesKubernetesAuditLogsPtrInput interface {
 	pulumi.Input
 
@@ -1807,7 +1807,7 @@ type OrganizationConfigurationDatasourcesMalwareProtection struct {
 // OrganizationConfigurationDatasourcesMalwareProtectionInput is an input type that accepts OrganizationConfigurationDatasourcesMalwareProtectionArgs and OrganizationConfigurationDatasourcesMalwareProtectionOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesMalwareProtectionInput` via:
 //
-//	OrganizationConfigurationDatasourcesMalwareProtectionArgs{...}
+//          OrganizationConfigurationDatasourcesMalwareProtectionArgs{...}
 type OrganizationConfigurationDatasourcesMalwareProtectionInput interface {
 	pulumi.Input
 
@@ -1844,11 +1844,11 @@ func (i OrganizationConfigurationDatasourcesMalwareProtectionArgs) ToOrganizatio
 // OrganizationConfigurationDatasourcesMalwareProtectionPtrInput is an input type that accepts OrganizationConfigurationDatasourcesMalwareProtectionArgs, OrganizationConfigurationDatasourcesMalwareProtectionPtr and OrganizationConfigurationDatasourcesMalwareProtectionPtrOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesMalwareProtectionPtrInput` via:
 //
-//	        OrganizationConfigurationDatasourcesMalwareProtectionArgs{...}
+//          OrganizationConfigurationDatasourcesMalwareProtectionArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type OrganizationConfigurationDatasourcesMalwareProtectionPtrInput interface {
 	pulumi.Input
 
@@ -1950,7 +1950,7 @@ type OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFin
 // OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsInput is an input type that accepts OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs and OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsInput` via:
 //
-//	OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs{...}
+//          OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs{...}
 type OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsInput interface {
 	pulumi.Input
 
@@ -1987,11 +1987,11 @@ func (i OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWith
 // OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsPtrInput is an input type that accepts OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs, OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsPtr and OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsPtrOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsPtrInput` via:
 //
-//	        OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs{...}
+//          OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsPtrInput interface {
 	pulumi.Input
 
@@ -2093,7 +2093,7 @@ type OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFin
 // OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesInput is an input type that accepts OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs and OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesInput` via:
 //
-//	OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs{...}
+//          OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs{...}
 type OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesInput interface {
 	pulumi.Input
 
@@ -2130,11 +2130,11 @@ func (i OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWith
 // OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesPtrInput is an input type that accepts OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs, OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesPtr and OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesPtrOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesPtrInput` via:
 //
-//	        OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs{...}
+//          OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type OrganizationConfigurationDatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumesPtrInput interface {
 	pulumi.Input
 
@@ -2235,7 +2235,7 @@ type OrganizationConfigurationDatasourcesS3Logs struct {
 // OrganizationConfigurationDatasourcesS3LogsInput is an input type that accepts OrganizationConfigurationDatasourcesS3LogsArgs and OrganizationConfigurationDatasourcesS3LogsOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesS3LogsInput` via:
 //
-//	OrganizationConfigurationDatasourcesS3LogsArgs{...}
+//          OrganizationConfigurationDatasourcesS3LogsArgs{...}
 type OrganizationConfigurationDatasourcesS3LogsInput interface {
 	pulumi.Input
 
@@ -2271,11 +2271,11 @@ func (i OrganizationConfigurationDatasourcesS3LogsArgs) ToOrganizationConfigurat
 // OrganizationConfigurationDatasourcesS3LogsPtrInput is an input type that accepts OrganizationConfigurationDatasourcesS3LogsArgs, OrganizationConfigurationDatasourcesS3LogsPtr and OrganizationConfigurationDatasourcesS3LogsPtrOutput values.
 // You can construct a concrete instance of `OrganizationConfigurationDatasourcesS3LogsPtrInput` via:
 //
-//	        OrganizationConfigurationDatasourcesS3LogsArgs{...}
+//          OrganizationConfigurationDatasourcesS3LogsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type OrganizationConfigurationDatasourcesS3LogsPtrInput interface {
 	pulumi.Input
 

@@ -18,27 +18,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudwatch"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudwatch.NewLogGroup(ctx, "yada", &cloudwatch.LogGroupArgs{
-//				Tags: pulumi.StringMap{
-//					"Application": pulumi.String("serviceA"),
-//					"Environment": pulumi.String("production"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudwatch.NewLogGroup(ctx, "yada", &cloudwatch.LogGroupArgs{
+// 			Tags: pulumi.StringMap{
+// 				"Application": pulumi.String("serviceA"),
+// 				"Environment": pulumi.String("production"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // Cloudwatch Log Groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudwatch/logGroup:LogGroup test_group yada
-//
+//  $ pulumi import aws:cloudwatch/logGroup:LogGroup test_group yada
 // ```
 type LogGroup struct {
 	pulumi.CustomResourceState
@@ -208,7 +203,7 @@ func (i *LogGroup) ToLogGroupOutputWithContext(ctx context.Context) LogGroupOutp
 // LogGroupArrayInput is an input type that accepts LogGroupArray and LogGroupArrayOutput values.
 // You can construct a concrete instance of `LogGroupArrayInput` via:
 //
-//	LogGroupArray{ LogGroupArgs{...} }
+//          LogGroupArray{ LogGroupArgs{...} }
 type LogGroupArrayInput interface {
 	pulumi.Input
 
@@ -233,7 +228,7 @@ func (i LogGroupArray) ToLogGroupArrayOutputWithContext(ctx context.Context) Log
 // LogGroupMapInput is an input type that accepts LogGroupMap and LogGroupMapOutput values.
 // You can construct a concrete instance of `LogGroupMapInput` via:
 //
-//	LogGroupMap{ "key": LogGroupArgs{...} }
+//          LogGroupMap{ "key": LogGroupArgs{...} }
 type LogGroupMapInput interface {
 	pulumi.Input
 

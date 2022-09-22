@@ -21,25 +21,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/swf"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/swf"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := swf.NewDomain(ctx, "foo", &swf.DomainArgs{
-//				Description:                            pulumi.String("SWF Domain"),
-//				WorkflowExecutionRetentionPeriodInDays: pulumi.String("30"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := swf.NewDomain(ctx, "foo", &swf.DomainArgs{
+// 			Description:                            pulumi.String("SWF Domain"),
+// 			WorkflowExecutionRetentionPeriodInDays: pulumi.String("30"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -47,9 +44,7 @@ import (
 // SWF Domains can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:swf/domain:Domain foo test-domain
-//
+//  $ pulumi import aws:swf/domain:Domain foo test-domain
 // ```
 type Domain struct {
 	pulumi.CustomResourceState
@@ -192,7 +187,7 @@ func (i *Domain) ToDomainOutputWithContext(ctx context.Context) DomainOutput {
 // DomainArrayInput is an input type that accepts DomainArray and DomainArrayOutput values.
 // You can construct a concrete instance of `DomainArrayInput` via:
 //
-//	DomainArray{ DomainArgs{...} }
+//          DomainArray{ DomainArgs{...} }
 type DomainArrayInput interface {
 	pulumi.Input
 
@@ -217,7 +212,7 @@ func (i DomainArray) ToDomainArrayOutputWithContext(ctx context.Context) DomainA
 // DomainMapInput is an input type that accepts DomainMap and DomainMapOutput values.
 // You can construct a concrete instance of `DomainMapInput` via:
 //
-//	DomainMap{ "key": DomainArgs{...} }
+//          DomainMap{ "key": DomainArgs{...} }
 type DomainMapInput interface {
 	pulumi.Input
 

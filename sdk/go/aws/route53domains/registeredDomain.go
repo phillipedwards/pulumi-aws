@@ -17,35 +17,32 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53domains"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53domains"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53domains.NewRegisteredDomain(ctx, "example", &route53domains.RegisteredDomainArgs{
-//				DomainName: pulumi.String("example.com"),
-//				NameServers: route53domains.RegisteredDomainNameServerArray{
-//					&route53domains.RegisteredDomainNameServerArgs{
-//						Name: pulumi.String("ns-195.awsdns-24.com"),
-//					},
-//					&route53domains.RegisteredDomainNameServerArgs{
-//						Name: pulumi.String("ns-874.awsdns-45.net"),
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Environment": pulumi.String("test"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53domains.NewRegisteredDomain(ctx, "example", &route53domains.RegisteredDomainArgs{
+// 			DomainName: pulumi.String("example.com"),
+// 			NameServers: route53domains.RegisteredDomainNameServerArray{
+// 				&route53domains.RegisteredDomainNameServerArgs{
+// 					Name: pulumi.String("ns-195.awsdns-24.com"),
+// 				},
+// 				&route53domains.RegisteredDomainNameServerArgs{
+// 					Name: pulumi.String("ns-874.awsdns-45.net"),
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Environment": pulumi.String("test"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type RegisteredDomain struct {
 	pulumi.CustomResourceState
@@ -306,7 +303,7 @@ func (i *RegisteredDomain) ToRegisteredDomainOutputWithContext(ctx context.Conte
 // RegisteredDomainArrayInput is an input type that accepts RegisteredDomainArray and RegisteredDomainArrayOutput values.
 // You can construct a concrete instance of `RegisteredDomainArrayInput` via:
 //
-//	RegisteredDomainArray{ RegisteredDomainArgs{...} }
+//          RegisteredDomainArray{ RegisteredDomainArgs{...} }
 type RegisteredDomainArrayInput interface {
 	pulumi.Input
 
@@ -331,7 +328,7 @@ func (i RegisteredDomainArray) ToRegisteredDomainArrayOutputWithContext(ctx cont
 // RegisteredDomainMapInput is an input type that accepts RegisteredDomainMap and RegisteredDomainMapOutput values.
 // You can construct a concrete instance of `RegisteredDomainMapInput` via:
 //
-//	RegisteredDomainMap{ "key": RegisteredDomainArgs{...} }
+//          RegisteredDomainMap{ "key": RegisteredDomainArgs{...} }
 type RegisteredDomainMapInput interface {
 	pulumi.Input
 

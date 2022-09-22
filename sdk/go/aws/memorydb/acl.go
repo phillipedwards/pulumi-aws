@@ -20,27 +20,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/memorydb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/memorydb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := memorydb.NewAcl(ctx, "example", &memorydb.AclArgs{
-//				UserNames: pulumi.StringArray{
-//					pulumi.String("my-user-1"),
-//					pulumi.String("my-user-2"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := memorydb.NewAcl(ctx, "example", &memorydb.AclArgs{
+// 			UserNames: pulumi.StringArray{
+// 				pulumi.String("my-user-1"),
+// 				pulumi.String("my-user-2"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -48,9 +45,7 @@ import (
 // Use the `name` to import an ACL. For example
 //
 // ```sh
-//
-//	$ pulumi import aws:memorydb/acl:Acl example my-acl
-//
+//  $ pulumi import aws:memorydb/acl:Acl example my-acl
 // ```
 type Acl struct {
 	pulumi.CustomResourceState
@@ -181,7 +176,7 @@ func (i *Acl) ToAclOutputWithContext(ctx context.Context) AclOutput {
 // AclArrayInput is an input type that accepts AclArray and AclArrayOutput values.
 // You can construct a concrete instance of `AclArrayInput` via:
 //
-//	AclArray{ AclArgs{...} }
+//          AclArray{ AclArgs{...} }
 type AclArrayInput interface {
 	pulumi.Input
 
@@ -206,7 +201,7 @@ func (i AclArray) ToAclArrayOutputWithContext(ctx context.Context) AclArrayOutpu
 // AclMapInput is an input type that accepts AclMap and AclMapOutput values.
 // You can construct a concrete instance of `AclMapInput` via:
 //
-//	AclMap{ "key": AclArgs{...} }
+//          AclMap{ "key": AclArgs{...} }
 type AclMapInput interface {
 	pulumi.Input
 

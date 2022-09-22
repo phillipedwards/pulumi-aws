@@ -19,29 +19,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/datasync"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/datasync"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := datasync.NewS3Location(ctx, "example", &datasync.S3LocationArgs{
-//				S3BucketArn:  pulumi.Any(aws_s3_bucket.Example.Arn),
-//				Subdirectory: pulumi.String("/example/prefix"),
-//				S3Config: &datasync.S3LocationS3ConfigArgs{
-//					BucketAccessRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := datasync.NewS3Location(ctx, "example", &datasync.S3LocationArgs{
+// 			S3BucketArn:  pulumi.Any(aws_s3_bucket.Example.Arn),
+// 			Subdirectory: pulumi.String("/example/prefix"),
+// 			S3Config: &datasync.S3LocationS3ConfigArgs{
+// 				BucketAccessRoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -49,9 +46,7 @@ import (
 // `aws_datasync_location_s3` can be imported by using the DataSync Task Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:datasync/s3Location:S3Location example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
-//
+//  $ pulumi import aws:datasync/s3Location:S3Location example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
 // ```
 type S3Location struct {
 	pulumi.CustomResourceState
@@ -213,7 +208,7 @@ func (i *S3Location) ToS3LocationOutputWithContext(ctx context.Context) S3Locati
 // S3LocationArrayInput is an input type that accepts S3LocationArray and S3LocationArrayOutput values.
 // You can construct a concrete instance of `S3LocationArrayInput` via:
 //
-//	S3LocationArray{ S3LocationArgs{...} }
+//          S3LocationArray{ S3LocationArgs{...} }
 type S3LocationArrayInput interface {
 	pulumi.Input
 
@@ -238,7 +233,7 @@ func (i S3LocationArray) ToS3LocationArrayOutputWithContext(ctx context.Context)
 // S3LocationMapInput is an input type that accepts S3LocationMap and S3LocationMapOutput values.
 // You can construct a concrete instance of `S3LocationMapInput` via:
 //
-//	S3LocationMap{ "key": S3LocationArgs{...} }
+//          S3LocationMap{ "key": S3LocationArgs{...} }
 type S3LocationMapInput interface {
 	pulumi.Input
 

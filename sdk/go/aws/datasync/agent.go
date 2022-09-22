@@ -20,24 +20,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/datasync"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/datasync"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := datasync.NewAgent(ctx, "example", &datasync.AgentArgs{
-//				IpAddress: pulumi.String("1.2.3.4"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := datasync.NewAgent(ctx, "example", &datasync.AgentArgs{
+// 			IpAddress: pulumi.String("1.2.3.4"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // `aws_datasync_agent` can be imported by using the DataSync Agent Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:datasync/agent:Agent example arn:aws:datasync:us-east-1:123456789012:agent/agent-12345678901234567
-//
+//  $ pulumi import aws:datasync/agent:Agent example arn:aws:datasync:us-east-1:123456789012:agent/agent-12345678901234567
 // ```
 type Agent struct {
 	pulumi.CustomResourceState
@@ -217,7 +212,7 @@ func (i *Agent) ToAgentOutputWithContext(ctx context.Context) AgentOutput {
 // AgentArrayInput is an input type that accepts AgentArray and AgentArrayOutput values.
 // You can construct a concrete instance of `AgentArrayInput` via:
 //
-//	AgentArray{ AgentArgs{...} }
+//          AgentArray{ AgentArgs{...} }
 type AgentArrayInput interface {
 	pulumi.Input
 
@@ -242,7 +237,7 @@ func (i AgentArray) ToAgentArrayOutputWithContext(ctx context.Context) AgentArra
 // AgentMapInput is an input type that accepts AgentMap and AgentMapOutput values.
 // You can construct a concrete instance of `AgentMapInput` via:
 //
-//	AgentMap{ "key": AgentArgs{...} }
+//          AgentMap{ "key": AgentArgs{...} }
 type AgentMapInput interface {
 	pulumi.Input
 

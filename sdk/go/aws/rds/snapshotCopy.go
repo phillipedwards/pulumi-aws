@@ -19,47 +19,44 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rds"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rds"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleInstance, err := rds.NewInstance(ctx, "exampleInstance", &rds.InstanceArgs{
-//				AllocatedStorage:      pulumi.Int(10),
-//				Engine:                pulumi.String("mysql"),
-//				EngineVersion:         pulumi.String("5.6.21"),
-//				InstanceClass:         pulumi.String("db.t2.micro"),
-//				Name:                  pulumi.String("baz"),
-//				Password:              pulumi.String("barbarbarbar"),
-//				Username:              pulumi.String("foo"),
-//				MaintenanceWindow:     pulumi.String("Fri:09:00-Fri:09:30"),
-//				BackupRetentionPeriod: pulumi.Int(0),
-//				ParameterGroupName:    pulumi.String("default.mysql5.6"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleSnapshot, err := rds.NewSnapshot(ctx, "exampleSnapshot", &rds.SnapshotArgs{
-//				DbInstanceIdentifier: exampleInstance.ID(),
-//				DbSnapshotIdentifier: pulumi.String("testsnapshot1234"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = rds.NewSnapshotCopy(ctx, "exampleSnapshotCopy", &rds.SnapshotCopyArgs{
-//				SourceDbSnapshotIdentifier: exampleSnapshot.DbSnapshotArn,
-//				TargetDbSnapshotIdentifier: pulumi.String("testsnapshot1234-copy"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleInstance, err := rds.NewInstance(ctx, "exampleInstance", &rds.InstanceArgs{
+// 			AllocatedStorage:      pulumi.Int(10),
+// 			Engine:                pulumi.String("mysql"),
+// 			EngineVersion:         pulumi.String("5.6.21"),
+// 			InstanceClass:         pulumi.String("db.t2.micro"),
+// 			Name:                  pulumi.String("baz"),
+// 			Password:              pulumi.String("barbarbarbar"),
+// 			Username:              pulumi.String("foo"),
+// 			MaintenanceWindow:     pulumi.String("Fri:09:00-Fri:09:30"),
+// 			BackupRetentionPeriod: pulumi.Int(0),
+// 			ParameterGroupName:    pulumi.String("default.mysql5.6"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleSnapshot, err := rds.NewSnapshot(ctx, "exampleSnapshot", &rds.SnapshotArgs{
+// 			DbInstanceIdentifier: exampleInstance.ID(),
+// 			DbSnapshotIdentifier: pulumi.String("testsnapshot1234"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = rds.NewSnapshotCopy(ctx, "exampleSnapshotCopy", &rds.SnapshotCopyArgs{
+// 			SourceDbSnapshotIdentifier: exampleSnapshot.DbSnapshotArn,
+// 			TargetDbSnapshotIdentifier: pulumi.String("testsnapshot1234-copy"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -67,9 +64,7 @@ import (
 // `aws_db_snapshot_copy` can be imported by using the snapshot identifier, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:rds/snapshotCopy:SnapshotCopy example my-snapshot
-//
+//  $ pulumi import aws:rds/snapshotCopy:SnapshotCopy example my-snapshot
 // ```
 type SnapshotCopy struct {
 	pulumi.CustomResourceState
@@ -321,7 +316,7 @@ func (i *SnapshotCopy) ToSnapshotCopyOutputWithContext(ctx context.Context) Snap
 // SnapshotCopyArrayInput is an input type that accepts SnapshotCopyArray and SnapshotCopyArrayOutput values.
 // You can construct a concrete instance of `SnapshotCopyArrayInput` via:
 //
-//	SnapshotCopyArray{ SnapshotCopyArgs{...} }
+//          SnapshotCopyArray{ SnapshotCopyArgs{...} }
 type SnapshotCopyArrayInput interface {
 	pulumi.Input
 
@@ -346,7 +341,7 @@ func (i SnapshotCopyArray) ToSnapshotCopyArrayOutputWithContext(ctx context.Cont
 // SnapshotCopyMapInput is an input type that accepts SnapshotCopyMap and SnapshotCopyMapOutput values.
 // You can construct a concrete instance of `SnapshotCopyMapInput` via:
 //
-//	SnapshotCopyMap{ "key": SnapshotCopyArgs{...} }
+//          SnapshotCopyMap{ "key": SnapshotCopyArgs{...} }
 type SnapshotCopyMapInput interface {
 	pulumi.Input
 

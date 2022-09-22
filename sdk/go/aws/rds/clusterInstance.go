@@ -32,48 +32,45 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rds"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rds"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := rds.NewCluster(ctx, "default", &rds.ClusterArgs{
-//				ClusterIdentifier: pulumi.String("aurora-cluster-demo"),
-//				AvailabilityZones: pulumi.StringArray{
-//					pulumi.String("us-west-2a"),
-//					pulumi.String("us-west-2b"),
-//					pulumi.String("us-west-2c"),
-//				},
-//				DatabaseName:   pulumi.String("mydb"),
-//				MasterUsername: pulumi.String("foo"),
-//				MasterPassword: pulumi.String("barbut8chars"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			var clusterInstances []*rds.ClusterInstance
-//			for key0, val0 := range 2 {
-//				__res, err := rds.NewClusterInstance(ctx, fmt.Sprintf("clusterInstances-%v", key0), &rds.ClusterInstanceArgs{
-//					Identifier:        pulumi.String(fmt.Sprintf("aurora-cluster-demo-%v", val0)),
-//					ClusterIdentifier: _default.ID(),
-//					InstanceClass:     pulumi.String("db.r4.large"),
-//					Engine:            _default.Engine,
-//					EngineVersion:     _default.EngineVersion,
-//				})
-//				if err != nil {
-//					return err
-//				}
-//				clusterInstances = append(clusterInstances, __res)
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := rds.NewCluster(ctx, "default", &rds.ClusterArgs{
+// 			ClusterIdentifier: pulumi.String("aurora-cluster-demo"),
+// 			AvailabilityZones: pulumi.StringArray{
+// 				pulumi.String("us-west-2a"),
+// 				pulumi.String("us-west-2b"),
+// 				pulumi.String("us-west-2c"),
+// 			},
+// 			DatabaseName:   pulumi.String("mydb"),
+// 			MasterUsername: pulumi.String("foo"),
+// 			MasterPassword: pulumi.String("barbut8chars"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		var clusterInstances []*rds.ClusterInstance
+// 		for key0, val0 := range 2 {
+// 			__res, err := rds.NewClusterInstance(ctx, fmt.Sprintf("clusterInstances-%v", key0), &rds.ClusterInstanceArgs{
+// 				Identifier:        pulumi.String(fmt.Sprintf("aurora-cluster-demo-%v", val0)),
+// 				ClusterIdentifier: _default.ID(),
+// 				InstanceClass:     pulumi.String("db.r4.large"),
+// 				Engine:            _default.Engine,
+// 				EngineVersion:     _default.EngineVersion,
+// 			})
+// 			if err != nil {
+// 				return err
+// 			}
+// 			clusterInstances = append(clusterInstances, __res)
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -81,9 +78,7 @@ import (
 // RDS Cluster Instances can be imported using the `identifier`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:rds/clusterInstance:ClusterInstance prod_instance_1 aurora-cluster-instance-1
-//
+//  $ pulumi import aws:rds/clusterInstance:ClusterInstance prod_instance_1 aurora-cluster-instance-1
 // ```
 type ClusterInstance struct {
 	pulumi.CustomResourceState
@@ -512,7 +507,7 @@ func (i *ClusterInstance) ToClusterInstanceOutputWithContext(ctx context.Context
 // ClusterInstanceArrayInput is an input type that accepts ClusterInstanceArray and ClusterInstanceArrayOutput values.
 // You can construct a concrete instance of `ClusterInstanceArrayInput` via:
 //
-//	ClusterInstanceArray{ ClusterInstanceArgs{...} }
+//          ClusterInstanceArray{ ClusterInstanceArgs{...} }
 type ClusterInstanceArrayInput interface {
 	pulumi.Input
 
@@ -537,7 +532,7 @@ func (i ClusterInstanceArray) ToClusterInstanceArrayOutputWithContext(ctx contex
 // ClusterInstanceMapInput is an input type that accepts ClusterInstanceMap and ClusterInstanceMapOutput values.
 // You can construct a concrete instance of `ClusterInstanceMapInput` via:
 //
-//	ClusterInstanceMap{ "key": ClusterInstanceArgs{...} }
+//          ClusterInstanceMap{ "key": ClusterInstanceArgs{...} }
 type ClusterInstanceMapInput interface {
 	pulumi.Input
 

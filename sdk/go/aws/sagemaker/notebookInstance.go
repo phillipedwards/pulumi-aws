@@ -20,28 +20,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sagemaker.NewNotebookInstance(ctx, "ni", &sagemaker.NotebookInstanceArgs{
-//				RoleArn:      pulumi.Any(aws_iam_role.Role.Arn),
-//				InstanceType: pulumi.String("ml.t2.medium"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("foo"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sagemaker.NewNotebookInstance(ctx, "ni", &sagemaker.NotebookInstanceArgs{
+// 			RoleArn:      pulumi.Any(aws_iam_role.Role.Arn),
+// 			InstanceType: pulumi.String("ml.t2.medium"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("foo"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Code repository usage
 //
@@ -49,38 +46,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			example, err := sagemaker.NewCodeRepository(ctx, "example", &sagemaker.CodeRepositoryArgs{
-//				CodeRepositoryName: pulumi.String("my-notebook-instance-code-repo"),
-//				GitConfig: &sagemaker.CodeRepositoryGitConfigArgs{
-//					RepositoryUrl: pulumi.String("https://github.com/hashicorp/terraform-provider-aws.git"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = sagemaker.NewNotebookInstance(ctx, "ni", &sagemaker.NotebookInstanceArgs{
-//				RoleArn:               pulumi.Any(aws_iam_role.Role.Arn),
-//				InstanceType:          pulumi.String("ml.t2.medium"),
-//				DefaultCodeRepository: example.CodeRepositoryName,
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("foo"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		example, err := sagemaker.NewCodeRepository(ctx, "example", &sagemaker.CodeRepositoryArgs{
+// 			CodeRepositoryName: pulumi.String("my-notebook-instance-code-repo"),
+// 			GitConfig: &sagemaker.CodeRepositoryGitConfigArgs{
+// 				RepositoryUrl: pulumi.String("https://github.com/hashicorp/terraform-provider-aws.git"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = sagemaker.NewNotebookInstance(ctx, "ni", &sagemaker.NotebookInstanceArgs{
+// 			RoleArn:               pulumi.Any(aws_iam_role.Role.Arn),
+// 			InstanceType:          pulumi.String("ml.t2.medium"),
+// 			DefaultCodeRepository: example.CodeRepositoryName,
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("foo"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -88,9 +82,7 @@ import (
 // SageMaker Notebook Instances can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/notebookInstance:NotebookInstance test_notebook_instance my-notebook-instance
-//
+//  $ pulumi import aws:sagemaker/notebookInstance:NotebookInstance test_notebook_instance my-notebook-instance
 // ```
 type NotebookInstance struct {
 	pulumi.CustomResourceState
@@ -363,7 +355,7 @@ func (i *NotebookInstance) ToNotebookInstanceOutputWithContext(ctx context.Conte
 // NotebookInstanceArrayInput is an input type that accepts NotebookInstanceArray and NotebookInstanceArrayOutput values.
 // You can construct a concrete instance of `NotebookInstanceArrayInput` via:
 //
-//	NotebookInstanceArray{ NotebookInstanceArgs{...} }
+//          NotebookInstanceArray{ NotebookInstanceArgs{...} }
 type NotebookInstanceArrayInput interface {
 	pulumi.Input
 
@@ -388,7 +380,7 @@ func (i NotebookInstanceArray) ToNotebookInstanceArrayOutputWithContext(ctx cont
 // NotebookInstanceMapInput is an input type that accepts NotebookInstanceMap and NotebookInstanceMapOutput values.
 // You can construct a concrete instance of `NotebookInstanceMapInput` via:
 //
-//	NotebookInstanceMap{ "key": NotebookInstanceArgs{...} }
+//          NotebookInstanceMap{ "key": NotebookInstanceArgs{...} }
 type NotebookInstanceMapInput interface {
 	pulumi.Input
 

@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/mediapackage"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/mediapackage"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := mediapackage.NewChannel(ctx, "kittens", &mediapackage.ChannelArgs{
-//				ChannelId:   pulumi.String("kitten-channel"),
-//				Description: pulumi.String("A channel dedicated to amusing videos of kittens."),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := mediapackage.NewChannel(ctx, "kittens", &mediapackage.ChannelArgs{
+// 			ChannelId:   pulumi.String("kitten-channel"),
+// 			Description: pulumi.String("A channel dedicated to amusing videos of kittens."),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // Media Package Channels can be imported via the channel ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:mediapackage/channel:Channel kittens kittens-channel
-//
+//  $ pulumi import aws:mediapackage/channel:Channel kittens kittens-channel
 // ```
 type Channel struct {
 	pulumi.CustomResourceState
@@ -179,7 +174,7 @@ func (i *Channel) ToChannelOutputWithContext(ctx context.Context) ChannelOutput 
 // ChannelArrayInput is an input type that accepts ChannelArray and ChannelArrayOutput values.
 // You can construct a concrete instance of `ChannelArrayInput` via:
 //
-//	ChannelArray{ ChannelArgs{...} }
+//          ChannelArray{ ChannelArgs{...} }
 type ChannelArrayInput interface {
 	pulumi.Input
 
@@ -204,7 +199,7 @@ func (i ChannelArray) ToChannelArrayOutputWithContext(ctx context.Context) Chann
 // ChannelMapInput is an input type that accepts ChannelMap and ChannelMapOutput values.
 // You can construct a concrete instance of `ChannelMapInput` via:
 //
-//	ChannelMap{ "key": ChannelArgs{...} }
+//          ChannelMap{ "key": ChannelArgs{...} }
 type ChannelMapInput interface {
 	pulumi.Input
 

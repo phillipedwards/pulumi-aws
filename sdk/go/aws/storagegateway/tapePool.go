@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/storagegateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := storagegateway.NewTapePool(ctx, "example", &storagegateway.TapePoolArgs{
-//				PoolName:     pulumi.String("example"),
-//				StorageClass: pulumi.String("GLACIER"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := storagegateway.NewTapePool(ctx, "example", &storagegateway.TapePoolArgs{
+// 			PoolName:     pulumi.String("example"),
+// 			StorageClass: pulumi.String("GLACIER"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // `aws_storagegateway_tape_pool` can be imported by using the volume Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:storagegateway/tapePool:TapePool example arn:aws:storagegateway:us-east-1:123456789012:tapepool/pool-12345678
-//
+//  $ pulumi import aws:storagegateway/tapePool:TapePool example arn:aws:storagegateway:us-east-1:123456789012:tapepool/pool-12345678
 // ```
 type TapePool struct {
 	pulumi.CustomResourceState
@@ -193,7 +188,7 @@ func (i *TapePool) ToTapePoolOutputWithContext(ctx context.Context) TapePoolOutp
 // TapePoolArrayInput is an input type that accepts TapePoolArray and TapePoolArrayOutput values.
 // You can construct a concrete instance of `TapePoolArrayInput` via:
 //
-//	TapePoolArray{ TapePoolArgs{...} }
+//          TapePoolArray{ TapePoolArgs{...} }
 type TapePoolArrayInput interface {
 	pulumi.Input
 
@@ -218,7 +213,7 @@ func (i TapePoolArray) ToTapePoolArrayOutputWithContext(ctx context.Context) Tap
 // TapePoolMapInput is an input type that accepts TapePoolMap and TapePoolMapOutput values.
 // You can construct a concrete instance of `TapePoolMapInput` via:
 //
-//	TapePoolMap{ "key": TapePoolArgs{...} }
+//          TapePoolMap{ "key": TapePoolArgs{...} }
 type TapePoolMapInput interface {
 	pulumi.Input
 

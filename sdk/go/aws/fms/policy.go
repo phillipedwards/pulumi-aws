@@ -19,64 +19,61 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/fms"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/wafregional"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/fms"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleRuleGroup, err := wafregional.NewRuleGroup(ctx, "exampleRuleGroup", &wafregional.RuleGroupArgs{
-//				MetricName: pulumi.String("WAFRuleGroupExample"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = fms.NewPolicy(ctx, "examplePolicy", &fms.PolicyArgs{
-//				ExcludeResourceTags: pulumi.Bool(false),
-//				RemediationEnabled:  pulumi.Bool(false),
-//				ResourceType:        pulumi.String("AWS::ElasticLoadBalancingV2::LoadBalancer"),
-//				SecurityServicePolicyData: &fms.PolicySecurityServicePolicyDataArgs{
-//					Type: pulumi.String("WAF"),
-//					ManagedServiceData: exampleRuleGroup.ID().ApplyT(func(id string) (pulumi.String, error) {
-//						var _zero pulumi.String
-//						tmpJSON0, err := json.Marshal(map[string]interface{}{
-//							"type": "WAF",
-//							"ruleGroups": []map[string]interface{}{
-//								map[string]interface{}{
-//									"id": id,
-//									"overrideAction": map[string]interface{}{
-//										"type": "COUNT",
-//									},
-//								},
-//							},
-//							"defaultAction": map[string]interface{}{
-//								"type": "BLOCK",
-//							},
-//							"overrideCustomerWebACLAssociation": false,
-//						})
-//						if err != nil {
-//							return _zero, err
-//						}
-//						json0 := string(tmpJSON0)
-//						return json0, nil
-//					}).(pulumi.StringOutput),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("example-fms-policy"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleRuleGroup, err := wafregional.NewRuleGroup(ctx, "exampleRuleGroup", &wafregional.RuleGroupArgs{
+// 			MetricName: pulumi.String("WAFRuleGroupExample"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = fms.NewPolicy(ctx, "examplePolicy", &fms.PolicyArgs{
+// 			ExcludeResourceTags: pulumi.Bool(false),
+// 			RemediationEnabled:  pulumi.Bool(false),
+// 			ResourceType:        pulumi.String("AWS::ElasticLoadBalancingV2::LoadBalancer"),
+// 			SecurityServicePolicyData: &fms.PolicySecurityServicePolicyDataArgs{
+// 				Type: pulumi.String("WAF"),
+// 				ManagedServiceData: exampleRuleGroup.ID().ApplyT(func(id string) (pulumi.String, error) {
+// 					var _zero pulumi.String
+// 					tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 						"type": "WAF",
+// 						"ruleGroups": []map[string]interface{}{
+// 							map[string]interface{}{
+// 								"id": id,
+// 								"overrideAction": map[string]interface{}{
+// 									"type": "COUNT",
+// 								},
+// 							},
+// 						},
+// 						"defaultAction": map[string]interface{}{
+// 							"type": "BLOCK",
+// 						},
+// 						"overrideCustomerWebACLAssociation": false,
+// 					})
+// 					if err != nil {
+// 						return _zero, err
+// 					}
+// 					json0 := string(tmpJSON0)
+// 					return json0, nil
+// 				}).(pulumi.StringOutput),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("example-fms-policy"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -84,9 +81,7 @@ import (
 // Firewall Manager policies can be imported using the policy ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:fms/policy:Policy example 5be49585-a7e3-4c49-dde1-a179fe4a619a
-//
+//  $ pulumi import aws:fms/policy:Policy example 5be49585-a7e3-4c49-dde1-a179fe4a619a
 // ```
 type Policy struct {
 	pulumi.CustomResourceState
@@ -305,7 +300,7 @@ func (i *Policy) ToPolicyOutputWithContext(ctx context.Context) PolicyOutput {
 // PolicyArrayInput is an input type that accepts PolicyArray and PolicyArrayOutput values.
 // You can construct a concrete instance of `PolicyArrayInput` via:
 //
-//	PolicyArray{ PolicyArgs{...} }
+//          PolicyArray{ PolicyArgs{...} }
 type PolicyArrayInput interface {
 	pulumi.Input
 
@@ -330,7 +325,7 @@ func (i PolicyArray) ToPolicyArrayOutputWithContext(ctx context.Context) PolicyA
 // PolicyMapInput is an input type that accepts PolicyMap and PolicyMapOutput values.
 // You can construct a concrete instance of `PolicyMapInput` via:
 //
-//	PolicyMap{ "key": PolicyArgs{...} }
+//          PolicyMap{ "key": PolicyArgs{...} }
 type PolicyMapInput interface {
 	pulumi.Input
 

@@ -19,39 +19,36 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/signer"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/signer"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := signer.NewSigningProfile(ctx, "testSp", &signer.SigningProfileArgs{
-//				PlatformId: pulumi.String("AWSLambda-SHA384-ECDSA"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = signer.NewSigningProfile(ctx, "prodSp", &signer.SigningProfileArgs{
-//				NamePrefix: pulumi.String("prod_sp_"),
-//				PlatformId: pulumi.String("AWSLambda-SHA384-ECDSA"),
-//				SignatureValidityPeriod: &signer.SigningProfileSignatureValidityPeriodArgs{
-//					Type:  pulumi.String("YEARS"),
-//					Value: pulumi.Int(5),
-//				},
-//				Tags: pulumi.StringMap{
-//					"tag1": pulumi.String("value1"),
-//					"tag2": pulumi.String("value2"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := signer.NewSigningProfile(ctx, "testSp", &signer.SigningProfileArgs{
+// 			PlatformId: pulumi.String("AWSLambda-SHA384-ECDSA"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = signer.NewSigningProfile(ctx, "prodSp", &signer.SigningProfileArgs{
+// 			NamePrefix: pulumi.String("prod_sp_"),
+// 			PlatformId: pulumi.String("AWSLambda-SHA384-ECDSA"),
+// 			SignatureValidityPeriod: &signer.SigningProfileSignatureValidityPeriodArgs{
+// 				Type:  pulumi.String("YEARS"),
+// 				Value: pulumi.Int(5),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"tag1": pulumi.String("value1"),
+// 				"tag2": pulumi.String("value2"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -59,9 +56,7 @@ import (
 // Signer signing profiles can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:signer/signingProfile:SigningProfile test_signer_signing_profile test_sp_DdW3Mk1foYL88fajut4mTVFGpuwfd4ACO6ANL0D1uIj7lrn8adK
-//
+//  $ pulumi import aws:signer/signingProfile:SigningProfile test_signer_signing_profile test_sp_DdW3Mk1foYL88fajut4mTVFGpuwfd4ACO6ANL0D1uIj7lrn8adK
 // ```
 type SigningProfile struct {
 	pulumi.CustomResourceState
@@ -234,7 +229,7 @@ func (i *SigningProfile) ToSigningProfileOutputWithContext(ctx context.Context) 
 // SigningProfileArrayInput is an input type that accepts SigningProfileArray and SigningProfileArrayOutput values.
 // You can construct a concrete instance of `SigningProfileArrayInput` via:
 //
-//	SigningProfileArray{ SigningProfileArgs{...} }
+//          SigningProfileArray{ SigningProfileArgs{...} }
 type SigningProfileArrayInput interface {
 	pulumi.Input
 
@@ -259,7 +254,7 @@ func (i SigningProfileArray) ToSigningProfileArrayOutputWithContext(ctx context.
 // SigningProfileMapInput is an input type that accepts SigningProfileMap and SigningProfileMapOutput values.
 // You can construct a concrete instance of `SigningProfileMapInput` via:
 //
-//	SigningProfileMap{ "key": SigningProfileArgs{...} }
+//          SigningProfileMap{ "key": SigningProfileArgs{...} }
 type SigningProfileMapInput interface {
 	pulumi.Input
 

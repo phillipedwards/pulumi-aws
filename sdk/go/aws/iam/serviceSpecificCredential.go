@@ -19,29 +19,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleUser, err := iam.NewUser(ctx, "exampleUser", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewServiceSpecificCredential(ctx, "exampleServiceSpecificCredential", &iam.ServiceSpecificCredentialArgs{
-//				ServiceName: pulumi.String("codecommit.amazonaws.com"),
-//				UserName:    exampleUser.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleUser, err := iam.NewUser(ctx, "exampleUser", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewServiceSpecificCredential(ctx, "exampleServiceSpecificCredential", &iam.ServiceSpecificCredentialArgs{
+// 			ServiceName: pulumi.String("codecommit.amazonaws.com"),
+// 			UserName:    exampleUser.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -49,9 +46,7 @@ import (
 // IAM Service Specific Credentials can be imported using the `service_name:user_name:service_specific_credential_id`, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:iam/serviceSpecificCredential:ServiceSpecificCredential default `codecommit.amazonaws.com:example:some-id`
-//
+//  $ pulumi import aws:iam/serviceSpecificCredential:ServiceSpecificCredential default `codecommit.amazonaws.com:example:some-id`
 // ```
 type ServiceSpecificCredential struct {
 	pulumi.CustomResourceState
@@ -183,7 +178,7 @@ func (i *ServiceSpecificCredential) ToServiceSpecificCredentialOutputWithContext
 // ServiceSpecificCredentialArrayInput is an input type that accepts ServiceSpecificCredentialArray and ServiceSpecificCredentialArrayOutput values.
 // You can construct a concrete instance of `ServiceSpecificCredentialArrayInput` via:
 //
-//	ServiceSpecificCredentialArray{ ServiceSpecificCredentialArgs{...} }
+//          ServiceSpecificCredentialArray{ ServiceSpecificCredentialArgs{...} }
 type ServiceSpecificCredentialArrayInput interface {
 	pulumi.Input
 
@@ -208,7 +203,7 @@ func (i ServiceSpecificCredentialArray) ToServiceSpecificCredentialArrayOutputWi
 // ServiceSpecificCredentialMapInput is an input type that accepts ServiceSpecificCredentialMap and ServiceSpecificCredentialMapOutput values.
 // You can construct a concrete instance of `ServiceSpecificCredentialMapInput` via:
 //
-//	ServiceSpecificCredentialMap{ "key": ServiceSpecificCredentialArgs{...} }
+//          ServiceSpecificCredentialMap{ "key": ServiceSpecificCredentialArgs{...} }
 type ServiceSpecificCredentialMapInput interface {
 	pulumi.Input
 

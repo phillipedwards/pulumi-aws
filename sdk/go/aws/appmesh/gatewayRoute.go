@@ -19,42 +19,39 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewGatewayRoute(ctx, "example", &appmesh.GatewayRouteArgs{
-//				MeshName:           pulumi.String("example-service-mesh"),
-//				VirtualGatewayName: pulumi.Any(aws_appmesh_virtual_gateway.Example.Name),
-//				Spec: &appmesh.GatewayRouteSpecArgs{
-//					HttpRoute: &appmesh.GatewayRouteSpecHttpRouteArgs{
-//						Action: &appmesh.GatewayRouteSpecHttpRouteActionArgs{
-//							Target: &appmesh.GatewayRouteSpecHttpRouteActionTargetArgs{
-//								VirtualService: &appmesh.GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs{
-//									VirtualServiceName: pulumi.Any(aws_appmesh_virtual_service.Example.Name),
-//								},
-//							},
-//						},
-//						Match: &appmesh.GatewayRouteSpecHttpRouteMatchArgs{
-//							Prefix: pulumi.String("/"),
-//						},
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Environment": pulumi.String("test"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewGatewayRoute(ctx, "example", &appmesh.GatewayRouteArgs{
+// 			MeshName:           pulumi.String("example-service-mesh"),
+// 			VirtualGatewayName: pulumi.Any(aws_appmesh_virtual_gateway.Example.Name),
+// 			Spec: &appmesh.GatewayRouteSpecArgs{
+// 				HttpRoute: &appmesh.GatewayRouteSpecHttpRouteArgs{
+// 					Action: &appmesh.GatewayRouteSpecHttpRouteActionArgs{
+// 						Target: &appmesh.GatewayRouteSpecHttpRouteActionTargetArgs{
+// 							VirtualService: &appmesh.GatewayRouteSpecHttpRouteActionTargetVirtualServiceArgs{
+// 								VirtualServiceName: pulumi.Any(aws_appmesh_virtual_service.Example.Name),
+// 							},
+// 						},
+// 					},
+// 					Match: &appmesh.GatewayRouteSpecHttpRouteMatchArgs{
+// 						Prefix: pulumi.String("/"),
+// 					},
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Environment": pulumi.String("test"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -62,12 +59,10 @@ import (
 // App Mesh gateway routes can be imported using `mesh_name` and `virtual_gateway_name` together with the gateway route's `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:appmesh/gatewayRoute:GatewayRoute example mesh/gw1/example-gateway-route
-//
+//  $ pulumi import aws:appmesh/gatewayRoute:GatewayRoute example mesh/gw1/example-gateway-route
 // ```
 //
-//	[1]/docs/providers/aws/index.html
+//  [1]/docs/providers/aws/index.html
 type GatewayRoute struct {
 	pulumi.CustomResourceState
 
@@ -243,7 +238,7 @@ func (i *GatewayRoute) ToGatewayRouteOutputWithContext(ctx context.Context) Gate
 // GatewayRouteArrayInput is an input type that accepts GatewayRouteArray and GatewayRouteArrayOutput values.
 // You can construct a concrete instance of `GatewayRouteArrayInput` via:
 //
-//	GatewayRouteArray{ GatewayRouteArgs{...} }
+//          GatewayRouteArray{ GatewayRouteArgs{...} }
 type GatewayRouteArrayInput interface {
 	pulumi.Input
 
@@ -268,7 +263,7 @@ func (i GatewayRouteArray) ToGatewayRouteArrayOutputWithContext(ctx context.Cont
 // GatewayRouteMapInput is an input type that accepts GatewayRouteMap and GatewayRouteMapOutput values.
 // You can construct a concrete instance of `GatewayRouteMapInput` via:
 //
-//	GatewayRouteMap{ "key": GatewayRouteArgs{...} }
+//          GatewayRouteMap{ "key": GatewayRouteArgs{...} }
 type GatewayRouteMapInput interface {
 	pulumi.Input
 

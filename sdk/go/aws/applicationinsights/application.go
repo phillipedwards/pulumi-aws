@@ -19,50 +19,45 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/applicationinsights"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/resourcegroups"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/applicationinsights"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/resourcegroups"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleGroup, err := resourcegroups.NewGroup(ctx, "exampleGroup", &resourcegroups.GroupArgs{
-//				ResourceQuery: &resourcegroups.GroupResourceQueryArgs{
-//					Query: pulumi.String(fmt.Sprintf(`	{
-//			"ResourceTypeFilters": [
-//			  "AWS::EC2::Instance"
-//			],
-//			"TagFilters": [
-//			  {
-//				"Key": "Stage",
-//				"Values": [
-//				  "Test"
-//				]
-//			  }
-//			]
-//		  }
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleGroup, err := resourcegroups.NewGroup(ctx, "exampleGroup", &resourcegroups.GroupArgs{
+// 			ResourceQuery: &resourcegroups.GroupResourceQueryArgs{
+// 				Query: pulumi.String(fmt.Sprintf(`	{
+// 		"ResourceTypeFilters": [
+// 		  "AWS::EC2::Instance"
+// 		],
+// 		"TagFilters": [
+// 		  {
+// 			"Key": "Stage",
+// 			"Values": [
+// 			  "Test"
+// 			]
+// 		  }
+// 		]
+// 	  }
 // `)),
-//
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = applicationinsights.NewApplication(ctx, "exampleApplication", &applicationinsights.ApplicationArgs{
-//				ResourceGroupName: exampleGroup.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = applicationinsights.NewApplication(ctx, "exampleApplication", &applicationinsights.ApplicationArgs{
+// 			ResourceGroupName: exampleGroup.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -70,9 +65,7 @@ import (
 // ApplicationInsights Applications can be imported using the `resource_group_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:applicationinsights/application:Application some some-application
-//
+//  $ pulumi import aws:applicationinsights/application:Application some some-application
 // ```
 type Application struct {
 	pulumi.CustomResourceState
@@ -255,7 +248,7 @@ func (i *Application) ToApplicationOutputWithContext(ctx context.Context) Applic
 // ApplicationArrayInput is an input type that accepts ApplicationArray and ApplicationArrayOutput values.
 // You can construct a concrete instance of `ApplicationArrayInput` via:
 //
-//	ApplicationArray{ ApplicationArgs{...} }
+//          ApplicationArray{ ApplicationArgs{...} }
 type ApplicationArrayInput interface {
 	pulumi.Input
 
@@ -280,7 +273,7 @@ func (i ApplicationArray) ToApplicationArrayOutputWithContext(ctx context.Contex
 // ApplicationMapInput is an input type that accepts ApplicationMap and ApplicationMapOutput values.
 // You can construct a concrete instance of `ApplicationMapInput` via:
 //
-//	ApplicationMap{ "key": ApplicationArgs{...} }
+//          ApplicationMap{ "key": ApplicationArgs{...} }
 type ApplicationMapInput interface {
 	pulumi.Input
 

@@ -19,27 +19,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2transitgateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2transitgateway.NewPeeringAttachmentAccepter(ctx, "example", &ec2transitgateway.PeeringAttachmentAccepterArgs{
-//				TransitGatewayAttachmentId: pulumi.Any(aws_ec2_transit_gateway_peering_attachment.Example.Id),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example cross-account attachment"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2transitgateway.NewPeeringAttachmentAccepter(ctx, "example", &ec2transitgateway.PeeringAttachmentAccepterArgs{
+// 			TransitGatewayAttachmentId: pulumi.Any(aws_ec2_transit_gateway_peering_attachment.Example.Id),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example cross-account attachment"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -47,9 +44,7 @@ import (
 // `aws_ec2_transit_gateway_peering_attachment_accepter` can be imported by using the EC2 Transit Gateway Attachment identifier, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2transitgateway/peeringAttachmentAccepter:PeeringAttachmentAccepter example tgw-attach-12345678
-//
+//  $ pulumi import aws:ec2transitgateway/peeringAttachmentAccepter:PeeringAttachmentAccepter example tgw-attach-12345678
 // ```
 type PeeringAttachmentAccepter struct {
 	pulumi.CustomResourceState
@@ -183,7 +178,7 @@ func (i *PeeringAttachmentAccepter) ToPeeringAttachmentAccepterOutputWithContext
 // PeeringAttachmentAccepterArrayInput is an input type that accepts PeeringAttachmentAccepterArray and PeeringAttachmentAccepterArrayOutput values.
 // You can construct a concrete instance of `PeeringAttachmentAccepterArrayInput` via:
 //
-//	PeeringAttachmentAccepterArray{ PeeringAttachmentAccepterArgs{...} }
+//          PeeringAttachmentAccepterArray{ PeeringAttachmentAccepterArgs{...} }
 type PeeringAttachmentAccepterArrayInput interface {
 	pulumi.Input
 
@@ -208,7 +203,7 @@ func (i PeeringAttachmentAccepterArray) ToPeeringAttachmentAccepterArrayOutputWi
 // PeeringAttachmentAccepterMapInput is an input type that accepts PeeringAttachmentAccepterMap and PeeringAttachmentAccepterMapOutput values.
 // You can construct a concrete instance of `PeeringAttachmentAccepterMapInput` via:
 //
-//	PeeringAttachmentAccepterMap{ "key": PeeringAttachmentAccepterArgs{...} }
+//          PeeringAttachmentAccepterMap{ "key": PeeringAttachmentAccepterArgs{...} }
 type PeeringAttachmentAccepterMapInput interface {
 	pulumi.Input
 

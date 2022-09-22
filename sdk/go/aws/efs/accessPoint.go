@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/efs"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/efs"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := efs.NewAccessPoint(ctx, "test", &efs.AccessPointArgs{
-//				FileSystemId: pulumi.Any(aws_efs_file_system.Foo.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := efs.NewAccessPoint(ctx, "test", &efs.AccessPointArgs{
+// 			FileSystemId: pulumi.Any(aws_efs_file_system.Foo.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // The EFS access points can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:efs/accessPoint:AccessPoint test fsap-52a643fb
-//
+//  $ pulumi import aws:efs/accessPoint:AccessPoint test fsap-52a643fb
 // ```
 type AccessPoint struct {
 	pulumi.CustomResourceState
@@ -185,7 +180,7 @@ func (i *AccessPoint) ToAccessPointOutputWithContext(ctx context.Context) Access
 // AccessPointArrayInput is an input type that accepts AccessPointArray and AccessPointArrayOutput values.
 // You can construct a concrete instance of `AccessPointArrayInput` via:
 //
-//	AccessPointArray{ AccessPointArgs{...} }
+//          AccessPointArray{ AccessPointArgs{...} }
 type AccessPointArrayInput interface {
 	pulumi.Input
 
@@ -210,7 +205,7 @@ func (i AccessPointArray) ToAccessPointArrayOutputWithContext(ctx context.Contex
 // AccessPointMapInput is an input type that accepts AccessPointMap and AccessPointMapOutput values.
 // You can construct a concrete instance of `AccessPointMapInput` via:
 //
-//	AccessPointMap{ "key": AccessPointArgs{...} }
+//          AccessPointMap{ "key": AccessPointArgs{...} }
 type AccessPointMapInput interface {
 	pulumi.Input
 

@@ -23,31 +23,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/athena"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/athena"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := athena.NewDataCatalog(ctx, "example", &athena.DataCatalogArgs{
-//				Description: pulumi.String("Example Athena data catalog"),
-//				Parameters: pulumi.StringMap{
-//					"function": pulumi.String("arn:aws:lambda:eu-central-1:123456789012:function:not-important-lambda-function"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("example-athena-data-catalog"),
-//				},
-//				Type: pulumi.String("LAMBDA"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := athena.NewDataCatalog(ctx, "example", &athena.DataCatalogArgs{
+// 			Description: pulumi.String("Example Athena data catalog"),
+// 			Parameters: pulumi.StringMap{
+// 				"function": pulumi.String("arn:aws:lambda:eu-central-1:123456789012:function:not-important-lambda-function"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("example-athena-data-catalog"),
+// 			},
+// 			Type: pulumi.String("LAMBDA"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Hive based Data Catalog
 //
@@ -55,28 +52,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/athena"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/athena"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := athena.NewDataCatalog(ctx, "example", &athena.DataCatalogArgs{
-//				Description: pulumi.String("Hive based Data Catalog"),
-//				Parameters: pulumi.StringMap{
-//					"metadata-function": pulumi.String("arn:aws:lambda:eu-central-1:123456789012:function:not-important-lambda-function"),
-//				},
-//				Type: pulumi.String("HIVE"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := athena.NewDataCatalog(ctx, "example", &athena.DataCatalogArgs{
+// 			Description: pulumi.String("Hive based Data Catalog"),
+// 			Parameters: pulumi.StringMap{
+// 				"metadata-function": pulumi.String("arn:aws:lambda:eu-central-1:123456789012:function:not-important-lambda-function"),
+// 			},
+// 			Type: pulumi.String("HIVE"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Glue based Data Catalog
 //
@@ -84,28 +78,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/athena"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/athena"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := athena.NewDataCatalog(ctx, "example", &athena.DataCatalogArgs{
-//				Description: pulumi.String("Glue based Data Catalog"),
-//				Parameters: pulumi.StringMap{
-//					"catalog-id": pulumi.String("123456789012"),
-//				},
-//				Type: pulumi.String("GLUE"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := athena.NewDataCatalog(ctx, "example", &athena.DataCatalogArgs{
+// 			Description: pulumi.String("Glue based Data Catalog"),
+// 			Parameters: pulumi.StringMap{
+// 				"catalog-id": pulumi.String("123456789012"),
+// 			},
+// 			Type: pulumi.String("GLUE"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Lambda based Data Catalog
 //
@@ -113,29 +104,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/athena"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/athena"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := athena.NewDataCatalog(ctx, "example", &athena.DataCatalogArgs{
-//				Description: pulumi.String("Lambda based Data Catalog"),
-//				Parameters: pulumi.StringMap{
-//					"metadata-function": pulumi.String("arn:aws:lambda:eu-central-1:123456789012:function:not-important-lambda-function-1"),
-//					"record-function":   pulumi.String("arn:aws:lambda:eu-central-1:123456789012:function:not-important-lambda-function-2"),
-//				},
-//				Type: pulumi.String("LAMBDA"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := athena.NewDataCatalog(ctx, "example", &athena.DataCatalogArgs{
+// 			Description: pulumi.String("Lambda based Data Catalog"),
+// 			Parameters: pulumi.StringMap{
+// 				"metadata-function": pulumi.String("arn:aws:lambda:eu-central-1:123456789012:function:not-important-lambda-function-1"),
+// 				"record-function":   pulumi.String("arn:aws:lambda:eu-central-1:123456789012:function:not-important-lambda-function-2"),
+// 			},
+// 			Type: pulumi.String("LAMBDA"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -143,9 +131,7 @@ import (
 // Data catalogs can be imported using their `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:athena/dataCatalog:DataCatalog example example-data-catalog
-//
+//  $ pulumi import aws:athena/dataCatalog:DataCatalog example example-data-catalog
 // ```
 type DataCatalog struct {
 	pulumi.CustomResourceState
@@ -294,7 +280,7 @@ func (i *DataCatalog) ToDataCatalogOutputWithContext(ctx context.Context) DataCa
 // DataCatalogArrayInput is an input type that accepts DataCatalogArray and DataCatalogArrayOutput values.
 // You can construct a concrete instance of `DataCatalogArrayInput` via:
 //
-//	DataCatalogArray{ DataCatalogArgs{...} }
+//          DataCatalogArray{ DataCatalogArgs{...} }
 type DataCatalogArrayInput interface {
 	pulumi.Input
 
@@ -319,7 +305,7 @@ func (i DataCatalogArray) ToDataCatalogArrayOutputWithContext(ctx context.Contex
 // DataCatalogMapInput is an input type that accepts DataCatalogMap and DataCatalogMapOutput values.
 // You can construct a concrete instance of `DataCatalogMapInput` via:
 //
-//	DataCatalogMap{ "key": DataCatalogArgs{...} }
+//          DataCatalogMap{ "key": DataCatalogArgs{...} }
 type DataCatalogMapInput interface {
 	pulumi.Input
 

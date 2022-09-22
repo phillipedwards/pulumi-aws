@@ -17,34 +17,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rds"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rds"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := rds.NewParameterGroup(ctx, "default", &rds.ParameterGroupArgs{
-//				Family: pulumi.String("mysql5.6"),
-//				Parameters: rds.ParameterGroupParameterArray{
-//					&rds.ParameterGroupParameterArgs{
-//						Name:  pulumi.String("character_set_server"),
-//						Value: pulumi.String("utf8"),
-//					},
-//					&rds.ParameterGroupParameterArgs{
-//						Name:  pulumi.String("character_set_client"),
-//						Value: pulumi.String("utf8"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := rds.NewParameterGroup(ctx, "default", &rds.ParameterGroupArgs{
+// 			Family: pulumi.String("mysql5.6"),
+// 			Parameters: rds.ParameterGroupParameterArray{
+// 				&rds.ParameterGroupParameterArgs{
+// 					Name:  pulumi.String("character_set_server"),
+// 					Value: pulumi.String("utf8"),
+// 				},
+// 				&rds.ParameterGroupParameterArgs{
+// 					Name:  pulumi.String("character_set_client"),
+// 					Value: pulumi.String("utf8"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // DB Parameter groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:rds/parameterGroup:ParameterGroup rds_pg rds-pg
-//
+//  $ pulumi import aws:rds/parameterGroup:ParameterGroup rds_pg rds-pg
 // ```
 type ParameterGroup struct {
 	pulumi.CustomResourceState
@@ -210,7 +205,7 @@ func (i *ParameterGroup) ToParameterGroupOutputWithContext(ctx context.Context) 
 // ParameterGroupArrayInput is an input type that accepts ParameterGroupArray and ParameterGroupArrayOutput values.
 // You can construct a concrete instance of `ParameterGroupArrayInput` via:
 //
-//	ParameterGroupArray{ ParameterGroupArgs{...} }
+//          ParameterGroupArray{ ParameterGroupArgs{...} }
 type ParameterGroupArrayInput interface {
 	pulumi.Input
 
@@ -235,7 +230,7 @@ func (i ParameterGroupArray) ToParameterGroupArrayOutputWithContext(ctx context.
 // ParameterGroupMapInput is an input type that accepts ParameterGroupMap and ParameterGroupMapOutput values.
 // You can construct a concrete instance of `ParameterGroupMapInput` via:
 //
-//	ParameterGroupMap{ "key": ParameterGroupArgs{...} }
+//          ParameterGroupMap{ "key": ParameterGroupArgs{...} }
 type ParameterGroupMapInput interface {
 	pulumi.Input
 

@@ -18,33 +18,30 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/directoryservice"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := directoryservice.NewRadiusSettings(ctx, "example", &directoryservice.RadiusSettingsArgs{
-//				DirectoryId:            pulumi.Any(aws_directory_service_directory.Example.Id),
-//				AuthenticationProtocol: pulumi.String("PAP"),
-//				DisplayLabel:           pulumi.String("example"),
-//				RadiusPort:             pulumi.Int(1812),
-//				RadiusRetries:          pulumi.Int(4),
-//				RadiusServers: pulumi.StringArray{
-//					pulumi.String("10.0.1.5"),
-//				},
-//				RadiusTimeout: pulumi.Int(1),
-//				SharedSecret:  pulumi.String("12345678"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := directoryservice.NewRadiusSettings(ctx, "example", &directoryservice.RadiusSettingsArgs{
+// 			DirectoryId:            pulumi.Any(aws_directory_service_directory.Example.Id),
+// 			AuthenticationProtocol: pulumi.String("PAP"),
+// 			DisplayLabel:           pulumi.String("example"),
+// 			RadiusPort:             pulumi.Int(1812),
+// 			RadiusRetries:          pulumi.Int(4),
+// 			RadiusServers: pulumi.StringArray{
+// 				pulumi.String("10.0.1.5"),
+// 			},
+// 			RadiusTimeout: pulumi.Int(1),
+// 			SharedSecret:  pulumi.String("12345678"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // RADIUS settings can be imported using the directory ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:directoryservice/radiusSettings:RadiusSettings example d-926724cf57
-//
+//  $ pulumi import aws:directoryservice/radiusSettings:RadiusSettings example d-926724cf57
 // ```
 type RadiusSettings struct {
 	pulumi.CustomResourceState
@@ -246,7 +241,7 @@ func (i *RadiusSettings) ToRadiusSettingsOutputWithContext(ctx context.Context) 
 // RadiusSettingsArrayInput is an input type that accepts RadiusSettingsArray and RadiusSettingsArrayOutput values.
 // You can construct a concrete instance of `RadiusSettingsArrayInput` via:
 //
-//	RadiusSettingsArray{ RadiusSettingsArgs{...} }
+//          RadiusSettingsArray{ RadiusSettingsArgs{...} }
 type RadiusSettingsArrayInput interface {
 	pulumi.Input
 
@@ -271,7 +266,7 @@ func (i RadiusSettingsArray) ToRadiusSettingsArrayOutputWithContext(ctx context.
 // RadiusSettingsMapInput is an input type that accepts RadiusSettingsMap and RadiusSettingsMapOutput values.
 // You can construct a concrete instance of `RadiusSettingsMapInput` via:
 //
-//	RadiusSettingsMap{ "key": RadiusSettingsArgs{...} }
+//          RadiusSettingsMap{ "key": RadiusSettingsArgs{...} }
 type RadiusSettingsMapInput interface {
 	pulumi.Input
 

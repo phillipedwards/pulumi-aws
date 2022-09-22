@@ -19,50 +19,47 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshift"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshift"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			defaultCluster, err := redshift.NewCluster(ctx, "defaultCluster", &redshift.ClusterArgs{
-//				ClusterIdentifier: pulumi.String("default"),
-//				DatabaseName:      pulumi.String("default"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			defaultTopic, err := sns.NewTopic(ctx, "defaultTopic", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = redshift.NewEventSubscription(ctx, "defaultEventSubscription", &redshift.EventSubscriptionArgs{
-//				SnsTopicArn: defaultTopic.Arn,
-//				SourceType:  pulumi.String("cluster"),
-//				SourceIds: pulumi.StringArray{
-//					defaultCluster.ID(),
-//				},
-//				Severity: pulumi.String("INFO"),
-//				EventCategories: pulumi.StringArray{
-//					pulumi.String("configuration"),
-//					pulumi.String("management"),
-//					pulumi.String("monitoring"),
-//					pulumi.String("security"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("default"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		defaultCluster, err := redshift.NewCluster(ctx, "defaultCluster", &redshift.ClusterArgs{
+// 			ClusterIdentifier: pulumi.String("default"),
+// 			DatabaseName:      pulumi.String("default"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		defaultTopic, err := sns.NewTopic(ctx, "defaultTopic", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = redshift.NewEventSubscription(ctx, "defaultEventSubscription", &redshift.EventSubscriptionArgs{
+// 			SnsTopicArn: defaultTopic.Arn,
+// 			SourceType:  pulumi.String("cluster"),
+// 			SourceIds: pulumi.StringArray{
+// 				defaultCluster.ID(),
+// 			},
+// 			Severity: pulumi.String("INFO"),
+// 			EventCategories: pulumi.StringArray{
+// 				pulumi.String("configuration"),
+// 				pulumi.String("management"),
+// 				pulumi.String("monitoring"),
+// 				pulumi.String("security"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("default"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -70,9 +67,7 @@ import (
 // Redshift Event Subscriptions can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:redshift/eventSubscription:EventSubscription default redshift-event-sub
-//
+//  $ pulumi import aws:redshift/eventSubscription:EventSubscription default redshift-event-sub
 // ```
 type EventSubscription struct {
 	pulumi.CustomResourceState
@@ -254,7 +249,7 @@ func (i *EventSubscription) ToEventSubscriptionOutputWithContext(ctx context.Con
 // EventSubscriptionArrayInput is an input type that accepts EventSubscriptionArray and EventSubscriptionArrayOutput values.
 // You can construct a concrete instance of `EventSubscriptionArrayInput` via:
 //
-//	EventSubscriptionArray{ EventSubscriptionArgs{...} }
+//          EventSubscriptionArray{ EventSubscriptionArgs{...} }
 type EventSubscriptionArrayInput interface {
 	pulumi.Input
 
@@ -279,7 +274,7 @@ func (i EventSubscriptionArray) ToEventSubscriptionArrayOutputWithContext(ctx co
 // EventSubscriptionMapInput is an input type that accepts EventSubscriptionMap and EventSubscriptionMapOutput values.
 // You can construct a concrete instance of `EventSubscriptionMapInput` via:
 //
-//	EventSubscriptionMap{ "key": EventSubscriptionArgs{...} }
+//          EventSubscriptionMap{ "key": EventSubscriptionArgs{...} }
 type EventSubscriptionMapInput interface {
 	pulumi.Input
 

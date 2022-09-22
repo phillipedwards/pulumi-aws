@@ -19,22 +19,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.NewZone(ctx, "primary", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.NewZone(ctx, "primary", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Public Subdomain Zone
 //
@@ -46,40 +43,37 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			main, err := route53.NewZone(ctx, "main", nil)
-//			if err != nil {
-//				return err
-//			}
-//			dev, err := route53.NewZone(ctx, "dev", &route53.ZoneArgs{
-//				Tags: pulumi.StringMap{
-//					"Environment": pulumi.String("dev"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = route53.NewRecord(ctx, "dev-ns", &route53.RecordArgs{
-//				ZoneId:  main.ZoneId,
-//				Name:    pulumi.String("dev.example.com"),
-//				Type:    pulumi.String("NS"),
-//				Ttl:     pulumi.Int(30),
-//				Records: dev.NameServers,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		main, err := route53.NewZone(ctx, "main", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		dev, err := route53.NewZone(ctx, "dev", &route53.ZoneArgs{
+// 			Tags: pulumi.StringMap{
+// 				"Environment": pulumi.String("dev"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = route53.NewRecord(ctx, "dev-ns", &route53.RecordArgs{
+// 			ZoneId:  main.ZoneId,
+// 			Name:    pulumi.String("dev.example.com"),
+// 			Type:    pulumi.String("NS"),
+// 			Ttl:     pulumi.Int(30),
+// 			Records: dev.NameServers,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Private Zone
 //
@@ -91,28 +85,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.NewZone(ctx, "private", &route53.ZoneArgs{
-//				Vpcs: route53.ZoneVpcArray{
-//					&route53.ZoneVpcArgs{
-//						VpcId: pulumi.Any(aws_vpc.Example.Id),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.NewZone(ctx, "private", &route53.ZoneArgs{
+// 			Vpcs: route53.ZoneVpcArray{
+// 				&route53.ZoneVpcArgs{
+// 					VpcId: pulumi.Any(aws_vpc.Example.Id),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -120,9 +111,7 @@ import (
 // Route53 Zones can be imported using the `zone id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:route53/zone:Zone myzone Z1D633PJN98FT9
-//
+//  $ pulumi import aws:route53/zone:Zone myzone Z1D633PJN98FT9
 // ```
 type Zone struct {
 	pulumi.CustomResourceState
@@ -290,7 +279,7 @@ func (i *Zone) ToZoneOutputWithContext(ctx context.Context) ZoneOutput {
 // ZoneArrayInput is an input type that accepts ZoneArray and ZoneArrayOutput values.
 // You can construct a concrete instance of `ZoneArrayInput` via:
 //
-//	ZoneArray{ ZoneArgs{...} }
+//          ZoneArray{ ZoneArgs{...} }
 type ZoneArrayInput interface {
 	pulumi.Input
 
@@ -315,7 +304,7 @@ func (i ZoneArray) ToZoneArrayOutputWithContext(ctx context.Context) ZoneArrayOu
 // ZoneMapInput is an input type that accepts ZoneMap and ZoneMapOutput values.
 // You can construct a concrete instance of `ZoneMapInput` via:
 //
-//	ZoneMap{ "key": ZoneArgs{...} }
+//          ZoneMap{ "key": ZoneArgs{...} }
 type ZoneMapInput interface {
 	pulumi.Input
 

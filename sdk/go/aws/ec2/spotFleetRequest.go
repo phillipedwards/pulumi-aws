@@ -16,9 +16,7 @@ import (
 // Spot Fleet Requests can be imported using `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/spotFleetRequest:SpotFleetRequest fleet sfr-005e9ec8-5546-4c31-b317-31a62325411e
-//
+//  $ pulumi import aws:ec2/spotFleetRequest:SpotFleetRequest fleet sfr-005e9ec8-5546-4c31-b317-31a62325411e
 // ```
 type SpotFleetRequest struct {
 	pulumi.CustomResourceState
@@ -467,7 +465,7 @@ func (i *SpotFleetRequest) ToSpotFleetRequestOutputWithContext(ctx context.Conte
 // SpotFleetRequestArrayInput is an input type that accepts SpotFleetRequestArray and SpotFleetRequestArrayOutput values.
 // You can construct a concrete instance of `SpotFleetRequestArrayInput` via:
 //
-//	SpotFleetRequestArray{ SpotFleetRequestArgs{...} }
+//          SpotFleetRequestArray{ SpotFleetRequestArgs{...} }
 type SpotFleetRequestArrayInput interface {
 	pulumi.Input
 
@@ -492,7 +490,7 @@ func (i SpotFleetRequestArray) ToSpotFleetRequestArrayOutputWithContext(ctx cont
 // SpotFleetRequestMapInput is an input type that accepts SpotFleetRequestMap and SpotFleetRequestMapOutput values.
 // You can construct a concrete instance of `SpotFleetRequestMapInput` via:
 //
-//	SpotFleetRequestMap{ "key": SpotFleetRequestArgs{...} }
+//          SpotFleetRequestMap{ "key": SpotFleetRequestArgs{...} }
 type SpotFleetRequestMapInput interface {
 	pulumi.Input
 

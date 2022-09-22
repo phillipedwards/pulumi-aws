@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/opsworks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := opsworks.NewRailsAppLayer(ctx, "app", &opsworks.RailsAppLayerArgs{
-//				StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := opsworks.NewRailsAppLayer(ctx, "app", &opsworks.RailsAppLayerArgs{
+// 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type RailsAppLayer struct {
 	pulumi.CustomResourceState
@@ -379,7 +376,7 @@ func (i *RailsAppLayer) ToRailsAppLayerOutputWithContext(ctx context.Context) Ra
 // RailsAppLayerArrayInput is an input type that accepts RailsAppLayerArray and RailsAppLayerArrayOutput values.
 // You can construct a concrete instance of `RailsAppLayerArrayInput` via:
 //
-//	RailsAppLayerArray{ RailsAppLayerArgs{...} }
+//          RailsAppLayerArray{ RailsAppLayerArgs{...} }
 type RailsAppLayerArrayInput interface {
 	pulumi.Input
 
@@ -404,7 +401,7 @@ func (i RailsAppLayerArray) ToRailsAppLayerArrayOutputWithContext(ctx context.Co
 // RailsAppLayerMapInput is an input type that accepts RailsAppLayerMap and RailsAppLayerMapOutput values.
 // You can construct a concrete instance of `RailsAppLayerMapInput` via:
 //
-//	RailsAppLayerMap{ "key": RailsAppLayerArgs{...} }
+//          RailsAppLayerMap{ "key": RailsAppLayerArgs{...} }
 type RailsAppLayerMapInput interface {
 	pulumi.Input
 

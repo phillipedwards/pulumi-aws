@@ -22,26 +22,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/eks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/eks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := eks.NewNodeGroup(ctx, "example", &eks.NodeGroupArgs{
-//				ScalingConfig: &eks.NodeGroupScalingConfigArgs{
-//					DesiredSize: pulumi.Int(2),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := eks.NewNodeGroup(ctx, "example", &eks.NodeGroupArgs{
+// 			ScalingConfig: &eks.NodeGroupScalingConfigArgs{
+// 				DesiredSize: pulumi.Int(2),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example IAM Role for EKS Node Group
 //
@@ -49,63 +46,60 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": "sts:AssumeRole",
-//						"Effect": "Allow",
-//						"Principal": map[string]interface{}{
-//							"Service": "ec2.amazonaws.com",
-//						},
-//					},
-//				},
-//				"Version": "2012-10-17",
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			example, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSWorkerNodePolicy", &iam.RolePolicyAttachmentArgs{
-//				PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"),
-//				Role:      example.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSCNIPolicy", &iam.RolePolicyAttachmentArgs{
-//				PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"),
-//				Role:      example.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEC2ContainerRegistryReadOnly", &iam.RolePolicyAttachmentArgs{
-//				PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"),
-//				Role:      example.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": "sts:AssumeRole",
+// 					"Effect": "Allow",
+// 					"Principal": map[string]interface{}{
+// 						"Service": "ec2.amazonaws.com",
+// 					},
+// 				},
+// 			},
+// 			"Version": "2012-10-17",
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		example, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSWorkerNodePolicy", &iam.RolePolicyAttachmentArgs{
+// 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"),
+// 			Role:      example.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSCNIPolicy", &iam.RolePolicyAttachmentArgs{
+// 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"),
+// 			Role:      example.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEC2ContainerRegistryReadOnly", &iam.RolePolicyAttachmentArgs{
+// 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"),
+// 			Role:      example.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -113,9 +107,7 @@ import (
 // EKS Node Groups can be imported using the `cluster_name` and `node_group_name` separated by a colon (`:`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:eks/nodeGroup:NodeGroup my_node_group my_cluster:my_node_group
-//
+//  $ pulumi import aws:eks/nodeGroup:NodeGroup my_node_group my_cluster:my_node_group
 // ```
 type NodeGroup struct {
 	pulumi.CustomResourceState
@@ -414,7 +406,7 @@ func (i *NodeGroup) ToNodeGroupOutputWithContext(ctx context.Context) NodeGroupO
 // NodeGroupArrayInput is an input type that accepts NodeGroupArray and NodeGroupArrayOutput values.
 // You can construct a concrete instance of `NodeGroupArrayInput` via:
 //
-//	NodeGroupArray{ NodeGroupArgs{...} }
+//          NodeGroupArray{ NodeGroupArgs{...} }
 type NodeGroupArrayInput interface {
 	pulumi.Input
 
@@ -439,7 +431,7 @@ func (i NodeGroupArray) ToNodeGroupArrayOutputWithContext(ctx context.Context) N
 // NodeGroupMapInput is an input type that accepts NodeGroupMap and NodeGroupMapOutput values.
 // You can construct a concrete instance of `NodeGroupMapInput` via:
 //
-//	NodeGroupMap{ "key": NodeGroupArgs{...} }
+//          NodeGroupMap{ "key": NodeGroupArgs{...} }
 type NodeGroupMapInput interface {
 	pulumi.Input
 

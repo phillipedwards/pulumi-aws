@@ -370,67 +370,6 @@ class ServerCertificate(pulumi.CustomResource):
         For information about server certificates in IAM, see [Managing Server
         Certificates][2] in AWS Documentation.
 
-        ## Example Usage
-
-        **Using certs on file:**
-
-        ```python
-        import pulumi
-        import pulumi_aws as aws
-
-        test_cert = aws.iam.ServerCertificate("testCert",
-            certificate_body=(lambda path: open(path).read())("self-ca-cert.pem"),
-            private_key=(lambda path: open(path).read())("test-key.pem"))
-        ```
-
-        **Example with cert in-line:**
-
-        ```python
-        import pulumi
-        import pulumi_aws as aws
-
-        test_cert_alt = aws.iam.ServerCertificate("testCertAlt",
-            certificate_body=\"\"\"-----BEGIN CERTIFICATE-----
-        [......] # cert contents
-        -----END CERTIFICATE-----
-
-        \"\"\",
-            private_key=\"\"\"-----BEGIN RSA PRIVATE KEY-----
-        [......] # cert contents
-        -----END RSA PRIVATE KEY-----
-
-        \"\"\")
-        ```
-
-        **Use in combination with an AWS ELB resource:**
-
-        Some properties of an IAM Server Certificates cannot be updated while they are
-        in use. In order for this provider to effectively manage a Certificate in this situation, it is
-        recommended you utilize the `name_prefix` attribute and enable the
-        `create_before_destroy` [lifecycle block][lifecycle]. This will allow this provider
-        to create a new, updated `iam.ServerCertificate` resource and replace it in
-        dependant resources before attempting to destroy the old version.
-
-        ```python
-        import pulumi
-        import pulumi_aws as aws
-
-        test_cert = aws.iam.ServerCertificate("testCert",
-            name_prefix="example-cert",
-            certificate_body=(lambda path: open(path).read())("self-ca-cert.pem"),
-            private_key=(lambda path: open(path).read())("test-key.pem"))
-        ourapp = aws.elb.LoadBalancer("ourapp",
-            availability_zones=["us-west-2a"],
-            cross_zone_load_balancing=True,
-            listeners=[aws.elb.LoadBalancerListenerArgs(
-                instance_port=8000,
-                instance_protocol="http",
-                lb_port=443,
-                lb_protocol="https",
-                ssl_certificate_id=test_cert.arn,
-            )])
-        ```
-
         ## Import
 
         IAM Server Certificates can be imported using the `name`, e.g.,
@@ -476,67 +415,6 @@ class ServerCertificate(pulumi.CustomResource):
 
         For information about server certificates in IAM, see [Managing Server
         Certificates][2] in AWS Documentation.
-
-        ## Example Usage
-
-        **Using certs on file:**
-
-        ```python
-        import pulumi
-        import pulumi_aws as aws
-
-        test_cert = aws.iam.ServerCertificate("testCert",
-            certificate_body=(lambda path: open(path).read())("self-ca-cert.pem"),
-            private_key=(lambda path: open(path).read())("test-key.pem"))
-        ```
-
-        **Example with cert in-line:**
-
-        ```python
-        import pulumi
-        import pulumi_aws as aws
-
-        test_cert_alt = aws.iam.ServerCertificate("testCertAlt",
-            certificate_body=\"\"\"-----BEGIN CERTIFICATE-----
-        [......] # cert contents
-        -----END CERTIFICATE-----
-
-        \"\"\",
-            private_key=\"\"\"-----BEGIN RSA PRIVATE KEY-----
-        [......] # cert contents
-        -----END RSA PRIVATE KEY-----
-
-        \"\"\")
-        ```
-
-        **Use in combination with an AWS ELB resource:**
-
-        Some properties of an IAM Server Certificates cannot be updated while they are
-        in use. In order for this provider to effectively manage a Certificate in this situation, it is
-        recommended you utilize the `name_prefix` attribute and enable the
-        `create_before_destroy` [lifecycle block][lifecycle]. This will allow this provider
-        to create a new, updated `iam.ServerCertificate` resource and replace it in
-        dependant resources before attempting to destroy the old version.
-
-        ```python
-        import pulumi
-        import pulumi_aws as aws
-
-        test_cert = aws.iam.ServerCertificate("testCert",
-            name_prefix="example-cert",
-            certificate_body=(lambda path: open(path).read())("self-ca-cert.pem"),
-            private_key=(lambda path: open(path).read())("test-key.pem"))
-        ourapp = aws.elb.LoadBalancer("ourapp",
-            availability_zones=["us-west-2a"],
-            cross_zone_load_balancing=True,
-            listeners=[aws.elb.LoadBalancerListenerArgs(
-                instance_port=8000,
-                instance_protocol="http",
-                lb_port=443,
-                lb_protocol="https",
-                ssl_certificate_id=test_cert.arn,
-            )])
-        ```
 
         ## Import
 

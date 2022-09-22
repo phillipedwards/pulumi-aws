@@ -19,41 +19,37 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/resourcegroups"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/resourcegroups"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := resourcegroups.NewGroup(ctx, "test", &resourcegroups.GroupArgs{
-//				ResourceQuery: &resourcegroups.GroupResourceQueryArgs{
-//					Query: pulumi.String(fmt.Sprintf(`{
-//	  "ResourceTypeFilters": [
-//	    "AWS::EC2::Instance"
-//	  ],
-//	  "TagFilters": [
-//	    {
-//	      "Key": "Stage",
-//	      "Values": ["Test"]
-//	    }
-//	  ]
-//	}
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := resourcegroups.NewGroup(ctx, "test", &resourcegroups.GroupArgs{
+// 			ResourceQuery: &resourcegroups.GroupResourceQueryArgs{
+// 				Query: pulumi.String(fmt.Sprintf(`{
+//   "ResourceTypeFilters": [
+//     "AWS::EC2::Instance"
+//   ],
+//   "TagFilters": [
+//     {
+//       "Key": "Stage",
+//       "Values": ["Test"]
+//     }
+//   ]
+// }
 //
 // `)),
-//
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -61,9 +57,7 @@ import (
 // Resource groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:resourcegroups/group:Group foo resource-group-name
-//
+//  $ pulumi import aws:resourcegroups/group:Group foo resource-group-name
 // ```
 type Group struct {
 	pulumi.CustomResourceState
@@ -196,7 +190,7 @@ func (i *Group) ToGroupOutputWithContext(ctx context.Context) GroupOutput {
 // GroupArrayInput is an input type that accepts GroupArray and GroupArrayOutput values.
 // You can construct a concrete instance of `GroupArrayInput` via:
 //
-//	GroupArray{ GroupArgs{...} }
+//          GroupArray{ GroupArgs{...} }
 type GroupArrayInput interface {
 	pulumi.Input
 
@@ -221,7 +215,7 @@ func (i GroupArray) ToGroupArrayOutputWithContext(ctx context.Context) GroupArra
 // GroupMapInput is an input type that accepts GroupMap and GroupMapOutput values.
 // You can construct a concrete instance of `GroupMapInput` via:
 //
-//	GroupMap{ "key": GroupArgs{...} }
+//          GroupMap{ "key": GroupArgs{...} }
 type GroupMapInput interface {
 	pulumi.Input
 

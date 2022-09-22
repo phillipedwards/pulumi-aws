@@ -24,46 +24,43 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": "sts:AssumeRole",
-//						"Effect": "Allow",
-//						"Sid":    "",
-//						"Principal": map[string]interface{}{
-//							"Service": "ec2.amazonaws.com",
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			_, err = iam.NewRole(ctx, "testRole", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.String(json0),
-//				Tags: pulumi.StringMap{
-//					"tag-key": pulumi.String("tag-value"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": "sts:AssumeRole",
+// 					"Effect": "Allow",
+// 					"Sid":    "",
+// 					"Principal": map[string]interface{}{
+// 						"Service": "ec2.amazonaws.com",
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		_, err = iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.String(json0),
+// 			Tags: pulumi.StringMap{
+// 				"tag-key": pulumi.String("tag-value"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example of Using Data Source for Assume Role Policy
 //
@@ -71,45 +68,42 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			instance_assume_role_policy, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
-//				Statements: []iam.GetPolicyDocumentStatement{
-//					iam.GetPolicyDocumentStatement{
-//						Actions: []string{
-//							"sts:AssumeRole",
-//						},
-//						Principals: []iam.GetPolicyDocumentStatementPrincipal{
-//							iam.GetPolicyDocumentStatementPrincipal{
-//								Type: "Service",
-//								Identifiers: []string{
-//									"ec2.amazonaws.com",
-//								},
-//							},
-//						},
-//					},
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewRole(ctx, "instance", &iam.RoleArgs{
-//				Path:             pulumi.String("/system/"),
-//				AssumeRolePolicy: pulumi.String(instance_assume_role_policy.Json),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		instance_assume_role_policy, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+// 			Statements: []iam.GetPolicyDocumentStatement{
+// 				iam.GetPolicyDocumentStatement{
+// 					Actions: []string{
+// 						"sts:AssumeRole",
+// 					},
+// 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+// 						iam.GetPolicyDocumentStatementPrincipal{
+// 							Type: "Service",
+// 							Identifiers: []string{
+// 								"ec2.amazonaws.com",
+// 							},
+// 						},
+// 					},
+// 				},
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewRole(ctx, "instance", &iam.RoleArgs{
+// 			Path:             pulumi.String("/system/"),
+// 			AssumeRolePolicy: pulumi.String(instance_assume_role_policy.Json),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example of Exclusive Inline Policies
 //
@@ -119,67 +113,64 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			inlinePolicy, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
-//				Statements: []iam.GetPolicyDocumentStatement{
-//					iam.GetPolicyDocumentStatement{
-//						Actions: []string{
-//							"ec2:DescribeAccountAttributes",
-//						},
-//						Resources: []string{
-//							"*",
-//						},
-//					},
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": []string{
-//							"ec2:Describe*",
-//						},
-//						"Effect":   "Allow",
-//						"Resource": "*",
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			_, err = iam.NewRole(ctx, "example", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
-//				InlinePolicies: iam.RoleInlinePolicyArray{
-//					&iam.RoleInlinePolicyArgs{
-//						Name:   pulumi.String("my_inline_policy"),
-//						Policy: pulumi.String(json0),
-//					},
-//					&iam.RoleInlinePolicyArgs{
-//						Name:   pulumi.String("policy-8675309"),
-//						Policy: pulumi.String(inlinePolicy.Json),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		inlinePolicy, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+// 			Statements: []iam.GetPolicyDocumentStatement{
+// 				iam.GetPolicyDocumentStatement{
+// 					Actions: []string{
+// 						"ec2:DescribeAccountAttributes",
+// 					},
+// 					Resources: []string{
+// 						"*",
+// 					},
+// 				},
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": []string{
+// 						"ec2:Describe*",
+// 					},
+// 					"Effect":   "Allow",
+// 					"Resource": "*",
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		_, err = iam.NewRole(ctx, "example", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
+// 			InlinePolicies: iam.RoleInlinePolicyArray{
+// 				&iam.RoleInlinePolicyArgs{
+// 					Name:   pulumi.String("my_inline_policy"),
+// 					Policy: pulumi.String(json0),
+// 				},
+// 				&iam.RoleInlinePolicyArgs{
+// 					Name:   pulumi.String("policy-8675309"),
+// 					Policy: pulumi.String(inlinePolicy.Json),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example of Removing Inline Policies
 //
@@ -189,27 +180,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
-//				InlinePolicies: iam.RoleInlinePolicyArray{
-//					nil,
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
+// 			InlinePolicies: iam.RoleInlinePolicyArray{
+// 				nil,
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example of Exclusive Managed Policies
 //
@@ -219,76 +207,73 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": []string{
-//							"ec2:Describe*",
-//						},
-//						"Effect":   "Allow",
-//						"Resource": "*",
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			policyOne, err := iam.NewPolicy(ctx, "policyOne", &iam.PolicyArgs{
-//				Policy: pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			tmpJSON1, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": []string{
-//							"s3:ListAllMyBuckets",
-//							"s3:ListBucket",
-//							"s3:HeadBucket",
-//						},
-//						"Effect":   "Allow",
-//						"Resource": "*",
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json1 := string(tmpJSON1)
-//			policyTwo, err := iam.NewPolicy(ctx, "policyTwo", &iam.PolicyArgs{
-//				Policy: pulumi.String(json1),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewRole(ctx, "example", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
-//				ManagedPolicyArns: pulumi.StringArray{
-//					policyOne.Arn,
-//					policyTwo.Arn,
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": []string{
+// 						"ec2:Describe*",
+// 					},
+// 					"Effect":   "Allow",
+// 					"Resource": "*",
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		policyOne, err := iam.NewPolicy(ctx, "policyOne", &iam.PolicyArgs{
+// 			Policy: pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		tmpJSON1, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": []string{
+// 						"s3:ListAllMyBuckets",
+// 						"s3:ListBucket",
+// 						"s3:HeadBucket",
+// 					},
+// 					"Effect":   "Allow",
+// 					"Resource": "*",
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json1 := string(tmpJSON1)
+// 		policyTwo, err := iam.NewPolicy(ctx, "policyTwo", &iam.PolicyArgs{
+// 			Policy: pulumi.String(json1),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewRole(ctx, "example", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
+// 			ManagedPolicyArns: pulumi.StringArray{
+// 				policyOne.Arn,
+// 				policyTwo.Arn,
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example of Removing Managed Policies
 //
@@ -298,25 +283,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
-//				AssumeRolePolicy:  pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
-//				ManagedPolicyArns: pulumi.StringArray{},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
+// 			AssumeRolePolicy:  pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
+// 			ManagedPolicyArns: pulumi.StringArray{},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -324,9 +306,7 @@ import (
 // IAM Roles can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:iam/role:Role developer developer_name
-//
+//  $ pulumi import aws:iam/role:Role developer developer_name
 // ```
 type Role struct {
 	pulumi.CustomResourceState
@@ -541,7 +521,7 @@ func (i *Role) ToRoleOutputWithContext(ctx context.Context) RoleOutput {
 // RoleArrayInput is an input type that accepts RoleArray and RoleArrayOutput values.
 // You can construct a concrete instance of `RoleArrayInput` via:
 //
-//	RoleArray{ RoleArgs{...} }
+//          RoleArray{ RoleArgs{...} }
 type RoleArrayInput interface {
 	pulumi.Input
 
@@ -566,7 +546,7 @@ func (i RoleArray) ToRoleArrayOutputWithContext(ctx context.Context) RoleArrayOu
 // RoleMapInput is an input type that accepts RoleMap and RoleMapOutput values.
 // You can construct a concrete instance of `RoleMapInput` via:
 //
-//	RoleMap{ "key": RoleArgs{...} }
+//          RoleMap{ "key": RoleArgs{...} }
 type RoleMapInput interface {
 	pulumi.Input
 

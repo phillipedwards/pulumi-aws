@@ -21,30 +21,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/datasync"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/datasync"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := datasync.NewNfsLocation(ctx, "example", &datasync.NfsLocationArgs{
-//				ServerHostname: pulumi.String("nfs.example.com"),
-//				Subdirectory:   pulumi.String("/exported/path"),
-//				OnPremConfig: &datasync.NfsLocationOnPremConfigArgs{
-//					AgentArns: pulumi.StringArray{
-//						pulumi.Any(aws_datasync_agent.Example.Arn),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := datasync.NewNfsLocation(ctx, "example", &datasync.NfsLocationArgs{
+// 			ServerHostname: pulumi.String("nfs.example.com"),
+// 			Subdirectory:   pulumi.String("/exported/path"),
+// 			OnPremConfig: &datasync.NfsLocationOnPremConfigArgs{
+// 				AgentArns: pulumi.StringArray{
+// 					pulumi.Any(aws_datasync_agent.Example.Arn),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // `aws_datasync_location_nfs` can be imported by using the DataSync Task Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:datasync/nfsLocation:NfsLocation example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
-//
+//  $ pulumi import aws:datasync/nfsLocation:NfsLocation example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
 // ```
 type NfsLocation struct {
 	pulumi.CustomResourceState
@@ -206,7 +201,7 @@ func (i *NfsLocation) ToNfsLocationOutputWithContext(ctx context.Context) NfsLoc
 // NfsLocationArrayInput is an input type that accepts NfsLocationArray and NfsLocationArrayOutput values.
 // You can construct a concrete instance of `NfsLocationArrayInput` via:
 //
-//	NfsLocationArray{ NfsLocationArgs{...} }
+//          NfsLocationArray{ NfsLocationArgs{...} }
 type NfsLocationArrayInput interface {
 	pulumi.Input
 
@@ -231,7 +226,7 @@ func (i NfsLocationArray) ToNfsLocationArrayOutputWithContext(ctx context.Contex
 // NfsLocationMapInput is an input type that accepts NfsLocationMap and NfsLocationMapOutput values.
 // You can construct a concrete instance of `NfsLocationMapInput` via:
 //
-//	NfsLocationMap{ "key": NfsLocationArgs{...} }
+//          NfsLocationMap{ "key": NfsLocationArgs{...} }
 type NfsLocationMapInput interface {
 	pulumi.Input
 

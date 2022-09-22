@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/location"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/location"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := location.NewTracker(ctx, "example", &location.TrackerArgs{
-//				TrackerName: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := location.NewTracker(ctx, "example", &location.TrackerArgs{
+// 			TrackerName: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // `aws_location_tracker` resources can be imported using the tracker name, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:location/tracker:Tracker example example
-//
+//  $ pulumi import aws:location/tracker:Tracker example example
 // ```
 type Tracker struct {
 	pulumi.CustomResourceState
@@ -196,7 +191,7 @@ func (i *Tracker) ToTrackerOutputWithContext(ctx context.Context) TrackerOutput 
 // TrackerArrayInput is an input type that accepts TrackerArray and TrackerArrayOutput values.
 // You can construct a concrete instance of `TrackerArrayInput` via:
 //
-//	TrackerArray{ TrackerArgs{...} }
+//          TrackerArray{ TrackerArgs{...} }
 type TrackerArrayInput interface {
 	pulumi.Input
 
@@ -221,7 +216,7 @@ func (i TrackerArray) ToTrackerArrayOutputWithContext(ctx context.Context) Track
 // TrackerMapInput is an input type that accepts TrackerMap and TrackerMapOutput values.
 // You can construct a concrete instance of `TrackerMapInput` via:
 //
-//	TrackerMap{ "key": TrackerArgs{...} }
+//          TrackerMap{ "key": TrackerArgs{...} }
 type TrackerMapInput interface {
 	pulumi.Input
 

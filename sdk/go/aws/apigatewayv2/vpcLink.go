@@ -22,30 +22,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/apigatewayv2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/apigatewayv2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := apigatewayv2.NewVpcLink(ctx, "example", &apigatewayv2.VpcLinkArgs{
-//				SecurityGroupIds: pulumi.StringArray{
-//					pulumi.Any(data.Aws_security_group.Example.Id),
-//				},
-//				SubnetIds: pulumi.Any(data.Aws_subnet_ids.Example.Ids),
-//				Tags: pulumi.StringMap{
-//					"Usage": pulumi.String("example"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := apigatewayv2.NewVpcLink(ctx, "example", &apigatewayv2.VpcLinkArgs{
+// 			SecurityGroupIds: pulumi.StringArray{
+// 				pulumi.Any(data.Aws_security_group.Example.Id),
+// 			},
+// 			SubnetIds: pulumi.Any(data.Aws_subnet_ids.Example.Ids),
+// 			Tags: pulumi.StringMap{
+// 				"Usage": pulumi.String("example"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -53,9 +50,7 @@ import (
 // `aws_apigatewayv2_vpc_link` can be imported by using the VPC Link identifier, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:apigatewayv2/vpcLink:VpcLink example aabbccddee
-//
+//  $ pulumi import aws:apigatewayv2/vpcLink:VpcLink example aabbccddee
 // ```
 type VpcLink struct {
 	pulumi.CustomResourceState
@@ -191,7 +186,7 @@ func (i *VpcLink) ToVpcLinkOutputWithContext(ctx context.Context) VpcLinkOutput 
 // VpcLinkArrayInput is an input type that accepts VpcLinkArray and VpcLinkArrayOutput values.
 // You can construct a concrete instance of `VpcLinkArrayInput` via:
 //
-//	VpcLinkArray{ VpcLinkArgs{...} }
+//          VpcLinkArray{ VpcLinkArgs{...} }
 type VpcLinkArrayInput interface {
 	pulumi.Input
 
@@ -216,7 +211,7 @@ func (i VpcLinkArray) ToVpcLinkArrayOutputWithContext(ctx context.Context) VpcLi
 // VpcLinkMapInput is an input type that accepts VpcLinkMap and VpcLinkMapOutput values.
 // You can construct a concrete instance of `VpcLinkMapInput` via:
 //
-//	VpcLinkMap{ "key": VpcLinkArgs{...} }
+//          VpcLinkMap{ "key": VpcLinkArgs{...} }
 type VpcLinkMapInput interface {
 	pulumi.Input
 

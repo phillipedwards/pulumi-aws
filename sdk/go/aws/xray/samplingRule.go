@@ -19,37 +19,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/xray"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/xray"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := xray.NewSamplingRule(ctx, "example", &xray.SamplingRuleArgs{
-//				Attributes: pulumi.StringMap{
-//					"Hello": pulumi.String("Tris"),
-//				},
-//				FixedRate:     pulumi.Float64(0.05),
-//				Host:          pulumi.String("*"),
-//				HttpMethod:    pulumi.String("*"),
-//				Priority:      pulumi.Int(10000),
-//				ReservoirSize: pulumi.Int(1),
-//				ResourceArn:   pulumi.String("*"),
-//				RuleName:      pulumi.String("example"),
-//				ServiceName:   pulumi.String("*"),
-//				ServiceType:   pulumi.String("*"),
-//				UrlPath:       pulumi.String("*"),
-//				Version:       pulumi.Int(1),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := xray.NewSamplingRule(ctx, "example", &xray.SamplingRuleArgs{
+// 			Attributes: pulumi.StringMap{
+// 				"Hello": pulumi.String("Tris"),
+// 			},
+// 			FixedRate:     pulumi.Float64(0.05),
+// 			Host:          pulumi.String("*"),
+// 			HttpMethod:    pulumi.String("*"),
+// 			Priority:      pulumi.Int(10000),
+// 			ReservoirSize: pulumi.Int(1),
+// 			ResourceArn:   pulumi.String("*"),
+// 			RuleName:      pulumi.String("example"),
+// 			ServiceName:   pulumi.String("*"),
+// 			ServiceType:   pulumi.String("*"),
+// 			UrlPath:       pulumi.String("*"),
+// 			Version:       pulumi.Int(1),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -57,9 +54,7 @@ import (
 // XRay Sampling Rules can be imported using the name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:xray/samplingRule:SamplingRule example example
-//
+//  $ pulumi import aws:xray/samplingRule:SamplingRule example example
 // ```
 type SamplingRule struct {
 	pulumi.CustomResourceState
@@ -309,7 +304,7 @@ func (i *SamplingRule) ToSamplingRuleOutputWithContext(ctx context.Context) Samp
 // SamplingRuleArrayInput is an input type that accepts SamplingRuleArray and SamplingRuleArrayOutput values.
 // You can construct a concrete instance of `SamplingRuleArrayInput` via:
 //
-//	SamplingRuleArray{ SamplingRuleArgs{...} }
+//          SamplingRuleArray{ SamplingRuleArgs{...} }
 type SamplingRuleArrayInput interface {
 	pulumi.Input
 
@@ -334,7 +329,7 @@ func (i SamplingRuleArray) ToSamplingRuleArrayOutputWithContext(ctx context.Cont
 // SamplingRuleMapInput is an input type that accepts SamplingRuleMap and SamplingRuleMapOutput values.
 // You can construct a concrete instance of `SamplingRuleMapInput` via:
 //
-//	SamplingRuleMap{ "key": SamplingRuleArgs{...} }
+//          SamplingRuleMap{ "key": SamplingRuleArgs{...} }
 type SamplingRuleMapInput interface {
 	pulumi.Input
 

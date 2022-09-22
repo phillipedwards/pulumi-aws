@@ -21,9 +21,7 @@ import (
 // FSx OpenZFS snapshot can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:fsx/openZfsSnapshot:OpenZfsSnapshot example fs-543ab12b1ca672f33
-//
+//  $ pulumi import aws:fsx/openZfsSnapshot:OpenZfsSnapshot example fs-543ab12b1ca672f33
 // ```
 type OpenZfsSnapshot struct {
 	pulumi.CustomResourceState
@@ -149,7 +147,7 @@ func (i *OpenZfsSnapshot) ToOpenZfsSnapshotOutputWithContext(ctx context.Context
 // OpenZfsSnapshotArrayInput is an input type that accepts OpenZfsSnapshotArray and OpenZfsSnapshotArrayOutput values.
 // You can construct a concrete instance of `OpenZfsSnapshotArrayInput` via:
 //
-//	OpenZfsSnapshotArray{ OpenZfsSnapshotArgs{...} }
+//          OpenZfsSnapshotArray{ OpenZfsSnapshotArgs{...} }
 type OpenZfsSnapshotArrayInput interface {
 	pulumi.Input
 
@@ -174,7 +172,7 @@ func (i OpenZfsSnapshotArray) ToOpenZfsSnapshotArrayOutputWithContext(ctx contex
 // OpenZfsSnapshotMapInput is an input type that accepts OpenZfsSnapshotMap and OpenZfsSnapshotMapOutput values.
 // You can construct a concrete instance of `OpenZfsSnapshotMapInput` via:
 //
-//	OpenZfsSnapshotMap{ "key": OpenZfsSnapshotArgs{...} }
+//          OpenZfsSnapshotMap{ "key": OpenZfsSnapshotArgs{...} }
 type OpenZfsSnapshotMapInput interface {
 	pulumi.Input
 

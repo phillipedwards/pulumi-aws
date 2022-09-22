@@ -19,28 +19,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glue"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glue"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := glue.NewConnection(ctx, "example", &glue.ConnectionArgs{
-//				ConnectionProperties: pulumi.StringMap{
-//					"JDBC_CONNECTION_URL": pulumi.String("jdbc:mysql://example.com/exampledatabase"),
-//					"PASSWORD":            pulumi.String("examplepassword"),
-//					"USERNAME":            pulumi.String("exampleusername"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := glue.NewConnection(ctx, "example", &glue.ConnectionArgs{
+// 			ConnectionProperties: pulumi.StringMap{
+// 				"JDBC_CONNECTION_URL": pulumi.String("jdbc:mysql://example.com/exampledatabase"),
+// 				"PASSWORD":            pulumi.String("examplepassword"),
+// 				"USERNAME":            pulumi.String("exampleusername"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### VPC Connection
 //
@@ -50,37 +47,34 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glue"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glue"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := glue.NewConnection(ctx, "example", &glue.ConnectionArgs{
-//				ConnectionProperties: pulumi.StringMap{
-//					"JDBC_CONNECTION_URL": pulumi.String(fmt.Sprintf("jdbc:mysql://%v/exampledatabase", aws_rds_cluster.Example.Endpoint)),
-//					"PASSWORD":            pulumi.String("examplepassword"),
-//					"USERNAME":            pulumi.String("exampleusername"),
-//				},
-//				PhysicalConnectionRequirements: &glue.ConnectionPhysicalConnectionRequirementsArgs{
-//					AvailabilityZone: pulumi.Any(aws_subnet.Example.Availability_zone),
-//					SecurityGroupIdLists: pulumi.StringArray{
-//						pulumi.Any(aws_security_group.Example.Id),
-//					},
-//					SubnetId: pulumi.Any(aws_subnet.Example.Id),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := glue.NewConnection(ctx, "example", &glue.ConnectionArgs{
+// 			ConnectionProperties: pulumi.StringMap{
+// 				"JDBC_CONNECTION_URL": pulumi.String(fmt.Sprintf("jdbc:mysql://%v/exampledatabase", aws_rds_cluster.Example.Endpoint)),
+// 				"PASSWORD":            pulumi.String("examplepassword"),
+// 				"USERNAME":            pulumi.String("exampleusername"),
+// 			},
+// 			PhysicalConnectionRequirements: &glue.ConnectionPhysicalConnectionRequirementsArgs{
+// 				AvailabilityZone: pulumi.Any(aws_subnet.Example.Availability_zone),
+// 				SecurityGroupIdLists: pulumi.StringArray{
+// 					pulumi.Any(aws_security_group.Example.Id),
+// 				},
+// 				SubnetId: pulumi.Any(aws_subnet.Example.Id),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -88,9 +82,7 @@ import (
 // Glue Connections can be imported using the `CATALOG-ID` (AWS account ID if not custom) and `NAME`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:glue/connection:Connection MyConnection 123456789012:MyConnection
-//
+//  $ pulumi import aws:glue/connection:Connection MyConnection 123456789012:MyConnection
 // ```
 type Connection struct {
 	pulumi.CustomResourceState
@@ -260,7 +252,7 @@ func (i *Connection) ToConnectionOutputWithContext(ctx context.Context) Connecti
 // ConnectionArrayInput is an input type that accepts ConnectionArray and ConnectionArrayOutput values.
 // You can construct a concrete instance of `ConnectionArrayInput` via:
 //
-//	ConnectionArray{ ConnectionArgs{...} }
+//          ConnectionArray{ ConnectionArgs{...} }
 type ConnectionArrayInput interface {
 	pulumi.Input
 
@@ -285,7 +277,7 @@ func (i ConnectionArray) ToConnectionArrayOutputWithContext(ctx context.Context)
 // ConnectionMapInput is an input type that accepts ConnectionMap and ConnectionMapOutput values.
 // You can construct a concrete instance of `ConnectionMapInput` via:
 //
-//	ConnectionMap{ "key": ConnectionArgs{...} }
+//          ConnectionMap{ "key": ConnectionArgs{...} }
 type ConnectionMapInput interface {
 	pulumi.Input
 

@@ -19,36 +19,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewNetworkInterface(ctx, "test", &ec2.NetworkInterfaceArgs{
-//				SubnetId: pulumi.Any(aws_subnet.Public_a.Id),
-//				PrivateIps: pulumi.StringArray{
-//					pulumi.String("10.0.0.50"),
-//				},
-//				SecurityGroups: pulumi.StringArray{
-//					pulumi.Any(aws_security_group.Web.Id),
-//				},
-//				Attachments: ec2.NetworkInterfaceAttachmentTypeArray{
-//					&ec2.NetworkInterfaceAttachmentTypeArgs{
-//						Instance:    pulumi.Any(aws_instance.Test.Id),
-//						DeviceIndex: pulumi.Int(1),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewNetworkInterface(ctx, "test", &ec2.NetworkInterfaceArgs{
+// 			SubnetId: pulumi.Any(aws_subnet.Public_a.Id),
+// 			PrivateIps: pulumi.StringArray{
+// 				pulumi.String("10.0.0.50"),
+// 			},
+// 			SecurityGroups: pulumi.StringArray{
+// 				pulumi.Any(aws_security_group.Web.Id),
+// 			},
+// 			Attachments: ec2.NetworkInterfaceAttachmentTypeArray{
+// 				&ec2.NetworkInterfaceAttachmentTypeArgs{
+// 					Instance:    pulumi.Any(aws_instance.Test.Id),
+// 					DeviceIndex: pulumi.Int(1),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example of Managing Multiple IPs on a Network Interface
 //
@@ -72,9 +69,7 @@ import (
 // Network Interfaces can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/networkInterface:NetworkInterface test eni-e5aa89a3
-//
+//  $ pulumi import aws:ec2/networkInterface:NetworkInterface test eni-e5aa89a3
 // ```
 type NetworkInterface struct {
 	pulumi.CustomResourceState
@@ -375,7 +370,7 @@ func (i *NetworkInterface) ToNetworkInterfaceOutputWithContext(ctx context.Conte
 // NetworkInterfaceArrayInput is an input type that accepts NetworkInterfaceArray and NetworkInterfaceArrayOutput values.
 // You can construct a concrete instance of `NetworkInterfaceArrayInput` via:
 //
-//	NetworkInterfaceArray{ NetworkInterfaceArgs{...} }
+//          NetworkInterfaceArray{ NetworkInterfaceArgs{...} }
 type NetworkInterfaceArrayInput interface {
 	pulumi.Input
 
@@ -400,7 +395,7 @@ func (i NetworkInterfaceArray) ToNetworkInterfaceArrayOutputWithContext(ctx cont
 // NetworkInterfaceMapInput is an input type that accepts NetworkInterfaceMap and NetworkInterfaceMapOutput values.
 // You can construct a concrete instance of `NetworkInterfaceMapInput` via:
 //
-//	NetworkInterfaceMap{ "key": NetworkInterfaceArgs{...} }
+//          NetworkInterfaceMap{ "key": NetworkInterfaceArgs{...} }
 type NetworkInterfaceMapInput interface {
 	pulumi.Input
 

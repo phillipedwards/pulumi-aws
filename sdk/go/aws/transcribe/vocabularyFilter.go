@@ -18,33 +18,30 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/transcribe"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/transcribe"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := transcribe.NewVocabularyFilter(ctx, "example", &transcribe.VocabularyFilterArgs{
-//				LanguageCode: pulumi.String("en-US"),
-//				Tags: pulumi.StringMap{
-//					"tag1": pulumi.String("value1"),
-//					"tag2": pulumi.String("value3"),
-//				},
-//				VocabularyFilterName: pulumi.String("example"),
-//				Words: pulumi.StringArray{
-//					pulumi.String("cars"),
-//					pulumi.String("bucket"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := transcribe.NewVocabularyFilter(ctx, "example", &transcribe.VocabularyFilterArgs{
+// 			LanguageCode: pulumi.String("en-US"),
+// 			Tags: pulumi.StringMap{
+// 				"tag1": pulumi.String("value1"),
+// 				"tag2": pulumi.String("value3"),
+// 			},
+// 			VocabularyFilterName: pulumi.String("example"),
+// 			Words: pulumi.StringArray{
+// 				pulumi.String("cars"),
+// 				pulumi.String("bucket"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // Transcribe VocabularyFilter can be imported using the `vocabulary_filter_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:transcribe/vocabularyFilter:VocabularyFilter example example-name
-//
+//  $ pulumi import aws:transcribe/vocabularyFilter:VocabularyFilter example example-name
 // ```
 type VocabularyFilter struct {
 	pulumi.CustomResourceState
@@ -198,7 +193,7 @@ func (i *VocabularyFilter) ToVocabularyFilterOutputWithContext(ctx context.Conte
 // VocabularyFilterArrayInput is an input type that accepts VocabularyFilterArray and VocabularyFilterArrayOutput values.
 // You can construct a concrete instance of `VocabularyFilterArrayInput` via:
 //
-//	VocabularyFilterArray{ VocabularyFilterArgs{...} }
+//          VocabularyFilterArray{ VocabularyFilterArgs{...} }
 type VocabularyFilterArrayInput interface {
 	pulumi.Input
 
@@ -223,7 +218,7 @@ func (i VocabularyFilterArray) ToVocabularyFilterArrayOutputWithContext(ctx cont
 // VocabularyFilterMapInput is an input type that accepts VocabularyFilterMap and VocabularyFilterMapOutput values.
 // You can construct a concrete instance of `VocabularyFilterMapInput` via:
 //
-//	VocabularyFilterMap{ "key": VocabularyFilterArgs{...} }
+//          VocabularyFilterMap{ "key": VocabularyFilterArgs{...} }
 type VocabularyFilterMapInput interface {
 	pulumi.Input
 

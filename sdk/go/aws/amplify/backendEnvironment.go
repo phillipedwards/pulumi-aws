@@ -19,31 +19,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/amplify"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/amplify"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleApp, err := amplify.NewApp(ctx, "exampleApp", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = amplify.NewBackendEnvironment(ctx, "exampleBackendEnvironment", &amplify.BackendEnvironmentArgs{
-//				AppId:               exampleApp.ID(),
-//				EnvironmentName:     pulumi.String("example"),
-//				DeploymentArtifacts: pulumi.String("app-example-deployment"),
-//				StackName:           pulumi.String("amplify-app-example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleApp, err := amplify.NewApp(ctx, "exampleApp", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = amplify.NewBackendEnvironment(ctx, "exampleBackendEnvironment", &amplify.BackendEnvironmentArgs{
+// 			AppId:               exampleApp.ID(),
+// 			EnvironmentName:     pulumi.String("example"),
+// 			DeploymentArtifacts: pulumi.String("app-example-deployment"),
+// 			StackName:           pulumi.String("amplify-app-example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -51,9 +48,7 @@ import (
 // Amplify backend environment can be imported using `app_id` and `environment_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:amplify/backendEnvironment:BackendEnvironment example d2ypk4k47z8u6/example
-//
+//  $ pulumi import aws:amplify/backendEnvironment:BackendEnvironment example d2ypk4k47z8u6/example
 // ```
 type BackendEnvironment struct {
 	pulumi.CustomResourceState
@@ -183,7 +178,7 @@ func (i *BackendEnvironment) ToBackendEnvironmentOutputWithContext(ctx context.C
 // BackendEnvironmentArrayInput is an input type that accepts BackendEnvironmentArray and BackendEnvironmentArrayOutput values.
 // You can construct a concrete instance of `BackendEnvironmentArrayInput` via:
 //
-//	BackendEnvironmentArray{ BackendEnvironmentArgs{...} }
+//          BackendEnvironmentArray{ BackendEnvironmentArgs{...} }
 type BackendEnvironmentArrayInput interface {
 	pulumi.Input
 
@@ -208,7 +203,7 @@ func (i BackendEnvironmentArray) ToBackendEnvironmentArrayOutputWithContext(ctx 
 // BackendEnvironmentMapInput is an input type that accepts BackendEnvironmentMap and BackendEnvironmentMapOutput values.
 // You can construct a concrete instance of `BackendEnvironmentMapInput` via:
 //
-//	BackendEnvironmentMap{ "key": BackendEnvironmentArgs{...} }
+//          BackendEnvironmentMap{ "key": BackendEnvironmentArgs{...} }
 type BackendEnvironmentMapInput interface {
 	pulumi.Input
 

@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/opsworks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := opsworks.NewPhpAppLayer(ctx, "app", &opsworks.PhpAppLayerArgs{
-//				StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := opsworks.NewPhpAppLayer(ctx, "app", &opsworks.PhpAppLayerArgs{
+// 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // OpsWorks PHP Application Layers can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:opsworks/phpAppLayer:PhpAppLayer bar 00000000-0000-0000-0000-000000000000
-//
+//  $ pulumi import aws:opsworks/phpAppLayer:PhpAppLayer bar 00000000-0000-0000-0000-000000000000
 // ```
 type PhpAppLayer struct {
 	pulumi.CustomResourceState
@@ -329,7 +324,7 @@ func (i *PhpAppLayer) ToPhpAppLayerOutputWithContext(ctx context.Context) PhpApp
 // PhpAppLayerArrayInput is an input type that accepts PhpAppLayerArray and PhpAppLayerArrayOutput values.
 // You can construct a concrete instance of `PhpAppLayerArrayInput` via:
 //
-//	PhpAppLayerArray{ PhpAppLayerArgs{...} }
+//          PhpAppLayerArray{ PhpAppLayerArgs{...} }
 type PhpAppLayerArrayInput interface {
 	pulumi.Input
 
@@ -354,7 +349,7 @@ func (i PhpAppLayerArray) ToPhpAppLayerArrayOutputWithContext(ctx context.Contex
 // PhpAppLayerMapInput is an input type that accepts PhpAppLayerMap and PhpAppLayerMapOutput values.
 // You can construct a concrete instance of `PhpAppLayerMapInput` via:
 //
-//	PhpAppLayerMap{ "key": PhpAppLayerArgs{...} }
+//          PhpAppLayerMap{ "key": PhpAppLayerArgs{...} }
 type PhpAppLayerMapInput interface {
 	pulumi.Input
 

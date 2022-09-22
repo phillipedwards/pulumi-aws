@@ -41,32 +41,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rds"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rds"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := rds.NewInstance(ctx, "default", &rds.InstanceArgs{
-//				AllocatedStorage:   pulumi.Int(10),
-//				Engine:             pulumi.String("mysql"),
-//				EngineVersion:      pulumi.String("5.7"),
-//				InstanceClass:      pulumi.String("db.t3.micro"),
-//				Name:               pulumi.String("mydb"),
-//				ParameterGroupName: pulumi.String("default.mysql5.7"),
-//				Password:           pulumi.String("foobarbaz"),
-//				SkipFinalSnapshot:  pulumi.Bool(true),
-//				Username:           pulumi.String("foo"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := rds.NewInstance(ctx, "default", &rds.InstanceArgs{
+// 			AllocatedStorage:   pulumi.Int(10),
+// 			Engine:             pulumi.String("mysql"),
+// 			EngineVersion:      pulumi.String("5.7"),
+// 			InstanceClass:      pulumi.String("db.t3.micro"),
+// 			Name:               pulumi.String("mydb"),
+// 			ParameterGroupName: pulumi.String("default.mysql5.7"),
+// 			Password:           pulumi.String("foobarbaz"),
+// 			SkipFinalSnapshot:  pulumi.Bool(true),
+// 			Username:           pulumi.String("foo"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Storage Autoscaling
 //
@@ -76,25 +73,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rds"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rds"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := rds.NewInstance(ctx, "example", &rds.InstanceArgs{
-//				AllocatedStorage:    pulumi.Int(50),
-//				MaxAllocatedStorage: pulumi.Int(100),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := rds.NewInstance(ctx, "example", &rds.InstanceArgs{
+// 			AllocatedStorage:    pulumi.Int(50),
+// 			MaxAllocatedStorage: pulumi.Int(100),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -102,9 +96,7 @@ import (
 // DB Instances can be imported using the `identifier`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:rds/instance:Instance default mydb-rds-instance
-//
+//  $ pulumi import aws:rds/instance:Instance default mydb-rds-instance
 // ```
 type Instance struct {
 	pulumi.CustomResourceState
@@ -1240,7 +1232,7 @@ func (i *Instance) ToInstanceOutputWithContext(ctx context.Context) InstanceOutp
 // InstanceArrayInput is an input type that accepts InstanceArray and InstanceArrayOutput values.
 // You can construct a concrete instance of `InstanceArrayInput` via:
 //
-//	InstanceArray{ InstanceArgs{...} }
+//          InstanceArray{ InstanceArgs{...} }
 type InstanceArrayInput interface {
 	pulumi.Input
 
@@ -1265,7 +1257,7 @@ func (i InstanceArray) ToInstanceArrayOutputWithContext(ctx context.Context) Ins
 // InstanceMapInput is an input type that accepts InstanceMap and InstanceMapOutput values.
 // You can construct a concrete instance of `InstanceMapInput` via:
 //
-//	InstanceMap{ "key": InstanceArgs{...} }
+//          InstanceMap{ "key": InstanceArgs{...} }
 type InstanceMapInput interface {
 	pulumi.Input
 

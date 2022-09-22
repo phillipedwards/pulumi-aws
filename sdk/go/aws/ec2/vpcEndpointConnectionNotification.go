@@ -20,60 +20,55 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			topic, err := sns.NewTopic(ctx, "topic", &sns.TopicArgs{
-//				Policy: pulumi.String(fmt.Sprintf(`{
-//	    "Version":"2012-10-17",
-//	    "Statement":[{
-//	        "Effect": "Allow",
-//	        "Principal": {
-//	            "Service": "vpce.amazonaws.com"
-//	        },
-//	        "Action": "SNS:Publish",
-//	        "Resource": "arn:aws:sns:*:*:vpce-notification-topic"
-//	    }]
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		topic, err := sns.NewTopic(ctx, "topic", &sns.TopicArgs{
+// 			Policy: pulumi.String(fmt.Sprintf(`{
+//     "Version":"2012-10-17",
+//     "Statement":[{
+//         "Effect": "Allow",
+//         "Principal": {
+//             "Service": "vpce.amazonaws.com"
+//         },
+//         "Action": "SNS:Publish",
+//         "Resource": "arn:aws:sns:*:*:vpce-notification-topic"
+//     }]
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			fooVpcEndpointService, err := ec2.NewVpcEndpointService(ctx, "fooVpcEndpointService", &ec2.VpcEndpointServiceArgs{
-//				AcceptanceRequired: pulumi.Bool(false),
-//				NetworkLoadBalancerArns: pulumi.StringArray{
-//					pulumi.Any(aws_lb.Test.Arn),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ec2.NewVpcEndpointConnectionNotification(ctx, "fooVpcEndpointConnectionNotification", &ec2.VpcEndpointConnectionNotificationArgs{
-//				VpcEndpointServiceId:      fooVpcEndpointService.ID(),
-//				ConnectionNotificationArn: topic.Arn,
-//				ConnectionEvents: pulumi.StringArray{
-//					pulumi.String("Accept"),
-//					pulumi.String("Reject"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		fooVpcEndpointService, err := ec2.NewVpcEndpointService(ctx, "fooVpcEndpointService", &ec2.VpcEndpointServiceArgs{
+// 			AcceptanceRequired: pulumi.Bool(false),
+// 			NetworkLoadBalancerArns: pulumi.StringArray{
+// 				pulumi.Any(aws_lb.Test.Arn),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ec2.NewVpcEndpointConnectionNotification(ctx, "fooVpcEndpointConnectionNotification", &ec2.VpcEndpointConnectionNotificationArgs{
+// 			VpcEndpointServiceId:      fooVpcEndpointService.ID(),
+// 			ConnectionNotificationArn: topic.Arn,
+// 			ConnectionEvents: pulumi.StringArray{
+// 				pulumi.String("Accept"),
+// 				pulumi.String("Reject"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -81,9 +76,7 @@ import (
 // VPC Endpoint connection notifications can be imported using the `VPC endpoint connection notification id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/vpcEndpointConnectionNotification:VpcEndpointConnectionNotification foo vpce-nfn-09e6ed3b4efba2263
-//
+//  $ pulumi import aws:ec2/vpcEndpointConnectionNotification:VpcEndpointConnectionNotification foo vpce-nfn-09e6ed3b4efba2263
 // ```
 type VpcEndpointConnectionNotification struct {
 	pulumi.CustomResourceState
@@ -219,7 +212,7 @@ func (i *VpcEndpointConnectionNotification) ToVpcEndpointConnectionNotificationO
 // VpcEndpointConnectionNotificationArrayInput is an input type that accepts VpcEndpointConnectionNotificationArray and VpcEndpointConnectionNotificationArrayOutput values.
 // You can construct a concrete instance of `VpcEndpointConnectionNotificationArrayInput` via:
 //
-//	VpcEndpointConnectionNotificationArray{ VpcEndpointConnectionNotificationArgs{...} }
+//          VpcEndpointConnectionNotificationArray{ VpcEndpointConnectionNotificationArgs{...} }
 type VpcEndpointConnectionNotificationArrayInput interface {
 	pulumi.Input
 
@@ -244,7 +237,7 @@ func (i VpcEndpointConnectionNotificationArray) ToVpcEndpointConnectionNotificat
 // VpcEndpointConnectionNotificationMapInput is an input type that accepts VpcEndpointConnectionNotificationMap and VpcEndpointConnectionNotificationMapOutput values.
 // You can construct a concrete instance of `VpcEndpointConnectionNotificationMapInput` via:
 //
-//	VpcEndpointConnectionNotificationMap{ "key": VpcEndpointConnectionNotificationArgs{...} }
+//          VpcEndpointConnectionNotificationMap{ "key": VpcEndpointConnectionNotificationArgs{...} }
 type VpcEndpointConnectionNotificationMapInput interface {
 	pulumi.Input
 

@@ -20,9 +20,7 @@ import (
 // MSK serverless clusters can be imported using the cluster `arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:msk/serverlessCluster:ServerlessCluster example arn:aws:kafka:us-west-2:123456789012:cluster/example/279c0212-d057-4dba-9aa9-1c4e5a25bfc7-3
-//
+//  $ pulumi import aws:msk/serverlessCluster:ServerlessCluster example arn:aws:kafka:us-west-2:123456789012:cluster/example/279c0212-d057-4dba-9aa9-1c4e5a25bfc7-3
 // ```
 type ServerlessCluster struct {
 	pulumi.CustomResourceState
@@ -153,7 +151,7 @@ func (i *ServerlessCluster) ToServerlessClusterOutputWithContext(ctx context.Con
 // ServerlessClusterArrayInput is an input type that accepts ServerlessClusterArray and ServerlessClusterArrayOutput values.
 // You can construct a concrete instance of `ServerlessClusterArrayInput` via:
 //
-//	ServerlessClusterArray{ ServerlessClusterArgs{...} }
+//          ServerlessClusterArray{ ServerlessClusterArgs{...} }
 type ServerlessClusterArrayInput interface {
 	pulumi.Input
 
@@ -178,7 +176,7 @@ func (i ServerlessClusterArray) ToServerlessClusterArrayOutputWithContext(ctx co
 // ServerlessClusterMapInput is an input type that accepts ServerlessClusterMap and ServerlessClusterMapOutput values.
 // You can construct a concrete instance of `ServerlessClusterMapInput` via:
 //
-//	ServerlessClusterMap{ "key": ServerlessClusterArgs{...} }
+//          ServerlessClusterMap{ "key": ServerlessClusterArgs{...} }
 type ServerlessClusterMapInput interface {
 	pulumi.Input
 

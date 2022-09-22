@@ -21,33 +21,30 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/licensemanager"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/licensemanager"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := licensemanager.NewLicenseConfiguration(ctx, "example", &licensemanager.LicenseConfigurationArgs{
-//				Description:           pulumi.String("Example"),
-//				LicenseCount:          pulumi.Int(10),
-//				LicenseCountHardLimit: pulumi.Bool(true),
-//				LicenseCountingType:   pulumi.String("Socket"),
-//				LicenseRules: pulumi.StringArray{
-//					pulumi.String("#minimumSockets=2"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"foo": pulumi.String("barr"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := licensemanager.NewLicenseConfiguration(ctx, "example", &licensemanager.LicenseConfigurationArgs{
+// 			Description:           pulumi.String("Example"),
+// 			LicenseCount:          pulumi.Int(10),
+// 			LicenseCountHardLimit: pulumi.Bool(true),
+// 			LicenseCountingType:   pulumi.String("Socket"),
+// 			LicenseRules: pulumi.StringArray{
+// 				pulumi.String("#minimumSockets=2"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"foo": pulumi.String("barr"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ## Rules
 //
@@ -66,9 +63,7 @@ import (
 // License configurations can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:licensemanager/licenseConfiguration:LicenseConfiguration example arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef
-//
+//  $ pulumi import aws:licensemanager/licenseConfiguration:LicenseConfiguration example arn:aws:license-manager:eu-west-1:123456789012:license-configuration:lic-0123456789abcdef0123456789abcdef
 // ```
 type LicenseConfiguration struct {
 	pulumi.CustomResourceState
@@ -237,7 +232,7 @@ func (i *LicenseConfiguration) ToLicenseConfigurationOutputWithContext(ctx conte
 // LicenseConfigurationArrayInput is an input type that accepts LicenseConfigurationArray and LicenseConfigurationArrayOutput values.
 // You can construct a concrete instance of `LicenseConfigurationArrayInput` via:
 //
-//	LicenseConfigurationArray{ LicenseConfigurationArgs{...} }
+//          LicenseConfigurationArray{ LicenseConfigurationArgs{...} }
 type LicenseConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -262,7 +257,7 @@ func (i LicenseConfigurationArray) ToLicenseConfigurationArrayOutputWithContext(
 // LicenseConfigurationMapInput is an input type that accepts LicenseConfigurationMap and LicenseConfigurationMapOutput values.
 // You can construct a concrete instance of `LicenseConfigurationMapInput` via:
 //
-//	LicenseConfigurationMap{ "key": LicenseConfigurationArgs{...} }
+//          LicenseConfigurationMap{ "key": LicenseConfigurationArgs{...} }
 type LicenseConfigurationMapInput interface {
 	pulumi.Input
 

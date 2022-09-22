@@ -18,36 +18,33 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/athena"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/athena"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := athena.NewWorkgroup(ctx, "example", &athena.WorkgroupArgs{
-//				Configuration: &athena.WorkgroupConfigurationArgs{
-//					EnforceWorkgroupConfiguration:   pulumi.Bool(true),
-//					PublishCloudwatchMetricsEnabled: pulumi.Bool(true),
-//					ResultConfiguration: &athena.WorkgroupConfigurationResultConfigurationArgs{
-//						OutputLocation: pulumi.String(fmt.Sprintf("s3://%v/output/", aws_s3_bucket.Example.Bucket)),
-//						EncryptionConfiguration: &athena.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs{
-//							EncryptionOption: pulumi.String("SSE_KMS"),
-//							KmsKeyArn:        pulumi.Any(aws_kms_key.Example.Arn),
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := athena.NewWorkgroup(ctx, "example", &athena.WorkgroupArgs{
+// 			Configuration: &athena.WorkgroupConfigurationArgs{
+// 				EnforceWorkgroupConfiguration:   pulumi.Bool(true),
+// 				PublishCloudwatchMetricsEnabled: pulumi.Bool(true),
+// 				ResultConfiguration: &athena.WorkgroupConfigurationResultConfigurationArgs{
+// 					OutputLocation: pulumi.String(fmt.Sprintf("s3://%v/output/", aws_s3_bucket.Example.Bucket)),
+// 					EncryptionConfiguration: &athena.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs{
+// 						EncryptionOption: pulumi.String("SSE_KMS"),
+// 						KmsKeyArn:        pulumi.Any(aws_kms_key.Example.Arn),
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -55,9 +52,7 @@ import (
 // Athena Workgroups can be imported using their name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:athena/workgroup:Workgroup example example
-//
+//  $ pulumi import aws:athena/workgroup:Workgroup example example
 // ```
 type Workgroup struct {
 	pulumi.CustomResourceState
@@ -207,7 +202,7 @@ func (i *Workgroup) ToWorkgroupOutputWithContext(ctx context.Context) WorkgroupO
 // WorkgroupArrayInput is an input type that accepts WorkgroupArray and WorkgroupArrayOutput values.
 // You can construct a concrete instance of `WorkgroupArrayInput` via:
 //
-//	WorkgroupArray{ WorkgroupArgs{...} }
+//          WorkgroupArray{ WorkgroupArgs{...} }
 type WorkgroupArrayInput interface {
 	pulumi.Input
 
@@ -232,7 +227,7 @@ func (i WorkgroupArray) ToWorkgroupArrayOutputWithContext(ctx context.Context) W
 // WorkgroupMapInput is an input type that accepts WorkgroupMap and WorkgroupMapOutput values.
 // You can construct a concrete instance of `WorkgroupMapInput` via:
 //
-//	WorkgroupMap{ "key": WorkgroupArgs{...} }
+//          WorkgroupMap{ "key": WorkgroupArgs{...} }
 type WorkgroupMapInput interface {
 	pulumi.Input
 

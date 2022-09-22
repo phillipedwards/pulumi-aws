@@ -21,31 +21,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/synthetics"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/synthetics"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := synthetics.NewCanary(ctx, "some", &synthetics.CanaryArgs{
-//				ArtifactS3Location: pulumi.String("s3://some-bucket/"),
-//				ExecutionRoleArn:   pulumi.String("some-role"),
-//				Handler:            pulumi.String("exports.handler"),
-//				RuntimeVersion:     pulumi.String("syn-1.0"),
-//				Schedule: &synthetics.CanaryScheduleArgs{
-//					Expression: pulumi.String("rate(0 minute)"),
-//				},
-//				ZipFile: pulumi.String("test-fixtures/lambdatest.zip"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := synthetics.NewCanary(ctx, "some", &synthetics.CanaryArgs{
+// 			ArtifactS3Location: pulumi.String("s3://some-bucket/"),
+// 			ExecutionRoleArn:   pulumi.String("some-role"),
+// 			Handler:            pulumi.String("exports.handler"),
+// 			RuntimeVersion:     pulumi.String("syn-1.0"),
+// 			Schedule: &synthetics.CanaryScheduleArgs{
+// 				Expression: pulumi.String("rate(0 minute)"),
+// 			},
+// 			ZipFile: pulumi.String("test-fixtures/lambdatest.zip"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -53,9 +50,7 @@ import (
 // Synthetics Canaries can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:synthetics/canary:Canary some some-canary
-//
+//  $ pulumi import aws:synthetics/canary:Canary some some-canary
 // ```
 type Canary struct {
 	pulumi.CustomResourceState
@@ -364,7 +359,7 @@ func (i *Canary) ToCanaryOutputWithContext(ctx context.Context) CanaryOutput {
 // CanaryArrayInput is an input type that accepts CanaryArray and CanaryArrayOutput values.
 // You can construct a concrete instance of `CanaryArrayInput` via:
 //
-//	CanaryArray{ CanaryArgs{...} }
+//          CanaryArray{ CanaryArgs{...} }
 type CanaryArrayInput interface {
 	pulumi.Input
 
@@ -389,7 +384,7 @@ func (i CanaryArray) ToCanaryArrayOutputWithContext(ctx context.Context) CanaryA
 // CanaryMapInput is an input type that accepts CanaryMap and CanaryMapOutput values.
 // You can construct a concrete instance of `CanaryMapInput` via:
 //
-//	CanaryMap{ "key": CanaryArgs{...} }
+//          CanaryMap{ "key": CanaryArgs{...} }
 type CanaryMapInput interface {
 	pulumi.Input
 

@@ -19,36 +19,32 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/organizations"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/organizations"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := organizations.NewPolicy(ctx, "example", &organizations.PolicyArgs{
-//				Content: pulumi.String(fmt.Sprintf(`{
-//	  "Version": "2012-10-17",
-//	  "Statement": {
-//	    "Effect": "Allow",
-//	    "Action": "*",
-//	    "Resource": "*"
-//	  }
-//	}
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := organizations.NewPolicy(ctx, "example", &organizations.PolicyArgs{
+// 			Content: pulumi.String(fmt.Sprintf(`{
+//   "Version": "2012-10-17",
+//   "Statement": {
+//     "Effect": "Allow",
+//     "Action": "*",
+//     "Resource": "*"
+//   }
+// }
 //
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -56,9 +52,7 @@ import (
 // `aws_organizations_policy` can be imported by using the policy ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:organizations/policy:Policy example p-12345678
-//
+//  $ pulumi import aws:organizations/policy:Policy example p-12345678
 // ```
 type Policy struct {
 	pulumi.CustomResourceState
@@ -201,7 +195,7 @@ func (i *Policy) ToPolicyOutputWithContext(ctx context.Context) PolicyOutput {
 // PolicyArrayInput is an input type that accepts PolicyArray and PolicyArrayOutput values.
 // You can construct a concrete instance of `PolicyArrayInput` via:
 //
-//	PolicyArray{ PolicyArgs{...} }
+//          PolicyArray{ PolicyArgs{...} }
 type PolicyArrayInput interface {
 	pulumi.Input
 
@@ -226,7 +220,7 @@ func (i PolicyArray) ToPolicyArrayOutputWithContext(ctx context.Context) PolicyA
 // PolicyMapInput is an input type that accepts PolicyMap and PolicyMapOutput values.
 // You can construct a concrete instance of `PolicyMapInput` via:
 //
-//	PolicyMap{ "key": PolicyArgs{...} }
+//          PolicyMap{ "key": PolicyArgs{...} }
 type PolicyMapInput interface {
 	pulumi.Input
 

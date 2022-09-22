@@ -20,7 +20,7 @@ type DataSourceConfiguration struct {
 // DataSourceConfigurationInput is an input type that accepts DataSourceConfigurationArgs and DataSourceConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationInput` via:
 //
-//	DataSourceConfigurationArgs{...}
+//          DataSourceConfigurationArgs{...}
 type DataSourceConfigurationInput interface {
 	pulumi.Input
 
@@ -58,11 +58,11 @@ func (i DataSourceConfigurationArgs) ToDataSourceConfigurationPtrOutputWithConte
 // DataSourceConfigurationPtrInput is an input type that accepts DataSourceConfigurationArgs, DataSourceConfigurationPtr and DataSourceConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationPtrInput` via:
 //
-//	        DataSourceConfigurationArgs{...}
+//          DataSourceConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -186,7 +186,7 @@ type DataSourceConfigurationS3Configuration struct {
 // DataSourceConfigurationS3ConfigurationInput is an input type that accepts DataSourceConfigurationS3ConfigurationArgs and DataSourceConfigurationS3ConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationS3ConfigurationInput` via:
 //
-//	DataSourceConfigurationS3ConfigurationArgs{...}
+//          DataSourceConfigurationS3ConfigurationArgs{...}
 type DataSourceConfigurationS3ConfigurationInput interface {
 	pulumi.Input
 
@@ -232,11 +232,11 @@ func (i DataSourceConfigurationS3ConfigurationArgs) ToDataSourceConfigurationS3C
 // DataSourceConfigurationS3ConfigurationPtrInput is an input type that accepts DataSourceConfigurationS3ConfigurationArgs, DataSourceConfigurationS3ConfigurationPtr and DataSourceConfigurationS3ConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationS3ConfigurationPtrInput` via:
 //
-//	        DataSourceConfigurationS3ConfigurationArgs{...}
+//          DataSourceConfigurationS3ConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceConfigurationS3ConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -412,7 +412,7 @@ type DataSourceConfigurationS3ConfigurationAccessControlListConfiguration struct
 // DataSourceConfigurationS3ConfigurationAccessControlListConfigurationInput is an input type that accepts DataSourceConfigurationS3ConfigurationAccessControlListConfigurationArgs and DataSourceConfigurationS3ConfigurationAccessControlListConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationS3ConfigurationAccessControlListConfigurationInput` via:
 //
-//	DataSourceConfigurationS3ConfigurationAccessControlListConfigurationArgs{...}
+//          DataSourceConfigurationS3ConfigurationAccessControlListConfigurationArgs{...}
 type DataSourceConfigurationS3ConfigurationAccessControlListConfigurationInput interface {
 	pulumi.Input
 
@@ -448,11 +448,11 @@ func (i DataSourceConfigurationS3ConfigurationAccessControlListConfigurationArgs
 // DataSourceConfigurationS3ConfigurationAccessControlListConfigurationPtrInput is an input type that accepts DataSourceConfigurationS3ConfigurationAccessControlListConfigurationArgs, DataSourceConfigurationS3ConfigurationAccessControlListConfigurationPtr and DataSourceConfigurationS3ConfigurationAccessControlListConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationS3ConfigurationAccessControlListConfigurationPtrInput` via:
 //
-//	        DataSourceConfigurationS3ConfigurationAccessControlListConfigurationArgs{...}
+//          DataSourceConfigurationS3ConfigurationAccessControlListConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceConfigurationS3ConfigurationAccessControlListConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -549,7 +549,7 @@ type DataSourceConfigurationS3ConfigurationDocumentsMetadataConfiguration struct
 // DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationInput is an input type that accepts DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationArgs and DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationInput` via:
 //
-//	DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationArgs{...}
+//          DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationArgs{...}
 type DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationInput interface {
 	pulumi.Input
 
@@ -585,11 +585,11 @@ func (i DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationArgs
 // DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationPtrInput is an input type that accepts DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationArgs, DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationPtr and DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationPtrInput` via:
 //
-//	        DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationArgs{...}
+//          DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceConfigurationS3ConfigurationDocumentsMetadataConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -704,7 +704,7 @@ type DataSourceConfigurationWebCrawlerConfiguration struct {
 // DataSourceConfigurationWebCrawlerConfigurationInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationArgs and DataSourceConfigurationWebCrawlerConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationInput` via:
 //
-//	DataSourceConfigurationWebCrawlerConfigurationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationArgs{...}
 type DataSourceConfigurationWebCrawlerConfigurationInput interface {
 	pulumi.Input
 
@@ -756,11 +756,11 @@ func (i DataSourceConfigurationWebCrawlerConfigurationArgs) ToDataSourceConfigur
 // DataSourceConfigurationWebCrawlerConfigurationPtrInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationArgs, DataSourceConfigurationWebCrawlerConfigurationPtr and DataSourceConfigurationWebCrawlerConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationPtrInput` via:
 //
-//	        DataSourceConfigurationWebCrawlerConfigurationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceConfigurationWebCrawlerConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -985,7 +985,7 @@ type DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfiguration s
 // DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationArgs and DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationInput` via:
 //
-//	DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationArgs{...}
 type DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationInput interface {
 	pulumi.Input
 
@@ -1021,11 +1021,11 @@ func (i DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfiguratio
 // DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationPtrInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationArgs, DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationPtr and DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationPtrInput` via:
 //
-//	        DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -1128,7 +1128,7 @@ type DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBa
 // DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArgs and DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationInput` via:
 //
-//	DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArgs{...}
 type DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationInput interface {
 	pulumi.Input
 
@@ -1160,7 +1160,7 @@ func (i DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfiguratio
 // DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArrayInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArray and DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArrayOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArrayInput` via:
 //
-//	DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArray{ DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArgs{...} }
+//          DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArray{ DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArgs{...} }
 type DataSourceConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationArrayInput interface {
 	pulumi.Input
 
@@ -1249,7 +1249,7 @@ type DataSourceConfigurationWebCrawlerConfigurationProxyConfiguration struct {
 // DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationArgs and DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationInput` via:
 //
-//	DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationArgs{...}
 type DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationInput interface {
 	pulumi.Input
 
@@ -1289,11 +1289,11 @@ func (i DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationArgs) To
 // DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationPtrInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationArgs, DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationPtr and DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationPtrInput` via:
 //
-//	        DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceConfigurationWebCrawlerConfigurationProxyConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -1422,7 +1422,7 @@ type DataSourceConfigurationWebCrawlerConfigurationUrls struct {
 // DataSourceConfigurationWebCrawlerConfigurationUrlsInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationUrlsArgs and DataSourceConfigurationWebCrawlerConfigurationUrlsOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationUrlsInput` via:
 //
-//	DataSourceConfigurationWebCrawlerConfigurationUrlsArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationUrlsArgs{...}
 type DataSourceConfigurationWebCrawlerConfigurationUrlsInput interface {
 	pulumi.Input
 
@@ -1460,11 +1460,11 @@ func (i DataSourceConfigurationWebCrawlerConfigurationUrlsArgs) ToDataSourceConf
 // DataSourceConfigurationWebCrawlerConfigurationUrlsPtrInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationUrlsArgs, DataSourceConfigurationWebCrawlerConfigurationUrlsPtr and DataSourceConfigurationWebCrawlerConfigurationUrlsPtrOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationUrlsPtrInput` via:
 //
-//	        DataSourceConfigurationWebCrawlerConfigurationUrlsArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationUrlsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceConfigurationWebCrawlerConfigurationUrlsPtrInput interface {
 	pulumi.Input
 
@@ -1582,7 +1582,7 @@ type DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfiguration stru
 // DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationArgs and DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationInput` via:
 //
-//	DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationArgs{...}
 type DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationInput interface {
 	pulumi.Input
 
@@ -1620,11 +1620,11 @@ func (i DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationAr
 // DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationPtrInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationArgs, DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationPtr and DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationPtrInput` via:
 //
-//	        DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceConfigurationWebCrawlerConfigurationUrlsSeedUrlConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -1740,7 +1740,7 @@ type DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfiguration str
 // DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationArgs and DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationInput` via:
 //
-//	DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationArgs{...}
 type DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationInput interface {
 	pulumi.Input
 
@@ -1776,11 +1776,11 @@ func (i DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationA
 // DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationPtrInput is an input type that accepts DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationArgs, DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationPtr and DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationPtrInput` via:
 //
-//	        DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationArgs{...}
+//          DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceConfigurationWebCrawlerConfigurationUrlsSiteMapsConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -1885,7 +1885,7 @@ type DataSourceCustomDocumentEnrichmentConfiguration struct {
 // DataSourceCustomDocumentEnrichmentConfigurationInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationArgs and DataSourceCustomDocumentEnrichmentConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationInput interface {
 	pulumi.Input
 
@@ -1927,11 +1927,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationArgs) ToDataSourceCustomD
 // DataSourceCustomDocumentEnrichmentConfigurationPtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationArgs, DataSourceCustomDocumentEnrichmentConfigurationPtr and DataSourceCustomDocumentEnrichmentConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -2083,7 +2083,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationInlineConfiguration struct {
 // DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArgs and DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationInput interface {
 	pulumi.Input
 
@@ -2115,7 +2115,7 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArgs) 
 // DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArrayInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArray and DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArrayOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArrayInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArray{ DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArgs{...} }
+//          DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArray{ DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArgs{...} }
 type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -2204,7 +2204,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationCondition
 // DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionArgs and DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionInput interface {
 	pulumi.Input
 
@@ -2244,11 +2244,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationCondit
 // DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionPtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionArgs, DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionPtr and DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionPtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionPtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionPtrInput interface {
 	pulumi.Input
 
@@ -2386,7 +2386,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationCondition
 // DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValueInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValueArgs and DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValueOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValueInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValueArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValueArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValueInput interface {
 	pulumi.Input
 
@@ -2427,11 +2427,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationCondit
 // DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValuePtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValueArgs, DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValuePtr and DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValuePtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValuePtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValueArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValueArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationConditionConditionOnValuePtrInput interface {
 	pulumi.Input
 
@@ -2584,7 +2584,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTarget st
 // DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetArgs and DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetInput interface {
 	pulumi.Input
 
@@ -2625,11 +2625,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTarget
 // DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetPtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetArgs, DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetPtr and DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetPtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetPtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetPtrInput interface {
 	pulumi.Input
 
@@ -2769,7 +2769,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTar
 // DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValueInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValueArgs and DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValueOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValueInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValueArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValueArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValueInput interface {
 	pulumi.Input
 
@@ -2810,11 +2810,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTarget
 // DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValuePtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValueArgs, DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValuePtr and DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValuePtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValuePtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValueArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValueArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationInlineConfigurationTargetTargetDocumentAttributeValuePtrInput interface {
 	pulumi.Input
 
@@ -2966,7 +2966,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurat
 // DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationArgs and DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInput interface {
 	pulumi.Input
 
@@ -3006,11 +3006,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigu
 // DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationPtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationArgs, DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationPtr and DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationPtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -3147,7 +3147,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurat
 // DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionArgs and DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionInput interface {
 	pulumi.Input
 
@@ -3187,11 +3187,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigu
 // DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionPtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionArgs, DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionPtr and DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionPtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionPtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionPtrInput interface {
 	pulumi.Input
 
@@ -3329,7 +3329,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurat
 // DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValueInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValueArgs and DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValueOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValueInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValueArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValueArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValueInput interface {
 	pulumi.Input
 
@@ -3370,11 +3370,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigu
 // DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValuePtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValueArgs, DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValuePtr and DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValuePtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValuePtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValueArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValueArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValuePtrInput interface {
 	pulumi.Input
 
@@ -3526,7 +3526,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurati
 // DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationArgs and DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInput interface {
 	pulumi.Input
 
@@ -3566,11 +3566,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigur
 // DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationPtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationArgs, DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationPtr and DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationPtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationPtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -3707,7 +3707,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurati
 // DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionArgs and DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionInput interface {
 	pulumi.Input
 
@@ -3747,11 +3747,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigur
 // DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionPtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionArgs, DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionPtr and DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionPtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionPtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionPtrInput interface {
 	pulumi.Input
 
@@ -3889,7 +3889,7 @@ type DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurati
 // DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValueInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValueArgs and DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValueOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValueInput` via:
 //
-//	DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValueArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValueArgs{...}
 type DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValueInput interface {
 	pulumi.Input
 
@@ -3930,11 +3930,11 @@ func (i DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigur
 // DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValuePtrInput is an input type that accepts DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValueArgs, DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValuePtr and DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValuePtrOutput values.
 // You can construct a concrete instance of `DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValuePtrInput` via:
 //
-//	        DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValueArgs{...}
+//          DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValueArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type DataSourceCustomDocumentEnrichmentConfigurationPreExtractionHookConfigurationInvocationConditionConditionOnValuePtrInput interface {
 	pulumi.Input
 
@@ -4083,7 +4083,7 @@ type ExperienceConfiguration struct {
 // ExperienceConfigurationInput is an input type that accepts ExperienceConfigurationArgs and ExperienceConfigurationOutput values.
 // You can construct a concrete instance of `ExperienceConfigurationInput` via:
 //
-//	ExperienceConfigurationArgs{...}
+//          ExperienceConfigurationArgs{...}
 type ExperienceConfigurationInput interface {
 	pulumi.Input
 
@@ -4120,11 +4120,11 @@ func (i ExperienceConfigurationArgs) ToExperienceConfigurationPtrOutputWithConte
 // ExperienceConfigurationPtrInput is an input type that accepts ExperienceConfigurationArgs, ExperienceConfigurationPtr and ExperienceConfigurationPtrOutput values.
 // You can construct a concrete instance of `ExperienceConfigurationPtrInput` via:
 //
-//	        ExperienceConfigurationArgs{...}
+//          ExperienceConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ExperienceConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -4242,7 +4242,7 @@ type ExperienceConfigurationContentSourceConfiguration struct {
 // ExperienceConfigurationContentSourceConfigurationInput is an input type that accepts ExperienceConfigurationContentSourceConfigurationArgs and ExperienceConfigurationContentSourceConfigurationOutput values.
 // You can construct a concrete instance of `ExperienceConfigurationContentSourceConfigurationInput` via:
 //
-//	ExperienceConfigurationContentSourceConfigurationArgs{...}
+//          ExperienceConfigurationContentSourceConfigurationArgs{...}
 type ExperienceConfigurationContentSourceConfigurationInput interface {
 	pulumi.Input
 
@@ -4282,11 +4282,11 @@ func (i ExperienceConfigurationContentSourceConfigurationArgs) ToExperienceConfi
 // ExperienceConfigurationContentSourceConfigurationPtrInput is an input type that accepts ExperienceConfigurationContentSourceConfigurationArgs, ExperienceConfigurationContentSourceConfigurationPtr and ExperienceConfigurationContentSourceConfigurationPtrOutput values.
 // You can construct a concrete instance of `ExperienceConfigurationContentSourceConfigurationPtrInput` via:
 //
-//	        ExperienceConfigurationContentSourceConfigurationArgs{...}
+//          ExperienceConfigurationContentSourceConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ExperienceConfigurationContentSourceConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -4413,7 +4413,7 @@ type ExperienceConfigurationUserIdentityConfiguration struct {
 // ExperienceConfigurationUserIdentityConfigurationInput is an input type that accepts ExperienceConfigurationUserIdentityConfigurationArgs and ExperienceConfigurationUserIdentityConfigurationOutput values.
 // You can construct a concrete instance of `ExperienceConfigurationUserIdentityConfigurationInput` via:
 //
-//	ExperienceConfigurationUserIdentityConfigurationArgs{...}
+//          ExperienceConfigurationUserIdentityConfigurationArgs{...}
 type ExperienceConfigurationUserIdentityConfigurationInput interface {
 	pulumi.Input
 
@@ -4449,11 +4449,11 @@ func (i ExperienceConfigurationUserIdentityConfigurationArgs) ToExperienceConfig
 // ExperienceConfigurationUserIdentityConfigurationPtrInput is an input type that accepts ExperienceConfigurationUserIdentityConfigurationArgs, ExperienceConfigurationUserIdentityConfigurationPtr and ExperienceConfigurationUserIdentityConfigurationPtrOutput values.
 // You can construct a concrete instance of `ExperienceConfigurationUserIdentityConfigurationPtrInput` via:
 //
-//	        ExperienceConfigurationUserIdentityConfigurationArgs{...}
+//          ExperienceConfigurationUserIdentityConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ExperienceConfigurationUserIdentityConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -4552,7 +4552,7 @@ type ExperienceEndpoint struct {
 // ExperienceEndpointInput is an input type that accepts ExperienceEndpointArgs and ExperienceEndpointOutput values.
 // You can construct a concrete instance of `ExperienceEndpointInput` via:
 //
-//	ExperienceEndpointArgs{...}
+//          ExperienceEndpointArgs{...}
 type ExperienceEndpointInput interface {
 	pulumi.Input
 
@@ -4582,7 +4582,7 @@ func (i ExperienceEndpointArgs) ToExperienceEndpointOutputWithContext(ctx contex
 // ExperienceEndpointArrayInput is an input type that accepts ExperienceEndpointArray and ExperienceEndpointArrayOutput values.
 // You can construct a concrete instance of `ExperienceEndpointArrayInput` via:
 //
-//	ExperienceEndpointArray{ ExperienceEndpointArgs{...} }
+//          ExperienceEndpointArray{ ExperienceEndpointArgs{...} }
 type ExperienceEndpointArrayInput interface {
 	pulumi.Input
 
@@ -4658,7 +4658,7 @@ type FaqS3Path struct {
 // FaqS3PathInput is an input type that accepts FaqS3PathArgs and FaqS3PathOutput values.
 // You can construct a concrete instance of `FaqS3PathInput` via:
 //
-//	FaqS3PathArgs{...}
+//          FaqS3PathArgs{...}
 type FaqS3PathInput interface {
 	pulumi.Input
 
@@ -4696,11 +4696,11 @@ func (i FaqS3PathArgs) ToFaqS3PathPtrOutputWithContext(ctx context.Context) FaqS
 // FaqS3PathPtrInput is an input type that accepts FaqS3PathArgs, FaqS3PathPtr and FaqS3PathPtrOutput values.
 // You can construct a concrete instance of `FaqS3PathPtrInput` via:
 //
-//	        FaqS3PathArgs{...}
+//          FaqS3PathArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FaqS3PathPtrInput interface {
 	pulumi.Input
 
@@ -4814,7 +4814,7 @@ type IndexCapacityUnits struct {
 // IndexCapacityUnitsInput is an input type that accepts IndexCapacityUnitsArgs and IndexCapacityUnitsOutput values.
 // You can construct a concrete instance of `IndexCapacityUnitsInput` via:
 //
-//	IndexCapacityUnitsArgs{...}
+//          IndexCapacityUnitsArgs{...}
 type IndexCapacityUnitsInput interface {
 	pulumi.Input
 
@@ -4852,11 +4852,11 @@ func (i IndexCapacityUnitsArgs) ToIndexCapacityUnitsPtrOutputWithContext(ctx con
 // IndexCapacityUnitsPtrInput is an input type that accepts IndexCapacityUnitsArgs, IndexCapacityUnitsPtr and IndexCapacityUnitsPtrOutput values.
 // You can construct a concrete instance of `IndexCapacityUnitsPtrInput` via:
 //
-//	        IndexCapacityUnitsArgs{...}
+//          IndexCapacityUnitsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type IndexCapacityUnitsPtrInput interface {
 	pulumi.Input
 
@@ -4974,7 +4974,7 @@ type IndexDocumentMetadataConfigurationUpdate struct {
 // IndexDocumentMetadataConfigurationUpdateInput is an input type that accepts IndexDocumentMetadataConfigurationUpdateArgs and IndexDocumentMetadataConfigurationUpdateOutput values.
 // You can construct a concrete instance of `IndexDocumentMetadataConfigurationUpdateInput` via:
 //
-//	IndexDocumentMetadataConfigurationUpdateArgs{...}
+//          IndexDocumentMetadataConfigurationUpdateArgs{...}
 type IndexDocumentMetadataConfigurationUpdateInput interface {
 	pulumi.Input
 
@@ -5008,7 +5008,7 @@ func (i IndexDocumentMetadataConfigurationUpdateArgs) ToIndexDocumentMetadataCon
 // IndexDocumentMetadataConfigurationUpdateArrayInput is an input type that accepts IndexDocumentMetadataConfigurationUpdateArray and IndexDocumentMetadataConfigurationUpdateArrayOutput values.
 // You can construct a concrete instance of `IndexDocumentMetadataConfigurationUpdateArrayInput` via:
 //
-//	IndexDocumentMetadataConfigurationUpdateArray{ IndexDocumentMetadataConfigurationUpdateArgs{...} }
+//          IndexDocumentMetadataConfigurationUpdateArray{ IndexDocumentMetadataConfigurationUpdateArgs{...} }
 type IndexDocumentMetadataConfigurationUpdateArrayInput interface {
 	pulumi.Input
 
@@ -5104,7 +5104,7 @@ type IndexDocumentMetadataConfigurationUpdateRelevance struct {
 // IndexDocumentMetadataConfigurationUpdateRelevanceInput is an input type that accepts IndexDocumentMetadataConfigurationUpdateRelevanceArgs and IndexDocumentMetadataConfigurationUpdateRelevanceOutput values.
 // You can construct a concrete instance of `IndexDocumentMetadataConfigurationUpdateRelevanceInput` via:
 //
-//	IndexDocumentMetadataConfigurationUpdateRelevanceArgs{...}
+//          IndexDocumentMetadataConfigurationUpdateRelevanceArgs{...}
 type IndexDocumentMetadataConfigurationUpdateRelevanceInput interface {
 	pulumi.Input
 
@@ -5148,11 +5148,11 @@ func (i IndexDocumentMetadataConfigurationUpdateRelevanceArgs) ToIndexDocumentMe
 // IndexDocumentMetadataConfigurationUpdateRelevancePtrInput is an input type that accepts IndexDocumentMetadataConfigurationUpdateRelevanceArgs, IndexDocumentMetadataConfigurationUpdateRelevancePtr and IndexDocumentMetadataConfigurationUpdateRelevancePtrOutput values.
 // You can construct a concrete instance of `IndexDocumentMetadataConfigurationUpdateRelevancePtrInput` via:
 //
-//	        IndexDocumentMetadataConfigurationUpdateRelevanceArgs{...}
+//          IndexDocumentMetadataConfigurationUpdateRelevanceArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type IndexDocumentMetadataConfigurationUpdateRelevancePtrInput interface {
 	pulumi.Input
 
@@ -5315,7 +5315,7 @@ type IndexDocumentMetadataConfigurationUpdateSearch struct {
 // IndexDocumentMetadataConfigurationUpdateSearchInput is an input type that accepts IndexDocumentMetadataConfigurationUpdateSearchArgs and IndexDocumentMetadataConfigurationUpdateSearchOutput values.
 // You can construct a concrete instance of `IndexDocumentMetadataConfigurationUpdateSearchInput` via:
 //
-//	IndexDocumentMetadataConfigurationUpdateSearchArgs{...}
+//          IndexDocumentMetadataConfigurationUpdateSearchArgs{...}
 type IndexDocumentMetadataConfigurationUpdateSearchInput interface {
 	pulumi.Input
 
@@ -5357,11 +5357,11 @@ func (i IndexDocumentMetadataConfigurationUpdateSearchArgs) ToIndexDocumentMetad
 // IndexDocumentMetadataConfigurationUpdateSearchPtrInput is an input type that accepts IndexDocumentMetadataConfigurationUpdateSearchArgs, IndexDocumentMetadataConfigurationUpdateSearchPtr and IndexDocumentMetadataConfigurationUpdateSearchPtrOutput values.
 // You can construct a concrete instance of `IndexDocumentMetadataConfigurationUpdateSearchPtrInput` via:
 //
-//	        IndexDocumentMetadataConfigurationUpdateSearchArgs{...}
+//          IndexDocumentMetadataConfigurationUpdateSearchArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type IndexDocumentMetadataConfigurationUpdateSearchPtrInput interface {
 	pulumi.Input
 
@@ -5505,7 +5505,7 @@ type IndexIndexStatistic struct {
 // IndexIndexStatisticInput is an input type that accepts IndexIndexStatisticArgs and IndexIndexStatisticOutput values.
 // You can construct a concrete instance of `IndexIndexStatisticInput` via:
 //
-//	IndexIndexStatisticArgs{...}
+//          IndexIndexStatisticArgs{...}
 type IndexIndexStatisticInput interface {
 	pulumi.Input
 
@@ -5535,7 +5535,7 @@ func (i IndexIndexStatisticArgs) ToIndexIndexStatisticOutputWithContext(ctx cont
 // IndexIndexStatisticArrayInput is an input type that accepts IndexIndexStatisticArray and IndexIndexStatisticArrayOutput values.
 // You can construct a concrete instance of `IndexIndexStatisticArrayInput` via:
 //
-//	IndexIndexStatisticArray{ IndexIndexStatisticArgs{...} }
+//          IndexIndexStatisticArray{ IndexIndexStatisticArgs{...} }
 type IndexIndexStatisticArrayInput interface {
 	pulumi.Input
 
@@ -5611,7 +5611,7 @@ type IndexIndexStatisticFaqStatistic struct {
 // IndexIndexStatisticFaqStatisticInput is an input type that accepts IndexIndexStatisticFaqStatisticArgs and IndexIndexStatisticFaqStatisticOutput values.
 // You can construct a concrete instance of `IndexIndexStatisticFaqStatisticInput` via:
 //
-//	IndexIndexStatisticFaqStatisticArgs{...}
+//          IndexIndexStatisticFaqStatisticArgs{...}
 type IndexIndexStatisticFaqStatisticInput interface {
 	pulumi.Input
 
@@ -5639,7 +5639,7 @@ func (i IndexIndexStatisticFaqStatisticArgs) ToIndexIndexStatisticFaqStatisticOu
 // IndexIndexStatisticFaqStatisticArrayInput is an input type that accepts IndexIndexStatisticFaqStatisticArray and IndexIndexStatisticFaqStatisticArrayOutput values.
 // You can construct a concrete instance of `IndexIndexStatisticFaqStatisticArrayInput` via:
 //
-//	IndexIndexStatisticFaqStatisticArray{ IndexIndexStatisticFaqStatisticArgs{...} }
+//          IndexIndexStatisticFaqStatisticArray{ IndexIndexStatisticFaqStatisticArgs{...} }
 type IndexIndexStatisticFaqStatisticArrayInput interface {
 	pulumi.Input
 
@@ -5710,7 +5710,7 @@ type IndexIndexStatisticTextDocumentStatistic struct {
 // IndexIndexStatisticTextDocumentStatisticInput is an input type that accepts IndexIndexStatisticTextDocumentStatisticArgs and IndexIndexStatisticTextDocumentStatisticOutput values.
 // You can construct a concrete instance of `IndexIndexStatisticTextDocumentStatisticInput` via:
 //
-//	IndexIndexStatisticTextDocumentStatisticArgs{...}
+//          IndexIndexStatisticTextDocumentStatisticArgs{...}
 type IndexIndexStatisticTextDocumentStatisticInput interface {
 	pulumi.Input
 
@@ -5740,7 +5740,7 @@ func (i IndexIndexStatisticTextDocumentStatisticArgs) ToIndexIndexStatisticTextD
 // IndexIndexStatisticTextDocumentStatisticArrayInput is an input type that accepts IndexIndexStatisticTextDocumentStatisticArray and IndexIndexStatisticTextDocumentStatisticArrayOutput values.
 // You can construct a concrete instance of `IndexIndexStatisticTextDocumentStatisticArrayInput` via:
 //
-//	IndexIndexStatisticTextDocumentStatisticArray{ IndexIndexStatisticTextDocumentStatisticArgs{...} }
+//          IndexIndexStatisticTextDocumentStatisticArray{ IndexIndexStatisticTextDocumentStatisticArgs{...} }
 type IndexIndexStatisticTextDocumentStatisticArrayInput interface {
 	pulumi.Input
 
@@ -5814,7 +5814,7 @@ type IndexServerSideEncryptionConfiguration struct {
 // IndexServerSideEncryptionConfigurationInput is an input type that accepts IndexServerSideEncryptionConfigurationArgs and IndexServerSideEncryptionConfigurationOutput values.
 // You can construct a concrete instance of `IndexServerSideEncryptionConfigurationInput` via:
 //
-//	IndexServerSideEncryptionConfigurationArgs{...}
+//          IndexServerSideEncryptionConfigurationArgs{...}
 type IndexServerSideEncryptionConfigurationInput interface {
 	pulumi.Input
 
@@ -5850,11 +5850,11 @@ func (i IndexServerSideEncryptionConfigurationArgs) ToIndexServerSideEncryptionC
 // IndexServerSideEncryptionConfigurationPtrInput is an input type that accepts IndexServerSideEncryptionConfigurationArgs, IndexServerSideEncryptionConfigurationPtr and IndexServerSideEncryptionConfigurationPtrOutput values.
 // You can construct a concrete instance of `IndexServerSideEncryptionConfigurationPtrInput` via:
 //
-//	        IndexServerSideEncryptionConfigurationArgs{...}
+//          IndexServerSideEncryptionConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type IndexServerSideEncryptionConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -5951,7 +5951,7 @@ type IndexUserGroupResolutionConfiguration struct {
 // IndexUserGroupResolutionConfigurationInput is an input type that accepts IndexUserGroupResolutionConfigurationArgs and IndexUserGroupResolutionConfigurationOutput values.
 // You can construct a concrete instance of `IndexUserGroupResolutionConfigurationInput` via:
 //
-//	IndexUserGroupResolutionConfigurationArgs{...}
+//          IndexUserGroupResolutionConfigurationArgs{...}
 type IndexUserGroupResolutionConfigurationInput interface {
 	pulumi.Input
 
@@ -5987,11 +5987,11 @@ func (i IndexUserGroupResolutionConfigurationArgs) ToIndexUserGroupResolutionCon
 // IndexUserGroupResolutionConfigurationPtrInput is an input type that accepts IndexUserGroupResolutionConfigurationArgs, IndexUserGroupResolutionConfigurationPtr and IndexUserGroupResolutionConfigurationPtrOutput values.
 // You can construct a concrete instance of `IndexUserGroupResolutionConfigurationPtrInput` via:
 //
-//	        IndexUserGroupResolutionConfigurationArgs{...}
+//          IndexUserGroupResolutionConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type IndexUserGroupResolutionConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -6090,7 +6090,7 @@ type IndexUserTokenConfigurations struct {
 // IndexUserTokenConfigurationsInput is an input type that accepts IndexUserTokenConfigurationsArgs and IndexUserTokenConfigurationsOutput values.
 // You can construct a concrete instance of `IndexUserTokenConfigurationsInput` via:
 //
-//	IndexUserTokenConfigurationsArgs{...}
+//          IndexUserTokenConfigurationsArgs{...}
 type IndexUserTokenConfigurationsInput interface {
 	pulumi.Input
 
@@ -6128,11 +6128,11 @@ func (i IndexUserTokenConfigurationsArgs) ToIndexUserTokenConfigurationsPtrOutpu
 // IndexUserTokenConfigurationsPtrInput is an input type that accepts IndexUserTokenConfigurationsArgs, IndexUserTokenConfigurationsPtr and IndexUserTokenConfigurationsPtrOutput values.
 // You can construct a concrete instance of `IndexUserTokenConfigurationsPtrInput` via:
 //
-//	        IndexUserTokenConfigurationsArgs{...}
+//          IndexUserTokenConfigurationsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type IndexUserTokenConfigurationsPtrInput interface {
 	pulumi.Input
 
@@ -6250,7 +6250,7 @@ type IndexUserTokenConfigurationsJsonTokenTypeConfiguration struct {
 // IndexUserTokenConfigurationsJsonTokenTypeConfigurationInput is an input type that accepts IndexUserTokenConfigurationsJsonTokenTypeConfigurationArgs and IndexUserTokenConfigurationsJsonTokenTypeConfigurationOutput values.
 // You can construct a concrete instance of `IndexUserTokenConfigurationsJsonTokenTypeConfigurationInput` via:
 //
-//	IndexUserTokenConfigurationsJsonTokenTypeConfigurationArgs{...}
+//          IndexUserTokenConfigurationsJsonTokenTypeConfigurationArgs{...}
 type IndexUserTokenConfigurationsJsonTokenTypeConfigurationInput interface {
 	pulumi.Input
 
@@ -6288,11 +6288,11 @@ func (i IndexUserTokenConfigurationsJsonTokenTypeConfigurationArgs) ToIndexUserT
 // IndexUserTokenConfigurationsJsonTokenTypeConfigurationPtrInput is an input type that accepts IndexUserTokenConfigurationsJsonTokenTypeConfigurationArgs, IndexUserTokenConfigurationsJsonTokenTypeConfigurationPtr and IndexUserTokenConfigurationsJsonTokenTypeConfigurationPtrOutput values.
 // You can construct a concrete instance of `IndexUserTokenConfigurationsJsonTokenTypeConfigurationPtrInput` via:
 //
-//	        IndexUserTokenConfigurationsJsonTokenTypeConfigurationArgs{...}
+//          IndexUserTokenConfigurationsJsonTokenTypeConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type IndexUserTokenConfigurationsJsonTokenTypeConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -6416,7 +6416,7 @@ type IndexUserTokenConfigurationsJwtTokenTypeConfiguration struct {
 // IndexUserTokenConfigurationsJwtTokenTypeConfigurationInput is an input type that accepts IndexUserTokenConfigurationsJwtTokenTypeConfigurationArgs and IndexUserTokenConfigurationsJwtTokenTypeConfigurationOutput values.
 // You can construct a concrete instance of `IndexUserTokenConfigurationsJwtTokenTypeConfigurationInput` via:
 //
-//	IndexUserTokenConfigurationsJwtTokenTypeConfigurationArgs{...}
+//          IndexUserTokenConfigurationsJwtTokenTypeConfigurationArgs{...}
 type IndexUserTokenConfigurationsJwtTokenTypeConfigurationInput interface {
 	pulumi.Input
 
@@ -6464,11 +6464,11 @@ func (i IndexUserTokenConfigurationsJwtTokenTypeConfigurationArgs) ToIndexUserTo
 // IndexUserTokenConfigurationsJwtTokenTypeConfigurationPtrInput is an input type that accepts IndexUserTokenConfigurationsJwtTokenTypeConfigurationArgs, IndexUserTokenConfigurationsJwtTokenTypeConfigurationPtr and IndexUserTokenConfigurationsJwtTokenTypeConfigurationPtrOutput values.
 // You can construct a concrete instance of `IndexUserTokenConfigurationsJwtTokenTypeConfigurationPtrInput` via:
 //
-//	        IndexUserTokenConfigurationsJwtTokenTypeConfigurationArgs{...}
+//          IndexUserTokenConfigurationsJwtTokenTypeConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type IndexUserTokenConfigurationsJwtTokenTypeConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -6657,7 +6657,7 @@ type QuerySuggestionsBlockListSourceS3Path struct {
 // QuerySuggestionsBlockListSourceS3PathInput is an input type that accepts QuerySuggestionsBlockListSourceS3PathArgs and QuerySuggestionsBlockListSourceS3PathOutput values.
 // You can construct a concrete instance of `QuerySuggestionsBlockListSourceS3PathInput` via:
 //
-//	QuerySuggestionsBlockListSourceS3PathArgs{...}
+//          QuerySuggestionsBlockListSourceS3PathArgs{...}
 type QuerySuggestionsBlockListSourceS3PathInput interface {
 	pulumi.Input
 
@@ -6695,11 +6695,11 @@ func (i QuerySuggestionsBlockListSourceS3PathArgs) ToQuerySuggestionsBlockListSo
 // QuerySuggestionsBlockListSourceS3PathPtrInput is an input type that accepts QuerySuggestionsBlockListSourceS3PathArgs, QuerySuggestionsBlockListSourceS3PathPtr and QuerySuggestionsBlockListSourceS3PathPtrOutput values.
 // You can construct a concrete instance of `QuerySuggestionsBlockListSourceS3PathPtrInput` via:
 //
-//	        QuerySuggestionsBlockListSourceS3PathArgs{...}
+//          QuerySuggestionsBlockListSourceS3PathArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type QuerySuggestionsBlockListSourceS3PathPtrInput interface {
 	pulumi.Input
 
@@ -6813,7 +6813,7 @@ type ThesaurusSourceS3Path struct {
 // ThesaurusSourceS3PathInput is an input type that accepts ThesaurusSourceS3PathArgs and ThesaurusSourceS3PathOutput values.
 // You can construct a concrete instance of `ThesaurusSourceS3PathInput` via:
 //
-//	ThesaurusSourceS3PathArgs{...}
+//          ThesaurusSourceS3PathArgs{...}
 type ThesaurusSourceS3PathInput interface {
 	pulumi.Input
 
@@ -6851,11 +6851,11 @@ func (i ThesaurusSourceS3PathArgs) ToThesaurusSourceS3PathPtrOutputWithContext(c
 // ThesaurusSourceS3PathPtrInput is an input type that accepts ThesaurusSourceS3PathArgs, ThesaurusSourceS3PathPtr and ThesaurusSourceS3PathPtrOutput values.
 // You can construct a concrete instance of `ThesaurusSourceS3PathPtrInput` via:
 //
-//	        ThesaurusSourceS3PathArgs{...}
+//          ThesaurusSourceS3PathArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ThesaurusSourceS3PathPtrInput interface {
 	pulumi.Input
 
@@ -6969,7 +6969,7 @@ type GetExperienceConfiguration struct {
 // GetExperienceConfigurationInput is an input type that accepts GetExperienceConfigurationArgs and GetExperienceConfigurationOutput values.
 // You can construct a concrete instance of `GetExperienceConfigurationInput` via:
 //
-//	GetExperienceConfigurationArgs{...}
+//          GetExperienceConfigurationArgs{...}
 type GetExperienceConfigurationInput interface {
 	pulumi.Input
 
@@ -6999,7 +6999,7 @@ func (i GetExperienceConfigurationArgs) ToGetExperienceConfigurationOutputWithCo
 // GetExperienceConfigurationArrayInput is an input type that accepts GetExperienceConfigurationArray and GetExperienceConfigurationArrayOutput values.
 // You can construct a concrete instance of `GetExperienceConfigurationArrayInput` via:
 //
-//	GetExperienceConfigurationArray{ GetExperienceConfigurationArgs{...} }
+//          GetExperienceConfigurationArray{ GetExperienceConfigurationArgs{...} }
 type GetExperienceConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -7081,7 +7081,7 @@ type GetExperienceConfigurationContentSourceConfiguration struct {
 // GetExperienceConfigurationContentSourceConfigurationInput is an input type that accepts GetExperienceConfigurationContentSourceConfigurationArgs and GetExperienceConfigurationContentSourceConfigurationOutput values.
 // You can construct a concrete instance of `GetExperienceConfigurationContentSourceConfigurationInput` via:
 //
-//	GetExperienceConfigurationContentSourceConfigurationArgs{...}
+//          GetExperienceConfigurationContentSourceConfigurationArgs{...}
 type GetExperienceConfigurationContentSourceConfigurationInput interface {
 	pulumi.Input
 
@@ -7113,7 +7113,7 @@ func (i GetExperienceConfigurationContentSourceConfigurationArgs) ToGetExperienc
 // GetExperienceConfigurationContentSourceConfigurationArrayInput is an input type that accepts GetExperienceConfigurationContentSourceConfigurationArray and GetExperienceConfigurationContentSourceConfigurationArrayOutput values.
 // You can construct a concrete instance of `GetExperienceConfigurationContentSourceConfigurationArrayInput` via:
 //
-//	GetExperienceConfigurationContentSourceConfigurationArray{ GetExperienceConfigurationContentSourceConfigurationArgs{...} }
+//          GetExperienceConfigurationContentSourceConfigurationArray{ GetExperienceConfigurationContentSourceConfigurationArgs{...} }
 type GetExperienceConfigurationContentSourceConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -7192,7 +7192,7 @@ type GetExperienceConfigurationUserIdentityConfiguration struct {
 // GetExperienceConfigurationUserIdentityConfigurationInput is an input type that accepts GetExperienceConfigurationUserIdentityConfigurationArgs and GetExperienceConfigurationUserIdentityConfigurationOutput values.
 // You can construct a concrete instance of `GetExperienceConfigurationUserIdentityConfigurationInput` via:
 //
-//	GetExperienceConfigurationUserIdentityConfigurationArgs{...}
+//          GetExperienceConfigurationUserIdentityConfigurationArgs{...}
 type GetExperienceConfigurationUserIdentityConfigurationInput interface {
 	pulumi.Input
 
@@ -7220,7 +7220,7 @@ func (i GetExperienceConfigurationUserIdentityConfigurationArgs) ToGetExperience
 // GetExperienceConfigurationUserIdentityConfigurationArrayInput is an input type that accepts GetExperienceConfigurationUserIdentityConfigurationArray and GetExperienceConfigurationUserIdentityConfigurationArrayOutput values.
 // You can construct a concrete instance of `GetExperienceConfigurationUserIdentityConfigurationArrayInput` via:
 //
-//	GetExperienceConfigurationUserIdentityConfigurationArray{ GetExperienceConfigurationUserIdentityConfigurationArgs{...} }
+//          GetExperienceConfigurationUserIdentityConfigurationArray{ GetExperienceConfigurationUserIdentityConfigurationArgs{...} }
 type GetExperienceConfigurationUserIdentityConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -7291,7 +7291,7 @@ type GetExperienceEndpoint struct {
 // GetExperienceEndpointInput is an input type that accepts GetExperienceEndpointArgs and GetExperienceEndpointOutput values.
 // You can construct a concrete instance of `GetExperienceEndpointInput` via:
 //
-//	GetExperienceEndpointArgs{...}
+//          GetExperienceEndpointArgs{...}
 type GetExperienceEndpointInput interface {
 	pulumi.Input
 
@@ -7321,7 +7321,7 @@ func (i GetExperienceEndpointArgs) ToGetExperienceEndpointOutputWithContext(ctx 
 // GetExperienceEndpointArrayInput is an input type that accepts GetExperienceEndpointArray and GetExperienceEndpointArrayOutput values.
 // You can construct a concrete instance of `GetExperienceEndpointArrayInput` via:
 //
-//	GetExperienceEndpointArray{ GetExperienceEndpointArgs{...} }
+//          GetExperienceEndpointArray{ GetExperienceEndpointArgs{...} }
 type GetExperienceEndpointArrayInput interface {
 	pulumi.Input
 
@@ -7397,7 +7397,7 @@ type GetFaqS3Path struct {
 // GetFaqS3PathInput is an input type that accepts GetFaqS3PathArgs and GetFaqS3PathOutput values.
 // You can construct a concrete instance of `GetFaqS3PathInput` via:
 //
-//	GetFaqS3PathArgs{...}
+//          GetFaqS3PathArgs{...}
 type GetFaqS3PathInput interface {
 	pulumi.Input
 
@@ -7427,7 +7427,7 @@ func (i GetFaqS3PathArgs) ToGetFaqS3PathOutputWithContext(ctx context.Context) G
 // GetFaqS3PathArrayInput is an input type that accepts GetFaqS3PathArray and GetFaqS3PathArrayOutput values.
 // You can construct a concrete instance of `GetFaqS3PathArrayInput` via:
 //
-//	GetFaqS3PathArray{ GetFaqS3PathArgs{...} }
+//          GetFaqS3PathArray{ GetFaqS3PathArgs{...} }
 type GetFaqS3PathArrayInput interface {
 	pulumi.Input
 
@@ -7503,7 +7503,7 @@ type GetIndexCapacityUnit struct {
 // GetIndexCapacityUnitInput is an input type that accepts GetIndexCapacityUnitArgs and GetIndexCapacityUnitOutput values.
 // You can construct a concrete instance of `GetIndexCapacityUnitInput` via:
 //
-//	GetIndexCapacityUnitArgs{...}
+//          GetIndexCapacityUnitArgs{...}
 type GetIndexCapacityUnitInput interface {
 	pulumi.Input
 
@@ -7533,7 +7533,7 @@ func (i GetIndexCapacityUnitArgs) ToGetIndexCapacityUnitOutputWithContext(ctx co
 // GetIndexCapacityUnitArrayInput is an input type that accepts GetIndexCapacityUnitArray and GetIndexCapacityUnitArrayOutput values.
 // You can construct a concrete instance of `GetIndexCapacityUnitArrayInput` via:
 //
-//	GetIndexCapacityUnitArray{ GetIndexCapacityUnitArgs{...} }
+//          GetIndexCapacityUnitArray{ GetIndexCapacityUnitArgs{...} }
 type GetIndexCapacityUnitArrayInput interface {
 	pulumi.Input
 
@@ -7613,7 +7613,7 @@ type GetIndexDocumentMetadataConfigurationUpdate struct {
 // GetIndexDocumentMetadataConfigurationUpdateInput is an input type that accepts GetIndexDocumentMetadataConfigurationUpdateArgs and GetIndexDocumentMetadataConfigurationUpdateOutput values.
 // You can construct a concrete instance of `GetIndexDocumentMetadataConfigurationUpdateInput` via:
 //
-//	GetIndexDocumentMetadataConfigurationUpdateArgs{...}
+//          GetIndexDocumentMetadataConfigurationUpdateArgs{...}
 type GetIndexDocumentMetadataConfigurationUpdateInput interface {
 	pulumi.Input
 
@@ -7647,7 +7647,7 @@ func (i GetIndexDocumentMetadataConfigurationUpdateArgs) ToGetIndexDocumentMetad
 // GetIndexDocumentMetadataConfigurationUpdateArrayInput is an input type that accepts GetIndexDocumentMetadataConfigurationUpdateArray and GetIndexDocumentMetadataConfigurationUpdateArrayOutput values.
 // You can construct a concrete instance of `GetIndexDocumentMetadataConfigurationUpdateArrayInput` via:
 //
-//	GetIndexDocumentMetadataConfigurationUpdateArray{ GetIndexDocumentMetadataConfigurationUpdateArgs{...} }
+//          GetIndexDocumentMetadataConfigurationUpdateArray{ GetIndexDocumentMetadataConfigurationUpdateArgs{...} }
 type GetIndexDocumentMetadataConfigurationUpdateArrayInput interface {
 	pulumi.Input
 
@@ -7743,7 +7743,7 @@ type GetIndexDocumentMetadataConfigurationUpdateRelevance struct {
 // GetIndexDocumentMetadataConfigurationUpdateRelevanceInput is an input type that accepts GetIndexDocumentMetadataConfigurationUpdateRelevanceArgs and GetIndexDocumentMetadataConfigurationUpdateRelevanceOutput values.
 // You can construct a concrete instance of `GetIndexDocumentMetadataConfigurationUpdateRelevanceInput` via:
 //
-//	GetIndexDocumentMetadataConfigurationUpdateRelevanceArgs{...}
+//          GetIndexDocumentMetadataConfigurationUpdateRelevanceArgs{...}
 type GetIndexDocumentMetadataConfigurationUpdateRelevanceInput interface {
 	pulumi.Input
 
@@ -7779,7 +7779,7 @@ func (i GetIndexDocumentMetadataConfigurationUpdateRelevanceArgs) ToGetIndexDocu
 // GetIndexDocumentMetadataConfigurationUpdateRelevanceArrayInput is an input type that accepts GetIndexDocumentMetadataConfigurationUpdateRelevanceArray and GetIndexDocumentMetadataConfigurationUpdateRelevanceArrayOutput values.
 // You can construct a concrete instance of `GetIndexDocumentMetadataConfigurationUpdateRelevanceArrayInput` via:
 //
-//	GetIndexDocumentMetadataConfigurationUpdateRelevanceArray{ GetIndexDocumentMetadataConfigurationUpdateRelevanceArgs{...} }
+//          GetIndexDocumentMetadataConfigurationUpdateRelevanceArray{ GetIndexDocumentMetadataConfigurationUpdateRelevanceArgs{...} }
 type GetIndexDocumentMetadataConfigurationUpdateRelevanceArrayInput interface {
 	pulumi.Input
 
@@ -7876,7 +7876,7 @@ type GetIndexDocumentMetadataConfigurationUpdateSearch struct {
 // GetIndexDocumentMetadataConfigurationUpdateSearchInput is an input type that accepts GetIndexDocumentMetadataConfigurationUpdateSearchArgs and GetIndexDocumentMetadataConfigurationUpdateSearchOutput values.
 // You can construct a concrete instance of `GetIndexDocumentMetadataConfigurationUpdateSearchInput` via:
 //
-//	GetIndexDocumentMetadataConfigurationUpdateSearchArgs{...}
+//          GetIndexDocumentMetadataConfigurationUpdateSearchArgs{...}
 type GetIndexDocumentMetadataConfigurationUpdateSearchInput interface {
 	pulumi.Input
 
@@ -7910,7 +7910,7 @@ func (i GetIndexDocumentMetadataConfigurationUpdateSearchArgs) ToGetIndexDocumen
 // GetIndexDocumentMetadataConfigurationUpdateSearchArrayInput is an input type that accepts GetIndexDocumentMetadataConfigurationUpdateSearchArray and GetIndexDocumentMetadataConfigurationUpdateSearchArrayOutput values.
 // You can construct a concrete instance of `GetIndexDocumentMetadataConfigurationUpdateSearchArrayInput` via:
 //
-//	GetIndexDocumentMetadataConfigurationUpdateSearchArray{ GetIndexDocumentMetadataConfigurationUpdateSearchArgs{...} }
+//          GetIndexDocumentMetadataConfigurationUpdateSearchArray{ GetIndexDocumentMetadataConfigurationUpdateSearchArgs{...} }
 type GetIndexDocumentMetadataConfigurationUpdateSearchArrayInput interface {
 	pulumi.Input
 
@@ -7996,7 +7996,7 @@ type GetIndexIndexStatistic struct {
 // GetIndexIndexStatisticInput is an input type that accepts GetIndexIndexStatisticArgs and GetIndexIndexStatisticOutput values.
 // You can construct a concrete instance of `GetIndexIndexStatisticInput` via:
 //
-//	GetIndexIndexStatisticArgs{...}
+//          GetIndexIndexStatisticArgs{...}
 type GetIndexIndexStatisticInput interface {
 	pulumi.Input
 
@@ -8026,7 +8026,7 @@ func (i GetIndexIndexStatisticArgs) ToGetIndexIndexStatisticOutputWithContext(ct
 // GetIndexIndexStatisticArrayInput is an input type that accepts GetIndexIndexStatisticArray and GetIndexIndexStatisticArrayOutput values.
 // You can construct a concrete instance of `GetIndexIndexStatisticArrayInput` via:
 //
-//	GetIndexIndexStatisticArray{ GetIndexIndexStatisticArgs{...} }
+//          GetIndexIndexStatisticArray{ GetIndexIndexStatisticArgs{...} }
 type GetIndexIndexStatisticArrayInput interface {
 	pulumi.Input
 
@@ -8102,7 +8102,7 @@ type GetIndexIndexStatisticFaqStatistic struct {
 // GetIndexIndexStatisticFaqStatisticInput is an input type that accepts GetIndexIndexStatisticFaqStatisticArgs and GetIndexIndexStatisticFaqStatisticOutput values.
 // You can construct a concrete instance of `GetIndexIndexStatisticFaqStatisticInput` via:
 //
-//	GetIndexIndexStatisticFaqStatisticArgs{...}
+//          GetIndexIndexStatisticFaqStatisticArgs{...}
 type GetIndexIndexStatisticFaqStatisticInput interface {
 	pulumi.Input
 
@@ -8130,7 +8130,7 @@ func (i GetIndexIndexStatisticFaqStatisticArgs) ToGetIndexIndexStatisticFaqStati
 // GetIndexIndexStatisticFaqStatisticArrayInput is an input type that accepts GetIndexIndexStatisticFaqStatisticArray and GetIndexIndexStatisticFaqStatisticArrayOutput values.
 // You can construct a concrete instance of `GetIndexIndexStatisticFaqStatisticArrayInput` via:
 //
-//	GetIndexIndexStatisticFaqStatisticArray{ GetIndexIndexStatisticFaqStatisticArgs{...} }
+//          GetIndexIndexStatisticFaqStatisticArray{ GetIndexIndexStatisticFaqStatisticArgs{...} }
 type GetIndexIndexStatisticFaqStatisticArrayInput interface {
 	pulumi.Input
 
@@ -8201,7 +8201,7 @@ type GetIndexIndexStatisticTextDocumentStatistic struct {
 // GetIndexIndexStatisticTextDocumentStatisticInput is an input type that accepts GetIndexIndexStatisticTextDocumentStatisticArgs and GetIndexIndexStatisticTextDocumentStatisticOutput values.
 // You can construct a concrete instance of `GetIndexIndexStatisticTextDocumentStatisticInput` via:
 //
-//	GetIndexIndexStatisticTextDocumentStatisticArgs{...}
+//          GetIndexIndexStatisticTextDocumentStatisticArgs{...}
 type GetIndexIndexStatisticTextDocumentStatisticInput interface {
 	pulumi.Input
 
@@ -8231,7 +8231,7 @@ func (i GetIndexIndexStatisticTextDocumentStatisticArgs) ToGetIndexIndexStatisti
 // GetIndexIndexStatisticTextDocumentStatisticArrayInput is an input type that accepts GetIndexIndexStatisticTextDocumentStatisticArray and GetIndexIndexStatisticTextDocumentStatisticArrayOutput values.
 // You can construct a concrete instance of `GetIndexIndexStatisticTextDocumentStatisticArrayInput` via:
 //
-//	GetIndexIndexStatisticTextDocumentStatisticArray{ GetIndexIndexStatisticTextDocumentStatisticArgs{...} }
+//          GetIndexIndexStatisticTextDocumentStatisticArray{ GetIndexIndexStatisticTextDocumentStatisticArgs{...} }
 type GetIndexIndexStatisticTextDocumentStatisticArrayInput interface {
 	pulumi.Input
 
@@ -8305,7 +8305,7 @@ type GetIndexServerSideEncryptionConfiguration struct {
 // GetIndexServerSideEncryptionConfigurationInput is an input type that accepts GetIndexServerSideEncryptionConfigurationArgs and GetIndexServerSideEncryptionConfigurationOutput values.
 // You can construct a concrete instance of `GetIndexServerSideEncryptionConfigurationInput` via:
 //
-//	GetIndexServerSideEncryptionConfigurationArgs{...}
+//          GetIndexServerSideEncryptionConfigurationArgs{...}
 type GetIndexServerSideEncryptionConfigurationInput interface {
 	pulumi.Input
 
@@ -8333,7 +8333,7 @@ func (i GetIndexServerSideEncryptionConfigurationArgs) ToGetIndexServerSideEncry
 // GetIndexServerSideEncryptionConfigurationArrayInput is an input type that accepts GetIndexServerSideEncryptionConfigurationArray and GetIndexServerSideEncryptionConfigurationArrayOutput values.
 // You can construct a concrete instance of `GetIndexServerSideEncryptionConfigurationArrayInput` via:
 //
-//	GetIndexServerSideEncryptionConfigurationArray{ GetIndexServerSideEncryptionConfigurationArgs{...} }
+//          GetIndexServerSideEncryptionConfigurationArray{ GetIndexServerSideEncryptionConfigurationArgs{...} }
 type GetIndexServerSideEncryptionConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -8402,7 +8402,7 @@ type GetIndexUserGroupResolutionConfiguration struct {
 // GetIndexUserGroupResolutionConfigurationInput is an input type that accepts GetIndexUserGroupResolutionConfigurationArgs and GetIndexUserGroupResolutionConfigurationOutput values.
 // You can construct a concrete instance of `GetIndexUserGroupResolutionConfigurationInput` via:
 //
-//	GetIndexUserGroupResolutionConfigurationArgs{...}
+//          GetIndexUserGroupResolutionConfigurationArgs{...}
 type GetIndexUserGroupResolutionConfigurationInput interface {
 	pulumi.Input
 
@@ -8430,7 +8430,7 @@ func (i GetIndexUserGroupResolutionConfigurationArgs) ToGetIndexUserGroupResolut
 // GetIndexUserGroupResolutionConfigurationArrayInput is an input type that accepts GetIndexUserGroupResolutionConfigurationArray and GetIndexUserGroupResolutionConfigurationArrayOutput values.
 // You can construct a concrete instance of `GetIndexUserGroupResolutionConfigurationArrayInput` via:
 //
-//	GetIndexUserGroupResolutionConfigurationArray{ GetIndexUserGroupResolutionConfigurationArgs{...} }
+//          GetIndexUserGroupResolutionConfigurationArray{ GetIndexUserGroupResolutionConfigurationArgs{...} }
 type GetIndexUserGroupResolutionConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -8501,7 +8501,7 @@ type GetIndexUserTokenConfiguration struct {
 // GetIndexUserTokenConfigurationInput is an input type that accepts GetIndexUserTokenConfigurationArgs and GetIndexUserTokenConfigurationOutput values.
 // You can construct a concrete instance of `GetIndexUserTokenConfigurationInput` via:
 //
-//	GetIndexUserTokenConfigurationArgs{...}
+//          GetIndexUserTokenConfigurationArgs{...}
 type GetIndexUserTokenConfigurationInput interface {
 	pulumi.Input
 
@@ -8531,7 +8531,7 @@ func (i GetIndexUserTokenConfigurationArgs) ToGetIndexUserTokenConfigurationOutp
 // GetIndexUserTokenConfigurationArrayInput is an input type that accepts GetIndexUserTokenConfigurationArray and GetIndexUserTokenConfigurationArrayOutput values.
 // You can construct a concrete instance of `GetIndexUserTokenConfigurationArrayInput` via:
 //
-//	GetIndexUserTokenConfigurationArray{ GetIndexUserTokenConfigurationArgs{...} }
+//          GetIndexUserTokenConfigurationArray{ GetIndexUserTokenConfigurationArgs{...} }
 type GetIndexUserTokenConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -8611,7 +8611,7 @@ type GetIndexUserTokenConfigurationJsonTokenTypeConfiguration struct {
 // GetIndexUserTokenConfigurationJsonTokenTypeConfigurationInput is an input type that accepts GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArgs and GetIndexUserTokenConfigurationJsonTokenTypeConfigurationOutput values.
 // You can construct a concrete instance of `GetIndexUserTokenConfigurationJsonTokenTypeConfigurationInput` via:
 //
-//	GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArgs{...}
+//          GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArgs{...}
 type GetIndexUserTokenConfigurationJsonTokenTypeConfigurationInput interface {
 	pulumi.Input
 
@@ -8641,7 +8641,7 @@ func (i GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArgs) ToGetIndex
 // GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArrayInput is an input type that accepts GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArray and GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArrayOutput values.
 // You can construct a concrete instance of `GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArrayInput` via:
 //
-//	GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArray{ GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArgs{...} }
+//          GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArray{ GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArgs{...} }
 type GetIndexUserTokenConfigurationJsonTokenTypeConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -8729,7 +8729,7 @@ type GetIndexUserTokenConfigurationJwtTokenTypeConfiguration struct {
 // GetIndexUserTokenConfigurationJwtTokenTypeConfigurationInput is an input type that accepts GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArgs and GetIndexUserTokenConfigurationJwtTokenTypeConfigurationOutput values.
 // You can construct a concrete instance of `GetIndexUserTokenConfigurationJwtTokenTypeConfigurationInput` via:
 //
-//	GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArgs{...}
+//          GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArgs{...}
 type GetIndexUserTokenConfigurationJwtTokenTypeConfigurationInput interface {
 	pulumi.Input
 
@@ -8769,7 +8769,7 @@ func (i GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArgs) ToGetIndexU
 // GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArrayInput is an input type that accepts GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArray and GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArrayOutput values.
 // You can construct a concrete instance of `GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArrayInput` via:
 //
-//	GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArray{ GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArgs{...} }
+//          GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArray{ GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArgs{...} }
 type GetIndexUserTokenConfigurationJwtTokenTypeConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -8872,7 +8872,7 @@ type GetQuerySuggestionsBlockListSourceS3Path struct {
 // GetQuerySuggestionsBlockListSourceS3PathInput is an input type that accepts GetQuerySuggestionsBlockListSourceS3PathArgs and GetQuerySuggestionsBlockListSourceS3PathOutput values.
 // You can construct a concrete instance of `GetQuerySuggestionsBlockListSourceS3PathInput` via:
 //
-//	GetQuerySuggestionsBlockListSourceS3PathArgs{...}
+//          GetQuerySuggestionsBlockListSourceS3PathArgs{...}
 type GetQuerySuggestionsBlockListSourceS3PathInput interface {
 	pulumi.Input
 
@@ -8902,7 +8902,7 @@ func (i GetQuerySuggestionsBlockListSourceS3PathArgs) ToGetQuerySuggestionsBlock
 // GetQuerySuggestionsBlockListSourceS3PathArrayInput is an input type that accepts GetQuerySuggestionsBlockListSourceS3PathArray and GetQuerySuggestionsBlockListSourceS3PathArrayOutput values.
 // You can construct a concrete instance of `GetQuerySuggestionsBlockListSourceS3PathArrayInput` via:
 //
-//	GetQuerySuggestionsBlockListSourceS3PathArray{ GetQuerySuggestionsBlockListSourceS3PathArgs{...} }
+//          GetQuerySuggestionsBlockListSourceS3PathArray{ GetQuerySuggestionsBlockListSourceS3PathArgs{...} }
 type GetQuerySuggestionsBlockListSourceS3PathArrayInput interface {
 	pulumi.Input
 
@@ -8978,7 +8978,7 @@ type GetThesaurusSourceS3Path struct {
 // GetThesaurusSourceS3PathInput is an input type that accepts GetThesaurusSourceS3PathArgs and GetThesaurusSourceS3PathOutput values.
 // You can construct a concrete instance of `GetThesaurusSourceS3PathInput` via:
 //
-//	GetThesaurusSourceS3PathArgs{...}
+//          GetThesaurusSourceS3PathArgs{...}
 type GetThesaurusSourceS3PathInput interface {
 	pulumi.Input
 
@@ -9008,7 +9008,7 @@ func (i GetThesaurusSourceS3PathArgs) ToGetThesaurusSourceS3PathOutputWithContex
 // GetThesaurusSourceS3PathArrayInput is an input type that accepts GetThesaurusSourceS3PathArray and GetThesaurusSourceS3PathArrayOutput values.
 // You can construct a concrete instance of `GetThesaurusSourceS3PathArrayInput` via:
 //
-//	GetThesaurusSourceS3PathArray{ GetThesaurusSourceS3PathArgs{...} }
+//          GetThesaurusSourceS3PathArray{ GetThesaurusSourceS3PathArgs{...} }
 type GetThesaurusSourceS3PathArrayInput interface {
 	pulumi.Input
 

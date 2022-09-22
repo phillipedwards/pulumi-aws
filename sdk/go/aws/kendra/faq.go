@@ -18,9 +18,7 @@ import (
 // `aws_kendra_faq` can be imported using the unique identifiers of the FAQ and index separated by a slash (`/`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:kendra/faq:Faq example faq-123456780/idx-8012925589
-//
+//  $ pulumi import aws:kendra/faq:Faq example faq-123456780/idx-8012925589
 // ```
 type Faq struct {
 	pulumi.CustomResourceState
@@ -224,7 +222,7 @@ func (i *Faq) ToFaqOutputWithContext(ctx context.Context) FaqOutput {
 // FaqArrayInput is an input type that accepts FaqArray and FaqArrayOutput values.
 // You can construct a concrete instance of `FaqArrayInput` via:
 //
-//	FaqArray{ FaqArgs{...} }
+//          FaqArray{ FaqArgs{...} }
 type FaqArrayInput interface {
 	pulumi.Input
 
@@ -249,7 +247,7 @@ func (i FaqArray) ToFaqArrayOutputWithContext(ctx context.Context) FaqArrayOutpu
 // FaqMapInput is an input type that accepts FaqMap and FaqMapOutput values.
 // You can construct a concrete instance of `FaqMapInput` via:
 //
-//	FaqMap{ "key": FaqArgs{...} }
+//          FaqMap{ "key": FaqArgs{...} }
 type FaqMapInput interface {
 	pulumi.Input
 

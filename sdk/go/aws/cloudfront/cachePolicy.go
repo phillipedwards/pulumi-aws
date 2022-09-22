@@ -19,53 +19,50 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudfront"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudfront.NewCachePolicy(ctx, "example", &cloudfront.CachePolicyArgs{
-//				Comment:    pulumi.String("test comment"),
-//				DefaultTtl: pulumi.Int(50),
-//				MaxTtl:     pulumi.Int(100),
-//				MinTtl:     pulumi.Int(1),
-//				ParametersInCacheKeyAndForwardedToOrigin: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginArgs{
-//					CookiesConfig: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs{
-//						CookieBehavior: pulumi.String("whitelist"),
-//						Cookies: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs{
-//							Items: pulumi.StringArray{
-//								pulumi.String("example"),
-//							},
-//						},
-//					},
-//					HeadersConfig: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs{
-//						HeaderBehavior: pulumi.String("whitelist"),
-//						Headers: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersArgs{
-//							Items: pulumi.StringArray{
-//								pulumi.String("example"),
-//							},
-//						},
-//					},
-//					QueryStringsConfig: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs{
-//						QueryStringBehavior: pulumi.String("whitelist"),
-//						QueryStrings: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs{
-//							Items: pulumi.StringArray{
-//								pulumi.String("example"),
-//							},
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudfront.NewCachePolicy(ctx, "example", &cloudfront.CachePolicyArgs{
+// 			Comment:    pulumi.String("test comment"),
+// 			DefaultTtl: pulumi.Int(50),
+// 			MaxTtl:     pulumi.Int(100),
+// 			MinTtl:     pulumi.Int(1),
+// 			ParametersInCacheKeyAndForwardedToOrigin: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginArgs{
+// 				CookiesConfig: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs{
+// 					CookieBehavior: pulumi.String("whitelist"),
+// 					Cookies: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs{
+// 						Items: pulumi.StringArray{
+// 							pulumi.String("example"),
+// 						},
+// 					},
+// 				},
+// 				HeadersConfig: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs{
+// 					HeaderBehavior: pulumi.String("whitelist"),
+// 					Headers: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeadersArgs{
+// 						Items: pulumi.StringArray{
+// 							pulumi.String("example"),
+// 						},
+// 					},
+// 				},
+// 				QueryStringsConfig: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs{
+// 					QueryStringBehavior: pulumi.String("whitelist"),
+// 					QueryStrings: &cloudfront.CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStringsArgs{
+// 						Items: pulumi.StringArray{
+// 							pulumi.String("example"),
+// 						},
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -73,9 +70,7 @@ import (
 // Cloudfront Cache Policies can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudfront/cachePolicy:CachePolicy policy 658327ea-f89d-4fab-a63d-7e88639e58f6
-//
+//  $ pulumi import aws:cloudfront/cachePolicy:CachePolicy policy 658327ea-f89d-4fab-a63d-7e88639e58f6
 // ```
 type CachePolicy struct {
 	pulumi.CustomResourceState
@@ -222,7 +217,7 @@ func (i *CachePolicy) ToCachePolicyOutputWithContext(ctx context.Context) CacheP
 // CachePolicyArrayInput is an input type that accepts CachePolicyArray and CachePolicyArrayOutput values.
 // You can construct a concrete instance of `CachePolicyArrayInput` via:
 //
-//	CachePolicyArray{ CachePolicyArgs{...} }
+//          CachePolicyArray{ CachePolicyArgs{...} }
 type CachePolicyArrayInput interface {
 	pulumi.Input
 
@@ -247,7 +242,7 @@ func (i CachePolicyArray) ToCachePolicyArrayOutputWithContext(ctx context.Contex
 // CachePolicyMapInput is an input type that accepts CachePolicyMap and CachePolicyMapOutput values.
 // You can construct a concrete instance of `CachePolicyMapInput` via:
 //
-//	CachePolicyMap{ "key": CachePolicyArgs{...} }
+//          CachePolicyMap{ "key": CachePolicyArgs{...} }
 type CachePolicyMapInput interface {
 	pulumi.Input
 

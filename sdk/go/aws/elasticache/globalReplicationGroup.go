@@ -16,9 +16,7 @@ import (
 // ElastiCache Global Replication Groups can be imported using the `global_replication_group_id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:elasticache/globalReplicationGroup:GlobalReplicationGroup my_global_replication_group okuqm-global-replication-group-1
-//
+//  $ pulumi import aws:elasticache/globalReplicationGroup:GlobalReplicationGroup my_global_replication_group okuqm-global-replication-group-1
 // ```
 type GlobalReplicationGroup struct {
 	pulumi.CustomResourceState
@@ -251,7 +249,7 @@ func (i *GlobalReplicationGroup) ToGlobalReplicationGroupOutputWithContext(ctx c
 // GlobalReplicationGroupArrayInput is an input type that accepts GlobalReplicationGroupArray and GlobalReplicationGroupArrayOutput values.
 // You can construct a concrete instance of `GlobalReplicationGroupArrayInput` via:
 //
-//	GlobalReplicationGroupArray{ GlobalReplicationGroupArgs{...} }
+//          GlobalReplicationGroupArray{ GlobalReplicationGroupArgs{...} }
 type GlobalReplicationGroupArrayInput interface {
 	pulumi.Input
 
@@ -276,7 +274,7 @@ func (i GlobalReplicationGroupArray) ToGlobalReplicationGroupArrayOutputWithCont
 // GlobalReplicationGroupMapInput is an input type that accepts GlobalReplicationGroupMap and GlobalReplicationGroupMapOutput values.
 // You can construct a concrete instance of `GlobalReplicationGroupMapInput` via:
 //
-//	GlobalReplicationGroupMap{ "key": GlobalReplicationGroupArgs{...} }
+//          GlobalReplicationGroupMap{ "key": GlobalReplicationGroupArgs{...} }
 type GlobalReplicationGroupMapInput interface {
 	pulumi.Input
 

@@ -18,22 +18,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sfn"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sfn"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sfn.NewActivity(ctx, "sfnActivity", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sfn.NewActivity(ctx, "sfnActivity", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -41,9 +38,7 @@ import (
 // Activities can be imported using the `arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sfn/activity:Activity foo arn:aws:states:eu-west-1:123456789098:activity:bar
-//
+//  $ pulumi import aws:sfn/activity:Activity foo arn:aws:states:eu-west-1:123456789098:activity:bar
 // ```
 type Activity struct {
 	pulumi.CustomResourceState
@@ -153,7 +148,7 @@ func (i *Activity) ToActivityOutputWithContext(ctx context.Context) ActivityOutp
 // ActivityArrayInput is an input type that accepts ActivityArray and ActivityArrayOutput values.
 // You can construct a concrete instance of `ActivityArrayInput` via:
 //
-//	ActivityArray{ ActivityArgs{...} }
+//          ActivityArray{ ActivityArgs{...} }
 type ActivityArrayInput interface {
 	pulumi.Input
 
@@ -178,7 +173,7 @@ func (i ActivityArray) ToActivityArrayOutputWithContext(ctx context.Context) Act
 // ActivityMapInput is an input type that accepts ActivityMap and ActivityMapOutput values.
 // You can construct a concrete instance of `ActivityMapInput` via:
 //
-//	ActivityMap{ "key": ActivityArgs{...} }
+//          ActivityMap{ "key": ActivityArgs{...} }
 type ActivityMapInput interface {
 	pulumi.Input
 

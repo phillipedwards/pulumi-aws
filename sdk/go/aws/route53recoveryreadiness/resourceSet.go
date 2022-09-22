@@ -19,30 +19,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53recoveryreadiness"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53recoveryreadiness"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53recoveryreadiness.NewResourceSet(ctx, "example", &route53recoveryreadiness.ResourceSetArgs{
-//				ResourceSetName: pulumi.Any(my_cw_alarm_set),
-//				ResourceSetType: pulumi.String("AWS::CloudWatch::Alarm"),
-//				Resources: route53recoveryreadiness.ResourceSetResourceArray{
-//					&route53recoveryreadiness.ResourceSetResourceArgs{
-//						ResourceArn: pulumi.Any(aws_cloudwatch_metric_alarm.Example.Arn),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53recoveryreadiness.NewResourceSet(ctx, "example", &route53recoveryreadiness.ResourceSetArgs{
+// 			ResourceSetName: pulumi.Any(my_cw_alarm_set),
+// 			ResourceSetType: pulumi.String("AWS::CloudWatch::Alarm"),
+// 			Resources: route53recoveryreadiness.ResourceSetResourceArray{
+// 				&route53recoveryreadiness.ResourceSetResourceArgs{
+// 					ResourceArn: pulumi.Any(aws_cloudwatch_metric_alarm.Example.Arn),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -50,9 +47,7 @@ import (
 // Route53 Recovery Readiness resource set name can be imported via the resource set name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:route53recoveryreadiness/resourceSet:ResourceSet my-cw-alarm-set
-//
+//  $ pulumi import aws:route53recoveryreadiness/resourceSet:ResourceSet my-cw-alarm-set
 // ```
 type ResourceSet struct {
 	pulumi.CustomResourceState
@@ -191,7 +186,7 @@ func (i *ResourceSet) ToResourceSetOutputWithContext(ctx context.Context) Resour
 // ResourceSetArrayInput is an input type that accepts ResourceSetArray and ResourceSetArrayOutput values.
 // You can construct a concrete instance of `ResourceSetArrayInput` via:
 //
-//	ResourceSetArray{ ResourceSetArgs{...} }
+//          ResourceSetArray{ ResourceSetArgs{...} }
 type ResourceSetArrayInput interface {
 	pulumi.Input
 
@@ -216,7 +211,7 @@ func (i ResourceSetArray) ToResourceSetArrayOutputWithContext(ctx context.Contex
 // ResourceSetMapInput is an input type that accepts ResourceSetMap and ResourceSetMapOutput values.
 // You can construct a concrete instance of `ResourceSetMapInput` via:
 //
-//	ResourceSetMap{ "key": ResourceSetArgs{...} }
+//          ResourceSetMap{ "key": ResourceSetArgs{...} }
 type ResourceSetMapInput interface {
 	pulumi.Input
 

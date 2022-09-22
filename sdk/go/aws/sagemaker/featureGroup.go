@@ -21,36 +21,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sagemaker.NewFeatureGroup(ctx, "example", &sagemaker.FeatureGroupArgs{
-//				FeatureGroupName:            pulumi.String("example"),
-//				RecordIdentifierFeatureName: pulumi.String("example"),
-//				EventTimeFeatureName:        pulumi.String("example"),
-//				RoleArn:                     pulumi.Any(aws_iam_role.Test.Arn),
-//				FeatureDefinitions: sagemaker.FeatureGroupFeatureDefinitionArray{
-//					&sagemaker.FeatureGroupFeatureDefinitionArgs{
-//						FeatureName: pulumi.String("example"),
-//						FeatureType: pulumi.String("String"),
-//					},
-//				},
-//				OnlineStoreConfig: &sagemaker.FeatureGroupOnlineStoreConfigArgs{
-//					EnableOnlineStore: pulumi.Bool(true),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sagemaker.NewFeatureGroup(ctx, "example", &sagemaker.FeatureGroupArgs{
+// 			FeatureGroupName:            pulumi.String("example"),
+// 			RecordIdentifierFeatureName: pulumi.String("example"),
+// 			EventTimeFeatureName:        pulumi.String("example"),
+// 			RoleArn:                     pulumi.Any(aws_iam_role.Test.Arn),
+// 			FeatureDefinitions: sagemaker.FeatureGroupFeatureDefinitionArray{
+// 				&sagemaker.FeatureGroupFeatureDefinitionArgs{
+// 					FeatureName: pulumi.String("example"),
+// 					FeatureType: pulumi.String("String"),
+// 				},
+// 			},
+// 			OnlineStoreConfig: &sagemaker.FeatureGroupOnlineStoreConfigArgs{
+// 				EnableOnlineStore: pulumi.Bool(true),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -58,9 +55,7 @@ import (
 // Feature Groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/featureGroup:FeatureGroup test_feature_group feature_group-foo
-//
+//  $ pulumi import aws:sagemaker/featureGroup:FeatureGroup test_feature_group feature_group-foo
 // ```
 type FeatureGroup struct {
 	pulumi.CustomResourceState
@@ -255,7 +250,7 @@ func (i *FeatureGroup) ToFeatureGroupOutputWithContext(ctx context.Context) Feat
 // FeatureGroupArrayInput is an input type that accepts FeatureGroupArray and FeatureGroupArrayOutput values.
 // You can construct a concrete instance of `FeatureGroupArrayInput` via:
 //
-//	FeatureGroupArray{ FeatureGroupArgs{...} }
+//          FeatureGroupArray{ FeatureGroupArgs{...} }
 type FeatureGroupArrayInput interface {
 	pulumi.Input
 
@@ -280,7 +275,7 @@ func (i FeatureGroupArray) ToFeatureGroupArrayOutputWithContext(ctx context.Cont
 // FeatureGroupMapInput is an input type that accepts FeatureGroupMap and FeatureGroupMapOutput values.
 // You can construct a concrete instance of `FeatureGroupMapInput` via:
 //
-//	FeatureGroupMap{ "key": FeatureGroupArgs{...} }
+//          FeatureGroupMap{ "key": FeatureGroupArgs{...} }
 type FeatureGroupMapInput interface {
 	pulumi.Input
 

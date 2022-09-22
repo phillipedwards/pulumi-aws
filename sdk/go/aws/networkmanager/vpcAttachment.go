@@ -18,28 +18,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/networkmanager"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/networkmanager"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := networkmanager.NewVpcAttachment(ctx, "example", &networkmanager.VpcAttachmentArgs{
-//				SubnetArns: pulumi.StringArray{
-//					pulumi.Any(aws_subnet.Example.Arn),
-//				},
-//				CoreNetworkId: pulumi.Any(awscc_networkmanager_core_network.Example.Id),
-//				VpcArn:        pulumi.Any(aws_vpc.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := networkmanager.NewVpcAttachment(ctx, "example", &networkmanager.VpcAttachmentArgs{
+// 			SubnetArns: pulumi.StringArray{
+// 				pulumi.Any(aws_subnet.Example.Arn),
+// 			},
+// 			CoreNetworkId: pulumi.Any(awscc_networkmanager_core_network.Example.Id),
+// 			VpcArn:        pulumi.Any(aws_vpc.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -47,9 +44,7 @@ import (
 // `aws_networkmanager_vpc_attachment` can be imported using the attachment ID, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:networkmanager/vpcAttachment:VpcAttachment example attachment-0f8fa60d2238d1bd8
-//
+//  $ pulumi import aws:networkmanager/vpcAttachment:VpcAttachment example attachment-0f8fa60d2238d1bd8
 // ```
 type VpcAttachment struct {
 	pulumi.CustomResourceState
@@ -241,7 +236,7 @@ func (i *VpcAttachment) ToVpcAttachmentOutputWithContext(ctx context.Context) Vp
 // VpcAttachmentArrayInput is an input type that accepts VpcAttachmentArray and VpcAttachmentArrayOutput values.
 // You can construct a concrete instance of `VpcAttachmentArrayInput` via:
 //
-//	VpcAttachmentArray{ VpcAttachmentArgs{...} }
+//          VpcAttachmentArray{ VpcAttachmentArgs{...} }
 type VpcAttachmentArrayInput interface {
 	pulumi.Input
 
@@ -266,7 +261,7 @@ func (i VpcAttachmentArray) ToVpcAttachmentArrayOutputWithContext(ctx context.Co
 // VpcAttachmentMapInput is an input type that accepts VpcAttachmentMap and VpcAttachmentMapOutput values.
 // You can construct a concrete instance of `VpcAttachmentMapInput` via:
 //
-//	VpcAttachmentMap{ "key": VpcAttachmentArgs{...} }
+//          VpcAttachmentMap{ "key": VpcAttachmentArgs{...} }
 type VpcAttachmentMapInput interface {
 	pulumi.Input
 

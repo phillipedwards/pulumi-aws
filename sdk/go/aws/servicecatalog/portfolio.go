@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/servicecatalog"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/servicecatalog"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := servicecatalog.NewPortfolio(ctx, "portfolio", &servicecatalog.PortfolioArgs{
-//				Description:  pulumi.String("List of my organizations apps"),
-//				ProviderName: pulumi.String("Brett"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := servicecatalog.NewPortfolio(ctx, "portfolio", &servicecatalog.PortfolioArgs{
+// 			Description:  pulumi.String("List of my organizations apps"),
+// 			ProviderName: pulumi.String("Brett"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // Service Catalog Portfolios can be imported using the `service catalog portfolio id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:servicecatalog/portfolio:Portfolio testfolio port-12344321
-//
+//  $ pulumi import aws:servicecatalog/portfolio:Portfolio testfolio port-12344321
 // ```
 type Portfolio struct {
 	pulumi.CustomResourceState
@@ -180,7 +175,7 @@ func (i *Portfolio) ToPortfolioOutputWithContext(ctx context.Context) PortfolioO
 // PortfolioArrayInput is an input type that accepts PortfolioArray and PortfolioArrayOutput values.
 // You can construct a concrete instance of `PortfolioArrayInput` via:
 //
-//	PortfolioArray{ PortfolioArgs{...} }
+//          PortfolioArray{ PortfolioArgs{...} }
 type PortfolioArrayInput interface {
 	pulumi.Input
 
@@ -205,7 +200,7 @@ func (i PortfolioArray) ToPortfolioArrayOutputWithContext(ctx context.Context) P
 // PortfolioMapInput is an input type that accepts PortfolioMap and PortfolioMapOutput values.
 // You can construct a concrete instance of `PortfolioMapInput` via:
 //
-//	PortfolioMap{ "key": PortfolioArgs{...} }
+//          PortfolioMap{ "key": PortfolioArgs{...} }
 type PortfolioMapInput interface {
 	pulumi.Input
 

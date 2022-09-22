@@ -19,51 +19,48 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			ubuntu, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
-//				MostRecent: pulumi.BoolRef(true),
-//				Filters: []ec2.GetAmiFilter{
-//					ec2.GetAmiFilter{
-//						Name: "name",
-//						Values: []string{
-//							"ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*",
-//						},
-//					},
-//					ec2.GetAmiFilter{
-//						Name: "virtualization-type",
-//						Values: []string{
-//							"hvm",
-//						},
-//					},
-//				},
-//				Owners: []string{
-//					"099720109477",
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
-//				Ami:          pulumi.String(ubuntu.Id),
-//				InstanceType: pulumi.String("t3.micro"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("HelloWorld"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		ubuntu, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
+// 			MostRecent: pulumi.BoolRef(true),
+// 			Filters: []ec2.GetAmiFilter{
+// 				ec2.GetAmiFilter{
+// 					Name: "name",
+// 					Values: []string{
+// 						"ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*",
+// 					},
+// 				},
+// 				ec2.GetAmiFilter{
+// 					Name: "virtualization-type",
+// 					Values: []string{
+// 						"hvm",
+// 					},
+// 				},
+// 			},
+// 			Owners: []string{
+// 				"099720109477",
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ec2.NewInstance(ctx, "web", &ec2.InstanceArgs{
+// 			Ami:          pulumi.String(ubuntu.Id),
+// 			InstanceType: pulumi.String("t3.micro"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("HelloWorld"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Network and credit specification example
 //
@@ -71,66 +68,63 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			myVpc, err := ec2.NewVpc(ctx, "myVpc", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("172.16.0.0/16"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("tf-example"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			mySubnet, err := ec2.NewSubnet(ctx, "mySubnet", &ec2.SubnetArgs{
-//				VpcId:            myVpc.ID(),
-//				CidrBlock:        pulumi.String("172.16.10.0/24"),
-//				AvailabilityZone: pulumi.String("us-west-2a"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("tf-example"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			fooNetworkInterface, err := ec2.NewNetworkInterface(ctx, "fooNetworkInterface", &ec2.NetworkInterfaceArgs{
-//				SubnetId: mySubnet.ID(),
-//				PrivateIps: pulumi.StringArray{
-//					pulumi.String("172.16.10.100"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("primary_network_interface"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ec2.NewInstance(ctx, "fooInstance", &ec2.InstanceArgs{
-//				Ami:          pulumi.String("ami-005e54dee72cc1d00"),
-//				InstanceType: pulumi.String("t2.micro"),
-//				NetworkInterfaces: ec2.InstanceNetworkInterfaceArray{
-//					&ec2.InstanceNetworkInterfaceArgs{
-//						NetworkInterfaceId: fooNetworkInterface.ID(),
-//						DeviceIndex:        pulumi.Int(0),
-//					},
-//				},
-//				CreditSpecification: &ec2.InstanceCreditSpecificationArgs{
-//					CpuCredits: pulumi.String("unlimited"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		myVpc, err := ec2.NewVpc(ctx, "myVpc", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("172.16.0.0/16"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("tf-example"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		mySubnet, err := ec2.NewSubnet(ctx, "mySubnet", &ec2.SubnetArgs{
+// 			VpcId:            myVpc.ID(),
+// 			CidrBlock:        pulumi.String("172.16.10.0/24"),
+// 			AvailabilityZone: pulumi.String("us-west-2a"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("tf-example"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		fooNetworkInterface, err := ec2.NewNetworkInterface(ctx, "fooNetworkInterface", &ec2.NetworkInterfaceArgs{
+// 			SubnetId: mySubnet.ID(),
+// 			PrivateIps: pulumi.StringArray{
+// 				pulumi.String("172.16.10.100"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("primary_network_interface"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ec2.NewInstance(ctx, "fooInstance", &ec2.InstanceArgs{
+// 			Ami:          pulumi.String("ami-005e54dee72cc1d00"),
+// 			InstanceType: pulumi.String("t2.micro"),
+// 			NetworkInterfaces: ec2.InstanceNetworkInterfaceArray{
+// 				&ec2.InstanceNetworkInterfaceArgs{
+// 					NetworkInterfaceId: fooNetworkInterface.ID(),
+// 					DeviceIndex:        pulumi.Int(0),
+// 				},
+// 			},
+// 			CreditSpecification: &ec2.InstanceCreditSpecificationArgs{
+// 				CpuCredits: pulumi.String("unlimited"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Host resource group or Licence Manager registered AMI example
 //
@@ -142,27 +136,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewInstance(ctx, "this", &ec2.InstanceArgs{
-//				Ami:                  pulumi.String("ami-0dcc1e21636832c5d"),
-//				HostResourceGroupArn: pulumi.String("arn:aws:resource-groups:us-west-2:012345678901:group/win-testhost"),
-//				InstanceType:         pulumi.String("m5.large"),
-//				Tenancy:              pulumi.String("host"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewInstance(ctx, "this", &ec2.InstanceArgs{
+// 			Ami:                  pulumi.String("ami-0dcc1e21636832c5d"),
+// 			HostResourceGroupArn: pulumi.String("arn:aws:resource-groups:us-west-2:012345678901:group/win-testhost"),
+// 			InstanceType:         pulumi.String("m5.large"),
+// 			Tenancy:              pulumi.String("host"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -170,9 +161,7 @@ import (
 // Instances can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/instance:Instance web i-12345678
-//
+//  $ pulumi import aws:ec2/instance:Instance web i-12345678
 // ```
 type Instance struct {
 	pulumi.CustomResourceState
@@ -759,7 +748,7 @@ func (i *Instance) ToInstanceOutputWithContext(ctx context.Context) InstanceOutp
 // InstanceArrayInput is an input type that accepts InstanceArray and InstanceArrayOutput values.
 // You can construct a concrete instance of `InstanceArrayInput` via:
 //
-//	InstanceArray{ InstanceArgs{...} }
+//          InstanceArray{ InstanceArgs{...} }
 type InstanceArrayInput interface {
 	pulumi.Input
 
@@ -784,7 +773,7 @@ func (i InstanceArray) ToInstanceArrayOutputWithContext(ctx context.Context) Ins
 // InstanceMapInput is an input type that accepts InstanceMap and InstanceMapOutput values.
 // You can construct a concrete instance of `InstanceMapInput` via:
 //
-//	InstanceMap{ "key": InstanceArgs{...} }
+//          InstanceMap{ "key": InstanceArgs{...} }
 type InstanceMapInput interface {
 	pulumi.Input
 

@@ -20,61 +20,58 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/wafregional"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			ipset, err := wafregional.NewIpSet(ctx, "ipset", &wafregional.IpSetArgs{
-//				IpSetDescriptors: wafregional.IpSetIpSetDescriptorArray{
-//					&wafregional.IpSetIpSetDescriptorArgs{
-//						Type:  pulumi.String("IPV4"),
-//						Value: pulumi.String("192.0.7.0/24"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			wafrule, err := wafregional.NewRule(ctx, "wafrule", &wafregional.RuleArgs{
-//				MetricName: pulumi.String("tfWAFRule"),
-//				Predicates: wafregional.RulePredicateArray{
-//					&wafregional.RulePredicateArgs{
-//						DataId:  ipset.ID(),
-//						Negated: pulumi.Bool(false),
-//						Type:    pulumi.String("IPMatch"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = wafregional.NewWebAcl(ctx, "wafacl", &wafregional.WebAclArgs{
-//				MetricName: pulumi.String("tfWebACL"),
-//				DefaultAction: &wafregional.WebAclDefaultActionArgs{
-//					Type: pulumi.String("ALLOW"),
-//				},
-//				Rules: wafregional.WebAclRuleArray{
-//					&wafregional.WebAclRuleArgs{
-//						Action: &wafregional.WebAclRuleActionArgs{
-//							Type: pulumi.String("BLOCK"),
-//						},
-//						Priority: pulumi.Int(1),
-//						RuleId:   wafrule.ID(),
-//						Type:     pulumi.String("REGULAR"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		ipset, err := wafregional.NewIpSet(ctx, "ipset", &wafregional.IpSetArgs{
+// 			IpSetDescriptors: wafregional.IpSetIpSetDescriptorArray{
+// 				&wafregional.IpSetIpSetDescriptorArgs{
+// 					Type:  pulumi.String("IPV4"),
+// 					Value: pulumi.String("192.0.7.0/24"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		wafrule, err := wafregional.NewRule(ctx, "wafrule", &wafregional.RuleArgs{
+// 			MetricName: pulumi.String("tfWAFRule"),
+// 			Predicates: wafregional.RulePredicateArray{
+// 				&wafregional.RulePredicateArgs{
+// 					DataId:  ipset.ID(),
+// 					Negated: pulumi.Bool(false),
+// 					Type:    pulumi.String("IPMatch"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = wafregional.NewWebAcl(ctx, "wafacl", &wafregional.WebAclArgs{
+// 			MetricName: pulumi.String("tfWebACL"),
+// 			DefaultAction: &wafregional.WebAclDefaultActionArgs{
+// 				Type: pulumi.String("ALLOW"),
+// 			},
+// 			Rules: wafregional.WebAclRuleArray{
+// 				&wafregional.WebAclRuleArgs{
+// 					Action: &wafregional.WebAclRuleActionArgs{
+// 						Type: pulumi.String("BLOCK"),
+// 					},
+// 					Priority: pulumi.Int(1),
+// 					RuleId:   wafrule.ID(),
+// 					Type:     pulumi.String("REGULAR"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Group Rule
 //
@@ -82,37 +79,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/wafregional"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
-//				MetricName: pulumi.String("example"),
-//				DefaultAction: &wafregional.WebAclDefaultActionArgs{
-//					Type: pulumi.String("ALLOW"),
-//				},
-//				Rules: wafregional.WebAclRuleArray{
-//					&wafregional.WebAclRuleArgs{
-//						Priority: pulumi.Int(1),
-//						RuleId:   pulumi.Any(aws_wafregional_rule_group.Example.Id),
-//						Type:     pulumi.String("GROUP"),
-//						OverrideAction: &wafregional.WebAclRuleOverrideActionArgs{
-//							Type: pulumi.String("NONE"),
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
+// 			MetricName: pulumi.String("example"),
+// 			DefaultAction: &wafregional.WebAclDefaultActionArgs{
+// 				Type: pulumi.String("ALLOW"),
+// 			},
+// 			Rules: wafregional.WebAclRuleArray{
+// 				&wafregional.WebAclRuleArgs{
+// 					Priority: pulumi.Int(1),
+// 					RuleId:   pulumi.Any(aws_wafregional_rule_group.Example.Id),
+// 					Type:     pulumi.String("GROUP"),
+// 					OverrideAction: &wafregional.WebAclRuleOverrideActionArgs{
+// 						Type: pulumi.String("NONE"),
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Logging
 //
@@ -122,37 +116,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/wafregional"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
-//				LoggingConfiguration: &wafregional.WebAclLoggingConfigurationArgs{
-//					LogDestination: pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
-//					RedactedFields: &wafregional.WebAclLoggingConfigurationRedactedFieldsArgs{
-//						FieldToMatches: wafregional.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArray{
-//							&wafregional.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs{
-//								Type: pulumi.String("URI"),
-//							},
-//							&wafregional.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs{
-//								Data: pulumi.String("referer"),
-//								Type: pulumi.String("HEADER"),
-//							},
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := wafregional.NewWebAcl(ctx, "example", &wafregional.WebAclArgs{
+// 			LoggingConfiguration: &wafregional.WebAclLoggingConfigurationArgs{
+// 				LogDestination: pulumi.Any(aws_kinesis_firehose_delivery_stream.Example.Arn),
+// 				RedactedFields: &wafregional.WebAclLoggingConfigurationRedactedFieldsArgs{
+// 					FieldToMatches: wafregional.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArray{
+// 						&wafregional.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs{
+// 							Type: pulumi.String("URI"),
+// 						},
+// 						&wafregional.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs{
+// 							Data: pulumi.String("referer"),
+// 							Type: pulumi.String("HEADER"),
+// 						},
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -160,9 +151,7 @@ import (
 // WAF Regional Web ACL can be imported using the id, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:wafregional/webAcl:WebAcl wafacl a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
-//
+//  $ pulumi import aws:wafregional/webAcl:WebAcl wafacl a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
 // ```
 type WebAcl struct {
 	pulumi.CustomResourceState
@@ -318,7 +307,7 @@ func (i *WebAcl) ToWebAclOutputWithContext(ctx context.Context) WebAclOutput {
 // WebAclArrayInput is an input type that accepts WebAclArray and WebAclArrayOutput values.
 // You can construct a concrete instance of `WebAclArrayInput` via:
 //
-//	WebAclArray{ WebAclArgs{...} }
+//          WebAclArray{ WebAclArgs{...} }
 type WebAclArrayInput interface {
 	pulumi.Input
 
@@ -343,7 +332,7 @@ func (i WebAclArray) ToWebAclArrayOutputWithContext(ctx context.Context) WebAclA
 // WebAclMapInput is an input type that accepts WebAclMap and WebAclMapOutput values.
 // You can construct a concrete instance of `WebAclMapInput` via:
 //
-//	WebAclMap{ "key": WebAclArgs{...} }
+//          WebAclMap{ "key": WebAclArgs{...} }
 type WebAclMapInput interface {
 	pulumi.Input
 

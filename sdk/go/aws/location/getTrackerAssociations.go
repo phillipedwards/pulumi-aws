@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/location"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/location"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := location.GetTrackerAssociations(ctx, &location.GetTrackerAssociationsArgs{
-//				TrackerName: "example",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := location.GetTrackerAssociations(ctx, &location.GetTrackerAssociationsArgs{
+// 			TrackerName: "example",
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func GetTrackerAssociations(ctx *pulumi.Context, args *GetTrackerAssociationsArgs, opts ...pulumi.InvokeOption) (*GetTrackerAssociationsResult, error) {
 	var rv GetTrackerAssociationsResult

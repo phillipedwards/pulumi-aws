@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/networkmanager"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/networkmanager"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := networkmanager.NewTransitGatewayPeering(ctx, "example", &networkmanager.TransitGatewayPeeringArgs{
-//				CoreNetworkId:     pulumi.Any(awscc_networkmanager_core_network.Example.Id),
-//				TransitGatewayArn: pulumi.Any(aws_ec2_transit_gateway.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := networkmanager.NewTransitGatewayPeering(ctx, "example", &networkmanager.TransitGatewayPeeringArgs{
+// 			CoreNetworkId:     pulumi.Any(awscc_networkmanager_core_network.Example.Id),
+// 			TransitGatewayArn: pulumi.Any(aws_ec2_transit_gateway.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // `aws_networkmanager_transit_gateway_peering` can be imported using the peering ID, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:networkmanager/transitGatewayPeering:TransitGatewayPeering example peering-444555aaabbb11223
-//
+//  $ pulumi import aws:networkmanager/transitGatewayPeering:TransitGatewayPeering example peering-444555aaabbb11223
 // ```
 type TransitGatewayPeering struct {
 	pulumi.CustomResourceState
@@ -204,7 +199,7 @@ func (i *TransitGatewayPeering) ToTransitGatewayPeeringOutputWithContext(ctx con
 // TransitGatewayPeeringArrayInput is an input type that accepts TransitGatewayPeeringArray and TransitGatewayPeeringArrayOutput values.
 // You can construct a concrete instance of `TransitGatewayPeeringArrayInput` via:
 //
-//	TransitGatewayPeeringArray{ TransitGatewayPeeringArgs{...} }
+//          TransitGatewayPeeringArray{ TransitGatewayPeeringArgs{...} }
 type TransitGatewayPeeringArrayInput interface {
 	pulumi.Input
 
@@ -229,7 +224,7 @@ func (i TransitGatewayPeeringArray) ToTransitGatewayPeeringArrayOutputWithContex
 // TransitGatewayPeeringMapInput is an input type that accepts TransitGatewayPeeringMap and TransitGatewayPeeringMapOutput values.
 // You can construct a concrete instance of `TransitGatewayPeeringMapInput` via:
 //
-//	TransitGatewayPeeringMap{ "key": TransitGatewayPeeringArgs{...} }
+//          TransitGatewayPeeringMap{ "key": TransitGatewayPeeringArgs{...} }
 type TransitGatewayPeeringMapInput interface {
 	pulumi.Input
 

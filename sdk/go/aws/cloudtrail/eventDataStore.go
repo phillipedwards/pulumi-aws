@@ -25,22 +25,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudtrail"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudtrail"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudtrail.NewEventDataStore(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudtrail.NewEventDataStore(ctx, "example", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Data Event Logging
 //
@@ -53,61 +50,58 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudtrail"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dynamodb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudtrail"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			table, err := dynamodb.LookupTable(ctx, &dynamodb.LookupTableArgs{
-//				Name: "not-important-dynamodb-table",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = cloudtrail.NewEventDataStore(ctx, "example", &cloudtrail.EventDataStoreArgs{
-//				AdvancedEventSelectors: cloudtrail.EventDataStoreAdvancedEventSelectorArray{
-//					&cloudtrail.EventDataStoreAdvancedEventSelectorArgs{
-//						Name: pulumi.String("Log all DynamoDB PutEvent actions for a specific DynamoDB table"),
-//						FieldSelectors: cloudtrail.EventDataStoreAdvancedEventSelectorFieldSelectorArray{
-//							&cloudtrail.EventDataStoreAdvancedEventSelectorFieldSelectorArgs{
-//								Field: pulumi.String("eventCategory"),
-//								Equals: pulumi.StringArray{
-//									pulumi.String("Data"),
-//								},
-//							},
-//							&cloudtrail.EventDataStoreAdvancedEventSelectorFieldSelectorArgs{
-//								Field: pulumi.String("resources.type"),
-//								Equals: pulumi.StringArray{
-//									pulumi.String("AWS::DynamoDB::Table"),
-//								},
-//							},
-//							&cloudtrail.EventDataStoreAdvancedEventSelectorFieldSelectorArgs{
-//								Field: pulumi.String("eventName"),
-//								Equals: pulumi.StringArray{
-//									pulumi.String("PutItem"),
-//								},
-//							},
-//							&cloudtrail.EventDataStoreAdvancedEventSelectorFieldSelectorArgs{
-//								Field: pulumi.String("resources.ARN"),
-//								Equals: pulumi.StringArray{
-//									pulumi.String(table.Arn),
-//								},
-//							},
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		table, err := dynamodb.LookupTable(ctx, &dynamodb.LookupTableArgs{
+// 			Name: "not-important-dynamodb-table",
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = cloudtrail.NewEventDataStore(ctx, "example", &cloudtrail.EventDataStoreArgs{
+// 			AdvancedEventSelectors: cloudtrail.EventDataStoreAdvancedEventSelectorArray{
+// 				&cloudtrail.EventDataStoreAdvancedEventSelectorArgs{
+// 					Name: pulumi.String("Log all DynamoDB PutEvent actions for a specific DynamoDB table"),
+// 					FieldSelectors: cloudtrail.EventDataStoreAdvancedEventSelectorFieldSelectorArray{
+// 						&cloudtrail.EventDataStoreAdvancedEventSelectorFieldSelectorArgs{
+// 							Field: pulumi.String("eventCategory"),
+// 							Equals: pulumi.StringArray{
+// 								pulumi.String("Data"),
+// 							},
+// 						},
+// 						&cloudtrail.EventDataStoreAdvancedEventSelectorFieldSelectorArgs{
+// 							Field: pulumi.String("resources.type"),
+// 							Equals: pulumi.StringArray{
+// 								pulumi.String("AWS::DynamoDB::Table"),
+// 							},
+// 						},
+// 						&cloudtrail.EventDataStoreAdvancedEventSelectorFieldSelectorArgs{
+// 							Field: pulumi.String("eventName"),
+// 							Equals: pulumi.StringArray{
+// 								pulumi.String("PutItem"),
+// 							},
+// 						},
+// 						&cloudtrail.EventDataStoreAdvancedEventSelectorFieldSelectorArgs{
+// 							Field: pulumi.String("resources.ARN"),
+// 							Equals: pulumi.StringArray{
+// 								pulumi.String(table.Arn),
+// 							},
+// 						},
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -115,9 +109,7 @@ import (
 // Event data stores can be imported using their `arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudtrail/eventDataStore:EventDataStore example arn:aws:cloudtrail:us-east-1:123456789123:eventdatastore/22333815-4414-412c-b155-dd254033gfhf
-//
+//  $ pulumi import aws:cloudtrail/eventDataStore:EventDataStore example arn:aws:cloudtrail:us-east-1:123456789123:eventdatastore/22333815-4414-412c-b155-dd254033gfhf
 // ```
 type EventDataStore struct {
 	pulumi.CustomResourceState
@@ -274,7 +266,7 @@ func (i *EventDataStore) ToEventDataStoreOutputWithContext(ctx context.Context) 
 // EventDataStoreArrayInput is an input type that accepts EventDataStoreArray and EventDataStoreArrayOutput values.
 // You can construct a concrete instance of `EventDataStoreArrayInput` via:
 //
-//	EventDataStoreArray{ EventDataStoreArgs{...} }
+//          EventDataStoreArray{ EventDataStoreArgs{...} }
 type EventDataStoreArrayInput interface {
 	pulumi.Input
 
@@ -299,7 +291,7 @@ func (i EventDataStoreArray) ToEventDataStoreArrayOutputWithContext(ctx context.
 // EventDataStoreMapInput is an input type that accepts EventDataStoreMap and EventDataStoreMapOutput values.
 // You can construct a concrete instance of `EventDataStoreMapInput` via:
 //
-//	EventDataStoreMap{ "key": EventDataStoreArgs{...} }
+//          EventDataStoreMap{ "key": EventDataStoreArgs{...} }
 type EventDataStoreMapInput interface {
 	pulumi.Input
 

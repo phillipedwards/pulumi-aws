@@ -20,25 +20,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.NewResolverRule(ctx, "sys", &route53.ResolverRuleArgs{
-//				DomainName: pulumi.String("subdomain.example.com"),
-//				RuleType:   pulumi.String("SYSTEM"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.NewResolverRule(ctx, "sys", &route53.ResolverRuleArgs{
+// 			DomainName: pulumi.String("subdomain.example.com"),
+// 			RuleType:   pulumi.String("SYSTEM"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Forward rule
 //
@@ -46,34 +43,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.NewResolverRule(ctx, "fwd", &route53.ResolverRuleArgs{
-//				DomainName:         pulumi.String("example.com"),
-//				RuleType:           pulumi.String("FORWARD"),
-//				ResolverEndpointId: pulumi.Any(aws_route53_resolver_endpoint.Foo.Id),
-//				TargetIps: route53.ResolverRuleTargetIpArray{
-//					&route53.ResolverRuleTargetIpArgs{
-//						Ip: pulumi.String("123.45.67.89"),
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Environment": pulumi.String("Prod"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.NewResolverRule(ctx, "fwd", &route53.ResolverRuleArgs{
+// 			DomainName:         pulumi.String("example.com"),
+// 			RuleType:           pulumi.String("FORWARD"),
+// 			ResolverEndpointId: pulumi.Any(aws_route53_resolver_endpoint.Foo.Id),
+// 			TargetIps: route53.ResolverRuleTargetIpArray{
+// 				&route53.ResolverRuleTargetIpArgs{
+// 					Ip: pulumi.String("123.45.67.89"),
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Environment": pulumi.String("Prod"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -81,9 +75,7 @@ import (
 // Route53 Resolver rules can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:route53/resolverRule:ResolverRule sys rslvr-rr-0123456789abcdef0
-//
+//  $ pulumi import aws:route53/resolverRule:ResolverRule sys rslvr-rr-0123456789abcdef0
 // ```
 type ResolverRule struct {
 	pulumi.CustomResourceState
@@ -264,7 +256,7 @@ func (i *ResolverRule) ToResolverRuleOutputWithContext(ctx context.Context) Reso
 // ResolverRuleArrayInput is an input type that accepts ResolverRuleArray and ResolverRuleArrayOutput values.
 // You can construct a concrete instance of `ResolverRuleArrayInput` via:
 //
-//	ResolverRuleArray{ ResolverRuleArgs{...} }
+//          ResolverRuleArray{ ResolverRuleArgs{...} }
 type ResolverRuleArrayInput interface {
 	pulumi.Input
 
@@ -289,7 +281,7 @@ func (i ResolverRuleArray) ToResolverRuleArrayOutputWithContext(ctx context.Cont
 // ResolverRuleMapInput is an input type that accepts ResolverRuleMap and ResolverRuleMapOutput values.
 // You can construct a concrete instance of `ResolverRuleMapInput` via:
 //
-//	ResolverRuleMap{ "key": ResolverRuleArgs{...} }
+//          ResolverRuleMap{ "key": ResolverRuleArgs{...} }
 type ResolverRuleMapInput interface {
 	pulumi.Input
 

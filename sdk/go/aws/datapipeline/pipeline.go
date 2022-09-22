@@ -18,22 +18,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/datapipeline"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/datapipeline"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := datapipeline.NewPipeline(ctx, "default", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := datapipeline.NewPipeline(ctx, "default", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -41,9 +38,7 @@ import (
 // `aws_datapipeline_pipeline` can be imported by using the id (Pipeline ID), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:datapipeline/pipeline:Pipeline default df-1234567890
-//
+//  $ pulumi import aws:datapipeline/pipeline:Pipeline default df-1234567890
 // ```
 type Pipeline struct {
 	pulumi.CustomResourceState
@@ -157,7 +152,7 @@ func (i *Pipeline) ToPipelineOutputWithContext(ctx context.Context) PipelineOutp
 // PipelineArrayInput is an input type that accepts PipelineArray and PipelineArrayOutput values.
 // You can construct a concrete instance of `PipelineArrayInput` via:
 //
-//	PipelineArray{ PipelineArgs{...} }
+//          PipelineArray{ PipelineArgs{...} }
 type PipelineArrayInput interface {
 	pulumi.Input
 
@@ -182,7 +177,7 @@ func (i PipelineArray) ToPipelineArrayOutputWithContext(ctx context.Context) Pip
 // PipelineMapInput is an input type that accepts PipelineMap and PipelineMapOutput values.
 // You can construct a concrete instance of `PipelineMapInput` via:
 //
-//	PipelineMap{ "key": PipelineArgs{...} }
+//          PipelineMap{ "key": PipelineArgs{...} }
 type PipelineMapInput interface {
 	pulumi.Input
 

@@ -19,30 +19,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/apprunner"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/apprunner"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := apprunner.NewObservabilityConfiguration(ctx, "example", &apprunner.ObservabilityConfigurationArgs{
-//				ObservabilityConfigurationName: pulumi.String("example"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("example-apprunner-observability-configuration"),
-//				},
-//				TraceConfiguration: &apprunner.ObservabilityConfigurationTraceConfigurationArgs{
-//					Vendor: pulumi.String("AWSXRAY"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := apprunner.NewObservabilityConfiguration(ctx, "example", &apprunner.ObservabilityConfigurationArgs{
+// 			ObservabilityConfigurationName: pulumi.String("example"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("example-apprunner-observability-configuration"),
+// 			},
+// 			TraceConfiguration: &apprunner.ObservabilityConfigurationTraceConfigurationArgs{
+// 				Vendor: pulumi.String("AWSXRAY"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -50,9 +47,7 @@ import (
 // App Runner Observability Configuration can be imported by using the `arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:apprunner/observabilityConfiguration:ObservabilityConfiguration example "arn:aws:apprunner:us-east-1:1234567890:observabilityconfiguration/example/1/d75bc7ea55b71e724fe5c23452fe22a1
-//
+//  $ pulumi import aws:apprunner/observabilityConfiguration:ObservabilityConfiguration example "arn:aws:apprunner:us-east-1:1234567890:observabilityconfiguration/example/1/d75bc7ea55b71e724fe5c23452fe22a1
 // ```
 type ObservabilityConfiguration struct {
 	pulumi.CustomResourceState
@@ -193,7 +188,7 @@ func (i *ObservabilityConfiguration) ToObservabilityConfigurationOutputWithConte
 // ObservabilityConfigurationArrayInput is an input type that accepts ObservabilityConfigurationArray and ObservabilityConfigurationArrayOutput values.
 // You can construct a concrete instance of `ObservabilityConfigurationArrayInput` via:
 //
-//	ObservabilityConfigurationArray{ ObservabilityConfigurationArgs{...} }
+//          ObservabilityConfigurationArray{ ObservabilityConfigurationArgs{...} }
 type ObservabilityConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -218,7 +213,7 @@ func (i ObservabilityConfigurationArray) ToObservabilityConfigurationArrayOutput
 // ObservabilityConfigurationMapInput is an input type that accepts ObservabilityConfigurationMap and ObservabilityConfigurationMapOutput values.
 // You can construct a concrete instance of `ObservabilityConfigurationMapInput` via:
 //
-//	ObservabilityConfigurationMap{ "key": ObservabilityConfigurationArgs{...} }
+//          ObservabilityConfigurationMap{ "key": ObservabilityConfigurationArgs{...} }
 type ObservabilityConfigurationMapInput interface {
 	pulumi.Input
 

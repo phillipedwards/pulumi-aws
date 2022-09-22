@@ -38,37 +38,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewRouteTable(ctx, "example", &ec2.RouteTableArgs{
-//				VpcId: pulumi.Any(aws_vpc.Example.Id),
-//				Routes: ec2.RouteTableRouteArray{
-//					&ec2.RouteTableRouteArgs{
-//						CidrBlock: pulumi.String("10.0.1.0/24"),
-//						GatewayId: pulumi.Any(aws_internet_gateway.Example.Id),
-//					},
-//					&ec2.RouteTableRouteArgs{
-//						Ipv6CidrBlock:       pulumi.String("::/0"),
-//						EgressOnlyGatewayId: pulumi.Any(aws_egress_only_internet_gateway.Example.Id),
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("example"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewRouteTable(ctx, "example", &ec2.RouteTableArgs{
+// 			VpcId: pulumi.Any(aws_vpc.Example.Id),
+// 			Routes: ec2.RouteTableRouteArray{
+// 				&ec2.RouteTableRouteArgs{
+// 					CidrBlock: pulumi.String("10.0.1.0/24"),
+// 					GatewayId: pulumi.Any(aws_internet_gateway.Example.Id),
+// 				},
+// 				&ec2.RouteTableRouteArgs{
+// 					Ipv6CidrBlock:       pulumi.String("::/0"),
+// 					EgressOnlyGatewayId: pulumi.Any(aws_egress_only_internet_gateway.Example.Id),
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("example"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // To subsequently remove all managed routes:
@@ -77,28 +74,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewRouteTable(ctx, "example", &ec2.RouteTableArgs{
-//				VpcId:  pulumi.Any(aws_vpc.Example.Id),
-//				Routes: ec2.RouteTableRouteArray{},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("example"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewRouteTable(ctx, "example", &ec2.RouteTableArgs{
+// 			VpcId:  pulumi.Any(aws_vpc.Example.Id),
+// 			Routes: ec2.RouteTableRouteArray{},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("example"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -106,9 +100,7 @@ import (
 // Route Tables can be imported using the route table `id`. For example, to import route table `rtb-4e616f6d69`, use this command
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/routeTable:RouteTable public_rt rtb-4e616f6d69
-//
+//  $ pulumi import aws:ec2/routeTable:RouteTable public_rt rtb-4e616f6d69
 // ```
 type RouteTable struct {
 	pulumi.CustomResourceState
@@ -247,7 +239,7 @@ func (i *RouteTable) ToRouteTableOutputWithContext(ctx context.Context) RouteTab
 // RouteTableArrayInput is an input type that accepts RouteTableArray and RouteTableArrayOutput values.
 // You can construct a concrete instance of `RouteTableArrayInput` via:
 //
-//	RouteTableArray{ RouteTableArgs{...} }
+//          RouteTableArray{ RouteTableArgs{...} }
 type RouteTableArrayInput interface {
 	pulumi.Input
 
@@ -272,7 +264,7 @@ func (i RouteTableArray) ToRouteTableArrayOutputWithContext(ctx context.Context)
 // RouteTableMapInput is an input type that accepts RouteTableMap and RouteTableMapOutput values.
 // You can construct a concrete instance of `RouteTableMapInput` via:
 //
-//	RouteTableMap{ "key": RouteTableArgs{...} }
+//          RouteTableMap{ "key": RouteTableArgs{...} }
 type RouteTableMapInput interface {
 	pulumi.Input
 

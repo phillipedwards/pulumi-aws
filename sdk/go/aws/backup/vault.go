@@ -18,24 +18,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/backup"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/backup"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := backup.NewVault(ctx, "example", &backup.VaultArgs{
-//				KmsKeyArn: pulumi.Any(aws_kms_key.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := backup.NewVault(ctx, "example", &backup.VaultArgs{
+// 			KmsKeyArn: pulumi.Any(aws_kms_key.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -43,9 +40,7 @@ import (
 // Backup vault can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:backup/vault:Vault test-vault TestVault
-//
+//  $ pulumi import aws:backup/vault:Vault test-vault TestVault
 // ```
 type Vault struct {
 	pulumi.CustomResourceState
@@ -181,7 +176,7 @@ func (i *Vault) ToVaultOutputWithContext(ctx context.Context) VaultOutput {
 // VaultArrayInput is an input type that accepts VaultArray and VaultArrayOutput values.
 // You can construct a concrete instance of `VaultArrayInput` via:
 //
-//	VaultArray{ VaultArgs{...} }
+//          VaultArray{ VaultArgs{...} }
 type VaultArrayInput interface {
 	pulumi.Input
 
@@ -206,7 +201,7 @@ func (i VaultArray) ToVaultArrayOutputWithContext(ctx context.Context) VaultArra
 // VaultMapInput is an input type that accepts VaultMap and VaultMapOutput values.
 // You can construct a concrete instance of `VaultMapInput` via:
 //
-//	VaultMap{ "key": VaultArgs{...} }
+//          VaultMap{ "key": VaultArgs{...} }
 type VaultMapInput interface {
 	pulumi.Input
 

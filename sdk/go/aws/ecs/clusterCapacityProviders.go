@@ -17,38 +17,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ecs"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ecs"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleCluster, err := ecs.NewCluster(ctx, "exampleCluster", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ecs.NewClusterCapacityProviders(ctx, "exampleClusterCapacityProviders", &ecs.ClusterCapacityProvidersArgs{
-//				ClusterName: exampleCluster.Name,
-//				CapacityProviders: pulumi.StringArray{
-//					pulumi.String("FARGATE"),
-//				},
-//				DefaultCapacityProviderStrategies: ecs.ClusterCapacityProvidersDefaultCapacityProviderStrategyArray{
-//					&ecs.ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs{
-//						Base:             pulumi.Int(1),
-//						Weight:           pulumi.Int(100),
-//						CapacityProvider: pulumi.String("FARGATE"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleCluster, err := ecs.NewCluster(ctx, "exampleCluster", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ecs.NewClusterCapacityProviders(ctx, "exampleClusterCapacityProviders", &ecs.ClusterCapacityProvidersArgs{
+// 			ClusterName: exampleCluster.Name,
+// 			CapacityProviders: pulumi.StringArray{
+// 				pulumi.String("FARGATE"),
+// 			},
+// 			DefaultCapacityProviderStrategies: ecs.ClusterCapacityProvidersDefaultCapacityProviderStrategyArray{
+// 				&ecs.ClusterCapacityProvidersDefaultCapacityProviderStrategyArgs{
+// 					Base:             pulumi.Int(1),
+// 					Weight:           pulumi.Int(100),
+// 					CapacityProvider: pulumi.String("FARGATE"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -56,9 +53,7 @@ import (
 // ECS cluster capacity providers can be imported using the `cluster_name` attribute. For example
 //
 // ```sh
-//
-//	$ pulumi import aws:ecs/clusterCapacityProviders:ClusterCapacityProviders example my-cluster
-//
+//  $ pulumi import aws:ecs/clusterCapacityProviders:ClusterCapacityProviders example my-cluster
 // ```
 type ClusterCapacityProviders struct {
 	pulumi.CustomResourceState
@@ -169,7 +164,7 @@ func (i *ClusterCapacityProviders) ToClusterCapacityProvidersOutputWithContext(c
 // ClusterCapacityProvidersArrayInput is an input type that accepts ClusterCapacityProvidersArray and ClusterCapacityProvidersArrayOutput values.
 // You can construct a concrete instance of `ClusterCapacityProvidersArrayInput` via:
 //
-//	ClusterCapacityProvidersArray{ ClusterCapacityProvidersArgs{...} }
+//          ClusterCapacityProvidersArray{ ClusterCapacityProvidersArgs{...} }
 type ClusterCapacityProvidersArrayInput interface {
 	pulumi.Input
 
@@ -194,7 +189,7 @@ func (i ClusterCapacityProvidersArray) ToClusterCapacityProvidersArrayOutputWith
 // ClusterCapacityProvidersMapInput is an input type that accepts ClusterCapacityProvidersMap and ClusterCapacityProvidersMapOutput values.
 // You can construct a concrete instance of `ClusterCapacityProvidersMapInput` via:
 //
-//	ClusterCapacityProvidersMap{ "key": ClusterCapacityProvidersArgs{...} }
+//          ClusterCapacityProvidersMap{ "key": ClusterCapacityProvidersArgs{...} }
 type ClusterCapacityProvidersMapInput interface {
 	pulumi.Input
 

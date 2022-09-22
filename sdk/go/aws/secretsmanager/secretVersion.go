@@ -22,25 +22,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/secretsmanager"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/secretsmanager"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := secretsmanager.NewSecretVersion(ctx, "example", &secretsmanager.SecretVersionArgs{
-//				SecretId:     pulumi.Any(aws_secretsmanager_secret.Example.Id),
-//				SecretString: pulumi.String("example-string-to-protect"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := secretsmanager.NewSecretVersion(ctx, "example", &secretsmanager.SecretVersionArgs{
+// 			SecretId:     pulumi.Any(aws_secretsmanager_secret.Example.Id),
+// 			SecretString: pulumi.String("example-string-to-protect"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Key-Value Pairs
 //
@@ -50,41 +47,38 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/secretsmanager"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/secretsmanager"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			cfg := config.New(ctx, "")
-//			example := map[string]interface{}{
-//				"key1": "value1",
-//				"key2": "value2",
-//			}
-//			if param := cfg.GetBool("example"); param != nil {
-//				example = param
-//			}
-//			tmpJSON0, err := json.Marshal(example)
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			_, err = secretsmanager.NewSecretVersion(ctx, "exampleSecretVersion", &secretsmanager.SecretVersionArgs{
-//				SecretId:     pulumi.Any(aws_secretsmanager_secret.Example.Id),
-//				SecretString: pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		cfg := config.New(ctx, "")
+// 		example := map[string]interface{}{
+// 			"key1": "value1",
+// 			"key2": "value2",
+// 		}
+// 		if param := cfg.GetBool("example"); param != nil {
+// 			example = param
+// 		}
+// 		tmpJSON0, err := json.Marshal(example)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		_, err = secretsmanager.NewSecretVersion(ctx, "exampleSecretVersion", &secretsmanager.SecretVersionArgs{
+// 			SecretId:     pulumi.Any(aws_secretsmanager_secret.Example.Id),
+// 			SecretString: pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -92,9 +86,7 @@ import (
 // `aws_secretsmanager_secret_version` can be imported by using the secret ID and version ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:secretsmanager/secretVersion:SecretVersion example 'arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456|xxxxx-xxxxxxx-xxxxxxx-xxxxx'
-//
+//  $ pulumi import aws:secretsmanager/secretVersion:SecretVersion example 'arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456|xxxxx-xxxxxxx-xxxxxxx-xxxxx'
 // ```
 type SecretVersion struct {
 	pulumi.CustomResourceState
@@ -227,7 +219,7 @@ func (i *SecretVersion) ToSecretVersionOutputWithContext(ctx context.Context) Se
 // SecretVersionArrayInput is an input type that accepts SecretVersionArray and SecretVersionArrayOutput values.
 // You can construct a concrete instance of `SecretVersionArrayInput` via:
 //
-//	SecretVersionArray{ SecretVersionArgs{...} }
+//          SecretVersionArray{ SecretVersionArgs{...} }
 type SecretVersionArrayInput interface {
 	pulumi.Input
 
@@ -252,7 +244,7 @@ func (i SecretVersionArray) ToSecretVersionArrayOutputWithContext(ctx context.Co
 // SecretVersionMapInput is an input type that accepts SecretVersionMap and SecretVersionMapOutput values.
 // You can construct a concrete instance of `SecretVersionMapInput` via:
 //
-//	SecretVersionMap{ "key": SecretVersionArgs{...} }
+//          SecretVersionMap{ "key": SecretVersionArgs{...} }
 type SecretVersionMapInput interface {
 	pulumi.Input
 

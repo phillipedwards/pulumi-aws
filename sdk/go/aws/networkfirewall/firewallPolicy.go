@@ -19,41 +19,38 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/networkfirewall"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/networkfirewall"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := networkfirewall.NewFirewallPolicy(ctx, "example", &networkfirewall.FirewallPolicyArgs{
-//				FirewallPolicy: &networkfirewall.FirewallPolicyFirewallPolicyArgs{
-//					StatelessDefaultActions: pulumi.StringArray{
-//						pulumi.String("aws:pass"),
-//					},
-//					StatelessFragmentDefaultActions: pulumi.StringArray{
-//						pulumi.String("aws:drop"),
-//					},
-//					StatelessRuleGroupReferences: networkfirewall.FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArray{
-//						&networkfirewall.FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs{
-//							Priority:    pulumi.Int(1),
-//							ResourceArn: pulumi.Any(aws_networkfirewall_rule_group.Example.Arn),
-//						},
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Tag1": pulumi.String("Value1"),
-//					"Tag2": pulumi.String("Value2"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := networkfirewall.NewFirewallPolicy(ctx, "example", &networkfirewall.FirewallPolicyArgs{
+// 			FirewallPolicy: &networkfirewall.FirewallPolicyFirewallPolicyArgs{
+// 				StatelessDefaultActions: pulumi.StringArray{
+// 					pulumi.String("aws:pass"),
+// 				},
+// 				StatelessFragmentDefaultActions: pulumi.StringArray{
+// 					pulumi.String("aws:drop"),
+// 				},
+// 				StatelessRuleGroupReferences: networkfirewall.FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArray{
+// 					&networkfirewall.FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs{
+// 						Priority:    pulumi.Int(1),
+// 						ResourceArn: pulumi.Any(aws_networkfirewall_rule_group.Example.Arn),
+// 					},
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Tag1": pulumi.String("Value1"),
+// 				"Tag2": pulumi.String("Value2"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -61,9 +58,7 @@ import (
 // Network Firewall Policies can be imported using their `ARN`.
 //
 // ```sh
-//
-//	$ pulumi import aws:networkfirewall/firewallPolicy:FirewallPolicy example arn:aws:network-firewall:us-west-1:123456789012:firewall-policy/example
-//
+//  $ pulumi import aws:networkfirewall/firewallPolicy:FirewallPolicy example arn:aws:network-firewall:us-west-1:123456789012:firewall-policy/example
 // ```
 type FirewallPolicy struct {
 	pulumi.CustomResourceState
@@ -202,7 +197,7 @@ func (i *FirewallPolicy) ToFirewallPolicyOutputWithContext(ctx context.Context) 
 // FirewallPolicyArrayInput is an input type that accepts FirewallPolicyArray and FirewallPolicyArrayOutput values.
 // You can construct a concrete instance of `FirewallPolicyArrayInput` via:
 //
-//	FirewallPolicyArray{ FirewallPolicyArgs{...} }
+//          FirewallPolicyArray{ FirewallPolicyArgs{...} }
 type FirewallPolicyArrayInput interface {
 	pulumi.Input
 
@@ -227,7 +222,7 @@ func (i FirewallPolicyArray) ToFirewallPolicyArrayOutputWithContext(ctx context.
 // FirewallPolicyMapInput is an input type that accepts FirewallPolicyMap and FirewallPolicyMapOutput values.
 // You can construct a concrete instance of `FirewallPolicyMapInput` via:
 //
-//	FirewallPolicyMap{ "key": FirewallPolicyArgs{...} }
+//          FirewallPolicyMap{ "key": FirewallPolicyArgs{...} }
 type FirewallPolicyMapInput interface {
 	pulumi.Input
 

@@ -18,38 +18,35 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/gamelift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := gamelift.NewGameSessionQueue(ctx, "test", &gamelift.GameSessionQueueArgs{
-//				Destinations: pulumi.StringArray{
-//					pulumi.Any(aws_gamelift_fleet.Us_west_2_fleet.Arn),
-//					pulumi.Any(aws_gamelift_fleet.Eu_central_1_fleet.Arn),
-//				},
-//				NotificationTarget: pulumi.Any(aws_sns_topic.Game_session_queue_notifications.Arn),
-//				PlayerLatencyPolicies: gamelift.GameSessionQueuePlayerLatencyPolicyArray{
-//					&gamelift.GameSessionQueuePlayerLatencyPolicyArgs{
-//						MaximumIndividualPlayerLatencyMilliseconds: pulumi.Int(100),
-//						PolicyDurationSeconds:                      pulumi.Int(5),
-//					},
-//					&gamelift.GameSessionQueuePlayerLatencyPolicyArgs{
-//						MaximumIndividualPlayerLatencyMilliseconds: pulumi.Int(200),
-//					},
-//				},
-//				TimeoutInSeconds: pulumi.Int(60),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := gamelift.NewGameSessionQueue(ctx, "test", &gamelift.GameSessionQueueArgs{
+// 			Destinations: pulumi.StringArray{
+// 				pulumi.Any(aws_gamelift_fleet.Us_west_2_fleet.Arn),
+// 				pulumi.Any(aws_gamelift_fleet.Eu_central_1_fleet.Arn),
+// 			},
+// 			NotificationTarget: pulumi.Any(aws_sns_topic.Game_session_queue_notifications.Arn),
+// 			PlayerLatencyPolicies: gamelift.GameSessionQueuePlayerLatencyPolicyArray{
+// 				&gamelift.GameSessionQueuePlayerLatencyPolicyArgs{
+// 					MaximumIndividualPlayerLatencyMilliseconds: pulumi.Int(100),
+// 					PolicyDurationSeconds:                      pulumi.Int(5),
+// 				},
+// 				&gamelift.GameSessionQueuePlayerLatencyPolicyArgs{
+// 					MaximumIndividualPlayerLatencyMilliseconds: pulumi.Int(200),
+// 				},
+// 			},
+// 			TimeoutInSeconds: pulumi.Int(60),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -57,9 +54,7 @@ import (
 // GameLift Game Session Queues can be imported by their `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:gamelift/gameSessionQueue:GameSessionQueue example example
-//
+//  $ pulumi import aws:gamelift/gameSessionQueue:GameSessionQueue example example
 // ```
 type GameSessionQueue struct {
 	pulumi.CustomResourceState
@@ -209,7 +204,7 @@ func (i *GameSessionQueue) ToGameSessionQueueOutputWithContext(ctx context.Conte
 // GameSessionQueueArrayInput is an input type that accepts GameSessionQueueArray and GameSessionQueueArrayOutput values.
 // You can construct a concrete instance of `GameSessionQueueArrayInput` via:
 //
-//	GameSessionQueueArray{ GameSessionQueueArgs{...} }
+//          GameSessionQueueArray{ GameSessionQueueArgs{...} }
 type GameSessionQueueArrayInput interface {
 	pulumi.Input
 
@@ -234,7 +229,7 @@ func (i GameSessionQueueArray) ToGameSessionQueueArrayOutputWithContext(ctx cont
 // GameSessionQueueMapInput is an input type that accepts GameSessionQueueMap and GameSessionQueueMapOutput values.
 // You can construct a concrete instance of `GameSessionQueueMapInput` via:
 //
-//	GameSessionQueueMap{ "key": GameSessionQueueArgs{...} }
+//          GameSessionQueueMap{ "key": GameSessionQueueArgs{...} }
 type GameSessionQueueMapInput interface {
 	pulumi.Input
 

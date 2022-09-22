@@ -18,40 +18,37 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iot"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iot"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			parent, err := iot.NewThingGroup(ctx, "parent", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iot.NewThingGroup(ctx, "example", &iot.ThingGroupArgs{
-//				ParentGroupName: parent.Name,
-//				Properties: &iot.ThingGroupPropertiesArgs{
-//					AttributePayload: &iot.ThingGroupPropertiesAttributePayloadArgs{
-//						Attributes: pulumi.StringMap{
-//							"One": pulumi.String("11111"),
-//							"Two": pulumi.String("TwoTwo"),
-//						},
-//					},
-//					Description: pulumi.String("This is my thing group"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"terraform": pulumi.String("true"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		parent, err := iot.NewThingGroup(ctx, "parent", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iot.NewThingGroup(ctx, "example", &iot.ThingGroupArgs{
+// 			ParentGroupName: parent.Name,
+// 			Properties: &iot.ThingGroupPropertiesArgs{
+// 				AttributePayload: &iot.ThingGroupPropertiesAttributePayloadArgs{
+// 					Attributes: pulumi.StringMap{
+// 						"One": pulumi.String("11111"),
+// 						"Two": pulumi.String("TwoTwo"),
+// 					},
+// 				},
+// 				Description: pulumi.String("This is my thing group"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"terraform": pulumi.String("true"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -59,9 +56,7 @@ import (
 // IoT Things Groups can be imported using the name, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:iot/thingGroup:ThingGroup example example
-//
+//  $ pulumi import aws:iot/thingGroup:ThingGroup example example
 // ```
 type ThingGroup struct {
 	pulumi.CustomResourceState
@@ -197,7 +192,7 @@ func (i *ThingGroup) ToThingGroupOutputWithContext(ctx context.Context) ThingGro
 // ThingGroupArrayInput is an input type that accepts ThingGroupArray and ThingGroupArrayOutput values.
 // You can construct a concrete instance of `ThingGroupArrayInput` via:
 //
-//	ThingGroupArray{ ThingGroupArgs{...} }
+//          ThingGroupArray{ ThingGroupArgs{...} }
 type ThingGroupArrayInput interface {
 	pulumi.Input
 
@@ -222,7 +217,7 @@ func (i ThingGroupArray) ToThingGroupArrayOutputWithContext(ctx context.Context)
 // ThingGroupMapInput is an input type that accepts ThingGroupMap and ThingGroupMapOutput values.
 // You can construct a concrete instance of `ThingGroupMapInput` via:
 //
-//	ThingGroupMap{ "key": ThingGroupArgs{...} }
+//          ThingGroupMap{ "key": ThingGroupArgs{...} }
 type ThingGroupMapInput interface {
 	pulumi.Input
 

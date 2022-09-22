@@ -16,12 +16,10 @@ import (
 //
 // ## Import
 //
-// # DeviceFarm Test Grid Projects can be imported by their arn
+// DeviceFarm Test Grid Projects can be imported by their arn
 //
 // ```sh
-//
-//	$ pulumi import aws:devicefarm/testGridProject:TestGridProject example arn:aws:devicefarm:us-west-2:123456789012:testgrid-project:4fa784c7-ccb4-4dbf-ba4f-02198320daa1
-//
+//  $ pulumi import aws:devicefarm/testGridProject:TestGridProject example arn:aws:devicefarm:us-west-2:123456789012:testgrid-project:4fa784c7-ccb4-4dbf-ba4f-02198320daa1
 // ```
 type TestGridProject struct {
 	pulumi.CustomResourceState
@@ -151,7 +149,7 @@ func (i *TestGridProject) ToTestGridProjectOutputWithContext(ctx context.Context
 // TestGridProjectArrayInput is an input type that accepts TestGridProjectArray and TestGridProjectArrayOutput values.
 // You can construct a concrete instance of `TestGridProjectArrayInput` via:
 //
-//	TestGridProjectArray{ TestGridProjectArgs{...} }
+//          TestGridProjectArray{ TestGridProjectArgs{...} }
 type TestGridProjectArrayInput interface {
 	pulumi.Input
 
@@ -176,7 +174,7 @@ func (i TestGridProjectArray) ToTestGridProjectArrayOutputWithContext(ctx contex
 // TestGridProjectMapInput is an input type that accepts TestGridProjectMap and TestGridProjectMapOutput values.
 // You can construct a concrete instance of `TestGridProjectMapInput` via:
 //
-//	TestGridProjectMap{ "key": TestGridProjectArgs{...} }
+//          TestGridProjectMap{ "key": TestGridProjectArgs{...} }
 type TestGridProjectMapInput interface {
 	pulumi.Input
 

@@ -20,37 +20,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/eks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/eks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			example, err := eks.NewCluster(ctx, "example", &eks.ClusterArgs{
-//				RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
-//				VpcConfig: &eks.ClusterVpcConfigArgs{
-//					SubnetIds: pulumi.StringArray{
-//						pulumi.Any(aws_subnet.Example1.Id),
-//						pulumi.Any(aws_subnet.Example2.Id),
-//					},
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				aws_iam_role_policy_attachment.Example - AmazonEKSClusterPolicy,
-//				aws_iam_role_policy_attachment.Example - AmazonEKSVPCResourceController,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			ctx.Export("endpoint", example.Endpoint)
-//			ctx.Export("kubeconfig-certificate-authority-data", example.CertificateAuthority.ApplyT(func(certificateAuthority eks.ClusterCertificateAuthority) (string, error) {
-//				return certificateAuthority.Data, nil
-//			}).(pulumi.StringOutput))
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		example, err := eks.NewCluster(ctx, "example", &eks.ClusterArgs{
+// 			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+// 			VpcConfig: &eks.ClusterVpcConfigArgs{
+// 				SubnetIds: pulumi.StringArray{
+// 					pulumi.Any(aws_subnet.Example1.Id),
+// 					pulumi.Any(aws_subnet.Example2.Id),
+// 				},
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			aws_iam_role_policy_attachment.Example - AmazonEKSClusterPolicy,
+// 			aws_iam_role_policy_attachment.Example - AmazonEKSVPCResourceController,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		ctx.Export("endpoint", example.Endpoint)
+// 		ctx.Export("kubeconfig-certificate-authority-data", example.CertificateAuthority.ApplyT(func(certificateAuthority eks.ClusterCertificateAuthority) (string, error) {
+// 			return certificateAuthority.Data, nil
+// 		}).(pulumi.StringOutput))
+// 		return nil
+// 	})
+// }
 // ```
 // ### Example IAM Role for EKS Cluster
 //
@@ -58,54 +55,49 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			example, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
-//	  "Version": "2012-10-17",
-//	  "Statement": [
-//	    {
-//	      "Effect": "Allow",
-//	      "Principal": {
-//	        "Service": "eks.amazonaws.com"
-//	      },
-//	      "Action": "sts:AssumeRole"
-//	    }
-//	  ]
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		example, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
+//   "Version": "2012-10-17",
+//   "Statement": [
+//     {
+//       "Effect": "Allow",
+//       "Principal": {
+//         "Service": "eks.amazonaws.com"
+//       },
+//       "Action": "sts:AssumeRole"
+//     }
+//   ]
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSClusterPolicy", &iam.RolePolicyAttachmentArgs{
-//				PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"),
-//				Role:      example.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSVPCResourceController", &iam.RolePolicyAttachmentArgs{
-//				PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"),
-//				Role:      example.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSClusterPolicy", &iam.RolePolicyAttachmentArgs{
+// 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"),
+// 			Role:      example.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewRolePolicyAttachment(ctx, "example-AmazonEKSVPCResourceController", &iam.RolePolicyAttachmentArgs{
+// 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"),
+// 			Role:      example.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Enabling Control Plane Logging
 //
@@ -117,42 +109,39 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudwatch"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/eks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/eks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			cfg := config.New(ctx, "")
-//			clusterName := "example"
-//			if param := cfg.Get("clusterName"); param != "" {
-//				clusterName = param
-//			}
-//			exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", &cloudwatch.LogGroupArgs{
-//				RetentionInDays: pulumi.Int(7),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = eks.NewCluster(ctx, "exampleCluster", &eks.ClusterArgs{
-//				EnabledClusterLogTypes: pulumi.StringArray{
-//					pulumi.String("api"),
-//					pulumi.String("audit"),
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				exampleLogGroup,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		cfg := config.New(ctx, "")
+// 		clusterName := "example"
+// 		if param := cfg.Get("clusterName"); param != "" {
+// 			clusterName = param
+// 		}
+// 		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", &cloudwatch.LogGroupArgs{
+// 			RetentionInDays: pulumi.Int(7),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = eks.NewCluster(ctx, "exampleCluster", &eks.ClusterArgs{
+// 			EnabledClusterLogTypes: pulumi.StringArray{
+// 				pulumi.String("api"),
+// 				pulumi.String("audit"),
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			exampleLogGroup,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -160,9 +149,7 @@ import (
 // EKS Clusters can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:eks/cluster:Cluster my_cluster my_cluster
-//
+//  $ pulumi import aws:eks/cluster:Cluster my_cluster my_cluster
 // ```
 type Cluster struct {
 	pulumi.CustomResourceState
@@ -390,7 +377,7 @@ func (i *Cluster) ToClusterOutputWithContext(ctx context.Context) ClusterOutput 
 // ClusterArrayInput is an input type that accepts ClusterArray and ClusterArrayOutput values.
 // You can construct a concrete instance of `ClusterArrayInput` via:
 //
-//	ClusterArray{ ClusterArgs{...} }
+//          ClusterArray{ ClusterArgs{...} }
 type ClusterArrayInput interface {
 	pulumi.Input
 
@@ -415,7 +402,7 @@ func (i ClusterArray) ToClusterArrayOutputWithContext(ctx context.Context) Clust
 // ClusterMapInput is an input type that accepts ClusterMap and ClusterMapOutput values.
 // You can construct a concrete instance of `ClusterMapInput` via:
 //
-//	ClusterMap{ "key": ClusterArgs{...} }
+//          ClusterMap{ "key": ClusterArgs{...} }
 type ClusterMapInput interface {
 	pulumi.Input
 

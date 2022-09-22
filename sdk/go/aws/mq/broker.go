@@ -26,39 +26,36 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/mq"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/mq"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := mq.NewBroker(ctx, "example", &mq.BrokerArgs{
-//				Configuration: &mq.BrokerConfigurationArgs{
-//					Id:       pulumi.Any(aws_mq_configuration.Test.Id),
-//					Revision: pulumi.Any(aws_mq_configuration.Test.Latest_revision),
-//				},
-//				EngineType:       pulumi.String("ActiveMQ"),
-//				EngineVersion:    pulumi.String("5.15.9"),
-//				HostInstanceType: pulumi.String("mq.t2.micro"),
-//				SecurityGroups: pulumi.StringArray{
-//					pulumi.Any(aws_security_group.Test.Id),
-//				},
-//				Users: mq.BrokerUserArray{
-//					&mq.BrokerUserArgs{
-//						Username: pulumi.String("ExampleUser"),
-//						Password: pulumi.String("MindTheGap"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := mq.NewBroker(ctx, "example", &mq.BrokerArgs{
+// 			Configuration: &mq.BrokerConfigurationArgs{
+// 				Id:       pulumi.Any(aws_mq_configuration.Test.Id),
+// 				Revision: pulumi.Any(aws_mq_configuration.Test.Latest_revision),
+// 			},
+// 			EngineType:       pulumi.String("ActiveMQ"),
+// 			EngineVersion:    pulumi.String("5.15.9"),
+// 			HostInstanceType: pulumi.String("mq.t2.micro"),
+// 			SecurityGroups: pulumi.StringArray{
+// 				pulumi.Any(aws_security_group.Test.Id),
+// 			},
+// 			Users: mq.BrokerUserArray{
+// 				&mq.BrokerUserArgs{
+// 					Username: pulumi.String("ExampleUser"),
+// 					Password: pulumi.String("MindTheGap"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### High-throughput Optimized Example
 //
@@ -68,40 +65,37 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/mq"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/mq"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := mq.NewBroker(ctx, "example", &mq.BrokerArgs{
-//				Configuration: &mq.BrokerConfigurationArgs{
-//					Id:       pulumi.Any(aws_mq_configuration.Test.Id),
-//					Revision: pulumi.Any(aws_mq_configuration.Test.Latest_revision),
-//				},
-//				EngineType:       pulumi.String("ActiveMQ"),
-//				EngineVersion:    pulumi.String("5.15.9"),
-//				StorageType:      pulumi.String("ebs"),
-//				HostInstanceType: pulumi.String("mq.m5.large"),
-//				SecurityGroups: pulumi.StringArray{
-//					pulumi.Any(aws_security_group.Test.Id),
-//				},
-//				Users: mq.BrokerUserArray{
-//					&mq.BrokerUserArgs{
-//						Username: pulumi.String("ExampleUser"),
-//						Password: pulumi.String("MindTheGap"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := mq.NewBroker(ctx, "example", &mq.BrokerArgs{
+// 			Configuration: &mq.BrokerConfigurationArgs{
+// 				Id:       pulumi.Any(aws_mq_configuration.Test.Id),
+// 				Revision: pulumi.Any(aws_mq_configuration.Test.Latest_revision),
+// 			},
+// 			EngineType:       pulumi.String("ActiveMQ"),
+// 			EngineVersion:    pulumi.String("5.15.9"),
+// 			StorageType:      pulumi.String("ebs"),
+// 			HostInstanceType: pulumi.String("mq.m5.large"),
+// 			SecurityGroups: pulumi.StringArray{
+// 				pulumi.Any(aws_security_group.Test.Id),
+// 			},
+// 			Users: mq.BrokerUserArray{
+// 				&mq.BrokerUserArgs{
+// 					Username: pulumi.String("ExampleUser"),
+// 					Password: pulumi.String("MindTheGap"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -109,9 +103,7 @@ import (
 // MQ Brokers can be imported using their broker id, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:mq/broker:Broker example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
-//
+//  $ pulumi import aws:mq/broker:Broker example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
 // ```
 type Broker struct {
 	pulumi.CustomResourceState
@@ -442,7 +434,7 @@ func (i *Broker) ToBrokerOutputWithContext(ctx context.Context) BrokerOutput {
 // BrokerArrayInput is an input type that accepts BrokerArray and BrokerArrayOutput values.
 // You can construct a concrete instance of `BrokerArrayInput` via:
 //
-//	BrokerArray{ BrokerArgs{...} }
+//          BrokerArray{ BrokerArgs{...} }
 type BrokerArrayInput interface {
 	pulumi.Input
 
@@ -467,7 +459,7 @@ func (i BrokerArray) ToBrokerArrayOutputWithContext(ctx context.Context) BrokerA
 // BrokerMapInput is an input type that accepts BrokerMap and BrokerMapOutput values.
 // You can construct a concrete instance of `BrokerMapInput` via:
 //
-//	BrokerMap{ "key": BrokerArgs{...} }
+//          BrokerMap{ "key": BrokerArgs{...} }
 type BrokerMapInput interface {
 	pulumi.Input
 

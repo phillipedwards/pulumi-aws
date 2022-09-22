@@ -21,69 +21,66 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/backup"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/backup"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := backup.NewFramework(ctx, "example", &backup.FrameworkArgs{
-//				Controls: backup.FrameworkControlArray{
-//					&backup.FrameworkControlArgs{
-//						InputParameters: backup.FrameworkControlInputParameterArray{
-//							&backup.FrameworkControlInputParameterArgs{
-//								Name:  pulumi.String("requiredRetentionDays"),
-//								Value: pulumi.String("35"),
-//							},
-//						},
-//						Name: pulumi.String("BACKUP_RECOVERY_POINT_MINIMUM_RETENTION_CHECK"),
-//					},
-//					&backup.FrameworkControlArgs{
-//						InputParameters: backup.FrameworkControlInputParameterArray{
-//							&backup.FrameworkControlInputParameterArgs{
-//								Name:  pulumi.String("requiredFrequencyUnit"),
-//								Value: pulumi.String("hours"),
-//							},
-//							&backup.FrameworkControlInputParameterArgs{
-//								Name:  pulumi.String("requiredRetentionDays"),
-//								Value: pulumi.String("35"),
-//							},
-//							&backup.FrameworkControlInputParameterArgs{
-//								Name:  pulumi.String("requiredFrequencyValue"),
-//								Value: pulumi.String("1"),
-//							},
-//						},
-//						Name: pulumi.String("BACKUP_PLAN_MIN_FREQUENCY_AND_MIN_RETENTION_CHECK"),
-//					},
-//					&backup.FrameworkControlArgs{
-//						Name: pulumi.String("BACKUP_RECOVERY_POINT_ENCRYPTED"),
-//					},
-//					&backup.FrameworkControlArgs{
-//						Name: pulumi.String("BACKUP_RESOURCES_PROTECTED_BY_BACKUP_PLAN"),
-//						Scope: &backup.FrameworkControlScopeArgs{
-//							ComplianceResourceTypes: pulumi.StringArray{
-//								pulumi.String("EBS"),
-//							},
-//						},
-//					},
-//					&backup.FrameworkControlArgs{
-//						Name: pulumi.String("BACKUP_RECOVERY_POINT_MANUAL_DELETION_DISABLED"),
-//					},
-//				},
-//				Description: pulumi.String("this is an example framework"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example Framework"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := backup.NewFramework(ctx, "example", &backup.FrameworkArgs{
+// 			Controls: backup.FrameworkControlArray{
+// 				&backup.FrameworkControlArgs{
+// 					InputParameters: backup.FrameworkControlInputParameterArray{
+// 						&backup.FrameworkControlInputParameterArgs{
+// 							Name:  pulumi.String("requiredRetentionDays"),
+// 							Value: pulumi.String("35"),
+// 						},
+// 					},
+// 					Name: pulumi.String("BACKUP_RECOVERY_POINT_MINIMUM_RETENTION_CHECK"),
+// 				},
+// 				&backup.FrameworkControlArgs{
+// 					InputParameters: backup.FrameworkControlInputParameterArray{
+// 						&backup.FrameworkControlInputParameterArgs{
+// 							Name:  pulumi.String("requiredFrequencyUnit"),
+// 							Value: pulumi.String("hours"),
+// 						},
+// 						&backup.FrameworkControlInputParameterArgs{
+// 							Name:  pulumi.String("requiredRetentionDays"),
+// 							Value: pulumi.String("35"),
+// 						},
+// 						&backup.FrameworkControlInputParameterArgs{
+// 							Name:  pulumi.String("requiredFrequencyValue"),
+// 							Value: pulumi.String("1"),
+// 						},
+// 					},
+// 					Name: pulumi.String("BACKUP_PLAN_MIN_FREQUENCY_AND_MIN_RETENTION_CHECK"),
+// 				},
+// 				&backup.FrameworkControlArgs{
+// 					Name: pulumi.String("BACKUP_RECOVERY_POINT_ENCRYPTED"),
+// 				},
+// 				&backup.FrameworkControlArgs{
+// 					Name: pulumi.String("BACKUP_RESOURCES_PROTECTED_BY_BACKUP_PLAN"),
+// 					Scope: &backup.FrameworkControlScopeArgs{
+// 						ComplianceResourceTypes: pulumi.StringArray{
+// 							pulumi.String("EBS"),
+// 						},
+// 					},
+// 				},
+// 				&backup.FrameworkControlArgs{
+// 					Name: pulumi.String("BACKUP_RECOVERY_POINT_MANUAL_DELETION_DISABLED"),
+// 				},
+// 			},
+// 			Description: pulumi.String("this is an example framework"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example Framework"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -91,9 +88,7 @@ import (
 // Backup Framework can be imported using the `id` which corresponds to the name of the Backup Framework, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:backup/framework:Framework test <id>
-//
+//  $ pulumi import aws:backup/framework:Framework test <id>
 // ```
 type Framework struct {
 	pulumi.CustomResourceState
@@ -244,7 +239,7 @@ func (i *Framework) ToFrameworkOutputWithContext(ctx context.Context) FrameworkO
 // FrameworkArrayInput is an input type that accepts FrameworkArray and FrameworkArrayOutput values.
 // You can construct a concrete instance of `FrameworkArrayInput` via:
 //
-//	FrameworkArray{ FrameworkArgs{...} }
+//          FrameworkArray{ FrameworkArgs{...} }
 type FrameworkArrayInput interface {
 	pulumi.Input
 
@@ -269,7 +264,7 @@ func (i FrameworkArray) ToFrameworkArrayOutputWithContext(ctx context.Context) F
 // FrameworkMapInput is an input type that accepts FrameworkMap and FrameworkMapOutput values.
 // You can construct a concrete instance of `FrameworkMapInput` via:
 //
-//	FrameworkMap{ "key": FrameworkArgs{...} }
+//          FrameworkMap{ "key": FrameworkArgs{...} }
 type FrameworkMapInput interface {
 	pulumi.Input
 

@@ -18,40 +18,37 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/batch"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/batch"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := batch.NewSchedulingPolicy(ctx, "example", &batch.SchedulingPolicyArgs{
-//				FairSharePolicy: &batch.SchedulingPolicyFairSharePolicyArgs{
-//					ComputeReservation: pulumi.Int(1),
-//					ShareDecaySeconds:  pulumi.Int(3600),
-//					ShareDistributions: batch.SchedulingPolicyFairSharePolicyShareDistributionArray{
-//						&batch.SchedulingPolicyFairSharePolicyShareDistributionArgs{
-//							ShareIdentifier: pulumi.String("A1*"),
-//							WeightFactor:    pulumi.Float64(0.1),
-//						},
-//						&batch.SchedulingPolicyFairSharePolicyShareDistributionArgs{
-//							ShareIdentifier: pulumi.String("A2"),
-//							WeightFactor:    pulumi.Float64(0.2),
-//						},
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example Batch Scheduling Policy"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := batch.NewSchedulingPolicy(ctx, "example", &batch.SchedulingPolicyArgs{
+// 			FairSharePolicy: &batch.SchedulingPolicyFairSharePolicyArgs{
+// 				ComputeReservation: pulumi.Int(1),
+// 				ShareDecaySeconds:  pulumi.Int(3600),
+// 				ShareDistributions: batch.SchedulingPolicyFairSharePolicyShareDistributionArray{
+// 					&batch.SchedulingPolicyFairSharePolicyShareDistributionArgs{
+// 						ShareIdentifier: pulumi.String("A1*"),
+// 						WeightFactor:    pulumi.Float64(0.1),
+// 					},
+// 					&batch.SchedulingPolicyFairSharePolicyShareDistributionArgs{
+// 						ShareIdentifier: pulumi.String("A2"),
+// 						WeightFactor:    pulumi.Float64(0.2),
+// 					},
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example Batch Scheduling Policy"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -59,9 +56,7 @@ import (
 // Batch Scheduling Policy can be imported using the `arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:batch/schedulingPolicy:SchedulingPolicy test_policy arn:aws:batch:us-east-1:123456789012:scheduling-policy/sample
-//
+//  $ pulumi import aws:batch/schedulingPolicy:SchedulingPolicy test_policy arn:aws:batch:us-east-1:123456789012:scheduling-policy/sample
 // ```
 type SchedulingPolicy struct {
 	pulumi.CustomResourceState
@@ -176,7 +171,7 @@ func (i *SchedulingPolicy) ToSchedulingPolicyOutputWithContext(ctx context.Conte
 // SchedulingPolicyArrayInput is an input type that accepts SchedulingPolicyArray and SchedulingPolicyArrayOutput values.
 // You can construct a concrete instance of `SchedulingPolicyArrayInput` via:
 //
-//	SchedulingPolicyArray{ SchedulingPolicyArgs{...} }
+//          SchedulingPolicyArray{ SchedulingPolicyArgs{...} }
 type SchedulingPolicyArrayInput interface {
 	pulumi.Input
 
@@ -201,7 +196,7 @@ func (i SchedulingPolicyArray) ToSchedulingPolicyArrayOutputWithContext(ctx cont
 // SchedulingPolicyMapInput is an input type that accepts SchedulingPolicyMap and SchedulingPolicyMapOutput values.
 // You can construct a concrete instance of `SchedulingPolicyMapInput` via:
 //
-//	SchedulingPolicyMap{ "key": SchedulingPolicyArgs{...} }
+//          SchedulingPolicyMap{ "key": SchedulingPolicyArgs{...} }
 type SchedulingPolicyMapInput interface {
 	pulumi.Input
 

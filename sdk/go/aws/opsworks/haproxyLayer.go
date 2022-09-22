@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/opsworks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := opsworks.NewHaproxyLayer(ctx, "lb", &opsworks.HaproxyLayerArgs{
-//				StackId:       pulumi.Any(aws_opsworks_stack.Main.Id),
-//				StatsPassword: pulumi.String("foobarbaz"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := opsworks.NewHaproxyLayer(ctx, "lb", &opsworks.HaproxyLayerArgs{
+// 			StackId:       pulumi.Any(aws_opsworks_stack.Main.Id),
+// 			StatsPassword: pulumi.String("foobarbaz"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type HaproxyLayer struct {
 	pulumi.CustomResourceState
@@ -383,7 +380,7 @@ func (i *HaproxyLayer) ToHaproxyLayerOutputWithContext(ctx context.Context) Hapr
 // HaproxyLayerArrayInput is an input type that accepts HaproxyLayerArray and HaproxyLayerArrayOutput values.
 // You can construct a concrete instance of `HaproxyLayerArrayInput` via:
 //
-//	HaproxyLayerArray{ HaproxyLayerArgs{...} }
+//          HaproxyLayerArray{ HaproxyLayerArgs{...} }
 type HaproxyLayerArrayInput interface {
 	pulumi.Input
 
@@ -408,7 +405,7 @@ func (i HaproxyLayerArray) ToHaproxyLayerArrayOutputWithContext(ctx context.Cont
 // HaproxyLayerMapInput is an input type that accepts HaproxyLayerMap and HaproxyLayerMapOutput values.
 // You can construct a concrete instance of `HaproxyLayerMapInput` via:
 //
-//	HaproxyLayerMap{ "key": HaproxyLayerArgs{...} }
+//          HaproxyLayerMap{ "key": HaproxyLayerArgs{...} }
 type HaproxyLayerMapInput interface {
 	pulumi.Input
 

@@ -22,27 +22,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudfront"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudfront.NewOriginAccessControl(ctx, "example", &cloudfront.OriginAccessControlArgs{
-//				Description:                   pulumi.String("Example Policy"),
-//				OriginAccessControlOriginType: pulumi.String("s3"),
-//				SigningBehavior:               pulumi.String("always"),
-//				SigningProtocol:               pulumi.String("sigv4"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudfront.NewOriginAccessControl(ctx, "example", &cloudfront.OriginAccessControlArgs{
+// 			Description:                   pulumi.String("Example Policy"),
+// 			OriginAccessControlOriginType: pulumi.String("s3"),
+// 			SigningBehavior:               pulumi.String("always"),
+// 			SigningProtocol:               pulumi.String("sigv4"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -50,9 +47,7 @@ import (
 // CloudFront Origin Access Control can be imported using the `id`. For example
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudfront/originAccessControl:OriginAccessControl example E327GJI25M56DG
-//
+//  $ pulumi import aws:cloudfront/originAccessControl:OriginAccessControl example E327GJI25M56DG
 // ```
 type OriginAccessControl struct {
 	pulumi.CustomResourceState
@@ -195,7 +190,7 @@ func (i *OriginAccessControl) ToOriginAccessControlOutputWithContext(ctx context
 // OriginAccessControlArrayInput is an input type that accepts OriginAccessControlArray and OriginAccessControlArrayOutput values.
 // You can construct a concrete instance of `OriginAccessControlArrayInput` via:
 //
-//	OriginAccessControlArray{ OriginAccessControlArgs{...} }
+//          OriginAccessControlArray{ OriginAccessControlArgs{...} }
 type OriginAccessControlArrayInput interface {
 	pulumi.Input
 
@@ -220,7 +215,7 @@ func (i OriginAccessControlArray) ToOriginAccessControlArrayOutputWithContext(ct
 // OriginAccessControlMapInput is an input type that accepts OriginAccessControlMap and OriginAccessControlMapOutput values.
 // You can construct a concrete instance of `OriginAccessControlMapInput` via:
 //
-//	OriginAccessControlMap{ "key": OriginAccessControlArgs{...} }
+//          OriginAccessControlMap{ "key": OriginAccessControlArgs{...} }
 type OriginAccessControlMapInput interface {
 	pulumi.Input
 

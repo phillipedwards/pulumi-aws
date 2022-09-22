@@ -17,32 +17,29 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudformation"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudformation"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudformation.NewCloudFormationType(ctx, "example", &cloudformation.CloudFormationTypeArgs{
-//				SchemaHandlerPackage: pulumi.String(fmt.Sprintf("s3://%v/%v", aws_s3_object.Example.Bucket, aws_s3_object.Example.Key)),
-//				Type:                 pulumi.String("RESOURCE"),
-//				TypeName:             pulumi.String("ExampleCompany::ExampleService::ExampleResource"),
-//				LoggingConfig: &cloudformation.CloudFormationTypeLoggingConfigArgs{
-//					LogGroupName: pulumi.Any(aws_cloudwatch_log_group.Example.Name),
-//					LogRoleArn:   pulumi.Any(aws_iam_role.Example.Arn),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudformation.NewCloudFormationType(ctx, "example", &cloudformation.CloudFormationTypeArgs{
+// 			SchemaHandlerPackage: pulumi.String(fmt.Sprintf("s3://%v/%v", aws_s3_object.Example.Bucket, aws_s3_object.Example.Key)),
+// 			Type:                 pulumi.String("RESOURCE"),
+// 			TypeName:             pulumi.String("ExampleCompany::ExampleService::ExampleResource"),
+// 			LoggingConfig: &cloudformation.CloudFormationTypeLoggingConfigArgs{
+// 				LogGroupName: pulumi.Any(aws_cloudwatch_log_group.Example.Name),
+// 				LogRoleArn:   pulumi.Any(aws_iam_role.Example.Arn),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -50,9 +47,7 @@ import (
 // `aws_cloudformation_type` can be imported with their type version Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudformation/cloudFormationType:CloudFormationType example arn:aws:cloudformation:us-east-1:123456789012:type/resource/ExampleCompany-ExampleService-ExampleType/1
-//
+//  $ pulumi import aws:cloudformation/cloudFormationType:CloudFormationType example arn:aws:cloudformation:us-east-1:123456789012:type/resource/ExampleCompany-ExampleService-ExampleType/1
 // ```
 type CloudFormationType struct {
 	pulumi.CustomResourceState
@@ -258,7 +253,7 @@ func (i *CloudFormationType) ToCloudFormationTypeOutputWithContext(ctx context.C
 // CloudFormationTypeArrayInput is an input type that accepts CloudFormationTypeArray and CloudFormationTypeArrayOutput values.
 // You can construct a concrete instance of `CloudFormationTypeArrayInput` via:
 //
-//	CloudFormationTypeArray{ CloudFormationTypeArgs{...} }
+//          CloudFormationTypeArray{ CloudFormationTypeArgs{...} }
 type CloudFormationTypeArrayInput interface {
 	pulumi.Input
 
@@ -283,7 +278,7 @@ func (i CloudFormationTypeArray) ToCloudFormationTypeArrayOutputWithContext(ctx 
 // CloudFormationTypeMapInput is an input type that accepts CloudFormationTypeMap and CloudFormationTypeMapOutput values.
 // You can construct a concrete instance of `CloudFormationTypeMapInput` via:
 //
-//	CloudFormationTypeMap{ "key": CloudFormationTypeArgs{...} }
+//          CloudFormationTypeMap{ "key": CloudFormationTypeArgs{...} }
 type CloudFormationTypeMapInput interface {
 	pulumi.Input
 

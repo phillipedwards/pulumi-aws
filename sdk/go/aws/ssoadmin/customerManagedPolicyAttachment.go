@@ -20,9 +20,7 @@ import (
 // SSO Managed Policy Attachments can be imported using the `name`, `path`, `permission_set_arn`, and `instance_arn` separated by a comma (`,`) e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ssoadmin/customerManagedPolicyAttachment:CustomerManagedPolicyAttachment example TestPolicy,/,arn:aws:sso:::permissionSet/ssoins-2938j0x8920sbj72/ps-80383020jr9302rk,arn:aws:sso:::instance/ssoins-2938j0x8920sbj72
-//
+//  $ pulumi import aws:ssoadmin/customerManagedPolicyAttachment:CustomerManagedPolicyAttachment example TestPolicy,/,arn:aws:sso:::permissionSet/ssoins-2938j0x8920sbj72/ps-80383020jr9302rk,arn:aws:sso:::instance/ssoins-2938j0x8920sbj72
 // ```
 type CustomerManagedPolicyAttachment struct {
 	pulumi.CustomResourceState
@@ -139,7 +137,7 @@ func (i *CustomerManagedPolicyAttachment) ToCustomerManagedPolicyAttachmentOutpu
 // CustomerManagedPolicyAttachmentArrayInput is an input type that accepts CustomerManagedPolicyAttachmentArray and CustomerManagedPolicyAttachmentArrayOutput values.
 // You can construct a concrete instance of `CustomerManagedPolicyAttachmentArrayInput` via:
 //
-//	CustomerManagedPolicyAttachmentArray{ CustomerManagedPolicyAttachmentArgs{...} }
+//          CustomerManagedPolicyAttachmentArray{ CustomerManagedPolicyAttachmentArgs{...} }
 type CustomerManagedPolicyAttachmentArrayInput interface {
 	pulumi.Input
 
@@ -164,7 +162,7 @@ func (i CustomerManagedPolicyAttachmentArray) ToCustomerManagedPolicyAttachmentA
 // CustomerManagedPolicyAttachmentMapInput is an input type that accepts CustomerManagedPolicyAttachmentMap and CustomerManagedPolicyAttachmentMapOutput values.
 // You can construct a concrete instance of `CustomerManagedPolicyAttachmentMapInput` via:
 //
-//	CustomerManagedPolicyAttachmentMap{ "key": CustomerManagedPolicyAttachmentArgs{...} }
+//          CustomerManagedPolicyAttachmentMap{ "key": CustomerManagedPolicyAttachmentArgs{...} }
 type CustomerManagedPolicyAttachmentMapInput interface {
 	pulumi.Input
 

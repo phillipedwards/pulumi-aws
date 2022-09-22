@@ -19,22 +19,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewMesh(ctx, "simple", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewMesh(ctx, "simple", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Egress Filter
 //
@@ -42,28 +39,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewMesh(ctx, "simple", &appmesh.MeshArgs{
-//				Spec: &appmesh.MeshSpecArgs{
-//					EgressFilter: &appmesh.MeshSpecEgressFilterArgs{
-//						Type: pulumi.String("ALLOW_ALL"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewMesh(ctx, "simple", &appmesh.MeshArgs{
+// 			Spec: &appmesh.MeshSpecArgs{
+// 				EgressFilter: &appmesh.MeshSpecEgressFilterArgs{
+// 					Type: pulumi.String("ALLOW_ALL"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -71,9 +65,7 @@ import (
 // App Mesh service meshes can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:appmesh/mesh:Mesh simple simpleapp
-//
+//  $ pulumi import aws:appmesh/mesh:Mesh simple simpleapp
 // ```
 type Mesh struct {
 	pulumi.CustomResourceState
@@ -217,7 +209,7 @@ func (i *Mesh) ToMeshOutputWithContext(ctx context.Context) MeshOutput {
 // MeshArrayInput is an input type that accepts MeshArray and MeshArrayOutput values.
 // You can construct a concrete instance of `MeshArrayInput` via:
 //
-//	MeshArray{ MeshArgs{...} }
+//          MeshArray{ MeshArgs{...} }
 type MeshArrayInput interface {
 	pulumi.Input
 
@@ -242,7 +234,7 @@ func (i MeshArray) ToMeshArrayOutputWithContext(ctx context.Context) MeshArrayOu
 // MeshMapInput is an input type that accepts MeshMap and MeshMapOutput values.
 // You can construct a concrete instance of `MeshMapInput` via:
 //
-//	MeshMap{ "key": MeshArgs{...} }
+//          MeshMap{ "key": MeshArgs{...} }
 type MeshMapInput interface {
 	pulumi.Input
 

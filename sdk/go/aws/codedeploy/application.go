@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codedeploy"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := codedeploy.NewApplication(ctx, "example", &codedeploy.ApplicationArgs{
-//				ComputePlatform: pulumi.String("ECS"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := codedeploy.NewApplication(ctx, "example", &codedeploy.ApplicationArgs{
+// 			ComputePlatform: pulumi.String("ECS"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Lambda Application
 //
@@ -44,24 +41,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codedeploy"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := codedeploy.NewApplication(ctx, "example", &codedeploy.ApplicationArgs{
-//				ComputePlatform: pulumi.String("Lambda"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := codedeploy.NewApplication(ctx, "example", &codedeploy.ApplicationArgs{
+// 			ComputePlatform: pulumi.String("Lambda"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Server Application
 //
@@ -69,24 +63,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codedeploy"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := codedeploy.NewApplication(ctx, "example", &codedeploy.ApplicationArgs{
-//				ComputePlatform: pulumi.String("Server"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := codedeploy.NewApplication(ctx, "example", &codedeploy.ApplicationArgs{
+// 			ComputePlatform: pulumi.String("Server"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -94,9 +85,7 @@ import (
 // CodeDeploy Applications can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:codedeploy/application:Application example my-application
-//
+//  $ pulumi import aws:codedeploy/application:Application example my-application
 // ```
 type Application struct {
 	pulumi.CustomResourceState
@@ -234,7 +223,7 @@ func (i *Application) ToApplicationOutputWithContext(ctx context.Context) Applic
 // ApplicationArrayInput is an input type that accepts ApplicationArray and ApplicationArrayOutput values.
 // You can construct a concrete instance of `ApplicationArrayInput` via:
 //
-//	ApplicationArray{ ApplicationArgs{...} }
+//          ApplicationArray{ ApplicationArgs{...} }
 type ApplicationArrayInput interface {
 	pulumi.Input
 
@@ -259,7 +248,7 @@ func (i ApplicationArray) ToApplicationArrayOutputWithContext(ctx context.Contex
 // ApplicationMapInput is an input type that accepts ApplicationMap and ApplicationMapOutput values.
 // You can construct a concrete instance of `ApplicationMapInput` via:
 //
-//	ApplicationMap{ "key": ApplicationArgs{...} }
+//          ApplicationMap{ "key": ApplicationArgs{...} }
 type ApplicationMapInput interface {
 	pulumi.Input
 

@@ -22,30 +22,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			defaultBucketV2, err := s3.NewBucketV2(ctx, "defaultBucketV2", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ec2.NewSpotDatafeedSubscription(ctx, "defaultSpotDatafeedSubscription", &ec2.SpotDatafeedSubscriptionArgs{
-//				Bucket: defaultBucketV2.Bucket,
-//				Prefix: pulumi.String("my_subdirectory"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		defaultBucketV2, err := s3.NewBucketV2(ctx, "defaultBucketV2", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ec2.NewSpotDatafeedSubscription(ctx, "defaultSpotDatafeedSubscription", &ec2.SpotDatafeedSubscriptionArgs{
+// 			Bucket: defaultBucketV2.Bucket,
+// 			Prefix: pulumi.String("my_subdirectory"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -53,9 +50,7 @@ import (
 // A Spot Datafeed Subscription can be imported using the word `spot-datafeed-subscription`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/spotDatafeedSubscription:SpotDatafeedSubscription mysubscription spot-datafeed-subscription
-//
+//  $ pulumi import aws:ec2/spotDatafeedSubscription:SpotDatafeedSubscription mysubscription spot-datafeed-subscription
 // ```
 type SpotDatafeedSubscription struct {
 	pulumi.CustomResourceState
@@ -156,7 +151,7 @@ func (i *SpotDatafeedSubscription) ToSpotDatafeedSubscriptionOutputWithContext(c
 // SpotDatafeedSubscriptionArrayInput is an input type that accepts SpotDatafeedSubscriptionArray and SpotDatafeedSubscriptionArrayOutput values.
 // You can construct a concrete instance of `SpotDatafeedSubscriptionArrayInput` via:
 //
-//	SpotDatafeedSubscriptionArray{ SpotDatafeedSubscriptionArgs{...} }
+//          SpotDatafeedSubscriptionArray{ SpotDatafeedSubscriptionArgs{...} }
 type SpotDatafeedSubscriptionArrayInput interface {
 	pulumi.Input
 
@@ -181,7 +176,7 @@ func (i SpotDatafeedSubscriptionArray) ToSpotDatafeedSubscriptionArrayOutputWith
 // SpotDatafeedSubscriptionMapInput is an input type that accepts SpotDatafeedSubscriptionMap and SpotDatafeedSubscriptionMapOutput values.
 // You can construct a concrete instance of `SpotDatafeedSubscriptionMapInput` via:
 //
-//	SpotDatafeedSubscriptionMap{ "key": SpotDatafeedSubscriptionArgs{...} }
+//          SpotDatafeedSubscriptionMap{ "key": SpotDatafeedSubscriptionArgs{...} }
 type SpotDatafeedSubscriptionMapInput interface {
 	pulumi.Input
 

@@ -18,7 +18,7 @@ type InputDestination struct {
 // InputDestinationInput is an input type that accepts InputDestinationArgs and InputDestinationOutput values.
 // You can construct a concrete instance of `InputDestinationInput` via:
 //
-//	InputDestinationArgs{...}
+//          InputDestinationArgs{...}
 type InputDestinationInput interface {
 	pulumi.Input
 
@@ -46,7 +46,7 @@ func (i InputDestinationArgs) ToInputDestinationOutputWithContext(ctx context.Co
 // InputDestinationArrayInput is an input type that accepts InputDestinationArray and InputDestinationArrayOutput values.
 // You can construct a concrete instance of `InputDestinationArrayInput` via:
 //
-//	InputDestinationArray{ InputDestinationArgs{...} }
+//          InputDestinationArray{ InputDestinationArgs{...} }
 type InputDestinationArrayInput interface {
 	pulumi.Input
 
@@ -115,7 +115,7 @@ type InputInputDevice struct {
 // InputInputDeviceInput is an input type that accepts InputInputDeviceArgs and InputInputDeviceOutput values.
 // You can construct a concrete instance of `InputInputDeviceInput` via:
 //
-//	InputInputDeviceArgs{...}
+//          InputInputDeviceArgs{...}
 type InputInputDeviceInput interface {
 	pulumi.Input
 
@@ -143,7 +143,7 @@ func (i InputInputDeviceArgs) ToInputInputDeviceOutputWithContext(ctx context.Co
 // InputInputDeviceArrayInput is an input type that accepts InputInputDeviceArray and InputInputDeviceArrayOutput values.
 // You can construct a concrete instance of `InputInputDeviceArrayInput` via:
 //
-//	InputInputDeviceArray{ InputInputDeviceArgs{...} }
+//          InputInputDeviceArray{ InputInputDeviceArgs{...} }
 type InputInputDeviceArrayInput interface {
 	pulumi.Input
 
@@ -212,7 +212,7 @@ type InputMediaConnectFlow struct {
 // InputMediaConnectFlowInput is an input type that accepts InputMediaConnectFlowArgs and InputMediaConnectFlowOutput values.
 // You can construct a concrete instance of `InputMediaConnectFlowInput` via:
 //
-//	InputMediaConnectFlowArgs{...}
+//          InputMediaConnectFlowArgs{...}
 type InputMediaConnectFlowInput interface {
 	pulumi.Input
 
@@ -240,7 +240,7 @@ func (i InputMediaConnectFlowArgs) ToInputMediaConnectFlowOutputWithContext(ctx 
 // InputMediaConnectFlowArrayInput is an input type that accepts InputMediaConnectFlowArray and InputMediaConnectFlowArrayOutput values.
 // You can construct a concrete instance of `InputMediaConnectFlowArrayInput` via:
 //
-//	InputMediaConnectFlowArray{ InputMediaConnectFlowArgs{...} }
+//          InputMediaConnectFlowArray{ InputMediaConnectFlowArgs{...} }
 type InputMediaConnectFlowArrayInput interface {
 	pulumi.Input
 
@@ -309,7 +309,7 @@ type InputSecurityGroupWhitelistRule struct {
 // InputSecurityGroupWhitelistRuleInput is an input type that accepts InputSecurityGroupWhitelistRuleArgs and InputSecurityGroupWhitelistRuleOutput values.
 // You can construct a concrete instance of `InputSecurityGroupWhitelistRuleInput` via:
 //
-//	InputSecurityGroupWhitelistRuleArgs{...}
+//          InputSecurityGroupWhitelistRuleArgs{...}
 type InputSecurityGroupWhitelistRuleInput interface {
 	pulumi.Input
 
@@ -337,7 +337,7 @@ func (i InputSecurityGroupWhitelistRuleArgs) ToInputSecurityGroupWhitelistRuleOu
 // InputSecurityGroupWhitelistRuleArrayInput is an input type that accepts InputSecurityGroupWhitelistRuleArray and InputSecurityGroupWhitelistRuleArrayOutput values.
 // You can construct a concrete instance of `InputSecurityGroupWhitelistRuleArrayInput` via:
 //
-//	InputSecurityGroupWhitelistRuleArray{ InputSecurityGroupWhitelistRuleArgs{...} }
+//          InputSecurityGroupWhitelistRuleArray{ InputSecurityGroupWhitelistRuleArgs{...} }
 type InputSecurityGroupWhitelistRuleArrayInput interface {
 	pulumi.Input
 
@@ -410,7 +410,7 @@ type InputSource struct {
 // InputSourceInput is an input type that accepts InputSourceArgs and InputSourceOutput values.
 // You can construct a concrete instance of `InputSourceInput` via:
 //
-//	InputSourceArgs{...}
+//          InputSourceArgs{...}
 type InputSourceInput interface {
 	pulumi.Input
 
@@ -442,7 +442,7 @@ func (i InputSourceArgs) ToInputSourceOutputWithContext(ctx context.Context) Inp
 // InputSourceArrayInput is an input type that accepts InputSourceArray and InputSourceArrayOutput values.
 // You can construct a concrete instance of `InputSourceArrayInput` via:
 //
-//	InputSourceArray{ InputSourceArgs{...} }
+//          InputSourceArray{ InputSourceArgs{...} }
 type InputSourceArrayInput interface {
 	pulumi.Input
 
@@ -523,7 +523,7 @@ type InputVpc struct {
 // InputVpcInput is an input type that accepts InputVpcArgs and InputVpcOutput values.
 // You can construct a concrete instance of `InputVpcInput` via:
 //
-//	InputVpcArgs{...}
+//          InputVpcArgs{...}
 type InputVpcInput interface {
 	pulumi.Input
 
@@ -561,11 +561,11 @@ func (i InputVpcArgs) ToInputVpcPtrOutputWithContext(ctx context.Context) InputV
 // InputVpcPtrInput is an input type that accepts InputVpcArgs, InputVpcPtr and InputVpcPtrOutput values.
 // You can construct a concrete instance of `InputVpcPtrInput` via:
 //
-//	        InputVpcArgs{...}
+//          InputVpcArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type InputVpcPtrInput interface {
 	pulumi.Input
 
@@ -683,7 +683,7 @@ type MultiplexMultiplexSettings struct {
 // MultiplexMultiplexSettingsInput is an input type that accepts MultiplexMultiplexSettingsArgs and MultiplexMultiplexSettingsOutput values.
 // You can construct a concrete instance of `MultiplexMultiplexSettingsInput` via:
 //
-//	MultiplexMultiplexSettingsArgs{...}
+//          MultiplexMultiplexSettingsArgs{...}
 type MultiplexMultiplexSettingsInput interface {
 	pulumi.Input
 
@@ -725,11 +725,11 @@ func (i MultiplexMultiplexSettingsArgs) ToMultiplexMultiplexSettingsPtrOutputWit
 // MultiplexMultiplexSettingsPtrInput is an input type that accepts MultiplexMultiplexSettingsArgs, MultiplexMultiplexSettingsPtr and MultiplexMultiplexSettingsPtrOutput values.
 // You can construct a concrete instance of `MultiplexMultiplexSettingsPtrInput` via:
 //
-//	        MultiplexMultiplexSettingsArgs{...}
+//          MultiplexMultiplexSettingsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type MultiplexMultiplexSettingsPtrInput interface {
 	pulumi.Input
 

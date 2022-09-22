@@ -19,28 +19,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := iam.NewOpenIdConnectProvider(ctx, "default", &iam.OpenIdConnectProviderArgs{
-//				ClientIdLists: pulumi.StringArray{
-//					pulumi.String("266362248691-342342xasdasdasda-apps.googleusercontent.com"),
-//				},
-//				ThumbprintLists: pulumi.StringArray{},
-//				Url:             pulumi.String("https://accounts.google.com"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := iam.NewOpenIdConnectProvider(ctx, "default", &iam.OpenIdConnectProviderArgs{
+// 			ClientIdLists: pulumi.StringArray{
+// 				pulumi.String("266362248691-342342xasdasdasda-apps.googleusercontent.com"),
+// 			},
+// 			ThumbprintLists: pulumi.StringArray{},
+// 			Url:             pulumi.String("https://accounts.google.com"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -48,9 +45,7 @@ import (
 // IAM OpenID Connect Providers can be imported using the `arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:iam/openIdConnectProvider:OpenIdConnectProvider default arn:aws:iam::123456789012:oidc-provider/accounts.google.com
-//
+//  $ pulumi import aws:iam/openIdConnectProvider:OpenIdConnectProvider default arn:aws:iam::123456789012:oidc-provider/accounts.google.com
 // ```
 type OpenIdConnectProvider struct {
 	pulumi.CustomResourceState
@@ -189,7 +184,7 @@ func (i *OpenIdConnectProvider) ToOpenIdConnectProviderOutputWithContext(ctx con
 // OpenIdConnectProviderArrayInput is an input type that accepts OpenIdConnectProviderArray and OpenIdConnectProviderArrayOutput values.
 // You can construct a concrete instance of `OpenIdConnectProviderArrayInput` via:
 //
-//	OpenIdConnectProviderArray{ OpenIdConnectProviderArgs{...} }
+//          OpenIdConnectProviderArray{ OpenIdConnectProviderArgs{...} }
 type OpenIdConnectProviderArrayInput interface {
 	pulumi.Input
 
@@ -214,7 +209,7 @@ func (i OpenIdConnectProviderArray) ToOpenIdConnectProviderArrayOutputWithContex
 // OpenIdConnectProviderMapInput is an input type that accepts OpenIdConnectProviderMap and OpenIdConnectProviderMapOutput values.
 // You can construct a concrete instance of `OpenIdConnectProviderMapInput` via:
 //
-//	OpenIdConnectProviderMap{ "key": OpenIdConnectProviderArgs{...} }
+//          OpenIdConnectProviderMap{ "key": OpenIdConnectProviderArgs{...} }
 type OpenIdConnectProviderMapInput interface {
 	pulumi.Input
 

@@ -19,66 +19,63 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
 //
-//	"encoding/json"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleVpcEndpointService, err := ec2.LookupVpcEndpointService(ctx, &ec2.LookupVpcEndpointServiceArgs{
-//				Service: pulumi.StringRef("dynamodb"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("10.0.0.0/16"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleVpcEndpoint, err := ec2.NewVpcEndpoint(ctx, "exampleVpcEndpoint", &ec2.VpcEndpointArgs{
-//				ServiceName: pulumi.String(exampleVpcEndpointService.ServiceName),
-//				VpcId:       exampleVpc.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Sid":    "AllowAll",
-//						"Effect": "Allow",
-//						"Principal": map[string]interface{}{
-//							"AWS": "*",
-//						},
-//						"Action": []string{
-//							"dynamodb:*",
-//						},
-//						"Resource": "*",
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			_, err = ec2.NewVpcEndpointPolicy(ctx, "exampleVpcEndpointPolicy", &ec2.VpcEndpointPolicyArgs{
-//				VpcEndpointId: exampleVpcEndpoint.ID(),
-//				Policy:        pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleVpcEndpointService, err := ec2.LookupVpcEndpointService(ctx, &ec2.LookupVpcEndpointServiceArgs{
+// 			Service: pulumi.StringRef("dynamodb"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("10.0.0.0/16"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleVpcEndpoint, err := ec2.NewVpcEndpoint(ctx, "exampleVpcEndpoint", &ec2.VpcEndpointArgs{
+// 			ServiceName: pulumi.String(exampleVpcEndpointService.ServiceName),
+// 			VpcId:       exampleVpc.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Sid":    "AllowAll",
+// 					"Effect": "Allow",
+// 					"Principal": map[string]interface{}{
+// 						"AWS": "*",
+// 					},
+// 					"Action": []string{
+// 						"dynamodb:*",
+// 					},
+// 					"Resource": "*",
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		_, err = ec2.NewVpcEndpointPolicy(ctx, "exampleVpcEndpointPolicy", &ec2.VpcEndpointPolicyArgs{
+// 			VpcEndpointId: exampleVpcEndpoint.ID(),
+// 			Policy:        pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -86,9 +83,7 @@ import (
 // VPC Endpoint Policies can be imported using the `id`, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/vpcEndpointPolicy:VpcEndpointPolicy example vpce-3ecf2a57
-//
+//  $ pulumi import aws:ec2/vpcEndpointPolicy:VpcEndpointPolicy example vpce-3ecf2a57
 // ```
 type VpcEndpointPolicy struct {
 	pulumi.CustomResourceState
@@ -184,7 +179,7 @@ func (i *VpcEndpointPolicy) ToVpcEndpointPolicyOutputWithContext(ctx context.Con
 // VpcEndpointPolicyArrayInput is an input type that accepts VpcEndpointPolicyArray and VpcEndpointPolicyArrayOutput values.
 // You can construct a concrete instance of `VpcEndpointPolicyArrayInput` via:
 //
-//	VpcEndpointPolicyArray{ VpcEndpointPolicyArgs{...} }
+//          VpcEndpointPolicyArray{ VpcEndpointPolicyArgs{...} }
 type VpcEndpointPolicyArrayInput interface {
 	pulumi.Input
 
@@ -209,7 +204,7 @@ func (i VpcEndpointPolicyArray) ToVpcEndpointPolicyArrayOutputWithContext(ctx co
 // VpcEndpointPolicyMapInput is an input type that accepts VpcEndpointPolicyMap and VpcEndpointPolicyMapOutput values.
 // You can construct a concrete instance of `VpcEndpointPolicyMapInput` via:
 //
-//	VpcEndpointPolicyMap{ "key": VpcEndpointPolicyArgs{...} }
+//          VpcEndpointPolicyMap{ "key": VpcEndpointPolicyArgs{...} }
 type VpcEndpointPolicyMapInput interface {
 	pulumi.Input
 

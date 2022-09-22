@@ -18,51 +18,47 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudformation"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudformation"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cloudformation.NewStack(ctx, "network", &cloudformation.StackArgs{
-//				Parameters: pulumi.StringMap{
-//					"VPCCidr": pulumi.String("10.0.0.0/16"),
-//				},
-//				TemplateBody: pulumi.String(fmt.Sprintf(`{
-//	  "Parameters" : {
-//	    "VPCCidr" : {
-//	      "Type" : "String",
-//	      "Default" : "10.0.0.0/16",
-//	      "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
-//	    }
-//	  },
-//	  "Resources" : {
-//	    "myVpc": {
-//	      "Type" : "AWS::EC2::VPC",
-//	      "Properties" : {
-//	        "CidrBlock" : { "Ref" : "VPCCidr" },
-//	        "Tags" : [
-//	          {"Key": "Name", "Value": "Primary_CF_VPC"}
-//	        ]
-//	      }
-//	    }
-//	  }
-//	}
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cloudformation.NewStack(ctx, "network", &cloudformation.StackArgs{
+// 			Parameters: pulumi.StringMap{
+// 				"VPCCidr": pulumi.String("10.0.0.0/16"),
+// 			},
+// 			TemplateBody: pulumi.String(fmt.Sprintf(`{
+//   "Parameters" : {
+//     "VPCCidr" : {
+//       "Type" : "String",
+//       "Default" : "10.0.0.0/16",
+//       "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
+//     }
+//   },
+//   "Resources" : {
+//     "myVpc": {
+//       "Type" : "AWS::EC2::VPC",
+//       "Properties" : {
+//         "CidrBlock" : { "Ref" : "VPCCidr" },
+//         "Tags" : [
+//           {"Key": "Name", "Value": "Primary_CF_VPC"}
+//         ]
+//       }
+//     }
+//   }
+// }
 //
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -70,9 +66,7 @@ import (
 // Cloudformation Stacks can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudformation/stack:Stack stack networking-stack
-//
+//  $ pulumi import aws:cloudformation/stack:Stack stack networking-stack
 // ```
 type Stack struct {
 	pulumi.CustomResourceState
@@ -317,7 +311,7 @@ func (i *Stack) ToStackOutputWithContext(ctx context.Context) StackOutput {
 // StackArrayInput is an input type that accepts StackArray and StackArrayOutput values.
 // You can construct a concrete instance of `StackArrayInput` via:
 //
-//	StackArray{ StackArgs{...} }
+//          StackArray{ StackArgs{...} }
 type StackArrayInput interface {
 	pulumi.Input
 
@@ -342,7 +336,7 @@ func (i StackArray) ToStackArrayOutputWithContext(ctx context.Context) StackArra
 // StackMapInput is an input type that accepts StackMap and StackMapOutput values.
 // You can construct a concrete instance of `StackMapInput` via:
 //
-//	StackMap{ "key": StackArgs{...} }
+//          StackMap{ "key": StackArgs{...} }
 type StackMapInput interface {
 	pulumi.Input
 

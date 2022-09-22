@@ -23,53 +23,50 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/fis"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/fis"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := fis.NewExperimentTemplate(ctx, "example", &fis.ExperimentTemplateArgs{
-//				Description: pulumi.String("example"),
-//				RoleArn:     pulumi.Any(aws_iam_role.Example.Arn),
-//				StopConditions: fis.ExperimentTemplateStopConditionArray{
-//					&fis.ExperimentTemplateStopConditionArgs{
-//						Source: pulumi.String("none"),
-//					},
-//				},
-//				Actions: fis.ExperimentTemplateActionArray{
-//					&fis.ExperimentTemplateActionArgs{
-//						Name:     pulumi.String("example-action"),
-//						ActionId: pulumi.String("aws:ec2:terminate-instances"),
-//						Target: &fis.ExperimentTemplateActionTargetArgs{
-//							Key:   pulumi.String("Instances"),
-//							Value: pulumi.String("example-target"),
-//						},
-//					},
-//				},
-//				Targets: fis.ExperimentTemplateTargetArray{
-//					&fis.ExperimentTemplateTargetArgs{
-//						Name:          pulumi.String("example-target"),
-//						ResourceType:  pulumi.String("aws:ec2:instance"),
-//						SelectionMode: pulumi.String("COUNT(1)"),
-//						ResourceTags: fis.ExperimentTemplateTargetResourceTagArray{
-//							&fis.ExperimentTemplateTargetResourceTagArgs{
-//								Key:   pulumi.String("env"),
-//								Value: pulumi.String("example"),
-//							},
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := fis.NewExperimentTemplate(ctx, "example", &fis.ExperimentTemplateArgs{
+// 			Description: pulumi.String("example"),
+// 			RoleArn:     pulumi.Any(aws_iam_role.Example.Arn),
+// 			StopConditions: fis.ExperimentTemplateStopConditionArray{
+// 				&fis.ExperimentTemplateStopConditionArgs{
+// 					Source: pulumi.String("none"),
+// 				},
+// 			},
+// 			Actions: fis.ExperimentTemplateActionArray{
+// 				&fis.ExperimentTemplateActionArgs{
+// 					Name:     pulumi.String("example-action"),
+// 					ActionId: pulumi.String("aws:ec2:terminate-instances"),
+// 					Target: &fis.ExperimentTemplateActionTargetArgs{
+// 						Key:   pulumi.String("Instances"),
+// 						Value: pulumi.String("example-target"),
+// 					},
+// 				},
+// 			},
+// 			Targets: fis.ExperimentTemplateTargetArray{
+// 				&fis.ExperimentTemplateTargetArgs{
+// 					Name:          pulumi.String("example-target"),
+// 					ResourceType:  pulumi.String("aws:ec2:instance"),
+// 					SelectionMode: pulumi.String("COUNT(1)"),
+// 					ResourceTags: fis.ExperimentTemplateTargetResourceTagArray{
+// 						&fis.ExperimentTemplateTargetResourceTagArgs{
+// 							Key:   pulumi.String("env"),
+// 							Value: pulumi.String("example"),
+// 						},
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -77,9 +74,7 @@ import (
 // FIS Experiment Templates can be imported using the `id`, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:fis/experimentTemplate:ExperimentTemplate template EXT123AbCdEfGhIjK
-//
+//  $ pulumi import aws:fis/experimentTemplate:ExperimentTemplate template EXT123AbCdEfGhIjK
 // ```
 type ExperimentTemplate struct {
 	pulumi.CustomResourceState
@@ -227,7 +222,7 @@ func (i *ExperimentTemplate) ToExperimentTemplateOutputWithContext(ctx context.C
 // ExperimentTemplateArrayInput is an input type that accepts ExperimentTemplateArray and ExperimentTemplateArrayOutput values.
 // You can construct a concrete instance of `ExperimentTemplateArrayInput` via:
 //
-//	ExperimentTemplateArray{ ExperimentTemplateArgs{...} }
+//          ExperimentTemplateArray{ ExperimentTemplateArgs{...} }
 type ExperimentTemplateArrayInput interface {
 	pulumi.Input
 
@@ -252,7 +247,7 @@ func (i ExperimentTemplateArray) ToExperimentTemplateArrayOutputWithContext(ctx 
 // ExperimentTemplateMapInput is an input type that accepts ExperimentTemplateMap and ExperimentTemplateMapOutput values.
 // You can construct a concrete instance of `ExperimentTemplateMapInput` via:
 //
-//	ExperimentTemplateMap{ "key": ExperimentTemplateArgs{...} }
+//          ExperimentTemplateMap{ "key": ExperimentTemplateArgs{...} }
 type ExperimentTemplateMapInput interface {
 	pulumi.Input
 

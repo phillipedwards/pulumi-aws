@@ -21,24 +21,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/memorydb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/memorydb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := memorydb.NewSnapshot(ctx, "example", &memorydb.SnapshotArgs{
-//				ClusterName: pulumi.Any(aws_memorydb_cluster.Example.Name),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := memorydb.NewSnapshot(ctx, "example", &memorydb.SnapshotArgs{
+// 			ClusterName: pulumi.Any(aws_memorydb_cluster.Example.Name),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // Use the `name` to import a snapshot. For example
 //
 // ```sh
-//
-//	$ pulumi import aws:memorydb/snapshot:Snapshot example my-snapshot
-//
+//  $ pulumi import aws:memorydb/snapshot:Snapshot example my-snapshot
 // ```
 type Snapshot struct {
 	pulumi.CustomResourceState
@@ -203,7 +198,7 @@ func (i *Snapshot) ToSnapshotOutputWithContext(ctx context.Context) SnapshotOutp
 // SnapshotArrayInput is an input type that accepts SnapshotArray and SnapshotArrayOutput values.
 // You can construct a concrete instance of `SnapshotArrayInput` via:
 //
-//	SnapshotArray{ SnapshotArgs{...} }
+//          SnapshotArray{ SnapshotArgs{...} }
 type SnapshotArrayInput interface {
 	pulumi.Input
 
@@ -228,7 +223,7 @@ func (i SnapshotArray) ToSnapshotArrayOutputWithContext(ctx context.Context) Sna
 // SnapshotMapInput is an input type that accepts SnapshotMap and SnapshotMapOutput values.
 // You can construct a concrete instance of `SnapshotMapInput` via:
 //
-//	SnapshotMap{ "key": SnapshotArgs{...} }
+//          SnapshotMap{ "key": SnapshotArgs{...} }
 type SnapshotMapInput interface {
 	pulumi.Input
 

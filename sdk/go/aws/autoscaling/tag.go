@@ -16,9 +16,7 @@ import (
 // `aws_autoscaling_group_tag` can be imported by using the ASG name and key, separated by a comma (`,`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:autoscaling/tag:Tag example asg-example,k8s.io/cluster-autoscaler/node-template/label/eks.amazonaws.com/capacityType
-//
+//  $ pulumi import aws:autoscaling/tag:Tag example asg-example,k8s.io/cluster-autoscaler/node-template/label/eks.amazonaws.com/capacityType
 // ```
 type Tag struct {
 	pulumi.CustomResourceState
@@ -122,7 +120,7 @@ func (i *Tag) ToTagOutputWithContext(ctx context.Context) TagOutput {
 // TagArrayInput is an input type that accepts TagArray and TagArrayOutput values.
 // You can construct a concrete instance of `TagArrayInput` via:
 //
-//	TagArray{ TagArgs{...} }
+//          TagArray{ TagArgs{...} }
 type TagArrayInput interface {
 	pulumi.Input
 
@@ -147,7 +145,7 @@ func (i TagArray) ToTagArrayOutputWithContext(ctx context.Context) TagArrayOutpu
 // TagMapInput is an input type that accepts TagMap and TagMapOutput values.
 // You can construct a concrete instance of `TagMapInput` via:
 //
-//	TagMap{ "key": TagArgs{...} }
+//          TagMap{ "key": TagArgs{...} }
 type TagMapInput interface {
 	pulumi.Input
 

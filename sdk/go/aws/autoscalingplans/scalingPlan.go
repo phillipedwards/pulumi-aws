@@ -25,9 +25,7 @@ import (
 // Auto Scaling scaling plans can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:autoscalingplans/scalingPlan:ScalingPlan example MyScale1
-//
+//  $ pulumi import aws:autoscalingplans/scalingPlan:ScalingPlan example MyScale1
 // ```
 type ScalingPlan struct {
 	pulumi.CustomResourceState
@@ -147,7 +145,7 @@ func (i *ScalingPlan) ToScalingPlanOutputWithContext(ctx context.Context) Scalin
 // ScalingPlanArrayInput is an input type that accepts ScalingPlanArray and ScalingPlanArrayOutput values.
 // You can construct a concrete instance of `ScalingPlanArrayInput` via:
 //
-//	ScalingPlanArray{ ScalingPlanArgs{...} }
+//          ScalingPlanArray{ ScalingPlanArgs{...} }
 type ScalingPlanArrayInput interface {
 	pulumi.Input
 
@@ -172,7 +170,7 @@ func (i ScalingPlanArray) ToScalingPlanArrayOutputWithContext(ctx context.Contex
 // ScalingPlanMapInput is an input type that accepts ScalingPlanMap and ScalingPlanMapOutput values.
 // You can construct a concrete instance of `ScalingPlanMapInput` via:
 //
-//	ScalingPlanMap{ "key": ScalingPlanArgs{...} }
+//          ScalingPlanMap{ "key": ScalingPlanArgs{...} }
 type ScalingPlanMapInput interface {
 	pulumi.Input
 

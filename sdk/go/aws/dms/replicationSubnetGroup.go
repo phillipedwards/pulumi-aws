@@ -19,31 +19,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/dms"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/dms"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := dms.NewReplicationSubnetGroup(ctx, "test", &dms.ReplicationSubnetGroupArgs{
-//				ReplicationSubnetGroupDescription: pulumi.String("Test replication subnet group"),
-//				ReplicationSubnetGroupId:          pulumi.String("test-dms-replication-subnet-group-tf"),
-//				SubnetIds: pulumi.StringArray{
-//					pulumi.String("subnet-12345678"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("test"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := dms.NewReplicationSubnetGroup(ctx, "test", &dms.ReplicationSubnetGroupArgs{
+// 			ReplicationSubnetGroupDescription: pulumi.String("Test replication subnet group"),
+// 			ReplicationSubnetGroupId:          pulumi.String("test-dms-replication-subnet-group-tf"),
+// 			SubnetIds: pulumi.StringArray{
+// 				pulumi.String("subnet-12345678"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("test"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -51,9 +48,7 @@ import (
 // Replication subnet groups can be imported using the `replication_subnet_group_id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:dms/replicationSubnetGroup:ReplicationSubnetGroup test test-dms-replication-subnet-group-tf
-//
+//  $ pulumi import aws:dms/replicationSubnetGroup:ReplicationSubnetGroup test test-dms-replication-subnet-group-tf
 // ```
 type ReplicationSubnetGroup struct {
 	pulumi.CustomResourceState
@@ -195,7 +190,7 @@ func (i *ReplicationSubnetGroup) ToReplicationSubnetGroupOutputWithContext(ctx c
 // ReplicationSubnetGroupArrayInput is an input type that accepts ReplicationSubnetGroupArray and ReplicationSubnetGroupArrayOutput values.
 // You can construct a concrete instance of `ReplicationSubnetGroupArrayInput` via:
 //
-//	ReplicationSubnetGroupArray{ ReplicationSubnetGroupArgs{...} }
+//          ReplicationSubnetGroupArray{ ReplicationSubnetGroupArgs{...} }
 type ReplicationSubnetGroupArrayInput interface {
 	pulumi.Input
 
@@ -220,7 +215,7 @@ func (i ReplicationSubnetGroupArray) ToReplicationSubnetGroupArrayOutputWithCont
 // ReplicationSubnetGroupMapInput is an input type that accepts ReplicationSubnetGroupMap and ReplicationSubnetGroupMapOutput values.
 // You can construct a concrete instance of `ReplicationSubnetGroupMapInput` via:
 //
-//	ReplicationSubnetGroupMap{ "key": ReplicationSubnetGroupArgs{...} }
+//          ReplicationSubnetGroupMap{ "key": ReplicationSubnetGroupArgs{...} }
 type ReplicationSubnetGroupMapInput interface {
 	pulumi.Input
 

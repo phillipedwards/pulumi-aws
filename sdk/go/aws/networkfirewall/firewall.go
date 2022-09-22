@@ -19,34 +19,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/networkfirewall"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/networkfirewall"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := networkfirewall.NewFirewall(ctx, "example", &networkfirewall.FirewallArgs{
-//				FirewallPolicyArn: pulumi.Any(aws_networkfirewall_firewall_policy.Example.Arn),
-//				VpcId:             pulumi.Any(aws_vpc.Example.Id),
-//				SubnetMappings: networkfirewall.FirewallSubnetMappingArray{
-//					&networkfirewall.FirewallSubnetMappingArgs{
-//						SubnetId: pulumi.Any(aws_subnet.Example.Id),
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Tag1": pulumi.String("Value1"),
-//					"Tag2": pulumi.String("Value2"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := networkfirewall.NewFirewall(ctx, "example", &networkfirewall.FirewallArgs{
+// 			FirewallPolicyArn: pulumi.Any(aws_networkfirewall_firewall_policy.Example.Arn),
+// 			VpcId:             pulumi.Any(aws_vpc.Example.Id),
+// 			SubnetMappings: networkfirewall.FirewallSubnetMappingArray{
+// 				&networkfirewall.FirewallSubnetMappingArgs{
+// 					SubnetId: pulumi.Any(aws_subnet.Example.Id),
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Tag1": pulumi.String("Value1"),
+// 				"Tag2": pulumi.String("Value2"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -54,9 +51,7 @@ import (
 // Network Firewall Firewalls can be imported using their `ARN`.
 //
 // ```sh
-//
-//	$ pulumi import aws:networkfirewall/firewall:Firewall example arn:aws:network-firewall:us-west-1:123456789012:firewall/example
-//
+//  $ pulumi import aws:networkfirewall/firewall:Firewall example arn:aws:network-firewall:us-west-1:123456789012:firewall/example
 // ```
 type Firewall struct {
 	pulumi.CustomResourceState
@@ -257,7 +252,7 @@ func (i *Firewall) ToFirewallOutputWithContext(ctx context.Context) FirewallOutp
 // FirewallArrayInput is an input type that accepts FirewallArray and FirewallArrayOutput values.
 // You can construct a concrete instance of `FirewallArrayInput` via:
 //
-//	FirewallArray{ FirewallArgs{...} }
+//          FirewallArray{ FirewallArgs{...} }
 type FirewallArrayInput interface {
 	pulumi.Input
 
@@ -282,7 +277,7 @@ func (i FirewallArray) ToFirewallArrayOutputWithContext(ctx context.Context) Fir
 // FirewallMapInput is an input type that accepts FirewallMap and FirewallMapOutput values.
 // You can construct a concrete instance of `FirewallMapInput` via:
 //
-//	FirewallMap{ "key": FirewallArgs{...} }
+//          FirewallMap{ "key": FirewallArgs{...} }
 type FirewallMapInput interface {
 	pulumi.Input
 

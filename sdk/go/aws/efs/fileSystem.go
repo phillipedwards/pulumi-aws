@@ -19,26 +19,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/efs"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/efs"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := efs.NewFileSystem(ctx, "foo", &efs.FileSystemArgs{
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("MyProduct"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := efs.NewFileSystem(ctx, "foo", &efs.FileSystemArgs{
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("MyProduct"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Using lifecycle policy
 //
@@ -46,28 +43,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/efs"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/efs"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := efs.NewFileSystem(ctx, "fooWithLifecylePolicy", &efs.FileSystemArgs{
-//				LifecyclePolicies: efs.FileSystemLifecyclePolicyArray{
-//					&efs.FileSystemLifecyclePolicyArgs{
-//						TransitionToIa: pulumi.String("AFTER_30_DAYS"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := efs.NewFileSystem(ctx, "fooWithLifecylePolicy", &efs.FileSystemArgs{
+// 			LifecyclePolicies: efs.FileSystemLifecyclePolicyArray{
+// 				&efs.FileSystemLifecyclePolicyArgs{
+// 					TransitionToIa: pulumi.String("AFTER_30_DAYS"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -75,9 +69,7 @@ import (
 // The EFS file systems can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:efs/fileSystem:FileSystem foo fs-6fa144c6
-//
+//  $ pulumi import aws:efs/fileSystem:FileSystem foo fs-6fa144c6
 // ```
 type FileSystem struct {
 	pulumi.CustomResourceState
@@ -302,7 +294,7 @@ func (i *FileSystem) ToFileSystemOutputWithContext(ctx context.Context) FileSyst
 // FileSystemArrayInput is an input type that accepts FileSystemArray and FileSystemArrayOutput values.
 // You can construct a concrete instance of `FileSystemArrayInput` via:
 //
-//	FileSystemArray{ FileSystemArgs{...} }
+//          FileSystemArray{ FileSystemArgs{...} }
 type FileSystemArrayInput interface {
 	pulumi.Input
 
@@ -327,7 +319,7 @@ func (i FileSystemArray) ToFileSystemArrayOutputWithContext(ctx context.Context)
 // FileSystemMapInput is an input type that accepts FileSystemMap and FileSystemMapOutput values.
 // You can construct a concrete instance of `FileSystemMapInput` via:
 //
-//	FileSystemMap{ "key": FileSystemArgs{...} }
+//          FileSystemMap{ "key": FileSystemArgs{...} }
 type FileSystemMapInput interface {
 	pulumi.Input
 

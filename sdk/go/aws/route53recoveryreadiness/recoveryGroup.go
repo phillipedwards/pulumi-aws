@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53recoveryreadiness"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53recoveryreadiness"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53recoveryreadiness.NewRecoveryGroup(ctx, "example", &route53recoveryreadiness.RecoveryGroupArgs{
-//				RecoveryGroupName: pulumi.String("my-high-availability-app"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53recoveryreadiness.NewRecoveryGroup(ctx, "example", &route53recoveryreadiness.RecoveryGroupArgs{
+// 			RecoveryGroupName: pulumi.String("my-high-availability-app"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // Route53 Recovery Readiness recovery groups can be imported via the recovery group name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:route53recoveryreadiness/recoveryGroup:RecoveryGroup my-high-availability-app my-high-availability-app
-//
+//  $ pulumi import aws:route53recoveryreadiness/recoveryGroup:RecoveryGroup my-high-availability-app my-high-availability-app
 // ```
 type RecoveryGroup struct {
 	pulumi.CustomResourceState
@@ -169,7 +164,7 @@ func (i *RecoveryGroup) ToRecoveryGroupOutputWithContext(ctx context.Context) Re
 // RecoveryGroupArrayInput is an input type that accepts RecoveryGroupArray and RecoveryGroupArrayOutput values.
 // You can construct a concrete instance of `RecoveryGroupArrayInput` via:
 //
-//	RecoveryGroupArray{ RecoveryGroupArgs{...} }
+//          RecoveryGroupArray{ RecoveryGroupArgs{...} }
 type RecoveryGroupArrayInput interface {
 	pulumi.Input
 
@@ -194,7 +189,7 @@ func (i RecoveryGroupArray) ToRecoveryGroupArrayOutputWithContext(ctx context.Co
 // RecoveryGroupMapInput is an input type that accepts RecoveryGroupMap and RecoveryGroupMapOutput values.
 // You can construct a concrete instance of `RecoveryGroupMapInput` via:
 //
-//	RecoveryGroupMap{ "key": RecoveryGroupArgs{...} }
+//          RecoveryGroupMap{ "key": RecoveryGroupArgs{...} }
 type RecoveryGroupMapInput interface {
 	pulumi.Input
 

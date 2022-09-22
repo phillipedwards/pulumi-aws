@@ -22,35 +22,32 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rds"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rds"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := rds.NewClusterParameterGroup(ctx, "default", &rds.ClusterParameterGroupArgs{
-//				Description: pulumi.String("RDS default cluster parameter group"),
-//				Family:      pulumi.String("aurora5.6"),
-//				Parameters: rds.ClusterParameterGroupParameterArray{
-//					&rds.ClusterParameterGroupParameterArgs{
-//						Name:  pulumi.String("character_set_server"),
-//						Value: pulumi.String("utf8"),
-//					},
-//					&rds.ClusterParameterGroupParameterArgs{
-//						Name:  pulumi.String("character_set_client"),
-//						Value: pulumi.String("utf8"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := rds.NewClusterParameterGroup(ctx, "default", &rds.ClusterParameterGroupArgs{
+// 			Description: pulumi.String("RDS default cluster parameter group"),
+// 			Family:      pulumi.String("aurora5.6"),
+// 			Parameters: rds.ClusterParameterGroupParameterArray{
+// 				&rds.ClusterParameterGroupParameterArgs{
+// 					Name:  pulumi.String("character_set_server"),
+// 					Value: pulumi.String("utf8"),
+// 				},
+// 				&rds.ClusterParameterGroupParameterArgs{
+// 					Name:  pulumi.String("character_set_client"),
+// 					Value: pulumi.String("utf8"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -58,9 +55,7 @@ import (
 // RDS Cluster Parameter Groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:rds/clusterParameterGroup:ClusterParameterGroup cluster_pg production-pg-1
-//
+//  $ pulumi import aws:rds/clusterParameterGroup:ClusterParameterGroup cluster_pg production-pg-1
 // ```
 type ClusterParameterGroup struct {
 	pulumi.CustomResourceState
@@ -216,7 +211,7 @@ func (i *ClusterParameterGroup) ToClusterParameterGroupOutputWithContext(ctx con
 // ClusterParameterGroupArrayInput is an input type that accepts ClusterParameterGroupArray and ClusterParameterGroupArrayOutput values.
 // You can construct a concrete instance of `ClusterParameterGroupArrayInput` via:
 //
-//	ClusterParameterGroupArray{ ClusterParameterGroupArgs{...} }
+//          ClusterParameterGroupArray{ ClusterParameterGroupArgs{...} }
 type ClusterParameterGroupArrayInput interface {
 	pulumi.Input
 
@@ -241,7 +236,7 @@ func (i ClusterParameterGroupArray) ToClusterParameterGroupArrayOutputWithContex
 // ClusterParameterGroupMapInput is an input type that accepts ClusterParameterGroupMap and ClusterParameterGroupMapOutput values.
 // You can construct a concrete instance of `ClusterParameterGroupMapInput` via:
 //
-//	ClusterParameterGroupMap{ "key": ClusterParameterGroupArgs{...} }
+//          ClusterParameterGroupMap{ "key": ClusterParameterGroupArgs{...} }
 type ClusterParameterGroupMapInput interface {
 	pulumi.Input
 

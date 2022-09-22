@@ -18,22 +18,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/mediastore"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/mediastore"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := mediastore.NewContainer(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := mediastore.NewContainer(ctx, "example", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -41,9 +38,7 @@ import (
 // MediaStore Container can be imported using the MediaStore Container Name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:mediastore/container:Container example example
-//
+//  $ pulumi import aws:mediastore/container:Container example example
 // ```
 type Container struct {
 	pulumi.CustomResourceState
@@ -159,7 +154,7 @@ func (i *Container) ToContainerOutputWithContext(ctx context.Context) ContainerO
 // ContainerArrayInput is an input type that accepts ContainerArray and ContainerArrayOutput values.
 // You can construct a concrete instance of `ContainerArrayInput` via:
 //
-//	ContainerArray{ ContainerArgs{...} }
+//          ContainerArray{ ContainerArgs{...} }
 type ContainerArrayInput interface {
 	pulumi.Input
 
@@ -184,7 +179,7 @@ func (i ContainerArray) ToContainerArrayOutputWithContext(ctx context.Context) C
 // ContainerMapInput is an input type that accepts ContainerMap and ContainerMapOutput values.
 // You can construct a concrete instance of `ContainerMapInput` via:
 //
-//	ContainerMap{ "key": ContainerArgs{...} }
+//          ContainerMap{ "key": ContainerArgs{...} }
 type ContainerMapInput interface {
 	pulumi.Input
 

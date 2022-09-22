@@ -15,11 +15,10 @@
 package main
 
 import (
-	aws "github.com/pulumi/pulumi-aws/provider/v5"
-	"github.com/pulumi/pulumi-aws/provider/v5/pkg/version"
+	aws "github.com/phillipedwards/pulumi-aws/provider"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
 )
 
 func main() {
-	tfgen.Main("aws", version.Version, aws.Provider())
+	tfgen.Main("aws", "0.0.1", aws.Provider())
 }

@@ -19,52 +19,49 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/docdb"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/docdb"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleCluster, err := docdb.NewCluster(ctx, "exampleCluster", &docdb.ClusterArgs{
-//				ClusterIdentifier: pulumi.String("example"),
-//				AvailabilityZones: pulumi.StringArray{
-//					pulumi.Any(data.Aws_availability_zones.Available.Names[0]),
-//					pulumi.Any(data.Aws_availability_zones.Available.Names[1]),
-//					pulumi.Any(data.Aws_availability_zones.Available.Names[2]),
-//				},
-//				MasterUsername:    pulumi.String("foo"),
-//				MasterPassword:    pulumi.String("mustbeeightcharaters"),
-//				SkipFinalSnapshot: pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleTopic, err := sns.NewTopic(ctx, "exampleTopic", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = docdb.NewEventSubscription(ctx, "exampleEventSubscription", &docdb.EventSubscriptionArgs{
-//				Enabled: pulumi.Bool(true),
-//				EventCategories: pulumi.StringArray{
-//					pulumi.String("creation"),
-//					pulumi.String("failure"),
-//				},
-//				SourceType: pulumi.String("db-cluster"),
-//				SourceIds: pulumi.StringArray{
-//					exampleCluster.ID(),
-//				},
-//				SnsTopicArn: exampleTopic.Arn,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleCluster, err := docdb.NewCluster(ctx, "exampleCluster", &docdb.ClusterArgs{
+// 			ClusterIdentifier: pulumi.String("example"),
+// 			AvailabilityZones: pulumi.StringArray{
+// 				pulumi.Any(data.Aws_availability_zones.Available.Names[0]),
+// 				pulumi.Any(data.Aws_availability_zones.Available.Names[1]),
+// 				pulumi.Any(data.Aws_availability_zones.Available.Names[2]),
+// 			},
+// 			MasterUsername:    pulumi.String("foo"),
+// 			MasterPassword:    pulumi.String("mustbeeightcharaters"),
+// 			SkipFinalSnapshot: pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleTopic, err := sns.NewTopic(ctx, "exampleTopic", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = docdb.NewEventSubscription(ctx, "exampleEventSubscription", &docdb.EventSubscriptionArgs{
+// 			Enabled: pulumi.Bool(true),
+// 			EventCategories: pulumi.StringArray{
+// 				pulumi.String("creation"),
+// 				pulumi.String("failure"),
+// 			},
+// 			SourceType: pulumi.String("db-cluster"),
+// 			SourceIds: pulumi.StringArray{
+// 				exampleCluster.ID(),
+// 			},
+// 			SnsTopicArn: exampleTopic.Arn,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -72,9 +69,7 @@ import (
 // DocDB Event Subscriptions can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:docdb/eventSubscription:EventSubscription example event-sub
-//
+//  $ pulumi import aws:docdb/eventSubscription:EventSubscription example event-sub
 // ```
 type EventSubscription struct {
 	pulumi.CustomResourceState
@@ -243,7 +238,7 @@ func (i *EventSubscription) ToEventSubscriptionOutputWithContext(ctx context.Con
 // EventSubscriptionArrayInput is an input type that accepts EventSubscriptionArray and EventSubscriptionArrayOutput values.
 // You can construct a concrete instance of `EventSubscriptionArrayInput` via:
 //
-//	EventSubscriptionArray{ EventSubscriptionArgs{...} }
+//          EventSubscriptionArray{ EventSubscriptionArgs{...} }
 type EventSubscriptionArrayInput interface {
 	pulumi.Input
 
@@ -268,7 +263,7 @@ func (i EventSubscriptionArray) ToEventSubscriptionArrayOutputWithContext(ctx co
 // EventSubscriptionMapInput is an input type that accepts EventSubscriptionMap and EventSubscriptionMapOutput values.
 // You can construct a concrete instance of `EventSubscriptionMapInput` via:
 //
-//	EventSubscriptionMap{ "key": EventSubscriptionArgs{...} }
+//          EventSubscriptionMap{ "key": EventSubscriptionArgs{...} }
 type EventSubscriptionMapInput interface {
 	pulumi.Input
 

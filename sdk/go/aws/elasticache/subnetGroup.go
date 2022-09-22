@@ -23,47 +23,44 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/elasticache"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/elasticache"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			fooVpc, err := ec2.NewVpc(ctx, "fooVpc", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("10.0.0.0/16"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("tf-test"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			fooSubnet, err := ec2.NewSubnet(ctx, "fooSubnet", &ec2.SubnetArgs{
-//				VpcId:            fooVpc.ID(),
-//				CidrBlock:        pulumi.String("10.0.0.0/24"),
-//				AvailabilityZone: pulumi.String("us-west-2a"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("tf-test"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = elasticache.NewSubnetGroup(ctx, "bar", &elasticache.SubnetGroupArgs{
-//				SubnetIds: pulumi.StringArray{
-//					fooSubnet.ID(),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		fooVpc, err := ec2.NewVpc(ctx, "fooVpc", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("10.0.0.0/16"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("tf-test"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		fooSubnet, err := ec2.NewSubnet(ctx, "fooSubnet", &ec2.SubnetArgs{
+// 			VpcId:            fooVpc.ID(),
+// 			CidrBlock:        pulumi.String("10.0.0.0/24"),
+// 			AvailabilityZone: pulumi.String("us-west-2a"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("tf-test"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = elasticache.NewSubnetGroup(ctx, "bar", &elasticache.SubnetGroupArgs{
+// 			SubnetIds: pulumi.StringArray{
+// 				fooSubnet.ID(),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -71,9 +68,7 @@ import (
 // ElastiCache Subnet Groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:elasticache/subnetGroup:SubnetGroup bar tf-test-cache-subnet
-//
+//  $ pulumi import aws:elasticache/subnetGroup:SubnetGroup bar tf-test-cache-subnet
 // ```
 type SubnetGroup struct {
 	pulumi.CustomResourceState
@@ -206,7 +201,7 @@ func (i *SubnetGroup) ToSubnetGroupOutputWithContext(ctx context.Context) Subnet
 // SubnetGroupArrayInput is an input type that accepts SubnetGroupArray and SubnetGroupArrayOutput values.
 // You can construct a concrete instance of `SubnetGroupArrayInput` via:
 //
-//	SubnetGroupArray{ SubnetGroupArgs{...} }
+//          SubnetGroupArray{ SubnetGroupArgs{...} }
 type SubnetGroupArrayInput interface {
 	pulumi.Input
 
@@ -231,7 +226,7 @@ func (i SubnetGroupArray) ToSubnetGroupArrayOutputWithContext(ctx context.Contex
 // SubnetGroupMapInput is an input type that accepts SubnetGroupMap and SubnetGroupMapOutput values.
 // You can construct a concrete instance of `SubnetGroupMapInput` via:
 //
-//	SubnetGroupMap{ "key": SubnetGroupArgs{...} }
+//          SubnetGroupMap{ "key": SubnetGroupArgs{...} }
 type SubnetGroupMapInput interface {
 	pulumi.Input
 

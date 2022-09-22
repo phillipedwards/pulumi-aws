@@ -21,27 +21,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sagemaker.NewEndpoint(ctx, "endpoint", &sagemaker.EndpointArgs{
-//				EndpointConfigName: pulumi.Any(aws_sagemaker_endpoint_configuration.Ec.Name),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("foo"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sagemaker.NewEndpoint(ctx, "endpoint", &sagemaker.EndpointArgs{
+// 			EndpointConfigName: pulumi.Any(aws_sagemaker_endpoint_configuration.Ec.Name),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("foo"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -49,9 +46,7 @@ import (
 // Endpoints can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/endpoint:Endpoint test_endpoint my-endpoint
-//
+//  $ pulumi import aws:sagemaker/endpoint:Endpoint test_endpoint my-endpoint
 // ```
 type Endpoint struct {
 	pulumi.CustomResourceState
@@ -184,7 +179,7 @@ func (i *Endpoint) ToEndpointOutputWithContext(ctx context.Context) EndpointOutp
 // EndpointArrayInput is an input type that accepts EndpointArray and EndpointArrayOutput values.
 // You can construct a concrete instance of `EndpointArrayInput` via:
 //
-//	EndpointArray{ EndpointArgs{...} }
+//          EndpointArray{ EndpointArgs{...} }
 type EndpointArrayInput interface {
 	pulumi.Input
 
@@ -209,7 +204,7 @@ func (i EndpointArray) ToEndpointArrayOutputWithContext(ctx context.Context) End
 // EndpointMapInput is an input type that accepts EndpointMap and EndpointMapOutput values.
 // You can construct a concrete instance of `EndpointMapInput` via:
 //
-//	EndpointMap{ "key": EndpointArgs{...} }
+//          EndpointMap{ "key": EndpointArgs{...} }
 type EndpointMapInput interface {
 	pulumi.Input
 

@@ -27,9 +27,7 @@ import (
 // CloudHSM v2 Clusters can be imported using the `cluster id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudhsmv2/cluster:Cluster test_cluster cluster-aeb282a201
-//
+//  $ pulumi import aws:cloudhsmv2/cluster:Cluster test_cluster cluster-aeb282a201
 // ```
 type Cluster struct {
 	pulumi.CustomResourceState
@@ -204,7 +202,7 @@ func (i *Cluster) ToClusterOutputWithContext(ctx context.Context) ClusterOutput 
 // ClusterArrayInput is an input type that accepts ClusterArray and ClusterArrayOutput values.
 // You can construct a concrete instance of `ClusterArrayInput` via:
 //
-//	ClusterArray{ ClusterArgs{...} }
+//          ClusterArray{ ClusterArgs{...} }
 type ClusterArrayInput interface {
 	pulumi.Input
 
@@ -229,7 +227,7 @@ func (i ClusterArray) ToClusterArrayOutputWithContext(ctx context.Context) Clust
 // ClusterMapInput is an input type that accepts ClusterMap and ClusterMapOutput values.
 // You can construct a concrete instance of `ClusterMapInput` via:
 //
-//	ClusterMap{ "key": ClusterArgs{...} }
+//          ClusterMap{ "key": ClusterArgs{...} }
 type ClusterMapInput interface {
 	pulumi.Input
 

@@ -20,25 +20,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sagemaker.NewImage(ctx, "example", &sagemaker.ImageArgs{
-//				ImageName: pulumi.String("example"),
-//				RoleArn:   pulumi.Any(aws_iam_role.Test.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sagemaker.NewImage(ctx, "example", &sagemaker.ImageArgs{
+// 			ImageName: pulumi.String("example"),
+// 			RoleArn:   pulumi.Any(aws_iam_role.Test.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // SageMaker Code Images can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/image:Image test_image my-code-repo
-//
+//  $ pulumi import aws:sagemaker/image:Image test_image my-code-repo
 // ```
 type Image struct {
 	pulumi.CustomResourceState
@@ -194,7 +189,7 @@ func (i *Image) ToImageOutputWithContext(ctx context.Context) ImageOutput {
 // ImageArrayInput is an input type that accepts ImageArray and ImageArrayOutput values.
 // You can construct a concrete instance of `ImageArrayInput` via:
 //
-//	ImageArray{ ImageArgs{...} }
+//          ImageArray{ ImageArgs{...} }
 type ImageArrayInput interface {
 	pulumi.Input
 
@@ -219,7 +214,7 @@ func (i ImageArray) ToImageArrayOutputWithContext(ctx context.Context) ImageArra
 // ImageMapInput is an input type that accepts ImageMap and ImageMapOutput values.
 // You can construct a concrete instance of `ImageMapInput` via:
 //
-//	ImageMap{ "key": ImageArgs{...} }
+//          ImageMap{ "key": ImageArgs{...} }
 type ImageMapInput interface {
 	pulumi.Input
 

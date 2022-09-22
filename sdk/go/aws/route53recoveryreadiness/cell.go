@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53recoveryreadiness"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53recoveryreadiness"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53recoveryreadiness.NewCell(ctx, "example", &route53recoveryreadiness.CellArgs{
-//				CellName: pulumi.String("us-west-2-failover-cell"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53recoveryreadiness.NewCell(ctx, "example", &route53recoveryreadiness.CellArgs{
+// 			CellName: pulumi.String("us-west-2-failover-cell"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // Route53 Recovery Readiness cells can be imported via the cell name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:route53recoveryreadiness/cell:Cell us-west-2-failover-cell us-west-2-failover-cell
-//
+//  $ pulumi import aws:route53recoveryreadiness/cell:Cell us-west-2-failover-cell us-west-2-failover-cell
 // ```
 type Cell struct {
 	pulumi.CustomResourceState
@@ -175,7 +170,7 @@ func (i *Cell) ToCellOutputWithContext(ctx context.Context) CellOutput {
 // CellArrayInput is an input type that accepts CellArray and CellArrayOutput values.
 // You can construct a concrete instance of `CellArrayInput` via:
 //
-//	CellArray{ CellArgs{...} }
+//          CellArray{ CellArgs{...} }
 type CellArrayInput interface {
 	pulumi.Input
 
@@ -200,7 +195,7 @@ func (i CellArray) ToCellArrayOutputWithContext(ctx context.Context) CellArrayOu
 // CellMapInput is an input type that accepts CellMap and CellMapOutput values.
 // You can construct a concrete instance of `CellMapInput` via:
 //
-//	CellMap{ "key": CellArgs{...} }
+//          CellMap{ "key": CellArgs{...} }
 type CellMapInput interface {
 	pulumi.Input
 

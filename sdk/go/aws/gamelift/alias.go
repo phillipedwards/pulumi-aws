@@ -19,28 +19,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/gamelift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := gamelift.NewAlias(ctx, "example", &gamelift.AliasArgs{
-//				Description: pulumi.String("Example Description"),
-//				RoutingStrategy: &gamelift.AliasRoutingStrategyArgs{
-//					Message: pulumi.String("Example Message"),
-//					Type:    pulumi.String("TERMINAL"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := gamelift.NewAlias(ctx, "example", &gamelift.AliasArgs{
+// 			Description: pulumi.String("Example Description"),
+// 			RoutingStrategy: &gamelift.AliasRoutingStrategyArgs{
+// 				Message: pulumi.String("Example Message"),
+// 				Type:    pulumi.String("TERMINAL"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -48,9 +45,7 @@ import (
 // GameLift Aliases can be imported using the ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:gamelift/alias:Alias example <alias-id>
-//
+//  $ pulumi import aws:gamelift/alias:Alias example <alias-id>
 // ```
 type Alias struct {
 	pulumi.CustomResourceState
@@ -183,7 +178,7 @@ func (i *Alias) ToAliasOutputWithContext(ctx context.Context) AliasOutput {
 // AliasArrayInput is an input type that accepts AliasArray and AliasArrayOutput values.
 // You can construct a concrete instance of `AliasArrayInput` via:
 //
-//	AliasArray{ AliasArgs{...} }
+//          AliasArray{ AliasArgs{...} }
 type AliasArrayInput interface {
 	pulumi.Input
 
@@ -208,7 +203,7 @@ func (i AliasArray) ToAliasArrayOutputWithContext(ctx context.Context) AliasArra
 // AliasMapInput is an input type that accepts AliasMap and AliasMapOutput values.
 // You can construct a concrete instance of `AliasMapInput` via:
 //
-//	AliasMap{ "key": AliasArgs{...} }
+//          AliasMap{ "key": AliasArgs{...} }
 type AliasMapInput interface {
 	pulumi.Input
 

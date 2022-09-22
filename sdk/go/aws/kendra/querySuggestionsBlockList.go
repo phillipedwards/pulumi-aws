@@ -18,32 +18,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/kendra"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/kendra"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := kendra.NewQuerySuggestionsBlockList(ctx, "example", &kendra.QuerySuggestionsBlockListArgs{
-//				IndexId: pulumi.Any(aws_kendra_index.Example.Id),
-//				RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
-//				SourceS3Path: &kendra.QuerySuggestionsBlockListSourceS3PathArgs{
-//					Bucket: pulumi.Any(aws_s3_bucket.Example.Id),
-//					Key:    pulumi.String("example/suggestions.txt"),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example Kendra Index"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := kendra.NewQuerySuggestionsBlockList(ctx, "example", &kendra.QuerySuggestionsBlockListArgs{
+// 			IndexId: pulumi.Any(aws_kendra_index.Example.Id),
+// 			RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+// 			SourceS3Path: &kendra.QuerySuggestionsBlockListSourceS3PathArgs{
+// 				Bucket: pulumi.Any(aws_s3_bucket.Example.Id),
+// 				Key:    pulumi.String("example/suggestions.txt"),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example Kendra Index"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -51,9 +48,7 @@ import (
 // `aws_kendra_query_suggestions_block_list` can be imported using the unique identifiers of the block list and index separated by a slash (`/`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:kendra/querySuggestionsBlockList:QuerySuggestionsBlockList example blocklist-123456780/idx-8012925589
-//
+//  $ pulumi import aws:kendra/querySuggestionsBlockList:QuerySuggestionsBlockList example blocklist-123456780/idx-8012925589
 // ```
 type QuerySuggestionsBlockList struct {
 	pulumi.CustomResourceState
@@ -216,7 +211,7 @@ func (i *QuerySuggestionsBlockList) ToQuerySuggestionsBlockListOutputWithContext
 // QuerySuggestionsBlockListArrayInput is an input type that accepts QuerySuggestionsBlockListArray and QuerySuggestionsBlockListArrayOutput values.
 // You can construct a concrete instance of `QuerySuggestionsBlockListArrayInput` via:
 //
-//	QuerySuggestionsBlockListArray{ QuerySuggestionsBlockListArgs{...} }
+//          QuerySuggestionsBlockListArray{ QuerySuggestionsBlockListArgs{...} }
 type QuerySuggestionsBlockListArrayInput interface {
 	pulumi.Input
 
@@ -241,7 +236,7 @@ func (i QuerySuggestionsBlockListArray) ToQuerySuggestionsBlockListArrayOutputWi
 // QuerySuggestionsBlockListMapInput is an input type that accepts QuerySuggestionsBlockListMap and QuerySuggestionsBlockListMapOutput values.
 // You can construct a concrete instance of `QuerySuggestionsBlockListMapInput` via:
 //
-//	QuerySuggestionsBlockListMap{ "key": QuerySuggestionsBlockListArgs{...} }
+//          QuerySuggestionsBlockListMap{ "key": QuerySuggestionsBlockListArgs{...} }
 type QuerySuggestionsBlockListMapInput interface {
 	pulumi.Input
 

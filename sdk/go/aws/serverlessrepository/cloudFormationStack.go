@@ -19,43 +19,40 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/serverlessrepository"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/serverlessrepository"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			currentPartition, err := aws.GetPartition(ctx, nil, nil)
-//			if err != nil {
-//				return err
-//			}
-//			currentRegion, err := aws.GetRegion(ctx, nil, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = serverlessrepository.NewCloudFormationStack(ctx, "postgres-rotator", &serverlessrepository.CloudFormationStackArgs{
-//				ApplicationId: pulumi.String("arn:aws:serverlessrepo:us-east-1:297356227824:applications/SecretsManagerRDSPostgreSQLRotationSingleUser"),
-//				Capabilities: pulumi.StringArray{
-//					pulumi.String("CAPABILITY_IAM"),
-//					pulumi.String("CAPABILITY_RESOURCE_POLICY"),
-//				},
-//				Parameters: pulumi.StringMap{
-//					"endpoint":     pulumi.String(fmt.Sprintf("secretsmanager.%v.%v", currentRegion.Name, currentPartition.DnsSuffix)),
-//					"functionName": pulumi.String("func-postgres-rotator"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		currentPartition, err := aws.GetPartition(ctx, nil, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		currentRegion, err := aws.GetRegion(ctx, nil, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = serverlessrepository.NewCloudFormationStack(ctx, "postgres-rotator", &serverlessrepository.CloudFormationStackArgs{
+// 			ApplicationId: pulumi.String("arn:aws:serverlessrepo:us-east-1:297356227824:applications/SecretsManagerRDSPostgreSQLRotationSingleUser"),
+// 			Capabilities: pulumi.StringArray{
+// 				pulumi.String("CAPABILITY_IAM"),
+// 				pulumi.String("CAPABILITY_RESOURCE_POLICY"),
+// 			},
+// 			Parameters: pulumi.StringMap{
+// 				"endpoint":     pulumi.String(fmt.Sprintf("secretsmanager.%v.%v", currentRegion.Name, currentPartition.DnsSuffix)),
+// 				"functionName": pulumi.String("func-postgres-rotator"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -63,9 +60,7 @@ import (
 // Serverless Application Repository Stack can be imported using the CloudFormation Stack name (with or without the `serverlessrepo-` prefix) or the CloudFormation Stack ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:serverlessrepository/cloudFormationStack:CloudFormationStack example serverlessrepo-postgres-rotator
-//
+//  $ pulumi import aws:serverlessrepository/cloudFormationStack:CloudFormationStack example serverlessrepo-postgres-rotator
 // ```
 type CloudFormationStack struct {
 	pulumi.CustomResourceState
@@ -221,7 +216,7 @@ func (i *CloudFormationStack) ToCloudFormationStackOutputWithContext(ctx context
 // CloudFormationStackArrayInput is an input type that accepts CloudFormationStackArray and CloudFormationStackArrayOutput values.
 // You can construct a concrete instance of `CloudFormationStackArrayInput` via:
 //
-//	CloudFormationStackArray{ CloudFormationStackArgs{...} }
+//          CloudFormationStackArray{ CloudFormationStackArgs{...} }
 type CloudFormationStackArrayInput interface {
 	pulumi.Input
 
@@ -246,7 +241,7 @@ func (i CloudFormationStackArray) ToCloudFormationStackArrayOutputWithContext(ct
 // CloudFormationStackMapInput is an input type that accepts CloudFormationStackMap and CloudFormationStackMapOutput values.
 // You can construct a concrete instance of `CloudFormationStackMapInput` via:
 //
-//	CloudFormationStackMap{ "key": CloudFormationStackArgs{...} }
+//          CloudFormationStackMap{ "key": CloudFormationStackArgs{...} }
 type CloudFormationStackMapInput interface {
 	pulumi.Input
 

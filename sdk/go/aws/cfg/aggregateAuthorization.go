@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cfg"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cfg"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cfg.NewAggregateAuthorization(ctx, "example", &cfg.AggregateAuthorizationArgs{
-//				AccountId: pulumi.String("123456789012"),
-//				Region:    pulumi.String("eu-west-2"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cfg.NewAggregateAuthorization(ctx, "example", &cfg.AggregateAuthorizationArgs{
+// 			AccountId: pulumi.String("123456789012"),
+// 			Region:    pulumi.String("eu-west-2"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // Config aggregate authorizations can be imported using `account_id:region`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cfg/aggregateAuthorization:AggregateAuthorization example 123456789012:us-east-1
-//
+//  $ pulumi import aws:cfg/aggregateAuthorization:AggregateAuthorization example 123456789012:us-east-1
 // ```
 type AggregateAuthorization struct {
 	pulumi.CustomResourceState
@@ -173,7 +168,7 @@ func (i *AggregateAuthorization) ToAggregateAuthorizationOutputWithContext(ctx c
 // AggregateAuthorizationArrayInput is an input type that accepts AggregateAuthorizationArray and AggregateAuthorizationArrayOutput values.
 // You can construct a concrete instance of `AggregateAuthorizationArrayInput` via:
 //
-//	AggregateAuthorizationArray{ AggregateAuthorizationArgs{...} }
+//          AggregateAuthorizationArray{ AggregateAuthorizationArgs{...} }
 type AggregateAuthorizationArrayInput interface {
 	pulumi.Input
 
@@ -198,7 +193,7 @@ func (i AggregateAuthorizationArray) ToAggregateAuthorizationArrayOutputWithCont
 // AggregateAuthorizationMapInput is an input type that accepts AggregateAuthorizationMap and AggregateAuthorizationMapOutput values.
 // You can construct a concrete instance of `AggregateAuthorizationMapInput` via:
 //
-//	AggregateAuthorizationMap{ "key": AggregateAuthorizationArgs{...} }
+//          AggregateAuthorizationMap{ "key": AggregateAuthorizationArgs{...} }
 type AggregateAuthorizationMapInput interface {
 	pulumi.Input
 

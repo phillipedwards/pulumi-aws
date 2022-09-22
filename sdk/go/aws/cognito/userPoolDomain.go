@@ -20,29 +20,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cognito"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cognito"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			example, err := cognito.NewUserPool(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = cognito.NewUserPoolDomain(ctx, "main", &cognito.UserPoolDomainArgs{
-//				Domain:     pulumi.String("example-domain"),
-//				UserPoolId: example.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		example, err := cognito.NewUserPool(ctx, "example", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = cognito.NewUserPoolDomain(ctx, "main", &cognito.UserPoolDomainArgs{
+// 			Domain:     pulumi.String("example-domain"),
+// 			UserPoolId: example.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Custom Cognito domain
 //
@@ -50,52 +47,49 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cognito"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cognito"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleUserPool, err := cognito.NewUserPool(ctx, "exampleUserPool", nil)
-//			if err != nil {
-//				return err
-//			}
-//			main, err := cognito.NewUserPoolDomain(ctx, "main", &cognito.UserPoolDomainArgs{
-//				Domain:         pulumi.String("example-domain"),
-//				CertificateArn: pulumi.Any(aws_acm_certificate.Cert.Arn),
-//				UserPoolId:     exampleUserPool.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleZone, err := route53.LookupZone(ctx, &route53.LookupZoneArgs{
-//				Name: pulumi.StringRef("example.com"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = route53.NewRecord(ctx, "auth-cognito-A", &route53.RecordArgs{
-//				Name:   main.Domain,
-//				Type:   pulumi.String("A"),
-//				ZoneId: pulumi.String(exampleZone.ZoneId),
-//				Aliases: route53.RecordAliasArray{
-//					&route53.RecordAliasArgs{
-//						EvaluateTargetHealth: pulumi.Bool(false),
-//						Name:                 main.CloudfrontDistributionArn,
-//						ZoneId:               pulumi.String("Z2FDTNDATAQYW2"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleUserPool, err := cognito.NewUserPool(ctx, "exampleUserPool", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		main, err := cognito.NewUserPoolDomain(ctx, "main", &cognito.UserPoolDomainArgs{
+// 			Domain:         pulumi.String("example-domain"),
+// 			CertificateArn: pulumi.Any(aws_acm_certificate.Cert.Arn),
+// 			UserPoolId:     exampleUserPool.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleZone, err := route53.LookupZone(ctx, &route53.LookupZoneArgs{
+// 			Name: pulumi.StringRef("example.com"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = route53.NewRecord(ctx, "auth-cognito-A", &route53.RecordArgs{
+// 			Name:   main.Domain,
+// 			Type:   pulumi.String("A"),
+// 			ZoneId: pulumi.String(exampleZone.ZoneId),
+// 			Aliases: route53.RecordAliasArray{
+// 				&route53.RecordAliasArgs{
+// 					EvaluateTargetHealth: pulumi.Bool(false),
+// 					Name:                 main.CloudfrontDistributionArn,
+// 					ZoneId:               pulumi.String("Z2FDTNDATAQYW2"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -103,9 +97,7 @@ import (
 // Cognito User Pool Domains can be imported using the `domain`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cognito/userPoolDomain:UserPoolDomain main auth.example.org
-//
+//  $ pulumi import aws:cognito/userPoolDomain:UserPoolDomain main auth.example.org
 // ```
 type UserPoolDomain struct {
 	pulumi.CustomResourceState
@@ -243,7 +235,7 @@ func (i *UserPoolDomain) ToUserPoolDomainOutputWithContext(ctx context.Context) 
 // UserPoolDomainArrayInput is an input type that accepts UserPoolDomainArray and UserPoolDomainArrayOutput values.
 // You can construct a concrete instance of `UserPoolDomainArrayInput` via:
 //
-//	UserPoolDomainArray{ UserPoolDomainArgs{...} }
+//          UserPoolDomainArray{ UserPoolDomainArgs{...} }
 type UserPoolDomainArrayInput interface {
 	pulumi.Input
 
@@ -268,7 +260,7 @@ func (i UserPoolDomainArray) ToUserPoolDomainArrayOutputWithContext(ctx context.
 // UserPoolDomainMapInput is an input type that accepts UserPoolDomainMap and UserPoolDomainMapOutput values.
 // You can construct a concrete instance of `UserPoolDomainMapInput` via:
 //
-//	UserPoolDomainMap{ "key": UserPoolDomainArgs{...} }
+//          UserPoolDomainMap{ "key": UserPoolDomainArgs{...} }
 type UserPoolDomainMapInput interface {
 	pulumi.Input
 

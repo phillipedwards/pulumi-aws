@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/chime"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/chime"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := chime.NewVoiceConnector(ctx, "test", &chime.VoiceConnectorArgs{
-//				AwsRegion:         pulumi.String("us-east-1"),
-//				RequireEncryption: pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := chime.NewVoiceConnector(ctx, "test", &chime.VoiceConnectorArgs{
+// 			AwsRegion:         pulumi.String("us-east-1"),
+// 			RequireEncryption: pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // Configuration Recorder can be imported using the name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:chime/voiceConnector:VoiceConnector test example
-//
+//  $ pulumi import aws:chime/voiceConnector:VoiceConnector test example
 // ```
 type VoiceConnector struct {
 	pulumi.CustomResourceState
@@ -164,7 +159,7 @@ func (i *VoiceConnector) ToVoiceConnectorOutputWithContext(ctx context.Context) 
 // VoiceConnectorArrayInput is an input type that accepts VoiceConnectorArray and VoiceConnectorArrayOutput values.
 // You can construct a concrete instance of `VoiceConnectorArrayInput` via:
 //
-//	VoiceConnectorArray{ VoiceConnectorArgs{...} }
+//          VoiceConnectorArray{ VoiceConnectorArgs{...} }
 type VoiceConnectorArrayInput interface {
 	pulumi.Input
 
@@ -189,7 +184,7 @@ func (i VoiceConnectorArray) ToVoiceConnectorArrayOutputWithContext(ctx context.
 // VoiceConnectorMapInput is an input type that accepts VoiceConnectorMap and VoiceConnectorMapOutput values.
 // You can construct a concrete instance of `VoiceConnectorMapInput` via:
 //
-//	VoiceConnectorMap{ "key": VoiceConnectorArgs{...} }
+//          VoiceConnectorMap{ "key": VoiceConnectorArgs{...} }
 type VoiceConnectorMapInput interface {
 	pulumi.Input
 

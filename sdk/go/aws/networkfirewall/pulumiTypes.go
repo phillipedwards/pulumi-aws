@@ -18,7 +18,7 @@ type FirewallFirewallStatus struct {
 // FirewallFirewallStatusInput is an input type that accepts FirewallFirewallStatusArgs and FirewallFirewallStatusOutput values.
 // You can construct a concrete instance of `FirewallFirewallStatusInput` via:
 //
-//	FirewallFirewallStatusArgs{...}
+//          FirewallFirewallStatusArgs{...}
 type FirewallFirewallStatusInput interface {
 	pulumi.Input
 
@@ -46,7 +46,7 @@ func (i FirewallFirewallStatusArgs) ToFirewallFirewallStatusOutputWithContext(ct
 // FirewallFirewallStatusArrayInput is an input type that accepts FirewallFirewallStatusArray and FirewallFirewallStatusArrayOutput values.
 // You can construct a concrete instance of `FirewallFirewallStatusArrayInput` via:
 //
-//	FirewallFirewallStatusArray{ FirewallFirewallStatusArgs{...} }
+//          FirewallFirewallStatusArray{ FirewallFirewallStatusArgs{...} }
 type FirewallFirewallStatusArrayInput interface {
 	pulumi.Input
 
@@ -117,7 +117,7 @@ type FirewallFirewallStatusSyncState struct {
 // FirewallFirewallStatusSyncStateInput is an input type that accepts FirewallFirewallStatusSyncStateArgs and FirewallFirewallStatusSyncStateOutput values.
 // You can construct a concrete instance of `FirewallFirewallStatusSyncStateInput` via:
 //
-//	FirewallFirewallStatusSyncStateArgs{...}
+//          FirewallFirewallStatusSyncStateArgs{...}
 type FirewallFirewallStatusSyncStateInput interface {
 	pulumi.Input
 
@@ -147,7 +147,7 @@ func (i FirewallFirewallStatusSyncStateArgs) ToFirewallFirewallStatusSyncStateOu
 // FirewallFirewallStatusSyncStateArrayInput is an input type that accepts FirewallFirewallStatusSyncStateArray and FirewallFirewallStatusSyncStateArrayOutput values.
 // You can construct a concrete instance of `FirewallFirewallStatusSyncStateArrayInput` via:
 //
-//	FirewallFirewallStatusSyncStateArray{ FirewallFirewallStatusSyncStateArgs{...} }
+//          FirewallFirewallStatusSyncStateArray{ FirewallFirewallStatusSyncStateArgs{...} }
 type FirewallFirewallStatusSyncStateArrayInput interface {
 	pulumi.Input
 
@@ -225,7 +225,7 @@ type FirewallFirewallStatusSyncStateAttachment struct {
 // FirewallFirewallStatusSyncStateAttachmentInput is an input type that accepts FirewallFirewallStatusSyncStateAttachmentArgs and FirewallFirewallStatusSyncStateAttachmentOutput values.
 // You can construct a concrete instance of `FirewallFirewallStatusSyncStateAttachmentInput` via:
 //
-//	FirewallFirewallStatusSyncStateAttachmentArgs{...}
+//          FirewallFirewallStatusSyncStateAttachmentArgs{...}
 type FirewallFirewallStatusSyncStateAttachmentInput interface {
 	pulumi.Input
 
@@ -255,7 +255,7 @@ func (i FirewallFirewallStatusSyncStateAttachmentArgs) ToFirewallFirewallStatusS
 // FirewallFirewallStatusSyncStateAttachmentArrayInput is an input type that accepts FirewallFirewallStatusSyncStateAttachmentArray and FirewallFirewallStatusSyncStateAttachmentArrayOutput values.
 // You can construct a concrete instance of `FirewallFirewallStatusSyncStateAttachmentArrayInput` via:
 //
-//	FirewallFirewallStatusSyncStateAttachmentArray{ FirewallFirewallStatusSyncStateAttachmentArgs{...} }
+//          FirewallFirewallStatusSyncStateAttachmentArray{ FirewallFirewallStatusSyncStateAttachmentArgs{...} }
 type FirewallFirewallStatusSyncStateAttachmentArrayInput interface {
 	pulumi.Input
 
@@ -343,7 +343,7 @@ type FirewallPolicyFirewallPolicy struct {
 // FirewallPolicyFirewallPolicyInput is an input type that accepts FirewallPolicyFirewallPolicyArgs and FirewallPolicyFirewallPolicyOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyInput` via:
 //
-//	FirewallPolicyFirewallPolicyArgs{...}
+//          FirewallPolicyFirewallPolicyArgs{...}
 type FirewallPolicyFirewallPolicyInput interface {
 	pulumi.Input
 
@@ -393,11 +393,11 @@ func (i FirewallPolicyFirewallPolicyArgs) ToFirewallPolicyFirewallPolicyPtrOutpu
 // FirewallPolicyFirewallPolicyPtrInput is an input type that accepts FirewallPolicyFirewallPolicyArgs, FirewallPolicyFirewallPolicyPtr and FirewallPolicyFirewallPolicyPtrOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyPtrInput` via:
 //
-//	        FirewallPolicyFirewallPolicyArgs{...}
+//          FirewallPolicyFirewallPolicyArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FirewallPolicyFirewallPolicyPtrInput interface {
 	pulumi.Input
 
@@ -596,7 +596,7 @@ type FirewallPolicyFirewallPolicyStatefulEngineOptions struct {
 // FirewallPolicyFirewallPolicyStatefulEngineOptionsInput is an input type that accepts FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs and FirewallPolicyFirewallPolicyStatefulEngineOptionsOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatefulEngineOptionsInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs{...}
+//          FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs{...}
 type FirewallPolicyFirewallPolicyStatefulEngineOptionsInput interface {
 	pulumi.Input
 
@@ -632,11 +632,11 @@ func (i FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs) ToFirewallPolicyF
 // FirewallPolicyFirewallPolicyStatefulEngineOptionsPtrInput is an input type that accepts FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs, FirewallPolicyFirewallPolicyStatefulEngineOptionsPtr and FirewallPolicyFirewallPolicyStatefulEngineOptionsPtrOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatefulEngineOptionsPtrInput` via:
 //
-//	        FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs{...}
+//          FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type FirewallPolicyFirewallPolicyStatefulEngineOptionsPtrInput interface {
 	pulumi.Input
 
@@ -735,7 +735,7 @@ type FirewallPolicyFirewallPolicyStatefulRuleGroupReference struct {
 // FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceInput is an input type that accepts FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs and FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs{...}
+//          FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs{...}
 type FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceInput interface {
 	pulumi.Input
 
@@ -765,7 +765,7 @@ func (i FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs) ToFirewallPo
 // FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArrayInput is an input type that accepts FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArray and FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArrayOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArrayInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArray{ FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs{...} }
+//          FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArray{ FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs{...} }
 type FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArrayInput interface {
 	pulumi.Input
 
@@ -841,7 +841,7 @@ type FirewallPolicyFirewallPolicyStatelessCustomAction struct {
 // FirewallPolicyFirewallPolicyStatelessCustomActionInput is an input type that accepts FirewallPolicyFirewallPolicyStatelessCustomActionArgs and FirewallPolicyFirewallPolicyStatelessCustomActionOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatelessCustomActionInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatelessCustomActionArgs{...}
+//          FirewallPolicyFirewallPolicyStatelessCustomActionArgs{...}
 type FirewallPolicyFirewallPolicyStatelessCustomActionInput interface {
 	pulumi.Input
 
@@ -871,7 +871,7 @@ func (i FirewallPolicyFirewallPolicyStatelessCustomActionArgs) ToFirewallPolicyF
 // FirewallPolicyFirewallPolicyStatelessCustomActionArrayInput is an input type that accepts FirewallPolicyFirewallPolicyStatelessCustomActionArray and FirewallPolicyFirewallPolicyStatelessCustomActionArrayOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatelessCustomActionArrayInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatelessCustomActionArray{ FirewallPolicyFirewallPolicyStatelessCustomActionArgs{...} }
+//          FirewallPolicyFirewallPolicyStatelessCustomActionArray{ FirewallPolicyFirewallPolicyStatelessCustomActionArgs{...} }
 type FirewallPolicyFirewallPolicyStatelessCustomActionArrayInput interface {
 	pulumi.Input
 
@@ -947,7 +947,7 @@ type FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition struct {
 // FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionInput is an input type that accepts FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs and FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs{...}
+//          FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs{...}
 type FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionInput interface {
 	pulumi.Input
 
@@ -1001,7 +1001,7 @@ type FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMet
 // FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionInput is an input type that accepts FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs and FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs{...}
+//          FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs{...}
 type FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionInput interface {
 	pulumi.Input
 
@@ -1055,7 +1055,7 @@ type FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMet
 // FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionInput is an input type that accepts FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs and FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs{...}
+//          FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs{...}
 type FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionInput interface {
 	pulumi.Input
 
@@ -1083,7 +1083,7 @@ func (i FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublish
 // FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArrayInput is an input type that accepts FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArray and FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArrayOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArrayInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArray{ FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs{...} }
+//          FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArray{ FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs{...} }
 type FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArrayInput interface {
 	pulumi.Input
 
@@ -1156,7 +1156,7 @@ type FirewallPolicyFirewallPolicyStatelessRuleGroupReference struct {
 // FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceInput is an input type that accepts FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs and FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs{...}
+//          FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs{...}
 type FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceInput interface {
 	pulumi.Input
 
@@ -1186,7 +1186,7 @@ func (i FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs) ToFirewallP
 // FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArrayInput is an input type that accepts FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArray and FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArrayOutput values.
 // You can construct a concrete instance of `FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArrayInput` via:
 //
-//	FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArray{ FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs{...} }
+//          FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArray{ FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs{...} }
 type FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArrayInput interface {
 	pulumi.Input
 
@@ -1260,7 +1260,7 @@ type FirewallSubnetMapping struct {
 // FirewallSubnetMappingInput is an input type that accepts FirewallSubnetMappingArgs and FirewallSubnetMappingOutput values.
 // You can construct a concrete instance of `FirewallSubnetMappingInput` via:
 //
-//	FirewallSubnetMappingArgs{...}
+//          FirewallSubnetMappingArgs{...}
 type FirewallSubnetMappingInput interface {
 	pulumi.Input
 
@@ -1288,7 +1288,7 @@ func (i FirewallSubnetMappingArgs) ToFirewallSubnetMappingOutputWithContext(ctx 
 // FirewallSubnetMappingArrayInput is an input type that accepts FirewallSubnetMappingArray and FirewallSubnetMappingArrayOutput values.
 // You can construct a concrete instance of `FirewallSubnetMappingArrayInput` via:
 //
-//	FirewallSubnetMappingArray{ FirewallSubnetMappingArgs{...} }
+//          FirewallSubnetMappingArray{ FirewallSubnetMappingArgs{...} }
 type FirewallSubnetMappingArrayInput interface {
 	pulumi.Input
 
@@ -1357,7 +1357,7 @@ type LoggingConfigurationLoggingConfiguration struct {
 // LoggingConfigurationLoggingConfigurationInput is an input type that accepts LoggingConfigurationLoggingConfigurationArgs and LoggingConfigurationLoggingConfigurationOutput values.
 // You can construct a concrete instance of `LoggingConfigurationLoggingConfigurationInput` via:
 //
-//	LoggingConfigurationLoggingConfigurationArgs{...}
+//          LoggingConfigurationLoggingConfigurationArgs{...}
 type LoggingConfigurationLoggingConfigurationInput interface {
 	pulumi.Input
 
@@ -1393,11 +1393,11 @@ func (i LoggingConfigurationLoggingConfigurationArgs) ToLoggingConfigurationLogg
 // LoggingConfigurationLoggingConfigurationPtrInput is an input type that accepts LoggingConfigurationLoggingConfigurationArgs, LoggingConfigurationLoggingConfigurationPtr and LoggingConfigurationLoggingConfigurationPtrOutput values.
 // You can construct a concrete instance of `LoggingConfigurationLoggingConfigurationPtrInput` via:
 //
-//	        LoggingConfigurationLoggingConfigurationArgs{...}
+//          LoggingConfigurationLoggingConfigurationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type LoggingConfigurationLoggingConfigurationPtrInput interface {
 	pulumi.Input
 
@@ -1503,7 +1503,7 @@ type LoggingConfigurationLoggingConfigurationLogDestinationConfig struct {
 // LoggingConfigurationLoggingConfigurationLogDestinationConfigInput is an input type that accepts LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs and LoggingConfigurationLoggingConfigurationLogDestinationConfigOutput values.
 // You can construct a concrete instance of `LoggingConfigurationLoggingConfigurationLogDestinationConfigInput` via:
 //
-//	LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs{...}
+//          LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs{...}
 type LoggingConfigurationLoggingConfigurationLogDestinationConfigInput interface {
 	pulumi.Input
 
@@ -1538,7 +1538,7 @@ func (i LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs) ToLogg
 // LoggingConfigurationLoggingConfigurationLogDestinationConfigArrayInput is an input type that accepts LoggingConfigurationLoggingConfigurationLogDestinationConfigArray and LoggingConfigurationLoggingConfigurationLogDestinationConfigArrayOutput values.
 // You can construct a concrete instance of `LoggingConfigurationLoggingConfigurationLogDestinationConfigArrayInput` via:
 //
-//	LoggingConfigurationLoggingConfigurationLogDestinationConfigArray{ LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs{...} }
+//          LoggingConfigurationLoggingConfigurationLogDestinationConfigArray{ LoggingConfigurationLoggingConfigurationLogDestinationConfigArgs{...} }
 type LoggingConfigurationLoggingConfigurationLogDestinationConfigArrayInput interface {
 	pulumi.Input
 
@@ -1628,7 +1628,7 @@ type RuleGroupRuleGroup struct {
 // RuleGroupRuleGroupInput is an input type that accepts RuleGroupRuleGroupArgs and RuleGroupRuleGroupOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupInput` via:
 //
-//	RuleGroupRuleGroupArgs{...}
+//          RuleGroupRuleGroupArgs{...}
 type RuleGroupRuleGroupInput interface {
 	pulumi.Input
 
@@ -1668,11 +1668,11 @@ func (i RuleGroupRuleGroupArgs) ToRuleGroupRuleGroupPtrOutputWithContext(ctx con
 // RuleGroupRuleGroupPtrInput is an input type that accepts RuleGroupRuleGroupArgs, RuleGroupRuleGroupPtr and RuleGroupRuleGroupPtrOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupPtrInput` via:
 //
-//	        RuleGroupRuleGroupArgs{...}
+//          RuleGroupRuleGroupArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type RuleGroupRuleGroupPtrInput interface {
 	pulumi.Input
 
@@ -1801,7 +1801,7 @@ type RuleGroupRuleGroupRuleVariables struct {
 // RuleGroupRuleGroupRuleVariablesInput is an input type that accepts RuleGroupRuleGroupRuleVariablesArgs and RuleGroupRuleGroupRuleVariablesOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRuleVariablesInput` via:
 //
-//	RuleGroupRuleGroupRuleVariablesArgs{...}
+//          RuleGroupRuleGroupRuleVariablesArgs{...}
 type RuleGroupRuleGroupRuleVariablesInput interface {
 	pulumi.Input
 
@@ -1839,11 +1839,11 @@ func (i RuleGroupRuleGroupRuleVariablesArgs) ToRuleGroupRuleGroupRuleVariablesPt
 // RuleGroupRuleGroupRuleVariablesPtrInput is an input type that accepts RuleGroupRuleGroupRuleVariablesArgs, RuleGroupRuleGroupRuleVariablesPtr and RuleGroupRuleGroupRuleVariablesPtrOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRuleVariablesPtrInput` via:
 //
-//	        RuleGroupRuleGroupRuleVariablesArgs{...}
+//          RuleGroupRuleGroupRuleVariablesArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type RuleGroupRuleGroupRuleVariablesPtrInput interface {
 	pulumi.Input
 
@@ -1957,7 +1957,7 @@ type RuleGroupRuleGroupRuleVariablesIpSet struct {
 // RuleGroupRuleGroupRuleVariablesIpSetInput is an input type that accepts RuleGroupRuleGroupRuleVariablesIpSetArgs and RuleGroupRuleGroupRuleVariablesIpSetOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRuleVariablesIpSetInput` via:
 //
-//	RuleGroupRuleGroupRuleVariablesIpSetArgs{...}
+//          RuleGroupRuleGroupRuleVariablesIpSetArgs{...}
 type RuleGroupRuleGroupRuleVariablesIpSetInput interface {
 	pulumi.Input
 
@@ -1987,7 +1987,7 @@ func (i RuleGroupRuleGroupRuleVariablesIpSetArgs) ToRuleGroupRuleGroupRuleVariab
 // RuleGroupRuleGroupRuleVariablesIpSetArrayInput is an input type that accepts RuleGroupRuleGroupRuleVariablesIpSetArray and RuleGroupRuleGroupRuleVariablesIpSetArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRuleVariablesIpSetArrayInput` via:
 //
-//	RuleGroupRuleGroupRuleVariablesIpSetArray{ RuleGroupRuleGroupRuleVariablesIpSetArgs{...} }
+//          RuleGroupRuleGroupRuleVariablesIpSetArray{ RuleGroupRuleGroupRuleVariablesIpSetArgs{...} }
 type RuleGroupRuleGroupRuleVariablesIpSetArrayInput interface {
 	pulumi.Input
 
@@ -2061,7 +2061,7 @@ type RuleGroupRuleGroupRuleVariablesIpSetIpSet struct {
 // RuleGroupRuleGroupRuleVariablesIpSetIpSetInput is an input type that accepts RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs and RuleGroupRuleGroupRuleVariablesIpSetIpSetOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRuleVariablesIpSetIpSetInput` via:
 //
-//	RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs{...}
+//          RuleGroupRuleGroupRuleVariablesIpSetIpSetArgs{...}
 type RuleGroupRuleGroupRuleVariablesIpSetIpSetInput interface {
 	pulumi.Input
 
@@ -2115,7 +2115,7 @@ type RuleGroupRuleGroupRuleVariablesPortSet struct {
 // RuleGroupRuleGroupRuleVariablesPortSetInput is an input type that accepts RuleGroupRuleGroupRuleVariablesPortSetArgs and RuleGroupRuleGroupRuleVariablesPortSetOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRuleVariablesPortSetInput` via:
 //
-//	RuleGroupRuleGroupRuleVariablesPortSetArgs{...}
+//          RuleGroupRuleGroupRuleVariablesPortSetArgs{...}
 type RuleGroupRuleGroupRuleVariablesPortSetInput interface {
 	pulumi.Input
 
@@ -2145,7 +2145,7 @@ func (i RuleGroupRuleGroupRuleVariablesPortSetArgs) ToRuleGroupRuleGroupRuleVari
 // RuleGroupRuleGroupRuleVariablesPortSetArrayInput is an input type that accepts RuleGroupRuleGroupRuleVariablesPortSetArray and RuleGroupRuleGroupRuleVariablesPortSetArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRuleVariablesPortSetArrayInput` via:
 //
-//	RuleGroupRuleGroupRuleVariablesPortSetArray{ RuleGroupRuleGroupRuleVariablesPortSetArgs{...} }
+//          RuleGroupRuleGroupRuleVariablesPortSetArray{ RuleGroupRuleGroupRuleVariablesPortSetArgs{...} }
 type RuleGroupRuleGroupRuleVariablesPortSetArrayInput interface {
 	pulumi.Input
 
@@ -2221,7 +2221,7 @@ type RuleGroupRuleGroupRuleVariablesPortSetPortSet struct {
 // RuleGroupRuleGroupRuleVariablesPortSetPortSetInput is an input type that accepts RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs and RuleGroupRuleGroupRuleVariablesPortSetPortSetOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRuleVariablesPortSetPortSetInput` via:
 //
-//	RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs{...}
+//          RuleGroupRuleGroupRuleVariablesPortSetPortSetArgs{...}
 type RuleGroupRuleGroupRuleVariablesPortSetPortSetInput interface {
 	pulumi.Input
 
@@ -2279,7 +2279,7 @@ type RuleGroupRuleGroupRulesSource struct {
 // RuleGroupRuleGroupRulesSourceInput is an input type that accepts RuleGroupRuleGroupRulesSourceArgs and RuleGroupRuleGroupRulesSourceOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceArgs{...}
+//          RuleGroupRuleGroupRulesSourceArgs{...}
 type RuleGroupRuleGroupRulesSourceInput interface {
 	pulumi.Input
 
@@ -2321,11 +2321,11 @@ func (i RuleGroupRuleGroupRulesSourceArgs) ToRuleGroupRuleGroupRulesSourcePtrOut
 // RuleGroupRuleGroupRulesSourcePtrInput is an input type that accepts RuleGroupRuleGroupRulesSourceArgs, RuleGroupRuleGroupRulesSourcePtr and RuleGroupRuleGroupRulesSourcePtrOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourcePtrInput` via:
 //
-//	        RuleGroupRuleGroupRulesSourceArgs{...}
+//          RuleGroupRuleGroupRulesSourceArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type RuleGroupRuleGroupRulesSourcePtrInput interface {
 	pulumi.Input
 
@@ -2477,7 +2477,7 @@ type RuleGroupRuleGroupRulesSourceRulesSourceList struct {
 // RuleGroupRuleGroupRulesSourceRulesSourceListInput is an input type that accepts RuleGroupRuleGroupRulesSourceRulesSourceListArgs and RuleGroupRuleGroupRulesSourceRulesSourceListOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceRulesSourceListInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceRulesSourceListArgs{...}
+//          RuleGroupRuleGroupRulesSourceRulesSourceListArgs{...}
 type RuleGroupRuleGroupRulesSourceRulesSourceListInput interface {
 	pulumi.Input
 
@@ -2517,11 +2517,11 @@ func (i RuleGroupRuleGroupRulesSourceRulesSourceListArgs) ToRuleGroupRuleGroupRu
 // RuleGroupRuleGroupRulesSourceRulesSourceListPtrInput is an input type that accepts RuleGroupRuleGroupRulesSourceRulesSourceListArgs, RuleGroupRuleGroupRulesSourceRulesSourceListPtr and RuleGroupRuleGroupRulesSourceRulesSourceListPtrOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceRulesSourceListPtrInput` via:
 //
-//	        RuleGroupRuleGroupRulesSourceRulesSourceListArgs{...}
+//          RuleGroupRuleGroupRulesSourceRulesSourceListArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type RuleGroupRuleGroupRulesSourceRulesSourceListPtrInput interface {
 	pulumi.Input
 
@@ -2652,7 +2652,7 @@ type RuleGroupRuleGroupRulesSourceStatefulRule struct {
 // RuleGroupRuleGroupRulesSourceStatefulRuleInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatefulRuleArgs and RuleGroupRuleGroupRulesSourceStatefulRuleOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatefulRuleInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatefulRuleArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatefulRuleArgs{...}
 type RuleGroupRuleGroupRulesSourceStatefulRuleInput interface {
 	pulumi.Input
 
@@ -2684,7 +2684,7 @@ func (i RuleGroupRuleGroupRulesSourceStatefulRuleArgs) ToRuleGroupRuleGroupRules
 // RuleGroupRuleGroupRulesSourceStatefulRuleArrayInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatefulRuleArray and RuleGroupRuleGroupRulesSourceStatefulRuleArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatefulRuleArrayInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatefulRuleArray{ RuleGroupRuleGroupRulesSourceStatefulRuleArgs{...} }
+//          RuleGroupRuleGroupRulesSourceStatefulRuleArray{ RuleGroupRuleGroupRulesSourceStatefulRuleArgs{...} }
 type RuleGroupRuleGroupRulesSourceStatefulRuleArrayInput interface {
 	pulumi.Input
 
@@ -2777,7 +2777,7 @@ type RuleGroupRuleGroupRulesSourceStatefulRuleHeader struct {
 // RuleGroupRuleGroupRulesSourceStatefulRuleHeaderInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs and RuleGroupRuleGroupRulesSourceStatefulRuleHeaderOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatefulRuleHeaderInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs{...}
 type RuleGroupRuleGroupRulesSourceStatefulRuleHeaderInput interface {
 	pulumi.Input
 
@@ -2867,7 +2867,7 @@ type RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption struct {
 // RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs and RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs{...}
 type RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionInput interface {
 	pulumi.Input
 
@@ -2898,7 +2898,7 @@ func (i RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs) ToRuleGroupRule
 // RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArrayInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArray and RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArrayInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArray{ RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs{...} }
+//          RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArray{ RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs{...} }
 type RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArrayInput interface {
 	pulumi.Input
 
@@ -2975,7 +2975,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions struct {
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsInput interface {
 	pulumi.Input
 
@@ -3013,11 +3013,11 @@ func (i RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs) ToRuleG
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsPtrInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs, RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsPtr and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsPtrOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsPtrInput` via:
 //
-//	        RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsPtrInput interface {
 	pulumi.Input
 
@@ -3135,7 +3135,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction str
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionInput interface {
 	pulumi.Input
 
@@ -3165,7 +3165,7 @@ func (i RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionA
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArrayInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArray and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArrayInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs{...} }
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs{...} }
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArrayInput interface {
 	pulumi.Input
 
@@ -3243,7 +3243,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActi
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionInput interface {
 	pulumi.Input
 
@@ -3297,7 +3297,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActi
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionInput interface {
 	pulumi.Input
 
@@ -3351,7 +3351,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActi
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionInput interface {
 	pulumi.Input
 
@@ -3379,7 +3379,7 @@ func (i RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionA
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArrayInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArray and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArrayInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs{...} }
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs{...} }
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArrayInput interface {
 	pulumi.Input
 
@@ -3452,7 +3452,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule st
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleInput interface {
 	pulumi.Input
 
@@ -3482,7 +3482,7 @@ func (i RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArrayInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArray and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArrayInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs{...} }
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArgs{...} }
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleArrayInput interface {
 	pulumi.Input
 
@@ -3562,7 +3562,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRul
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionInput interface {
 	pulumi.Input
 
@@ -3635,7 +3635,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRul
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesInput interface {
 	pulumi.Input
 
@@ -3734,7 +3734,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRul
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationInput interface {
 	pulumi.Input
 
@@ -3762,7 +3762,7 @@ func (i RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArrayInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArray and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArrayInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs{...} }
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArgs{...} }
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationArrayInput interface {
 	pulumi.Input
 
@@ -3835,7 +3835,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRul
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortInput interface {
 	pulumi.Input
 
@@ -3865,7 +3865,7 @@ func (i RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArrayInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArray and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArrayInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs{...} }
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArgs{...} }
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortArrayInput interface {
 	pulumi.Input
 
@@ -3943,7 +3943,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRul
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceInput interface {
 	pulumi.Input
 
@@ -3971,7 +3971,7 @@ func (i RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArrayInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArray and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArrayInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs{...} }
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArgs{...} }
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceArrayInput interface {
 	pulumi.Input
 
@@ -4044,7 +4044,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRul
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortInput interface {
 	pulumi.Input
 
@@ -4074,7 +4074,7 @@ func (i RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArrayInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArray and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArrayInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs{...} }
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArgs{...} }
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortArrayInput interface {
 	pulumi.Input
 
@@ -4156,7 +4156,7 @@ type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRul
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs{...}
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs{...}
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagInput interface {
 	pulumi.Input
 
@@ -4188,7 +4188,7 @@ func (i RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule
 // RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArrayInput is an input type that accepts RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArray and RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArrayOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArrayInput` via:
 //
-//	RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs{...} }
+//          RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArray{ RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArgs{...} }
 type RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagArrayInput interface {
 	pulumi.Input
 
@@ -4268,7 +4268,7 @@ type RuleGroupRuleGroupStatefulRuleOptions struct {
 // RuleGroupRuleGroupStatefulRuleOptionsInput is an input type that accepts RuleGroupRuleGroupStatefulRuleOptionsArgs and RuleGroupRuleGroupStatefulRuleOptionsOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupStatefulRuleOptionsInput` via:
 //
-//	RuleGroupRuleGroupStatefulRuleOptionsArgs{...}
+//          RuleGroupRuleGroupStatefulRuleOptionsArgs{...}
 type RuleGroupRuleGroupStatefulRuleOptionsInput interface {
 	pulumi.Input
 
@@ -4304,11 +4304,11 @@ func (i RuleGroupRuleGroupStatefulRuleOptionsArgs) ToRuleGroupRuleGroupStatefulR
 // RuleGroupRuleGroupStatefulRuleOptionsPtrInput is an input type that accepts RuleGroupRuleGroupStatefulRuleOptionsArgs, RuleGroupRuleGroupStatefulRuleOptionsPtr and RuleGroupRuleGroupStatefulRuleOptionsPtrOutput values.
 // You can construct a concrete instance of `RuleGroupRuleGroupStatefulRuleOptionsPtrInput` via:
 //
-//	        RuleGroupRuleGroupStatefulRuleOptionsArgs{...}
+//          RuleGroupRuleGroupStatefulRuleOptionsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type RuleGroupRuleGroupStatefulRuleOptionsPtrInput interface {
 	pulumi.Input
 
@@ -4407,7 +4407,7 @@ type GetFirewallEncryptionConfiguration struct {
 // GetFirewallEncryptionConfigurationInput is an input type that accepts GetFirewallEncryptionConfigurationArgs and GetFirewallEncryptionConfigurationOutput values.
 // You can construct a concrete instance of `GetFirewallEncryptionConfigurationInput` via:
 //
-//	GetFirewallEncryptionConfigurationArgs{...}
+//          GetFirewallEncryptionConfigurationArgs{...}
 type GetFirewallEncryptionConfigurationInput interface {
 	pulumi.Input
 
@@ -4437,7 +4437,7 @@ func (i GetFirewallEncryptionConfigurationArgs) ToGetFirewallEncryptionConfigura
 // GetFirewallEncryptionConfigurationArrayInput is an input type that accepts GetFirewallEncryptionConfigurationArray and GetFirewallEncryptionConfigurationArrayOutput values.
 // You can construct a concrete instance of `GetFirewallEncryptionConfigurationArrayInput` via:
 //
-//	GetFirewallEncryptionConfigurationArray{ GetFirewallEncryptionConfigurationArgs{...} }
+//          GetFirewallEncryptionConfigurationArray{ GetFirewallEncryptionConfigurationArgs{...} }
 type GetFirewallEncryptionConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -4516,7 +4516,7 @@ type GetFirewallFirewallStatus struct {
 // GetFirewallFirewallStatusInput is an input type that accepts GetFirewallFirewallStatusArgs and GetFirewallFirewallStatusOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusInput` via:
 //
-//	GetFirewallFirewallStatusArgs{...}
+//          GetFirewallFirewallStatusArgs{...}
 type GetFirewallFirewallStatusInput interface {
 	pulumi.Input
 
@@ -4549,7 +4549,7 @@ func (i GetFirewallFirewallStatusArgs) ToGetFirewallFirewallStatusOutputWithCont
 // GetFirewallFirewallStatusArrayInput is an input type that accepts GetFirewallFirewallStatusArray and GetFirewallFirewallStatusArrayOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusArrayInput` via:
 //
-//	GetFirewallFirewallStatusArray{ GetFirewallFirewallStatusArgs{...} }
+//          GetFirewallFirewallStatusArray{ GetFirewallFirewallStatusArgs{...} }
 type GetFirewallFirewallStatusArrayInput interface {
 	pulumi.Input
 
@@ -4634,7 +4634,7 @@ type GetFirewallFirewallStatusCapacityUsageSummary struct {
 // GetFirewallFirewallStatusCapacityUsageSummaryInput is an input type that accepts GetFirewallFirewallStatusCapacityUsageSummaryArgs and GetFirewallFirewallStatusCapacityUsageSummaryOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusCapacityUsageSummaryInput` via:
 //
-//	GetFirewallFirewallStatusCapacityUsageSummaryArgs{...}
+//          GetFirewallFirewallStatusCapacityUsageSummaryArgs{...}
 type GetFirewallFirewallStatusCapacityUsageSummaryInput interface {
 	pulumi.Input
 
@@ -4662,7 +4662,7 @@ func (i GetFirewallFirewallStatusCapacityUsageSummaryArgs) ToGetFirewallFirewall
 // GetFirewallFirewallStatusCapacityUsageSummaryArrayInput is an input type that accepts GetFirewallFirewallStatusCapacityUsageSummaryArray and GetFirewallFirewallStatusCapacityUsageSummaryArrayOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusCapacityUsageSummaryArrayInput` via:
 //
-//	GetFirewallFirewallStatusCapacityUsageSummaryArray{ GetFirewallFirewallStatusCapacityUsageSummaryArgs{...} }
+//          GetFirewallFirewallStatusCapacityUsageSummaryArray{ GetFirewallFirewallStatusCapacityUsageSummaryArgs{...} }
 type GetFirewallFirewallStatusCapacityUsageSummaryArrayInput interface {
 	pulumi.Input
 
@@ -4737,7 +4737,7 @@ type GetFirewallFirewallStatusCapacityUsageSummaryCidr struct {
 // GetFirewallFirewallStatusCapacityUsageSummaryCidrInput is an input type that accepts GetFirewallFirewallStatusCapacityUsageSummaryCidrArgs and GetFirewallFirewallStatusCapacityUsageSummaryCidrOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusCapacityUsageSummaryCidrInput` via:
 //
-//	GetFirewallFirewallStatusCapacityUsageSummaryCidrArgs{...}
+//          GetFirewallFirewallStatusCapacityUsageSummaryCidrArgs{...}
 type GetFirewallFirewallStatusCapacityUsageSummaryCidrInput interface {
 	pulumi.Input
 
@@ -4769,7 +4769,7 @@ func (i GetFirewallFirewallStatusCapacityUsageSummaryCidrArgs) ToGetFirewallFire
 // GetFirewallFirewallStatusCapacityUsageSummaryCidrArrayInput is an input type that accepts GetFirewallFirewallStatusCapacityUsageSummaryCidrArray and GetFirewallFirewallStatusCapacityUsageSummaryCidrArrayOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusCapacityUsageSummaryCidrArrayInput` via:
 //
-//	GetFirewallFirewallStatusCapacityUsageSummaryCidrArray{ GetFirewallFirewallStatusCapacityUsageSummaryCidrArgs{...} }
+//          GetFirewallFirewallStatusCapacityUsageSummaryCidrArray{ GetFirewallFirewallStatusCapacityUsageSummaryCidrArgs{...} }
 type GetFirewallFirewallStatusCapacityUsageSummaryCidrArrayInput interface {
 	pulumi.Input
 
@@ -4850,7 +4850,7 @@ type GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReference struct {
 // GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceInput is an input type that accepts GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArgs and GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceInput` via:
 //
-//	GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArgs{...}
+//          GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArgs{...}
 type GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceInput interface {
 	pulumi.Input
 
@@ -4878,7 +4878,7 @@ func (i GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArgs) ToG
 // GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArrayInput is an input type that accepts GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArray and GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArrayOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArrayInput` via:
 //
-//	GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArray{ GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArgs{...} }
+//          GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArray{ GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArgs{...} }
 type GetFirewallFirewallStatusCapacityUsageSummaryCidrIpSetReferenceArrayInput interface {
 	pulumi.Input
 
@@ -4951,7 +4951,7 @@ type GetFirewallFirewallStatusSyncState struct {
 // GetFirewallFirewallStatusSyncStateInput is an input type that accepts GetFirewallFirewallStatusSyncStateArgs and GetFirewallFirewallStatusSyncStateOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusSyncStateInput` via:
 //
-//	GetFirewallFirewallStatusSyncStateArgs{...}
+//          GetFirewallFirewallStatusSyncStateArgs{...}
 type GetFirewallFirewallStatusSyncStateInput interface {
 	pulumi.Input
 
@@ -4981,7 +4981,7 @@ func (i GetFirewallFirewallStatusSyncStateArgs) ToGetFirewallFirewallStatusSyncS
 // GetFirewallFirewallStatusSyncStateArrayInput is an input type that accepts GetFirewallFirewallStatusSyncStateArray and GetFirewallFirewallStatusSyncStateArrayOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusSyncStateArrayInput` via:
 //
-//	GetFirewallFirewallStatusSyncStateArray{ GetFirewallFirewallStatusSyncStateArgs{...} }
+//          GetFirewallFirewallStatusSyncStateArray{ GetFirewallFirewallStatusSyncStateArgs{...} }
 type GetFirewallFirewallStatusSyncStateArrayInput interface {
 	pulumi.Input
 
@@ -5060,7 +5060,7 @@ type GetFirewallFirewallStatusSyncStateAttachment struct {
 // GetFirewallFirewallStatusSyncStateAttachmentInput is an input type that accepts GetFirewallFirewallStatusSyncStateAttachmentArgs and GetFirewallFirewallStatusSyncStateAttachmentOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusSyncStateAttachmentInput` via:
 //
-//	GetFirewallFirewallStatusSyncStateAttachmentArgs{...}
+//          GetFirewallFirewallStatusSyncStateAttachmentArgs{...}
 type GetFirewallFirewallStatusSyncStateAttachmentInput interface {
 	pulumi.Input
 
@@ -5091,7 +5091,7 @@ func (i GetFirewallFirewallStatusSyncStateAttachmentArgs) ToGetFirewallFirewallS
 // GetFirewallFirewallStatusSyncStateAttachmentArrayInput is an input type that accepts GetFirewallFirewallStatusSyncStateAttachmentArray and GetFirewallFirewallStatusSyncStateAttachmentArrayOutput values.
 // You can construct a concrete instance of `GetFirewallFirewallStatusSyncStateAttachmentArrayInput` via:
 //
-//	GetFirewallFirewallStatusSyncStateAttachmentArray{ GetFirewallFirewallStatusSyncStateAttachmentArgs{...} }
+//          GetFirewallFirewallStatusSyncStateAttachmentArray{ GetFirewallFirewallStatusSyncStateAttachmentArgs{...} }
 type GetFirewallFirewallStatusSyncStateAttachmentArrayInput interface {
 	pulumi.Input
 
@@ -5174,7 +5174,7 @@ type GetFirewallPolicyFirewallPolicy struct {
 // GetFirewallPolicyFirewallPolicyInput is an input type that accepts GetFirewallPolicyFirewallPolicyArgs and GetFirewallPolicyFirewallPolicyOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyArgs{...}
+//          GetFirewallPolicyFirewallPolicyArgs{...}
 type GetFirewallPolicyFirewallPolicyInput interface {
 	pulumi.Input
 
@@ -5207,7 +5207,7 @@ func (i GetFirewallPolicyFirewallPolicyArgs) ToGetFirewallPolicyFirewallPolicyOu
 // GetFirewallPolicyFirewallPolicyArrayInput is an input type that accepts GetFirewallPolicyFirewallPolicyArray and GetFirewallPolicyFirewallPolicyArrayOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyArrayInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyArray{ GetFirewallPolicyFirewallPolicyArgs{...} }
+//          GetFirewallPolicyFirewallPolicyArray{ GetFirewallPolicyFirewallPolicyArgs{...} }
 type GetFirewallPolicyFirewallPolicyArrayInput interface {
 	pulumi.Input
 
@@ -5306,7 +5306,7 @@ type GetFirewallPolicyFirewallPolicyStatefulEngineOption struct {
 // GetFirewallPolicyFirewallPolicyStatefulEngineOptionInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatefulEngineOptionArgs and GetFirewallPolicyFirewallPolicyStatefulEngineOptionOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatefulEngineOptionInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatefulEngineOptionArgs{...}
+//          GetFirewallPolicyFirewallPolicyStatefulEngineOptionArgs{...}
 type GetFirewallPolicyFirewallPolicyStatefulEngineOptionInput interface {
 	pulumi.Input
 
@@ -5333,7 +5333,7 @@ func (i GetFirewallPolicyFirewallPolicyStatefulEngineOptionArgs) ToGetFirewallPo
 // GetFirewallPolicyFirewallPolicyStatefulEngineOptionArrayInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatefulEngineOptionArray and GetFirewallPolicyFirewallPolicyStatefulEngineOptionArrayOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatefulEngineOptionArrayInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatefulEngineOptionArray{ GetFirewallPolicyFirewallPolicyStatefulEngineOptionArgs{...} }
+//          GetFirewallPolicyFirewallPolicyStatefulEngineOptionArray{ GetFirewallPolicyFirewallPolicyStatefulEngineOptionArgs{...} }
 type GetFirewallPolicyFirewallPolicyStatefulEngineOptionArrayInput interface {
 	pulumi.Input
 
@@ -5401,7 +5401,7 @@ type GetFirewallPolicyFirewallPolicyStatefulRuleGroupReference struct {
 // GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs and GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs{...}
+//          GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs{...}
 type GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceInput interface {
 	pulumi.Input
 
@@ -5429,7 +5429,7 @@ func (i GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs) ToGetFire
 // GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArrayInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArray and GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArrayOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArrayInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArray{ GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs{...} }
+//          GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArray{ GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs{...} }
 type GetFirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArrayInput interface {
 	pulumi.Input
 
@@ -5501,7 +5501,7 @@ type GetFirewallPolicyFirewallPolicyStatelessCustomAction struct {
 // GetFirewallPolicyFirewallPolicyStatelessCustomActionInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatelessCustomActionArgs and GetFirewallPolicyFirewallPolicyStatelessCustomActionOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatelessCustomActionInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatelessCustomActionArgs{...}
+//          GetFirewallPolicyFirewallPolicyStatelessCustomActionArgs{...}
 type GetFirewallPolicyFirewallPolicyStatelessCustomActionInput interface {
 	pulumi.Input
 
@@ -5529,7 +5529,7 @@ func (i GetFirewallPolicyFirewallPolicyStatelessCustomActionArgs) ToGetFirewallP
 // GetFirewallPolicyFirewallPolicyStatelessCustomActionArrayInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatelessCustomActionArray and GetFirewallPolicyFirewallPolicyStatelessCustomActionArrayOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatelessCustomActionArrayInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatelessCustomActionArray{ GetFirewallPolicyFirewallPolicyStatelessCustomActionArgs{...} }
+//          GetFirewallPolicyFirewallPolicyStatelessCustomActionArray{ GetFirewallPolicyFirewallPolicyStatelessCustomActionArgs{...} }
 type GetFirewallPolicyFirewallPolicyStatelessCustomActionArrayInput interface {
 	pulumi.Input
 
@@ -5602,7 +5602,7 @@ type GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition struct
 // GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs and GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs{...}
+//          GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs{...}
 type GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionInput interface {
 	pulumi.Input
 
@@ -5629,7 +5629,7 @@ func (i GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs
 // GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArrayInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArray and GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArrayOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArrayInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArray{ GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs{...} }
+//          GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArray{ GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArgs{...} }
 type GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionArrayInput interface {
 	pulumi.Input
 
@@ -5698,7 +5698,7 @@ type GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublish
 // GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs and GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs{...}
+//          GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs{...}
 type GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionInput interface {
 	pulumi.Input
 
@@ -5725,7 +5725,7 @@ func (i GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPubl
 // GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArrayInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArray and GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArrayOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArrayInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArray{ GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs{...} }
+//          GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArray{ GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArgs{...} }
 type GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionArrayInput interface {
 	pulumi.Input
 
@@ -5794,7 +5794,7 @@ type GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublish
 // GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs and GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs{...}
+//          GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs{...}
 type GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionInput interface {
 	pulumi.Input
 
@@ -5821,7 +5821,7 @@ func (i GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPubl
 // GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArrayInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArray and GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArrayOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArrayInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArray{ GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs{...} }
+//          GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArray{ GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArgs{...} }
 type GetFirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimensionArrayInput interface {
 	pulumi.Input
 
@@ -5891,7 +5891,7 @@ type GetFirewallPolicyFirewallPolicyStatelessRuleGroupReference struct {
 // GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs and GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs{...}
+//          GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs{...}
 type GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceInput interface {
 	pulumi.Input
 
@@ -5919,7 +5919,7 @@ func (i GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs) ToGetFir
 // GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArrayInput is an input type that accepts GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArray and GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArrayOutput values.
 // You can construct a concrete instance of `GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArrayInput` via:
 //
-//	GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArray{ GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs{...} }
+//          GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArray{ GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs{...} }
 type GetFirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArrayInput interface {
 	pulumi.Input
 
@@ -5991,7 +5991,7 @@ type GetFirewallSubnetMapping struct {
 // GetFirewallSubnetMappingInput is an input type that accepts GetFirewallSubnetMappingArgs and GetFirewallSubnetMappingOutput values.
 // You can construct a concrete instance of `GetFirewallSubnetMappingInput` via:
 //
-//	GetFirewallSubnetMappingArgs{...}
+//          GetFirewallSubnetMappingArgs{...}
 type GetFirewallSubnetMappingInput interface {
 	pulumi.Input
 
@@ -6019,7 +6019,7 @@ func (i GetFirewallSubnetMappingArgs) ToGetFirewallSubnetMappingOutputWithContex
 // GetFirewallSubnetMappingArrayInput is an input type that accepts GetFirewallSubnetMappingArray and GetFirewallSubnetMappingArrayOutput values.
 // You can construct a concrete instance of `GetFirewallSubnetMappingArrayInput` via:
 //
-//	GetFirewallSubnetMappingArray{ GetFirewallSubnetMappingArgs{...} }
+//          GetFirewallSubnetMappingArray{ GetFirewallSubnetMappingArgs{...} }
 type GetFirewallSubnetMappingArrayInput interface {
 	pulumi.Input
 

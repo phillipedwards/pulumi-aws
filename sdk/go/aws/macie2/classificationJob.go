@@ -19,40 +19,37 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/macie2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/macie2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			testAccount, err := macie2.NewAccount(ctx, "testAccount", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = macie2.NewClassificationJob(ctx, "testClassificationJob", &macie2.ClassificationJobArgs{
-//				JobType: pulumi.String("ONE_TIME"),
-//				S3JobDefinition: &macie2.ClassificationJobS3JobDefinitionArgs{
-//					BucketDefinitions: macie2.ClassificationJobS3JobDefinitionBucketDefinitionArray{
-//						&macie2.ClassificationJobS3JobDefinitionBucketDefinitionArgs{
-//							AccountId: pulumi.String("ACCOUNT ID"),
-//							Buckets: pulumi.StringArray{
-//								pulumi.String("S3 BUCKET NAME"),
-//							},
-//						},
-//					},
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				testAccount,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		testAccount, err := macie2.NewAccount(ctx, "testAccount", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = macie2.NewClassificationJob(ctx, "testClassificationJob", &macie2.ClassificationJobArgs{
+// 			JobType: pulumi.String("ONE_TIME"),
+// 			S3JobDefinition: &macie2.ClassificationJobS3JobDefinitionArgs{
+// 				BucketDefinitions: macie2.ClassificationJobS3JobDefinitionBucketDefinitionArray{
+// 					&macie2.ClassificationJobS3JobDefinitionBucketDefinitionArgs{
+// 						AccountId: pulumi.String("ACCOUNT ID"),
+// 						Buckets: pulumi.StringArray{
+// 							pulumi.String("S3 BUCKET NAME"),
+// 						},
+// 					},
+// 				},
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			testAccount,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -60,9 +57,7 @@ import (
 // `aws_macie2_classification_job` can be imported using the id, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:macie2/classificationJob:ClassificationJob example abcd1
-//
+//  $ pulumi import aws:macie2/classificationJob:ClassificationJob example abcd1
 // ```
 type ClassificationJob struct {
 	pulumi.CustomResourceState
@@ -272,7 +267,7 @@ func (i *ClassificationJob) ToClassificationJobOutputWithContext(ctx context.Con
 // ClassificationJobArrayInput is an input type that accepts ClassificationJobArray and ClassificationJobArrayOutput values.
 // You can construct a concrete instance of `ClassificationJobArrayInput` via:
 //
-//	ClassificationJobArray{ ClassificationJobArgs{...} }
+//          ClassificationJobArray{ ClassificationJobArgs{...} }
 type ClassificationJobArrayInput interface {
 	pulumi.Input
 
@@ -297,7 +292,7 @@ func (i ClassificationJobArray) ToClassificationJobArrayOutputWithContext(ctx co
 // ClassificationJobMapInput is an input type that accepts ClassificationJobMap and ClassificationJobMapOutput values.
 // You can construct a concrete instance of `ClassificationJobMapInput` via:
 //
-//	ClassificationJobMap{ "key": ClassificationJobArgs{...} }
+//          ClassificationJobMap{ "key": ClassificationJobArgs{...} }
 type ClassificationJobMapInput interface {
 	pulumi.Input
 

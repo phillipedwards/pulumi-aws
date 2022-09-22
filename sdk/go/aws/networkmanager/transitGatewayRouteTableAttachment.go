@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/networkmanager"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/networkmanager"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := networkmanager.NewTransitGatewayRouteTableAttachment(ctx, "example", &networkmanager.TransitGatewayRouteTableAttachmentArgs{
-//				PeeringId:                   pulumi.Any(aws_networkmanager_transit_gateway_peering.Example.Id),
-//				TransitGatewayRouteTableArn: pulumi.Any(aws_ec2_transit_gateway_route_table.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := networkmanager.NewTransitGatewayRouteTableAttachment(ctx, "example", &networkmanager.TransitGatewayRouteTableAttachmentArgs{
+// 			PeeringId:                   pulumi.Any(aws_networkmanager_transit_gateway_peering.Example.Id),
+// 			TransitGatewayRouteTableArn: pulumi.Any(aws_ec2_transit_gateway_route_table.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // `aws_networkmanager_transit_gateway_route_table_attachment` can be imported using the attachment ID, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:networkmanager/transitGatewayRouteTableAttachment:TransitGatewayRouteTableAttachment example attachment-0f8fa60d2238d1bd8
-//
+//  $ pulumi import aws:networkmanager/transitGatewayRouteTableAttachment:TransitGatewayRouteTableAttachment example attachment-0f8fa60d2238d1bd8
 // ```
 type TransitGatewayRouteTableAttachment struct {
 	pulumi.CustomResourceState
@@ -222,7 +217,7 @@ func (i *TransitGatewayRouteTableAttachment) ToTransitGatewayRouteTableAttachmen
 // TransitGatewayRouteTableAttachmentArrayInput is an input type that accepts TransitGatewayRouteTableAttachmentArray and TransitGatewayRouteTableAttachmentArrayOutput values.
 // You can construct a concrete instance of `TransitGatewayRouteTableAttachmentArrayInput` via:
 //
-//	TransitGatewayRouteTableAttachmentArray{ TransitGatewayRouteTableAttachmentArgs{...} }
+//          TransitGatewayRouteTableAttachmentArray{ TransitGatewayRouteTableAttachmentArgs{...} }
 type TransitGatewayRouteTableAttachmentArrayInput interface {
 	pulumi.Input
 
@@ -247,7 +242,7 @@ func (i TransitGatewayRouteTableAttachmentArray) ToTransitGatewayRouteTableAttac
 // TransitGatewayRouteTableAttachmentMapInput is an input type that accepts TransitGatewayRouteTableAttachmentMap and TransitGatewayRouteTableAttachmentMapOutput values.
 // You can construct a concrete instance of `TransitGatewayRouteTableAttachmentMapInput` via:
 //
-//	TransitGatewayRouteTableAttachmentMap{ "key": TransitGatewayRouteTableAttachmentArgs{...} }
+//          TransitGatewayRouteTableAttachmentMap{ "key": TransitGatewayRouteTableAttachmentArgs{...} }
 type TransitGatewayRouteTableAttachmentMapInput interface {
 	pulumi.Input
 

@@ -19,55 +19,52 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codecommit"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codestarnotifications"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codecommit"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codestarnotifications"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			code, err := codecommit.NewRepository(ctx, "code", &codecommit.RepositoryArgs{
-//				RepositoryName: pulumi.String("example-code-repo"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			notif, err := sns.NewTopic(ctx, "notif", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = sns.NewTopicPolicy(ctx, "default", &sns.TopicPolicyArgs{
-//				Arn: notif.Arn,
-//				Policy: notifAccess.ApplyT(func(notifAccess iam.GetPolicyDocumentResult) (string, error) {
-//					return notifAccess.Json, nil
-//				}).(pulumi.StringOutput),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = codestarnotifications.NewNotificationRule(ctx, "commits", &codestarnotifications.NotificationRuleArgs{
-//				DetailType: pulumi.String("BASIC"),
-//				EventTypeIds: pulumi.StringArray{
-//					pulumi.String("codecommit-repository-comments-on-commits"),
-//				},
-//				Resource: code.Arn,
-//				Targets: codestarnotifications.NotificationRuleTargetArray{
-//					&codestarnotifications.NotificationRuleTargetArgs{
-//						Address: notif.Arn,
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		code, err := codecommit.NewRepository(ctx, "code", &codecommit.RepositoryArgs{
+// 			RepositoryName: pulumi.String("example-code-repo"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		notif, err := sns.NewTopic(ctx, "notif", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = sns.NewTopicPolicy(ctx, "default", &sns.TopicPolicyArgs{
+// 			Arn: notif.Arn,
+// 			Policy: notifAccess.ApplyT(func(notifAccess iam.GetPolicyDocumentResult) (string, error) {
+// 				return notifAccess.Json, nil
+// 			}).(pulumi.StringOutput),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = codestarnotifications.NewNotificationRule(ctx, "commits", &codestarnotifications.NotificationRuleArgs{
+// 			DetailType: pulumi.String("BASIC"),
+// 			EventTypeIds: pulumi.StringArray{
+// 				pulumi.String("codecommit-repository-comments-on-commits"),
+// 			},
+// 			Resource: code.Arn,
+// 			Targets: codestarnotifications.NotificationRuleTargetArray{
+// 				&codestarnotifications.NotificationRuleTargetArgs{
+// 					Address: notif.Arn,
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -75,9 +72,7 @@ import (
 // CodeStar notification rule can be imported using the ARN, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:codestarnotifications/notificationRule:NotificationRule foo arn:aws:codestar-notifications:us-west-1:0123456789:notificationrule/2cdc68a3-8f7c-4893-b6a5-45b362bd4f2b
-//
+//  $ pulumi import aws:codestarnotifications/notificationRule:NotificationRule foo arn:aws:codestar-notifications:us-west-1:0123456789:notificationrule/2cdc68a3-8f7c-4893-b6a5-45b362bd4f2b
 // ```
 type NotificationRule struct {
 	pulumi.CustomResourceState
@@ -251,7 +246,7 @@ func (i *NotificationRule) ToNotificationRuleOutputWithContext(ctx context.Conte
 // NotificationRuleArrayInput is an input type that accepts NotificationRuleArray and NotificationRuleArrayOutput values.
 // You can construct a concrete instance of `NotificationRuleArrayInput` via:
 //
-//	NotificationRuleArray{ NotificationRuleArgs{...} }
+//          NotificationRuleArray{ NotificationRuleArgs{...} }
 type NotificationRuleArrayInput interface {
 	pulumi.Input
 
@@ -276,7 +271,7 @@ func (i NotificationRuleArray) ToNotificationRuleArrayOutputWithContext(ctx cont
 // NotificationRuleMapInput is an input type that accepts NotificationRuleMap and NotificationRuleMapOutput values.
 // You can construct a concrete instance of `NotificationRuleMapInput` via:
 //
-//	NotificationRuleMap{ "key": NotificationRuleArgs{...} }
+//          NotificationRuleMap{ "key": NotificationRuleArgs{...} }
 type NotificationRuleMapInput interface {
 	pulumi.Input
 

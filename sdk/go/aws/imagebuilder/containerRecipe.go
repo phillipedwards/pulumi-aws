@@ -19,48 +19,45 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/imagebuilder"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/imagebuilder"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := imagebuilder.NewContainerRecipe(ctx, "example", &imagebuilder.ContainerRecipeArgs{
-//				Version:       pulumi.String("1.0.0"),
-//				ContainerType: pulumi.String("DOCKER"),
-//				ParentImage:   pulumi.String("arn:aws:imagebuilder:eu-central-1:aws:image/amazon-linux-x86-latest/x.x.x"),
-//				TargetRepository: &imagebuilder.ContainerRecipeTargetRepositoryArgs{
-//					RepositoryName: pulumi.Any(aws_ecr_repository.Example.Name),
-//					Service:        pulumi.String("ECR"),
-//				},
-//				Components: imagebuilder.ContainerRecipeComponentArray{
-//					&imagebuilder.ContainerRecipeComponentArgs{
-//						ComponentArn: pulumi.Any(aws_imagebuilder_component.Example.Arn),
-//						Parameters: imagebuilder.ContainerRecipeComponentParameterArray{
-//							&imagebuilder.ContainerRecipeComponentParameterArgs{
-//								Name:  pulumi.String("Parameter1"),
-//								Value: pulumi.String("Value1"),
-//							},
-//							&imagebuilder.ContainerRecipeComponentParameterArgs{
-//								Name:  pulumi.String("Parameter2"),
-//								Value: pulumi.String("Value2"),
-//							},
-//						},
-//					},
-//				},
-//				DockerfileTemplateData: pulumi.String(fmt.Sprintf("FROM {{{ imagebuilder:parentImage }}}\n{{{ imagebuilder:environments }}}\n{{{ imagebuilder:components }}}\n")),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := imagebuilder.NewContainerRecipe(ctx, "example", &imagebuilder.ContainerRecipeArgs{
+// 			Version:       pulumi.String("1.0.0"),
+// 			ContainerType: pulumi.String("DOCKER"),
+// 			ParentImage:   pulumi.String("arn:aws:imagebuilder:eu-central-1:aws:image/amazon-linux-x86-latest/x.x.x"),
+// 			TargetRepository: &imagebuilder.ContainerRecipeTargetRepositoryArgs{
+// 				RepositoryName: pulumi.Any(aws_ecr_repository.Example.Name),
+// 				Service:        pulumi.String("ECR"),
+// 			},
+// 			Components: imagebuilder.ContainerRecipeComponentArray{
+// 				&imagebuilder.ContainerRecipeComponentArgs{
+// 					ComponentArn: pulumi.Any(aws_imagebuilder_component.Example.Arn),
+// 					Parameters: imagebuilder.ContainerRecipeComponentParameterArray{
+// 						&imagebuilder.ContainerRecipeComponentParameterArgs{
+// 							Name:  pulumi.String("Parameter1"),
+// 							Value: pulumi.String("Value1"),
+// 						},
+// 						&imagebuilder.ContainerRecipeComponentParameterArgs{
+// 							Name:  pulumi.String("Parameter2"),
+// 							Value: pulumi.String("Value2"),
+// 						},
+// 					},
+// 				},
+// 			},
+// 			DockerfileTemplateData: pulumi.String(fmt.Sprintf("FROM {{{ imagebuilder:parentImage }}}\n{{{ imagebuilder:environments }}}\n{{{ imagebuilder:components }}}\n")),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -68,9 +65,7 @@ import (
 // `aws_imagebuilder_container_recipe` resources can be imported by using the Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:imagebuilder/containerRecipe:ContainerRecipe example arn:aws:imagebuilder:us-east-1:123456789012:container-recipe/example/1.0.0
-//
+//  $ pulumi import aws:imagebuilder/containerRecipe:ContainerRecipe example arn:aws:imagebuilder:us-east-1:123456789012:container-recipe/example/1.0.0
 // ```
 type ContainerRecipe struct {
 	pulumi.CustomResourceState
@@ -329,7 +324,7 @@ func (i *ContainerRecipe) ToContainerRecipeOutputWithContext(ctx context.Context
 // ContainerRecipeArrayInput is an input type that accepts ContainerRecipeArray and ContainerRecipeArrayOutput values.
 // You can construct a concrete instance of `ContainerRecipeArrayInput` via:
 //
-//	ContainerRecipeArray{ ContainerRecipeArgs{...} }
+//          ContainerRecipeArray{ ContainerRecipeArgs{...} }
 type ContainerRecipeArrayInput interface {
 	pulumi.Input
 
@@ -354,7 +349,7 @@ func (i ContainerRecipeArray) ToContainerRecipeArrayOutputWithContext(ctx contex
 // ContainerRecipeMapInput is an input type that accepts ContainerRecipeMap and ContainerRecipeMapOutput values.
 // You can construct a concrete instance of `ContainerRecipeMapInput` via:
 //
-//	ContainerRecipeMap{ "key": ContainerRecipeArgs{...} }
+//          ContainerRecipeMap{ "key": ContainerRecipeArgs{...} }
 type ContainerRecipeMapInput interface {
 	pulumi.Input
 

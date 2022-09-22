@@ -19,26 +19,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.GetResolverRules(ctx, &route53.GetResolverRulesArgs{
-//				OwnerId:     pulumi.StringRef("Route 53 Resolver"),
-//				RuleType:    pulumi.StringRef("RECURSIVE"),
-//				ShareStatus: pulumi.StringRef("NOT_SHARED"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.GetResolverRules(ctx, &route53.GetResolverRulesArgs{
+// 			OwnerId:     pulumi.StringRef("Route 53 Resolver"),
+// 			RuleType:    pulumi.StringRef("RECURSIVE"),
+// 			ShareStatus: pulumi.StringRef("NOT_SHARED"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Retrieving forward rules shared with me
 //
@@ -46,25 +43,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.GetResolverRules(ctx, &route53.GetResolverRulesArgs{
-//				RuleType:    pulumi.StringRef("FORWARD"),
-//				ShareStatus: pulumi.StringRef("SHARED_WITH_ME"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.GetResolverRules(ctx, &route53.GetResolverRulesArgs{
+// 			RuleType:    pulumi.StringRef("FORWARD"),
+// 			ShareStatus: pulumi.StringRef("SHARED_WITH_ME"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Retrieving rules by name regex
 //
@@ -74,24 +68,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53.GetResolverRules(ctx, &route53.GetResolverRulesArgs{
-//				NameRegex: pulumi.StringRef(".*abc.*"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53.GetResolverRules(ctx, &route53.GetResolverRulesArgs{
+// 			NameRegex: pulumi.StringRef(".*abc.*"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func GetResolverRules(ctx *pulumi.Context, args *GetResolverRulesArgs, opts ...pulumi.InvokeOption) (*GetResolverRulesResult, error) {
 	var rv GetResolverRulesResult

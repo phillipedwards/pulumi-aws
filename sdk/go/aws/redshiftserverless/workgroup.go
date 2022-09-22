@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshiftserverless"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshiftserverless"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := redshiftserverless.NewWorkgroup(ctx, "example", &redshiftserverless.WorkgroupArgs{
-//				NamespaceName: pulumi.String("concurrency-scaling"),
-//				WorkgroupName: pulumi.String("concurrency-scaling"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := redshiftserverless.NewWorkgroup(ctx, "example", &redshiftserverless.WorkgroupArgs{
+// 			NamespaceName: pulumi.String("concurrency-scaling"),
+// 			WorkgroupName: pulumi.String("concurrency-scaling"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // Redshift Serverless Workgroups can be imported using the `workgroup_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:redshiftserverless/workgroup:Workgroup example example
-//
+//  $ pulumi import aws:redshiftserverless/workgroup:Workgroup example example
 // ```
 type Workgroup struct {
 	pulumi.CustomResourceState
@@ -235,7 +230,7 @@ func (i *Workgroup) ToWorkgroupOutputWithContext(ctx context.Context) WorkgroupO
 // WorkgroupArrayInput is an input type that accepts WorkgroupArray and WorkgroupArrayOutput values.
 // You can construct a concrete instance of `WorkgroupArrayInput` via:
 //
-//	WorkgroupArray{ WorkgroupArgs{...} }
+//          WorkgroupArray{ WorkgroupArgs{...} }
 type WorkgroupArrayInput interface {
 	pulumi.Input
 
@@ -260,7 +255,7 @@ func (i WorkgroupArray) ToWorkgroupArrayOutputWithContext(ctx context.Context) W
 // WorkgroupMapInput is an input type that accepts WorkgroupMap and WorkgroupMapOutput values.
 // You can construct a concrete instance of `WorkgroupMapInput` via:
 //
-//	WorkgroupMap{ "key": WorkgroupArgs{...} }
+//          WorkgroupMap{ "key": WorkgroupArgs{...} }
 type WorkgroupMapInput interface {
 	pulumi.Input
 

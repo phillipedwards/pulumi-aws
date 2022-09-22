@@ -19,40 +19,37 @@ import (
 // package main
 //
 // import (
+// 	"io/ioutil"
 //
-//	"io/ioutil"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/pinpoint"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func readFileOrPanic(path string) pulumi.StringPtrInput {
-//		data, err := ioutil.ReadFile(path)
-//		if err != nil {
-//			panic(err.Error())
-//		}
-//		return pulumi.String(string(data))
-//	}
+// func readFileOrPanic(path string) pulumi.StringPtrInput {
+// 	data, err := ioutil.ReadFile(path)
+// 	if err != nil {
+// 		panic(err.Error())
+// 	}
+// 	return pulumi.String(string(data))
+// }
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			app, err := pinpoint.NewApp(ctx, "app", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = pinpoint.NewApnsSandboxChannel(ctx, "apnsSandbox", &pinpoint.ApnsSandboxChannelArgs{
-//				ApplicationId: app.ApplicationId,
-//				Certificate:   readFileOrPanic("./certificate.pem"),
-//				PrivateKey:    readFileOrPanic("./private_key.key"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		app, err := pinpoint.NewApp(ctx, "app", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = pinpoint.NewApnsSandboxChannel(ctx, "apnsSandbox", &pinpoint.ApnsSandboxChannelArgs{
+// 			ApplicationId: app.ApplicationId,
+// 			Certificate:   readFileOrPanic("./certificate.pem"),
+// 			PrivateKey:    readFileOrPanic("./private_key.key"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -60,9 +57,7 @@ import (
 // Pinpoint APNs Sandbox Channel can be imported using the `application-id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:pinpoint/apnsSandboxChannel:ApnsSandboxChannel apns_sandbox application-id
-//
+//  $ pulumi import aws:pinpoint/apnsSandboxChannel:ApnsSandboxChannel apns_sandbox application-id
 // ```
 type ApnsSandboxChannel struct {
 	pulumi.CustomResourceState
@@ -248,7 +243,7 @@ func (i *ApnsSandboxChannel) ToApnsSandboxChannelOutputWithContext(ctx context.C
 // ApnsSandboxChannelArrayInput is an input type that accepts ApnsSandboxChannelArray and ApnsSandboxChannelArrayOutput values.
 // You can construct a concrete instance of `ApnsSandboxChannelArrayInput` via:
 //
-//	ApnsSandboxChannelArray{ ApnsSandboxChannelArgs{...} }
+//          ApnsSandboxChannelArray{ ApnsSandboxChannelArgs{...} }
 type ApnsSandboxChannelArrayInput interface {
 	pulumi.Input
 
@@ -273,7 +268,7 @@ func (i ApnsSandboxChannelArray) ToApnsSandboxChannelArrayOutputWithContext(ctx 
 // ApnsSandboxChannelMapInput is an input type that accepts ApnsSandboxChannelMap and ApnsSandboxChannelMapOutput values.
 // You can construct a concrete instance of `ApnsSandboxChannelMapInput` via:
 //
-//	ApnsSandboxChannelMap{ "key": ApnsSandboxChannelArgs{...} }
+//          ApnsSandboxChannelMap{ "key": ApnsSandboxChannelArgs{...} }
 type ApnsSandboxChannelMapInput interface {
 	pulumi.Input
 

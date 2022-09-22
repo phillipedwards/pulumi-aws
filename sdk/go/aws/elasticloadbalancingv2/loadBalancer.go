@@ -21,34 +21,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/lb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := lb.NewLoadBalancer(ctx, "example", &lb.LoadBalancerArgs{
-//				LoadBalancerType: pulumi.String("network"),
-//				SubnetMappings: lb.LoadBalancerSubnetMappingArray{
-//					&lb.LoadBalancerSubnetMappingArgs{
-//						SubnetId:     pulumi.Any(aws_subnet.Example1.Id),
-//						AllocationId: pulumi.Any(aws_eip.Example1.Id),
-//					},
-//					&lb.LoadBalancerSubnetMappingArgs{
-//						SubnetId:     pulumi.Any(aws_subnet.Example2.Id),
-//						AllocationId: pulumi.Any(aws_eip.Example2.Id),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := lb.NewLoadBalancer(ctx, "example", &lb.LoadBalancerArgs{
+// 			LoadBalancerType: pulumi.String("network"),
+// 			SubnetMappings: lb.LoadBalancerSubnetMappingArray{
+// 				&lb.LoadBalancerSubnetMappingArgs{
+// 					SubnetId:     pulumi.Any(aws_subnet.Example1.Id),
+// 					AllocationId: pulumi.Any(aws_eip.Example1.Id),
+// 				},
+// 				&lb.LoadBalancerSubnetMappingArgs{
+// 					SubnetId:     pulumi.Any(aws_subnet.Example2.Id),
+// 					AllocationId: pulumi.Any(aws_eip.Example2.Id),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Specifying private IP addresses for an internal-facing load balancer
 //
@@ -56,34 +53,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/lb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := lb.NewLoadBalancer(ctx, "example", &lb.LoadBalancerArgs{
-//				LoadBalancerType: pulumi.String("network"),
-//				SubnetMappings: lb.LoadBalancerSubnetMappingArray{
-//					&lb.LoadBalancerSubnetMappingArgs{
-//						SubnetId:           pulumi.Any(aws_subnet.Example1.Id),
-//						PrivateIpv4Address: pulumi.String("10.0.1.15"),
-//					},
-//					&lb.LoadBalancerSubnetMappingArgs{
-//						SubnetId:           pulumi.Any(aws_subnet.Example2.Id),
-//						PrivateIpv4Address: pulumi.String("10.0.2.15"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := lb.NewLoadBalancer(ctx, "example", &lb.LoadBalancerArgs{
+// 			LoadBalancerType: pulumi.String("network"),
+// 			SubnetMappings: lb.LoadBalancerSubnetMappingArray{
+// 				&lb.LoadBalancerSubnetMappingArgs{
+// 					SubnetId:           pulumi.Any(aws_subnet.Example1.Id),
+// 					PrivateIpv4Address: pulumi.String("10.0.1.15"),
+// 				},
+// 				&lb.LoadBalancerSubnetMappingArgs{
+// 					SubnetId:           pulumi.Any(aws_subnet.Example2.Id),
+// 					PrivateIpv4Address: pulumi.String("10.0.2.15"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -91,9 +85,7 @@ import (
 // LBs can be imported using their ARN, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:elasticloadbalancingv2/loadBalancer:LoadBalancer bar arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-load-balancer/50dc6c495c0c9188
-//
+//  $ pulumi import aws:elasticloadbalancingv2/loadBalancer:LoadBalancer bar arn:aws:elasticloadbalancing:us-west-2:123456789012:loadbalancer/app/my-load-balancer/50dc6c495c0c9188
 // ```
 //
 // Deprecated: aws.elasticloadbalancingv2.LoadBalancer has been deprecated in favor of aws.lb.LoadBalancer
@@ -429,7 +421,7 @@ func (i *LoadBalancer) ToLoadBalancerOutputWithContext(ctx context.Context) Load
 // LoadBalancerArrayInput is an input type that accepts LoadBalancerArray and LoadBalancerArrayOutput values.
 // You can construct a concrete instance of `LoadBalancerArrayInput` via:
 //
-//	LoadBalancerArray{ LoadBalancerArgs{...} }
+//          LoadBalancerArray{ LoadBalancerArgs{...} }
 type LoadBalancerArrayInput interface {
 	pulumi.Input
 
@@ -454,7 +446,7 @@ func (i LoadBalancerArray) ToLoadBalancerArrayOutputWithContext(ctx context.Cont
 // LoadBalancerMapInput is an input type that accepts LoadBalancerMap and LoadBalancerMapOutput values.
 // You can construct a concrete instance of `LoadBalancerMapInput` via:
 //
-//	LoadBalancerMap{ "key": LoadBalancerArgs{...} }
+//          LoadBalancerMap{ "key": LoadBalancerArgs{...} }
 type LoadBalancerMapInput interface {
 	pulumi.Input
 

@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/opsworks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := opsworks.NewMysqlLayer(ctx, "db", &opsworks.MysqlLayerArgs{
-//				StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := opsworks.NewMysqlLayer(ctx, "db", &opsworks.MysqlLayerArgs{
+// 			StackId: pulumi.Any(aws_opsworks_stack.Main.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type MysqlLayer struct {
 	pulumi.CustomResourceState
@@ -339,7 +336,7 @@ func (i *MysqlLayer) ToMysqlLayerOutputWithContext(ctx context.Context) MysqlLay
 // MysqlLayerArrayInput is an input type that accepts MysqlLayerArray and MysqlLayerArrayOutput values.
 // You can construct a concrete instance of `MysqlLayerArrayInput` via:
 //
-//	MysqlLayerArray{ MysqlLayerArgs{...} }
+//          MysqlLayerArray{ MysqlLayerArgs{...} }
 type MysqlLayerArrayInput interface {
 	pulumi.Input
 
@@ -364,7 +361,7 @@ func (i MysqlLayerArray) ToMysqlLayerArrayOutputWithContext(ctx context.Context)
 // MysqlLayerMapInput is an input type that accepts MysqlLayerMap and MysqlLayerMapOutput values.
 // You can construct a concrete instance of `MysqlLayerMapInput` via:
 //
-//	MysqlLayerMap{ "key": MysqlLayerArgs{...} }
+//          MysqlLayerMap{ "key": MysqlLayerArgs{...} }
 type MysqlLayerMapInput interface {
 	pulumi.Input
 

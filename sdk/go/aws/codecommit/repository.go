@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codecommit"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codecommit"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := codecommit.NewRepository(ctx, "test", &codecommit.RepositoryArgs{
-//				Description:    pulumi.String("This is the Sample App Repository"),
-//				RepositoryName: pulumi.String("MyTestRepository"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := codecommit.NewRepository(ctx, "test", &codecommit.RepositoryArgs{
+// 			Description:    pulumi.String("This is the Sample App Repository"),
+// 			RepositoryName: pulumi.String("MyTestRepository"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // Codecommit repository can be imported using repository name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:codecommit/repository:Repository imported ExistingRepo
-//
+//  $ pulumi import aws:codecommit/repository:Repository imported ExistingRepo
 // ```
 type Repository struct {
 	pulumi.CustomResourceState
@@ -198,7 +193,7 @@ func (i *Repository) ToRepositoryOutputWithContext(ctx context.Context) Reposito
 // RepositoryArrayInput is an input type that accepts RepositoryArray and RepositoryArrayOutput values.
 // You can construct a concrete instance of `RepositoryArrayInput` via:
 //
-//	RepositoryArray{ RepositoryArgs{...} }
+//          RepositoryArray{ RepositoryArgs{...} }
 type RepositoryArrayInput interface {
 	pulumi.Input
 
@@ -223,7 +218,7 @@ func (i RepositoryArray) ToRepositoryArrayOutputWithContext(ctx context.Context)
 // RepositoryMapInput is an input type that accepts RepositoryMap and RepositoryMapOutput values.
 // You can construct a concrete instance of `RepositoryMapInput` via:
 //
-//	RepositoryMap{ "key": RepositoryArgs{...} }
+//          RepositoryMap{ "key": RepositoryArgs{...} }
 type RepositoryMapInput interface {
 	pulumi.Input
 

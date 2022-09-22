@@ -18,30 +18,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/globalaccelerator"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := globalaccelerator.NewAccelerator(ctx, "example", &globalaccelerator.AcceleratorArgs{
-//				Attributes: &globalaccelerator.AcceleratorAttributesArgs{
-//					FlowLogsEnabled:  pulumi.Bool(true),
-//					FlowLogsS3Bucket: pulumi.String("example-bucket"),
-//					FlowLogsS3Prefix: pulumi.String("flow-logs/"),
-//				},
-//				Enabled:       pulumi.Bool(true),
-//				IpAddressType: pulumi.String("IPV4"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := globalaccelerator.NewAccelerator(ctx, "example", &globalaccelerator.AcceleratorArgs{
+// 			Attributes: &globalaccelerator.AcceleratorAttributesArgs{
+// 				FlowLogsEnabled:  pulumi.Bool(true),
+// 				FlowLogsS3Bucket: pulumi.String("example-bucket"),
+// 				FlowLogsS3Prefix: pulumi.String("flow-logs/"),
+// 			},
+// 			Enabled:       pulumi.Bool(true),
+// 			IpAddressType: pulumi.String("IPV4"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -49,9 +46,7 @@ import (
 // Global Accelerator accelerators can be imported using the `arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:globalaccelerator/accelerator:Accelerator example arn:aws:globalaccelerator::111111111111:accelerator/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-//
+//  $ pulumi import aws:globalaccelerator/accelerator:Accelerator example arn:aws:globalaccelerator::111111111111:accelerator/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 // ```
 type Accelerator struct {
 	pulumi.CustomResourceState
@@ -209,7 +204,7 @@ func (i *Accelerator) ToAcceleratorOutputWithContext(ctx context.Context) Accele
 // AcceleratorArrayInput is an input type that accepts AcceleratorArray and AcceleratorArrayOutput values.
 // You can construct a concrete instance of `AcceleratorArrayInput` via:
 //
-//	AcceleratorArray{ AcceleratorArgs{...} }
+//          AcceleratorArray{ AcceleratorArgs{...} }
 type AcceleratorArrayInput interface {
 	pulumi.Input
 
@@ -234,7 +229,7 @@ func (i AcceleratorArray) ToAcceleratorArrayOutputWithContext(ctx context.Contex
 // AcceleratorMapInput is an input type that accepts AcceleratorMap and AcceleratorMapOutput values.
 // You can construct a concrete instance of `AcceleratorMapInput` via:
 //
-//	AcceleratorMap{ "key": AcceleratorArgs{...} }
+//          AcceleratorMap{ "key": AcceleratorArgs{...} }
 type AcceleratorMapInput interface {
 	pulumi.Input
 
@@ -276,9 +271,9 @@ func (o AcceleratorOutput) Attributes() AcceleratorAttributesPtrOutput {
 }
 
 // The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
-//   - `hostedZoneId` --  The Global Accelerator Route 53 zone ID that can be used to
-//     route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
-//     is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
+// * `hostedZoneId` --  The Global Accelerator Route 53 zone ID that can be used to
+//   route an [Alias Resource Record Set](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) to the Global Accelerator. This attribute
+//   is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 func (o AcceleratorOutput) DnsName() pulumi.StringOutput {
 	return o.ApplyT(func(v *Accelerator) pulumi.StringOutput { return v.DnsName }).(pulumi.StringOutput)
 }

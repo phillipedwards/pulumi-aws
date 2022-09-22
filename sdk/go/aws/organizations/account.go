@@ -23,24 +23,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/organizations"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/organizations"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := organizations.NewAccount(ctx, "account", &organizations.AccountArgs{
-//				Email: pulumi.String("john@doe.org"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := organizations.NewAccount(ctx, "account", &organizations.AccountArgs{
+// 			Email: pulumi.String("john@doe.org"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -48,30 +45,28 @@ import (
 // The AWS member account can be imported by using the `account_id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:organizations/account:Account my_account 111111111111
-//
+//  $ pulumi import aws:organizations/account:Account my_account 111111111111
 // ```
 //
-//	Certain resource arguments, like `role_name`, do not have an Organizations API method for reading the information after account creation. If the argument is set in the this provider configuration on an imported resource, this provider will always show a difference. To workaround this behavior, either omit the argument from the this provider configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_organizations_account" "account" {
+//  Certain resource arguments, like `role_name`, do not have an Organizations API method for reading the information after account creation. If the argument is set in the this provider configuration on an imported resource, this provider will always show a difference. To workaround this behavior, either omit the argument from the this provider configuration or use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to hide the difference, e.g. terraform resource "aws_organizations_account" "account" {
 //
-//	name
+//  name
 //
 // = "my_new_account"
 //
-//	email
+//  email
 //
-//	= "john@doe.org"
+//  = "john@doe.org"
 //
-//	role_name = "myOrganizationRole"
+//  role_name = "myOrganizationRole"
 //
 // # There is no AWS Organizations API for reading role_name
 //
-//	lifecycle {
+//  lifecycle {
 //
-//	ignore_changes = [role_name]
+//  ignore_changes = [role_name]
 //
-//	} }
+//  } }
 type Account struct {
 	pulumi.CustomResourceState
 
@@ -253,7 +248,7 @@ func (i *Account) ToAccountOutputWithContext(ctx context.Context) AccountOutput 
 // AccountArrayInput is an input type that accepts AccountArray and AccountArrayOutput values.
 // You can construct a concrete instance of `AccountArrayInput` via:
 //
-//	AccountArray{ AccountArgs{...} }
+//          AccountArray{ AccountArgs{...} }
 type AccountArrayInput interface {
 	pulumi.Input
 
@@ -278,7 +273,7 @@ func (i AccountArray) ToAccountArrayOutputWithContext(ctx context.Context) Accou
 // AccountMapInput is an input type that accepts AccountMap and AccountMapOutput values.
 // You can construct a concrete instance of `AccountMapInput` via:
 //
-//	AccountMap{ "key": AccountArgs{...} }
+//          AccountMap{ "key": AccountArgs{...} }
 type AccountMapInput interface {
 	pulumi.Input
 

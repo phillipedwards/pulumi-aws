@@ -18,22 +18,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ses"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ses"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ses.NewConfigurationSet(ctx, "test", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ses.NewConfigurationSet(ctx, "test", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Require TLS Connections
 //
@@ -41,26 +38,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ses"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ses"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ses.NewConfigurationSet(ctx, "test", &ses.ConfigurationSetArgs{
-//				DeliveryOptions: &ses.ConfigurationSetDeliveryOptionsArgs{
-//					TlsPolicy: pulumi.String("Require"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ses.NewConfigurationSet(ctx, "test", &ses.ConfigurationSetArgs{
+// 			DeliveryOptions: &ses.ConfigurationSetDeliveryOptionsArgs{
+// 				TlsPolicy: pulumi.String("Require"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -68,9 +62,7 @@ import (
 // SES Configuration Sets can be imported using their `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ses/configurationSet:ConfigurationSet test some-configuration-set-test
-//
+//  $ pulumi import aws:ses/configurationSet:ConfigurationSet test some-configuration-set-test
 // ```
 type ConfigurationSet struct {
 	pulumi.CustomResourceState
@@ -216,7 +208,7 @@ func (i *ConfigurationSet) ToConfigurationSetOutputWithContext(ctx context.Conte
 // ConfigurationSetArrayInput is an input type that accepts ConfigurationSetArray and ConfigurationSetArrayOutput values.
 // You can construct a concrete instance of `ConfigurationSetArrayInput` via:
 //
-//	ConfigurationSetArray{ ConfigurationSetArgs{...} }
+//          ConfigurationSetArray{ ConfigurationSetArgs{...} }
 type ConfigurationSetArrayInput interface {
 	pulumi.Input
 
@@ -241,7 +233,7 @@ func (i ConfigurationSetArray) ToConfigurationSetArrayOutputWithContext(ctx cont
 // ConfigurationSetMapInput is an input type that accepts ConfigurationSetMap and ConfigurationSetMapOutput values.
 // You can construct a concrete instance of `ConfigurationSetMapInput` via:
 //
-//	ConfigurationSetMap{ "key": ConfigurationSetArgs{...} }
+//          ConfigurationSetMap{ "key": ConfigurationSetArgs{...} }
 type ConfigurationSetMapInput interface {
 	pulumi.Input
 

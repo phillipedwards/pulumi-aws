@@ -18,27 +18,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewInternetGateway(ctx, "gw", &ec2.InternetGatewayArgs{
-//				VpcId: pulumi.Any(aws_vpc.Main.Id),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("main"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewInternetGateway(ctx, "gw", &ec2.InternetGatewayArgs{
+// 			VpcId: pulumi.Any(aws_vpc.Main.Id),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("main"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // Internet Gateways can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/internetGateway:InternetGateway gw igw-c0a643a9
-//
+//  $ pulumi import aws:ec2/internetGateway:InternetGateway gw igw-c0a643a9
 // ```
 type InternetGateway struct {
 	pulumi.CustomResourceState
@@ -164,7 +159,7 @@ func (i *InternetGateway) ToInternetGatewayOutputWithContext(ctx context.Context
 // InternetGatewayArrayInput is an input type that accepts InternetGatewayArray and InternetGatewayArrayOutput values.
 // You can construct a concrete instance of `InternetGatewayArrayInput` via:
 //
-//	InternetGatewayArray{ InternetGatewayArgs{...} }
+//          InternetGatewayArray{ InternetGatewayArgs{...} }
 type InternetGatewayArrayInput interface {
 	pulumi.Input
 
@@ -189,7 +184,7 @@ func (i InternetGatewayArray) ToInternetGatewayArrayOutputWithContext(ctx contex
 // InternetGatewayMapInput is an input type that accepts InternetGatewayMap and InternetGatewayMapOutput values.
 // You can construct a concrete instance of `InternetGatewayMapInput` via:
 //
-//	InternetGatewayMap{ "key": InternetGatewayArgs{...} }
+//          InternetGatewayMap{ "key": InternetGatewayArgs{...} }
 type InternetGatewayMapInput interface {
 	pulumi.Input
 

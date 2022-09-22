@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rum"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rum"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := rum.NewAppMonitor(ctx, "example", &rum.AppMonitorArgs{
-//				Domain: pulumi.String("localhost"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := rum.NewAppMonitor(ctx, "example", &rum.AppMonitorArgs{
+// 			Domain: pulumi.String("localhost"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // Cloudwatch RUM App Monitor can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:rum/appMonitor:AppMonitor example example
-//
+//  $ pulumi import aws:rum/appMonitor:AppMonitor example example
 // ```
 type AppMonitor struct {
 	pulumi.CustomResourceState
@@ -190,7 +185,7 @@ func (i *AppMonitor) ToAppMonitorOutputWithContext(ctx context.Context) AppMonit
 // AppMonitorArrayInput is an input type that accepts AppMonitorArray and AppMonitorArrayOutput values.
 // You can construct a concrete instance of `AppMonitorArrayInput` via:
 //
-//	AppMonitorArray{ AppMonitorArgs{...} }
+//          AppMonitorArray{ AppMonitorArgs{...} }
 type AppMonitorArrayInput interface {
 	pulumi.Input
 
@@ -215,7 +210,7 @@ func (i AppMonitorArray) ToAppMonitorArrayOutputWithContext(ctx context.Context)
 // AppMonitorMapInput is an input type that accepts AppMonitorMap and AppMonitorMapOutput values.
 // You can construct a concrete instance of `AppMonitorMapInput` via:
 //
-//	AppMonitorMap{ "key": AppMonitorArgs{...} }
+//          AppMonitorMap{ "key": AppMonitorArgs{...} }
 type AppMonitorMapInput interface {
 	pulumi.Input
 

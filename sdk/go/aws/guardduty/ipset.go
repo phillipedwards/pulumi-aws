@@ -21,59 +21,56 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/guardduty"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/guardduty"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			primary, err := guardduty.NewDetector(ctx, "primary", &guardduty.DetectorArgs{
-//				Enable: pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			bucket, err := s3.NewBucketV2(ctx, "bucket", nil)
-//			if err != nil {
-//				return err
-//			}
-//			myIPSet, err := s3.NewBucketObjectv2(ctx, "myIPSet", &s3.BucketObjectv2Args{
-//				Content: pulumi.String("10.0.0.0/8\n"),
-//				Bucket:  bucket.ID(),
-//				Key:     pulumi.String("MyIPSet"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = guardduty.NewIPSet(ctx, "example", &guardduty.IPSetArgs{
-//				Activate:   pulumi.Bool(true),
-//				DetectorId: primary.ID(),
-//				Format:     pulumi.String("TXT"),
-//				Location: pulumi.All(myIPSet.Bucket, myIPSet.Key).ApplyT(func(_args []interface{}) (string, error) {
-//					bucket := _args[0].(string)
-//					key := _args[1].(string)
-//					return fmt.Sprintf("https://s3.amazonaws.com/%v/%v", bucket, key), nil
-//				}).(pulumi.StringOutput),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = s3.NewBucketAclV2(ctx, "bucketAcl", &s3.BucketAclV2Args{
-//				Bucket: bucket.ID(),
-//				Acl:    pulumi.String("private"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		primary, err := guardduty.NewDetector(ctx, "primary", &guardduty.DetectorArgs{
+// 			Enable: pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		bucket, err := s3.NewBucketV2(ctx, "bucket", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		myIPSet, err := s3.NewBucketObjectv2(ctx, "myIPSet", &s3.BucketObjectv2Args{
+// 			Content: pulumi.String("10.0.0.0/8\n"),
+// 			Bucket:  bucket.ID(),
+// 			Key:     pulumi.String("MyIPSet"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = guardduty.NewIPSet(ctx, "example", &guardduty.IPSetArgs{
+// 			Activate:   pulumi.Bool(true),
+// 			DetectorId: primary.ID(),
+// 			Format:     pulumi.String("TXT"),
+// 			Location: pulumi.All(myIPSet.Bucket, myIPSet.Key).ApplyT(func(_args []interface{}) (string, error) {
+// 				bucket := _args[0].(string)
+// 				key := _args[1].(string)
+// 				return fmt.Sprintf("https://s3.amazonaws.com/%v/%v", bucket, key), nil
+// 			}).(pulumi.StringOutput),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = s3.NewBucketAclV2(ctx, "bucketAcl", &s3.BucketAclV2Args{
+// 			Bucket: bucket.ID(),
+// 			Acl:    pulumi.String("private"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -81,9 +78,7 @@ import (
 // GuardDuty IPSet can be imported using the the primary GuardDuty detector ID and IPSet ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:guardduty/iPSet:IPSet MyIPSet 00b00fd5aecc0ab60a708659477e9617:123456789012
-//
+//  $ pulumi import aws:guardduty/iPSet:IPSet MyIPSet 00b00fd5aecc0ab60a708659477e9617:123456789012
 // ```
 type IPSet struct {
 	pulumi.CustomResourceState
@@ -245,7 +240,7 @@ func (i *IPSet) ToIPSetOutputWithContext(ctx context.Context) IPSetOutput {
 // IPSetArrayInput is an input type that accepts IPSetArray and IPSetArrayOutput values.
 // You can construct a concrete instance of `IPSetArrayInput` via:
 //
-//	IPSetArray{ IPSetArgs{...} }
+//          IPSetArray{ IPSetArgs{...} }
 type IPSetArrayInput interface {
 	pulumi.Input
 
@@ -270,7 +265,7 @@ func (i IPSetArray) ToIPSetArrayOutputWithContext(ctx context.Context) IPSetArra
 // IPSetMapInput is an input type that accepts IPSetMap and IPSetMapOutput values.
 // You can construct a concrete instance of `IPSetMapInput` via:
 //
-//	IPSetMap{ "key": IPSetArgs{...} }
+//          IPSetMap{ "key": IPSetArgs{...} }
 type IPSetMapInput interface {
 	pulumi.Input
 

@@ -31,32 +31,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/appmesh"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := appmesh.NewVirtualRouter(ctx, "serviceb", &appmesh.VirtualRouterArgs{
-//				MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
-//				Spec: &appmesh.VirtualRouterSpecArgs{
-//					Listener: &appmesh.VirtualRouterSpecListenerArgs{
-//						PortMapping: &appmesh.VirtualRouterSpecListenerPortMappingArgs{
-//							Port:     pulumi.Int(8080),
-//							Protocol: pulumi.String("http"),
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := appmesh.NewVirtualRouter(ctx, "serviceb", &appmesh.VirtualRouterArgs{
+// 			MeshName: pulumi.Any(aws_appmesh_mesh.Simple.Id),
+// 			Spec: &appmesh.VirtualRouterSpecArgs{
+// 				Listener: &appmesh.VirtualRouterSpecListenerArgs{
+// 					PortMapping: &appmesh.VirtualRouterSpecListenerPortMappingArgs{
+// 						Port:     pulumi.Int(8080),
+// 						Protocol: pulumi.String("http"),
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -64,12 +61,10 @@ import (
 // App Mesh virtual routers can be imported using `mesh_name` together with the virtual router's `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:appmesh/virtualRouter:VirtualRouter serviceb simpleapp/serviceB
-//
+//  $ pulumi import aws:appmesh/virtualRouter:VirtualRouter serviceb simpleapp/serviceB
 // ```
 //
-//	[1]/docs/providers/aws/index.html
+//  [1]/docs/providers/aws/index.html
 type VirtualRouter struct {
 	pulumi.CustomResourceState
 
@@ -232,7 +227,7 @@ func (i *VirtualRouter) ToVirtualRouterOutputWithContext(ctx context.Context) Vi
 // VirtualRouterArrayInput is an input type that accepts VirtualRouterArray and VirtualRouterArrayOutput values.
 // You can construct a concrete instance of `VirtualRouterArrayInput` via:
 //
-//	VirtualRouterArray{ VirtualRouterArgs{...} }
+//          VirtualRouterArray{ VirtualRouterArgs{...} }
 type VirtualRouterArrayInput interface {
 	pulumi.Input
 
@@ -257,7 +252,7 @@ func (i VirtualRouterArray) ToVirtualRouterArrayOutputWithContext(ctx context.Co
 // VirtualRouterMapInput is an input type that accepts VirtualRouterMap and VirtualRouterMapOutput values.
 // You can construct a concrete instance of `VirtualRouterMapInput` via:
 //
-//	VirtualRouterMap{ "key": VirtualRouterArgs{...} }
+//          VirtualRouterMap{ "key": VirtualRouterArgs{...} }
 type VirtualRouterMapInput interface {
 	pulumi.Input
 

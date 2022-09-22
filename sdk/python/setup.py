@@ -48,7 +48,7 @@ setup(name='pulumi_aws',
       keywords='pulumi aws',
       url='https://pulumi.io',
       project_urls={
-          'Repository': 'https://github.com/pulumi/pulumi-aws'
+          'Repository': 'https://github.com/phillipedwards/pulumi-aws'
       },
       license='Apache-2.0',
       packages=find_packages(),

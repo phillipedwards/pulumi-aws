@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshiftserverless"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshiftserverless"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := redshiftserverless.NewEndpointAccess(ctx, "example", &redshiftserverless.EndpointAccessArgs{
-//				EndpointName:  pulumi.String("example"),
-//				WorkgroupName: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := redshiftserverless.NewEndpointAccess(ctx, "example", &redshiftserverless.EndpointAccessArgs{
+// 			EndpointName:  pulumi.String("example"),
+// 			WorkgroupName: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // Redshift Serverless Endpoint Access can be imported using the `endpoint_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:redshiftserverless/endpointAccess:EndpointAccess example example
-//
+//  $ pulumi import aws:redshiftserverless/endpointAccess:EndpointAccess example example
 // ```
 type EndpointAccess struct {
 	pulumi.CustomResourceState
@@ -198,7 +193,7 @@ func (i *EndpointAccess) ToEndpointAccessOutputWithContext(ctx context.Context) 
 // EndpointAccessArrayInput is an input type that accepts EndpointAccessArray and EndpointAccessArrayOutput values.
 // You can construct a concrete instance of `EndpointAccessArrayInput` via:
 //
-//	EndpointAccessArray{ EndpointAccessArgs{...} }
+//          EndpointAccessArray{ EndpointAccessArgs{...} }
 type EndpointAccessArrayInput interface {
 	pulumi.Input
 
@@ -223,7 +218,7 @@ func (i EndpointAccessArray) ToEndpointAccessArrayOutputWithContext(ctx context.
 // EndpointAccessMapInput is an input type that accepts EndpointAccessMap and EndpointAccessMapOutput values.
 // You can construct a concrete instance of `EndpointAccessMapInput` via:
 //
-//	EndpointAccessMap{ "key": EndpointAccessArgs{...} }
+//          EndpointAccessMap{ "key": EndpointAccessArgs{...} }
 type EndpointAccessMapInput interface {
 	pulumi.Input
 

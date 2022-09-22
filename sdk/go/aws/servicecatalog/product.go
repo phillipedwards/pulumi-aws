@@ -24,9 +24,7 @@ import (
 // `aws_servicecatalog_product` can be imported using the product ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:servicecatalog/product:Product example prod-dnigbtea24ste
-//
+//  $ pulumi import aws:servicecatalog/product:Product example prod-dnigbtea24ste
 // ```
 type Product struct {
 	pulumi.CustomResourceState
@@ -253,7 +251,7 @@ func (i *Product) ToProductOutputWithContext(ctx context.Context) ProductOutput 
 // ProductArrayInput is an input type that accepts ProductArray and ProductArrayOutput values.
 // You can construct a concrete instance of `ProductArrayInput` via:
 //
-//	ProductArray{ ProductArgs{...} }
+//          ProductArray{ ProductArgs{...} }
 type ProductArrayInput interface {
 	pulumi.Input
 
@@ -278,7 +276,7 @@ func (i ProductArray) ToProductArrayOutputWithContext(ctx context.Context) Produ
 // ProductMapInput is an input type that accepts ProductMap and ProductMapOutput values.
 // You can construct a concrete instance of `ProductMapInput` via:
 //
-//	ProductMap{ "key": ProductArgs{...} }
+//          ProductMap{ "key": ProductArgs{...} }
 type ProductMapInput interface {
 	pulumi.Input
 

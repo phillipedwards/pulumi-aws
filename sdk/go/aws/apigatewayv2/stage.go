@@ -21,24 +21,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/apigatewayv2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/apigatewayv2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := apigatewayv2.NewStage(ctx, "example", &apigatewayv2.StageArgs{
-//				ApiId: pulumi.Any(aws_apigatewayv2_api.Example.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := apigatewayv2.NewStage(ctx, "example", &apigatewayv2.StageArgs{
+// 			ApiId: pulumi.Any(aws_apigatewayv2_api.Example.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // `aws_apigatewayv2_stage` can be imported by using the API identifier and stage name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:apigatewayv2/stage:Stage example aabbccddee/example-stage
-//
+//  $ pulumi import aws:apigatewayv2/stage:Stage example aabbccddee/example-stage
 // ```
 type Stage struct {
 	pulumi.CustomResourceState
@@ -282,7 +277,7 @@ func (i *Stage) ToStageOutputWithContext(ctx context.Context) StageOutput {
 // StageArrayInput is an input type that accepts StageArray and StageArrayOutput values.
 // You can construct a concrete instance of `StageArrayInput` via:
 //
-//	StageArray{ StageArgs{...} }
+//          StageArray{ StageArgs{...} }
 type StageArrayInput interface {
 	pulumi.Input
 
@@ -307,7 +302,7 @@ func (i StageArray) ToStageArrayOutputWithContext(ctx context.Context) StageArra
 // StageMapInput is an input type that accepts StageMap and StageMapOutput values.
 // You can construct a concrete instance of `StageMapInput` via:
 //
-//	StageMap{ "key": StageArgs{...} }
+//          StageMap{ "key": StageArgs{...} }
 type StageMapInput interface {
 	pulumi.Input
 

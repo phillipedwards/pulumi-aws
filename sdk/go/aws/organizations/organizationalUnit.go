@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/organizations"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/organizations"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := organizations.NewOrganizationalUnit(ctx, "example", &organizations.OrganizationalUnitArgs{
-//				ParentId: pulumi.Any(aws_organizations_organization.Example.Roots[0].Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := organizations.NewOrganizationalUnit(ctx, "example", &organizations.OrganizationalUnitArgs{
+// 			ParentId: pulumi.Any(aws_organizations_organization.Example.Roots[0].Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // AWS Organizations Organizational Units can be imported by using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:organizations/organizationalUnit:OrganizationalUnit example ou-1234567
-//
+//  $ pulumi import aws:organizations/organizationalUnit:OrganizationalUnit example ou-1234567
 // ```
 type OrganizationalUnit struct {
 	pulumi.CustomResourceState
@@ -175,7 +170,7 @@ func (i *OrganizationalUnit) ToOrganizationalUnitOutputWithContext(ctx context.C
 // OrganizationalUnitArrayInput is an input type that accepts OrganizationalUnitArray and OrganizationalUnitArrayOutput values.
 // You can construct a concrete instance of `OrganizationalUnitArrayInput` via:
 //
-//	OrganizationalUnitArray{ OrganizationalUnitArgs{...} }
+//          OrganizationalUnitArray{ OrganizationalUnitArgs{...} }
 type OrganizationalUnitArrayInput interface {
 	pulumi.Input
 
@@ -200,7 +195,7 @@ func (i OrganizationalUnitArray) ToOrganizationalUnitArrayOutputWithContext(ctx 
 // OrganizationalUnitMapInput is an input type that accepts OrganizationalUnitMap and OrganizationalUnitMapOutput values.
 // You can construct a concrete instance of `OrganizationalUnitMapInput` via:
 //
-//	OrganizationalUnitMap{ "key": OrganizationalUnitArgs{...} }
+//          OrganizationalUnitMap{ "key": OrganizationalUnitArgs{...} }
 type OrganizationalUnitMapInput interface {
 	pulumi.Input
 

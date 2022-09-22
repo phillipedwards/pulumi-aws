@@ -19,46 +19,43 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rds"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rds"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := rds.NewProxy(ctx, "example", &rds.ProxyArgs{
-//				DebugLogging:      pulumi.Bool(false),
-//				EngineFamily:      pulumi.String("MYSQL"),
-//				IdleClientTimeout: pulumi.Int(1800),
-//				RequireTls:        pulumi.Bool(true),
-//				RoleArn:           pulumi.Any(aws_iam_role.Example.Arn),
-//				VpcSecurityGroupIds: pulumi.StringArray{
-//					pulumi.Any(aws_security_group.Example.Id),
-//				},
-//				VpcSubnetIds: pulumi.StringArray{
-//					pulumi.Any(aws_subnet.Example.Id),
-//				},
-//				Auths: rds.ProxyAuthArray{
-//					&rds.ProxyAuthArgs{
-//						AuthScheme:  pulumi.String("SECRETS"),
-//						Description: pulumi.String("example"),
-//						IamAuth:     pulumi.String("DISABLED"),
-//						SecretArn:   pulumi.Any(aws_secretsmanager_secret.Example.Arn),
-//					},
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("example"),
-//					"Key":  pulumi.String("value"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := rds.NewProxy(ctx, "example", &rds.ProxyArgs{
+// 			DebugLogging:      pulumi.Bool(false),
+// 			EngineFamily:      pulumi.String("MYSQL"),
+// 			IdleClientTimeout: pulumi.Int(1800),
+// 			RequireTls:        pulumi.Bool(true),
+// 			RoleArn:           pulumi.Any(aws_iam_role.Example.Arn),
+// 			VpcSecurityGroupIds: pulumi.StringArray{
+// 				pulumi.Any(aws_security_group.Example.Id),
+// 			},
+// 			VpcSubnetIds: pulumi.StringArray{
+// 				pulumi.Any(aws_subnet.Example.Id),
+// 			},
+// 			Auths: rds.ProxyAuthArray{
+// 				&rds.ProxyAuthArgs{
+// 					AuthScheme:  pulumi.String("SECRETS"),
+// 					Description: pulumi.String("example"),
+// 					IamAuth:     pulumi.String("DISABLED"),
+// 					SecretArn:   pulumi.Any(aws_secretsmanager_secret.Example.Arn),
+// 				},
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("example"),
+// 				"Key":  pulumi.String("value"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -66,9 +63,7 @@ import (
 // DB proxies can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:rds/proxy:Proxy example example
-//
+//  $ pulumi import aws:rds/proxy:Proxy example example
 // ```
 type Proxy struct {
 	pulumi.CustomResourceState
@@ -276,7 +271,7 @@ func (i *Proxy) ToProxyOutputWithContext(ctx context.Context) ProxyOutput {
 // ProxyArrayInput is an input type that accepts ProxyArray and ProxyArrayOutput values.
 // You can construct a concrete instance of `ProxyArrayInput` via:
 //
-//	ProxyArray{ ProxyArgs{...} }
+//          ProxyArray{ ProxyArgs{...} }
 type ProxyArrayInput interface {
 	pulumi.Input
 
@@ -301,7 +296,7 @@ func (i ProxyArray) ToProxyArrayOutputWithContext(ctx context.Context) ProxyArra
 // ProxyMapInput is an input type that accepts ProxyMap and ProxyMapOutput values.
 // You can construct a concrete instance of `ProxyMapInput` via:
 //
-//	ProxyMap{ "key": ProxyArgs{...} }
+//          ProxyMap{ "key": ProxyArgs{...} }
 type ProxyMapInput interface {
 	pulumi.Input
 

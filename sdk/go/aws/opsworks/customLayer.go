@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/opsworks"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := opsworks.NewCustomLayer(ctx, "custlayer", &opsworks.CustomLayerArgs{
-//				ShortName: pulumi.String("awesome"),
-//				StackId:   pulumi.Any(aws_opsworks_stack.Main.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := opsworks.NewCustomLayer(ctx, "custlayer", &opsworks.CustomLayerArgs{
+// 			ShortName: pulumi.String("awesome"),
+// 			StackId:   pulumi.Any(aws_opsworks_stack.Main.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // OpsWorks Custom Layers can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:opsworks/customLayer:CustomLayer bar 00000000-0000-0000-0000-000000000000
-//
+//  $ pulumi import aws:opsworks/customLayer:CustomLayer bar 00000000-0000-0000-0000-000000000000
 // ```
 type CustomLayer struct {
 	pulumi.CustomResourceState
@@ -348,7 +343,7 @@ func (i *CustomLayer) ToCustomLayerOutputWithContext(ctx context.Context) Custom
 // CustomLayerArrayInput is an input type that accepts CustomLayerArray and CustomLayerArrayOutput values.
 // You can construct a concrete instance of `CustomLayerArrayInput` via:
 //
-//	CustomLayerArray{ CustomLayerArgs{...} }
+//          CustomLayerArray{ CustomLayerArgs{...} }
 type CustomLayerArrayInput interface {
 	pulumi.Input
 
@@ -373,7 +368,7 @@ func (i CustomLayerArray) ToCustomLayerArrayOutputWithContext(ctx context.Contex
 // CustomLayerMapInput is an input type that accepts CustomLayerMap and CustomLayerMapOutput values.
 // You can construct a concrete instance of `CustomLayerMapInput` via:
 //
-//	CustomLayerMap{ "key": CustomLayerArgs{...} }
+//          CustomLayerMap{ "key": CustomLayerArgs{...} }
 type CustomLayerMapInput interface {
 	pulumi.Input
 

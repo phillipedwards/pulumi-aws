@@ -21,25 +21,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/apprunner"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/apprunner"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := apprunner.NewCustomDomainAssociation(ctx, "example", &apprunner.CustomDomainAssociationArgs{
-//				DomainName: pulumi.String("example.com"),
-//				ServiceArn: pulumi.Any(aws_apprunner_service.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := apprunner.NewCustomDomainAssociation(ctx, "example", &apprunner.CustomDomainAssociationArgs{
+// 			DomainName: pulumi.String("example.com"),
+// 			ServiceArn: pulumi.Any(aws_apprunner_service.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -47,12 +44,10 @@ import (
 // App Runner Custom Domain Associations can be imported by using the `domain_name` and `service_arn` separated by a comma (`,`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:apprunner/customDomainAssociation:CustomDomainAssociation example example.com,arn:aws:apprunner:us-east-1:123456789012:service/example-
-//
+//  $ pulumi import aws:apprunner/customDomainAssociation:CustomDomainAssociation example example.com,arn:aws:apprunner:us-east-1:123456789012:service/example-
 // ```
 //
-//	app/8fe1e10304f84fd2b0df550fe98a71fa
+//  app/8fe1e10304f84fd2b0df550fe98a71fa
 type CustomDomainAssociation struct {
 	pulumi.CustomResourceState
 
@@ -183,7 +178,7 @@ func (i *CustomDomainAssociation) ToCustomDomainAssociationOutputWithContext(ctx
 // CustomDomainAssociationArrayInput is an input type that accepts CustomDomainAssociationArray and CustomDomainAssociationArrayOutput values.
 // You can construct a concrete instance of `CustomDomainAssociationArrayInput` via:
 //
-//	CustomDomainAssociationArray{ CustomDomainAssociationArgs{...} }
+//          CustomDomainAssociationArray{ CustomDomainAssociationArgs{...} }
 type CustomDomainAssociationArrayInput interface {
 	pulumi.Input
 
@@ -208,7 +203,7 @@ func (i CustomDomainAssociationArray) ToCustomDomainAssociationArrayOutputWithCo
 // CustomDomainAssociationMapInput is an input type that accepts CustomDomainAssociationMap and CustomDomainAssociationMapOutput values.
 // You can construct a concrete instance of `CustomDomainAssociationMapInput` via:
 //
-//	CustomDomainAssociationMap{ "key": CustomDomainAssociationArgs{...} }
+//          CustomDomainAssociationMap{ "key": CustomDomainAssociationArgs{...} }
 type CustomDomainAssociationMapInput interface {
 	pulumi.Input
 

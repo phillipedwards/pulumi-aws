@@ -18,7 +18,7 @@ type ConfgurationSetDeliveryOptions struct {
 // ConfgurationSetDeliveryOptionsInput is an input type that accepts ConfgurationSetDeliveryOptionsArgs and ConfgurationSetDeliveryOptionsOutput values.
 // You can construct a concrete instance of `ConfgurationSetDeliveryOptionsInput` via:
 //
-//	ConfgurationSetDeliveryOptionsArgs{...}
+//          ConfgurationSetDeliveryOptionsArgs{...}
 type ConfgurationSetDeliveryOptionsInput interface {
 	pulumi.Input
 
@@ -54,11 +54,11 @@ func (i ConfgurationSetDeliveryOptionsArgs) ToConfgurationSetDeliveryOptionsPtrO
 // ConfgurationSetDeliveryOptionsPtrInput is an input type that accepts ConfgurationSetDeliveryOptionsArgs, ConfgurationSetDeliveryOptionsPtr and ConfgurationSetDeliveryOptionsPtrOutput values.
 // You can construct a concrete instance of `ConfgurationSetDeliveryOptionsPtrInput` via:
 //
-//	        ConfgurationSetDeliveryOptionsArgs{...}
+//          ConfgurationSetDeliveryOptionsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ConfgurationSetDeliveryOptionsPtrInput interface {
 	pulumi.Input
 
@@ -155,7 +155,7 @@ type ConfgurationSetTrackingOptions struct {
 // ConfgurationSetTrackingOptionsInput is an input type that accepts ConfgurationSetTrackingOptionsArgs and ConfgurationSetTrackingOptionsOutput values.
 // You can construct a concrete instance of `ConfgurationSetTrackingOptionsInput` via:
 //
-//	ConfgurationSetTrackingOptionsArgs{...}
+//          ConfgurationSetTrackingOptionsArgs{...}
 type ConfgurationSetTrackingOptionsInput interface {
 	pulumi.Input
 
@@ -191,11 +191,11 @@ func (i ConfgurationSetTrackingOptionsArgs) ToConfgurationSetTrackingOptionsPtrO
 // ConfgurationSetTrackingOptionsPtrInput is an input type that accepts ConfgurationSetTrackingOptionsArgs, ConfgurationSetTrackingOptionsPtr and ConfgurationSetTrackingOptionsPtrOutput values.
 // You can construct a concrete instance of `ConfgurationSetTrackingOptionsPtrInput` via:
 //
-//	        ConfgurationSetTrackingOptionsArgs{...}
+//          ConfgurationSetTrackingOptionsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ConfgurationSetTrackingOptionsPtrInput interface {
 	pulumi.Input
 
@@ -292,7 +292,7 @@ type ConfigurationSetDeliveryOptions struct {
 // ConfigurationSetDeliveryOptionsInput is an input type that accepts ConfigurationSetDeliveryOptionsArgs and ConfigurationSetDeliveryOptionsOutput values.
 // You can construct a concrete instance of `ConfigurationSetDeliveryOptionsInput` via:
 //
-//	ConfigurationSetDeliveryOptionsArgs{...}
+//          ConfigurationSetDeliveryOptionsArgs{...}
 type ConfigurationSetDeliveryOptionsInput interface {
 	pulumi.Input
 
@@ -328,11 +328,11 @@ func (i ConfigurationSetDeliveryOptionsArgs) ToConfigurationSetDeliveryOptionsPt
 // ConfigurationSetDeliveryOptionsPtrInput is an input type that accepts ConfigurationSetDeliveryOptionsArgs, ConfigurationSetDeliveryOptionsPtr and ConfigurationSetDeliveryOptionsPtrOutput values.
 // You can construct a concrete instance of `ConfigurationSetDeliveryOptionsPtrInput` via:
 //
-//	        ConfigurationSetDeliveryOptionsArgs{...}
+//          ConfigurationSetDeliveryOptionsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ConfigurationSetDeliveryOptionsPtrInput interface {
 	pulumi.Input
 
@@ -429,7 +429,7 @@ type ConfigurationSetTrackingOptions struct {
 // ConfigurationSetTrackingOptionsInput is an input type that accepts ConfigurationSetTrackingOptionsArgs and ConfigurationSetTrackingOptionsOutput values.
 // You can construct a concrete instance of `ConfigurationSetTrackingOptionsInput` via:
 //
-//	ConfigurationSetTrackingOptionsArgs{...}
+//          ConfigurationSetTrackingOptionsArgs{...}
 type ConfigurationSetTrackingOptionsInput interface {
 	pulumi.Input
 
@@ -465,11 +465,11 @@ func (i ConfigurationSetTrackingOptionsArgs) ToConfigurationSetTrackingOptionsPt
 // ConfigurationSetTrackingOptionsPtrInput is an input type that accepts ConfigurationSetTrackingOptionsArgs, ConfigurationSetTrackingOptionsPtr and ConfigurationSetTrackingOptionsPtrOutput values.
 // You can construct a concrete instance of `ConfigurationSetTrackingOptionsPtrInput` via:
 //
-//	        ConfigurationSetTrackingOptionsArgs{...}
+//          ConfigurationSetTrackingOptionsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type ConfigurationSetTrackingOptionsPtrInput interface {
 	pulumi.Input
 
@@ -570,7 +570,7 @@ type EventDestinationCloudwatchDestination struct {
 // EventDestinationCloudwatchDestinationInput is an input type that accepts EventDestinationCloudwatchDestinationArgs and EventDestinationCloudwatchDestinationOutput values.
 // You can construct a concrete instance of `EventDestinationCloudwatchDestinationInput` via:
 //
-//	EventDestinationCloudwatchDestinationArgs{...}
+//          EventDestinationCloudwatchDestinationArgs{...}
 type EventDestinationCloudwatchDestinationInput interface {
 	pulumi.Input
 
@@ -602,7 +602,7 @@ func (i EventDestinationCloudwatchDestinationArgs) ToEventDestinationCloudwatchD
 // EventDestinationCloudwatchDestinationArrayInput is an input type that accepts EventDestinationCloudwatchDestinationArray and EventDestinationCloudwatchDestinationArrayOutput values.
 // You can construct a concrete instance of `EventDestinationCloudwatchDestinationArrayInput` via:
 //
-//	EventDestinationCloudwatchDestinationArray{ EventDestinationCloudwatchDestinationArgs{...} }
+//          EventDestinationCloudwatchDestinationArray{ EventDestinationCloudwatchDestinationArgs{...} }
 type EventDestinationCloudwatchDestinationArrayInput interface {
 	pulumi.Input
 
@@ -683,7 +683,7 @@ type EventDestinationKinesisDestination struct {
 // EventDestinationKinesisDestinationInput is an input type that accepts EventDestinationKinesisDestinationArgs and EventDestinationKinesisDestinationOutput values.
 // You can construct a concrete instance of `EventDestinationKinesisDestinationInput` via:
 //
-//	EventDestinationKinesisDestinationArgs{...}
+//          EventDestinationKinesisDestinationArgs{...}
 type EventDestinationKinesisDestinationInput interface {
 	pulumi.Input
 
@@ -721,11 +721,11 @@ func (i EventDestinationKinesisDestinationArgs) ToEventDestinationKinesisDestina
 // EventDestinationKinesisDestinationPtrInput is an input type that accepts EventDestinationKinesisDestinationArgs, EventDestinationKinesisDestinationPtr and EventDestinationKinesisDestinationPtrOutput values.
 // You can construct a concrete instance of `EventDestinationKinesisDestinationPtrInput` via:
 //
-//	        EventDestinationKinesisDestinationArgs{...}
+//          EventDestinationKinesisDestinationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EventDestinationKinesisDestinationPtrInput interface {
 	pulumi.Input
 
@@ -837,7 +837,7 @@ type EventDestinationSnsDestination struct {
 // EventDestinationSnsDestinationInput is an input type that accepts EventDestinationSnsDestinationArgs and EventDestinationSnsDestinationOutput values.
 // You can construct a concrete instance of `EventDestinationSnsDestinationInput` via:
 //
-//	EventDestinationSnsDestinationArgs{...}
+//          EventDestinationSnsDestinationArgs{...}
 type EventDestinationSnsDestinationInput interface {
 	pulumi.Input
 
@@ -873,11 +873,11 @@ func (i EventDestinationSnsDestinationArgs) ToEventDestinationSnsDestinationPtrO
 // EventDestinationSnsDestinationPtrInput is an input type that accepts EventDestinationSnsDestinationArgs, EventDestinationSnsDestinationPtr and EventDestinationSnsDestinationPtrOutput values.
 // You can construct a concrete instance of `EventDestinationSnsDestinationPtrInput` via:
 //
-//	        EventDestinationSnsDestinationArgs{...}
+//          EventDestinationSnsDestinationArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EventDestinationSnsDestinationPtrInput interface {
 	pulumi.Input
 
@@ -978,7 +978,7 @@ type ReceiptRuleAddHeaderAction struct {
 // ReceiptRuleAddHeaderActionInput is an input type that accepts ReceiptRuleAddHeaderActionArgs and ReceiptRuleAddHeaderActionOutput values.
 // You can construct a concrete instance of `ReceiptRuleAddHeaderActionInput` via:
 //
-//	ReceiptRuleAddHeaderActionArgs{...}
+//          ReceiptRuleAddHeaderActionArgs{...}
 type ReceiptRuleAddHeaderActionInput interface {
 	pulumi.Input
 
@@ -1010,7 +1010,7 @@ func (i ReceiptRuleAddHeaderActionArgs) ToReceiptRuleAddHeaderActionOutputWithCo
 // ReceiptRuleAddHeaderActionArrayInput is an input type that accepts ReceiptRuleAddHeaderActionArray and ReceiptRuleAddHeaderActionArrayOutput values.
 // You can construct a concrete instance of `ReceiptRuleAddHeaderActionArrayInput` via:
 //
-//	ReceiptRuleAddHeaderActionArray{ ReceiptRuleAddHeaderActionArgs{...} }
+//          ReceiptRuleAddHeaderActionArray{ ReceiptRuleAddHeaderActionArgs{...} }
 type ReceiptRuleAddHeaderActionArrayInput interface {
 	pulumi.Input
 
@@ -1099,7 +1099,7 @@ type ReceiptRuleBounceAction struct {
 // ReceiptRuleBounceActionInput is an input type that accepts ReceiptRuleBounceActionArgs and ReceiptRuleBounceActionOutput values.
 // You can construct a concrete instance of `ReceiptRuleBounceActionInput` via:
 //
-//	ReceiptRuleBounceActionArgs{...}
+//          ReceiptRuleBounceActionArgs{...}
 type ReceiptRuleBounceActionInput interface {
 	pulumi.Input
 
@@ -1137,7 +1137,7 @@ func (i ReceiptRuleBounceActionArgs) ToReceiptRuleBounceActionOutputWithContext(
 // ReceiptRuleBounceActionArrayInput is an input type that accepts ReceiptRuleBounceActionArray and ReceiptRuleBounceActionArrayOutput values.
 // You can construct a concrete instance of `ReceiptRuleBounceActionArrayInput` via:
 //
-//	ReceiptRuleBounceActionArray{ ReceiptRuleBounceActionArgs{...} }
+//          ReceiptRuleBounceActionArray{ ReceiptRuleBounceActionArgs{...} }
 type ReceiptRuleBounceActionArrayInput interface {
 	pulumi.Input
 
@@ -1237,7 +1237,7 @@ type ReceiptRuleLambdaAction struct {
 // ReceiptRuleLambdaActionInput is an input type that accepts ReceiptRuleLambdaActionArgs and ReceiptRuleLambdaActionOutput values.
 // You can construct a concrete instance of `ReceiptRuleLambdaActionInput` via:
 //
-//	ReceiptRuleLambdaActionArgs{...}
+//          ReceiptRuleLambdaActionArgs{...}
 type ReceiptRuleLambdaActionInput interface {
 	pulumi.Input
 
@@ -1271,7 +1271,7 @@ func (i ReceiptRuleLambdaActionArgs) ToReceiptRuleLambdaActionOutputWithContext(
 // ReceiptRuleLambdaActionArrayInput is an input type that accepts ReceiptRuleLambdaActionArray and ReceiptRuleLambdaActionArrayOutput values.
 // You can construct a concrete instance of `ReceiptRuleLambdaActionArrayInput` via:
 //
-//	ReceiptRuleLambdaActionArray{ ReceiptRuleLambdaActionArgs{...} }
+//          ReceiptRuleLambdaActionArray{ ReceiptRuleLambdaActionArgs{...} }
 type ReceiptRuleLambdaActionArrayInput interface {
 	pulumi.Input
 
@@ -1363,7 +1363,7 @@ type ReceiptRuleS3Action struct {
 // ReceiptRuleS3ActionInput is an input type that accepts ReceiptRuleS3ActionArgs and ReceiptRuleS3ActionOutput values.
 // You can construct a concrete instance of `ReceiptRuleS3ActionInput` via:
 //
-//	ReceiptRuleS3ActionArgs{...}
+//          ReceiptRuleS3ActionArgs{...}
 type ReceiptRuleS3ActionInput interface {
 	pulumi.Input
 
@@ -1399,7 +1399,7 @@ func (i ReceiptRuleS3ActionArgs) ToReceiptRuleS3ActionOutputWithContext(ctx cont
 // ReceiptRuleS3ActionArrayInput is an input type that accepts ReceiptRuleS3ActionArray and ReceiptRuleS3ActionArrayOutput values.
 // You can construct a concrete instance of `ReceiptRuleS3ActionArrayInput` via:
 //
-//	ReceiptRuleS3ActionArray{ ReceiptRuleS3ActionArgs{...} }
+//          ReceiptRuleS3ActionArray{ ReceiptRuleS3ActionArgs{...} }
 type ReceiptRuleS3ActionArrayInput interface {
 	pulumi.Input
 
@@ -1492,7 +1492,7 @@ type ReceiptRuleSnsAction struct {
 // ReceiptRuleSnsActionInput is an input type that accepts ReceiptRuleSnsActionArgs and ReceiptRuleSnsActionOutput values.
 // You can construct a concrete instance of `ReceiptRuleSnsActionInput` via:
 //
-//	ReceiptRuleSnsActionArgs{...}
+//          ReceiptRuleSnsActionArgs{...}
 type ReceiptRuleSnsActionInput interface {
 	pulumi.Input
 
@@ -1524,7 +1524,7 @@ func (i ReceiptRuleSnsActionArgs) ToReceiptRuleSnsActionOutputWithContext(ctx co
 // ReceiptRuleSnsActionArrayInput is an input type that accepts ReceiptRuleSnsActionArray and ReceiptRuleSnsActionArrayOutput values.
 // You can construct a concrete instance of `ReceiptRuleSnsActionArrayInput` via:
 //
-//	ReceiptRuleSnsActionArray{ ReceiptRuleSnsActionArgs{...} }
+//          ReceiptRuleSnsActionArray{ ReceiptRuleSnsActionArgs{...} }
 type ReceiptRuleSnsActionArrayInput interface {
 	pulumi.Input
 
@@ -1607,7 +1607,7 @@ type ReceiptRuleStopAction struct {
 // ReceiptRuleStopActionInput is an input type that accepts ReceiptRuleStopActionArgs and ReceiptRuleStopActionOutput values.
 // You can construct a concrete instance of `ReceiptRuleStopActionInput` via:
 //
-//	ReceiptRuleStopActionArgs{...}
+//          ReceiptRuleStopActionArgs{...}
 type ReceiptRuleStopActionInput interface {
 	pulumi.Input
 
@@ -1639,7 +1639,7 @@ func (i ReceiptRuleStopActionArgs) ToReceiptRuleStopActionOutputWithContext(ctx 
 // ReceiptRuleStopActionArrayInput is an input type that accepts ReceiptRuleStopActionArray and ReceiptRuleStopActionArrayOutput values.
 // You can construct a concrete instance of `ReceiptRuleStopActionArrayInput` via:
 //
-//	ReceiptRuleStopActionArray{ ReceiptRuleStopActionArgs{...} }
+//          ReceiptRuleStopActionArray{ ReceiptRuleStopActionArgs{...} }
 type ReceiptRuleStopActionArrayInput interface {
 	pulumi.Input
 
@@ -1722,7 +1722,7 @@ type ReceiptRuleWorkmailAction struct {
 // ReceiptRuleWorkmailActionInput is an input type that accepts ReceiptRuleWorkmailActionArgs and ReceiptRuleWorkmailActionOutput values.
 // You can construct a concrete instance of `ReceiptRuleWorkmailActionInput` via:
 //
-//	ReceiptRuleWorkmailActionArgs{...}
+//          ReceiptRuleWorkmailActionArgs{...}
 type ReceiptRuleWorkmailActionInput interface {
 	pulumi.Input
 
@@ -1754,7 +1754,7 @@ func (i ReceiptRuleWorkmailActionArgs) ToReceiptRuleWorkmailActionOutputWithCont
 // ReceiptRuleWorkmailActionArrayInput is an input type that accepts ReceiptRuleWorkmailActionArray and ReceiptRuleWorkmailActionArrayOutput values.
 // You can construct a concrete instance of `ReceiptRuleWorkmailActionArrayInput` via:
 //
-//	ReceiptRuleWorkmailActionArray{ ReceiptRuleWorkmailActionArgs{...} }
+//          ReceiptRuleWorkmailActionArray{ ReceiptRuleWorkmailActionArgs{...} }
 type ReceiptRuleWorkmailActionArrayInput interface {
 	pulumi.Input
 

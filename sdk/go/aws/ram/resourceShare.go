@@ -18,27 +18,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ram"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ram"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ram.NewResourceShare(ctx, "example", &ram.ResourceShareArgs{
-//				AllowExternalPrincipals: pulumi.Bool(true),
-//				Tags: pulumi.StringMap{
-//					"Environment": pulumi.String("Production"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ram.NewResourceShare(ctx, "example", &ram.ResourceShareArgs{
+// 			AllowExternalPrincipals: pulumi.Bool(true),
+// 			Tags: pulumi.StringMap{
+// 				"Environment": pulumi.String("Production"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // Resource shares can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ram/resourceShare:ResourceShare example arn:aws:ram:eu-west-1:123456789012:resource-share/73da1ab9-b94a-4ba3-8eb4-45917f7f4b12
-//
+//  $ pulumi import aws:ram/resourceShare:ResourceShare example arn:aws:ram:eu-west-1:123456789012:resource-share/73da1ab9-b94a-4ba3-8eb4-45917f7f4b12
 // ```
 type ResourceShare struct {
 	pulumi.CustomResourceState
@@ -178,7 +173,7 @@ func (i *ResourceShare) ToResourceShareOutputWithContext(ctx context.Context) Re
 // ResourceShareArrayInput is an input type that accepts ResourceShareArray and ResourceShareArrayOutput values.
 // You can construct a concrete instance of `ResourceShareArrayInput` via:
 //
-//	ResourceShareArray{ ResourceShareArgs{...} }
+//          ResourceShareArray{ ResourceShareArgs{...} }
 type ResourceShareArrayInput interface {
 	pulumi.Input
 
@@ -203,7 +198,7 @@ func (i ResourceShareArray) ToResourceShareArrayOutputWithContext(ctx context.Co
 // ResourceShareMapInput is an input type that accepts ResourceShareMap and ResourceShareMapOutput values.
 // You can construct a concrete instance of `ResourceShareMapInput` via:
 //
-//	ResourceShareMap{ "key": ResourceShareArgs{...} }
+//          ResourceShareMap{ "key": ResourceShareArgs{...} }
 type ResourceShareMapInput interface {
 	pulumi.Input
 

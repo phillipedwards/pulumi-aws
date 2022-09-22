@@ -21,41 +21,38 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/memorydb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/memorydb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("10.0.0.0/16"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleSubnet, err := ec2.NewSubnet(ctx, "exampleSubnet", &ec2.SubnetArgs{
-//				VpcId:            exampleVpc.ID(),
-//				CidrBlock:        pulumi.String("10.0.0.0/24"),
-//				AvailabilityZone: pulumi.String("us-west-2a"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = memorydb.NewSubnetGroup(ctx, "exampleSubnetGroup", &memorydb.SubnetGroupArgs{
-//				SubnetIds: pulumi.StringArray{
-//					exampleSubnet.ID(),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleVpc, err := ec2.NewVpc(ctx, "exampleVpc", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("10.0.0.0/16"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleSubnet, err := ec2.NewSubnet(ctx, "exampleSubnet", &ec2.SubnetArgs{
+// 			VpcId:            exampleVpc.ID(),
+// 			CidrBlock:        pulumi.String("10.0.0.0/24"),
+// 			AvailabilityZone: pulumi.String("us-west-2a"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = memorydb.NewSubnetGroup(ctx, "exampleSubnetGroup", &memorydb.SubnetGroupArgs{
+// 			SubnetIds: pulumi.StringArray{
+// 				exampleSubnet.ID(),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -63,9 +60,7 @@ import (
 // Use the `name` to import a subnet group. For example
 //
 // ```sh
-//
-//	$ pulumi import aws:memorydb/subnetGroup:SubnetGroup example my-subnet-group
-//
+//  $ pulumi import aws:memorydb/subnetGroup:SubnetGroup example my-subnet-group
 // ```
 type SubnetGroup struct {
 	pulumi.CustomResourceState
@@ -204,7 +199,7 @@ func (i *SubnetGroup) ToSubnetGroupOutputWithContext(ctx context.Context) Subnet
 // SubnetGroupArrayInput is an input type that accepts SubnetGroupArray and SubnetGroupArrayOutput values.
 // You can construct a concrete instance of `SubnetGroupArrayInput` via:
 //
-//	SubnetGroupArray{ SubnetGroupArgs{...} }
+//          SubnetGroupArray{ SubnetGroupArgs{...} }
 type SubnetGroupArrayInput interface {
 	pulumi.Input
 
@@ -229,7 +224,7 @@ func (i SubnetGroupArray) ToSubnetGroupArrayOutputWithContext(ctx context.Contex
 // SubnetGroupMapInput is an input type that accepts SubnetGroupMap and SubnetGroupMapOutput values.
 // You can construct a concrete instance of `SubnetGroupMapInput` via:
 //
-//	SubnetGroupMap{ "key": SubnetGroupArgs{...} }
+//          SubnetGroupMap{ "key": SubnetGroupArgs{...} }
 type SubnetGroupMapInput interface {
 	pulumi.Input
 

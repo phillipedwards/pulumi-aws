@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := redshift.NewHsmClientCertificate(ctx, "example", &redshift.HsmClientCertificateArgs{
-//				HsmClientCertificateIdentifier: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := redshift.NewHsmClientCertificate(ctx, "example", &redshift.HsmClientCertificateArgs{
+// 			HsmClientCertificateIdentifier: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -44,9 +41,7 @@ import (
 // Redshift Hsm Client Certificates support import by `hsm_client_certificate_identifier`, e.g., console
 //
 // ```sh
-//
-//	$ pulumi import aws:redshift/hsmClientCertificate:HsmClientCertificate test example
-//
+//  $ pulumi import aws:redshift/hsmClientCertificate:HsmClientCertificate test example
 // ```
 type HsmClientCertificate struct {
 	pulumi.CustomResourceState
@@ -165,7 +160,7 @@ func (i *HsmClientCertificate) ToHsmClientCertificateOutputWithContext(ctx conte
 // HsmClientCertificateArrayInput is an input type that accepts HsmClientCertificateArray and HsmClientCertificateArrayOutput values.
 // You can construct a concrete instance of `HsmClientCertificateArrayInput` via:
 //
-//	HsmClientCertificateArray{ HsmClientCertificateArgs{...} }
+//          HsmClientCertificateArray{ HsmClientCertificateArgs{...} }
 type HsmClientCertificateArrayInput interface {
 	pulumi.Input
 
@@ -190,7 +185,7 @@ func (i HsmClientCertificateArray) ToHsmClientCertificateArrayOutputWithContext(
 // HsmClientCertificateMapInput is an input type that accepts HsmClientCertificateMap and HsmClientCertificateMapOutput values.
 // You can construct a concrete instance of `HsmClientCertificateMapInput` via:
 //
-//	HsmClientCertificateMap{ "key": HsmClientCertificateArgs{...} }
+//          HsmClientCertificateMap{ "key": HsmClientCertificateArgs{...} }
 type HsmClientCertificateMapInput interface {
 	pulumi.Input
 

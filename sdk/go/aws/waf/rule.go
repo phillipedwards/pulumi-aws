@@ -19,44 +19,41 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/waf"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/waf"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			ipset, err := waf.NewIpSet(ctx, "ipset", &waf.IpSetArgs{
-//				IpSetDescriptors: waf.IpSetIpSetDescriptorArray{
-//					&waf.IpSetIpSetDescriptorArgs{
-//						Type:  pulumi.String("IPV4"),
-//						Value: pulumi.String("192.0.7.0/24"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = waf.NewRule(ctx, "wafrule", &waf.RuleArgs{
-//				MetricName: pulumi.String("tfWAFRule"),
-//				Predicates: waf.RulePredicateArray{
-//					&waf.RulePredicateArgs{
-//						DataId:  ipset.ID(),
-//						Negated: pulumi.Bool(false),
-//						Type:    pulumi.String("IPMatch"),
-//					},
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				ipset,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		ipset, err := waf.NewIpSet(ctx, "ipset", &waf.IpSetArgs{
+// 			IpSetDescriptors: waf.IpSetIpSetDescriptorArray{
+// 				&waf.IpSetIpSetDescriptorArgs{
+// 					Type:  pulumi.String("IPV4"),
+// 					Value: pulumi.String("192.0.7.0/24"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = waf.NewRule(ctx, "wafrule", &waf.RuleArgs{
+// 			MetricName: pulumi.String("tfWAFRule"),
+// 			Predicates: waf.RulePredicateArray{
+// 				&waf.RulePredicateArgs{
+// 					DataId:  ipset.ID(),
+// 					Negated: pulumi.Bool(false),
+// 					Type:    pulumi.String("IPMatch"),
+// 				},
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			ipset,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -64,9 +61,7 @@ import (
 // WAF rules can be imported using the id, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:waf/rule:Rule example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
-//
+//  $ pulumi import aws:waf/rule:Rule example a1b2c3d4-d5f6-7777-8888-9999aaaabbbbcccc
 // ```
 type Rule struct {
 	pulumi.CustomResourceState
@@ -199,7 +194,7 @@ func (i *Rule) ToRuleOutputWithContext(ctx context.Context) RuleOutput {
 // RuleArrayInput is an input type that accepts RuleArray and RuleArrayOutput values.
 // You can construct a concrete instance of `RuleArrayInput` via:
 //
-//	RuleArray{ RuleArgs{...} }
+//          RuleArray{ RuleArgs{...} }
 type RuleArrayInput interface {
 	pulumi.Input
 
@@ -224,7 +219,7 @@ func (i RuleArray) ToRuleArrayOutputWithContext(ctx context.Context) RuleArrayOu
 // RuleMapInput is an input type that accepts RuleMap and RuleMapOutput values.
 // You can construct a concrete instance of `RuleMapInput` via:
 //
-//	RuleMap{ "key": RuleArgs{...} }
+//          RuleMap{ "key": RuleArgs{...} }
 type RuleMapInput interface {
 	pulumi.Input
 

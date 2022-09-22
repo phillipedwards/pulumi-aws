@@ -19,30 +19,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleResolverFirewallRuleGroup, err := route53.NewResolverFirewallRuleGroup(ctx, "exampleResolverFirewallRuleGroup", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = route53.NewResolverFirewallRuleGroupAssociation(ctx, "exampleResolverFirewallRuleGroupAssociation", &route53.ResolverFirewallRuleGroupAssociationArgs{
-//				FirewallRuleGroupId: exampleResolverFirewallRuleGroup.ID(),
-//				Priority:            pulumi.Int(100),
-//				VpcId:               pulumi.Any(aws_vpc.Example.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleResolverFirewallRuleGroup, err := route53.NewResolverFirewallRuleGroup(ctx, "exampleResolverFirewallRuleGroup", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = route53.NewResolverFirewallRuleGroupAssociation(ctx, "exampleResolverFirewallRuleGroupAssociation", &route53.ResolverFirewallRuleGroupAssociationArgs{
+// 			FirewallRuleGroupId: exampleResolverFirewallRuleGroup.ID(),
+// 			Priority:            pulumi.Int(100),
+// 			VpcId:               pulumi.Any(aws_vpc.Example.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -50,9 +47,7 @@ import (
 // Route 53 Resolver DNS Firewall rule group associations can be imported using the Route 53 Resolver DNS Firewall rule group association ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:route53/resolverFirewallRuleGroupAssociation:ResolverFirewallRuleGroupAssociation example rslvr-frgassoc-0123456789abcdef
-//
+//  $ pulumi import aws:route53/resolverFirewallRuleGroupAssociation:ResolverFirewallRuleGroupAssociation example rslvr-frgassoc-0123456789abcdef
 // ```
 type ResolverFirewallRuleGroupAssociation struct {
 	pulumi.CustomResourceState
@@ -211,7 +206,7 @@ func (i *ResolverFirewallRuleGroupAssociation) ToResolverFirewallRuleGroupAssoci
 // ResolverFirewallRuleGroupAssociationArrayInput is an input type that accepts ResolverFirewallRuleGroupAssociationArray and ResolverFirewallRuleGroupAssociationArrayOutput values.
 // You can construct a concrete instance of `ResolverFirewallRuleGroupAssociationArrayInput` via:
 //
-//	ResolverFirewallRuleGroupAssociationArray{ ResolverFirewallRuleGroupAssociationArgs{...} }
+//          ResolverFirewallRuleGroupAssociationArray{ ResolverFirewallRuleGroupAssociationArgs{...} }
 type ResolverFirewallRuleGroupAssociationArrayInput interface {
 	pulumi.Input
 
@@ -236,7 +231,7 @@ func (i ResolverFirewallRuleGroupAssociationArray) ToResolverFirewallRuleGroupAs
 // ResolverFirewallRuleGroupAssociationMapInput is an input type that accepts ResolverFirewallRuleGroupAssociationMap and ResolverFirewallRuleGroupAssociationMapOutput values.
 // You can construct a concrete instance of `ResolverFirewallRuleGroupAssociationMapInput` via:
 //
-//	ResolverFirewallRuleGroupAssociationMap{ "key": ResolverFirewallRuleGroupAssociationArgs{...} }
+//          ResolverFirewallRuleGroupAssociationMap{ "key": ResolverFirewallRuleGroupAssociationArgs{...} }
 type ResolverFirewallRuleGroupAssociationMapInput interface {
 	pulumi.Input
 

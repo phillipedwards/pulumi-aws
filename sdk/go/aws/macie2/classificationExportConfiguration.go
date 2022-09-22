@@ -18,34 +18,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/macie2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/macie2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleAccount, err := macie2.NewAccount(ctx, "exampleAccount", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = macie2.NewClassificationExportConfiguration(ctx, "exampleClassificationExportConfiguration", &macie2.ClassificationExportConfigurationArgs{
-//				S3Destination: &macie2.ClassificationExportConfigurationS3DestinationArgs{
-//					BucketName: pulumi.Any(aws_s3_bucket.Example.Bucket),
-//					KeyPrefix:  pulumi.String("exampleprefix/"),
-//					KmsKeyArn:  pulumi.Any(aws_kms_key.Example.Arn),
-//				},
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				exampleAccount,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleAccount, err := macie2.NewAccount(ctx, "exampleAccount", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = macie2.NewClassificationExportConfiguration(ctx, "exampleClassificationExportConfiguration", &macie2.ClassificationExportConfigurationArgs{
+// 			S3Destination: &macie2.ClassificationExportConfigurationS3DestinationArgs{
+// 				BucketName: pulumi.Any(aws_s3_bucket.Example.Bucket),
+// 				KeyPrefix:  pulumi.String("exampleprefix/"),
+// 				KmsKeyArn:  pulumi.Any(aws_kms_key.Example.Arn),
+// 			},
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			exampleAccount,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -53,9 +50,7 @@ import (
 // `aws_macie2_classification_export_configuration` can be imported using the account ID and region, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:macie2/classificationExportConfiguration:ClassificationExportConfiguration example 123456789012:us-west-2
-//
+//  $ pulumi import aws:macie2/classificationExportConfiguration:ClassificationExportConfiguration example 123456789012:us-west-2
 // ```
 type ClassificationExportConfiguration struct {
 	pulumi.CustomResourceState
@@ -143,7 +138,7 @@ func (i *ClassificationExportConfiguration) ToClassificationExportConfigurationO
 // ClassificationExportConfigurationArrayInput is an input type that accepts ClassificationExportConfigurationArray and ClassificationExportConfigurationArrayOutput values.
 // You can construct a concrete instance of `ClassificationExportConfigurationArrayInput` via:
 //
-//	ClassificationExportConfigurationArray{ ClassificationExportConfigurationArgs{...} }
+//          ClassificationExportConfigurationArray{ ClassificationExportConfigurationArgs{...} }
 type ClassificationExportConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -168,7 +163,7 @@ func (i ClassificationExportConfigurationArray) ToClassificationExportConfigurat
 // ClassificationExportConfigurationMapInput is an input type that accepts ClassificationExportConfigurationMap and ClassificationExportConfigurationMapOutput values.
 // You can construct a concrete instance of `ClassificationExportConfigurationMapInput` via:
 //
-//	ClassificationExportConfigurationMap{ "key": ClassificationExportConfigurationArgs{...} }
+//          ClassificationExportConfigurationMap{ "key": ClassificationExportConfigurationArgs{...} }
 type ClassificationExportConfigurationMapInput interface {
 	pulumi.Input
 

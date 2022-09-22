@@ -24,43 +24,40 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/neptune"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/neptune"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := neptune.NewCluster(ctx, "default", &neptune.ClusterArgs{
-//				ClusterIdentifier:                pulumi.String("neptune-cluster-demo"),
-//				Engine:                           pulumi.String("neptune"),
-//				BackupRetentionPeriod:            pulumi.Int(5),
-//				PreferredBackupWindow:            pulumi.String("07:00-09:00"),
-//				SkipFinalSnapshot:                pulumi.Bool(true),
-//				IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
-//				ApplyImmediately:                 pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			var example []*neptune.ClusterInstance
-//			for key0, _ := range 2 {
-//				__res, err := neptune.NewClusterInstance(ctx, fmt.Sprintf("example-%v", key0), &neptune.ClusterInstanceArgs{
-//					ClusterIdentifier: _default.ID(),
-//					Engine:            pulumi.String("neptune"),
-//					InstanceClass:     pulumi.String("db.r4.large"),
-//					ApplyImmediately:  pulumi.Bool(true),
-//				})
-//				if err != nil {
-//					return err
-//				}
-//				example = append(example, __res)
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := neptune.NewCluster(ctx, "default", &neptune.ClusterArgs{
+// 			ClusterIdentifier:                pulumi.String("neptune-cluster-demo"),
+// 			Engine:                           pulumi.String("neptune"),
+// 			BackupRetentionPeriod:            pulumi.Int(5),
+// 			PreferredBackupWindow:            pulumi.String("07:00-09:00"),
+// 			SkipFinalSnapshot:                pulumi.Bool(true),
+// 			IamDatabaseAuthenticationEnabled: pulumi.Bool(true),
+// 			ApplyImmediately:                 pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		var example []*neptune.ClusterInstance
+// 		for key0, _ := range 2 {
+// 			__res, err := neptune.NewClusterInstance(ctx, fmt.Sprintf("example-%v", key0), &neptune.ClusterInstanceArgs{
+// 				ClusterIdentifier: _default.ID(),
+// 				Engine:            pulumi.String("neptune"),
+// 				InstanceClass:     pulumi.String("db.r4.large"),
+// 				ApplyImmediately:  pulumi.Bool(true),
+// 			})
+// 			if err != nil {
+// 				return err
+// 			}
+// 			example = append(example, __res)
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -68,9 +65,7 @@ import (
 // `aws_neptune_cluster_instance` can be imported by using the instance identifier, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:neptune/clusterInstance:ClusterInstance example my-instance
-//
+//  $ pulumi import aws:neptune/clusterInstance:ClusterInstance example my-instance
 // ```
 type ClusterInstance struct {
 	pulumi.CustomResourceState
@@ -382,7 +377,7 @@ func (i *ClusterInstance) ToClusterInstanceOutputWithContext(ctx context.Context
 // ClusterInstanceArrayInput is an input type that accepts ClusterInstanceArray and ClusterInstanceArrayOutput values.
 // You can construct a concrete instance of `ClusterInstanceArrayInput` via:
 //
-//	ClusterInstanceArray{ ClusterInstanceArgs{...} }
+//          ClusterInstanceArray{ ClusterInstanceArgs{...} }
 type ClusterInstanceArrayInput interface {
 	pulumi.Input
 
@@ -407,7 +402,7 @@ func (i ClusterInstanceArray) ToClusterInstanceArrayOutputWithContext(ctx contex
 // ClusterInstanceMapInput is an input type that accepts ClusterInstanceMap and ClusterInstanceMapOutput values.
 // You can construct a concrete instance of `ClusterInstanceMapInput` via:
 //
-//	ClusterInstanceMap{ "key": ClusterInstanceArgs{...} }
+//          ClusterInstanceMap{ "key": ClusterInstanceArgs{...} }
 type ClusterInstanceMapInput interface {
 	pulumi.Input
 

@@ -20,68 +20,65 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codepipeline"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/codestarconnections"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codepipeline"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/codestarconnections"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleConnection, err := codestarconnections.NewConnection(ctx, "exampleConnection", &codestarconnections.ConnectionArgs{
-//				ProviderType: pulumi.String("Bitbucket"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = codepipeline.NewPipeline(ctx, "examplePipeline", &codepipeline.PipelineArgs{
-//				RoleArn: pulumi.Any(aws_iam_role.Codepipeline_role.Arn),
-//				ArtifactStores: codepipeline.PipelineArtifactStoreArray{
-//					nil,
-//				},
-//				Stages: codepipeline.PipelineStageArray{
-//					&codepipeline.PipelineStageArgs{
-//						Name: pulumi.String("Source"),
-//						Actions: codepipeline.PipelineStageActionArray{
-//							&codepipeline.PipelineStageActionArgs{
-//								Name:     pulumi.String("Source"),
-//								Category: pulumi.String("Source"),
-//								Owner:    pulumi.String("AWS"),
-//								Provider: pulumi.String("CodeStarSourceConnection"),
-//								Version:  pulumi.String("1"),
-//								OutputArtifacts: pulumi.StringArray{
-//									pulumi.String("source_output"),
-//								},
-//								Configuration: pulumi.StringMap{
-//									"ConnectionArn":    exampleConnection.Arn,
-//									"FullRepositoryId": pulumi.String("my-organization/test"),
-//									"BranchName":       pulumi.String("main"),
-//								},
-//							},
-//						},
-//					},
-//					&codepipeline.PipelineStageArgs{
-//						Name: pulumi.String("Build"),
-//						Actions: codepipeline.PipelineStageActionArray{
-//							nil,
-//						},
-//					},
-//					&codepipeline.PipelineStageArgs{
-//						Name: pulumi.String("Deploy"),
-//						Actions: codepipeline.PipelineStageActionArray{
-//							nil,
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleConnection, err := codestarconnections.NewConnection(ctx, "exampleConnection", &codestarconnections.ConnectionArgs{
+// 			ProviderType: pulumi.String("Bitbucket"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = codepipeline.NewPipeline(ctx, "examplePipeline", &codepipeline.PipelineArgs{
+// 			RoleArn: pulumi.Any(aws_iam_role.Codepipeline_role.Arn),
+// 			ArtifactStores: codepipeline.PipelineArtifactStoreArray{
+// 				nil,
+// 			},
+// 			Stages: codepipeline.PipelineStageArray{
+// 				&codepipeline.PipelineStageArgs{
+// 					Name: pulumi.String("Source"),
+// 					Actions: codepipeline.PipelineStageActionArray{
+// 						&codepipeline.PipelineStageActionArgs{
+// 							Name:     pulumi.String("Source"),
+// 							Category: pulumi.String("Source"),
+// 							Owner:    pulumi.String("AWS"),
+// 							Provider: pulumi.String("CodeStarSourceConnection"),
+// 							Version:  pulumi.String("1"),
+// 							OutputArtifacts: pulumi.StringArray{
+// 								pulumi.String("source_output"),
+// 							},
+// 							Configuration: pulumi.StringMap{
+// 								"ConnectionArn":    exampleConnection.Arn,
+// 								"FullRepositoryId": pulumi.String("my-organization/test"),
+// 								"BranchName":       pulumi.String("main"),
+// 							},
+// 						},
+// 					},
+// 				},
+// 				&codepipeline.PipelineStageArgs{
+// 					Name: pulumi.String("Build"),
+// 					Actions: codepipeline.PipelineStageActionArray{
+// 						nil,
+// 					},
+// 				},
+// 				&codepipeline.PipelineStageArgs{
+// 					Name: pulumi.String("Deploy"),
+// 					Actions: codepipeline.PipelineStageActionArray{
+// 						nil,
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -89,9 +86,7 @@ import (
 // CodeStar connections can be imported using the ARN, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:codestarconnections/connection:Connection test-connection arn:aws:codestar-connections:us-west-1:0123456789:connection/79d4d357-a2ee-41e4-b350-2fe39ae59448
-//
+//  $ pulumi import aws:codestarconnections/connection:Connection test-connection arn:aws:codestar-connections:us-west-1:0123456789:connection/79d4d357-a2ee-41e4-b350-2fe39ae59448
 // ```
 type Connection struct {
 	pulumi.CustomResourceState
@@ -227,7 +222,7 @@ func (i *Connection) ToConnectionOutputWithContext(ctx context.Context) Connecti
 // ConnectionArrayInput is an input type that accepts ConnectionArray and ConnectionArrayOutput values.
 // You can construct a concrete instance of `ConnectionArrayInput` via:
 //
-//	ConnectionArray{ ConnectionArgs{...} }
+//          ConnectionArray{ ConnectionArgs{...} }
 type ConnectionArrayInput interface {
 	pulumi.Input
 
@@ -252,7 +247,7 @@ func (i ConnectionArray) ToConnectionArrayOutputWithContext(ctx context.Context)
 // ConnectionMapInput is an input type that accepts ConnectionMap and ConnectionMapOutput values.
 // You can construct a concrete instance of `ConnectionMapInput` via:
 //
-//	ConnectionMap{ "key": ConnectionArgs{...} }
+//          ConnectionMap{ "key": ConnectionArgs{...} }
 type ConnectionMapInput interface {
 	pulumi.Input
 

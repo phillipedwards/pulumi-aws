@@ -17,37 +17,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/location"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/location"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleGeofenceCollection, err := location.NewGeofenceCollection(ctx, "exampleGeofenceCollection", &location.GeofenceCollectionArgs{
-//				CollectionName: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleTracker, err := location.NewTracker(ctx, "exampleTracker", &location.TrackerArgs{
-//				TrackerName: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = location.NewTrackerAssociation(ctx, "exampleTrackerAssociation", &location.TrackerAssociationArgs{
-//				ConsumerArn: exampleGeofenceCollection.CollectionArn,
-//				TrackerName: exampleTracker.TrackerName,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleGeofenceCollection, err := location.NewGeofenceCollection(ctx, "exampleGeofenceCollection", &location.GeofenceCollectionArgs{
+// 			CollectionName: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleTracker, err := location.NewTracker(ctx, "exampleTracker", &location.TrackerArgs{
+// 			TrackerName: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = location.NewTrackerAssociation(ctx, "exampleTrackerAssociation", &location.TrackerAssociationArgs{
+// 			ConsumerArn: exampleGeofenceCollection.CollectionArn,
+// 			TrackerName: exampleTracker.TrackerName,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -55,9 +52,7 @@ import (
 // Location Tracker Association can be imported using the `tracker_name|consumer_arn`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:location/trackerAssociation:TrackerAssociation example "tracker_name|consumer_arn"
-//
+//  $ pulumi import aws:location/trackerAssociation:TrackerAssociation example "tracker_name|consumer_arn"
 // ```
 type TrackerAssociation struct {
 	pulumi.CustomResourceState
@@ -161,7 +156,7 @@ func (i *TrackerAssociation) ToTrackerAssociationOutputWithContext(ctx context.C
 // TrackerAssociationArrayInput is an input type that accepts TrackerAssociationArray and TrackerAssociationArrayOutput values.
 // You can construct a concrete instance of `TrackerAssociationArrayInput` via:
 //
-//	TrackerAssociationArray{ TrackerAssociationArgs{...} }
+//          TrackerAssociationArray{ TrackerAssociationArgs{...} }
 type TrackerAssociationArrayInput interface {
 	pulumi.Input
 
@@ -186,7 +181,7 @@ func (i TrackerAssociationArray) ToTrackerAssociationArrayOutputWithContext(ctx 
 // TrackerAssociationMapInput is an input type that accepts TrackerAssociationMap and TrackerAssociationMapOutput values.
 // You can construct a concrete instance of `TrackerAssociationMapInput` via:
 //
-//	TrackerAssociationMap{ "key": TrackerAssociationArgs{...} }
+//          TrackerAssociationMap{ "key": TrackerAssociationArgs{...} }
 type TrackerAssociationMapInput interface {
 	pulumi.Input
 

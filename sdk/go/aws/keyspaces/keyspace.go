@@ -20,22 +20,19 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/keyspaces"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/keyspaces"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := keyspaces.NewKeyspace(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := keyspaces.NewKeyspace(ctx, "example", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -43,9 +40,7 @@ import (
 // Use the `name` to import a keyspace. For example
 //
 // ```sh
-//
-//	$ pulumi import aws:keyspaces/keyspace:Keyspace example my_keyspace
-//
+//  $ pulumi import aws:keyspaces/keyspace:Keyspace example my_keyspace
 // ```
 type Keyspace struct {
 	pulumi.CustomResourceState
@@ -155,7 +150,7 @@ func (i *Keyspace) ToKeyspaceOutputWithContext(ctx context.Context) KeyspaceOutp
 // KeyspaceArrayInput is an input type that accepts KeyspaceArray and KeyspaceArrayOutput values.
 // You can construct a concrete instance of `KeyspaceArrayInput` via:
 //
-//	KeyspaceArray{ KeyspaceArgs{...} }
+//          KeyspaceArray{ KeyspaceArgs{...} }
 type KeyspaceArrayInput interface {
 	pulumi.Input
 
@@ -180,7 +175,7 @@ func (i KeyspaceArray) ToKeyspaceArrayOutputWithContext(ctx context.Context) Key
 // KeyspaceMapInput is an input type that accepts KeyspaceMap and KeyspaceMapOutput values.
 // You can construct a concrete instance of `KeyspaceMapInput` via:
 //
-//	KeyspaceMap{ "key": KeyspaceArgs{...} }
+//          KeyspaceMap{ "key": KeyspaceArgs{...} }
 type KeyspaceMapInput interface {
 	pulumi.Input
 

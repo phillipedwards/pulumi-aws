@@ -19,24 +19,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/networkfirewall"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/networkfirewall"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := networkfirewall.LookupFirewall(ctx, &networkfirewall.LookupFirewallArgs{
-//				Arn: pulumi.StringRef(aws_networkfirewall_firewall.Arn),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := networkfirewall.LookupFirewall(ctx, &networkfirewall.LookupFirewallArgs{
+// 			Arn: pulumi.StringRef(aws_networkfirewall_firewall.Arn),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Find firewall policy by Name
 //
@@ -44,24 +41,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/networkfirewall"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/networkfirewall"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := networkfirewall.LookupFirewall(ctx, &networkfirewall.LookupFirewallArgs{
-//				Name: pulumi.StringRef("Test"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := networkfirewall.LookupFirewall(ctx, &networkfirewall.LookupFirewallArgs{
+// 			Name: pulumi.StringRef("Test"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Find firewall policy by ARN and Name
 //
@@ -69,25 +63,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/networkfirewall"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/networkfirewall"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := networkfirewall.LookupFirewall(ctx, &networkfirewall.LookupFirewallArgs{
-//				Arn:  pulumi.StringRef(aws_networkfirewall_firewall.Arn),
-//				Name: pulumi.StringRef("Test"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := networkfirewall.LookupFirewall(ctx, &networkfirewall.LookupFirewallArgs{
+// 			Arn:  pulumi.StringRef(aws_networkfirewall_firewall.Arn),
+// 			Name: pulumi.StringRef("Test"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func LookupFirewall(ctx *pulumi.Context, args *LookupFirewallArgs, opts ...pulumi.InvokeOption) (*LookupFirewallResult, error) {
 	var rv LookupFirewallResult

@@ -25,49 +25,42 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cfg"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cfg"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := cfg.NewConformancePack(ctx, "example", &cfg.ConformancePackArgs{
-//				InputParameters: cfg.ConformancePackInputParameterArray{
-//					&cfg.ConformancePackInputParameterArgs{
-//						ParameterName:  pulumi.String("AccessKeysRotatedParameterMaxAccessKeyAge"),
-//						ParameterValue: pulumi.String("90"),
-//					},
-//				},
-//				TemplateBody: pulumi.String(fmt.Sprintf(`Parameters:
-//	  AccessKeysRotatedParameterMaxAccessKeyAge:
-//	    Type: String
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := cfg.NewConformancePack(ctx, "example", &cfg.ConformancePackArgs{
+// 			InputParameters: cfg.ConformancePackInputParameterArray{
+// 				&cfg.ConformancePackInputParameterArgs{
+// 					ParameterName:  pulumi.String("AccessKeysRotatedParameterMaxAccessKeyAge"),
+// 					ParameterValue: pulumi.String("90"),
+// 				},
+// 			},
+// 			TemplateBody: pulumi.String(fmt.Sprintf(`Parameters:
+//   AccessKeysRotatedParameterMaxAccessKeyAge:
+//     Type: String
 // Resources:
-//
-//	IAMPasswordPolicy:
-//	  Properties:
-//	    ConfigRuleName: IAMPasswordPolicy
-//	    Source:
-//	      Owner: AWS
-//	      SourceIdentifier: IAM_PASSWORD_POLICY
-//	  Type: AWS::Config::ConfigRule
-//
+//   IAMPasswordPolicy:
+//     Properties:
+//       ConfigRuleName: IAMPasswordPolicy
+//       Source:
+//         Owner: AWS
+//         SourceIdentifier: IAM_PASSWORD_POLICY
+//     Type: AWS::Config::ConfigRule
 // `)),
-//
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				aws_config_configuration_recorder.Example,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			aws_config_configuration_recorder.Example,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Template S3 URI
 //
@@ -75,55 +68,50 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cfg"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cfg"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleBucketV2, err := s3.NewBucketV2(ctx, "exampleBucketV2", nil)
-//			if err != nil {
-//				return err
-//			}
-//			exampleBucketObjectv2, err := s3.NewBucketObjectv2(ctx, "exampleBucketObjectv2", &s3.BucketObjectv2Args{
-//				Bucket: exampleBucketV2.ID(),
-//				Key:    pulumi.String("example-key"),
-//				Content: pulumi.String(fmt.Sprintf(`Resources:
-//	  IAMPasswordPolicy:
-//	    Properties:
-//	      ConfigRuleName: IAMPasswordPolicy
-//	      Source:
-//	        Owner: AWS
-//	        SourceIdentifier: IAM_PASSWORD_POLICY
-//	    Type: AWS::Config::ConfigRule
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleBucketV2, err := s3.NewBucketV2(ctx, "exampleBucketV2", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleBucketObjectv2, err := s3.NewBucketObjectv2(ctx, "exampleBucketObjectv2", &s3.BucketObjectv2Args{
+// 			Bucket: exampleBucketV2.ID(),
+// 			Key:    pulumi.String("example-key"),
+// 			Content: pulumi.String(fmt.Sprintf(`Resources:
+//   IAMPasswordPolicy:
+//     Properties:
+//       ConfigRuleName: IAMPasswordPolicy
+//       Source:
+//         Owner: AWS
+//         SourceIdentifier: IAM_PASSWORD_POLICY
+//     Type: AWS::Config::ConfigRule
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = cfg.NewConformancePack(ctx, "exampleConformancePack", &cfg.ConformancePackArgs{
-//				TemplateS3Uri: pulumi.All(exampleBucketV2.Bucket, exampleBucketObjectv2.Key).ApplyT(func(_args []interface{}) (string, error) {
-//					bucket := _args[0].(string)
-//					key := _args[1].(string)
-//					return fmt.Sprintf("s3://%v/%v", bucket, key), nil
-//				}).(pulumi.StringOutput),
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				aws_config_configuration_recorder.Example,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = cfg.NewConformancePack(ctx, "exampleConformancePack", &cfg.ConformancePackArgs{
+// 			TemplateS3Uri: pulumi.All(exampleBucketV2.Bucket, exampleBucketObjectv2.Key).ApplyT(func(_args []interface{}) (string, error) {
+// 				bucket := _args[0].(string)
+// 				key := _args[1].(string)
+// 				return fmt.Sprintf("s3://%v/%v", bucket, key), nil
+// 			}).(pulumi.StringOutput),
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			aws_config_configuration_recorder.Example,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -131,9 +119,7 @@ import (
 // Config Conformance Packs can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cfg/conformancePack:ConformancePack example example
-//
+//  $ pulumi import aws:cfg/conformancePack:ConformancePack example example
 // ```
 type ConformancePack struct {
 	pulumi.CustomResourceState
@@ -277,7 +263,7 @@ func (i *ConformancePack) ToConformancePackOutputWithContext(ctx context.Context
 // ConformancePackArrayInput is an input type that accepts ConformancePackArray and ConformancePackArrayOutput values.
 // You can construct a concrete instance of `ConformancePackArrayInput` via:
 //
-//	ConformancePackArray{ ConformancePackArgs{...} }
+//          ConformancePackArray{ ConformancePackArgs{...} }
 type ConformancePackArrayInput interface {
 	pulumi.Input
 
@@ -302,7 +288,7 @@ func (i ConformancePackArray) ToConformancePackArrayOutputWithContext(ctx contex
 // ConformancePackMapInput is an input type that accepts ConformancePackMap and ConformancePackMapOutput values.
 // You can construct a concrete instance of `ConformancePackMapInput` via:
 //
-//	ConformancePackMap{ "key": ConformancePackArgs{...} }
+//          ConformancePackMap{ "key": ConformancePackArgs{...} }
 type ConformancePackMapInput interface {
 	pulumi.Input
 

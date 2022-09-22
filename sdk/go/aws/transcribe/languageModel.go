@@ -18,106 +18,103 @@ import (
 // package main
 //
 // import (
+// 	"encoding/json"
+// 	"fmt"
 //
-//	"encoding/json"
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/transcribe"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/transcribe"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			examplePolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
-//				Statements: []iam.GetPolicyDocumentStatement{
-//					iam.GetPolicyDocumentStatement{
-//						Actions: []string{
-//							"sts:AssumeRole",
-//						},
-//						Principals: []iam.GetPolicyDocumentStatementPrincipal{
-//							iam.GetPolicyDocumentStatementPrincipal{
-//								Type: "Service",
-//								Identifiers: []string{
-//									"transcribe.amazonaws.com",
-//								},
-//							},
-//						},
-//					},
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.String(examplePolicyDocument.Json),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			tmpJSON0, err := json.Marshal(map[string]interface{}{
-//				"Version": "2012-10-17",
-//				"Statement": []map[string]interface{}{
-//					map[string]interface{}{
-//						"Action": []string{
-//							"s3:GetObject",
-//							"s3:ListBucket",
-//						},
-//						"Effect": "Allow",
-//						"Resource": []string{
-//							"*",
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			json0 := string(tmpJSON0)
-//			_, err = iam.NewRolePolicy(ctx, "testPolicy", &iam.RolePolicyArgs{
-//				Role:   exampleRole.ID(),
-//				Policy: pulumi.String(json0),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			exampleBucketV2, err := s3.NewBucketV2(ctx, "exampleBucketV2", &s3.BucketV2Args{
-//				ForceDestroy: pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = s3.NewBucketObjectv2(ctx, "object", &s3.BucketObjectv2Args{
-//				Bucket: exampleBucketV2.ID(),
-//				Key:    pulumi.String("transcribe/test1.txt"),
-//				Source: pulumi.NewFileAsset("test1.txt"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = transcribe.NewLanguageModel(ctx, "exampleLanguageModel", &transcribe.LanguageModelArgs{
-//				ModelName:     pulumi.String("example"),
-//				BaseModelName: pulumi.String("NarrowBand"),
-//				InputDataConfig: &transcribe.LanguageModelInputDataConfigArgs{
-//					DataAccessRoleArn: exampleRole.Arn,
-//					S3Uri: exampleBucketV2.ID().ApplyT(func(id string) (string, error) {
-//						return fmt.Sprintf("s3://%v/transcribe/", id), nil
-//					}).(pulumi.StringOutput),
-//				},
-//				LanguageCode: pulumi.String("en-US"),
-//				Tags: pulumi.StringMap{
-//					"ENVIRONMENT": pulumi.String("development"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		examplePolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+// 			Statements: []iam.GetPolicyDocumentStatement{
+// 				iam.GetPolicyDocumentStatement{
+// 					Actions: []string{
+// 						"sts:AssumeRole",
+// 					},
+// 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+// 						iam.GetPolicyDocumentStatementPrincipal{
+// 							Type: "Service",
+// 							Identifiers: []string{
+// 								"transcribe.amazonaws.com",
+// 							},
+// 						},
+// 					},
+// 				},
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.String(examplePolicyDocument.Json),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		tmpJSON0, err := json.Marshal(map[string]interface{}{
+// 			"Version": "2012-10-17",
+// 			"Statement": []map[string]interface{}{
+// 				map[string]interface{}{
+// 					"Action": []string{
+// 						"s3:GetObject",
+// 						"s3:ListBucket",
+// 					},
+// 					"Effect": "Allow",
+// 					"Resource": []string{
+// 						"*",
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		json0 := string(tmpJSON0)
+// 		_, err = iam.NewRolePolicy(ctx, "testPolicy", &iam.RolePolicyArgs{
+// 			Role:   exampleRole.ID(),
+// 			Policy: pulumi.String(json0),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		exampleBucketV2, err := s3.NewBucketV2(ctx, "exampleBucketV2", &s3.BucketV2Args{
+// 			ForceDestroy: pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = s3.NewBucketObjectv2(ctx, "object", &s3.BucketObjectv2Args{
+// 			Bucket: exampleBucketV2.ID(),
+// 			Key:    pulumi.String("transcribe/test1.txt"),
+// 			Source: pulumi.NewFileAsset("test1.txt"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = transcribe.NewLanguageModel(ctx, "exampleLanguageModel", &transcribe.LanguageModelArgs{
+// 			ModelName:     pulumi.String("example"),
+// 			BaseModelName: pulumi.String("NarrowBand"),
+// 			InputDataConfig: &transcribe.LanguageModelInputDataConfigArgs{
+// 				DataAccessRoleArn: exampleRole.Arn,
+// 				S3Uri: exampleBucketV2.ID().ApplyT(func(id string) (string, error) {
+// 					return fmt.Sprintf("s3://%v/transcribe/", id), nil
+// 				}).(pulumi.StringOutput),
+// 			},
+// 			LanguageCode: pulumi.String("en-US"),
+// 			Tags: pulumi.StringMap{
+// 				"ENVIRONMENT": pulumi.String("development"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -125,9 +122,7 @@ import (
 // Transcribe LanguageModel can be imported using the `model_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:transcribe/languageModel:LanguageModel example example-name
-//
+//  $ pulumi import aws:transcribe/languageModel:LanguageModel example example-name
 // ```
 type LanguageModel struct {
 	pulumi.CustomResourceState
@@ -276,7 +271,7 @@ func (i *LanguageModel) ToLanguageModelOutputWithContext(ctx context.Context) La
 // LanguageModelArrayInput is an input type that accepts LanguageModelArray and LanguageModelArrayOutput values.
 // You can construct a concrete instance of `LanguageModelArrayInput` via:
 //
-//	LanguageModelArray{ LanguageModelArgs{...} }
+//          LanguageModelArray{ LanguageModelArgs{...} }
 type LanguageModelArrayInput interface {
 	pulumi.Input
 
@@ -301,7 +296,7 @@ func (i LanguageModelArray) ToLanguageModelArrayOutputWithContext(ctx context.Co
 // LanguageModelMapInput is an input type that accepts LanguageModelMap and LanguageModelMapOutput values.
 // You can construct a concrete instance of `LanguageModelMapInput` via:
 //
-//	LanguageModelMap{ "key": LanguageModelArgs{...} }
+//          LanguageModelMap{ "key": LanguageModelArgs{...} }
 type LanguageModelMapInput interface {
 	pulumi.Input
 

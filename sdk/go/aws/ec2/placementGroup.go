@@ -20,24 +20,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewPlacementGroup(ctx, "web", &ec2.PlacementGroupArgs{
-//				Strategy: pulumi.String("cluster"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewPlacementGroup(ctx, "web", &ec2.PlacementGroupArgs{
+// 			Strategy: pulumi.String("cluster"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // Placement groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/placementGroup:PlacementGroup prod_pg production-placement-group
-//
+//  $ pulumi import aws:ec2/placementGroup:PlacementGroup prod_pg production-placement-group
 // ```
 type PlacementGroup struct {
 	pulumi.CustomResourceState
@@ -211,7 +206,7 @@ func (i *PlacementGroup) ToPlacementGroupOutputWithContext(ctx context.Context) 
 // PlacementGroupArrayInput is an input type that accepts PlacementGroupArray and PlacementGroupArrayOutput values.
 // You can construct a concrete instance of `PlacementGroupArrayInput` via:
 //
-//	PlacementGroupArray{ PlacementGroupArgs{...} }
+//          PlacementGroupArray{ PlacementGroupArgs{...} }
 type PlacementGroupArrayInput interface {
 	pulumi.Input
 
@@ -236,7 +231,7 @@ func (i PlacementGroupArray) ToPlacementGroupArrayOutputWithContext(ctx context.
 // PlacementGroupMapInput is an input type that accepts PlacementGroupMap and PlacementGroupMapOutput values.
 // You can construct a concrete instance of `PlacementGroupMapInput` via:
 //
-//	PlacementGroupMap{ "key": PlacementGroupArgs{...} }
+//          PlacementGroupMap{ "key": PlacementGroupArgs{...} }
 type PlacementGroupMapInput interface {
 	pulumi.Input
 

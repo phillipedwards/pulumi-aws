@@ -18,25 +18,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/networkmanager"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/networkmanager"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := networkmanager.NewAttachmentAccepter(ctx, "test", &networkmanager.AttachmentAccepterArgs{
-//				AttachmentId:   pulumi.Any(aws_networkmanager_vpc_attachment.Vpc.Id),
-//				AttachmentType: pulumi.Any(aws_networkmanager_vpc_attachment.Vpc.Attachment_type),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := networkmanager.NewAttachmentAccepter(ctx, "test", &networkmanager.AttachmentAccepterArgs{
+// 			AttachmentId:   pulumi.Any(aws_networkmanager_vpc_attachment.Vpc.Id),
+// 			AttachmentType: pulumi.Any(aws_networkmanager_vpc_attachment.Vpc.Attachment_type),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 type AttachmentAccepter struct {
 	pulumi.CustomResourceState
@@ -188,7 +185,7 @@ func (i *AttachmentAccepter) ToAttachmentAccepterOutputWithContext(ctx context.C
 // AttachmentAccepterArrayInput is an input type that accepts AttachmentAccepterArray and AttachmentAccepterArrayOutput values.
 // You can construct a concrete instance of `AttachmentAccepterArrayInput` via:
 //
-//	AttachmentAccepterArray{ AttachmentAccepterArgs{...} }
+//          AttachmentAccepterArray{ AttachmentAccepterArgs{...} }
 type AttachmentAccepterArrayInput interface {
 	pulumi.Input
 
@@ -213,7 +210,7 @@ func (i AttachmentAccepterArray) ToAttachmentAccepterArrayOutputWithContext(ctx 
 // AttachmentAccepterMapInput is an input type that accepts AttachmentAccepterMap and AttachmentAccepterMapOutput values.
 // You can construct a concrete instance of `AttachmentAccepterMapInput` via:
 //
-//	AttachmentAccepterMap{ "key": AttachmentAccepterArgs{...} }
+//          AttachmentAccepterMap{ "key": AttachmentAccepterArgs{...} }
 type AttachmentAccepterMapInput interface {
 	pulumi.Input
 

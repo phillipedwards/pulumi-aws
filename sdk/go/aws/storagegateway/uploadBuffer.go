@@ -22,32 +22,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/storagegateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			testLocalDisk, err := storagegateway.GetLocalDisk(ctx, &storagegateway.GetLocalDiskArgs{
-//				DiskNode:   pulumi.StringRef(aws_volume_attachment.Test.Device_name),
-//				GatewayArn: aws_storagegateway_gateway.Test.Arn,
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = storagegateway.NewUploadBuffer(ctx, "testUploadBuffer", &storagegateway.UploadBufferArgs{
-//				DiskPath:   pulumi.String(testLocalDisk.DiskPath),
-//				GatewayArn: pulumi.Any(aws_storagegateway_gateway.Test.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		testLocalDisk, err := storagegateway.GetLocalDisk(ctx, &storagegateway.GetLocalDiskArgs{
+// 			DiskNode:   pulumi.StringRef(aws_volume_attachment.Test.Device_name),
+// 			GatewayArn: aws_storagegateway_gateway.Test.Arn,
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = storagegateway.NewUploadBuffer(ctx, "testUploadBuffer", &storagegateway.UploadBufferArgs{
+// 			DiskPath:   pulumi.String(testLocalDisk.DiskPath),
+// 			GatewayArn: pulumi.Any(aws_storagegateway_gateway.Test.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Stored Gateway Type
 //
@@ -55,32 +52,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/storagegateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := storagegateway.GetLocalDisk(ctx, &storagegateway.GetLocalDiskArgs{
-//				DiskNode:   pulumi.StringRef(aws_volume_attachment.Test.Device_name),
-//				GatewayArn: aws_storagegateway_gateway.Test.Arn,
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = storagegateway.NewUploadBuffer(ctx, "example", &storagegateway.UploadBufferArgs{
-//				DiskId:     pulumi.Any(data.Aws_storagegateway_local_disk.Example.Id),
-//				GatewayArn: pulumi.Any(aws_storagegateway_gateway.Example.Arn),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := storagegateway.GetLocalDisk(ctx, &storagegateway.GetLocalDiskArgs{
+// 			DiskNode:   pulumi.StringRef(aws_volume_attachment.Test.Device_name),
+// 			GatewayArn: aws_storagegateway_gateway.Test.Arn,
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = storagegateway.NewUploadBuffer(ctx, "example", &storagegateway.UploadBufferArgs{
+// 			DiskId:     pulumi.Any(data.Aws_storagegateway_local_disk.Example.Id),
+// 			GatewayArn: pulumi.Any(aws_storagegateway_gateway.Example.Arn),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -88,9 +82,7 @@ import (
 // `aws_storagegateway_upload_buffer` can be imported by using the gateway Amazon Resource Name (ARN) and local disk identifier separated with a colon (`:`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:storagegateway/uploadBuffer:UploadBuffer example arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678:pci-0000:03:00.0-scsi-0:0:0:0
-//
+//  $ pulumi import aws:storagegateway/uploadBuffer:UploadBuffer example arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678:pci-0000:03:00.0-scsi-0:0:0:0
 // ```
 type UploadBuffer struct {
 	pulumi.CustomResourceState
@@ -201,7 +193,7 @@ func (i *UploadBuffer) ToUploadBufferOutputWithContext(ctx context.Context) Uplo
 // UploadBufferArrayInput is an input type that accepts UploadBufferArray and UploadBufferArrayOutput values.
 // You can construct a concrete instance of `UploadBufferArrayInput` via:
 //
-//	UploadBufferArray{ UploadBufferArgs{...} }
+//          UploadBufferArray{ UploadBufferArgs{...} }
 type UploadBufferArrayInput interface {
 	pulumi.Input
 
@@ -226,7 +218,7 @@ func (i UploadBufferArray) ToUploadBufferArrayOutputWithContext(ctx context.Cont
 // UploadBufferMapInput is an input type that accepts UploadBufferMap and UploadBufferMapOutput values.
 // You can construct a concrete instance of `UploadBufferMapInput` via:
 //
-//	UploadBufferMap{ "key": UploadBufferArgs{...} }
+//          UploadBufferMap{ "key": UploadBufferArgs{...} }
 type UploadBufferMapInput interface {
 	pulumi.Input
 

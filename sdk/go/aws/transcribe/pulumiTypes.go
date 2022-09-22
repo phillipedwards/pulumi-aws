@@ -22,7 +22,7 @@ type LanguageModelInputDataConfig struct {
 // LanguageModelInputDataConfigInput is an input type that accepts LanguageModelInputDataConfigArgs and LanguageModelInputDataConfigOutput values.
 // You can construct a concrete instance of `LanguageModelInputDataConfigInput` via:
 //
-//	LanguageModelInputDataConfigArgs{...}
+//          LanguageModelInputDataConfigArgs{...}
 type LanguageModelInputDataConfigInput interface {
 	pulumi.Input
 
@@ -62,11 +62,11 @@ func (i LanguageModelInputDataConfigArgs) ToLanguageModelInputDataConfigPtrOutpu
 // LanguageModelInputDataConfigPtrInput is an input type that accepts LanguageModelInputDataConfigArgs, LanguageModelInputDataConfigPtr and LanguageModelInputDataConfigPtrOutput values.
 // You can construct a concrete instance of `LanguageModelInputDataConfigPtrInput` via:
 //
-//	        LanguageModelInputDataConfigArgs{...}
+//          LanguageModelInputDataConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type LanguageModelInputDataConfigPtrInput interface {
 	pulumi.Input
 

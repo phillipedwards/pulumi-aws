@@ -20,7 +20,7 @@ type AssessmentTemplateEventSubscription struct {
 // AssessmentTemplateEventSubscriptionInput is an input type that accepts AssessmentTemplateEventSubscriptionArgs and AssessmentTemplateEventSubscriptionOutput values.
 // You can construct a concrete instance of `AssessmentTemplateEventSubscriptionInput` via:
 //
-//	AssessmentTemplateEventSubscriptionArgs{...}
+//          AssessmentTemplateEventSubscriptionArgs{...}
 type AssessmentTemplateEventSubscriptionInput interface {
 	pulumi.Input
 
@@ -50,7 +50,7 @@ func (i AssessmentTemplateEventSubscriptionArgs) ToAssessmentTemplateEventSubscr
 // AssessmentTemplateEventSubscriptionArrayInput is an input type that accepts AssessmentTemplateEventSubscriptionArray and AssessmentTemplateEventSubscriptionArrayOutput values.
 // You can construct a concrete instance of `AssessmentTemplateEventSubscriptionArrayInput` via:
 //
-//	AssessmentTemplateEventSubscriptionArray{ AssessmentTemplateEventSubscriptionArgs{...} }
+//          AssessmentTemplateEventSubscriptionArray{ AssessmentTemplateEventSubscriptionArgs{...} }
 type AssessmentTemplateEventSubscriptionArrayInput interface {
 	pulumi.Input
 

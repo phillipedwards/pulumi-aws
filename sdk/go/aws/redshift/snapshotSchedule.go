@@ -17,27 +17,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := redshift.NewSnapshotSchedule(ctx, "default", &redshift.SnapshotScheduleArgs{
-//				Definitions: pulumi.StringArray{
-//					pulumi.String("rate(12 hours)"),
-//				},
-//				Identifier: pulumi.String("tf-redshift-snapshot-schedule"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := redshift.NewSnapshotSchedule(ctx, "default", &redshift.SnapshotScheduleArgs{
+// 			Definitions: pulumi.StringArray{
+// 				pulumi.String("rate(12 hours)"),
+// 			},
+// 			Identifier: pulumi.String("tf-redshift-snapshot-schedule"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // Redshift Snapshot Schedule can be imported using the `identifier`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:redshift/snapshotSchedule:SnapshotSchedule default tf-redshift-snapshot-schedule
-//
+//  $ pulumi import aws:redshift/snapshotSchedule:SnapshotSchedule default tf-redshift-snapshot-schedule
 // ```
 type SnapshotSchedule struct {
 	pulumi.CustomResourceState
@@ -205,7 +200,7 @@ func (i *SnapshotSchedule) ToSnapshotScheduleOutputWithContext(ctx context.Conte
 // SnapshotScheduleArrayInput is an input type that accepts SnapshotScheduleArray and SnapshotScheduleArrayOutput values.
 // You can construct a concrete instance of `SnapshotScheduleArrayInput` via:
 //
-//	SnapshotScheduleArray{ SnapshotScheduleArgs{...} }
+//          SnapshotScheduleArray{ SnapshotScheduleArgs{...} }
 type SnapshotScheduleArrayInput interface {
 	pulumi.Input
 
@@ -230,7 +225,7 @@ func (i SnapshotScheduleArray) ToSnapshotScheduleArrayOutputWithContext(ctx cont
 // SnapshotScheduleMapInput is an input type that accepts SnapshotScheduleMap and SnapshotScheduleMapOutput values.
 // You can construct a concrete instance of `SnapshotScheduleMapInput` via:
 //
-//	SnapshotScheduleMap{ "key": SnapshotScheduleArgs{...} }
+//          SnapshotScheduleMap{ "key": SnapshotScheduleArgs{...} }
 type SnapshotScheduleMapInput interface {
 	pulumi.Input
 

@@ -18,24 +18,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/servicediscovery"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/servicediscovery"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := servicediscovery.NewPublicDnsNamespace(ctx, "example", &servicediscovery.PublicDnsNamespaceArgs{
-//				Description: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := servicediscovery.NewPublicDnsNamespace(ctx, "example", &servicediscovery.PublicDnsNamespaceArgs{
+// 			Description: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -43,9 +40,7 @@ import (
 // Service Discovery Public DNS Namespace can be imported using the namespace ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:servicediscovery/publicDnsNamespace:PublicDnsNamespace example 0123456789
-//
+//  $ pulumi import aws:servicediscovery/publicDnsNamespace:PublicDnsNamespace example 0123456789
 // ```
 type PublicDnsNamespace struct {
 	pulumi.CustomResourceState
@@ -171,7 +166,7 @@ func (i *PublicDnsNamespace) ToPublicDnsNamespaceOutputWithContext(ctx context.C
 // PublicDnsNamespaceArrayInput is an input type that accepts PublicDnsNamespaceArray and PublicDnsNamespaceArrayOutput values.
 // You can construct a concrete instance of `PublicDnsNamespaceArrayInput` via:
 //
-//	PublicDnsNamespaceArray{ PublicDnsNamespaceArgs{...} }
+//          PublicDnsNamespaceArray{ PublicDnsNamespaceArgs{...} }
 type PublicDnsNamespaceArrayInput interface {
 	pulumi.Input
 
@@ -196,7 +191,7 @@ func (i PublicDnsNamespaceArray) ToPublicDnsNamespaceArrayOutputWithContext(ctx 
 // PublicDnsNamespaceMapInput is an input type that accepts PublicDnsNamespaceMap and PublicDnsNamespaceMapOutput values.
 // You can construct a concrete instance of `PublicDnsNamespaceMapInput` via:
 //
-//	PublicDnsNamespaceMap{ "key": PublicDnsNamespaceArgs{...} }
+//          PublicDnsNamespaceMap{ "key": PublicDnsNamespaceArgs{...} }
 type PublicDnsNamespaceMapInput interface {
 	pulumi.Input
 

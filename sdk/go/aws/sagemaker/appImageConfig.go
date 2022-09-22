@@ -20,29 +20,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sagemaker.NewAppImageConfig(ctx, "test", &sagemaker.AppImageConfigArgs{
-//				AppImageConfigName: pulumi.String("example"),
-//				KernelGatewayImageConfig: &sagemaker.AppImageConfigKernelGatewayImageConfigArgs{
-//					KernelSpec: &sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs{
-//						Name: pulumi.String("example"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sagemaker.NewAppImageConfig(ctx, "test", &sagemaker.AppImageConfigArgs{
+// 			AppImageConfigName: pulumi.String("example"),
+// 			KernelGatewayImageConfig: &sagemaker.AppImageConfigKernelGatewayImageConfigArgs{
+// 				KernelSpec: &sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs{
+// 					Name: pulumi.String("example"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Default File System Config
 //
@@ -50,30 +47,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sagemaker.NewAppImageConfig(ctx, "test", &sagemaker.AppImageConfigArgs{
-//				AppImageConfigName: pulumi.String("example"),
-//				KernelGatewayImageConfig: &sagemaker.AppImageConfigKernelGatewayImageConfigArgs{
-//					FileSystemConfig: nil,
-//					KernelSpec: &sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs{
-//						Name: pulumi.String("example"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sagemaker.NewAppImageConfig(ctx, "test", &sagemaker.AppImageConfigArgs{
+// 			AppImageConfigName: pulumi.String("example"),
+// 			KernelGatewayImageConfig: &sagemaker.AppImageConfigKernelGatewayImageConfigArgs{
+// 				FileSystemConfig: nil,
+// 				KernelSpec: &sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs{
+// 					Name: pulumi.String("example"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -81,9 +75,7 @@ import (
 // SageMaker App Image Configs can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/appImageConfig:AppImageConfig example example
-//
+//  $ pulumi import aws:sagemaker/appImageConfig:AppImageConfig example example
 // ```
 type AppImageConfig struct {
 	pulumi.CustomResourceState
@@ -206,7 +198,7 @@ func (i *AppImageConfig) ToAppImageConfigOutputWithContext(ctx context.Context) 
 // AppImageConfigArrayInput is an input type that accepts AppImageConfigArray and AppImageConfigArrayOutput values.
 // You can construct a concrete instance of `AppImageConfigArrayInput` via:
 //
-//	AppImageConfigArray{ AppImageConfigArgs{...} }
+//          AppImageConfigArray{ AppImageConfigArgs{...} }
 type AppImageConfigArrayInput interface {
 	pulumi.Input
 
@@ -231,7 +223,7 @@ func (i AppImageConfigArray) ToAppImageConfigArrayOutputWithContext(ctx context.
 // AppImageConfigMapInput is an input type that accepts AppImageConfigMap and AppImageConfigMapOutput values.
 // You can construct a concrete instance of `AppImageConfigMapInput` via:
 //
-//	AppImageConfigMap{ "key": AppImageConfigArgs{...} }
+//          AppImageConfigMap{ "key": AppImageConfigArgs{...} }
 type AppImageConfigMapInput interface {
 	pulumi.Input
 

@@ -20,31 +20,28 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewVocabulary(ctx, "example", &connect.VocabularyArgs{
-//				Content:      pulumi.String(fmt.Sprintf("Phrase	IPA	SoundsLike	DisplayAs\nLos-Angeles			Los Angeles\nF.B.I.	ɛ f b i aɪ		FBI\nEtienne		eh-tee-en	\n")),
-//				InstanceId:   pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
-//				LanguageCode: pulumi.String("en-US"),
-//				Tags: pulumi.StringMap{
-//					"Key1": pulumi.String("Value1"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewVocabulary(ctx, "example", &connect.VocabularyArgs{
+// 			Content: pulumi.String(fmt.Sprintf("Phrase	IPA	SoundsLike	DisplayAs\nLos-Angeles			Los Angeles\nF.B.I.	ɛ f b i aɪ		FBI\nEtienne		eh-tee-en	\n")),
+// 			InstanceId:   pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+// 			LanguageCode: pulumi.String("en-US"),
+// 			Tags: pulumi.StringMap{
+// 				"Key1": pulumi.String("Value1"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // Amazon Connect Vocabularies can be imported using the `instance_id` and `vocabulary_id` separated by a colon (`:`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:connect/vocabulary:Vocabulary example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
-//
+//  $ pulumi import aws:connect/vocabulary:Vocabulary example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
 // ```
 type Vocabulary struct {
 	pulumi.CustomResourceState
@@ -222,7 +217,7 @@ func (i *Vocabulary) ToVocabularyOutputWithContext(ctx context.Context) Vocabula
 // VocabularyArrayInput is an input type that accepts VocabularyArray and VocabularyArrayOutput values.
 // You can construct a concrete instance of `VocabularyArrayInput` via:
 //
-//	VocabularyArray{ VocabularyArgs{...} }
+//          VocabularyArray{ VocabularyArgs{...} }
 type VocabularyArrayInput interface {
 	pulumi.Input
 
@@ -247,7 +242,7 @@ func (i VocabularyArray) ToVocabularyArrayOutputWithContext(ctx context.Context)
 // VocabularyMapInput is an input type that accepts VocabularyMap and VocabularyMapOutput values.
 // You can construct a concrete instance of `VocabularyMapInput` via:
 //
-//	VocabularyMap{ "key": VocabularyArgs{...} }
+//          VocabularyMap{ "key": VocabularyArgs{...} }
 type VocabularyMapInput interface {
 	pulumi.Input
 

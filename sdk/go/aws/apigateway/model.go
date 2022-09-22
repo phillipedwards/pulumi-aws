@@ -19,35 +19,32 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/apigateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			myDemoAPI, err := apigateway.NewRestApi(ctx, "myDemoAPI", &apigateway.RestApiArgs{
-//				Description: pulumi.String("This is my API for demonstration purposes"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = apigateway.NewModel(ctx, "myDemoModel", &apigateway.ModelArgs{
-//				RestApi:     myDemoAPI.ID(),
-//				Description: pulumi.String("a JSON schema"),
-//				ContentType: pulumi.String("application/json"),
-//				Schema:      pulumi.String(fmt.Sprintf("{\n  \"type\": \"object\"\n}\n")),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		myDemoAPI, err := apigateway.NewRestApi(ctx, "myDemoAPI", &apigateway.RestApiArgs{
+// 			Description: pulumi.String("This is my API for demonstration purposes"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = apigateway.NewModel(ctx, "myDemoModel", &apigateway.ModelArgs{
+// 			RestApi:     myDemoAPI.ID(),
+// 			Description: pulumi.String("a JSON schema"),
+// 			ContentType: pulumi.String("application/json"),
+// 			Schema:      pulumi.String(fmt.Sprintf("{\n  \"type\": \"object\"\n}\n")),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -55,9 +52,7 @@ import (
 // `aws_api_gateway_model` can be imported using `REST-API-ID/NAME`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:apigateway/model:Model example 12345abcde/example
-//
+//  $ pulumi import aws:apigateway/model:Model example 12345abcde/example
 // ```
 type Model struct {
 	pulumi.CustomResourceState
@@ -191,7 +186,7 @@ func (i *Model) ToModelOutputWithContext(ctx context.Context) ModelOutput {
 // ModelArrayInput is an input type that accepts ModelArray and ModelArrayOutput values.
 // You can construct a concrete instance of `ModelArrayInput` via:
 //
-//	ModelArray{ ModelArgs{...} }
+//          ModelArray{ ModelArgs{...} }
 type ModelArrayInput interface {
 	pulumi.Input
 
@@ -216,7 +211,7 @@ func (i ModelArray) ToModelArrayOutputWithContext(ctx context.Context) ModelArra
 // ModelMapInput is an input type that accepts ModelMap and ModelMapOutput values.
 // You can construct a concrete instance of `ModelMapInput` via:
 //
-//	ModelMap{ "key": ModelArgs{...} }
+//          ModelMap{ "key": ModelArgs{...} }
 type ModelMapInput interface {
 	pulumi.Input
 

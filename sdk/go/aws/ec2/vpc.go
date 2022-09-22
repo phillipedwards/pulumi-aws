@@ -20,24 +20,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("10.0.0.0/16"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("10.0.0.0/16"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // Basic usage with tags:
@@ -46,28 +43,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
-//				CidrBlock:       pulumi.String("10.0.0.0/16"),
-//				InstanceTenancy: pulumi.String("default"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("main"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+// 			CidrBlock:       pulumi.String("10.0.0.0/16"),
+// 			InstanceTenancy: pulumi.String("default"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("main"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // VPC with CIDR from AWS IPAM:
@@ -76,57 +70,54 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			current, err := aws.GetRegion(ctx, nil, nil)
-//			if err != nil {
-//				return err
-//			}
-//			testVpcIpam, err := ec2.NewVpcIpam(ctx, "testVpcIpam", &ec2.VpcIpamArgs{
-//				OperatingRegions: ec2.VpcIpamOperatingRegionArray{
-//					&ec2.VpcIpamOperatingRegionArgs{
-//						RegionName: pulumi.String(current.Name),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			testVpcIpamPool, err := ec2.NewVpcIpamPool(ctx, "testVpcIpamPool", &ec2.VpcIpamPoolArgs{
-//				AddressFamily: pulumi.String("ipv4"),
-//				IpamScopeId:   testVpcIpam.PrivateDefaultScopeId,
-//				Locale:        pulumi.String(current.Name),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			testVpcIpamPoolCidr, err := ec2.NewVpcIpamPoolCidr(ctx, "testVpcIpamPoolCidr", &ec2.VpcIpamPoolCidrArgs{
-//				IpamPoolId: testVpcIpamPool.ID(),
-//				Cidr:       pulumi.String("172.2.0.0/16"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ec2.NewVpc(ctx, "testVpc", &ec2.VpcArgs{
-//				Ipv4IpamPoolId:    testVpcIpamPool.ID(),
-//				Ipv4NetmaskLength: pulumi.Int(28),
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				testVpcIpamPoolCidr,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		current, err := aws.GetRegion(ctx, nil, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		testVpcIpam, err := ec2.NewVpcIpam(ctx, "testVpcIpam", &ec2.VpcIpamArgs{
+// 			OperatingRegions: ec2.VpcIpamOperatingRegionArray{
+// 				&ec2.VpcIpamOperatingRegionArgs{
+// 					RegionName: pulumi.String(current.Name),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		testVpcIpamPool, err := ec2.NewVpcIpamPool(ctx, "testVpcIpamPool", &ec2.VpcIpamPoolArgs{
+// 			AddressFamily: pulumi.String("ipv4"),
+// 			IpamScopeId:   testVpcIpam.PrivateDefaultScopeId,
+// 			Locale:        pulumi.String(current.Name),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		testVpcIpamPoolCidr, err := ec2.NewVpcIpamPoolCidr(ctx, "testVpcIpamPoolCidr", &ec2.VpcIpamPoolCidrArgs{
+// 			IpamPoolId: testVpcIpamPool.ID(),
+// 			Cidr:       pulumi.String("172.2.0.0/16"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ec2.NewVpc(ctx, "testVpc", &ec2.VpcArgs{
+// 			Ipv4IpamPoolId:    testVpcIpamPool.ID(),
+// 			Ipv4NetmaskLength: pulumi.Int(28),
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			testVpcIpamPoolCidr,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -134,9 +125,7 @@ import (
 // VPCs can be imported using the `vpc id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/vpc:Vpc test_vpc vpc-a01106c2
-//
+//  $ pulumi import aws:ec2/vpc:Vpc test_vpc vpc-a01106c2
 // ```
 type Vpc struct {
 	pulumi.CustomResourceState
@@ -446,7 +435,7 @@ func (i *Vpc) ToVpcOutputWithContext(ctx context.Context) VpcOutput {
 // VpcArrayInput is an input type that accepts VpcArray and VpcArrayOutput values.
 // You can construct a concrete instance of `VpcArrayInput` via:
 //
-//	VpcArray{ VpcArgs{...} }
+//          VpcArray{ VpcArgs{...} }
 type VpcArrayInput interface {
 	pulumi.Input
 
@@ -471,7 +460,7 @@ func (i VpcArray) ToVpcArrayOutputWithContext(ctx context.Context) VpcArrayOutpu
 // VpcMapInput is an input type that accepts VpcMap and VpcMapOutput values.
 // You can construct a concrete instance of `VpcMapInput` via:
 //
-//	VpcMap{ "key": VpcArgs{...} }
+//          VpcMap{ "key": VpcArgs{...} }
 type VpcMapInput interface {
 	pulumi.Input
 

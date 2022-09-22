@@ -19,29 +19,26 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/msk"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/msk"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := msk.NewConfiguration(ctx, "example", &msk.ConfigurationArgs{
-//				KafkaVersions: pulumi.StringArray{
-//					pulumi.String("2.1.0"),
-//				},
-//				ServerProperties: pulumi.String(fmt.Sprintf("auto.create.topics.enable = true\ndelete.topic.enable = true\n\n")),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := msk.NewConfiguration(ctx, "example", &msk.ConfigurationArgs{
+// 			KafkaVersions: pulumi.StringArray{
+// 				pulumi.String("2.1.0"),
+// 			},
+// 			ServerProperties: pulumi.String(fmt.Sprintf("auto.create.topics.enable = true\ndelete.topic.enable = true\n\n")),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -49,9 +46,7 @@ import (
 // MSK configurations can be imported using the configuration ARN, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:msk/configuration:Configuration example arn:aws:kafka:us-west-2:123456789012:configuration/example/279c0212-d057-4dba-9aa9-1c4e5a25bfc7-3
-//
+//  $ pulumi import aws:msk/configuration:Configuration example arn:aws:kafka:us-west-2:123456789012:configuration/example/279c0212-d057-4dba-9aa9-1c4e5a25bfc7-3
 // ```
 type Configuration struct {
 	pulumi.CustomResourceState
@@ -184,7 +179,7 @@ func (i *Configuration) ToConfigurationOutputWithContext(ctx context.Context) Co
 // ConfigurationArrayInput is an input type that accepts ConfigurationArray and ConfigurationArrayOutput values.
 // You can construct a concrete instance of `ConfigurationArrayInput` via:
 //
-//	ConfigurationArray{ ConfigurationArgs{...} }
+//          ConfigurationArray{ ConfigurationArgs{...} }
 type ConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -209,7 +204,7 @@ func (i ConfigurationArray) ToConfigurationArrayOutputWithContext(ctx context.Co
 // ConfigurationMapInput is an input type that accepts ConfigurationMap and ConfigurationMapOutput values.
 // You can construct a concrete instance of `ConfigurationMapInput` via:
 //
-//	ConfigurationMap{ "key": ConfigurationArgs{...} }
+//          ConfigurationMap{ "key": ConfigurationArgs{...} }
 type ConfigurationMapInput interface {
 	pulumi.Input
 

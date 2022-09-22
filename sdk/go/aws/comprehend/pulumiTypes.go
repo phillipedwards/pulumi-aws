@@ -39,7 +39,7 @@ type EntityRecognizerInputDataConfig struct {
 // EntityRecognizerInputDataConfigInput is an input type that accepts EntityRecognizerInputDataConfigArgs and EntityRecognizerInputDataConfigOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigInput` via:
 //
-//	EntityRecognizerInputDataConfigArgs{...}
+//          EntityRecognizerInputDataConfigArgs{...}
 type EntityRecognizerInputDataConfigInput interface {
 	pulumi.Input
 
@@ -96,11 +96,11 @@ func (i EntityRecognizerInputDataConfigArgs) ToEntityRecognizerInputDataConfigPt
 // EntityRecognizerInputDataConfigPtrInput is an input type that accepts EntityRecognizerInputDataConfigArgs, EntityRecognizerInputDataConfigPtr and EntityRecognizerInputDataConfigPtrOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigPtrInput` via:
 //
-//	        EntityRecognizerInputDataConfigArgs{...}
+//          EntityRecognizerInputDataConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EntityRecognizerInputDataConfigPtrInput interface {
 	pulumi.Input
 
@@ -303,7 +303,7 @@ type EntityRecognizerInputDataConfigAnnotations struct {
 // EntityRecognizerInputDataConfigAnnotationsInput is an input type that accepts EntityRecognizerInputDataConfigAnnotationsArgs and EntityRecognizerInputDataConfigAnnotationsOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigAnnotationsInput` via:
 //
-//	EntityRecognizerInputDataConfigAnnotationsArgs{...}
+//          EntityRecognizerInputDataConfigAnnotationsArgs{...}
 type EntityRecognizerInputDataConfigAnnotationsInput interface {
 	pulumi.Input
 
@@ -340,11 +340,11 @@ func (i EntityRecognizerInputDataConfigAnnotationsArgs) ToEntityRecognizerInputD
 // EntityRecognizerInputDataConfigAnnotationsPtrInput is an input type that accepts EntityRecognizerInputDataConfigAnnotationsArgs, EntityRecognizerInputDataConfigAnnotationsPtr and EntityRecognizerInputDataConfigAnnotationsPtrOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigAnnotationsPtrInput` via:
 //
-//	        EntityRecognizerInputDataConfigAnnotationsArgs{...}
+//          EntityRecognizerInputDataConfigAnnotationsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EntityRecognizerInputDataConfigAnnotationsPtrInput interface {
 	pulumi.Input
 
@@ -466,7 +466,7 @@ type EntityRecognizerInputDataConfigAugmentedManifest struct {
 // EntityRecognizerInputDataConfigAugmentedManifestInput is an input type that accepts EntityRecognizerInputDataConfigAugmentedManifestArgs and EntityRecognizerInputDataConfigAugmentedManifestOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigAugmentedManifestInput` via:
 //
-//	EntityRecognizerInputDataConfigAugmentedManifestArgs{...}
+//          EntityRecognizerInputDataConfigAugmentedManifestArgs{...}
 type EntityRecognizerInputDataConfigAugmentedManifestInput interface {
 	pulumi.Input
 
@@ -506,7 +506,7 @@ func (i EntityRecognizerInputDataConfigAugmentedManifestArgs) ToEntityRecognizer
 // EntityRecognizerInputDataConfigAugmentedManifestArrayInput is an input type that accepts EntityRecognizerInputDataConfigAugmentedManifestArray and EntityRecognizerInputDataConfigAugmentedManifestArrayOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigAugmentedManifestArrayInput` via:
 //
-//	EntityRecognizerInputDataConfigAugmentedManifestArray{ EntityRecognizerInputDataConfigAugmentedManifestArgs{...} }
+//          EntityRecognizerInputDataConfigAugmentedManifestArray{ EntityRecognizerInputDataConfigAugmentedManifestArgs{...} }
 type EntityRecognizerInputDataConfigAugmentedManifestArrayInput interface {
 	pulumi.Input
 
@@ -606,7 +606,7 @@ type EntityRecognizerInputDataConfigDocuments struct {
 // EntityRecognizerInputDataConfigDocumentsInput is an input type that accepts EntityRecognizerInputDataConfigDocumentsArgs and EntityRecognizerInputDataConfigDocumentsOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigDocumentsInput` via:
 //
-//	EntityRecognizerInputDataConfigDocumentsArgs{...}
+//          EntityRecognizerInputDataConfigDocumentsArgs{...}
 type EntityRecognizerInputDataConfigDocumentsInput interface {
 	pulumi.Input
 
@@ -646,11 +646,11 @@ func (i EntityRecognizerInputDataConfigDocumentsArgs) ToEntityRecognizerInputDat
 // EntityRecognizerInputDataConfigDocumentsPtrInput is an input type that accepts EntityRecognizerInputDataConfigDocumentsArgs, EntityRecognizerInputDataConfigDocumentsPtr and EntityRecognizerInputDataConfigDocumentsPtrOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigDocumentsPtrInput` via:
 //
-//	        EntityRecognizerInputDataConfigDocumentsArgs{...}
+//          EntityRecognizerInputDataConfigDocumentsArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EntityRecognizerInputDataConfigDocumentsPtrInput interface {
 	pulumi.Input
 
@@ -777,7 +777,7 @@ type EntityRecognizerInputDataConfigEntityList struct {
 // EntityRecognizerInputDataConfigEntityListInput is an input type that accepts EntityRecognizerInputDataConfigEntityListArgs and EntityRecognizerInputDataConfigEntityListOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigEntityListInput` via:
 //
-//	EntityRecognizerInputDataConfigEntityListArgs{...}
+//          EntityRecognizerInputDataConfigEntityListArgs{...}
 type EntityRecognizerInputDataConfigEntityListInput interface {
 	pulumi.Input
 
@@ -813,11 +813,11 @@ func (i EntityRecognizerInputDataConfigEntityListArgs) ToEntityRecognizerInputDa
 // EntityRecognizerInputDataConfigEntityListPtrInput is an input type that accepts EntityRecognizerInputDataConfigEntityListArgs, EntityRecognizerInputDataConfigEntityListPtr and EntityRecognizerInputDataConfigEntityListPtrOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigEntityListPtrInput` via:
 //
-//	        EntityRecognizerInputDataConfigEntityListArgs{...}
+//          EntityRecognizerInputDataConfigEntityListArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EntityRecognizerInputDataConfigEntityListPtrInput interface {
 	pulumi.Input
 
@@ -915,7 +915,7 @@ type EntityRecognizerInputDataConfigEntityType struct {
 // EntityRecognizerInputDataConfigEntityTypeInput is an input type that accepts EntityRecognizerInputDataConfigEntityTypeArgs and EntityRecognizerInputDataConfigEntityTypeOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigEntityTypeInput` via:
 //
-//	EntityRecognizerInputDataConfigEntityTypeArgs{...}
+//          EntityRecognizerInputDataConfigEntityTypeArgs{...}
 type EntityRecognizerInputDataConfigEntityTypeInput interface {
 	pulumi.Input
 
@@ -944,7 +944,7 @@ func (i EntityRecognizerInputDataConfigEntityTypeArgs) ToEntityRecognizerInputDa
 // EntityRecognizerInputDataConfigEntityTypeArrayInput is an input type that accepts EntityRecognizerInputDataConfigEntityTypeArray and EntityRecognizerInputDataConfigEntityTypeArrayOutput values.
 // You can construct a concrete instance of `EntityRecognizerInputDataConfigEntityTypeArrayInput` via:
 //
-//	EntityRecognizerInputDataConfigEntityTypeArray{ EntityRecognizerInputDataConfigEntityTypeArgs{...} }
+//          EntityRecognizerInputDataConfigEntityTypeArray{ EntityRecognizerInputDataConfigEntityTypeArgs{...} }
 type EntityRecognizerInputDataConfigEntityTypeArrayInput interface {
 	pulumi.Input
 
@@ -1016,7 +1016,7 @@ type EntityRecognizerVpcConfig struct {
 // EntityRecognizerVpcConfigInput is an input type that accepts EntityRecognizerVpcConfigArgs and EntityRecognizerVpcConfigOutput values.
 // You can construct a concrete instance of `EntityRecognizerVpcConfigInput` via:
 //
-//	EntityRecognizerVpcConfigArgs{...}
+//          EntityRecognizerVpcConfigArgs{...}
 type EntityRecognizerVpcConfigInput interface {
 	pulumi.Input
 
@@ -1054,11 +1054,11 @@ func (i EntityRecognizerVpcConfigArgs) ToEntityRecognizerVpcConfigPtrOutputWithC
 // EntityRecognizerVpcConfigPtrInput is an input type that accepts EntityRecognizerVpcConfigArgs, EntityRecognizerVpcConfigPtr and EntityRecognizerVpcConfigPtrOutput values.
 // You can construct a concrete instance of `EntityRecognizerVpcConfigPtrInput` via:
 //
-//	        EntityRecognizerVpcConfigArgs{...}
+//          EntityRecognizerVpcConfigArgs{...}
 //
-//	or:
+//  or:
 //
-//	        nil
+//          nil
 type EntityRecognizerVpcConfigPtrInput interface {
 	pulumi.Input
 

@@ -18,87 +18,80 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
-//	  "Version": "2012-10-17",
-//	  "Statement": [
-//	    {
-//	      "Action": "sts:AssumeRole",
-//	      "Principal": {
-//	        "Service": [
-//	          "scheduler.redshift.amazonaws.com"
-//	        ]
-//	      },
-//	      "Effect": "Allow",
-//	      "Sid": ""
-//	    }
-//	  ]
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleRole, err := iam.NewRole(ctx, "exampleRole", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
+//   "Version": "2012-10-17",
+//   "Statement": [
+//     {
+//       "Action": "sts:AssumeRole",
+//       "Principal": {
+//         "Service": [
+//           "scheduler.redshift.amazonaws.com"
+//         ]
+//       },
+//       "Effect": "Allow",
+//       "Sid": ""
+//     }
+//   ]
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			examplePolicy, err := iam.NewPolicy(ctx, "examplePolicy", &iam.PolicyArgs{
-//				Policy: pulumi.Any(fmt.Sprintf(`{
-//	  "Version": "2012-10-17",
-//	  "Statement": [
-//	      {
-//	          "Sid": "VisualEditor0",
-//	          "Effect": "Allow",
-//	          "Action": [
-//	              "redshift:PauseCluster",
-//	              "redshift:ResumeCluster",
-//	              "redshift:ResizeCluster"
-//	          ],
-//	          "Resource": "*"
-//	      }
-//	  ]
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		examplePolicy, err := iam.NewPolicy(ctx, "examplePolicy", &iam.PolicyArgs{
+// 			Policy: pulumi.Any(fmt.Sprintf(`{
+//   "Version": "2012-10-17",
+//   "Statement": [
+//       {
+//           "Sid": "VisualEditor0",
+//           "Effect": "Allow",
+//           "Action": [
+//               "redshift:PauseCluster",
+//               "redshift:ResumeCluster",
+//               "redshift:ResizeCluster"
+//           ],
+//           "Resource": "*"
+//       }
+//   ]
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewRolePolicyAttachment(ctx, "exampleRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
-//				PolicyArn: examplePolicy.Arn,
-//				Role:      exampleRole.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = redshift.NewScheduledAction(ctx, "exampleScheduledAction", &redshift.ScheduledActionArgs{
-//				Schedule: pulumi.String("cron(00 23 * * ? *)"),
-//				IamRole:  exampleRole.Arn,
-//				TargetAction: &redshift.ScheduledActionTargetActionArgs{
-//					PauseCluster: &redshift.ScheduledActionTargetActionPauseClusterArgs{
-//						ClusterIdentifier: pulumi.String("tf-redshift001"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewRolePolicyAttachment(ctx, "exampleRolePolicyAttachment", &iam.RolePolicyAttachmentArgs{
+// 			PolicyArn: examplePolicy.Arn,
+// 			Role:      exampleRole.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = redshift.NewScheduledAction(ctx, "exampleScheduledAction", &redshift.ScheduledActionArgs{
+// 			Schedule: pulumi.String("cron(00 23 * * ? *)"),
+// 			IamRole:  exampleRole.Arn,
+// 			TargetAction: &redshift.ScheduledActionTargetActionArgs{
+// 				PauseCluster: &redshift.ScheduledActionTargetActionPauseClusterArgs{
+// 					ClusterIdentifier: pulumi.String("tf-redshift001"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Resize Cluster Action
 //
@@ -106,33 +99,30 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := redshift.NewScheduledAction(ctx, "example", &redshift.ScheduledActionArgs{
-//				Schedule: pulumi.String("cron(00 23 * * ? *)"),
-//				IamRole:  pulumi.Any(aws_iam_role.Example.Arn),
-//				TargetAction: &redshift.ScheduledActionTargetActionArgs{
-//					ResizeCluster: &redshift.ScheduledActionTargetActionResizeClusterArgs{
-//						ClusterIdentifier: pulumi.String("tf-redshift001"),
-//						ClusterType:       pulumi.String("multi-node"),
-//						NodeType:          pulumi.String("dc1.large"),
-//						NumberOfNodes:     pulumi.Int(2),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := redshift.NewScheduledAction(ctx, "example", &redshift.ScheduledActionArgs{
+// 			Schedule: pulumi.String("cron(00 23 * * ? *)"),
+// 			IamRole:  pulumi.Any(aws_iam_role.Example.Arn),
+// 			TargetAction: &redshift.ScheduledActionTargetActionArgs{
+// 				ResizeCluster: &redshift.ScheduledActionTargetActionResizeClusterArgs{
+// 					ClusterIdentifier: pulumi.String("tf-redshift001"),
+// 					ClusterType:       pulumi.String("multi-node"),
+// 					NodeType:          pulumi.String("dc1.large"),
+// 					NumberOfNodes:     pulumi.Int(2),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -140,9 +130,7 @@ import (
 // Redshift Scheduled Action can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:redshift/scheduledAction:ScheduledAction example tf-redshift-scheduled-action
-//
+//  $ pulumi import aws:redshift/scheduledAction:ScheduledAction example tf-redshift-scheduled-action
 // ```
 type ScheduledAction struct {
 	pulumi.CustomResourceState
@@ -309,7 +297,7 @@ func (i *ScheduledAction) ToScheduledActionOutputWithContext(ctx context.Context
 // ScheduledActionArrayInput is an input type that accepts ScheduledActionArray and ScheduledActionArrayOutput values.
 // You can construct a concrete instance of `ScheduledActionArrayInput` via:
 //
-//	ScheduledActionArray{ ScheduledActionArgs{...} }
+//          ScheduledActionArray{ ScheduledActionArgs{...} }
 type ScheduledActionArrayInput interface {
 	pulumi.Input
 
@@ -334,7 +322,7 @@ func (i ScheduledActionArray) ToScheduledActionArrayOutputWithContext(ctx contex
 // ScheduledActionMapInput is an input type that accepts ScheduledActionMap and ScheduledActionMapOutput values.
 // You can construct a concrete instance of `ScheduledActionMapInput` via:
 //
-//	ScheduledActionMap{ "key": ScheduledActionArgs{...} }
+//          ScheduledActionMap{ "key": ScheduledActionArgs{...} }
 type ScheduledActionMapInput interface {
 	pulumi.Input
 

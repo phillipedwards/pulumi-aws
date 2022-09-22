@@ -19,41 +19,36 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/devicefarm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/devicefarm"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := devicefarm.NewDevicePool(ctx, "example", &devicefarm.DevicePoolArgs{
-//				ProjectArn: pulumi.Any(aws_devicefarm_project.Example.Arn),
-//				Rules: devicefarm.DevicePoolRuleArray{
-//					&devicefarm.DevicePoolRuleArgs{
-//						Attribute: pulumi.String("OS_VERSION"),
-//						Operator:  pulumi.String("EQUALS"),
-//						Value:     pulumi.String("\"AVAILABLE\""),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := devicefarm.NewDevicePool(ctx, "example", &devicefarm.DevicePoolArgs{
+// 			ProjectArn: pulumi.Any(aws_devicefarm_project.Example.Arn),
+// 			Rules: devicefarm.DevicePoolRuleArray{
+// 				&devicefarm.DevicePoolRuleArgs{
+// 					Attribute: pulumi.String("OS_VERSION"),
+// 					Operator:  pulumi.String("EQUALS"),
+// 					Value:     pulumi.String("\"AVAILABLE\""),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
 //
-// # DeviceFarm Device Pools can be imported by their arn
+// DeviceFarm Device Pools can be imported by their arn
 //
 // ```sh
-//
-//	$ pulumi import aws:devicefarm/devicePool:DevicePool example arn:aws:devicefarm:us-west-2:123456789012:devicepool:4fa784c7-ccb4-4dbf-ba4f-02198320daa1/4fa784c7-ccb4-4dbf-ba4f-02198320daa1
-//
+//  $ pulumi import aws:devicefarm/devicePool:DevicePool example arn:aws:devicefarm:us-west-2:123456789012:devicepool:4fa784c7-ccb4-4dbf-ba4f-02198320daa1/4fa784c7-ccb4-4dbf-ba4f-02198320daa1
 // ```
 type DevicePool struct {
 	pulumi.CustomResourceState
@@ -212,7 +207,7 @@ func (i *DevicePool) ToDevicePoolOutputWithContext(ctx context.Context) DevicePo
 // DevicePoolArrayInput is an input type that accepts DevicePoolArray and DevicePoolArrayOutput values.
 // You can construct a concrete instance of `DevicePoolArrayInput` via:
 //
-//	DevicePoolArray{ DevicePoolArgs{...} }
+//          DevicePoolArray{ DevicePoolArgs{...} }
 type DevicePoolArrayInput interface {
 	pulumi.Input
 
@@ -237,7 +232,7 @@ func (i DevicePoolArray) ToDevicePoolArrayOutputWithContext(ctx context.Context)
 // DevicePoolMapInput is an input type that accepts DevicePoolMap and DevicePoolMapOutput values.
 // You can construct a concrete instance of `DevicePoolMapInput` via:
 //
-//	DevicePoolMap{ "key": DevicePoolArgs{...} }
+//          DevicePoolMap{ "key": DevicePoolArgs{...} }
 type DevicePoolMapInput interface {
 	pulumi.Input
 

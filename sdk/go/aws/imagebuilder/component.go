@@ -20,28 +20,25 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/imagebuilder"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/imagebuilder"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := imagebuilder.NewComponent(ctx, "example", &imagebuilder.ComponentArgs{
-//				Platform: pulumi.String("Linux"),
-//				Uri:      pulumi.String(fmt.Sprintf("s3://%v/%v", aws_s3_object.Example.Bucket, aws_s3_object.Example.Key)),
-//				Version:  pulumi.String("1.0.0"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := imagebuilder.NewComponent(ctx, "example", &imagebuilder.ComponentArgs{
+// 			Platform: pulumi.String("Linux"),
+// 			Uri:      pulumi.String(fmt.Sprintf("s3://%v/%v", aws_s3_object.Example.Bucket, aws_s3_object.Example.Key)),
+// 			Version:  pulumi.String("1.0.0"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -49,12 +46,10 @@ import (
 // `aws_imagebuilder_components` resources can be imported by using the Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:imagebuilder/component:Component example arn:aws:imagebuilder:us-east-1:123456789012:component/example/1.0.0/1
-//
+//  $ pulumi import aws:imagebuilder/component:Component example arn:aws:imagebuilder:us-east-1:123456789012:component/example/1.0.0/1
 // ```
 //
-//	Certain resource arguments, such as `uri`, cannot be read via the API and imported into the provider. The provider will display a difference for these arguments the first run after import if declared in the the provider configuration for an imported resource.
+//  Certain resource arguments, such as `uri`, cannot be read via the API and imported into the provider. The provider will display a difference for these arguments the first run after import if declared in the the provider configuration for an imported resource.
 type Component struct {
 	pulumi.CustomResourceState
 
@@ -273,7 +268,7 @@ func (i *Component) ToComponentOutputWithContext(ctx context.Context) ComponentO
 // ComponentArrayInput is an input type that accepts ComponentArray and ComponentArrayOutput values.
 // You can construct a concrete instance of `ComponentArrayInput` via:
 //
-//	ComponentArray{ ComponentArgs{...} }
+//          ComponentArray{ ComponentArgs{...} }
 type ComponentArrayInput interface {
 	pulumi.Input
 
@@ -298,7 +293,7 @@ func (i ComponentArray) ToComponentArrayOutputWithContext(ctx context.Context) C
 // ComponentMapInput is an input type that accepts ComponentMap and ComponentMapOutput values.
 // You can construct a concrete instance of `ComponentMapInput` via:
 //
-//	ComponentMap{ "key": ComponentArgs{...} }
+//          ComponentMap{ "key": ComponentArgs{...} }
 type ComponentMapInput interface {
 	pulumi.Input
 

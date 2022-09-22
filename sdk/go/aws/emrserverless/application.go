@@ -20,25 +20,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/emrserverless"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/emrserverless"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := emrserverless.NewApplication(ctx, "example", &emrserverless.ApplicationArgs{
-//				ReleaseLabel: pulumi.String("emr-6.6.0"),
-//				Type:         pulumi.String("hive"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := emrserverless.NewApplication(ctx, "example", &emrserverless.ApplicationArgs{
+// 			ReleaseLabel: pulumi.String("emr-6.6.0"),
+// 			Type:         pulumi.String("hive"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Initial Capacity Usage
 //
@@ -46,37 +43,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/emrserverless"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/emrserverless"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := emrserverless.NewApplication(ctx, "example", &emrserverless.ApplicationArgs{
-//				InitialCapacities: emrserverless.ApplicationInitialCapacityArray{
-//					&emrserverless.ApplicationInitialCapacityArgs{
-//						InitialCapacityConfig: &emrserverless.ApplicationInitialCapacityInitialCapacityConfigArgs{
-//							WorkerConfiguration: &emrserverless.ApplicationInitialCapacityInitialCapacityConfigWorkerConfigurationArgs{
-//								Cpu:    pulumi.String("2 vCPU"),
-//								Memory: pulumi.String("10 GB"),
-//							},
-//							WorkerCount: pulumi.Int(1),
-//						},
-//						InitialCapacityType: pulumi.String("HiveDriver"),
-//					},
-//				},
-//				ReleaseLabel: pulumi.String("emr-6.6.0"),
-//				Type:         pulumi.String("hive"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := emrserverless.NewApplication(ctx, "example", &emrserverless.ApplicationArgs{
+// 			InitialCapacities: emrserverless.ApplicationInitialCapacityArray{
+// 				&emrserverless.ApplicationInitialCapacityArgs{
+// 					InitialCapacityConfig: &emrserverless.ApplicationInitialCapacityInitialCapacityConfigArgs{
+// 						WorkerConfiguration: &emrserverless.ApplicationInitialCapacityInitialCapacityConfigWorkerConfigurationArgs{
+// 							Cpu:    pulumi.String("2 vCPU"),
+// 							Memory: pulumi.String("10 GB"),
+// 						},
+// 						WorkerCount: pulumi.Int(1),
+// 					},
+// 					InitialCapacityType: pulumi.String("HiveDriver"),
+// 				},
+// 			},
+// 			ReleaseLabel: pulumi.String("emr-6.6.0"),
+// 			Type:         pulumi.String("hive"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Maximum Capacity Usage
 //
@@ -84,29 +78,26 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/emrserverless"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/emrserverless"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := emrserverless.NewApplication(ctx, "example", &emrserverless.ApplicationArgs{
-//				MaximumCapacity: &emrserverless.ApplicationMaximumCapacityArgs{
-//					Cpu:    pulumi.String("2 vCPU"),
-//					Memory: pulumi.String("10 GB"),
-//				},
-//				ReleaseLabel: pulumi.String("emr-6.6.0"),
-//				Type:         pulumi.String("hive"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := emrserverless.NewApplication(ctx, "example", &emrserverless.ApplicationArgs{
+// 			MaximumCapacity: &emrserverless.ApplicationMaximumCapacityArgs{
+// 				Cpu:    pulumi.String("2 vCPU"),
+// 				Memory: pulumi.String("10 GB"),
+// 			},
+// 			ReleaseLabel: pulumi.String("emr-6.6.0"),
+// 			Type:         pulumi.String("hive"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -114,9 +105,7 @@ import (
 // EMR Severless applications can be imported using the `id`, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:emrserverless/application:Application example id
-//
+//  $ pulumi import aws:emrserverless/application:Application example id
 // ```
 type Application struct {
 	pulumi.CustomResourceState
@@ -299,7 +288,7 @@ func (i *Application) ToApplicationOutputWithContext(ctx context.Context) Applic
 // ApplicationArrayInput is an input type that accepts ApplicationArray and ApplicationArrayOutput values.
 // You can construct a concrete instance of `ApplicationArrayInput` via:
 //
-//	ApplicationArray{ ApplicationArgs{...} }
+//          ApplicationArray{ ApplicationArgs{...} }
 type ApplicationArrayInput interface {
 	pulumi.Input
 
@@ -324,7 +313,7 @@ func (i ApplicationArray) ToApplicationArrayOutputWithContext(ctx context.Contex
 // ApplicationMapInput is an input type that accepts ApplicationMap and ApplicationMapOutput values.
 // You can construct a concrete instance of `ApplicationMapInput` via:
 //
-//	ApplicationMap{ "key": ApplicationArgs{...} }
+//          ApplicationMap{ "key": ApplicationArgs{...} }
 type ApplicationMapInput interface {
 	pulumi.Input
 

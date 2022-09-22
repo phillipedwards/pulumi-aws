@@ -18,48 +18,43 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
-//				Path: pulumi.String("/"),
-//				AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
-//	    "Version": "2012-10-17",
-//	    "Statement": [
-//	        {
-//	            "Action": "sts:AssumeRole",
-//	            "Principal": {
-//	               "Service": "ec2.amazonaws.com"
-//	            },
-//	            "Effect": "Allow",
-//	            "Sid": ""
-//	        }
-//	    ]
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		role, err := iam.NewRole(ctx, "role", &iam.RoleArgs{
+// 			Path: pulumi.String("/"),
+// 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`{
+//     "Version": "2012-10-17",
+//     "Statement": [
+//         {
+//             "Action": "sts:AssumeRole",
+//             "Principal": {
+//                "Service": "ec2.amazonaws.com"
+//             },
+//             "Effect": "Allow",
+//             "Sid": ""
+//         }
+//     ]
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewInstanceProfile(ctx, "testProfile", &iam.InstanceProfileArgs{
-//				Role: role.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewInstanceProfile(ctx, "testProfile", &iam.InstanceProfileArgs{
+// 			Role: role.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -67,9 +62,7 @@ import (
 // Instance Profiles can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:iam/instanceProfile:InstanceProfile test_profile app-instance-profile-1
-//
+//  $ pulumi import aws:iam/instanceProfile:InstanceProfile test_profile app-instance-profile-1
 // ```
 type InstanceProfile struct {
 	pulumi.CustomResourceState
@@ -221,7 +214,7 @@ func (i *InstanceProfile) ToInstanceProfileOutputWithContext(ctx context.Context
 // InstanceProfileArrayInput is an input type that accepts InstanceProfileArray and InstanceProfileArrayOutput values.
 // You can construct a concrete instance of `InstanceProfileArrayInput` via:
 //
-//	InstanceProfileArray{ InstanceProfileArgs{...} }
+//          InstanceProfileArray{ InstanceProfileArgs{...} }
 type InstanceProfileArrayInput interface {
 	pulumi.Input
 
@@ -246,7 +239,7 @@ func (i InstanceProfileArray) ToInstanceProfileArrayOutputWithContext(ctx contex
 // InstanceProfileMapInput is an input type that accepts InstanceProfileMap and InstanceProfileMapOutput values.
 // You can construct a concrete instance of `InstanceProfileMapInput` via:
 //
-//	InstanceProfileMap{ "key": InstanceProfileArgs{...} }
+//          InstanceProfileMap{ "key": InstanceProfileArgs{...} }
 type InstanceProfileMapInput interface {
 	pulumi.Input
 

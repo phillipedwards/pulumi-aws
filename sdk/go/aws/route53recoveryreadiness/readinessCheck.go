@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/route53recoveryreadiness"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/route53recoveryreadiness"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := route53recoveryreadiness.NewReadinessCheck(ctx, "example", &route53recoveryreadiness.ReadinessCheckArgs{
-//				ReadinessCheckName: pulumi.Any(my_cw_alarm_check),
-//				ResourceSetName:    pulumi.Any(my_cw_alarm_set),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := route53recoveryreadiness.NewReadinessCheck(ctx, "example", &route53recoveryreadiness.ReadinessCheckArgs{
+// 			ReadinessCheckName: pulumi.Any(my_cw_alarm_check),
+// 			ResourceSetName:    pulumi.Any(my_cw_alarm_set),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // Route53 Recovery Readiness readiness checks can be imported via the readiness check name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:route53recoveryreadiness/readinessCheck:ReadinessCheck my-cw-alarm-check
-//
+//  $ pulumi import aws:route53recoveryreadiness/readinessCheck:ReadinessCheck my-cw-alarm-check
 // ```
 type ReadinessCheck struct {
 	pulumi.CustomResourceState
@@ -173,7 +168,7 @@ func (i *ReadinessCheck) ToReadinessCheckOutputWithContext(ctx context.Context) 
 // ReadinessCheckArrayInput is an input type that accepts ReadinessCheckArray and ReadinessCheckArrayOutput values.
 // You can construct a concrete instance of `ReadinessCheckArrayInput` via:
 //
-//	ReadinessCheckArray{ ReadinessCheckArgs{...} }
+//          ReadinessCheckArray{ ReadinessCheckArgs{...} }
 type ReadinessCheckArrayInput interface {
 	pulumi.Input
 
@@ -198,7 +193,7 @@ func (i ReadinessCheckArray) ToReadinessCheckArrayOutputWithContext(ctx context.
 // ReadinessCheckMapInput is an input type that accepts ReadinessCheckMap and ReadinessCheckMapOutput values.
 // You can construct a concrete instance of `ReadinessCheckMapInput` via:
 //
-//	ReadinessCheckMap{ "key": ReadinessCheckArgs{...} }
+//          ReadinessCheckMap{ "key": ReadinessCheckArgs{...} }
 type ReadinessCheckMapInput interface {
 	pulumi.Input
 

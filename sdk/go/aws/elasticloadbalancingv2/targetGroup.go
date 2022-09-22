@@ -21,33 +21,30 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/lb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("10.0.0.0/16"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = lb.NewTargetGroup(ctx, "test", &lb.TargetGroupArgs{
-//				Port:     pulumi.Int(80),
-//				Protocol: pulumi.String("HTTP"),
-//				VpcId:    main.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("10.0.0.0/16"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = lb.NewTargetGroup(ctx, "test", &lb.TargetGroupArgs{
+// 			Port:     pulumi.Int(80),
+// 			Protocol: pulumi.String("HTTP"),
+// 			VpcId:    main.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### IP Target Group
 //
@@ -55,34 +52,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/lb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
-//				CidrBlock: pulumi.String("10.0.0.0/16"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = lb.NewTargetGroup(ctx, "ip-example", &lb.TargetGroupArgs{
-//				Port:       pulumi.Int(80),
-//				Protocol:   pulumi.String("HTTP"),
-//				TargetType: pulumi.String("ip"),
-//				VpcId:      main.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		main, err := ec2.NewVpc(ctx, "main", &ec2.VpcArgs{
+// 			CidrBlock: pulumi.String("10.0.0.0/16"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = lb.NewTargetGroup(ctx, "ip-example", &lb.TargetGroupArgs{
+// 			Port:       pulumi.Int(80),
+// 			Protocol:   pulumi.String("HTTP"),
+// 			TargetType: pulumi.String("ip"),
+// 			VpcId:      main.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Lambda Target Group
 //
@@ -90,24 +84,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/lb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := lb.NewTargetGroup(ctx, "lambda-example", &lb.TargetGroupArgs{
-//				TargetType: pulumi.String("lambda"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := lb.NewTargetGroup(ctx, "lambda-example", &lb.TargetGroupArgs{
+// 			TargetType: pulumi.String("lambda"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### ALB Target Group
 //
@@ -115,27 +106,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/lb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/lb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := lb.NewTargetGroup(ctx, "alb-example", &lb.TargetGroupArgs{
-//				TargetType: pulumi.String("alb"),
-//				Port:       pulumi.Int(80),
-//				Protocol:   pulumi.String("TCP"),
-//				VpcId:      pulumi.Any(aws_vpc.Main.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := lb.NewTargetGroup(ctx, "alb-example", &lb.TargetGroupArgs{
+// 			TargetType: pulumi.String("alb"),
+// 			Port:       pulumi.Int(80),
+// 			Protocol:   pulumi.String("TCP"),
+// 			VpcId:      pulumi.Any(aws_vpc.Main.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -143,9 +131,7 @@ import (
 // Target Groups can be imported using their ARN, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:elasticloadbalancingv2/targetGroup:TargetGroup app_front_end arn:aws:elasticloadbalancing:us-west-2:187416307283:targetgroup/app-front-end/20cfe21448b66314
-//
+//  $ pulumi import aws:elasticloadbalancingv2/targetGroup:TargetGroup app_front_end arn:aws:elasticloadbalancing:us-west-2:187416307283:targetgroup/app-front-end/20cfe21448b66314
 // ```
 //
 // Deprecated: aws.elasticloadbalancingv2.TargetGroup has been deprecated in favor of aws.lb.TargetGroup
@@ -423,7 +409,7 @@ func (i *TargetGroup) ToTargetGroupOutputWithContext(ctx context.Context) Target
 // TargetGroupArrayInput is an input type that accepts TargetGroupArray and TargetGroupArrayOutput values.
 // You can construct a concrete instance of `TargetGroupArrayInput` via:
 //
-//	TargetGroupArray{ TargetGroupArgs{...} }
+//          TargetGroupArray{ TargetGroupArgs{...} }
 type TargetGroupArrayInput interface {
 	pulumi.Input
 
@@ -448,7 +434,7 @@ func (i TargetGroupArray) ToTargetGroupArrayOutputWithContext(ctx context.Contex
 // TargetGroupMapInput is an input type that accepts TargetGroupMap and TargetGroupMapOutput values.
 // You can construct a concrete instance of `TargetGroupMapInput` via:
 //
-//	TargetGroupMap{ "key": TargetGroupArgs{...} }
+//          TargetGroupMap{ "key": TargetGroupArgs{...} }
 type TargetGroupMapInput interface {
 	pulumi.Input
 

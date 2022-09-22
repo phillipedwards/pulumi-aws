@@ -20,25 +20,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.LookupSecurityProfile(ctx, &connect.LookupSecurityProfileArgs{
-//				InstanceId: "aaaaaaaa-bbbb-cccc-dddd-111111111111",
-//				Name:       pulumi.StringRef("Example"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.LookupSecurityProfile(ctx, &connect.LookupSecurityProfileArgs{
+// 			InstanceId: "aaaaaaaa-bbbb-cccc-dddd-111111111111",
+// 			Name:       pulumi.StringRef("Example"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // By `securityProfileId`
@@ -47,25 +44,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.LookupSecurityProfile(ctx, &connect.LookupSecurityProfileArgs{
-//				InstanceId:        "aaaaaaaa-bbbb-cccc-dddd-111111111111",
-//				SecurityProfileId: pulumi.StringRef("cccccccc-bbbb-cccc-dddd-111111111111"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.LookupSecurityProfile(ctx, &connect.LookupSecurityProfileArgs{
+// 			InstanceId:        "aaaaaaaa-bbbb-cccc-dddd-111111111111",
+// 			SecurityProfileId: pulumi.StringRef("cccccccc-bbbb-cccc-dddd-111111111111"),
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 func LookupSecurityProfile(ctx *pulumi.Context, args *LookupSecurityProfileArgs, opts ...pulumi.InvokeOption) (*LookupSecurityProfileResult, error) {
 	var rv LookupSecurityProfileResult

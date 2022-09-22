@@ -20,30 +20,27 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sagemaker"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sagemaker"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sagemaker.NewDeviceFleet(ctx, "example", &sagemaker.DeviceFleetArgs{
-//				DeviceFleetName: pulumi.String("example"),
-//				RoleArn:         pulumi.Any(aws_iam_role.Test.Arn),
-//				OutputConfig: &sagemaker.DeviceFleetOutputConfigArgs{
-//					S3OutputLocation: pulumi.String(fmt.Sprintf("s3://%v/prefix/", aws_s3_bucket.Example.Bucket)),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := sagemaker.NewDeviceFleet(ctx, "example", &sagemaker.DeviceFleetArgs{
+// 			DeviceFleetName: pulumi.String("example"),
+// 			RoleArn:         pulumi.Any(aws_iam_role.Test.Arn),
+// 			OutputConfig: &sagemaker.DeviceFleetOutputConfigArgs{
+// 				S3OutputLocation: pulumi.String(fmt.Sprintf("s3://%v/prefix/", aws_s3_bucket.Example.Bucket)),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -51,9 +48,7 @@ import (
 // SageMaker Device Fleets can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:sagemaker/deviceFleet:DeviceFleet example my-fleet
-//
+//  $ pulumi import aws:sagemaker/deviceFleet:DeviceFleet example my-fleet
 // ```
 type DeviceFleet struct {
 	pulumi.CustomResourceState
@@ -215,7 +210,7 @@ func (i *DeviceFleet) ToDeviceFleetOutputWithContext(ctx context.Context) Device
 // DeviceFleetArrayInput is an input type that accepts DeviceFleetArray and DeviceFleetArrayOutput values.
 // You can construct a concrete instance of `DeviceFleetArrayInput` via:
 //
-//	DeviceFleetArray{ DeviceFleetArgs{...} }
+//          DeviceFleetArray{ DeviceFleetArgs{...} }
 type DeviceFleetArrayInput interface {
 	pulumi.Input
 
@@ -240,7 +235,7 @@ func (i DeviceFleetArray) ToDeviceFleetArrayOutputWithContext(ctx context.Contex
 // DeviceFleetMapInput is an input type that accepts DeviceFleetMap and DeviceFleetMapOutput values.
 // You can construct a concrete instance of `DeviceFleetMapInput` via:
 //
-//	DeviceFleetMap{ "key": DeviceFleetArgs{...} }
+//          DeviceFleetMap{ "key": DeviceFleetArgs{...} }
 type DeviceFleetMapInput interface {
 	pulumi.Input
 

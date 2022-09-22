@@ -19,25 +19,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ssm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ssm"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ssm.NewServiceSetting(ctx, "testSetting", &ssm.ServiceSettingArgs{
-//				SettingId:    pulumi.String("arn:aws:ssm:us-east-1:123456789012:servicesetting/ssm/parameter-store/high-throughput-enabled"),
-//				SettingValue: pulumi.String("true"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ssm.NewServiceSetting(ctx, "testSetting", &ssm.ServiceSettingArgs{
+// 			SettingId:    pulumi.String("arn:aws:ssm:us-east-1:123456789012:servicesetting/ssm/parameter-store/high-throughput-enabled"),
+// 			SettingValue: pulumi.String("true"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // AWS SSM Service Setting can be imported using the `setting_id`, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:ssm/serviceSetting:ServiceSetting example arn:aws:ssm:us-east-1:123456789012:servicesetting/ssm/parameter-store/high-throughput-enabled
-//
+//  $ pulumi import aws:ssm/serviceSetting:ServiceSetting example arn:aws:ssm:us-east-1:123456789012:servicesetting/ssm/parameter-store/high-throughput-enabled
 // ```
 type ServiceSetting struct {
 	pulumi.CustomResourceState
@@ -163,7 +158,7 @@ func (i *ServiceSetting) ToServiceSettingOutputWithContext(ctx context.Context) 
 // ServiceSettingArrayInput is an input type that accepts ServiceSettingArray and ServiceSettingArrayOutput values.
 // You can construct a concrete instance of `ServiceSettingArrayInput` via:
 //
-//	ServiceSettingArray{ ServiceSettingArgs{...} }
+//          ServiceSettingArray{ ServiceSettingArgs{...} }
 type ServiceSettingArrayInput interface {
 	pulumi.Input
 
@@ -188,7 +183,7 @@ func (i ServiceSettingArray) ToServiceSettingArrayOutputWithContext(ctx context.
 // ServiceSettingMapInput is an input type that accepts ServiceSettingMap and ServiceSettingMapOutput values.
 // You can construct a concrete instance of `ServiceSettingMapInput` via:
 //
-//	ServiceSettingMap{ "key": ServiceSettingArgs{...} }
+//          ServiceSettingMap{ "key": ServiceSettingArgs{...} }
 type ServiceSettingMapInput interface {
 	pulumi.Input
 

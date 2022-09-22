@@ -19,54 +19,49 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ssm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ssm"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
-//				AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`  {
-//	    "Version": "2012-10-17",
-//	    "Statement": {
-//	      "Effect": "Allow",
-//	      "Principal": {"Service": "ssm.amazonaws.com"},
-//	      "Action": "sts:AssumeRole"
-//	    }
-//	  }
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+// 			AssumeRolePolicy: pulumi.Any(fmt.Sprintf(`  {
+//     "Version": "2012-10-17",
+//     "Statement": {
+//       "Effect": "Allow",
+//       "Principal": {"Service": "ssm.amazonaws.com"},
+//       "Action": "sts:AssumeRole"
+//     }
+//   }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			testAttach, err := iam.NewRolePolicyAttachment(ctx, "testAttach", &iam.RolePolicyAttachmentArgs{
-//				Role:      testRole.Name,
-//				PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ssm.NewActivation(ctx, "foo", &ssm.ActivationArgs{
-//				Description:       pulumi.String("Test"),
-//				IamRole:           testRole.ID(),
-//				RegistrationLimit: pulumi.Int(5),
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				testAttach,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		testAttach, err := iam.NewRolePolicyAttachment(ctx, "testAttach", &iam.RolePolicyAttachmentArgs{
+// 			Role:      testRole.Name,
+// 			PolicyArn: pulumi.String("arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ssm.NewActivation(ctx, "foo", &ssm.ActivationArgs{
+// 			Description:       pulumi.String("Test"),
+// 			IamRole:           testRole.ID(),
+// 			RegistrationLimit: pulumi.Int(5),
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			testAttach,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -74,9 +69,7 @@ import (
 // AWS SSM Activation can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ssm/activation:Activation example e488f2f6-e686-4afb-8a04-ef6dfEXAMPLE
-//
+//  $ pulumi import aws:ssm/activation:Activation example e488f2f6-e686-4afb-8a04-ef6dfEXAMPLE
 // ```
 type Activation struct {
 	pulumi.CustomResourceState
@@ -241,7 +234,7 @@ func (i *Activation) ToActivationOutputWithContext(ctx context.Context) Activati
 // ActivationArrayInput is an input type that accepts ActivationArray and ActivationArrayOutput values.
 // You can construct a concrete instance of `ActivationArrayInput` via:
 //
-//	ActivationArray{ ActivationArgs{...} }
+//          ActivationArray{ ActivationArgs{...} }
 type ActivationArrayInput interface {
 	pulumi.Input
 
@@ -266,7 +259,7 @@ func (i ActivationArray) ToActivationArrayOutputWithContext(ctx context.Context)
 // ActivationMapInput is an input type that accepts ActivationMap and ActivationMapOutput values.
 // You can construct a concrete instance of `ActivationMapInput` via:
 //
-//	ActivationMap{ "key": ActivationArgs{...} }
+//          ActivationMap{ "key": ActivationArgs{...} }
 type ActivationMapInput interface {
 	pulumi.Input
 

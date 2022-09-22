@@ -21,31 +21,28 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/datasync"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/datasync"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := datasync.NewEfsLocation(ctx, "example", &datasync.EfsLocationArgs{
-//				EfsFileSystemArn: pulumi.Any(aws_efs_mount_target.Example.File_system_arn),
-//				Ec2Config: &datasync.EfsLocationEc2ConfigArgs{
-//					SecurityGroupArns: pulumi.StringArray{
-//						pulumi.Any(aws_security_group.Example.Arn),
-//					},
-//					SubnetArn: pulumi.Any(aws_subnet.Example.Arn),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := datasync.NewEfsLocation(ctx, "example", &datasync.EfsLocationArgs{
+// 			EfsFileSystemArn: pulumi.Any(aws_efs_mount_target.Example.File_system_arn),
+// 			Ec2Config: &datasync.EfsLocationEc2ConfigArgs{
+// 				SecurityGroupArns: pulumi.StringArray{
+// 					pulumi.Any(aws_security_group.Example.Arn),
+// 				},
+// 				SubnetArn: pulumi.Any(aws_subnet.Example.Arn),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -53,9 +50,7 @@ import (
 // `aws_datasync_location_efs` can be imported by using the DataSync Task Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:datasync/efsLocation:EfsLocation example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
-//
+//  $ pulumi import aws:datasync/efsLocation:EfsLocation example arn:aws:datasync:us-east-1:123456789012:location/loc-12345678901234567
 // ```
 type EfsLocation struct {
 	pulumi.CustomResourceState
@@ -224,7 +219,7 @@ func (i *EfsLocation) ToEfsLocationOutputWithContext(ctx context.Context) EfsLoc
 // EfsLocationArrayInput is an input type that accepts EfsLocationArray and EfsLocationArrayOutput values.
 // You can construct a concrete instance of `EfsLocationArrayInput` via:
 //
-//	EfsLocationArray{ EfsLocationArgs{...} }
+//          EfsLocationArray{ EfsLocationArgs{...} }
 type EfsLocationArrayInput interface {
 	pulumi.Input
 
@@ -249,7 +244,7 @@ func (i EfsLocationArray) ToEfsLocationArrayOutputWithContext(ctx context.Contex
 // EfsLocationMapInput is an input type that accepts EfsLocationMap and EfsLocationMapOutput values.
 // You can construct a concrete instance of `EfsLocationMapInput` via:
 //
-//	EfsLocationMap{ "key": EfsLocationArgs{...} }
+//          EfsLocationMap{ "key": EfsLocationArgs{...} }
 type EfsLocationMapInput interface {
 	pulumi.Input
 

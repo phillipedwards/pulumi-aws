@@ -21,59 +21,54 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ecr"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ecr"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			foo, err := ecr.NewRepository(ctx, "foo", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ecr.NewRepositoryPolicy(ctx, "foopolicy", &ecr.RepositoryPolicyArgs{
-//				Repository: foo.Name,
-//				Policy: pulumi.Any(fmt.Sprintf(`{
-//	    "Version": "2008-10-17",
-//	    "Statement": [
-//	        {
-//	            "Sid": "new policy",
-//	            "Effect": "Allow",
-//	            "Principal": "*",
-//	            "Action": [
-//	                "ecr:GetDownloadUrlForLayer",
-//	                "ecr:BatchGetImage",
-//	                "ecr:BatchCheckLayerAvailability",
-//	                "ecr:PutImage",
-//	                "ecr:InitiateLayerUpload",
-//	                "ecr:UploadLayerPart",
-//	                "ecr:CompleteLayerUpload",
-//	                "ecr:DescribeRepositories",
-//	                "ecr:GetRepositoryPolicy",
-//	                "ecr:ListImages",
-//	                "ecr:DeleteRepository",
-//	                "ecr:BatchDeleteImage",
-//	                "ecr:SetRepositoryPolicy",
-//	                "ecr:DeleteRepositoryPolicy"
-//	            ]
-//	        }
-//	    ]
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		foo, err := ecr.NewRepository(ctx, "foo", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ecr.NewRepositoryPolicy(ctx, "foopolicy", &ecr.RepositoryPolicyArgs{
+// 			Repository: foo.Name,
+// 			Policy: pulumi.Any(fmt.Sprintf(`{
+//     "Version": "2008-10-17",
+//     "Statement": [
+//         {
+//             "Sid": "new policy",
+//             "Effect": "Allow",
+//             "Principal": "*",
+//             "Action": [
+//                 "ecr:GetDownloadUrlForLayer",
+//                 "ecr:BatchGetImage",
+//                 "ecr:BatchCheckLayerAvailability",
+//                 "ecr:PutImage",
+//                 "ecr:InitiateLayerUpload",
+//                 "ecr:UploadLayerPart",
+//                 "ecr:CompleteLayerUpload",
+//                 "ecr:DescribeRepositories",
+//                 "ecr:GetRepositoryPolicy",
+//                 "ecr:ListImages",
+//                 "ecr:DeleteRepository",
+//                 "ecr:BatchDeleteImage",
+//                 "ecr:SetRepositoryPolicy",
+//                 "ecr:DeleteRepositoryPolicy"
+//             ]
+//         }
+//     ]
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -81,9 +76,7 @@ import (
 // ECR Repository Policy can be imported using the repository name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ecr/repositoryPolicy:RepositoryPolicy example example
-//
+//  $ pulumi import aws:ecr/repositoryPolicy:RepositoryPolicy example example
 // ```
 type RepositoryPolicy struct {
 	pulumi.CustomResourceState
@@ -193,7 +186,7 @@ func (i *RepositoryPolicy) ToRepositoryPolicyOutputWithContext(ctx context.Conte
 // RepositoryPolicyArrayInput is an input type that accepts RepositoryPolicyArray and RepositoryPolicyArrayOutput values.
 // You can construct a concrete instance of `RepositoryPolicyArrayInput` via:
 //
-//	RepositoryPolicyArray{ RepositoryPolicyArgs{...} }
+//          RepositoryPolicyArray{ RepositoryPolicyArgs{...} }
 type RepositoryPolicyArrayInput interface {
 	pulumi.Input
 
@@ -218,7 +211,7 @@ func (i RepositoryPolicyArray) ToRepositoryPolicyArrayOutputWithContext(ctx cont
 // RepositoryPolicyMapInput is an input type that accepts RepositoryPolicyMap and RepositoryPolicyMapOutput values.
 // You can construct a concrete instance of `RepositoryPolicyMapInput` via:
 //
-//	RepositoryPolicyMap{ "key": RepositoryPolicyArgs{...} }
+//          RepositoryPolicyMap{ "key": RepositoryPolicyArgs{...} }
 type RepositoryPolicyMapInput interface {
 	pulumi.Input
 

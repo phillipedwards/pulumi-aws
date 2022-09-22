@@ -18,27 +18,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := ec2.NewVpnGateway(ctx, "vpnGw", &ec2.VpnGatewayArgs{
-//				VpcId: pulumi.Any(aws_vpc.Main.Id),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("main"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := ec2.NewVpnGateway(ctx, "vpnGw", &ec2.VpnGatewayArgs{
+// 			VpcId: pulumi.Any(aws_vpc.Main.Id),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("main"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // VPN Gateways can be imported using the `vpn gateway id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/vpnGateway:VpnGateway testvpngateway vgw-9a4cacf3
-//
+//  $ pulumi import aws:ec2/vpnGateway:VpnGateway testvpngateway vgw-9a4cacf3
 // ```
 type VpnGateway struct {
 	pulumi.CustomResourceState
@@ -178,7 +173,7 @@ func (i *VpnGateway) ToVpnGatewayOutputWithContext(ctx context.Context) VpnGatew
 // VpnGatewayArrayInput is an input type that accepts VpnGatewayArray and VpnGatewayArrayOutput values.
 // You can construct a concrete instance of `VpnGatewayArrayInput` via:
 //
-//	VpnGatewayArray{ VpnGatewayArgs{...} }
+//          VpnGatewayArray{ VpnGatewayArgs{...} }
 type VpnGatewayArrayInput interface {
 	pulumi.Input
 
@@ -203,7 +198,7 @@ func (i VpnGatewayArray) ToVpnGatewayArrayOutputWithContext(ctx context.Context)
 // VpnGatewayMapInput is an input type that accepts VpnGatewayMap and VpnGatewayMapOutput values.
 // You can construct a concrete instance of `VpnGatewayMapInput` via:
 //
-//	VpnGatewayMap{ "key": VpnGatewayArgs{...} }
+//          VpnGatewayMap{ "key": VpnGatewayArgs{...} }
 type VpnGatewayMapInput interface {
 	pulumi.Input
 

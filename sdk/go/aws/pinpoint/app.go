@@ -18,30 +18,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/pinpoint"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := pinpoint.NewApp(ctx, "example", &pinpoint.AppArgs{
-//				Limits: &pinpoint.AppLimitsArgs{
-//					MaximumDuration: pulumi.Int(600),
-//				},
-//				QuietTime: &pinpoint.AppQuietTimeArgs{
-//					End:   pulumi.String("06:00"),
-//					Start: pulumi.String("00:00"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := pinpoint.NewApp(ctx, "example", &pinpoint.AppArgs{
+// 			Limits: &pinpoint.AppLimitsArgs{
+// 				MaximumDuration: pulumi.Int(600),
+// 			},
+// 			QuietTime: &pinpoint.AppQuietTimeArgs{
+// 				End:   pulumi.String("06:00"),
+// 				Start: pulumi.String("00:00"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -49,9 +46,7 @@ import (
 // Pinpoint App can be imported using the `application-id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:pinpoint/app:App name application-id
-//
+//  $ pulumi import aws:pinpoint/app:App name application-id
 // ```
 type App struct {
 	pulumi.CustomResourceState
@@ -207,7 +202,7 @@ func (i *App) ToAppOutputWithContext(ctx context.Context) AppOutput {
 // AppArrayInput is an input type that accepts AppArray and AppArrayOutput values.
 // You can construct a concrete instance of `AppArrayInput` via:
 //
-//	AppArray{ AppArgs{...} }
+//          AppArray{ AppArgs{...} }
 type AppArrayInput interface {
 	pulumi.Input
 
@@ -232,7 +227,7 @@ func (i AppArray) ToAppArrayOutputWithContext(ctx context.Context) AppArrayOutpu
 // AppMapInput is an input type that accepts AppMap and AppMapOutput values.
 // You can construct a concrete instance of `AppMapInput` via:
 //
-//	AppMap{ "key": AppArgs{...} }
+//          AppMap{ "key": AppArgs{...} }
 type AppMapInput interface {
 	pulumi.Input
 

@@ -20,24 +20,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/fsx"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/fsx"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := fsx.NewOpenZfsVolume(ctx, "test", &fsx.OpenZfsVolumeArgs{
-//				ParentVolumeId: pulumi.Any(aws_fsx_openzfs_file_system.Test.Root_volume_id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := fsx.NewOpenZfsVolume(ctx, "test", &fsx.OpenZfsVolumeArgs{
+// 			ParentVolumeId: pulumi.Any(aws_fsx_openzfs_file_system.Test.Root_volume_id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -45,9 +42,7 @@ import (
 // FSx Volumes can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:fsx/openZfsVolume:OpenZfsVolume example fsvol-543ab12b1ca672f33
-//
+//  $ pulumi import aws:fsx/openZfsVolume:OpenZfsVolume example fsvol-543ab12b1ca672f33
 // ```
 type OpenZfsVolume struct {
 	pulumi.CustomResourceState
@@ -265,7 +260,7 @@ func (i *OpenZfsVolume) ToOpenZfsVolumeOutputWithContext(ctx context.Context) Op
 // OpenZfsVolumeArrayInput is an input type that accepts OpenZfsVolumeArray and OpenZfsVolumeArrayOutput values.
 // You can construct a concrete instance of `OpenZfsVolumeArrayInput` via:
 //
-//	OpenZfsVolumeArray{ OpenZfsVolumeArgs{...} }
+//          OpenZfsVolumeArray{ OpenZfsVolumeArgs{...} }
 type OpenZfsVolumeArrayInput interface {
 	pulumi.Input
 
@@ -290,7 +285,7 @@ func (i OpenZfsVolumeArray) ToOpenZfsVolumeArrayOutputWithContext(ctx context.Co
 // OpenZfsVolumeMapInput is an input type that accepts OpenZfsVolumeMap and OpenZfsVolumeMapOutput values.
 // You can construct a concrete instance of `OpenZfsVolumeMapInput` via:
 //
-//	OpenZfsVolumeMap{ "key": OpenZfsVolumeArgs{...} }
+//          OpenZfsVolumeMap{ "key": OpenZfsVolumeArgs{...} }
 type OpenZfsVolumeMapInput interface {
 	pulumi.Input
 

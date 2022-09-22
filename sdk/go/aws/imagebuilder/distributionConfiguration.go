@@ -19,44 +19,41 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/imagebuilder"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/imagebuilder"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := imagebuilder.NewDistributionConfiguration(ctx, "example", &imagebuilder.DistributionConfigurationArgs{
-//				Distributions: imagebuilder.DistributionConfigurationDistributionArray{
-//					&imagebuilder.DistributionConfigurationDistributionArgs{
-//						AmiDistributionConfiguration: &imagebuilder.DistributionConfigurationDistributionAmiDistributionConfigurationArgs{
-//							AmiTags: pulumi.StringMap{
-//								"CostCenter": pulumi.String("IT"),
-//							},
-//							LaunchPermission: &imagebuilder.DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs{
-//								UserIds: pulumi.StringArray{
-//									pulumi.String("123456789012"),
-//								},
-//							},
-//							Name: pulumi.String("example-{{ imagebuilder:buildDate }}"),
-//						},
-//						LaunchTemplateConfigurations: imagebuilder.DistributionConfigurationDistributionLaunchTemplateConfigurationArray{
-//							&imagebuilder.DistributionConfigurationDistributionLaunchTemplateConfigurationArgs{
-//								LaunchTemplateId: pulumi.String("lt-0aaa1bcde2ff3456"),
-//							},
-//						},
-//						Region: pulumi.String("us-east-1"),
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := imagebuilder.NewDistributionConfiguration(ctx, "example", &imagebuilder.DistributionConfigurationArgs{
+// 			Distributions: imagebuilder.DistributionConfigurationDistributionArray{
+// 				&imagebuilder.DistributionConfigurationDistributionArgs{
+// 					AmiDistributionConfiguration: &imagebuilder.DistributionConfigurationDistributionAmiDistributionConfigurationArgs{
+// 						AmiTags: pulumi.StringMap{
+// 							"CostCenter": pulumi.String("IT"),
+// 						},
+// 						LaunchPermission: &imagebuilder.DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs{
+// 							UserIds: pulumi.StringArray{
+// 								pulumi.String("123456789012"),
+// 							},
+// 						},
+// 						Name: pulumi.String("example-{{ imagebuilder:buildDate }}"),
+// 					},
+// 					LaunchTemplateConfigurations: imagebuilder.DistributionConfigurationDistributionLaunchTemplateConfigurationArray{
+// 						&imagebuilder.DistributionConfigurationDistributionLaunchTemplateConfigurationArgs{
+// 							LaunchTemplateId: pulumi.String("lt-0aaa1bcde2ff3456"),
+// 						},
+// 					},
+// 					Region: pulumi.String("us-east-1"),
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -64,9 +61,7 @@ import (
 // `aws_imagebuilder_distribution_configurations` resources can be imported by using the Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:imagebuilder/distributionConfiguration:DistributionConfiguration example arn:aws:imagebuilder:us-east-1:123456789012:distribution-configuration/example
-//
+//  $ pulumi import aws:imagebuilder/distributionConfiguration:DistributionConfiguration example arn:aws:imagebuilder:us-east-1:123456789012:distribution-configuration/example
 // ```
 type DistributionConfiguration struct {
 	pulumi.CustomResourceState
@@ -211,7 +206,7 @@ func (i *DistributionConfiguration) ToDistributionConfigurationOutputWithContext
 // DistributionConfigurationArrayInput is an input type that accepts DistributionConfigurationArray and DistributionConfigurationArrayOutput values.
 // You can construct a concrete instance of `DistributionConfigurationArrayInput` via:
 //
-//	DistributionConfigurationArray{ DistributionConfigurationArgs{...} }
+//          DistributionConfigurationArray{ DistributionConfigurationArgs{...} }
 type DistributionConfigurationArrayInput interface {
 	pulumi.Input
 
@@ -236,7 +231,7 @@ func (i DistributionConfigurationArray) ToDistributionConfigurationArrayOutputWi
 // DistributionConfigurationMapInput is an input type that accepts DistributionConfigurationMap and DistributionConfigurationMapOutput values.
 // You can construct a concrete instance of `DistributionConfigurationMapInput` via:
 //
-//	DistributionConfigurationMap{ "key": DistributionConfigurationArgs{...} }
+//          DistributionConfigurationMap{ "key": DistributionConfigurationArgs{...} }
 type DistributionConfigurationMapInput interface {
 	pulumi.Input
 

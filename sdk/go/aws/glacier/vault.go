@@ -20,58 +20,53 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glacier"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/sns"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glacier"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/sns"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			awsSnsTopic, err := sns.NewTopic(ctx, "awsSnsTopic", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = glacier.NewVault(ctx, "myArchive", &glacier.VaultArgs{
-//				Notification: &glacier.VaultNotificationArgs{
-//					SnsTopic: awsSnsTopic.Arn,
-//					Events: pulumi.StringArray{
-//						pulumi.String("ArchiveRetrievalCompleted"),
-//						pulumi.String("InventoryRetrievalCompleted"),
-//					},
-//				},
-//				AccessPolicy: pulumi.String(fmt.Sprintf(`{
-//	    "Version":"2012-10-17",
-//	    "Statement":[
-//	       {
-//	          "Sid": "add-read-only-perm",
-//	          "Principal": "*",
-//	          "Effect": "Allow",
-//	          "Action": [
-//	             "glacier:InitiateJob",
-//	             "glacier:GetJobOutput"
-//	          ],
-//	          "Resource": "arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive"
-//	       }
-//	    ]
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		awsSnsTopic, err := sns.NewTopic(ctx, "awsSnsTopic", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = glacier.NewVault(ctx, "myArchive", &glacier.VaultArgs{
+// 			Notification: &glacier.VaultNotificationArgs{
+// 				SnsTopic: awsSnsTopic.Arn,
+// 				Events: pulumi.StringArray{
+// 					pulumi.String("ArchiveRetrievalCompleted"),
+// 					pulumi.String("InventoryRetrievalCompleted"),
+// 				},
+// 			},
+// 			AccessPolicy: pulumi.String(fmt.Sprintf(`{
+//     "Version":"2012-10-17",
+//     "Statement":[
+//        {
+//           "Sid": "add-read-only-perm",
+//           "Principal": "*",
+//           "Effect": "Allow",
+//           "Action": [
+//              "glacier:InitiateJob",
+//              "glacier:GetJobOutput"
+//           ],
+//           "Resource": "arn:aws:glacier:eu-west-1:432981146916:vaults/MyArchive"
+//        }
+//     ]
+// }
 // `)),
-//
-//				Tags: pulumi.StringMap{
-//					"Test": pulumi.String("MyArchive"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 			Tags: pulumi.StringMap{
+// 				"Test": pulumi.String("MyArchive"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -79,9 +74,7 @@ import (
 // Glacier Vaults can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:glacier/vault:Vault archive my_archive
-//
+//  $ pulumi import aws:glacier/vault:Vault archive my_archive
 // ```
 type Vault struct {
 	pulumi.CustomResourceState
@@ -222,7 +215,7 @@ func (i *Vault) ToVaultOutputWithContext(ctx context.Context) VaultOutput {
 // VaultArrayInput is an input type that accepts VaultArray and VaultArrayOutput values.
 // You can construct a concrete instance of `VaultArrayInput` via:
 //
-//	VaultArray{ VaultArgs{...} }
+//          VaultArray{ VaultArgs{...} }
 type VaultArrayInput interface {
 	pulumi.Input
 
@@ -247,7 +240,7 @@ func (i VaultArray) ToVaultArrayOutputWithContext(ctx context.Context) VaultArra
 // VaultMapInput is an input type that accepts VaultMap and VaultMapOutput values.
 // You can construct a concrete instance of `VaultMapInput` via:
 //
-//	VaultMap{ "key": VaultArgs{...} }
+//          VaultMap{ "key": VaultArgs{...} }
 type VaultMapInput interface {
 	pulumi.Input
 

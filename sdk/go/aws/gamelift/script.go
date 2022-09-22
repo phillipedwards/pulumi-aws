@@ -18,28 +18,25 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/gamelift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := gamelift.NewScript(ctx, "example", &gamelift.ScriptArgs{
-//				StorageLocation: &gamelift.ScriptStorageLocationArgs{
-//					Bucket:  pulumi.Any(aws_s3_bucket.Example.Bucket),
-//					Key:     pulumi.Any(aws_s3_object.Example.Key),
-//					RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := gamelift.NewScript(ctx, "example", &gamelift.ScriptArgs{
+// 			StorageLocation: &gamelift.ScriptStorageLocationArgs{
+// 				Bucket:  pulumi.Any(aws_s3_bucket.Example.Bucket),
+// 				Key:     pulumi.Any(aws_s3_object.Example.Key),
+// 				RoleArn: pulumi.Any(aws_iam_role.Example.Arn),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -47,9 +44,7 @@ import (
 // GameLift Scripts can be imported using the ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:gamelift/script:Script example <script-id>
-//
+//  $ pulumi import aws:gamelift/script:Script example <script-id>
 // ```
 type Script struct {
 	pulumi.CustomResourceState
@@ -189,7 +184,7 @@ func (i *Script) ToScriptOutputWithContext(ctx context.Context) ScriptOutput {
 // ScriptArrayInput is an input type that accepts ScriptArray and ScriptArrayOutput values.
 // You can construct a concrete instance of `ScriptArrayInput` via:
 //
-//	ScriptArray{ ScriptArgs{...} }
+//          ScriptArray{ ScriptArgs{...} }
 type ScriptArrayInput interface {
 	pulumi.Input
 
@@ -214,7 +209,7 @@ func (i ScriptArray) ToScriptArrayOutputWithContext(ctx context.Context) ScriptA
 // ScriptMapInput is an input type that accepts ScriptMap and ScriptMapOutput values.
 // You can construct a concrete instance of `ScriptMapInput` via:
 //
-//	ScriptMap{ "key": ScriptArgs{...} }
+//          ScriptMap{ "key": ScriptArgs{...} }
 type ScriptMapInput interface {
 	pulumi.Input
 

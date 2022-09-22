@@ -19,27 +19,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/redshift"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/redshift"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := redshift.NewUsageLimit(ctx, "example", &redshift.UsageLimitArgs{
-//				ClusterIdentifier: pulumi.Any(aws_redshift_cluster.Example.Id),
-//				FeatureType:       pulumi.String("concurrency-scaling"),
-//				LimitType:         pulumi.String("time"),
-//				Amount:            pulumi.Int(60),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := redshift.NewUsageLimit(ctx, "example", &redshift.UsageLimitArgs{
+// 			ClusterIdentifier: pulumi.Any(aws_redshift_cluster.Example.Id),
+// 			FeatureType:       pulumi.String("concurrency-scaling"),
+// 			LimitType:         pulumi.String("time"),
+// 			Amount:            pulumi.Int(60),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -47,9 +44,7 @@ import (
 // Redshift usage limits can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:redshift/usageLimit:UsageLimit example example-id
-//
+//  $ pulumi import aws:redshift/usageLimit:UsageLimit example example-id
 // ```
 type UsageLimit struct {
 	pulumi.CustomResourceState
@@ -221,7 +216,7 @@ func (i *UsageLimit) ToUsageLimitOutputWithContext(ctx context.Context) UsageLim
 // UsageLimitArrayInput is an input type that accepts UsageLimitArray and UsageLimitArrayOutput values.
 // You can construct a concrete instance of `UsageLimitArrayInput` via:
 //
-//	UsageLimitArray{ UsageLimitArgs{...} }
+//          UsageLimitArray{ UsageLimitArgs{...} }
 type UsageLimitArrayInput interface {
 	pulumi.Input
 
@@ -246,7 +241,7 @@ func (i UsageLimitArray) ToUsageLimitArrayOutputWithContext(ctx context.Context)
 // UsageLimitMapInput is an input type that accepts UsageLimitMap and UsageLimitMapOutput values.
 // You can construct a concrete instance of `UsageLimitMapInput` via:
 //
-//	UsageLimitMap{ "key": UsageLimitArgs{...} }
+//          UsageLimitMap{ "key": UsageLimitArgs{...} }
 type UsageLimitMapInput interface {
 	pulumi.Input
 

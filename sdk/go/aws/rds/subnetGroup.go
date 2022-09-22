@@ -19,30 +19,27 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rds"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rds"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := rds.NewSubnetGroup(ctx, "default", &rds.SubnetGroupArgs{
-//				SubnetIds: pulumi.StringArray{
-//					pulumi.Any(aws_subnet.Frontend.Id),
-//					pulumi.Any(aws_subnet.Backend.Id),
-//				},
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("My DB subnet group"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := rds.NewSubnetGroup(ctx, "default", &rds.SubnetGroupArgs{
+// 			SubnetIds: pulumi.StringArray{
+// 				pulumi.Any(aws_subnet.Frontend.Id),
+// 				pulumi.Any(aws_subnet.Backend.Id),
+// 			},
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("My DB subnet group"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -50,9 +47,7 @@ import (
 // DB Subnet groups can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:rds/subnetGroup:SubnetGroup default production-subnet-group
-//
+//  $ pulumi import aws:rds/subnetGroup:SubnetGroup default production-subnet-group
 // ```
 type SubnetGroup struct {
 	pulumi.CustomResourceState
@@ -204,7 +199,7 @@ func (i *SubnetGroup) ToSubnetGroupOutputWithContext(ctx context.Context) Subnet
 // SubnetGroupArrayInput is an input type that accepts SubnetGroupArray and SubnetGroupArrayOutput values.
 // You can construct a concrete instance of `SubnetGroupArrayInput` via:
 //
-//	SubnetGroupArray{ SubnetGroupArgs{...} }
+//          SubnetGroupArray{ SubnetGroupArgs{...} }
 type SubnetGroupArrayInput interface {
 	pulumi.Input
 
@@ -229,7 +224,7 @@ func (i SubnetGroupArray) ToSubnetGroupArrayOutputWithContext(ctx context.Contex
 // SubnetGroupMapInput is an input type that accepts SubnetGroupMap and SubnetGroupMapOutput values.
 // You can construct a concrete instance of `SubnetGroupMapInput` via:
 //
-//	SubnetGroupMap{ "key": SubnetGroupArgs{...} }
+//          SubnetGroupMap{ "key": SubnetGroupArgs{...} }
 type SubnetGroupMapInput interface {
 	pulumi.Input
 

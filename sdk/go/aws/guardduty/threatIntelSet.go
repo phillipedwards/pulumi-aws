@@ -21,60 +21,57 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/guardduty"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/guardduty"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			primary, err := guardduty.NewDetector(ctx, "primary", &guardduty.DetectorArgs{
-//				Enable: pulumi.Bool(true),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			bucket, err := s3.NewBucketV2(ctx, "bucket", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = s3.NewBucketAclV2(ctx, "bucketAcl", &s3.BucketAclV2Args{
-//				Bucket: bucket.ID(),
-//				Acl:    pulumi.String("private"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			myThreatIntelSetBucketObjectv2, err := s3.NewBucketObjectv2(ctx, "myThreatIntelSetBucketObjectv2", &s3.BucketObjectv2Args{
-//				Acl:     pulumi.String("public-read"),
-//				Content: pulumi.String("10.0.0.0/8\n"),
-//				Bucket:  bucket.ID(),
-//				Key:     pulumi.String("MyThreatIntelSet"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = guardduty.NewThreatIntelSet(ctx, "myThreatIntelSetThreatIntelSet", &guardduty.ThreatIntelSetArgs{
-//				Activate:   pulumi.Bool(true),
-//				DetectorId: primary.ID(),
-//				Format:     pulumi.String("TXT"),
-//				Location: pulumi.All(myThreatIntelSetBucketObjectv2.Bucket, myThreatIntelSetBucketObjectv2.Key).ApplyT(func(_args []interface{}) (string, error) {
-//					bucket := _args[0].(string)
-//					key := _args[1].(string)
-//					return fmt.Sprintf("https://s3.amazonaws.com/%v/%v", bucket, key), nil
-//				}).(pulumi.StringOutput),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		primary, err := guardduty.NewDetector(ctx, "primary", &guardduty.DetectorArgs{
+// 			Enable: pulumi.Bool(true),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		bucket, err := s3.NewBucketV2(ctx, "bucket", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = s3.NewBucketAclV2(ctx, "bucketAcl", &s3.BucketAclV2Args{
+// 			Bucket: bucket.ID(),
+// 			Acl:    pulumi.String("private"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		myThreatIntelSetBucketObjectv2, err := s3.NewBucketObjectv2(ctx, "myThreatIntelSetBucketObjectv2", &s3.BucketObjectv2Args{
+// 			Acl:     pulumi.String("public-read"),
+// 			Content: pulumi.String("10.0.0.0/8\n"),
+// 			Bucket:  bucket.ID(),
+// 			Key:     pulumi.String("MyThreatIntelSet"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = guardduty.NewThreatIntelSet(ctx, "myThreatIntelSetThreatIntelSet", &guardduty.ThreatIntelSetArgs{
+// 			Activate:   pulumi.Bool(true),
+// 			DetectorId: primary.ID(),
+// 			Format:     pulumi.String("TXT"),
+// 			Location: pulumi.All(myThreatIntelSetBucketObjectv2.Bucket, myThreatIntelSetBucketObjectv2.Key).ApplyT(func(_args []interface{}) (string, error) {
+// 				bucket := _args[0].(string)
+// 				key := _args[1].(string)
+// 				return fmt.Sprintf("https://s3.amazonaws.com/%v/%v", bucket, key), nil
+// 			}).(pulumi.StringOutput),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -82,9 +79,7 @@ import (
 // GuardDuty ThreatIntelSet can be imported using the the primary GuardDuty detector ID and ThreatIntelSetID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:guardduty/threatIntelSet:ThreatIntelSet MyThreatIntelSet 00b00fd5aecc0ab60a708659477e9617:123456789012
-//
+//  $ pulumi import aws:guardduty/threatIntelSet:ThreatIntelSet MyThreatIntelSet 00b00fd5aecc0ab60a708659477e9617:123456789012
 // ```
 type ThreatIntelSet struct {
 	pulumi.CustomResourceState
@@ -246,7 +241,7 @@ func (i *ThreatIntelSet) ToThreatIntelSetOutputWithContext(ctx context.Context) 
 // ThreatIntelSetArrayInput is an input type that accepts ThreatIntelSetArray and ThreatIntelSetArrayOutput values.
 // You can construct a concrete instance of `ThreatIntelSetArrayInput` via:
 //
-//	ThreatIntelSetArray{ ThreatIntelSetArgs{...} }
+//          ThreatIntelSetArray{ ThreatIntelSetArgs{...} }
 type ThreatIntelSetArrayInput interface {
 	pulumi.Input
 
@@ -271,7 +266,7 @@ func (i ThreatIntelSetArray) ToThreatIntelSetArrayOutputWithContext(ctx context.
 // ThreatIntelSetMapInput is an input type that accepts ThreatIntelSetMap and ThreatIntelSetMapOutput values.
 // You can construct a concrete instance of `ThreatIntelSetMapInput` via:
 //
-//	ThreatIntelSetMap{ "key": ThreatIntelSetArgs{...} }
+//          ThreatIntelSetMap{ "key": ThreatIntelSetArgs{...} }
 type ThreatIntelSetMapInput interface {
 	pulumi.Input
 

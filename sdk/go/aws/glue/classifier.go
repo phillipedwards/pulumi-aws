@@ -21,34 +21,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glue"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glue"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
-//				CsvClassifier: &glue.ClassifierCsvClassifierArgs{
-//					AllowSingleColumn:    pulumi.Bool(false),
-//					ContainsHeader:       pulumi.String("PRESENT"),
-//					Delimiter:            pulumi.String(","),
-//					DisableValueTrimming: pulumi.Bool(false),
-//					Headers: pulumi.StringArray{
-//						pulumi.String("example1"),
-//						pulumi.String("example2"),
-//					},
-//					QuoteSymbol: pulumi.String("'"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+// 			CsvClassifier: &glue.ClassifierCsvClassifierArgs{
+// 				AllowSingleColumn:    pulumi.Bool(false),
+// 				ContainsHeader:       pulumi.String("PRESENT"),
+// 				Delimiter:            pulumi.String(","),
+// 				DisableValueTrimming: pulumi.Bool(false),
+// 				Headers: pulumi.StringArray{
+// 					pulumi.String("example1"),
+// 					pulumi.String("example2"),
+// 				},
+// 				QuoteSymbol: pulumi.String("'"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Grok Classifier
 //
@@ -56,27 +53,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glue"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glue"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
-//				GrokClassifier: &glue.ClassifierGrokClassifierArgs{
-//					Classification: pulumi.String("example"),
-//					GrokPattern:    pulumi.String("example"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+// 			GrokClassifier: &glue.ClassifierGrokClassifierArgs{
+// 				Classification: pulumi.String("example"),
+// 				GrokPattern:    pulumi.String("example"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### JSON Classifier
 //
@@ -84,26 +78,23 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glue"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glue"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
-//				JsonClassifier: &glue.ClassifierJsonClassifierArgs{
-//					JsonPath: pulumi.String("example"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+// 			JsonClassifier: &glue.ClassifierJsonClassifierArgs{
+// 				JsonPath: pulumi.String("example"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### XML Classifier
 //
@@ -111,27 +102,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/glue"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/glue"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
-//				XmlClassifier: &glue.ClassifierXmlClassifierArgs{
-//					Classification: pulumi.String("example"),
-//					RowTag:         pulumi.String("example"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := glue.NewClassifier(ctx, "example", &glue.ClassifierArgs{
+// 			XmlClassifier: &glue.ClassifierXmlClassifierArgs{
+// 				Classification: pulumi.String("example"),
+// 				RowTag:         pulumi.String("example"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -139,9 +127,7 @@ import (
 // Glue Classifiers can be imported using their name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:glue/classifier:Classifier MyClassifier MyClassifier
-//
+//  $ pulumi import aws:glue/classifier:Classifier MyClassifier MyClassifier
 // ```
 type Classifier struct {
 	pulumi.CustomResourceState
@@ -269,7 +255,7 @@ func (i *Classifier) ToClassifierOutputWithContext(ctx context.Context) Classifi
 // ClassifierArrayInput is an input type that accepts ClassifierArray and ClassifierArrayOutput values.
 // You can construct a concrete instance of `ClassifierArrayInput` via:
 //
-//	ClassifierArray{ ClassifierArgs{...} }
+//          ClassifierArray{ ClassifierArgs{...} }
 type ClassifierArrayInput interface {
 	pulumi.Input
 
@@ -294,7 +280,7 @@ func (i ClassifierArray) ToClassifierArrayOutputWithContext(ctx context.Context)
 // ClassifierMapInput is an input type that accepts ClassifierMap and ClassifierMapOutput values.
 // You can construct a concrete instance of `ClassifierMapInput` via:
 //
-//	ClassifierMap{ "key": ClassifierArgs{...} }
+//          ClassifierMap{ "key": ClassifierArgs{...} }
 type ClassifierMapInput interface {
 	pulumi.Input
 

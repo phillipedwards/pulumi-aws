@@ -23,27 +23,24 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := connect.NewUserHierarchyGroup(ctx, "example", &connect.UserHierarchyGroupArgs{
-//				InstanceId: pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example User Hierarchy Group"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := connect.NewUserHierarchyGroup(ctx, "example", &connect.UserHierarchyGroupArgs{
+// 			InstanceId: pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example User Hierarchy Group"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### With a parent group
 //
@@ -51,37 +48,34 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/connect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/connect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			parent, err := connect.NewUserHierarchyGroup(ctx, "parent", &connect.UserHierarchyGroupArgs{
-//				InstanceId: pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example User Hierarchy Group Parent"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = connect.NewUserHierarchyGroup(ctx, "child", &connect.UserHierarchyGroupArgs{
-//				InstanceId:    pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
-//				ParentGroupId: parent.HierarchyGroupId,
-//				Tags: pulumi.StringMap{
-//					"Name": pulumi.String("Example User Hierarchy Group Child"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		parent, err := connect.NewUserHierarchyGroup(ctx, "parent", &connect.UserHierarchyGroupArgs{
+// 			InstanceId: pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example User Hierarchy Group Parent"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = connect.NewUserHierarchyGroup(ctx, "child", &connect.UserHierarchyGroupArgs{
+// 			InstanceId:    pulumi.String("aaaaaaaa-bbbb-cccc-dddd-111111111111"),
+// 			ParentGroupId: parent.HierarchyGroupId,
+// 			Tags: pulumi.StringMap{
+// 				"Name": pulumi.String("Example User Hierarchy Group Child"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -89,9 +83,7 @@ import (
 // Amazon Connect User Hierarchy Groups can be imported using the `instance_id` and `hierarchy_group_id` separated by a colon (`:`), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:connect/userHierarchyGroup:UserHierarchyGroup example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
-//
+//  $ pulumi import aws:connect/userHierarchyGroup:UserHierarchyGroup example f1288a1f-6193-445a-b47e-af739b2:c1d4e5f6-1b3c-1b3c-1b3c-c1d4e5f6c1d4e5
 // ```
 type UserHierarchyGroup struct {
 	pulumi.CustomResourceState
@@ -237,7 +229,7 @@ func (i *UserHierarchyGroup) ToUserHierarchyGroupOutputWithContext(ctx context.C
 // UserHierarchyGroupArrayInput is an input type that accepts UserHierarchyGroupArray and UserHierarchyGroupArrayOutput values.
 // You can construct a concrete instance of `UserHierarchyGroupArrayInput` via:
 //
-//	UserHierarchyGroupArray{ UserHierarchyGroupArgs{...} }
+//          UserHierarchyGroupArray{ UserHierarchyGroupArgs{...} }
 type UserHierarchyGroupArrayInput interface {
 	pulumi.Input
 
@@ -262,7 +254,7 @@ func (i UserHierarchyGroupArray) ToUserHierarchyGroupArrayOutputWithContext(ctx 
 // UserHierarchyGroupMapInput is an input type that accepts UserHierarchyGroupMap and UserHierarchyGroupMapOutput values.
 // You can construct a concrete instance of `UserHierarchyGroupMapInput` via:
 //
-//	UserHierarchyGroupMap{ "key": UserHierarchyGroupArgs{...} }
+//          UserHierarchyGroupMap{ "key": UserHierarchyGroupArgs{...} }
 type UserHierarchyGroupMapInput interface {
 	pulumi.Input
 

@@ -19,63 +19,60 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/athena"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/kms"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/s3"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/athena"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/kms"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/s3"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			hogeBucketV2, err := s3.NewBucketV2(ctx, "hogeBucketV2", nil)
-//			if err != nil {
-//				return err
-//			}
-//			testKey, err := kms.NewKey(ctx, "testKey", &kms.KeyArgs{
-//				DeletionWindowInDays: pulumi.Int(7),
-//				Description:          pulumi.String("Athena KMS Key"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			testWorkgroup, err := athena.NewWorkgroup(ctx, "testWorkgroup", &athena.WorkgroupArgs{
-//				Configuration: &athena.WorkgroupConfigurationArgs{
-//					ResultConfiguration: &athena.WorkgroupConfigurationResultConfigurationArgs{
-//						EncryptionConfiguration: &athena.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs{
-//							EncryptionOption: pulumi.String("SSE_KMS"),
-//							KmsKeyArn:        testKey.Arn,
-//						},
-//					},
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			hogeDatabase, err := athena.NewDatabase(ctx, "hogeDatabase", &athena.DatabaseArgs{
-//				Name:   pulumi.String("users"),
-//				Bucket: hogeBucketV2.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = athena.NewNamedQuery(ctx, "foo", &athena.NamedQueryArgs{
-//				Workgroup: testWorkgroup.ID(),
-//				Database:  hogeDatabase.Name,
-//				Query: hogeDatabase.Name.ApplyT(func(name string) (string, error) {
-//					return fmt.Sprintf("SELECT * FROM %v limit 10;", name), nil
-//				}).(pulumi.StringOutput),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		hogeBucketV2, err := s3.NewBucketV2(ctx, "hogeBucketV2", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		testKey, err := kms.NewKey(ctx, "testKey", &kms.KeyArgs{
+// 			DeletionWindowInDays: pulumi.Int(7),
+// 			Description:          pulumi.String("Athena KMS Key"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		testWorkgroup, err := athena.NewWorkgroup(ctx, "testWorkgroup", &athena.WorkgroupArgs{
+// 			Configuration: &athena.WorkgroupConfigurationArgs{
+// 				ResultConfiguration: &athena.WorkgroupConfigurationResultConfigurationArgs{
+// 					EncryptionConfiguration: &athena.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs{
+// 						EncryptionOption: pulumi.String("SSE_KMS"),
+// 						KmsKeyArn:        testKey.Arn,
+// 					},
+// 				},
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		hogeDatabase, err := athena.NewDatabase(ctx, "hogeDatabase", &athena.DatabaseArgs{
+// 			Name:   pulumi.String("users"),
+// 			Bucket: hogeBucketV2.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = athena.NewNamedQuery(ctx, "foo", &athena.NamedQueryArgs{
+// 			Workgroup: testWorkgroup.ID(),
+// 			Database:  hogeDatabase.Name,
+// 			Query: hogeDatabase.Name.ApplyT(func(name string) (string, error) {
+// 				return fmt.Sprintf("SELECT * FROM %v limit 10;", name), nil
+// 			}).(pulumi.StringOutput),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -83,9 +80,7 @@ import (
 // Athena Named Query can be imported using the query ID, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:athena/namedQuery:NamedQuery example 0123456789
-//
+//  $ pulumi import aws:athena/namedQuery:NamedQuery example 0123456789
 // ```
 type NamedQuery struct {
 	pulumi.CustomResourceState
@@ -219,7 +214,7 @@ func (i *NamedQuery) ToNamedQueryOutputWithContext(ctx context.Context) NamedQue
 // NamedQueryArrayInput is an input type that accepts NamedQueryArray and NamedQueryArrayOutput values.
 // You can construct a concrete instance of `NamedQueryArrayInput` via:
 //
-//	NamedQueryArray{ NamedQueryArgs{...} }
+//          NamedQueryArray{ NamedQueryArgs{...} }
 type NamedQueryArrayInput interface {
 	pulumi.Input
 
@@ -244,7 +239,7 @@ func (i NamedQueryArray) ToNamedQueryArrayOutputWithContext(ctx context.Context)
 // NamedQueryMapInput is an input type that accepts NamedQueryMap and NamedQueryMapOutput values.
 // You can construct a concrete instance of `NamedQueryMapInput` via:
 //
-//	NamedQueryMap{ "key": NamedQueryArgs{...} }
+//          NamedQueryMap{ "key": NamedQueryArgs{...} }
 type NamedQueryMapInput interface {
 	pulumi.Input
 

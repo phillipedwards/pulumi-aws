@@ -20,91 +20,88 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/rds"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/rds"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := rds.NewCluster(ctx, "default", &rds.ClusterArgs{
-//				ClusterIdentifier: pulumi.String("aurora-cluster-demo"),
-//				AvailabilityZones: pulumi.StringArray{
-//					pulumi.String("us-west-2a"),
-//					pulumi.String("us-west-2b"),
-//					pulumi.String("us-west-2c"),
-//				},
-//				DatabaseName:          pulumi.String("mydb"),
-//				MasterUsername:        pulumi.String("foo"),
-//				MasterPassword:        pulumi.String("bar"),
-//				BackupRetentionPeriod: pulumi.Int(5),
-//				PreferredBackupWindow: pulumi.String("07:00-09:00"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			test1, err := rds.NewClusterInstance(ctx, "test1", &rds.ClusterInstanceArgs{
-//				ApplyImmediately:  pulumi.Bool(true),
-//				ClusterIdentifier: _default.ID(),
-//				Identifier:        pulumi.String("test1"),
-//				InstanceClass:     pulumi.String("db.t2.small"),
-//				Engine:            _default.Engine,
-//				EngineVersion:     _default.EngineVersion,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			test2, err := rds.NewClusterInstance(ctx, "test2", &rds.ClusterInstanceArgs{
-//				ApplyImmediately:  pulumi.Bool(true),
-//				ClusterIdentifier: _default.ID(),
-//				Identifier:        pulumi.String("test2"),
-//				InstanceClass:     pulumi.String("db.t2.small"),
-//				Engine:            _default.Engine,
-//				EngineVersion:     _default.EngineVersion,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			test3, err := rds.NewClusterInstance(ctx, "test3", &rds.ClusterInstanceArgs{
-//				ApplyImmediately:  pulumi.Bool(true),
-//				ClusterIdentifier: _default.ID(),
-//				Identifier:        pulumi.String("test3"),
-//				InstanceClass:     pulumi.String("db.t2.small"),
-//				Engine:            _default.Engine,
-//				EngineVersion:     _default.EngineVersion,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = rds.NewClusterEndpoint(ctx, "eligible", &rds.ClusterEndpointArgs{
-//				ClusterIdentifier:         _default.ID(),
-//				ClusterEndpointIdentifier: pulumi.String("reader"),
-//				CustomEndpointType:        pulumi.String("READER"),
-//				ExcludedMembers: pulumi.StringArray{
-//					test1.ID(),
-//					test2.ID(),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = rds.NewClusterEndpoint(ctx, "static", &rds.ClusterEndpointArgs{
-//				ClusterIdentifier:         _default.ID(),
-//				ClusterEndpointIdentifier: pulumi.String("static"),
-//				CustomEndpointType:        pulumi.String("READER"),
-//				StaticMembers: pulumi.StringArray{
-//					test1.ID(),
-//					test3.ID(),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := rds.NewCluster(ctx, "default", &rds.ClusterArgs{
+// 			ClusterIdentifier: pulumi.String("aurora-cluster-demo"),
+// 			AvailabilityZones: pulumi.StringArray{
+// 				pulumi.String("us-west-2a"),
+// 				pulumi.String("us-west-2b"),
+// 				pulumi.String("us-west-2c"),
+// 			},
+// 			DatabaseName:          pulumi.String("mydb"),
+// 			MasterUsername:        pulumi.String("foo"),
+// 			MasterPassword:        pulumi.String("bar"),
+// 			BackupRetentionPeriod: pulumi.Int(5),
+// 			PreferredBackupWindow: pulumi.String("07:00-09:00"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		test1, err := rds.NewClusterInstance(ctx, "test1", &rds.ClusterInstanceArgs{
+// 			ApplyImmediately:  pulumi.Bool(true),
+// 			ClusterIdentifier: _default.ID(),
+// 			Identifier:        pulumi.String("test1"),
+// 			InstanceClass:     pulumi.String("db.t2.small"),
+// 			Engine:            _default.Engine,
+// 			EngineVersion:     _default.EngineVersion,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		test2, err := rds.NewClusterInstance(ctx, "test2", &rds.ClusterInstanceArgs{
+// 			ApplyImmediately:  pulumi.Bool(true),
+// 			ClusterIdentifier: _default.ID(),
+// 			Identifier:        pulumi.String("test2"),
+// 			InstanceClass:     pulumi.String("db.t2.small"),
+// 			Engine:            _default.Engine,
+// 			EngineVersion:     _default.EngineVersion,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		test3, err := rds.NewClusterInstance(ctx, "test3", &rds.ClusterInstanceArgs{
+// 			ApplyImmediately:  pulumi.Bool(true),
+// 			ClusterIdentifier: _default.ID(),
+// 			Identifier:        pulumi.String("test3"),
+// 			InstanceClass:     pulumi.String("db.t2.small"),
+// 			Engine:            _default.Engine,
+// 			EngineVersion:     _default.EngineVersion,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = rds.NewClusterEndpoint(ctx, "eligible", &rds.ClusterEndpointArgs{
+// 			ClusterIdentifier:         _default.ID(),
+// 			ClusterEndpointIdentifier: pulumi.String("reader"),
+// 			CustomEndpointType:        pulumi.String("READER"),
+// 			ExcludedMembers: pulumi.StringArray{
+// 				test1.ID(),
+// 				test2.ID(),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = rds.NewClusterEndpoint(ctx, "static", &rds.ClusterEndpointArgs{
+// 			ClusterIdentifier:         _default.ID(),
+// 			ClusterEndpointIdentifier: pulumi.String("static"),
+// 			CustomEndpointType:        pulumi.String("READER"),
+// 			StaticMembers: pulumi.StringArray{
+// 				test1.ID(),
+// 				test3.ID(),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -112,12 +109,10 @@ import (
 // RDS Clusters Endpoint can be imported using the `cluster_endpoint_identifier`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:rds/clusterEndpoint:ClusterEndpoint custom_reader aurora-prod-cluster-custom-reader
-//
+//  $ pulumi import aws:rds/clusterEndpoint:ClusterEndpoint custom_reader aurora-prod-cluster-custom-reader
 // ```
 //
-//	[1]https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster
+//  [1]https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Overview.Endpoints.html#Aurora.Endpoints.Cluster
 type ClusterEndpoint struct {
 	pulumi.CustomResourceState
 
@@ -281,7 +276,7 @@ func (i *ClusterEndpoint) ToClusterEndpointOutputWithContext(ctx context.Context
 // ClusterEndpointArrayInput is an input type that accepts ClusterEndpointArray and ClusterEndpointArrayOutput values.
 // You can construct a concrete instance of `ClusterEndpointArrayInput` via:
 //
-//	ClusterEndpointArray{ ClusterEndpointArgs{...} }
+//          ClusterEndpointArray{ ClusterEndpointArgs{...} }
 type ClusterEndpointArrayInput interface {
 	pulumi.Input
 
@@ -306,7 +301,7 @@ func (i ClusterEndpointArray) ToClusterEndpointArrayOutputWithContext(ctx contex
 // ClusterEndpointMapInput is an input type that accepts ClusterEndpointMap and ClusterEndpointMapOutput values.
 // You can construct a concrete instance of `ClusterEndpointMapInput` via:
 //
-//	ClusterEndpointMap{ "key": ClusterEndpointArgs{...} }
+//          ClusterEndpointMap{ "key": ClusterEndpointArgs{...} }
 type ClusterEndpointMapInput interface {
 	pulumi.Input
 

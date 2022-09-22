@@ -20,34 +20,31 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/directconnect"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleGateway, err := directconnect.NewGateway(ctx, "exampleGateway", &directconnect.GatewayArgs{
-//				AmazonSideAsn: pulumi.String("64512"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = directconnect.NewTransitVirtualInterface(ctx, "exampleTransitVirtualInterface", &directconnect.TransitVirtualInterfaceArgs{
-//				ConnectionId:  pulumi.Any(aws_dx_connection.Example.Id),
-//				DxGatewayId:   exampleGateway.ID(),
-//				Vlan:          pulumi.Int(4094),
-//				AddressFamily: pulumi.String("ipv4"),
-//				BgpAsn:        pulumi.Int(65352),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleGateway, err := directconnect.NewGateway(ctx, "exampleGateway", &directconnect.GatewayArgs{
+// 			AmazonSideAsn: pulumi.String("64512"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = directconnect.NewTransitVirtualInterface(ctx, "exampleTransitVirtualInterface", &directconnect.TransitVirtualInterfaceArgs{
+// 			ConnectionId:  pulumi.Any(aws_dx_connection.Example.Id),
+// 			DxGatewayId:   exampleGateway.ID(),
+// 			Vlan:          pulumi.Int(4094),
+// 			AddressFamily: pulumi.String("ipv4"),
+// 			BgpAsn:        pulumi.Int(65352),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -55,9 +52,7 @@ import (
 // Direct Connect transit virtual interfaces can be imported using the `vif id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:directconnect/transitVirtualInterface:TransitVirtualInterface test dxvif-33cc44dd
-//
+//  $ pulumi import aws:directconnect/transitVirtualInterface:TransitVirtualInterface test dxvif-33cc44dd
 // ```
 type TransitVirtualInterface struct {
 	pulumi.CustomResourceState
@@ -297,7 +292,7 @@ func (i *TransitVirtualInterface) ToTransitVirtualInterfaceOutputWithContext(ctx
 // TransitVirtualInterfaceArrayInput is an input type that accepts TransitVirtualInterfaceArray and TransitVirtualInterfaceArrayOutput values.
 // You can construct a concrete instance of `TransitVirtualInterfaceArrayInput` via:
 //
-//	TransitVirtualInterfaceArray{ TransitVirtualInterfaceArgs{...} }
+//          TransitVirtualInterfaceArray{ TransitVirtualInterfaceArgs{...} }
 type TransitVirtualInterfaceArrayInput interface {
 	pulumi.Input
 
@@ -322,7 +317,7 @@ func (i TransitVirtualInterfaceArray) ToTransitVirtualInterfaceArrayOutputWithCo
 // TransitVirtualInterfaceMapInput is an input type that accepts TransitVirtualInterfaceMap and TransitVirtualInterfaceMapOutput values.
 // You can construct a concrete instance of `TransitVirtualInterfaceMapInput` via:
 //
-//	TransitVirtualInterfaceMap{ "key": TransitVirtualInterfaceArgs{...} }
+//          TransitVirtualInterfaceMap{ "key": TransitVirtualInterfaceArgs{...} }
 type TransitVirtualInterfaceMapInput interface {
 	pulumi.Input
 

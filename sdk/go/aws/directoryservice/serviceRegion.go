@@ -19,9 +19,7 @@ import (
 // Replicated Regions can be imported using directory ID,Region name e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:directoryservice/serviceRegion:ServiceRegion example d-9267651497,us-east-2
-//
+//  $ pulumi import aws:directoryservice/serviceRegion:ServiceRegion example d-9267651497,us-east-2
 // ```
 type ServiceRegion struct {
 	pulumi.CustomResourceState
@@ -156,7 +154,7 @@ func (i *ServiceRegion) ToServiceRegionOutputWithContext(ctx context.Context) Se
 // ServiceRegionArrayInput is an input type that accepts ServiceRegionArray and ServiceRegionArrayOutput values.
 // You can construct a concrete instance of `ServiceRegionArrayInput` via:
 //
-//	ServiceRegionArray{ ServiceRegionArgs{...} }
+//          ServiceRegionArray{ ServiceRegionArgs{...} }
 type ServiceRegionArrayInput interface {
 	pulumi.Input
 
@@ -181,7 +179,7 @@ func (i ServiceRegionArray) ToServiceRegionArrayOutputWithContext(ctx context.Co
 // ServiceRegionMapInput is an input type that accepts ServiceRegionMap and ServiceRegionMapOutput values.
 // You can construct a concrete instance of `ServiceRegionMapInput` via:
 //
-//	ServiceRegionMap{ "key": ServiceRegionArgs{...} }
+//          ServiceRegionMap{ "key": ServiceRegionArgs{...} }
 type ServiceRegionMapInput interface {
 	pulumi.Input
 

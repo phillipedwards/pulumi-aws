@@ -22,9 +22,7 @@ import (
 // MWAA Environment can be imported using `Name` e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:mwaa/environment:Environment example MyAirflowEnvironment
-//
+//  $ pulumi import aws:mwaa/environment:Environment example MyAirflowEnvironment
 // ```
 type Environment struct {
 	pulumi.CustomResourceState
@@ -356,7 +354,7 @@ func (i *Environment) ToEnvironmentOutputWithContext(ctx context.Context) Enviro
 // EnvironmentArrayInput is an input type that accepts EnvironmentArray and EnvironmentArrayOutput values.
 // You can construct a concrete instance of `EnvironmentArrayInput` via:
 //
-//	EnvironmentArray{ EnvironmentArgs{...} }
+//          EnvironmentArray{ EnvironmentArgs{...} }
 type EnvironmentArrayInput interface {
 	pulumi.Input
 
@@ -381,7 +379,7 @@ func (i EnvironmentArray) ToEnvironmentArrayOutputWithContext(ctx context.Contex
 // EnvironmentMapInput is an input type that accepts EnvironmentMap and EnvironmentMapOutput values.
 // You can construct a concrete instance of `EnvironmentMapInput` via:
 //
-//	EnvironmentMap{ "key": EnvironmentArgs{...} }
+//          EnvironmentMap{ "key": EnvironmentArgs{...} }
 type EnvironmentMapInput interface {
 	pulumi.Input
 

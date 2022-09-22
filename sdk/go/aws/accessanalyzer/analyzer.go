@@ -20,24 +20,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/accessanalyzer"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/accessanalyzer"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := accessanalyzer.NewAnalyzer(ctx, "example", &accessanalyzer.AnalyzerArgs{
-//				AnalyzerName: pulumi.String("example"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := accessanalyzer.NewAnalyzer(ctx, "example", &accessanalyzer.AnalyzerArgs{
+// 			AnalyzerName: pulumi.String("example"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Organization Analyzer
 //
@@ -45,36 +42,33 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/accessanalyzer"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/organizations"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/accessanalyzer"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/organizations"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
-//				AwsServiceAccessPrincipals: pulumi.StringArray{
-//					pulumi.String("access-analyzer.amazonaws.com"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = accessanalyzer.NewAnalyzer(ctx, "exampleAnalyzer", &accessanalyzer.AnalyzerArgs{
-//				AnalyzerName: pulumi.String("example"),
-//				Type:         pulumi.String("ORGANIZATION"),
-//			}, pulumi.DependsOn([]pulumi.Resource{
-//				exampleOrganization,
-//			}))
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleOrganization, err := organizations.NewOrganization(ctx, "exampleOrganization", &organizations.OrganizationArgs{
+// 			AwsServiceAccessPrincipals: pulumi.StringArray{
+// 				pulumi.String("access-analyzer.amazonaws.com"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = accessanalyzer.NewAnalyzer(ctx, "exampleAnalyzer", &accessanalyzer.AnalyzerArgs{
+// 			AnalyzerName: pulumi.String("example"),
+// 			Type:         pulumi.String("ORGANIZATION"),
+// 		}, pulumi.DependsOn([]pulumi.Resource{
+// 			exampleOrganization,
+// 		}))
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -82,9 +76,7 @@ import (
 // Access Analyzer Analyzers can be imported using the `analyzer_name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:accessanalyzer/analyzer:Analyzer example example
-//
+//  $ pulumi import aws:accessanalyzer/analyzer:Analyzer example example
 // ```
 type Analyzer struct {
 	pulumi.CustomResourceState
@@ -207,7 +199,7 @@ func (i *Analyzer) ToAnalyzerOutputWithContext(ctx context.Context) AnalyzerOutp
 // AnalyzerArrayInput is an input type that accepts AnalyzerArray and AnalyzerArrayOutput values.
 // You can construct a concrete instance of `AnalyzerArrayInput` via:
 //
-//	AnalyzerArray{ AnalyzerArgs{...} }
+//          AnalyzerArray{ AnalyzerArgs{...} }
 type AnalyzerArrayInput interface {
 	pulumi.Input
 
@@ -232,7 +224,7 @@ func (i AnalyzerArray) ToAnalyzerArrayOutputWithContext(ctx context.Context) Ana
 // AnalyzerMapInput is an input type that accepts AnalyzerMap and AnalyzerMapOutput values.
 // You can construct a concrete instance of `AnalyzerMapInput` via:
 //
-//	AnalyzerMap{ "key": AnalyzerArgs{...} }
+//          AnalyzerMap{ "key": AnalyzerArgs{...} }
 type AnalyzerMapInput interface {
 	pulumi.Input
 

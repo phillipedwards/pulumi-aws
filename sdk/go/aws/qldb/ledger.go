@@ -21,24 +21,21 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/qldb"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/qldb"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := qldb.NewLedger(ctx, "sample-ledger", &qldb.LedgerArgs{
-//				PermissionsMode: pulumi.String("STANDARD"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := qldb.NewLedger(ctx, "sample-ledger", &qldb.LedgerArgs{
+// 			PermissionsMode: pulumi.String("STANDARD"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -46,9 +43,7 @@ import (
 // QLDB Ledgers can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:qldb/ledger:Ledger sample-ledger sample-ledger
-//
+//  $ pulumi import aws:qldb/ledger:Ledger sample-ledger sample-ledger
 // ```
 type Ledger struct {
 	pulumi.CustomResourceState
@@ -181,7 +176,7 @@ func (i *Ledger) ToLedgerOutputWithContext(ctx context.Context) LedgerOutput {
 // LedgerArrayInput is an input type that accepts LedgerArray and LedgerArrayOutput values.
 // You can construct a concrete instance of `LedgerArrayInput` via:
 //
-//	LedgerArray{ LedgerArgs{...} }
+//          LedgerArray{ LedgerArgs{...} }
 type LedgerArrayInput interface {
 	pulumi.Input
 
@@ -206,7 +201,7 @@ func (i LedgerArray) ToLedgerArrayOutputWithContext(ctx context.Context) LedgerA
 // LedgerMapInput is an input type that accepts LedgerMap and LedgerMapOutput values.
 // You can construct a concrete instance of `LedgerMapInput` via:
 //
-//	LedgerMap{ "key": LedgerArgs{...} }
+//          LedgerMap{ "key": LedgerArgs{...} }
 type LedgerMapInput interface {
 	pulumi.Input
 

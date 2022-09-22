@@ -21,9 +21,7 @@ import (
 // API Gateway VPC Link can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:apigateway/vpcLink:VpcLink example 12345abcde
-//
+//  $ pulumi import aws:apigateway/vpcLink:VpcLink example 12345abcde
 // ```
 type VpcLink struct {
 	pulumi.CustomResourceState
@@ -153,7 +151,7 @@ func (i *VpcLink) ToVpcLinkOutputWithContext(ctx context.Context) VpcLinkOutput 
 // VpcLinkArrayInput is an input type that accepts VpcLinkArray and VpcLinkArrayOutput values.
 // You can construct a concrete instance of `VpcLinkArrayInput` via:
 //
-//	VpcLinkArray{ VpcLinkArgs{...} }
+//          VpcLinkArray{ VpcLinkArgs{...} }
 type VpcLinkArrayInput interface {
 	pulumi.Input
 
@@ -178,7 +176,7 @@ func (i VpcLinkArray) ToVpcLinkArrayOutputWithContext(ctx context.Context) VpcLi
 // VpcLinkMapInput is an input type that accepts VpcLinkMap and VpcLinkMapOutput values.
 // You can construct a concrete instance of `VpcLinkMapInput` via:
 //
-//	VpcLinkMap{ "key": VpcLinkArgs{...} }
+//          VpcLinkMap{ "key": VpcLinkArgs{...} }
 type VpcLinkMapInput interface {
 	pulumi.Input
 

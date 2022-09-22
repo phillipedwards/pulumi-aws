@@ -19,33 +19,30 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2transitgateway"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleConnect, err := ec2transitgateway.NewConnect(ctx, "exampleConnect", &ec2transitgateway.ConnectArgs{
-//				TransportAttachmentId: pulumi.Any(aws_ec2_transit_gateway_vpc_attachment.Example.Id),
-//				TransitGatewayId:      pulumi.Any(aws_ec2_transit_gateway.Example.Id),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ec2transitgateway.NewConnectPeer(ctx, "exampleConnectPeer", &ec2transitgateway.ConnectPeerArgs{
-//				PeerAddress:                pulumi.String("10.1.2.3"),
-//				InsideCidrBlocks:           pulumi.StringArray("169.254.100.0/29"),
-//				TransitGatewayAttachmentId: exampleConnect.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		exampleConnect, err := ec2transitgateway.NewConnect(ctx, "exampleConnect", &ec2transitgateway.ConnectArgs{
+// 			TransportAttachmentId: pulumi.Any(aws_ec2_transit_gateway_vpc_attachment.Example.Id),
+// 			TransitGatewayId:      pulumi.Any(aws_ec2_transit_gateway.Example.Id),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ec2transitgateway.NewConnectPeer(ctx, "exampleConnectPeer", &ec2transitgateway.ConnectPeerArgs{
+// 			PeerAddress:                pulumi.String("10.1.2.3"),
+// 			InsideCidrBlocks:           pulumi.StringArray("169.254.100.0/29"),
+// 			TransitGatewayAttachmentId: exampleConnect.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -53,9 +50,7 @@ import (
 // `aws_ec2_transit_gateway_connect_peer` can be imported by using the EC2 Transit Gateway Connect Peer identifier, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2transitgateway/connectPeer:ConnectPeer example tgw-connect-peer-12345678
-//
+//  $ pulumi import aws:ec2transitgateway/connectPeer:ConnectPeer example tgw-connect-peer-12345678
 // ```
 type ConnectPeer struct {
 	pulumi.CustomResourceState
@@ -209,7 +204,7 @@ func (i *ConnectPeer) ToConnectPeerOutputWithContext(ctx context.Context) Connec
 // ConnectPeerArrayInput is an input type that accepts ConnectPeerArray and ConnectPeerArrayOutput values.
 // You can construct a concrete instance of `ConnectPeerArrayInput` via:
 //
-//	ConnectPeerArray{ ConnectPeerArgs{...} }
+//          ConnectPeerArray{ ConnectPeerArgs{...} }
 type ConnectPeerArrayInput interface {
 	pulumi.Input
 
@@ -234,7 +229,7 @@ func (i ConnectPeerArray) ToConnectPeerArrayOutputWithContext(ctx context.Contex
 // ConnectPeerMapInput is an input type that accepts ConnectPeerMap and ConnectPeerMapOutput values.
 // You can construct a concrete instance of `ConnectPeerMapInput` via:
 //
-//	ConnectPeerMap{ "key": ConnectPeerArgs{...} }
+//          ConnectPeerMap{ "key": ConnectPeerArgs{...} }
 type ConnectPeerMapInput interface {
 	pulumi.Input
 

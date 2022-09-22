@@ -19,52 +19,49 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/imagebuilder"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/imagebuilder"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := imagebuilder.NewImageRecipe(ctx, "example", &imagebuilder.ImageRecipeArgs{
-//				BlockDeviceMappings: imagebuilder.ImageRecipeBlockDeviceMappingArray{
-//					&imagebuilder.ImageRecipeBlockDeviceMappingArgs{
-//						DeviceName: pulumi.String("/dev/xvdb"),
-//						Ebs: &imagebuilder.ImageRecipeBlockDeviceMappingEbsArgs{
-//							DeleteOnTermination: pulumi.String("true"),
-//							VolumeSize:          pulumi.Int(100),
-//							VolumeType:          pulumi.String("gp2"),
-//						},
-//					},
-//				},
-//				Components: imagebuilder.ImageRecipeComponentArray{
-//					&imagebuilder.ImageRecipeComponentArgs{
-//						ComponentArn: pulumi.Any(aws_imagebuilder_component.Example.Arn),
-//						Parameters: imagebuilder.ImageRecipeComponentParameterArray{
-//							&imagebuilder.ImageRecipeComponentParameterArgs{
-//								Name:  pulumi.String("Parameter1"),
-//								Value: pulumi.String("Value1"),
-//							},
-//							&imagebuilder.ImageRecipeComponentParameterArgs{
-//								Name:  pulumi.String("Parameter2"),
-//								Value: pulumi.String("Value2"),
-//							},
-//						},
-//					},
-//				},
-//				ParentImage: pulumi.String(fmt.Sprintf("arn:%v:imagebuilder:%v:aws:image/amazon-linux-2-x86/x.x.x", data.Aws_partition.Current.Partition, data.Aws_region.Current.Name)),
-//				Version:     pulumi.String("1.0.0"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := imagebuilder.NewImageRecipe(ctx, "example", &imagebuilder.ImageRecipeArgs{
+// 			BlockDeviceMappings: imagebuilder.ImageRecipeBlockDeviceMappingArray{
+// 				&imagebuilder.ImageRecipeBlockDeviceMappingArgs{
+// 					DeviceName: pulumi.String("/dev/xvdb"),
+// 					Ebs: &imagebuilder.ImageRecipeBlockDeviceMappingEbsArgs{
+// 						DeleteOnTermination: pulumi.String("true"),
+// 						VolumeSize:          pulumi.Int(100),
+// 						VolumeType:          pulumi.String("gp2"),
+// 					},
+// 				},
+// 			},
+// 			Components: imagebuilder.ImageRecipeComponentArray{
+// 				&imagebuilder.ImageRecipeComponentArgs{
+// 					ComponentArn: pulumi.Any(aws_imagebuilder_component.Example.Arn),
+// 					Parameters: imagebuilder.ImageRecipeComponentParameterArray{
+// 						&imagebuilder.ImageRecipeComponentParameterArgs{
+// 							Name:  pulumi.String("Parameter1"),
+// 							Value: pulumi.String("Value1"),
+// 						},
+// 						&imagebuilder.ImageRecipeComponentParameterArgs{
+// 							Name:  pulumi.String("Parameter2"),
+// 							Value: pulumi.String("Value2"),
+// 						},
+// 					},
+// 				},
+// 			},
+// 			ParentImage: pulumi.String(fmt.Sprintf("arn:%v:imagebuilder:%v:aws:image/amazon-linux-2-x86/x.x.x", data.Aws_partition.Current.Partition, data.Aws_region.Current.Name)),
+// 			Version:     pulumi.String("1.0.0"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -72,9 +69,7 @@ import (
 // `aws_imagebuilder_image_recipe` resources can be imported by using the Amazon Resource Name (ARN), e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:imagebuilder/imageRecipe:ImageRecipe example arn:aws:imagebuilder:us-east-1:123456789012:image-recipe/example/1.0.0
-//
+//  $ pulumi import aws:imagebuilder/imageRecipe:ImageRecipe example arn:aws:imagebuilder:us-east-1:123456789012:image-recipe/example/1.0.0
 // ```
 type ImageRecipe struct {
 	pulumi.CustomResourceState
@@ -291,7 +286,7 @@ func (i *ImageRecipe) ToImageRecipeOutputWithContext(ctx context.Context) ImageR
 // ImageRecipeArrayInput is an input type that accepts ImageRecipeArray and ImageRecipeArrayOutput values.
 // You can construct a concrete instance of `ImageRecipeArrayInput` via:
 //
-//	ImageRecipeArray{ ImageRecipeArgs{...} }
+//          ImageRecipeArray{ ImageRecipeArgs{...} }
 type ImageRecipeArrayInput interface {
 	pulumi.Input
 
@@ -316,7 +311,7 @@ func (i ImageRecipeArray) ToImageRecipeArrayOutputWithContext(ctx context.Contex
 // ImageRecipeMapInput is an input type that accepts ImageRecipeMap and ImageRecipeMapOutput values.
 // You can construct a concrete instance of `ImageRecipeMapInput` via:
 //
-//	ImageRecipeMap{ "key": ImageRecipeArgs{...} }
+//          ImageRecipeMap{ "key": ImageRecipeArgs{...} }
 type ImageRecipeMapInput interface {
 	pulumi.Input
 

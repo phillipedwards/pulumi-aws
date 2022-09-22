@@ -19,40 +19,37 @@ import (
 // package main
 //
 // import (
+// 	"io/ioutil"
 //
-//	"io/ioutil"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/pinpoint"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func readFileOrPanic(path string) pulumi.StringPtrInput {
-//		data, err := ioutil.ReadFile(path)
-//		if err != nil {
-//			panic(err.Error())
-//		}
-//		return pulumi.String(string(data))
-//	}
+// func readFileOrPanic(path string) pulumi.StringPtrInput {
+// 	data, err := ioutil.ReadFile(path)
+// 	if err != nil {
+// 		panic(err.Error())
+// 	}
+// 	return pulumi.String(string(data))
+// }
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			app, err := pinpoint.NewApp(ctx, "app", nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = pinpoint.NewApnsChannel(ctx, "apns", &pinpoint.ApnsChannelArgs{
-//				ApplicationId: app.ApplicationId,
-//				Certificate:   readFileOrPanic("./certificate.pem"),
-//				PrivateKey:    readFileOrPanic("./private_key.key"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		app, err := pinpoint.NewApp(ctx, "app", nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = pinpoint.NewApnsChannel(ctx, "apns", &pinpoint.ApnsChannelArgs{
+// 			ApplicationId: app.ApplicationId,
+// 			Certificate:   readFileOrPanic("./certificate.pem"),
+// 			PrivateKey:    readFileOrPanic("./private_key.key"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -60,9 +57,7 @@ import (
 // Pinpoint APNs Channel can be imported using the `application-id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:pinpoint/apnsChannel:ApnsChannel apns application-id
-//
+//  $ pulumi import aws:pinpoint/apnsChannel:ApnsChannel apns application-id
 // ```
 type ApnsChannel struct {
 	pulumi.CustomResourceState
@@ -248,7 +243,7 @@ func (i *ApnsChannel) ToApnsChannelOutputWithContext(ctx context.Context) ApnsCh
 // ApnsChannelArrayInput is an input type that accepts ApnsChannelArray and ApnsChannelArrayOutput values.
 // You can construct a concrete instance of `ApnsChannelArrayInput` via:
 //
-//	ApnsChannelArray{ ApnsChannelArgs{...} }
+//          ApnsChannelArray{ ApnsChannelArgs{...} }
 type ApnsChannelArrayInput interface {
 	pulumi.Input
 
@@ -273,7 +268,7 @@ func (i ApnsChannelArray) ToApnsChannelArrayOutputWithContext(ctx context.Contex
 // ApnsChannelMapInput is an input type that accepts ApnsChannelMap and ApnsChannelMapOutput values.
 // You can construct a concrete instance of `ApnsChannelMapInput` via:
 //
-//	ApnsChannelMap{ "key": ApnsChannelArgs{...} }
+//          ApnsChannelMap{ "key": ApnsChannelArgs{...} }
 type ApnsChannelMapInput interface {
 	pulumi.Input
 

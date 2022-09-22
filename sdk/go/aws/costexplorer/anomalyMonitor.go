@@ -22,25 +22,22 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/costexplorer"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/costexplorer"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := costexplorer.NewAnomalyMonitor(ctx, "serviceMonitor", &costexplorer.AnomalyMonitorArgs{
-//				MonitorDimension: pulumi.String("SERVICE"),
-//				MonitorType:      pulumi.String("DIMENSIONAL"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := costexplorer.NewAnomalyMonitor(ctx, "serviceMonitor", &costexplorer.AnomalyMonitorArgs{
+// 			MonitorDimension: pulumi.String("SERVICE"),
+// 			MonitorType:      pulumi.String("DIMENSIONAL"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Custom Example
 //
@@ -48,43 +45,39 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/costexplorer"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/costexplorer"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := costexplorer.NewAnomalyMonitor(ctx, "test", &costexplorer.AnomalyMonitorArgs{
-//				MonitorSpecification: pulumi.String(fmt.Sprintf(`{
-//		"And": null,
-//		"CostCategories": null,
-//		"Dimensions": null,
-//		"Not": null,
-//		"Or": null,
-//		"Tags": {
-//			"Key": "CostCenter",
-//			"MatchOptions": null,
-//			"Values": [
-//				"10000"
-//			]
-//		}
-//	}
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		_, err := costexplorer.NewAnomalyMonitor(ctx, "test", &costexplorer.AnomalyMonitorArgs{
+// 			MonitorSpecification: pulumi.String(fmt.Sprintf(`{
+// 	"And": null,
+// 	"CostCategories": null,
+// 	"Dimensions": null,
+// 	"Not": null,
+// 	"Or": null,
+// 	"Tags": {
+// 		"Key": "CostCenter",
+// 		"MatchOptions": null,
+// 		"Values": [
+// 			"10000"
+// 		]
+// 	}
+// }
 //
 // `)),
-//
-//				MonitorType: pulumi.String("CUSTOM"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 			MonitorType: pulumi.String("CUSTOM"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -92,9 +85,7 @@ import (
 // `aws_ce_anomaly_monitor` can be imported using the `id`, e.g.
 //
 // ```sh
-//
-//	$ pulumi import aws:costexplorer/anomalyMonitor:AnomalyMonitor example costAnomalyMonitorARN
-//
+//  $ pulumi import aws:costexplorer/anomalyMonitor:AnomalyMonitor example costAnomalyMonitorARN
 // ```
 type AnomalyMonitor struct {
 	pulumi.CustomResourceState
@@ -237,7 +228,7 @@ func (i *AnomalyMonitor) ToAnomalyMonitorOutputWithContext(ctx context.Context) 
 // AnomalyMonitorArrayInput is an input type that accepts AnomalyMonitorArray and AnomalyMonitorArrayOutput values.
 // You can construct a concrete instance of `AnomalyMonitorArrayInput` via:
 //
-//	AnomalyMonitorArray{ AnomalyMonitorArgs{...} }
+//          AnomalyMonitorArray{ AnomalyMonitorArgs{...} }
 type AnomalyMonitorArrayInput interface {
 	pulumi.Input
 
@@ -262,7 +253,7 @@ func (i AnomalyMonitorArray) ToAnomalyMonitorArrayOutputWithContext(ctx context.
 // AnomalyMonitorMapInput is an input type that accepts AnomalyMonitorMap and AnomalyMonitorMapOutput values.
 // You can construct a concrete instance of `AnomalyMonitorMapInput` via:
 //
-//	AnomalyMonitorMap{ "key": AnomalyMonitorArgs{...} }
+//          AnomalyMonitorMap{ "key": AnomalyMonitorArgs{...} }
 type AnomalyMonitorMapInput interface {
 	pulumi.Input
 

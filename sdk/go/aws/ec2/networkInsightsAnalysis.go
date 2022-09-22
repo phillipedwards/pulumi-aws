@@ -19,32 +19,29 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/ec2"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/ec2"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			path, err := ec2.NewNetworkInsightsPath(ctx, "path", &ec2.NetworkInsightsPathArgs{
-//				Source:      pulumi.Any(aws_network_interface.Source.Id),
-//				Destination: pulumi.Any(aws_network_interface.Destination.Id),
-//				Protocol:    pulumi.String("tcp"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = ec2.NewNetworkInsightsAnalysis(ctx, "analysis", &ec2.NetworkInsightsAnalysisArgs{
-//				NetworkInsightsPathId: path.ID(),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		path, err := ec2.NewNetworkInsightsPath(ctx, "path", &ec2.NetworkInsightsPathArgs{
+// 			Source:      pulumi.Any(aws_network_interface.Source.Id),
+// 			Destination: pulumi.Any(aws_network_interface.Destination.Id),
+// 			Protocol:    pulumi.String("tcp"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = ec2.NewNetworkInsightsAnalysis(ctx, "analysis", &ec2.NetworkInsightsAnalysisArgs{
+// 			NetworkInsightsPathId: path.ID(),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -52,9 +49,7 @@ import (
 // Network Insights Analyses can be imported using the `id`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:ec2/networkInsightsAnalysis:NetworkInsightsAnalysis test nia-0462085c957f11a55
-//
+//  $ pulumi import aws:ec2/networkInsightsAnalysis:NetworkInsightsAnalysis test nia-0462085c957f11a55
 // ```
 type NetworkInsightsAnalysis struct {
 	pulumi.CustomResourceState
@@ -241,7 +236,7 @@ func (i *NetworkInsightsAnalysis) ToNetworkInsightsAnalysisOutputWithContext(ctx
 // NetworkInsightsAnalysisArrayInput is an input type that accepts NetworkInsightsAnalysisArray and NetworkInsightsAnalysisArrayOutput values.
 // You can construct a concrete instance of `NetworkInsightsAnalysisArrayInput` via:
 //
-//	NetworkInsightsAnalysisArray{ NetworkInsightsAnalysisArgs{...} }
+//          NetworkInsightsAnalysisArray{ NetworkInsightsAnalysisArgs{...} }
 type NetworkInsightsAnalysisArrayInput interface {
 	pulumi.Input
 
@@ -266,7 +261,7 @@ func (i NetworkInsightsAnalysisArray) ToNetworkInsightsAnalysisArrayOutputWithCo
 // NetworkInsightsAnalysisMapInput is an input type that accepts NetworkInsightsAnalysisMap and NetworkInsightsAnalysisMapOutput values.
 // You can construct a concrete instance of `NetworkInsightsAnalysisMapInput` via:
 //
-//	NetworkInsightsAnalysisMap{ "key": NetworkInsightsAnalysisArgs{...} }
+//          NetworkInsightsAnalysisMap{ "key": NetworkInsightsAnalysisArgs{...} }
 type NetworkInsightsAnalysisMapInput interface {
 	pulumi.Input
 

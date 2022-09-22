@@ -20,51 +20,48 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudwatch"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			elasticsearch_log_publishing_policyPolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
-//				Statements: []iam.GetPolicyDocumentStatement{
-//					iam.GetPolicyDocumentStatement{
-//						Actions: []string{
-//							"logs:CreateLogStream",
-//							"logs:PutLogEvents",
-//							"logs:PutLogEventsBatch",
-//						},
-//						Resources: []string{
-//							"arn:aws:logs:*",
-//						},
-//						Principals: []iam.GetPolicyDocumentStatementPrincipal{
-//							iam.GetPolicyDocumentStatementPrincipal{
-//								Identifiers: []string{
-//									"es.amazonaws.com",
-//								},
-//								Type: "Service",
-//							},
-//						},
-//					},
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = cloudwatch.NewLogResourcePolicy(ctx, "elasticsearch-log-publishing-policyLogResourcePolicy", &cloudwatch.LogResourcePolicyArgs{
-//				PolicyDocument: pulumi.String(elasticsearch_log_publishing_policyPolicyDocument.Json),
-//				PolicyName:     pulumi.String("elasticsearch-log-publishing-policy"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		elasticsearch_log_publishing_policyPolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+// 			Statements: []iam.GetPolicyDocumentStatement{
+// 				iam.GetPolicyDocumentStatement{
+// 					Actions: []string{
+// 						"logs:CreateLogStream",
+// 						"logs:PutLogEvents",
+// 						"logs:PutLogEventsBatch",
+// 					},
+// 					Resources: []string{
+// 						"arn:aws:logs:*",
+// 					},
+// 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+// 						iam.GetPolicyDocumentStatementPrincipal{
+// 							Identifiers: []string{
+// 								"es.amazonaws.com",
+// 							},
+// 							Type: "Service",
+// 						},
+// 					},
+// 				},
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = cloudwatch.NewLogResourcePolicy(ctx, "elasticsearch-log-publishing-policyLogResourcePolicy", &cloudwatch.LogResourcePolicyArgs{
+// 			PolicyDocument: pulumi.String(elasticsearch_log_publishing_policyPolicyDocument.Json),
+// 			PolicyName:     pulumi.String("elasticsearch-log-publishing-policy"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 // ### Route53 Query Logging
 //
@@ -72,50 +69,47 @@ import (
 // package main
 //
 // import (
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/cloudwatch"
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch"
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			route53_query_logging_policyPolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
-//				Statements: []iam.GetPolicyDocumentStatement{
-//					iam.GetPolicyDocumentStatement{
-//						Actions: []string{
-//							"logs:CreateLogStream",
-//							"logs:PutLogEvents",
-//						},
-//						Resources: []string{
-//							"arn:aws:logs:*:*:log-group:/aws/route53/*",
-//						},
-//						Principals: []iam.GetPolicyDocumentStatementPrincipal{
-//							iam.GetPolicyDocumentStatementPrincipal{
-//								Identifiers: []string{
-//									"route53.amazonaws.com",
-//								},
-//								Type: "Service",
-//							},
-//						},
-//					},
-//				},
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			_, err = cloudwatch.NewLogResourcePolicy(ctx, "route53-query-logging-policyLogResourcePolicy", &cloudwatch.LogResourcePolicyArgs{
-//				PolicyDocument: pulumi.String(route53_query_logging_policyPolicyDocument.Json),
-//				PolicyName:     pulumi.String("route53-query-logging-policy"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		route53_query_logging_policyPolicyDocument, err := iam.GetPolicyDocument(ctx, &iam.GetPolicyDocumentArgs{
+// 			Statements: []iam.GetPolicyDocumentStatement{
+// 				iam.GetPolicyDocumentStatement{
+// 					Actions: []string{
+// 						"logs:CreateLogStream",
+// 						"logs:PutLogEvents",
+// 					},
+// 					Resources: []string{
+// 						"arn:aws:logs:*:*:log-group:/aws/route53/*",
+// 					},
+// 					Principals: []iam.GetPolicyDocumentStatementPrincipal{
+// 						iam.GetPolicyDocumentStatementPrincipal{
+// 							Identifiers: []string{
+// 								"route53.amazonaws.com",
+// 							},
+// 							Type: "Service",
+// 						},
+// 					},
+// 				},
+// 			},
+// 		}, nil)
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = cloudwatch.NewLogResourcePolicy(ctx, "route53-query-logging-policyLogResourcePolicy", &cloudwatch.LogResourcePolicyArgs{
+// 			PolicyDocument: pulumi.String(route53_query_logging_policyPolicyDocument.Json),
+// 			PolicyName:     pulumi.String("route53-query-logging-policy"),
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -123,9 +117,7 @@ import (
 // CloudWatch log resource policies can be imported using the policy name, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:cloudwatch/logResourcePolicy:LogResourcePolicy MyPolicy MyPolicy
-//
+//  $ pulumi import aws:cloudwatch/logResourcePolicy:LogResourcePolicy MyPolicy MyPolicy
 // ```
 type LogResourcePolicy struct {
 	pulumi.CustomResourceState
@@ -229,7 +221,7 @@ func (i *LogResourcePolicy) ToLogResourcePolicyOutputWithContext(ctx context.Con
 // LogResourcePolicyArrayInput is an input type that accepts LogResourcePolicyArray and LogResourcePolicyArrayOutput values.
 // You can construct a concrete instance of `LogResourcePolicyArrayInput` via:
 //
-//	LogResourcePolicyArray{ LogResourcePolicyArgs{...} }
+//          LogResourcePolicyArray{ LogResourcePolicyArgs{...} }
 type LogResourcePolicyArrayInput interface {
 	pulumi.Input
 
@@ -254,7 +246,7 @@ func (i LogResourcePolicyArray) ToLogResourcePolicyArrayOutputWithContext(ctx co
 // LogResourcePolicyMapInput is an input type that accepts LogResourcePolicyMap and LogResourcePolicyMapOutput values.
 // You can construct a concrete instance of `LogResourcePolicyMapInput` via:
 //
-//	LogResourcePolicyMap{ "key": LogResourcePolicyArgs{...} }
+//          LogResourcePolicyMap{ "key": LogResourcePolicyArgs{...} }
 type LogResourcePolicyMapInput interface {
 	pulumi.Input
 

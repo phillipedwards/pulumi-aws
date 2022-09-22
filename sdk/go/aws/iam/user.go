@@ -20,56 +20,51 @@ import (
 // package main
 //
 // import (
+// 	"fmt"
 //
-//	"fmt"
-//
-//	"github.com/pulumi/pulumi-aws/sdk/v5/go/aws/iam"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
+// 	"github.com/pulumi/pulumi-aws/sdk/go/aws/iam"
+// 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 // )
 //
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			lbUser, err := iam.NewUser(ctx, "lbUser", &iam.UserArgs{
-//				Path: pulumi.String("/system/"),
-//				Tags: pulumi.StringMap{
-//					"tag-key": pulumi.String("tag-value"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewAccessKey(ctx, "lbAccessKey", &iam.AccessKeyArgs{
-//				User: lbUser.Name,
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			_, err = iam.NewUserPolicy(ctx, "lbRo", &iam.UserPolicyArgs{
-//				User: lbUser.Name,
-//				Policy: pulumi.Any(fmt.Sprintf(`{
-//	  "Version": "2012-10-17",
-//	  "Statement": [
-//	    {
-//	      "Action": [
-//	        "ec2:Describe*"
-//	      ],
-//	      "Effect": "Allow",
-//	      "Resource": "*"
-//	    }
-//	  ]
-//	}
-//
+// func main() {
+// 	pulumi.Run(func(ctx *pulumi.Context) error {
+// 		lbUser, err := iam.NewUser(ctx, "lbUser", &iam.UserArgs{
+// 			Path: pulumi.String("/system/"),
+// 			Tags: pulumi.StringMap{
+// 				"tag-key": pulumi.String("tag-value"),
+// 			},
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewAccessKey(ctx, "lbAccessKey", &iam.AccessKeyArgs{
+// 			User: lbUser.Name,
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		_, err = iam.NewUserPolicy(ctx, "lbRo", &iam.UserPolicyArgs{
+// 			User: lbUser.Name,
+// 			Policy: pulumi.Any(fmt.Sprintf(`{
+//   "Version": "2012-10-17",
+//   "Statement": [
+//     {
+//       "Action": [
+//         "ec2:Describe*"
+//       ],
+//       "Effect": "Allow",
+//       "Resource": "*"
+//     }
+//   ]
+// }
 // `)),
-//
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
+// 		})
+// 		if err != nil {
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// }
 // ```
 //
 // ## Import
@@ -77,9 +72,7 @@ import (
 // IAM Users can be imported using the `name`, e.g.,
 //
 // ```sh
-//
-//	$ pulumi import aws:iam/user:User lb loadbalancer
-//
+//  $ pulumi import aws:iam/user:User lb loadbalancer
 // ```
 type User struct {
 	pulumi.CustomResourceState
@@ -235,7 +228,7 @@ func (i *User) ToUserOutputWithContext(ctx context.Context) UserOutput {
 // UserArrayInput is an input type that accepts UserArray and UserArrayOutput values.
 // You can construct a concrete instance of `UserArrayInput` via:
 //
-//	UserArray{ UserArgs{...} }
+//          UserArray{ UserArgs{...} }
 type UserArrayInput interface {
 	pulumi.Input
 
@@ -260,7 +253,7 @@ func (i UserArray) ToUserArrayOutputWithContext(ctx context.Context) UserArrayOu
 // UserMapInput is an input type that accepts UserMap and UserMapOutput values.
 // You can construct a concrete instance of `UserMapInput` via:
 //
-//	UserMap{ "key": UserArgs{...} }
+//          UserMap{ "key": UserArgs{...} }
 type UserMapInput interface {
 	pulumi.Input
 
